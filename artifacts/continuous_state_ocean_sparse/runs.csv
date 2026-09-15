@@ -1,0 +1,64 @@
+label,seed,split,frequency_hz,summary_path,complex_rel_l2,amplitude_rel_l2,weighted_phase_mae_rad,phase_coherence
+Pole-residue,42,selection,90.0,experiments/runs/m2_screen_endpoint_w128_sum_k4_d40_h0_l1_seed42/summary.json,0.2742263674736023,0.19335177540779114,0.20831304788589478,0.9417527914047241
+Pole-residue,42,selection,100.0,experiments/runs/m2_screen_endpoint_w128_sum_k4_d40_h0_l1_seed42/summary.json,0.37440767884254456,0.2581363916397095,0.3174096345901489,0.8842377662658691
+Pole-residue,42,extrapolation,105.0,experiments/runs/m2_screen_endpoint_w128_sum_k4_d40_h0_l1_seed42/summary.json,0.494307279586792,0.3083151578903198,0.4611925482749939,0.7969999313354492
+Pole-residue,42,extrapolation,110.0,experiments/runs/m2_screen_endpoint_w128_sum_k4_d40_h0_l1_seed42/summary.json,0.6138150691986084,0.3979530334472656,0.6168643236160278,0.7024335861206055
+Pole-residue,42,extrapolation,115.0,experiments/runs/m2_screen_endpoint_w128_sum_k4_d40_h0_l1_seed42/summary.json,0.714610755443573,0.47633081674575806,0.770343005657196,0.5975008010864258
+Pole-residue,42,extrapolation,120.0,experiments/runs/m2_screen_endpoint_w128_sum_k4_d40_h0_l1_seed42/summary.json,0.7974486351013184,0.5518887042999268,0.9204056262969971,0.4897371828556061
+Pole-residue,42,extrapolation,125.0,experiments/runs/m2_screen_endpoint_w128_sum_k4_d40_h0_l1_seed42/summary.json,0.8643237948417664,0.6188136339187622,1.0570626258850098,0.390625
+Pole-residue,43,selection,90.0,experiments/runs/m2_sparse_endpoint_poles_seed43/summary.json,0.2811814546585083,0.20271414518356323,0.2153325080871582,0.9376983642578125
+Pole-residue,43,selection,100.0,experiments/runs/m2_sparse_endpoint_poles_seed43/summary.json,0.38344717025756836,0.2636702060699463,0.33052176237106323,0.8755297660827637
+Pole-residue,43,extrapolation,105.0,experiments/runs/m2_sparse_endpoint_poles_seed43/summary.json,0.4898144006729126,0.31768330931663513,0.4603499174118042,0.7987915277481079
+Pole-residue,43,extrapolation,110.0,experiments/runs/m2_sparse_endpoint_poles_seed43/summary.json,0.6207826137542725,0.4070766866207123,0.6310780644416809,0.6917730569839478
+Pole-residue,43,extrapolation,115.0,experiments/runs/m2_sparse_endpoint_poles_seed43/summary.json,0.7242319583892822,0.4888431429862976,0.800857424736023,0.5733603239059448
+Pole-residue,43,extrapolation,120.0,experiments/runs/m2_sparse_endpoint_poles_seed43/summary.json,0.8116053342819214,0.56340491771698,0.9663533568382263,0.4553821384906769
+Pole-residue,43,extrapolation,125.0,experiments/runs/m2_sparse_endpoint_poles_seed43/summary.json,0.8844159841537476,0.6309624910354614,1.1219568252563477,0.3402717709541321
+Pole-residue,44,selection,90.0,experiments/runs/m2_sparse_endpoint_poles_seed44/summary.json,0.27266424894332886,0.1928572654724121,0.20742511749267578,0.9412869811058044
+Pole-residue,44,selection,100.0,experiments/runs/m2_sparse_endpoint_poles_seed44/summary.json,0.3783772587776184,0.2595900297164917,0.3237452507019043,0.8807047009468079
+Pole-residue,44,extrapolation,105.0,experiments/runs/m2_sparse_endpoint_poles_seed44/summary.json,0.4928523302078247,0.31015682220458984,0.4613649845123291,0.7971007823944092
+Pole-residue,44,extrapolation,110.0,experiments/runs/m2_sparse_endpoint_poles_seed44/summary.json,0.6070065498352051,0.39592278003692627,0.6111339330673218,0.7058521509170532
+Pole-residue,44,extrapolation,115.0,experiments/runs/m2_sparse_endpoint_poles_seed44/summary.json,0.6979590058326721,0.46768438816070557,0.7502897381782532,0.6102635860443115
+Pole-residue,44,extrapolation,120.0,experiments/runs/m2_sparse_endpoint_poles_seed44/summary.json,0.772599995136261,0.5358864665031433,0.8801329135894775,0.5174787044525146
+Pole-residue,44,extrapolation,125.0,experiments/runs/m2_sparse_endpoint_poles_seed44/summary.json,0.8344857096672058,0.6001255512237549,1.0000312328338623,0.4308755397796631
+Stable recurrence,42,selection,90.0,experiments/runs/representation_poc_ocean_recurrence_history_seed42/summary.json,0.5006394982337952,0.38000476360321045,0.48160320520401,0.7840024828910828
+Stable recurrence,42,selection,100.0,experiments/runs/representation_poc_ocean_recurrence_history_seed42/summary.json,0.6409210562705994,0.5051565170288086,0.7200913429260254,0.6277742385864258
+Stable recurrence,42,extrapolation,105.0,experiments/runs/representation_poc_ocean_recurrence_history_seed42/summary.json,0.6927040815353394,0.5468240976333618,0.8220877647399902,0.5571354627609253
+Stable recurrence,42,extrapolation,110.0,experiments/runs/representation_poc_ocean_recurrence_history_seed42/summary.json,0.7453211545944214,0.5887276530265808,0.9261853694915771,0.48415082693099976
+Stable recurrence,42,extrapolation,115.0,experiments/runs/representation_poc_ocean_recurrence_history_seed42/summary.json,0.7814846038818359,0.614657998085022,1.0049140453338623,0.42788270115852356
+Stable recurrence,42,extrapolation,120.0,experiments/runs/representation_poc_ocean_recurrence_history_seed42/summary.json,0.8129245042800903,0.6361393332481384,1.0772186517715454,0.37454020977020264
+Stable recurrence,42,extrapolation,125.0,experiments/runs/representation_poc_ocean_recurrence_history_seed42/summary.json,0.8445693254470825,0.6596611738204956,1.1468284130096436,0.32345178723335266
+Stable recurrence,43,selection,90.0,experiments/runs/representation_poc_ocean_recurrence_history_seed43/summary.json,0.4972696900367737,0.3787044882774353,0.4759449064731598,0.787626326084137
+Stable recurrence,43,selection,100.0,experiments/runs/representation_poc_ocean_recurrence_history_seed43/summary.json,0.6388440132141113,0.5061073303222656,0.7161681652069092,0.630221962928772
+Stable recurrence,43,extrapolation,105.0,experiments/runs/representation_poc_ocean_recurrence_history_seed43/summary.json,0.6918374300003052,0.548050045967102,0.8221362233161926,0.5571398735046387
+Stable recurrence,43,extrapolation,110.0,experiments/runs/representation_poc_ocean_recurrence_history_seed43/summary.json,0.745078444480896,0.5898910760879517,0.9287616610527039,0.4826626777648926
+Stable recurrence,43,extrapolation,115.0,experiments/runs/representation_poc_ocean_recurrence_history_seed43/summary.json,0.7812635898590088,0.6156256198883057,1.0095101594924927,0.4240209460258484
+Stable recurrence,43,extrapolation,120.0,experiments/runs/representation_poc_ocean_recurrence_history_seed43/summary.json,0.8123512864112854,0.6366531848907471,1.0820906162261963,0.37068548798561096
+Stable recurrence,43,extrapolation,125.0,experiments/runs/representation_poc_ocean_recurrence_history_seed43/summary.json,0.8438627123832703,0.6596254706382751,1.1505019664764404,0.32031893730163574
+Stable recurrence,44,selection,90.0,experiments/runs/representation_poc_ocean_recurrence_history_seed44/summary.json,0.5038700699806213,0.3844943344593048,0.4811069965362549,0.7840445041656494
+Stable recurrence,44,selection,100.0,experiments/runs/representation_poc_ocean_recurrence_history_seed44/summary.json,0.6474223732948303,0.5114067792892456,0.741787314414978,0.6097843647003174
+Stable recurrence,44,extrapolation,105.0,experiments/runs/representation_poc_ocean_recurrence_history_seed44/summary.json,0.6988809108734131,0.5533300638198853,0.8537827730178833,0.5314763784408569
+Stable recurrence,44,extrapolation,110.0,experiments/runs/representation_poc_ocean_recurrence_history_seed44/summary.json,0.7498577833175659,0.5947586894035339,0.9643909931182861,0.45420074462890625
+Stable recurrence,44,extrapolation,115.0,experiments/runs/representation_poc_ocean_recurrence_history_seed44/summary.json,0.7840298414230347,0.6197986602783203,1.0416101217269897,0.3992299735546112
+Stable recurrence,44,extrapolation,120.0,experiments/runs/representation_poc_ocean_recurrence_history_seed44/summary.json,0.8137034177780151,0.6400737762451172,1.1069262027740479,0.3517017364501953
+Stable recurrence,44,extrapolation,125.0,experiments/runs/representation_poc_ocean_recurrence_history_seed44/summary.json,0.84386146068573,0.6620596647262573,1.168912649154663,0.3062196969985962
+Image U-Net,42,selection,90.0,experiments/runs/representation_poc_ocean_unet7_seed42/summary.json,0.7741467952728271,0.5761826634407043,0.7534741759300232,0.6430444717407227
+Image U-Net,42,selection,100.0,experiments/runs/representation_poc_ocean_unet7_seed42/summary.json,0.8261715769767761,0.584337055683136,0.921088457107544,0.5142332911491394
+Image U-Net,42,extrapolation,105.0,experiments/runs/representation_poc_ocean_unet7_seed42/summary.json,1.241349697113037,0.6030617356300354,1.6365745067596436,-0.05113349109888077
+Image U-Net,42,extrapolation,110.0,experiments/runs/representation_poc_ocean_unet7_seed42/summary.json,1.1984493732452393,0.6264688372612,1.7492082118988037,-0.14000825583934784
+Image U-Net,42,extrapolation,115.0,experiments/runs/representation_poc_ocean_unet7_seed42/summary.json,1.158913016319275,0.6390376091003418,1.5294878482818604,0.03253427892923355
+Image U-Net,42,extrapolation,120.0,experiments/runs/representation_poc_ocean_unet7_seed42/summary.json,1.151915192604065,0.6474146842956543,1.4575164318084717,0.08870324492454529
+Image U-Net,42,extrapolation,125.0,experiments/runs/representation_poc_ocean_unet7_seed42/summary.json,1.1690418720245361,0.6577906608581543,1.5753726959228516,-0.0038605232257395983
+Image U-Net,43,selection,90.0,experiments/runs/representation_poc_ocean_unet7_seed43/summary.json,0.7676730751991272,0.5735583305358887,0.7339094281196594,0.6579199433326721
+Image U-Net,43,selection,100.0,experiments/runs/representation_poc_ocean_unet7_seed43/summary.json,0.8314681053161621,0.582464337348938,0.9371938109397888,0.5012363195419312
+Image U-Net,43,extrapolation,105.0,experiments/runs/representation_poc_ocean_unet7_seed43/summary.json,1.2418181896209717,0.6026479601860046,1.6389998197555542,-0.05324314907193184
+Image U-Net,43,extrapolation,110.0,experiments/runs/representation_poc_ocean_unet7_seed43/summary.json,1.19965660572052,0.6269714832305908,1.7338099479675293,-0.12853118777275085
+Image U-Net,43,extrapolation,115.0,experiments/runs/representation_poc_ocean_unet7_seed43/summary.json,1.1602824926376343,0.6408565044403076,1.5326882600784302,0.03045768477022648
+Image U-Net,43,extrapolation,120.0,experiments/runs/representation_poc_ocean_unet7_seed43/summary.json,1.1537699699401855,0.6498591899871826,1.4682862758636475,0.08064229041337967
+Image U-Net,43,extrapolation,125.0,experiments/runs/representation_poc_ocean_unet7_seed43/summary.json,1.170553207397461,0.6603180170059204,1.5756865739822388,-0.004119667690247297
+Image U-Net,44,selection,90.0,experiments/runs/representation_poc_ocean_unet7_seed44/summary.json,0.7532485127449036,0.5750406980514526,0.7003402709960938,0.6832939982414246
+Image U-Net,44,selection,100.0,experiments/runs/representation_poc_ocean_unet7_seed44/summary.json,0.8447110056877136,0.5883325338363647,0.9747701287269592,0.4710351526737213
+Image U-Net,44,extrapolation,105.0,experiments/runs/representation_poc_ocean_unet7_seed44/summary.json,1.2394638061523438,0.6083770394325256,1.6247910261154175,-0.04281488060951233
+Image U-Net,44,extrapolation,110.0,experiments/runs/representation_poc_ocean_unet7_seed44/summary.json,1.1966686248779297,0.6315008401870728,1.7123768329620361,-0.11146865785121918
+Image U-Net,44,extrapolation,115.0,experiments/runs/representation_poc_ocean_unet7_seed44/summary.json,1.1604987382888794,0.6448447108268738,1.5391358137130737,0.025288958102464676
+Image U-Net,44,extrapolation,120.0,experiments/runs/representation_poc_ocean_unet7_seed44/summary.json,1.1538264751434326,0.6534740924835205,1.478543758392334,0.07211990654468536
+Image U-Net,44,extrapolation,125.0,experiments/runs/representation_poc_ocean_unet7_seed44/summary.json,1.168604850769043,0.6631240844726562,1.5670989751815796,0.0031739906407892704

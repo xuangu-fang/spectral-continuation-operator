@@ -85,7 +85,7 @@ def run(args) -> None:
         }
 
     with (args.output_dir / "runs.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     (args.output_dir / "summary.json").write_text(
