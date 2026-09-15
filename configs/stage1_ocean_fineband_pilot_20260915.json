@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "purpose": "Resolve spectral phase increments before testing long-range extrapolation",
+  "output_dir": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915",
+  "frequencies_hz": [74, 75, 76, 77, 78, 79, 80, 90, 100, 125, 150, 175, 200],
+  "counts": {"train": 128, "validation": 32, "strict_reserved": 32},
+  "seed": 20260912,
+  "solver": "pekeris_mode",
+  "single_context_hz": [80],
+  "band_context_hz": [78, 79, 80],
+  "selection_queries_hz": [90, 100, 125, 150],
+  "label_blind_extrapolation_queries_hz": [175, 200],
+  "reason": "For a path delay tau, phase increments alias when delta_f * tau is too large. The 1 Hz terminal low-frequency band directly tests whether coarse 10--50 Hz gaps caused the failed secant carrier.",
+  "strict_policy": "Strict registry is created, but strict fields are not generated or read."
+}

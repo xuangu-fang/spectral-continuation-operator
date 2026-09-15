@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "frozen_utc_date": "2026-09-15",
+  "apex_repository": {
+    "path": "/home/ubuntu/project/APEX_repro_fsk",
+    "git_revision": "ebb305e17b15f1f15ed367ed6ffe7a83a8a78b83"
+  },
+  "ocean_generator_repository": {
+    "path": "/home/ubuntu/project/ocean-acoustic-agent",
+    "git_revision": "12a59a0c13058b21522bde5b0d74fe6ad02ee973"
+  },
+  "evidence": [
+    {
+      "role": "WaveBench locked K=1 result",
+      "path": "/home/ubuntu/project/APEX_repro_fsk/apex_modified/summaries/locked_20260914/wave_k1_summary.json",
+      "sha256": "1b96bbfa020067228ad882d14ec7d09f02463b35876a46a537c9b29fe8c5db58"
+    },
+    {
+      "role": "Ocean strict K=1 result",
+      "path": "/home/ubuntu/project/APEX_repro_fsk/apex_modified/summaries/locked_20260914/ocean_k1_summary.json",
+      "sha256": "6b558bca35d584b624d3928178c16c3bb56f8b8b51513f9450f8f77ec427241e"
+    },
+    {
+      "role": "Selective-transfer negative study",
+      "path": "/home/ubuntu/project/APEX_repro_fsk/apex_modified/summaries/selective_transfer_20260914/final/selective_transfer_results.json",
+      "sha256": "1144649c5b806c3fbfa8bb4df7d5399a2f5c92aba4774aeacca2bb501be3d900"
+    },
+    {
+      "role": "Fully-supervised source-operator negative study",
+      "path": "/home/ubuntu/project/APEX_repro_fsk/apex_modified/summaries/operator_pc_20260914/final/operator_pc_results.json",
+      "sha256": "24b4318e47c1bbd92d1e0044caacb6009d48198420d998cc698d5bd754c53a4c"
+    }
+  ],
+  "development_data": [
+    {
+      "role": "WaveBench split and public-data lineage",
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/runs/apex_amp_phase_probe/wavebench_full_protocol_split42_20260912/manifest.json",
+      "sha256": "5c1d345d3d44c4e4ccebd3bc8f1f6b23f5e28a844c4256b6c5d6b38d8bb0f162"
+    },
+    {
+      "role": "WaveBench frozen split IDs",
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/runs/apex_amp_phase_probe/wavebench_full_protocol_split42_20260912/split_ids.npz",
+      "sha256": "082a7529471cd6691ce4f969f469f2c4893db18aff62a13d19ec195f8659ae91"
+    },
+    {
+      "role": "Ocean 50/100/200 paired development fields",
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/apex_h_ocean_pekeris_dev_20260912/paired_fields.npz",
+      "sha256": "2ae4c3491feb0bab5b43df0afa226785b85439cc257c918e808c452d6610f720"
+    }
+  ],
+  "access_policy": {
+    "wavebench_heldout": "Do not read in stage-1 development",
+    "ocean_strict": "Do not read or generate in stage-1 development",
+    "legacy_results": "Attribution only; never tune the new model on legacy locked metrics"
+  }
+}

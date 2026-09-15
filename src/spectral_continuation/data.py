@@ -6,6 +6,7 @@ import hashlib
 import json
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
+from itertools import pairwise
 from pathlib import Path
 
 import numpy as np
@@ -224,11 +225,33 @@ def spectral_carrier(
     if len(visible) == 1:
         phase = (target_frequency / top) * torch.angle(q_top)
     else:
-        previous = visible[-2]
-        q_previous = unit_complex(fields[previous][positions])
-        spectral_increment = torch.angle(q_top * torch.conj(q_previous))
-        steps = (target_frequency - top) / (top - previous)
-        phase = torch.angle(q_top) + steps * spectral_increment
+        gaps = np.diff(visible)
+        if len(visible) >= 3 and np.allclose(gaps, gaps[0]):
+            # Accumulate principal adjacent increments, then regress the
+            # unwrapped local spectral phase. This averages noise without
+            # requiring an absolute phase gauge. It is exact only when the
+            # adjacent frequency sampling resolves the local delay.
+            unwrapped = [torch.angle(unit_complex(fields[visible[0]][positions]))]
+            for previous, current in pairwise(visible):
+                ratio = unit_complex(fields[current][positions]) * torch.conj(
+                    unit_complex(fields[previous][positions])
+                )
+                unwrapped.append(unwrapped[-1] + torch.angle(ratio))
+            frequency_offsets = torch.as_tensor(
+                np.asarray(visible) - np.mean(visible), dtype=unwrapped[0].dtype
+            )
+            phase_stack = torch.stack(unwrapped, dim=0)
+            phase_center = phase_stack.mean(dim=0)
+            slope = torch.sum(
+                frequency_offsets.view(-1, 1, 1, 1) * phase_stack, dim=0
+            ) / torch.sum(frequency_offsets.square())
+            phase = phase_center + (target_frequency - np.mean(visible)) * slope
+        else:
+            previous = visible[-2]
+            q_previous = unit_complex(fields[previous][positions])
+            spectral_increment = torch.angle(q_top * torch.conj(q_previous))
+            steps = (target_frequency - top) / (top - previous)
+            phase = torch.angle(q_top) + steps * spectral_increment
     carrier = torch.polar(torch.ones_like(phase), phase)
     return torch.stack((carrier.real, carrier.imag), dim=1).float()
 
