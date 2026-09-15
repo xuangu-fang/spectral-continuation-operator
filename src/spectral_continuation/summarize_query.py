@@ -35,7 +35,7 @@ def variant(summary: dict) -> str:
 
 def run(args):
     paths = []
-    for path in sorted(args.run_root.glob("**/summary.json")):
+    for path in sorted(args.run_root.glob(args.run_glob)):
         content = json.loads(path.read_text(encoding="utf-8"))
         if "extrapolation" in content:
             paths.append((path, content))
@@ -185,19 +185,19 @@ def run(args):
         axis.axvspan(min(frequencies), args.selection_max_hz, color="#EEEEEE", alpha=0.7)
         axis.axvline(args.selection_max_hz, color="#444444", linestyle="--", linewidth=1)
         axis.text(
-            0.5 * (min(frequencies) + args.selection_max_hz),
+            0.015,
             0.98,
-            "fit / selection",
-            transform=axis.get_xaxis_transform(),
-            ha="center",
+            "fit: 90/100 Hz",
+            transform=axis.transAxes,
+            ha="left",
             va="top",
             fontsize=9,
         )
         axis.text(
-            args.selection_max_hz + 2,
+            0.34,
             0.98,
             "label-blind extrapolation",
-            transform=axis.get_xaxis_transform(),
+            transform=axis.transAxes,
             ha="left",
             va="top",
             fontsize=9,
@@ -217,6 +217,7 @@ def run(args):
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run-root", type=Path, required=True)
+    parser.add_argument("--run-glob", default="**/summary.json")
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--selection-max-hz", type=float, default=100.0)
     return parser.parse_args()
