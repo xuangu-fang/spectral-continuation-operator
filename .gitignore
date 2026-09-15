@@ -18,3 +18,4 @@ artifacts/**/*.npz
 artifacts/**/*.npy
 experiments/runs/
 experiments/dense_evaluation/
+experiments/*.log

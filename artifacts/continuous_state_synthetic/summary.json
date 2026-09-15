@@ -1,0 +1,608 @@
+{
+  "Pole-residue": {
+    "seeds": [
+      42
+    ],
+    "parameters": [
+      336852
+    ],
+    "frequency_metrics": {
+      "15": {
+        "complex_rel_l2": {
+          "mean": 0.09129883348941803,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.06064876168966293,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.050402604043483734,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.9944581985473633,
+          "std": 0.0
+        }
+      },
+      "16": {
+        "complex_rel_l2": {
+          "mean": 0.1748335361480713,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.11908726394176483,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.10063599050045013,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.9816538095474243,
+          "std": 0.0
+        }
+      },
+      "17": {
+        "complex_rel_l2": {
+          "mean": 0.25331342220306396,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.17238128185272217,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.15454378724098206,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.96271812915802,
+          "std": 0.0
+        }
+      },
+      "18": {
+        "complex_rel_l2": {
+          "mean": 0.33350038528442383,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.23027341067790985,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.2154504656791687,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.9365843534469604,
+          "std": 0.0
+        }
+      },
+      "19": {
+        "complex_rel_l2": {
+          "mean": 0.42458146810531616,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.29001355171203613,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.29116183519363403,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.8981958627700806,
+          "std": 0.0
+        }
+      },
+      "19.5": {
+        "complex_rel_l2": {
+          "mean": 0.47033968567848206,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.31880325078964233,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.3328533172607422,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.8753302693367004,
+          "std": 0.0
+        }
+      },
+      "20": {
+        "complex_rel_l2": {
+          "mean": 0.5133062601089478,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.34499555826187134,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.376382440328598,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.850574254989624,
+          "std": 0.0
+        }
+      },
+      "21": {
+        "complex_rel_l2": {
+          "mean": 0.5905581712722778,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.38859695196151733,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.46466881036758423,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.7977616786956787,
+          "std": 0.0
+        }
+      },
+      "22": {
+        "complex_rel_l2": {
+          "mean": 0.6597332954406738,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.4212159514427185,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.5515574216842651,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.7429786920547485,
+          "std": 0.0
+        }
+      },
+      "23": {
+        "complex_rel_l2": {
+          "mean": 0.7229351997375488,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.4482801556587219,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.6337637305259705,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.6896951198577881,
+          "std": 0.0
+        }
+      },
+      "24": {
+        "complex_rel_l2": {
+          "mean": 0.7820000648498535,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.4706352949142456,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.7138773798942566,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.6359437704086304,
+          "std": 0.0
+        }
+      }
+    }
+  },
+  "Stable recurrence": {
+    "seeds": [
+      42
+    ],
+    "parameters": [
+      320074
+    ],
+    "frequency_metrics": {
+      "15": {
+        "complex_rel_l2": {
+          "mean": 0.184897780418396,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.16443555057048798,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.07396965473890305,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.9905543327331543,
+          "std": 0.0
+        }
+      },
+      "16": {
+        "complex_rel_l2": {
+          "mean": 0.3035573959350586,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.27581530809402466,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.12352186441421509,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.9767566323280334,
+          "std": 0.0
+        }
+      },
+      "17": {
+        "complex_rel_l2": {
+          "mean": 0.3990939259529114,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.36661404371261597,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.1682722568511963,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.9590005874633789,
+          "std": 0.0
+        }
+      },
+      "18": {
+        "complex_rel_l2": {
+          "mean": 0.5003359317779541,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.45230597257614136,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.24993713200092316,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.9205764532089233,
+          "std": 0.0
+        }
+      },
+      "19": {
+        "complex_rel_l2": {
+          "mean": 0.6161230802536011,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.5334509611129761,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.39862060546875,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.8395897150039673,
+          "std": 0.0
+        }
+      },
+      "20": {
+        "complex_rel_l2": {
+          "mean": 0.7275373935699463,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.5977303981781006,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.584250807762146,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.7213704586029053,
+          "std": 0.0
+        }
+      },
+      "21": {
+        "complex_rel_l2": {
+          "mean": 0.821110725402832,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.6432561874389648,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.7579386234283447,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.6017664074897766,
+          "std": 0.0
+        }
+      },
+      "22": {
+        "complex_rel_l2": {
+          "mean": 0.8953604102134705,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.6742631196975708,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.9028964042663574,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.4979151487350464,
+          "std": 0.0
+        }
+      },
+      "23": {
+        "complex_rel_l2": {
+          "mean": 0.951429009437561,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.6942695379257202,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.021061658859253,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.41303467750549316,
+          "std": 0.0
+        }
+      },
+      "24": {
+        "complex_rel_l2": {
+          "mean": 0.9942647814750671,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.708625078201294,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.1198747158050537,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.3406411409378052,
+          "std": 0.0
+        }
+      }
+    }
+  },
+  "Image U-Net": {
+    "seeds": [
+      42
+    ],
+    "parameters": [
+      309930
+    ],
+    "frequency_metrics": {
+      "15": {
+        "complex_rel_l2": {
+          "mean": 0.9216837286949158,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8443243503570557,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.8720095157623291,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.5516856908798218,
+          "std": 0.0
+        }
+      },
+      "16": {
+        "complex_rel_l2": {
+          "mean": 0.9648017287254333,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8554999828338623,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.1853868961334229,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.29294127225875854,
+          "std": 0.0
+        }
+      },
+      "17": {
+        "complex_rel_l2": {
+          "mean": 1.0333341360092163,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8635336756706238,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.8068535327911377,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": -0.18868330121040344,
+          "std": 0.0
+        }
+      },
+      "18": {
+        "complex_rel_l2": {
+          "mean": 0.9969197511672974,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8670634627342224,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.4935581684112549,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.06048736721277237,
+          "std": 0.0
+        }
+      },
+      "19": {
+        "complex_rel_l2": {
+          "mean": 1.0518105030059814,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8686416149139404,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.767829418182373,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": -0.1542617380619049,
+          "std": 0.0
+        }
+      },
+      "19.5": {
+        "complex_rel_l2": {
+          "mean": 1.0631914138793945,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8694164156913757,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.8292770385742188,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": -0.20325148105621338,
+          "std": 0.0
+        }
+      },
+      "20": {
+        "complex_rel_l2": {
+          "mean": 1.0439602136611938,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8702404499053955,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.6957941055297852,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": -0.09804336726665497,
+          "std": 0.0
+        }
+      },
+      "21": {
+        "complex_rel_l2": {
+          "mean": 0.9949659705162048,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8718149065971375,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.40579092502594,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.13056986033916473,
+          "std": 0.0
+        }
+      },
+      "22": {
+        "complex_rel_l2": {
+          "mean": 1.0052735805511475,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8731464743614197,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.5164029598236084,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": 0.04295872151851654,
+          "std": 0.0
+        }
+      },
+      "23": {
+        "complex_rel_l2": {
+          "mean": 1.0104491710662842,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8746579885482788,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.582961082458496,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": -0.008726648986339569,
+          "std": 0.0
+        }
+      },
+      "24": {
+        "complex_rel_l2": {
+          "mean": 1.0154387950897217,
+          "std": 0.0
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.8762232065200806,
+          "std": 0.0
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.6092251539230347,
+          "std": 0.0
+        },
+        "phase_coherence": {
+          "mean": -0.029294412583112717,
+          "std": 0.0
+        }
+      }
+    }
+  }
+}

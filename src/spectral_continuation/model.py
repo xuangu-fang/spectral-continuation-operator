@@ -29,7 +29,9 @@ class ConvBlock(nn.Module):
 class QueryUNet(nn.Module):
     """Four-scale U-Net shared exactly by direct and carrier-relative outputs."""
 
-    def __init__(self, input_channels: int, width: int = 16):
+    def __init__(
+        self, input_channels: int, width: int = 16, output_channels: int = 2
+    ):
         super().__init__()
         self.e1 = ConvBlock(input_channels, width)
         self.e2 = ConvBlock(width, 2 * width)
@@ -40,7 +42,7 @@ class QueryUNet(nn.Module):
         self.d3 = ConvBlock(12 * width, 4 * width)
         self.d2 = ConvBlock(6 * width, 2 * width)
         self.d1 = ConvBlock(3 * width, width)
-        self.out = nn.Conv2d(width, 2, 1)
+        self.out = nn.Conv2d(width, output_channels, 1)
 
     def forward(self, inputs: torch.Tensor) -> torch.Tensor:
         e1 = self.e1(inputs)

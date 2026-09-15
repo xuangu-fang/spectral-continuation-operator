@@ -99,6 +99,57 @@ class FrequencySetDataset(Dataset):
         return visible, environment, target, torch.tensor(frequency), query_index
 
 
+class FrequencyBandDataset(Dataset):
+    """One physical instance with all query fields, for state-reuse training."""
+
+    def __init__(
+        self,
+        bundle: FieldBundle,
+        positions: np.ndarray,
+        visible_frequencies: tuple[float, ...],
+        query_frequencies: tuple[float, ...],
+        normalization: RepresentationNormalization,
+        *,
+        field_only: bool = False,
+    ):
+        self.bundle = bundle
+        self.positions = np.asarray(positions, dtype=np.int64)
+        self.visible = visible_frequencies
+        self.queries = query_frequencies
+        self.normalization = normalization
+        self.field_only = field_only
+
+    @property
+    def environment_channels(self) -> int:
+        return self.bundle.environment.shape[1]
+
+    def __len__(self) -> int:
+        return len(self.positions)
+
+    def __getitem__(self, index: int):
+        position = int(self.positions[index])
+        visible = torch.stack(
+            [
+                torch.complex(
+                    self.bundle.fields[frequency][position, 0],
+                    self.bundle.fields[frequency][position, 1],
+                )
+                for frequency in self.visible
+            ]
+        ) / self.normalization.field_scale
+        targets = []
+        for frequency in self.queries:
+            field = self.bundle.fields[frequency][position]
+            targets.append(torch.complex(field[0], field[1]))
+        target = torch.stack(targets) / self.normalization.field_scale
+        environment = (
+            self.bundle.environment[position] - self.normalization.environment_mean[0]
+        ) / self.normalization.environment_std[0]
+        if self.field_only:
+            environment = torch.zeros_like(environment)
+        return visible, environment, target
+
+
 def _synthetic_parameters(count: int, seed: int, paths: int = 3) -> dict[str, np.ndarray]:
     generator = np.random.default_rng(seed)
     return {

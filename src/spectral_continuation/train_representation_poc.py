@@ -7,6 +7,7 @@ import copy
 import csv
 import hashlib
 import json
+import math
 import random
 import time
 from pathlib import Path
@@ -18,12 +19,14 @@ from torch.utils.data import DataLoader
 from .metrics import metric_vectors
 from .model import parameter_count
 from .representation import (
+    CarrierGaugedPoleOperator,
     ComplexDelayOperator,
     ImageQueryOperator,
     StableSpectralStateOperator,
     phase_equivariance_error,
 )
 from .representation_data import (
+    FrequencyBandDataset,
     FrequencySetDataset,
     fit_representation_normalization,
     load_representation_bundle,
@@ -38,10 +41,17 @@ def seed_all(seed: int) -> None:
         torch.cuda.manual_seed_all(seed)
 
 
-def complex_relative_loss(prediction: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+def complex_relative_loss(
+    prediction: torch.Tensor, target: torch.Tensor, *, power: int = 2
+) -> torch.Tensor:
     numerator = (prediction - target).abs().square().flatten(1).sum(1)
     denominator = target.abs().square().flatten(1).sum(1).clamp_min(1e-8)
-    return (numerator / denominator).mean()
+    ratio = numerator / denominator
+    if power == 1:
+        ratio = ratio.clamp_min(1e-12).sqrt()
+    elif power != 2:
+        raise ValueError("relative loss power must be one or two")
+    return ratio.mean()
 
 
 def coordinates(
@@ -64,20 +74,36 @@ def evaluate(model, loader, queries, normalization, device):
     predictions = [[] for _ in queries]
     targets = [[] for _ in queries]
     equivariance = []
-    for batch_index, (fields, environment, target, query, query_index) in enumerate(loader):
+    for batch_index, batch in enumerate(loader):
+        grouped = len(batch) == 3
+        if grouped:
+            fields, environment, target = batch
+            query = torch.full(
+                (fields.shape[0],), queries[0], dtype=fields.real.dtype
+            )
+            query_index = None
+        else:
+            fields, environment, target, query, query_index = batch
         fields = fields.to(device)
         environment = environment.to(device)
         target = target.to(device)
         query = query.to(device)
         context = coordinates(environment, query, normalization.frequency_scale)
-        output = model(fields, context, query)
+        if grouped and hasattr(model, "forward_queries"):
+            output = model.forward_queries(fields, context, queries)
+        else:
+            output = model(fields, context, query)
         if batch_index == 0:
             equivariance.append(phase_equivariance_error(model, fields, context, query))
         for index in range(len(queries)):
-            selected = query_index == index
-            if selected.any():
-                predictions[index].append(output[selected].cpu())
-                targets[index].append(target[selected].cpu())
+            if grouped:
+                predictions[index].append(output[:, index].cpu())
+                targets[index].append(target[:, index].cpu())
+            else:
+                selected = query_index == index
+                if selected.any():
+                    predictions[index].append(output[selected].cpu())
+                    targets[index].append(target[selected].cpu())
     result, vectors = {}, {}
     for index, frequency in enumerate(queries):
         prediction = torch.cat(predictions[index])
@@ -112,6 +138,32 @@ def build_model(args, visible, environment_channels, frequency_scale):
             blocks=args.blocks,
             max_delay=args.max_delay,
             frequency_scale=frequency_scale,
+        )
+    if args.model == "carrier_poles":
+        return CarrierGaugedPoleOperator(
+            visible,
+            environment_channels,
+            poles=getattr(args, "poles", 4),
+            width=args.state_width,
+            blocks=args.blocks,
+            max_growth_per_hz=getattr(args, "max_growth_per_hz", 0.025),
+            max_residual_angle_per_hz=getattr(
+                args, "max_residual_angle_per_hz", math.pi
+            ),
+            residue_scale=getattr(args, "residue_scale", 1.0),
+            state_backbone=getattr(args, "state_backbone", "dilated"),
+            residue_mode=getattr(args, "residue_mode", "predicted"),
+            residue_ridge=getattr(args, "residue_ridge", 1e-3),
+            pole_growth=getattr(args, "pole_growth", "signed"),
+            learn_carrier_correction=getattr(
+                args, "learn_carrier_correction", False
+            ),
+            max_carrier_correction_per_hz=getattr(
+                args, "max_carrier_correction_per_hz", 0.15
+            ),
+            state_normalization=getattr(args, "state_normalization", False),
+            pole_anchor=getattr(args, "pole_anchor", "reference_residual"),
+            carrier_estimator=getattr(args, "carrier_estimator", "band_ols"),
         )
     return StableSpectralStateOperator(
         visible,
@@ -152,7 +204,8 @@ def run(args):
     normalization = fit_representation_normalization(
         bundle, train_positions, visible, train_queries
     )
-    train_dataset = FrequencySetDataset(
+    train_dataset_type = FrequencyBandDataset if args.grouped_training else FrequencySetDataset
+    train_dataset = train_dataset_type(
         bundle,
         train_positions,
         visible,
@@ -160,7 +213,12 @@ def run(args):
         normalization,
         field_only=args.field_only,
     )
-    selection_dataset = FrequencySetDataset(
+    evaluation_dataset_type = (
+        FrequencyBandDataset
+        if args.grouped_training and args.model in {"carrier_poles", "stable_recurrence"}
+        else FrequencySetDataset
+    )
+    selection_dataset = evaluation_dataset_type(
         bundle,
         val_positions,
         visible,
@@ -168,7 +226,7 @@ def run(args):
         normalization,
         field_only=args.field_only,
     )
-    test_dataset = FrequencySetDataset(
+    test_dataset = evaluation_dataset_type(
         bundle,
         val_positions,
         visible,
@@ -216,16 +274,40 @@ def run(args):
     for epoch in range(1, args.epochs + 1):
         model.train()
         losses = []
-        for fields, environment, target, query, _ in train_loader:
+        for batch in train_loader:
+            grouped = len(batch) == 3
+            if grouped:
+                fields, environment, target = batch
+                query = torch.full(
+                    (fields.shape[0],), train_queries[0], dtype=fields.real.dtype
+                )
+            else:
+                fields, environment, target, query, _ = batch
             fields = fields.to(device)
             environment = environment.to(device)
             target = target.to(device)
             query = query.to(device)
             context = coordinates(environment, query, normalization.frequency_scale)
             optimizer.zero_grad(set_to_none=True)
-            prediction = model(fields, context, query)
-            loss = complex_relative_loss(prediction, target)
-            if isinstance(model, StableSpectralStateOperator) and args.history_weight > 0:
+            if grouped and hasattr(model, "forward_queries"):
+                prediction = model.forward_queries(fields, context, train_queries)
+                query_losses = [
+                    complex_relative_loss(
+                        prediction[:, index],
+                        target[:, index],
+                        power=args.relative_loss_power,
+                    )
+                    for index in range(len(train_queries))
+                ]
+                loss = torch.stack(query_losses).mean()
+            else:
+                prediction = model(fields, context, query)
+                loss = complex_relative_loss(
+                    prediction, target, power=args.relative_loss_power
+                )
+            if isinstance(
+                model, (StableSpectralStateOperator, CarrierGaugedPoleOperator)
+            ) and args.history_weight > 0:
                 loss = loss + args.history_weight * model.visible_reconstruction_loss(
                     fields, context
                 )
@@ -342,7 +424,7 @@ def parse_args():
     parser.add_argument("--domain", choices=("synthetic", "ocean"), required=True)
     parser.add_argument(
         "--model",
-        choices=("image_unet", "complex_delay", "stable_recurrence"),
+        choices=("image_unet", "complex_delay", "stable_recurrence", "carrier_poles"),
         required=True,
     )
     parser.add_argument("--output-dir", type=Path, required=True)
@@ -351,13 +433,38 @@ def parse_args():
     parser.add_argument("--train-queries", required=True)
     parser.add_argument("--test-queries", required=True)
     parser.add_argument("--field-only", action="store_true")
+    parser.add_argument("--grouped-training", action="store_true")
     parser.add_argument("--modes", type=int, default=48)
     parser.add_argument("--order", type=int, default=3)
+    parser.add_argument("--poles", type=int, default=4)
     parser.add_argument("--state-width", type=int, default=64)
     parser.add_argument("--stability-radius", type=float, default=1.0)
     parser.add_argument("--history-weight", type=float, default=0.0)
+    parser.add_argument("--relative-loss-power", type=int, choices=(1, 2), default=2)
     parser.add_argument("--blocks", type=int, default=4)
     parser.add_argument("--max-delay", type=float, default=0.65)
+    parser.add_argument("--max-growth-per-hz", type=float, default=0.025)
+    parser.add_argument("--max-residual-angle-per-hz", type=float, default=math.pi)
+    parser.add_argument("--residue-scale", type=float, default=1.0)
+    parser.add_argument("--state-backbone", choices=("dilated", "unet"), default="dilated")
+    parser.add_argument(
+        "--residue-mode", choices=("predicted", "least_squares"), default="predicted"
+    )
+    parser.add_argument("--residue-ridge", type=float, default=1e-3)
+    parser.add_argument("--pole-growth", choices=("signed", "stable"), default="signed")
+    parser.add_argument("--learn-carrier-correction", action="store_true")
+    parser.add_argument("--max-carrier-correction-per-hz", type=float, default=0.15)
+    parser.add_argument("--state-normalization", action="store_true")
+    parser.add_argument(
+        "--pole-anchor",
+        choices=("reference_residual", "residue_sum"),
+        default="reference_residual",
+    )
+    parser.add_argument(
+        "--carrier-estimator",
+        choices=("band_ols", "endpoint_increment"),
+        default="band_ols",
+    )
     parser.add_argument("--width", type=int, default=8)
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--batch-size", type=int, default=16)

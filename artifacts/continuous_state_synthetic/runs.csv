@@ -1,0 +1,33 @@
+label,seed,split,frequency_hz,summary_path,complex_rel_l2,amplitude_rel_l2,weighted_phase_mae_rad,phase_coherence
+Pole-residue,42,selection,15.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.09129883348941803,0.06064876168966293,0.050402604043483734,0.9944581985473633
+Pole-residue,42,selection,16.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.1748335361480713,0.11908726394176483,0.10063599050045013,0.9816538095474243
+Pole-residue,42,selection,17.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.25331342220306396,0.17238128185272217,0.15454378724098206,0.96271812915802
+Pole-residue,42,selection,18.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.33350038528442383,0.23027341067790985,0.2154504656791687,0.9365843534469604
+Pole-residue,42,extrapolation,19.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.42458146810531616,0.29001355171203613,0.29116183519363403,0.8981958627700806
+Pole-residue,42,extrapolation,19.5,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.47033968567848206,0.31880325078964233,0.3328533172607422,0.8753302693367004
+Pole-residue,42,extrapolation,20.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.5133062601089478,0.34499555826187134,0.376382440328598,0.850574254989624
+Pole-residue,42,extrapolation,21.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.5905581712722778,0.38859695196151733,0.46466881036758423,0.7977616786956787
+Pole-residue,42,extrapolation,22.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.6597332954406738,0.4212159514427185,0.5515574216842651,0.7429786920547485
+Pole-residue,42,extrapolation,23.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.7229351997375488,0.4482801556587219,0.6337637305259705,0.6896951198577881
+Pole-residue,42,extrapolation,24.0,experiments/runs/m2_synthetic_dense_poles_seed42/summary.json,0.7820000648498535,0.4706352949142456,0.7138773798942566,0.6359437704086304
+Stable recurrence,42,selection,15.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.184897780418396,0.16443555057048798,0.07396965473890305,0.9905543327331543
+Stable recurrence,42,selection,16.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.3035573959350586,0.27581530809402466,0.12352186441421509,0.9767566323280334
+Stable recurrence,42,selection,17.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.3990939259529114,0.36661404371261597,0.1682722568511963,0.9590005874633789
+Stable recurrence,42,selection,18.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.5003359317779541,0.45230597257614136,0.24993713200092316,0.9205764532089233
+Stable recurrence,42,extrapolation,19.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.6161230802536011,0.5334509611129761,0.39862060546875,0.8395897150039673
+Stable recurrence,42,extrapolation,20.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.7275373935699463,0.5977303981781006,0.584250807762146,0.7213704586029053
+Stable recurrence,42,extrapolation,21.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.821110725402832,0.6432561874389648,0.7579386234283447,0.6017664074897766
+Stable recurrence,42,extrapolation,22.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.8953604102134705,0.6742631196975708,0.9028964042663574,0.4979151487350464
+Stable recurrence,42,extrapolation,23.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.951429009437561,0.6942695379257202,1.021061658859253,0.41303467750549316
+Stable recurrence,42,extrapolation,24.0,experiments/runs/m2_synthetic_dense_recurrence_seed42/summary.json,0.9942647814750671,0.708625078201294,1.1198747158050537,0.3406411409378052
+Image U-Net,42,selection,15.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,0.9216837286949158,0.8443243503570557,0.8720095157623291,0.5516856908798218
+Image U-Net,42,selection,16.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,0.9648017287254333,0.8554999828338623,1.1853868961334229,0.29294127225875854
+Image U-Net,42,selection,17.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,1.0333341360092163,0.8635336756706238,1.8068535327911377,-0.18868330121040344
+Image U-Net,42,selection,18.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,0.9969197511672974,0.8670634627342224,1.4935581684112549,0.06048736721277237
+Image U-Net,42,extrapolation,19.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,1.0518105030059814,0.8686416149139404,1.767829418182373,-0.1542617380619049
+Image U-Net,42,extrapolation,19.5,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,1.0631914138793945,0.8694164156913757,1.8292770385742188,-0.20325148105621338
+Image U-Net,42,extrapolation,20.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,1.0439602136611938,0.8702404499053955,1.6957941055297852,-0.09804336726665497
+Image U-Net,42,extrapolation,21.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,0.9949659705162048,0.8718149065971375,1.40579092502594,0.13056986033916473
+Image U-Net,42,extrapolation,22.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,1.0052735805511475,0.8731464743614197,1.5164029598236084,0.04295872151851654
+Image U-Net,42,extrapolation,23.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,1.0104491710662842,0.8746579885482788,1.582961082458496,-0.008726648986339569
+Image U-Net,42,extrapolation,24.0,experiments/runs/m2_synthetic_dense_unet_seed42/summary.json,1.0154387950897217,0.8762232065200806,1.6092251539230347,-0.029294412583112717
