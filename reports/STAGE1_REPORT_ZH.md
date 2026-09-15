@@ -59,45 +59,43 @@
 - 非二倍频 development 结果只能说明旧公式不局限于平方操作，不能支撑任意倍率泛化。
 
 最合理的旧结果归因是：单频 harmonic carrier 捕获了一部分传播相位结构，但单频只能看到
-模 $2\pi$ 的相位，约 8%–10% 的平台更可能是信息可辨识性上限，而不只是优化不足。
+模 $2π$ 的相位，约 8%–10% 的平台更可能是信息可辨识性上限，而不只是优化不足。
 
 ## 3. 新任务的第一性原理
 
 给定同一环境和源实例在若干低频处的复波场，以及可选介质信息，预测一个未见查询频率：
 
 $$
-\left\{u(\mathbf{x},f_j)\right\}_{j=1}^{m},\;c(\mathbf{x}),\;f_q
-\longmapsto \widehat{u}(\mathbf{x},f_q),
-\qquad f_q>\max_j f_j.
+[u(x,f_j)]_{j=1}^{m}, c(x), f_q
+→ u_θ(x,f_q)
 $$
+
+其中查询频率 $f_q$ 高于所有已观测频率。
 
 整数倍频只是一个容易理解的评测切片，模型定义并不要求 $f_q/f_j$ 为整数。
 
 局部复波场可以写成传播分量的叠加：
 
 $$
-u(\mathbf{x},f)\approx\sum_{p=1}^{P}a_p(\mathbf{x},f)
-\exp\!\left(i2\pi f\tau_p(\mathbf{x})\right).
+u(x,f) ≈ Σ_{p=1}^{P} a_p(x,f)e^{i2πfτ_p(x)}.
 $$
 
 相对稳定的对象不是干涉后的观测幅值 $|u|$，而更可能是缓变包络 $a_p$ 与旅行时间
-$\tau_p$。单频相位只提供 $2\pi f\tau_p\bmod 2\pi$；相邻频率提供的比值则消除了绝对
-相位 gauge：
+$τ_p$。单频相位只提供相位在 $2π$ 周期下的等价类；相邻频率提供的比值则消除了绝对
+相位 gauge。记 $A(z)$ 为复数 $z$ 的主值相角，则
 
 $$
-\Delta\phi(\mathbf{x})=
-\operatorname{Arg}\!\left[u(\mathbf{x},f_1)
-u(\mathbf{x},f_0)^*\right].
+Δφ(x)=A(u(x,f_1)u(x,f_0)^*).
 $$
 
 若只使用主值相位，为避免单路径延迟发生频谱混叠，大致需要
 
 $$
-\Delta f < \frac{1}{2\tau_{\max}}.
+Δf < 1/(2τ_{max}).
 $$
 
 当前 Ocean 最大传播距离约 750 m，最低水中声速约 1470 m/s，因此
-$\tau_{\max}\approx0.51$ s，临界 $\Delta f\approx0.98$ Hz。这给出了一个可证伪、可跨域
+$τ_{max}≈0.51$ s，临界 $Δf≈0.98$ Hz。这给出了一个可证伪、可跨域
 迁移的实验设计原则：**需要按传播时延选择频率采样密度，而不是任意增加低频数量。**
 
 ## 4. 最小方法：先检验信息，再检验表示
@@ -107,32 +105,28 @@ $\tau_{\max}\approx0.51$ s，临界 $\Delta f\approx0.98$ Hz。这给出了一�
 输入采用三个固定频率 slot。每个 slot 含复场实部/虚部、频率图和存在 mask；80 Hz 在
 单频与细频带条件中始终位于同一个 slot。另输入归一化空间坐标、查询频率，以及在
 known-medium 轨道中的四个实际生效介质通道。四尺度 U-Net 直接回归
-$\widehat{u}(\mathbf{x},f_q)$。
+$u_θ(x,f_q)$。
 
 ### 4.2 M1：carrier-relative query operator
 
 对 79/80 Hz 两个末端频率，构造局部谱割线 carrier：
 
 $$
-\widehat{\phi}_c(\mathbf{x},f_q)=
-\operatorname{Arg}u(\mathbf{x},80)
-+\frac{f_q-80}{80-79}\,
-\operatorname{Arg}\!\left[u(\mathbf{x},80)u(\mathbf{x},79)^*\right],
+φ_c(x,f_q)=A(u(x,80))
++ ((f_q-80)/(80-79))A(u(x,80)u(x,79)^*),
 $$
 
 $$
-c_q(\mathbf{x})=\exp\!\left(i\widehat{\phi}_c(\mathbf{x},f_q)\right),
-\qquad
-\widehat{u}(\mathbf{x},f_q)=c_q(\mathbf{x})z_\theta(\mathbf{x},f_q).
+c_q(x)=e^{iφ_c(x,f_q)},
+u_θ(x,f_q)=c_q(x)z_θ(x,f_q).
 $$
 
-网络只需预测 carrier 坐标系中的复系数 $z_\theta$。M0 和 M1 使用完全相同的输入、U-Net、
+网络只需预测 carrier 坐标系中的复系数 $z_θ$。M0 和 M1 使用完全相同的输入、U-Net、
 1,229,842 个参数、初始化、更新数和唯一最终损失：
 
 $$
-\mathcal{L}=\frac{1}{B}\sum_{b=1}^{B}
-\frac{\left\|\widehat{u}_b-u_b\right\|_2^2}
-{\left\|u_b\right\|_2^2}.
+L=(1/B)Σ_{b=1}^{B}
+(||u_{θ,b}-u_b||_2^2/||u_b||_2^2).
 $$
 
 没有 amplitude loss、phase loss、consistency loss 或 flow objective。因而 M1 与 M0 的差异
@@ -323,13 +317,13 @@ field-only 在 105/110 Hz 的 M1 raw error 为 0.590/0.699，强单频 direct �
    carrier 各自优势区间；不增加新 loss，先尝试共享 encoder 的轻量双坐标解码或基于可见
    谱一致性的置信度混合。
 2. **再做学习到的传播表示。** 将 79/80 Hz 频率集合编码为少量复包络与 delay tokens，
-   用 $\sum_p a_p\exp(i2\pi f_q\tau_p)$ 解码。第一版只比较一个 path-token 模块与 M1，
+   用 $Σ_p a_p e^{i2πf_qτ_p}$ 解码。第一版只比较一个 path-token 模块与 M1，
    不同时堆幅值、相位和一致性 loss。
 3. **把幅值作为结构，不作为额外指标游戏。** 学习缓变的 carrier-relative 包络，或在
-   delay-token 解码器中让 $a_p(\mathbf{x},f)$ 低阶依赖频率；主损失仍保持 raw complex
+   delay-token 解码器中让 $a_p(x,f)$ 低阶依赖频率；主损失仍保持 raw complex
    error。
 4. **建立第二个 phase-resolved 域。** 优先生成具有连续频率控制的 variable-medium
-   Helmholtz/elastic 数据；频率间隔按各域 $\tau_{\max}$ 预注册。不要强行把只有
+   Helmholtz/elastic 数据；频率间隔按各域 $τ_{max}$ 预注册。不要强行把只有
    10/15/20/40 Hz 的 WaveBench 说成正验证。
 5. **最后才决定是否需要生成式模型。** 只有在隐藏源/边界导致重复条件呈现多模态时，才用
    conditional distribution 或 flow；否则确定性谱算子更简洁。
