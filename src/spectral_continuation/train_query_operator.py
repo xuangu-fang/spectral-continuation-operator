@@ -158,6 +158,7 @@ def run(args):
         device,
     )
     best_value = selection["macro_average"]["complex_rel_l2"]
+    best_epoch = 0
     best_state = copy.deepcopy(model.state_dict())
     rows = [{"epoch": 0, "train_loss": None, "selection_complex_rel_l2": best_value}]
     for epoch in range(1, args.epochs + 1):
@@ -193,6 +194,7 @@ def run(args):
         )
         if current < best_value:
             best_value = current
+            best_epoch = epoch
             best_state = copy.deepcopy(model.state_dict())
         print(
             f"epoch={epoch:03d}/{args.epochs} train={np.mean(losses):.5f} select={current:.5f}",
@@ -244,6 +246,7 @@ def run(args):
         "train_count": len(train_positions),
         "validation_count": len(val_positions),
         "parameters": parameter_count(model),
+        "selected_epoch": best_epoch,
         "selection": selection,
         "extrapolation": extrapolation,
         "checkpoint_sha256": sha256_file(checkpoint),

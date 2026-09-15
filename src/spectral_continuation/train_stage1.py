@@ -110,6 +110,7 @@ def run(args: argparse.Namespace) -> None:
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
     best_state = copy.deepcopy(model.state_dict())
+    best_epoch = 0
     best_metrics, best_vectors = evaluate(
         model, val_loader, normalization.target_scale, args.parameterization, device
     )
@@ -141,6 +142,7 @@ def run(args: argparse.Namespace) -> None:
             }
         )
         if metrics["complex_rel_l2"] < best_metrics["complex_rel_l2"]:
+            best_epoch = epoch
             best_state, best_metrics, best_vectors = (
                 copy.deepcopy(model.state_dict()),
                 metrics,
@@ -179,6 +181,7 @@ def run(args: argparse.Namespace) -> None:
         "train_count": len(train_positions),
         "validation_count": len(val_positions),
         "model_parameters": parameter_count(model),
+        "selected_epoch": best_epoch,
         "best_validation": best_metrics,
         "lineage": bundle.lineage,
         "normalization": {

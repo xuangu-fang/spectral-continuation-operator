@@ -1,0 +1,202 @@
+{
+  "aggregates": {
+    "ocean/band_carrier": {
+      "seeds": [
+        42
+      ],
+      "complex_rel_l2": {
+        "mean": 0.446592777967453,
+        "std": 0.0
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.3010289669036865,
+        "std": 0.0
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.4066455364227295,
+        "std": 0.0
+      },
+      "phase_coherence": {
+        "mean": 0.8280003070831299,
+        "std": 0.0
+      }
+    },
+    "ocean/band_direct": {
+      "seeds": [
+        42
+      ],
+      "complex_rel_l2": {
+        "mean": 0.24645209312438965,
+        "std": 0.0
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.1691991090774536,
+        "std": 0.0
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.18056656420230865,
+        "std": 0.0
+      },
+      "phase_coherence": {
+        "mean": 0.9573246836662292,
+        "std": 0.0
+      }
+    },
+    "ocean/single_carrier": {
+      "seeds": [
+        42
+      ],
+      "complex_rel_l2": {
+        "mean": 0.2993839979171753,
+        "std": 0.0
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.20594477653503418,
+        "std": 0.0
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.22900347411632538,
+        "std": 0.0
+      },
+      "phase_coherence": {
+        "mean": 0.9313705563545227,
+        "std": 0.0
+      }
+    },
+    "ocean/single_direct": {
+      "seeds": [
+        42
+      ],
+      "complex_rel_l2": {
+        "mean": 0.24612849950790405,
+        "std": 0.0
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.16846303641796112,
+        "std": 0.0
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.18069155514240265,
+        "std": 0.0
+      },
+      "phase_coherence": {
+        "mean": 0.9575744271278381,
+        "std": 0.0
+      }
+    },
+    "wavebench/band_carrier": {
+      "seeds": [
+        42
+      ],
+      "complex_rel_l2": {
+        "mean": 0.7427113056182861,
+        "std": 0.0
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.5573114156723022,
+        "std": 0.0
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.9193448424339294,
+        "std": 0.0
+      },
+      "phase_coherence": {
+        "mean": 0.48665016889572144,
+        "std": 0.0
+      }
+    },
+    "wavebench/band_direct": {
+      "seeds": [
+        42
+      ],
+      "complex_rel_l2": {
+        "mean": 0.6507817506790161,
+        "std": 0.0
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.4513506293296814,
+        "std": 0.0
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.6927358508110046,
+        "std": 0.0
+      },
+      "phase_coherence": {
+        "mean": 0.6485770344734192,
+        "std": 0.0
+      }
+    },
+    "wavebench/single_carrier": {
+      "seeds": [
+        42
+      ],
+      "complex_rel_l2": {
+        "mean": 0.6667813658714294,
+        "std": 0.0
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.4779961407184601,
+        "std": 0.0
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.7485722899436951,
+        "std": 0.0
+      },
+      "phase_coherence": {
+        "mean": 0.6053648591041565,
+        "std": 0.0
+      }
+    },
+    "wavebench/single_direct": {
+      "seeds": [
+        42
+      ],
+      "complex_rel_l2": {
+        "mean": 0.6425281167030334,
+        "std": 0.0
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.4393247067928314,
+        "std": 0.0
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.6769033074378967,
+        "std": 0.0
+      },
+      "phase_coherence": {
+        "mean": 0.6585015654563904,
+        "std": 0.0
+      }
+    }
+  },
+  "paired_contrasts": {
+    "ocean/band_information/seed42": {
+      "mean_absolute_improvement": -0.0003236099146306515,
+      "relative_improvement_percent": -0.13148006796836853,
+      "fraction_candidate_better": 0.4895833333333333,
+      "ci95_low": -0.002316480502486229,
+      "ci95_high": 0.0016895782900974154
+    },
+    "ocean/carrier_parameterization/seed42": {
+      "mean_absolute_improvement": -0.20014064013957977,
+      "relative_improvement_percent": -81.208740234375,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.21018259227275848,
+      "ci95_high": -0.1905459463596344
+    },
+    "wavebench/band_information/seed42": {
+      "mean_absolute_improvement": -0.008253625594079494,
+      "relative_improvement_percent": -1.2845547199249268,
+      "fraction_candidate_better": 0.29,
+      "ci95_low": -0.010148121975362301,
+      "ci95_high": -0.00631436612457037
+    },
+    "wavebench/carrier_parameterization/seed42": {
+      "mean_absolute_improvement": -0.09192953258752823,
+      "relative_improvement_percent": -14.126015663146973,
+      "fraction_candidate_better": 0.012,
+      "ci95_low": -0.09516669809818268,
+      "ci95_high": -0.08866938203573227
+    }
+  }
+}

@@ -242,9 +242,9 @@ def spectral_carrier(
             )
             phase_stack = torch.stack(unwrapped, dim=0)
             phase_center = phase_stack.mean(dim=0)
-            slope = torch.sum(
-                frequency_offsets.view(-1, 1, 1, 1) * phase_stack, dim=0
-            ) / torch.sum(frequency_offsets.square())
+            slope = torch.sum(frequency_offsets.view(-1, 1, 1, 1) * phase_stack, dim=0) / torch.sum(
+                frequency_offsets.square()
+            )
             phase = phase_center + (target_frequency - np.mean(visible)) * slope
         else:
             previous = visible[-2]

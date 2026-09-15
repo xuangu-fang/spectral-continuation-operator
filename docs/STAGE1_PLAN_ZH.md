@@ -47,6 +47,18 @@ $|u|$。单频只能观察到 $\omega\tau_p\bmod 2\pi$，多个低频点可能�
 - 输入低频带、训练查询频率和外推查询频率在配置中预注册；
 - 既有 96 个 strict environments 不用于第一阶段调试。
 
+一个关键设计量是频率采样间隔。若主传播延迟为 $\tau$，相邻频率的相位差为
+$2\pi\Delta f\tau$；仅依赖主值相位时，避免混叠大致要求
+
+$$
+\Delta f < \frac{1}{2\tau_{\max}}.
+$$
+
+当前 Ocean 最大传播距离约 750 m、最低水中声速约 1470 m/s，对应
+$\tau_{\max}\approx0.51$ s，因此临界间隔约 0.98 Hz。旧 50/100/200 Hz ladder
+并不能辨识谱相位斜率；第一阶段额外构造 78/79/80 Hz 的 1 Hz terminal context band，
+专门区分“谱连续假设失败”和“频率采样已经 alias”这两种解释。
+
 ## 4. 最小模型阶梯
 
 M0：matched direct query operator。把可见复场、介质、频率 mask 和查询频率共同输入
@@ -86,4 +98,3 @@ relative L2、幅值加权 circular phase error、coherence 和误差随查询�
 则保留 spectral continuation 任务，放弃当前 carrier 参数化，下一阶段转向 learned
 path-token representation。生成式模型只有在重复条件或受控隐藏变量证明条件分布歧义后
 才进入计划。
-

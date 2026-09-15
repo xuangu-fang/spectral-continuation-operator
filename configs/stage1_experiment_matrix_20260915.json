@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "primary_question": "Does a phase-resolved low-frequency band improve label-blind high-frequency continuation over a single low-frequency field?",
+  "fixed_target_controls": {
+    "wavebench": {
+      "single_context_hz": [20],
+      "band_context_hz": [10, 15, 20],
+      "target_hz": 40,
+      "train_environments": 2000,
+      "validation_environments": 500
+    },
+    "ocean_coarse": {
+      "single_context_hz": [100],
+      "band_context_hz": [50, 100],
+      "target_hz": 200,
+      "train_environments": 384,
+      "validation_environments": 96
+    }
+  },
+  "primary_fineband_query_task": {
+    "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+    "single_context_hz": [80],
+    "band_context_hz": [78, 79, 80],
+    "selection_queries_hz": [90, 100],
+    "label_blind_extrapolation_queries_hz": [125, 150, 175, 200],
+    "seeds": [42, 43, 44],
+    "tracks": ["known_medium", "field_only"],
+    "parameterizations": ["direct", "carrier_relative"],
+    "width": 16,
+    "epochs": 80,
+    "batch_size": 16
+  },
+  "fairness": {
+    "same_backbone_and_parameter_count": true,
+    "same_initialization_for_matched_seed": true,
+    "same_environment_ids_and_batch_order": true,
+    "same_optimizer_updates": true,
+    "single_final_loss": "mean per-environment relative squared complex L2",
+    "selection": "mean raw complex RelL2 on validation environments at 90/100 Hz only",
+    "extrapolation_access": "125/150/175/200 Hz labels evaluated once after checkpoint selection"
+  }
+}
