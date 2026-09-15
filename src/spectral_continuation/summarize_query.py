@@ -39,10 +39,21 @@ def run(args):
         content = json.loads(path.read_text(encoding="utf-8"))
         if "extrapolation" in content:
             paths.append((path, content))
-    rows, vectors = [], {}
+    rows, vectors, sources = [], {}, []
     for path, summary in paths:
         track = "field_only" if summary.get("field_only") else "known_medium"
         name = variant(summary)
+        sources.append(
+            {
+                "summary": str(path),
+                "track": track,
+                "variant": name,
+                "seed": summary["seed"],
+                "selected_epoch": summary["selected_epoch"],
+                "checkpoint_sha256": summary["checkpoint_sha256"],
+                "lineage": summary["lineage"],
+            }
+        )
         with np.load(path.parent / "validation_metrics.npz", allow_pickle=False) as archive:
             for regime, frequencies in (
                 ("selection", summary["selection_query_frequencies_hz"]),
@@ -93,6 +104,7 @@ def run(args):
                 for base, candidate, name in (
                     ("single_direct", "band_direct", "band_information"),
                     ("band_direct", "band_carrier", "carrier_parameterization"),
+                    ("single_direct", "band_carrier", "full_method_vs_strong_single"),
                 ):
                     base_key = (track, base, seed, frequency)
                     candidate_key = (track, candidate, seed, frequency)
@@ -100,10 +112,36 @@ def run(args):
                         contrasts[f"{track}/{name}/{frequency:g}/seed{seed}"] = paired_bootstrap(
                             vectors[base_key], vectors[candidate_key], seed=seed
                         )
+    seed_aggregate_contrasts = {}
+    for track in tracks:
+        for frequency in frequencies:
+            for base, candidate, name in (
+                ("single_direct", "band_direct", "band_information"),
+                ("band_direct", "band_carrier", "carrier_parameterization"),
+                ("single_direct", "band_carrier", "full_method_vs_strong_single"),
+            ):
+                improvements = []
+                for seed in seeds:
+                    base_key = (track, base, seed, frequency)
+                    candidate_key = (track, candidate, seed, frequency)
+                    if base_key in vectors and candidate_key in vectors:
+                        baseline = float(np.mean(vectors[base_key]))
+                        candidate_value = float(np.mean(vectors[candidate_key]))
+                        improvements.append(100 * (baseline - candidate_value) / baseline)
+                if improvements:
+                    seed_aggregate_contrasts[f"{track}/{name}/{frequency:g}"] = {
+                        "seeds": len(improvements),
+                        "relative_improvement_percent_mean": float(np.mean(improvements)),
+                        "relative_improvement_percent_std": float(np.std(improvements)),
+                        "fraction_seeds_positive": float(np.mean(np.asarray(improvements) > 0)),
+                        "per_seed_percent": improvements,
+                    }
     output = {
         "schema_version": 1,
+        "sources": sources,
         "aggregates": aggregates,
         "paired_contrasts": contrasts,
+        "seed_aggregate_contrasts": seed_aggregate_contrasts,
     }
     args.output_dir.mkdir(parents=True, exist_ok=True)
     with (args.output_dir / "query_runs.csv").open("w", encoding="utf-8", newline="") as handle:
@@ -147,11 +185,20 @@ def run(args):
         axis.axvspan(min(frequencies), args.selection_max_hz, color="#EEEEEE", alpha=0.7)
         axis.axvline(args.selection_max_hz, color="#444444", linestyle="--", linewidth=1)
         axis.text(
-            args.selection_max_hz,
+            0.5 * (min(frequencies) + args.selection_max_hz),
             0.98,
-            "selection boundary",
+            "fit / selection",
             transform=axis.get_xaxis_transform(),
-            ha="right",
+            ha="center",
+            va="top",
+            fontsize=9,
+        )
+        axis.text(
+            args.selection_max_hz + 2,
+            0.98,
+            "label-blind extrapolation",
+            transform=axis.get_xaxis_transform(),
+            ha="left",
             va="top",
             fontsize=9,
         )

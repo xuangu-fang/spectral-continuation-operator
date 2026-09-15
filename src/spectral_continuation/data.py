@@ -14,6 +14,12 @@ import torch
 from torch.utils.data import Dataset
 
 EPS = 1e-8
+OCEAN_ACTIVE_ENVIRONMENT_CHANNELS = (
+    "water_speed_mps",
+    "water_depth_m",
+    "seabed_speed_mps",
+    "seabed_density_kgm3",
+)
 
 
 def sha256_int64(values: np.ndarray) -> str:
@@ -154,10 +160,20 @@ def load_ocean_npz(path: Path) -> FieldBundle:
         values = np.asarray(archive["complex_field"], dtype=np.float32)
         frequencies = np.asarray(archive["frequencies_hz"], dtype=np.float64)
         environment = np.asarray(archive["environment_channels"], dtype=np.float32)
+        channel_names = np.asarray(archive["environment_channel_names"]).astype(str)
         ids = np.asarray(archive["environment_ids"]).astype(str)
         split = np.asarray(archive["split"]).astype(str)
     if values.ndim != 5 or values.shape[-1] != 2:
         raise ValueError("Ocean complex_field must have shape [N,F,H,W,2]")
+    lookup = {name: index for index, name in enumerate(channel_names.tolist())}
+    missing = set(OCEAN_ACTIVE_ENVIRONMENT_CHANNELS).difference(lookup)
+    if missing:
+        raise ValueError(f"Ocean archive is missing active environment channels: {sorted(missing)}")
+    active_indices = [lookup[name] for name in OCEAN_ACTIVE_ENVIRONMENT_CHANNELS]
+    excluded = [
+        name for name in channel_names.tolist() if name not in OCEAN_ACTIVE_ENVIRONMENT_CHANNELS
+    ]
+    environment = environment[:, active_indices]
     fields = {
         float(frequency): torch.from_numpy(values[:, index].transpose(0, 3, 1, 2).copy())
         for index, frequency in enumerate(frequencies)
@@ -168,7 +184,16 @@ def load_ocean_npz(path: Path) -> FieldBundle:
         ids=ids,
         split=split,
         frequencies=tuple(map(float, frequencies)),
-        lineage={"kind": "ocean-paired-npz", "path": str(path)},
+        lineage={
+            "kind": "ocean-paired-npz",
+            "path": str(path),
+            "environment_channels": list(OCEAN_ACTIVE_ENVIRONMENT_CHANNELS),
+            "excluded_environment_channels": excluded,
+            "exclusion_reason": (
+                "The Pekeris solver does not use fluid-halfspace attenuation; inactive "
+                "random channels are excluded before every formal run."
+            ),
+        },
     )
 
 

@@ -6,6 +6,7 @@ from spectral_continuation.data import (
     MultiQueryDataset,
     SpectralQueryDataset,
     fit_normalization,
+    load_ocean_npz,
     spectral_carrier,
 )
 from spectral_continuation.metrics import metric_vectors, paired_bootstrap
@@ -61,3 +62,32 @@ def test_metrics_and_bootstrap():
     assert np.allclose(exact["complex_rel_l2"], 0.0)
     stats = paired_bootstrap(np.ones(6), np.full(6, 0.8), replicates=100)
     np.testing.assert_allclose(stats["relative_improvement_percent"], 20.0)
+
+
+def test_ocean_loader_excludes_solver_inactive_channel(tmp_path):
+    path = tmp_path / "ocean.npz"
+    names = np.asarray(
+        [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3",
+            "seabed_attenuation_db_per_wavelength",
+        ]
+    )
+    environment = np.stack(
+        [np.full((5, 4, 8), index, dtype=np.float32) for index in range(2)], axis=0
+    )
+    np.savez(
+        path,
+        complex_field=np.zeros((2, 2, 4, 8, 2), dtype=np.float32),
+        frequencies_hz=np.asarray([79.0, 80.0]),
+        environment_channels=environment,
+        environment_channel_names=names,
+        environment_ids=np.asarray(["a", "b"]),
+        split=np.asarray(["train", "val"]),
+    )
+    bundle = load_ocean_npz(path)
+    assert bundle.environment.shape == (2, 4, 4, 8)
+    assert bundle.lineage["environment_channels"] == names[:4].tolist()
+    assert bundle.lineage["excluded_environment_channels"] == [names[-1]]
