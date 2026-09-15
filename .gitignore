@@ -17,3 +17,4 @@ artifacts/**/*.ckpt
 artifacts/**/*.npz
 artifacts/**/*.npy
 experiments/runs/
+experiments/dense_evaluation/

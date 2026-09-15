@@ -1,0 +1,9 @@
+{
+  "selection_rule": "median baseline-minus-candidate RelL2 at 125 Hz",
+  "selected_validation_id": "ocean_val_00018_b8a314a7c657",
+  "selected_position": 18,
+  "rank_frequency_hz": 125.0,
+  "improvement_at_rank_frequency": 0.31058502197265625,
+  "baseline_run": "experiments/runs/fine_query_formal_known_seed42_single_direct",
+  "candidate_run": "experiments/runs/fine_query_formal_known_seed42_band_carrier"
+}

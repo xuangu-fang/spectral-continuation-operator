@@ -1,0 +1,3851 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed42_band_carrier/summary.json",
+      "track": "field_only",
+      "variant": "band_carrier",
+      "seed": 42,
+      "selected_epoch": 74,
+      "checkpoint_sha256": "b657b31b3fc56cd50777b870b6a349d2913ae894c0ef5277007250cae134a995",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed42_band_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed42_band_direct/summary.json",
+      "track": "field_only",
+      "variant": "band_direct",
+      "seed": 42,
+      "selected_epoch": 78,
+      "checkpoint_sha256": "cd44b818566924a809adfd9db695e047d11dd177eee92da065e72326d3a7a41b",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed42_band_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed42_single_carrier/summary.json",
+      "track": "field_only",
+      "variant": "single_carrier",
+      "seed": 42,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "b3042be88b83c1e9d5d46e7566c1718383b245afc85f709236e772c4f2b6d5a8",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed42_single_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed42_single_direct/summary.json",
+      "track": "field_only",
+      "variant": "single_direct",
+      "seed": 42,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "39b01723bb0c680307a34f349bc76dc683f200d82ad835b5321f25b0dc56bb5a",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed42_single_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed43_band_carrier/summary.json",
+      "track": "field_only",
+      "variant": "band_carrier",
+      "seed": 43,
+      "selected_epoch": 71,
+      "checkpoint_sha256": "566e0c1a880790a1ae7147548ea3df511cc87ac8dd7af343c431cdd99b59acd0",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed43_band_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed43_band_direct/summary.json",
+      "track": "field_only",
+      "variant": "band_direct",
+      "seed": 43,
+      "selected_epoch": 78,
+      "checkpoint_sha256": "d12855be62c650cec1256d80f113db3f72c36a59c35e52f8c48dc3564c0f5147",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed43_band_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed43_single_carrier/summary.json",
+      "track": "field_only",
+      "variant": "single_carrier",
+      "seed": 43,
+      "selected_epoch": 79,
+      "checkpoint_sha256": "94f0ac411c62e7813199bc1ff5072cc704d65226cc9ad647c9a4739b377e1cc5",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed43_single_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed43_single_direct/summary.json",
+      "track": "field_only",
+      "variant": "single_direct",
+      "seed": 43,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "9841be204880e360581b5f1e0e370f39a322574408f37d3749b3cb829fdfd2c0",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed43_single_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed44_band_carrier/summary.json",
+      "track": "field_only",
+      "variant": "band_carrier",
+      "seed": 44,
+      "selected_epoch": 75,
+      "checkpoint_sha256": "ee8f0273e405a0df1001100fa15916e21452b56a52d1400ad20913d4c89b11e9",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed44_band_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed44_band_direct/summary.json",
+      "track": "field_only",
+      "variant": "band_direct",
+      "seed": 44,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "c695067959cd852067bd29e0920c25e02fd8eb5edb196d7af0b57557525591bf",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed44_band_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed44_single_carrier/summary.json",
+      "track": "field_only",
+      "variant": "single_carrier",
+      "seed": 44,
+      "selected_epoch": 79,
+      "checkpoint_sha256": "da48c093cc657c5e23ae9aa7cd9ed7afbda1b89ebe9c8dc9873625fed7405109",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed44_single_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_field_seed44_single_direct/summary.json",
+      "track": "field_only",
+      "variant": "single_direct",
+      "seed": 44,
+      "selected_epoch": 79,
+      "checkpoint_sha256": "ecb6e65715f291f53faf9316c43b4af628efa4bb96af8c89ba560f170d7c9052",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_field_seed44_single_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed42_band_carrier/summary.json",
+      "track": "known_medium",
+      "variant": "band_carrier",
+      "seed": 42,
+      "selected_epoch": 75,
+      "checkpoint_sha256": "04468310bede985a819dddc8aea258bb05db24930d1f1afdea13ce014e0a0fa8",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed42_band_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed42_band_direct/summary.json",
+      "track": "known_medium",
+      "variant": "band_direct",
+      "seed": 42,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "9c41d919efec910f901a3e56eb106da3262a5ff024d6dbc1962f2cdaab90d6e9",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed42_band_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed42_single_carrier/summary.json",
+      "track": "known_medium",
+      "variant": "single_carrier",
+      "seed": 42,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "2eed96dc09db8be94c7f55a37c7ef6b8dcfc98d2f8f1b517141a748b690f25da",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed42_single_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed42_single_direct/summary.json",
+      "track": "known_medium",
+      "variant": "single_direct",
+      "seed": 42,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "528fbfd23862815d237a97cc46b9f22464ff832ec098c1941b1043cad63f618f",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed42_single_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed43_band_carrier/summary.json",
+      "track": "known_medium",
+      "variant": "band_carrier",
+      "seed": 43,
+      "selected_epoch": 78,
+      "checkpoint_sha256": "292f41e32b834e4cb4ac519f27bd062c0f54dd95c5ae44cdf80f1c75c4e45c7f",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed43_band_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed43_band_direct/summary.json",
+      "track": "known_medium",
+      "variant": "band_direct",
+      "seed": 43,
+      "selected_epoch": 79,
+      "checkpoint_sha256": "d05057c231e8ece3cca204aa927aee365dcfb18127ab48e49aeac829f8d143e2",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed43_band_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed43_single_carrier/summary.json",
+      "track": "known_medium",
+      "variant": "single_carrier",
+      "seed": 43,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "b2ba99829f91e594ed28192a286b3a282902d0e28257568f4e223fe571442b40",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed43_single_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed43_single_direct/summary.json",
+      "track": "known_medium",
+      "variant": "single_direct",
+      "seed": 43,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "c7188a363d4021c5bda891ab2c7f54e869c2dc322a38426104ce592c0aa4ecdc",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed43_single_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed44_band_carrier/summary.json",
+      "track": "known_medium",
+      "variant": "band_carrier",
+      "seed": 44,
+      "selected_epoch": 72,
+      "checkpoint_sha256": "9cecca6037c6e390967ffea6e0fbf2b2e996586dc0ebbe081e1c824d6504c320",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed44_band_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed44_band_direct/summary.json",
+      "track": "known_medium",
+      "variant": "band_direct",
+      "seed": 44,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "12ffbd5c88b8f38ff0c341a7488e3a8c01d260cf9e2008f43ea392fb834d7e4b",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed44_band_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed44_single_carrier/summary.json",
+      "track": "known_medium",
+      "variant": "single_carrier",
+      "seed": 44,
+      "selected_epoch": 80,
+      "checkpoint_sha256": "47a04e51505cfcf0abdac774898b922da69eeb8040cc9c7cdd6b563ee28d0044",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed44_single_carrier/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    },
+    {
+      "summary": "experiments/dense_evaluation/fine_query_formal_known_seed44_single_direct/summary.json",
+      "track": "known_medium",
+      "variant": "single_direct",
+      "seed": 44,
+      "selected_epoch": 79,
+      "checkpoint_sha256": "6247fa105455293c8fedf04fec569033ec25928029b13f04f258b9736b4c94e9",
+      "lineage": {
+        "source_checkpoint_summary": "experiments/runs/fine_query_formal_known_seed44_single_direct/summary.json",
+        "source_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "dense_dataset": {
+          "kind": "ocean-paired-npz",
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+          "environment_channels": [
+            "water_speed_mps",
+            "water_depth_m",
+            "seabed_speed_mps",
+            "seabed_density_kgm3"
+          ],
+          "excluded_environment_channels": [
+            "seabed_attenuation_dbperlambda"
+          ],
+          "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+        },
+        "identity_check": "IDs, splits, active environment channels and all shared fields bitwise identical"
+      }
+    }
+  ],
+  "aggregates": {
+    "field_only/band_carrier/90": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.38556986053784686,
+      "complex_rel_l2_std": 0.0032376272334503475,
+      "amplitude_rel_l2_mean": 0.24685617287953696,
+      "weighted_phase_mae_rad_mean": 0.3302227755387624,
+      "phase_coherence_mean": 0.8690150578816732
+    },
+    "field_only/band_carrier/100": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.5059715708096822,
+      "complex_rel_l2_std": 0.0023748997513091813,
+      "amplitude_rel_l2_mean": 0.3287838101387024,
+      "weighted_phase_mae_rad_mean": 0.4998093942801158,
+      "phase_coherence_mean": 0.7635494669278463
+    },
+    "field_only/band_carrier/105": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.5903582771619161,
+      "complex_rel_l2_std": 0.006734275587802353,
+      "amplitude_rel_l2_mean": 0.3713957568009694,
+      "weighted_phase_mae_rad_mean": 0.6247186064720154,
+      "phase_coherence_mean": 0.6846463481585184
+    },
+    "field_only/band_carrier/110": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.698566754659017,
+      "complex_rel_l2_std": 0.016406714897450398,
+      "amplitude_rel_l2_mean": 0.4221063554286957,
+      "weighted_phase_mae_rad_mean": 0.7880218823750814,
+      "phase_coherence_mean": 0.5753310521443685
+    },
+    "field_only/band_carrier/115": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.796589175860087,
+      "complex_rel_l2_std": 0.023070703337362986,
+      "amplitude_rel_l2_mean": 0.46467186013857525,
+      "weighted_phase_mae_rad_mean": 0.930531640847524,
+      "phase_coherence_mean": 0.4755593736966451
+    },
+    "field_only/band_carrier/120": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.8664233485857645,
+      "complex_rel_l2_std": 0.02618616872577709,
+      "amplitude_rel_l2_mean": 0.49326106905937195,
+      "weighted_phase_mae_rad_mean": 1.0369455019632976,
+      "phase_coherence_mean": 0.3990570505460103
+    },
+    "field_only/band_carrier/125": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.9214058319727579,
+      "complex_rel_l2_std": 0.027551812047609373,
+      "amplitude_rel_l2_mean": 0.5174588958422343,
+      "weighted_phase_mae_rad_mean": 1.124604066212972,
+      "phase_coherence_mean": 0.33591902256011963
+    },
+    "field_only/band_carrier/150": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.0468356609344482,
+      "complex_rel_l2_std": 0.028912127520901006,
+      "amplitude_rel_l2_mean": 0.5946063200632731,
+      "weighted_phase_mae_rad_mean": 1.356635570526123,
+      "phase_coherence_mean": 0.16531295577685037
+    },
+    "field_only/band_carrier/175": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.098894993464152,
+      "complex_rel_l2_std": 0.028474965322142002,
+      "amplitude_rel_l2_mean": 0.6325886646906534,
+      "weighted_phase_mae_rad_mean": 1.4518866936365764,
+      "phase_coherence_mean": 0.0924096405506134
+    },
+    "field_only/band_carrier/200": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.1293174028396606,
+      "complex_rel_l2_std": 0.026778294486608473,
+      "amplitude_rel_l2_mean": 0.6556722323099772,
+      "weighted_phase_mae_rad_mean": 1.5142974058787029,
+      "phase_coherence_mean": 0.04406382826467355
+    },
+    "field_only/band_direct/90": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.3318203886349996,
+      "complex_rel_l2_std": 0.031216318645469546,
+      "amplitude_rel_l2_mean": 0.24168389042218527,
+      "weighted_phase_mae_rad_mean": 0.2439149816830953,
+      "phase_coherence_mean": 0.9349111318588257
+    },
+    "field_only/band_direct/100": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.4432058334350586,
+      "complex_rel_l2_std": 0.03287017451252731,
+      "amplitude_rel_l2_mean": 0.3142079909642537,
+      "weighted_phase_mae_rad_mean": 0.3807998299598694,
+      "phase_coherence_mean": 0.8594158291816711
+    },
+    "field_only/band_direct/105": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4408504168192546,
+      "complex_rel_l2_std": 0.015108048613912612,
+      "amplitude_rel_l2_mean": 0.36620718240737915,
+      "weighted_phase_mae_rad_mean": 1.7320773998896282,
+      "phase_coherence_mean": -0.1238236998518308
+    },
+    "field_only/band_direct/110": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4075870911280315,
+      "complex_rel_l2_std": 0.057935766027465564,
+      "amplitude_rel_l2_mean": 0.43628854552904767,
+      "weighted_phase_mae_rad_mean": 1.6080440680185955,
+      "phase_coherence_mean": -0.02914171665906906
+    },
+    "field_only/band_direct/115": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3520365556081135,
+      "complex_rel_l2_std": 0.006425876593381481,
+      "amplitude_rel_l2_mean": 0.476147323846817,
+      "weighted_phase_mae_rad_mean": 1.5922829707463582,
+      "phase_coherence_mean": -0.01649281041075786
+    },
+    "field_only/band_direct/120": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2767982085545857,
+      "complex_rel_l2_std": 0.017093342071595196,
+      "amplitude_rel_l2_mean": 0.5068745613098145,
+      "weighted_phase_mae_rad_mean": 1.516109863917033,
+      "phase_coherence_mean": 0.04317350250979265
+    },
+    "field_only/band_direct/125": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2694138685862224,
+      "complex_rel_l2_std": 0.03330551124293991,
+      "amplitude_rel_l2_mean": 0.5344673792521158,
+      "weighted_phase_mae_rad_mean": 1.5372157494227092,
+      "phase_coherence_mean": 0.026599200442433357
+    },
+    "field_only/band_direct/150": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2845880190531414,
+      "complex_rel_l2_std": 0.017290740500590426,
+      "amplitude_rel_l2_mean": 0.5917160113652548,
+      "weighted_phase_mae_rad_mean": 1.5593205690383911,
+      "phase_coherence_mean": 0.009204476489685476
+    },
+    "field_only/band_direct/175": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2981500228246052,
+      "complex_rel_l2_std": 0.019247127674728144,
+      "amplitude_rel_l2_mean": 0.6015006899833679,
+      "weighted_phase_mae_rad_mean": 1.5700241724650066,
+      "phase_coherence_mean": 0.0008509030449204147
+    },
+    "field_only/band_direct/200": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3072603146235149,
+      "complex_rel_l2_std": 0.012620217278577197,
+      "amplitude_rel_l2_mean": 0.606458326180776,
+      "weighted_phase_mae_rad_mean": 1.5769829352696736,
+      "phase_coherence_mean": -0.004841039578119914
+    },
+    "field_only/single_carrier/90": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.3709801733493805,
+      "complex_rel_l2_std": 0.013911102295808072,
+      "amplitude_rel_l2_mean": 0.2524482508500417,
+      "weighted_phase_mae_rad_mean": 0.3132254083951314,
+      "phase_coherence_mean": 0.8968378901481628
+    },
+    "field_only/single_carrier/100": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.5040641923745474,
+      "complex_rel_l2_std": 0.020793667523838825,
+      "amplitude_rel_l2_mean": 0.3329697946707408,
+      "weighted_phase_mae_rad_mean": 0.4840086102485657,
+      "phase_coherence_mean": 0.7952876687049866
+    },
+    "field_only/single_carrier/105": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4180076122283936,
+      "complex_rel_l2_std": 0.008106756363980316,
+      "amplitude_rel_l2_mean": 0.37407098213831586,
+      "weighted_phase_mae_rad_mean": 1.6940730810165405,
+      "phase_coherence_mean": -0.09736607720454533
+    },
+    "field_only/single_carrier/110": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4267696142196655,
+      "complex_rel_l2_std": 0.01893267932191818,
+      "amplitude_rel_l2_mean": 0.42297213276227313,
+      "weighted_phase_mae_rad_mean": 1.6596631209055583,
+      "phase_coherence_mean": -0.06962376336256663
+    },
+    "field_only/single_carrier/115": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3405978679656982,
+      "complex_rel_l2_std": 0.012308792162445096,
+      "amplitude_rel_l2_mean": 0.4607282181580861,
+      "weighted_phase_mae_rad_mean": 1.5685617129007976,
+      "phase_coherence_mean": 0.0020195412604759135
+    },
+    "field_only/single_carrier/120": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2824797630310059,
+      "complex_rel_l2_std": 0.007639675818087362,
+      "amplitude_rel_l2_mean": 0.486258198817571,
+      "weighted_phase_mae_rad_mean": 1.5384620030721028,
+      "phase_coherence_mean": 0.021527864659825962
+    },
+    "field_only/single_carrier/125": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2749895652135212,
+      "complex_rel_l2_std": 0.0044286599873800256,
+      "amplitude_rel_l2_mean": 0.5096205870310465,
+      "weighted_phase_mae_rad_mean": 1.537045955657959,
+      "phase_coherence_mean": 0.027555156499147415
+    },
+    "field_only/single_carrier/150": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.313000758488973,
+      "complex_rel_l2_std": 0.008463658176147132,
+      "amplitude_rel_l2_mean": 0.5610684355099996,
+      "weighted_phase_mae_rad_mean": 1.5828509330749512,
+      "phase_coherence_mean": -0.0049576951035608845
+    },
+    "field_only/single_carrier/175": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3518379926681519,
+      "complex_rel_l2_std": 0.020992957819709945,
+      "amplitude_rel_l2_mean": 0.5683098634084066,
+      "weighted_phase_mae_rad_mean": 1.6709962685902913,
+      "phase_coherence_mean": -0.0805653582016627
+    },
+    "field_only/single_carrier/200": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.288232644399007,
+      "complex_rel_l2_std": 0.0068793814576384475,
+      "amplitude_rel_l2_mean": 0.5712049802144369,
+      "weighted_phase_mae_rad_mean": 1.5517478783925374,
+      "phase_coherence_mean": 0.013492122913400332
+    },
+    "field_only/single_direct/90": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.3095860282580058,
+      "complex_rel_l2_std": 0.019287036397825738,
+      "amplitude_rel_l2_mean": 0.2210254818201065,
+      "weighted_phase_mae_rad_mean": 0.22824934124946594,
+      "phase_coherence_mean": 0.940378745396932
+    },
+    "field_only/single_direct/100": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.43350114425023395,
+      "complex_rel_l2_std": 0.03759647598706138,
+      "amplitude_rel_l2_mean": 0.30974937478701275,
+      "weighted_phase_mae_rad_mean": 0.37897451718648273,
+      "phase_coherence_mean": 0.8568822741508484
+    },
+    "field_only/single_direct/105": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4379720290501912,
+      "complex_rel_l2_std": 0.030381229737887403,
+      "amplitude_rel_l2_mean": 0.3650352954864502,
+      "weighted_phase_mae_rad_mean": 1.705936074256897,
+      "phase_coherence_mean": -0.10430444528659184
+    },
+    "field_only/single_direct/110": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4172385931015015,
+      "complex_rel_l2_std": 0.04151068428349891,
+      "amplitude_rel_l2_mean": 0.42222410440444946,
+      "weighted_phase_mae_rad_mean": 1.6344822247823079,
+      "phase_coherence_mean": -0.05072372406721115
+    },
+    "field_only/single_direct/115": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3507494926452637,
+      "complex_rel_l2_std": 0.02915504713178075,
+      "amplitude_rel_l2_mean": 0.46533795197804767,
+      "weighted_phase_mae_rad_mean": 1.5866915384928386,
+      "phase_coherence_mean": -0.011905697640031576
+    },
+    "field_only/single_direct/120": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2952167590459187,
+      "complex_rel_l2_std": 0.019692699191976717,
+      "amplitude_rel_l2_mean": 0.495305339495341,
+      "weighted_phase_mae_rad_mean": 1.520549734433492,
+      "phase_coherence_mean": 0.038552758594353996
+    },
+    "field_only/single_direct/125": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.284214973449707,
+      "complex_rel_l2_std": 0.01636330099894879,
+      "amplitude_rel_l2_mean": 0.5211083988348643,
+      "weighted_phase_mae_rad_mean": 1.5545534292856853,
+      "phase_coherence_mean": 0.013914130938549837
+    },
+    "field_only/single_direct/150": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2860564390818279,
+      "complex_rel_l2_std": 0.0148452600142095,
+      "amplitude_rel_l2_mean": 0.577439526716868,
+      "weighted_phase_mae_rad_mean": 1.554193099339803,
+      "phase_coherence_mean": 0.013105808136363825
+    },
+    "field_only/single_direct/175": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3111608028411865,
+      "complex_rel_l2_std": 0.015788112474377388,
+      "amplitude_rel_l2_mean": 0.5841811299324036,
+      "weighted_phase_mae_rad_mean": 1.569167693456014,
+      "phase_coherence_mean": 0.0012696238312249382
+    },
+    "field_only/single_direct/200": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3157929976781209,
+      "complex_rel_l2_std": 0.02408581878762252,
+      "amplitude_rel_l2_mean": 0.5886812607447306,
+      "weighted_phase_mae_rad_mean": 1.578973650932312,
+      "phase_coherence_mean": -0.006375167829294999
+    },
+    "known_medium/band_carrier/90": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.38431093096733093,
+      "complex_rel_l2_std": 0.0037698759837556405,
+      "amplitude_rel_l2_mean": 0.24170845250288645,
+      "weighted_phase_mae_rad_mean": 0.33491653203964233,
+      "phase_coherence_mean": 0.8639926314353943
+    },
+    "known_medium/band_carrier/100": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.5045958360036215,
+      "complex_rel_l2_std": 0.002165234708569016,
+      "amplitude_rel_l2_mean": 0.3246264060338338,
+      "weighted_phase_mae_rad_mean": 0.5025729139645895,
+      "phase_coherence_mean": 0.7589898109436035
+    },
+    "known_medium/band_carrier/105": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.5884491999944051,
+      "complex_rel_l2_std": 0.0032447405962353643,
+      "amplitude_rel_l2_mean": 0.38064223527908325,
+      "weighted_phase_mae_rad_mean": 0.6313998897870382,
+      "phase_coherence_mean": 0.6785444418589274
+    },
+    "known_medium/band_carrier/110": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.6825538873672485,
+      "complex_rel_l2_std": 0.0035279422569256765,
+      "amplitude_rel_l2_mean": 0.4423315425713857,
+      "weighted_phase_mae_rad_mean": 0.7819223602612814,
+      "phase_coherence_mean": 0.5791118542353312
+    },
+    "known_medium/band_carrier/115": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.7663770318031311,
+      "complex_rel_l2_std": 0.006113864851127621,
+      "amplitude_rel_l2_mean": 0.4869883457819621,
+      "weighted_phase_mae_rad_mean": 0.91666313012441,
+      "phase_coherence_mean": 0.4855552315711975
+    },
+    "known_medium/band_carrier/120": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.8295973141988119,
+      "complex_rel_l2_std": 0.009759741805067319,
+      "amplitude_rel_l2_mean": 0.5193128188451132,
+      "weighted_phase_mae_rad_mean": 1.0247438351313274,
+      "phase_coherence_mean": 0.40810611844062805
+    },
+    "known_medium/band_carrier/125": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.8829013506571451,
+      "complex_rel_l2_std": 0.01280504955478797,
+      "amplitude_rel_l2_mean": 0.5489961902300516,
+      "weighted_phase_mae_rad_mean": 1.116158922513326,
+      "phase_coherence_mean": 0.3420261840025584
+    },
+    "known_medium/band_carrier/150": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.016261100769043,
+      "complex_rel_l2_std": 0.023970848620843133,
+      "amplitude_rel_l2_mean": 0.6262344916661581,
+      "weighted_phase_mae_rad_mean": 1.3539506594340007,
+      "phase_coherence_mean": 0.16797120372454324
+    },
+    "known_medium/band_carrier/175": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.069184422492981,
+      "complex_rel_l2_std": 0.028364089767194182,
+      "amplitude_rel_l2_mean": 0.6473073561986288,
+      "weighted_phase_mae_rad_mean": 1.445969859759013,
+      "phase_coherence_mean": 0.09774129092693329
+    },
+    "known_medium/band_carrier/200": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.1002981662750244,
+      "complex_rel_l2_std": 0.03315253123963307,
+      "amplitude_rel_l2_mean": 0.6590384046236674,
+      "weighted_phase_mae_rad_mean": 1.4961791435877483,
+      "phase_coherence_mean": 0.0584469735622406
+    },
+    "known_medium/band_direct/90": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.33787181973457336,
+      "complex_rel_l2_std": 0.04066307409512323,
+      "amplitude_rel_l2_mean": 0.2519216438134511,
+      "weighted_phase_mae_rad_mean": 0.24111307660738626,
+      "phase_coherence_mean": 0.9358195861180624
+    },
+    "known_medium/band_direct/100": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.4400796989599864,
+      "complex_rel_l2_std": 0.040968536922765725,
+      "amplitude_rel_l2_mean": 0.3162842591603597,
+      "weighted_phase_mae_rad_mean": 0.3718688189983368,
+      "phase_coherence_mean": 0.8646968007087708
+    },
+    "known_medium/band_direct/105": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4323898951212566,
+      "complex_rel_l2_std": 0.028099512538530626,
+      "amplitude_rel_l2_mean": 0.372673104206721,
+      "weighted_phase_mae_rad_mean": 1.7234117190043132,
+      "phase_coherence_mean": -0.11811696986357371
+    },
+    "known_medium/band_direct/110": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3941531578699748,
+      "complex_rel_l2_std": 0.054336700523070165,
+      "amplitude_rel_l2_mean": 0.4346015552679698,
+      "weighted_phase_mae_rad_mean": 1.612343470255534,
+      "phase_coherence_mean": -0.03316371018687884
+    },
+    "known_medium/band_direct/115": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3381721178690593,
+      "complex_rel_l2_std": 0.02979001838522082,
+      "amplitude_rel_l2_mean": 0.47804444034894306,
+      "weighted_phase_mae_rad_mean": 1.5852675835291545,
+      "phase_coherence_mean": -0.012114506835738817
+    },
+    "known_medium/band_direct/120": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.259990930557251,
+      "complex_rel_l2_std": 0.028580917540318915,
+      "amplitude_rel_l2_mean": 0.5066401958465576,
+      "weighted_phase_mae_rad_mean": 1.5162508885065715,
+      "phase_coherence_mean": 0.042745672166347504
+    },
+    "known_medium/band_direct/125": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2626287539800007,
+      "complex_rel_l2_std": 0.02121096492007997,
+      "amplitude_rel_l2_mean": 0.5310433705647787,
+      "weighted_phase_mae_rad_mean": 1.5394901434580486,
+      "phase_coherence_mean": 0.024169114728768665
+    },
+    "known_medium/band_direct/150": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.272784948348999,
+      "complex_rel_l2_std": 0.029262281292336104,
+      "amplitude_rel_l2_mean": 0.5830540657043457,
+      "weighted_phase_mae_rad_mean": 1.5577250719070435,
+      "phase_coherence_mean": 0.010162418863425652
+    },
+    "known_medium/band_direct/175": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2908698717753093,
+      "complex_rel_l2_std": 0.026721238692047247,
+      "amplitude_rel_l2_mean": 0.5916108091672262,
+      "weighted_phase_mae_rad_mean": 1.5654607613881428,
+      "phase_coherence_mean": 0.00443512558316191
+    },
+    "known_medium/band_direct/200": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3004432916641235,
+      "complex_rel_l2_std": 0.026607791364628448,
+      "amplitude_rel_l2_mean": 0.5956100424130758,
+      "weighted_phase_mae_rad_mean": 1.5704683860143025,
+      "phase_coherence_mean": 0.0003472373985763018
+    },
+    "known_medium/single_carrier/90": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.3690956433614095,
+      "complex_rel_l2_std": 0.009921100120988883,
+      "amplitude_rel_l2_mean": 0.2603758970896403,
+      "weighted_phase_mae_rad_mean": 0.3050617178281148,
+      "phase_coherence_mean": 0.8992799719174703
+    },
+    "known_medium/single_carrier/100": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.5054977436860403,
+      "complex_rel_l2_std": 0.006586909215217091,
+      "amplitude_rel_l2_mean": 0.3451058665911357,
+      "weighted_phase_mae_rad_mean": 0.4798075159390767,
+      "phase_coherence_mean": 0.799515962600708
+    },
+    "known_medium/single_carrier/105": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4156170686086018,
+      "complex_rel_l2_std": 0.013751947125499226,
+      "amplitude_rel_l2_mean": 0.38549094398816425,
+      "weighted_phase_mae_rad_mean": 1.7197777032852173,
+      "phase_coherence_mean": -0.11641749987999599
+    },
+    "known_medium/single_carrier/110": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3981664578119914,
+      "complex_rel_l2_std": 0.028071227519204843,
+      "amplitude_rel_l2_mean": 0.4327719509601593,
+      "weighted_phase_mae_rad_mean": 1.627105951309204,
+      "phase_coherence_mean": -0.04347984058161577
+    },
+    "known_medium/single_carrier/115": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3442198038101196,
+      "complex_rel_l2_std": 0.015946512608225893,
+      "amplitude_rel_l2_mean": 0.4678724904855092,
+      "weighted_phase_mae_rad_mean": 1.589219331741333,
+      "phase_coherence_mean": -0.01460918334002296
+    },
+    "known_medium/single_carrier/120": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2817089160283406,
+      "complex_rel_l2_std": 0.013687011061700536,
+      "amplitude_rel_l2_mean": 0.4926689366499583,
+      "weighted_phase_mae_rad_mean": 1.5361727476119995,
+      "phase_coherence_mean": 0.021621667469541233
+    },
+    "known_medium/single_carrier/125": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2645605007807414,
+      "complex_rel_l2_std": 0.014666241152948001,
+      "amplitude_rel_l2_mean": 0.5165547132492065,
+      "weighted_phase_mae_rad_mean": 1.5345989068349202,
+      "phase_coherence_mean": 0.02693221780161063
+    },
+    "known_medium/single_carrier/150": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.301246205965678,
+      "complex_rel_l2_std": 0.02054331446579418,
+      "amplitude_rel_l2_mean": 0.5658336281776428,
+      "weighted_phase_mae_rad_mean": 1.5819141070048015,
+      "phase_coherence_mean": -0.00392064426948006
+    },
+    "known_medium/single_carrier/175": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3170516888300579,
+      "complex_rel_l2_std": 0.02573460105092816,
+      "amplitude_rel_l2_mean": 0.5724503993988037,
+      "weighted_phase_mae_rad_mean": 1.6131170590718586,
+      "phase_coherence_mean": -0.03535331164797147
+    },
+    "known_medium/single_carrier/200": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.288432200749715,
+      "complex_rel_l2_std": 0.012639795780528706,
+      "amplitude_rel_l2_mean": 0.5765688618024191,
+      "weighted_phase_mae_rad_mean": 1.5450522502263386,
+      "phase_coherence_mean": 0.01882025320082903
+    },
+    "known_medium/single_direct/90": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.3248971899350484,
+      "complex_rel_l2_std": 0.049194796013763774,
+      "amplitude_rel_l2_mean": 0.24106012284755707,
+      "weighted_phase_mae_rad_mean": 0.23273447155952454,
+      "phase_coherence_mean": 0.937798261642456
+    },
+    "known_medium/single_direct/100": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 0.4352059563000997,
+      "complex_rel_l2_std": 0.06020376882410077,
+      "amplitude_rel_l2_mean": 0.3164351284503937,
+      "weighted_phase_mae_rad_mean": 0.3740540047486623,
+      "phase_coherence_mean": 0.8600825667381287
+    },
+    "known_medium/single_direct/105": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.4366066058476765,
+      "complex_rel_l2_std": 0.032736612325711505,
+      "amplitude_rel_l2_mean": 0.3620581328868866,
+      "weighted_phase_mae_rad_mean": 1.7293057441711426,
+      "phase_coherence_mean": -0.12307435770829518
+    },
+    "known_medium/single_direct/110": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3885397513707478,
+      "complex_rel_l2_std": 0.06610069643338518,
+      "amplitude_rel_l2_mean": 0.41925862431526184,
+      "weighted_phase_mae_rad_mean": 1.5909868081410725,
+      "phase_coherence_mean": -0.014406094948450724
+    },
+    "known_medium/single_direct/115": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.3343385855356853,
+      "complex_rel_l2_std": 0.04354652098893057,
+      "amplitude_rel_l2_mean": 0.4609152277310689,
+      "weighted_phase_mae_rad_mean": 1.5661362409591675,
+      "phase_coherence_mean": 0.0023732399567961693
+    },
+    "known_medium/single_direct/120": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.26091464360555,
+      "complex_rel_l2_std": 0.044344124039955475,
+      "amplitude_rel_l2_mean": 0.48682522773742676,
+      "weighted_phase_mae_rad_mean": 1.5082600514094036,
+      "phase_coherence_mean": 0.050078430523475014
+    },
+    "known_medium/single_direct/125": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.26394788424174,
+      "complex_rel_l2_std": 0.04688943034393041,
+      "amplitude_rel_l2_mean": 0.509526789188385,
+      "weighted_phase_mae_rad_mean": 1.5480092366536458,
+      "phase_coherence_mean": 0.01781732775270939
+    },
+    "known_medium/single_direct/150": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2693699995676677,
+      "complex_rel_l2_std": 0.04861909434500337,
+      "amplitude_rel_l2_mean": 0.5622319181760153,
+      "weighted_phase_mae_rad_mean": 1.5591628154118855,
+      "phase_coherence_mean": 0.009174884917835394
+    },
+    "known_medium/single_direct/175": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.289105733235677,
+      "complex_rel_l2_std": 0.05109465072640398,
+      "amplitude_rel_l2_mean": 0.5745053092638651,
+      "weighted_phase_mae_rad_mean": 1.5704840024312336,
+      "phase_coherence_mean": 0.00019758567214012146
+    },
+    "known_medium/single_direct/200": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "complex_rel_l2_mean": 1.2959643205006917,
+      "complex_rel_l2_std": 0.05501151005846677,
+      "amplitude_rel_l2_mean": 0.5788119633992513,
+      "weighted_phase_mae_rad_mean": 1.574842055638631,
+      "phase_coherence_mean": -0.003114228447278341
+    }
+  },
+  "paired_contrasts": {
+    "field_only/band_information/90/seed42": {
+      "mean_absolute_improvement": -0.06073204427957535,
+      "relative_improvement_percent": -19.28141975402832,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.06765130907297134,
+      "ci95_high": -0.053743913769721985
+    },
+    "field_only/carrier_parameterization/90/seed42": {
+      "mean_absolute_improvement": -0.007029684726148844,
+      "relative_improvement_percent": -1.8710445165634155,
+      "fraction_candidate_better": 0.6875,
+      "ci95_low": -0.07304424047470093,
+      "ci95_high": 0.043834492564201355
+    },
+    "field_only/full_method_vs_strong_single/90/seed42": {
+      "mean_absolute_improvement": -0.06776173412799835,
+      "relative_improvement_percent": -21.513229370117188,
+      "fraction_candidate_better": 0.3125,
+      "ci95_low": -0.13598380982875824,
+      "ci95_high": -0.014997746795415878
+    },
+    "field_only/band_information/90/seed43": {
+      "mean_absolute_improvement": 0.024296054616570473,
+      "relative_improvement_percent": 7.361409664154053,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.01966359280049801,
+      "ci95_high": 0.028810452669858932
+    },
+    "field_only/carrier_parameterization/90/seed43": {
+      "mean_absolute_improvement": -0.08435162901878357,
+      "relative_improvement_percent": -27.58841323852539,
+      "fraction_candidate_better": 0.25,
+      "ci95_low": -0.1588793396949768,
+      "ci95_high": -0.028674472123384476
+    },
+    "field_only/full_method_vs_strong_single/90/seed43": {
+      "mean_absolute_improvement": -0.06005556881427765,
+      "relative_improvement_percent": -18.196107864379883,
+      "fraction_candidate_better": 0.28125,
+      "ci95_low": -0.13520394265651703,
+      "ci95_high": -0.004089073743671179
+    },
+    "field_only/band_information/90/seed44": {
+      "mean_absolute_improvement": -0.030267074704170227,
+      "relative_improvement_percent": -10.667381286621094,
+      "fraction_candidate_better": 0.03125,
+      "ci95_low": -0.036695290356874466,
+      "ci95_high": -0.024095162749290466
+    },
+    "field_only/carrier_parameterization/90/seed44": {
+      "mean_absolute_improvement": -0.06986717134714127,
+      "relative_improvement_percent": -22.250560760498047,
+      "fraction_candidate_better": 0.25,
+      "ci95_low": -0.139516681432724,
+      "ci95_high": -0.018630607053637505
+    },
+    "field_only/full_method_vs_strong_single/90/seed44": {
+      "mean_absolute_improvement": -0.10013425350189209,
+      "relative_improvement_percent": -35.29149627685547,
+      "fraction_candidate_better": 0.15625,
+      "ci95_low": -0.1743486523628235,
+      "ci95_high": -0.04543577507138252
+    },
+    "field_only/band_information/100/seed42": {
+      "mean_absolute_improvement": -0.03913864493370056,
+      "relative_improvement_percent": -8.689102172851562,
+      "fraction_candidate_better": 0.03125,
+      "ci95_low": -0.044881053268909454,
+      "ci95_high": -0.0332472026348114
+    },
+    "field_only/carrier_parameterization/100/seed42": {
+      "mean_absolute_improvement": -0.013923554681241512,
+      "relative_improvement_percent": -2.8440239429473877,
+      "fraction_candidate_better": 0.625,
+      "ci95_low": -0.09468884766101837,
+      "ci95_high": 0.047250282019376755
+    },
+    "field_only/full_method_vs_strong_single/100/seed42": {
+      "mean_absolute_improvement": -0.05306220054626465,
+      "relative_improvement_percent": -11.780245780944824,
+      "fraction_candidate_better": 0.5,
+      "ci95_low": -0.13382333517074585,
+      "ci95_high": 0.008085573092103004
+    },
+    "field_only/band_information/100/seed43": {
+      "mean_absolute_improvement": 0.05153891071677208,
+      "relative_improvement_percent": 10.996526718139648,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.044337835162878036,
+      "ci95_high": 0.05945064499974251
+    },
+    "field_only/carrier_parameterization/100/seed43": {
+      "mean_absolute_improvement": -0.0920303612947464,
+      "relative_improvement_percent": -22.06197738647461,
+      "fraction_candidate_better": 0.25,
+      "ci95_low": -0.17122721672058105,
+      "ci95_high": -0.032087963074445724
+    },
+    "field_only/full_method_vs_strong_single/100/seed43": {
+      "mean_absolute_improvement": -0.04049144685268402,
+      "relative_improvement_percent": -8.639400482177734,
+      "fraction_candidate_better": 0.5625,
+      "ci95_low": -0.12190363556146622,
+      "ci95_high": 0.02079300954937935
+    },
+    "field_only/band_information/100/seed44": {
+      "mean_absolute_improvement": -0.04151433706283569,
+      "relative_improvement_percent": -10.885119438171387,
+      "fraction_candidate_better": 0.03125,
+      "ci95_low": -0.049679264426231384,
+      "ci95_high": -0.03385094553232193
+    },
+    "field_only/carrier_parameterization/100/seed44": {
+      "mean_absolute_improvement": -0.08234332501888275,
+      "relative_improvement_percent": -19.471086502075195,
+      "fraction_candidate_better": 0.3125,
+      "ci95_low": -0.16206996142864227,
+      "ci95_high": -0.023079929873347282
+    },
+    "field_only/full_method_vs_strong_single/100/seed44": {
+      "mean_absolute_improvement": -0.12385766208171844,
+      "relative_improvement_percent": -32.47565841674805,
+      "fraction_candidate_better": 0.125,
+      "ci95_low": -0.20749664306640625,
+      "ci95_high": -0.06232018396258354
+    },
+    "field_only/band_information/105/seed42": {
+      "mean_absolute_improvement": 0.01871331036090851,
+      "relative_improvement_percent": 1.2873817682266235,
+      "fraction_candidate_better": 0.90625,
+      "ci95_low": 0.014370768330991268,
+      "ci95_high": 0.02300107292830944
+    },
+    "field_only/carrier_parameterization/105/seed42": {
+      "mean_absolute_improvement": 0.8525286316871643,
+      "relative_improvement_percent": 59.41457748413086,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7760495543479919,
+      "ci95_high": 0.9181630611419678
+    },
+    "field_only/full_method_vs_strong_single/105/seed42": {
+      "mean_absolute_improvement": 0.8712419271469116,
+      "relative_improvement_percent": 59.937068939208984,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7961528301239014,
+      "ci95_high": 0.9357514977455139
+    },
+    "field_only/band_information/105/seed43": {
+      "mean_absolute_improvement": -0.03056996688246727,
+      "relative_improvement_percent": -2.19061279296875,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.03430645540356636,
+      "ci95_high": -0.026850411668419838
+    },
+    "field_only/carrier_parameterization/105/seed43": {
+      "mean_absolute_improvement": 0.8272398710250854,
+      "relative_improvement_percent": 58.00843048095703,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7550368309020996,
+      "ci95_high": 0.8910646438598633
+    },
+    "field_only/full_method_vs_strong_single/105/seed43": {
+      "mean_absolute_improvement": 0.7966699600219727,
+      "relative_improvement_percent": 57.088558197021484,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7245255708694458,
+      "ci95_high": 0.8609533905982971
+    },
+    "field_only/band_information/105/seed44": {
+      "mean_absolute_improvement": 0.003221482038497925,
+      "relative_improvement_percent": 0.21992291510105133,
+      "fraction_candidate_better": 0.65625,
+      "ci95_low": -0.0045099565759301186,
+      "ci95_high": 0.00998641923069954
+    },
+    "field_only/carrier_parameterization/105/seed44": {
+      "mean_absolute_improvement": 0.8717078566551208,
+      "relative_improvement_percent": 59.640586853027344,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7958184480667114,
+      "ci95_high": 0.9362748265266418
+    },
+    "field_only/full_method_vs_strong_single/105/seed44": {
+      "mean_absolute_improvement": 0.8749293088912964,
+      "relative_improvement_percent": 59.729339599609375,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.8004503846168518,
+      "ci95_high": 0.9384139776229858
+    },
+    "field_only/band_information/110/seed42": {
+      "mean_absolute_improvement": 0.042115870863199234,
+      "relative_improvement_percent": 3.078545093536377,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.03483801335096359,
+      "ci95_high": 0.050160136073827744
+    },
+    "field_only/carrier_parameterization/110/seed42": {
+      "mean_absolute_improvement": 0.646297812461853,
+      "relative_improvement_percent": 48.74302673339844,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5771202445030212,
+      "ci95_high": 0.7048417329788208
+    },
+    "field_only/full_method_vs_strong_single/110/seed42": {
+      "mean_absolute_improvement": 0.688413679599762,
+      "relative_improvement_percent": 50.32099914550781,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.6201242804527283,
+      "ci95_high": 0.7484955191612244
+    },
+    "field_only/band_information/110/seed43": {
+      "mean_absolute_improvement": -0.02851201221346855,
+      "relative_improvement_percent": -2.0162761211395264,
+      "fraction_candidate_better": 0.125,
+      "ci95_low": -0.035070449113845825,
+      "ci95_high": -0.021609250456094742
+    },
+    "field_only/carrier_parameterization/110/seed43": {
+      "mean_absolute_improvement": 0.7229576706886292,
+      "relative_improvement_percent": 50.114742279052734,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.6595352292060852,
+      "ci95_high": 0.781061589717865
+    },
+    "field_only/full_method_vs_strong_single/110/seed43": {
+      "mean_absolute_improvement": 0.6944456696510315,
+      "relative_improvement_percent": 49.10892105102539,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.6311530470848083,
+      "ci95_high": 0.754051685333252
+    },
+    "field_only/band_information/110/seed44": {
+      "mean_absolute_improvement": 0.015350762754678726,
+      "relative_improvement_percent": 1.0445691347122192,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.011504188179969788,
+      "ci95_high": 0.01883692480623722
+    },
+    "field_only/carrier_parameterization/110/seed44": {
+      "mean_absolute_improvement": 0.7578055262565613,
+      "relative_improvement_percent": 52.11051559448242,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.6905773878097534,
+      "ci95_high": 0.8172813653945923
+    },
+    "field_only/full_method_vs_strong_single/110/seed44": {
+      "mean_absolute_improvement": 0.7731562852859497,
+      "relative_improvement_percent": 52.61075210571289,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7064639925956726,
+      "ci95_high": 0.8327349424362183
+    },
+    "field_only/band_information/115/seed42": {
+      "mean_absolute_improvement": 0.018909934908151627,
+      "relative_improvement_percent": 1.3843622207641602,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.014206254854798317,
+      "ci95_high": 0.023788411170244217
+    },
+    "field_only/carrier_parameterization/115/seed42": {
+      "mean_absolute_improvement": 0.5752012729644775,
+      "relative_improvement_percent": 42.70057678222656,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5122687816619873,
+      "ci95_high": 0.6327447891235352
+    },
+    "field_only/full_method_vs_strong_single/115/seed42": {
+      "mean_absolute_improvement": 0.5941112041473389,
+      "relative_improvement_percent": 43.49380874633789,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5310667157173157,
+      "ci95_high": 0.6513231992721558
+    },
+    "field_only/band_information/115/seed43": {
+      "mean_absolute_improvement": -0.03798839822411537,
+      "relative_improvement_percent": -2.8999791145324707,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.04379025846719742,
+      "ci95_high": -0.03232649713754654
+    },
+    "field_only/carrier_parameterization/115/seed43": {
+      "mean_absolute_improvement": 0.5205588340759277,
+      "relative_improvement_percent": 38.618770599365234,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.46376657485961914,
+      "ci95_high": 0.5731775164604187
+    },
+    "field_only/full_method_vs_strong_single/115/seed43": {
+      "mean_absolute_improvement": 0.48257043957710266,
+      "relative_improvement_percent": 36.83872985839844,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.4265604615211487,
+      "ci95_high": 0.5357030034065247
+    },
+    "field_only/band_information/115/seed44": {
+      "mean_absolute_improvement": 0.015217386186122894,
+      "relative_improvement_percent": 1.1056519746780396,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.012971637770533562,
+      "ci95_high": 0.017556266859173775
+    },
+    "field_only/carrier_parameterization/115/seed44": {
+      "mean_absolute_improvement": 0.57058185338974,
+      "relative_improvement_percent": 41.92034149169922,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5102068781852722,
+      "ci95_high": 0.6260503530502319
+    },
+    "field_only/full_method_vs_strong_single/115/seed44": {
+      "mean_absolute_improvement": 0.5857992172241211,
+      "relative_improvement_percent": 42.5625,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.52507483959198,
+      "ci95_high": 0.6411948204040527
+    },
+    "field_only/band_information/120/seed42": {
+      "mean_absolute_improvement": 0.05266476422548294,
+      "relative_improvement_percent": 4.03087854385376,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.047895874828100204,
+      "ci95_high": 0.05740896612405777
+    },
+    "field_only/carrier_parameterization/120/seed42": {
+      "mean_absolute_improvement": 0.41358959674835205,
+      "relative_improvement_percent": 32.985084533691406,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.3576091527938843,
+      "ci95_high": 0.4650123417377472
+    },
+    "field_only/full_method_vs_strong_single/120/seed42": {
+      "mean_absolute_improvement": 0.4662543535232544,
+      "relative_improvement_percent": 35.68637466430664,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.4085347652435303,
+      "ci95_high": 0.519500195980072
+    },
+    "field_only/band_information/120/seed43": {
+      "mean_absolute_improvement": -0.027371171861886978,
+      "relative_improvement_percent": -2.159425735473633,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.031220106407999992,
+      "ci95_high": -0.023647615686058998
+    },
+    "field_only/carrier_parameterization/120/seed43": {
+      "mean_absolute_improvement": 0.39268267154693604,
+      "relative_improvement_percent": 30.32551383972168,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.3401682376861572,
+      "ci95_high": 0.44207334518432617
+    },
+    "field_only/full_method_vs_strong_single/120/seed43": {
+      "mean_absolute_improvement": 0.36531153321266174,
+      "relative_improvement_percent": 28.820947647094727,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.3135739862918854,
+      "ci95_high": 0.4136085510253906
+    },
+    "field_only/band_information/120/seed44": {
+      "mean_absolute_improvement": 0.029961995780467987,
+      "relative_improvement_percent": 2.2843918800354004,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.0264213178306818,
+      "ci95_high": 0.0333443246781826
+    },
+    "field_only/carrier_parameterization/120/seed44": {
+      "mean_absolute_improvement": 0.4248523712158203,
+      "relative_improvement_percent": 33.14927291870117,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.36862221360206604,
+      "ci95_high": 0.4777480959892273
+    },
+    "field_only/full_method_vs_strong_single/120/seed44": {
+      "mean_absolute_improvement": 0.4548143744468689,
+      "relative_improvement_percent": 34.6764030456543,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.39920923113822937,
+      "ci95_high": 0.5065091848373413
+    },
+    "field_only/band_information/125/seed42": {
+      "mean_absolute_improvement": 0.05852474272251129,
+      "relative_improvement_percent": 4.567987442016602,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.05482855811715126,
+      "ci95_high": 0.0623219832777977
+    },
+    "field_only/carrier_parameterization/125/seed42": {
+      "mean_absolute_improvement": 0.3266652524471283,
+      "relative_improvement_percent": 26.717405319213867,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.27905774116516113,
+      "ci95_high": 0.3701673150062561
+    },
+    "field_only/full_method_vs_strong_single/125/seed42": {
+      "mean_absolute_improvement": 0.3851900100708008,
+      "relative_improvement_percent": 30.064945220947266,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.33668607473373413,
+      "ci95_high": 0.4300396144390106
+    },
+    "field_only/band_information/125/seed43": {
+      "mean_absolute_improvement": -0.021926797926425934,
+      "relative_improvement_percent": -1.732170820236206,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.02502116933465004,
+      "ci95_high": -0.019030118361115456
+    },
+    "field_only/carrier_parameterization/125/seed43": {
+      "mean_absolute_improvement": 0.32808953523635864,
+      "relative_improvement_percent": 25.477073669433594,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.2844323217868805,
+      "ci95_high": 0.36921387910842896
+    },
+    "field_only/full_method_vs_strong_single/125/seed43": {
+      "mean_absolute_improvement": 0.3061627149581909,
+      "relative_improvement_percent": 24.186208724975586,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.26307177543640137,
+      "ci95_high": 0.34651505947113037
+    },
+    "field_only/band_information/125/seed44": {
+      "mean_absolute_improvement": 0.007805518805980682,
+      "relative_improvement_percent": 0.5978513956069946,
+      "fraction_candidate_better": 0.84375,
+      "ci95_low": 0.0032824240624904633,
+      "ci95_high": 0.011896995827555656
+    },
+    "field_only/carrier_parameterization/125/seed44": {
+      "mean_absolute_improvement": 0.38926926255226135,
+      "relative_improvement_percent": 29.99478530883789,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.3399257957935333,
+      "ci95_high": 0.4360281229019165
+    },
+    "field_only/full_method_vs_strong_single/125/seed44": {
+      "mean_absolute_improvement": 0.39707475900650024,
+      "relative_improvement_percent": 30.413314819335938,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.34790489077568054,
+      "ci95_high": 0.4429624378681183
+    },
+    "field_only/band_information/150/seed42": {
+      "mean_absolute_improvement": 0.03192953020334244,
+      "relative_improvement_percent": 2.4711971282958984,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.02737816795706749,
+      "ci95_high": 0.03662121668457985
+    },
+    "field_only/carrier_parameterization/150/seed42": {
+      "mean_absolute_improvement": 0.23612219095230103,
+      "relative_improvement_percent": 18.73780632019043,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.20960184931755066,
+      "ci95_high": 0.2615477740764618
+    },
+    "field_only/full_method_vs_strong_single/150/seed42": {
+      "mean_absolute_improvement": 0.2680516839027405,
+      "relative_improvement_percent": 20.745954513549805,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.24176546931266785,
+      "ci95_high": 0.2932704985141754
+    },
+    "field_only/band_information/150/seed43": {
+      "mean_absolute_improvement": -0.03149014338850975,
+      "relative_improvement_percent": -2.4880993366241455,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.03577737882733345,
+      "ci95_high": -0.027620848268270493
+    },
+    "field_only/carrier_parameterization/150/seed43": {
+      "mean_absolute_improvement": 0.2094929963350296,
+      "relative_improvement_percent": 16.150617599487305,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.18748898804187775,
+      "ci95_high": 0.23173564672470093
+    },
+    "field_only/full_method_vs_strong_single/150/seed43": {
+      "mean_absolute_improvement": 0.17800284922122955,
+      "relative_improvement_percent": 14.064361572265625,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.15734396874904633,
+      "ci95_high": 0.1988113820552826
+    },
+    "field_only/band_information/150/seed44": {
+      "mean_absolute_improvement": 0.003965798765420914,
+      "relative_improvement_percent": 0.3049508035182953,
+      "fraction_candidate_better": 0.6875,
+      "ci95_low": -0.0002689097891561687,
+      "ci95_high": 0.008255344815552235
+    },
+    "field_only/carrier_parameterization/150/seed44": {
+      "mean_absolute_improvement": 0.26764172315597534,
+      "relative_improvement_percent": 20.643312454223633,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.23452840745449066,
+      "ci95_high": 0.30010271072387695
+    },
+    "field_only/full_method_vs_strong_single/150/seed44": {
+      "mean_absolute_improvement": 0.27160751819610596,
+      "relative_improvement_percent": 20.88530921936035,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.23911727964878082,
+      "ci95_high": 0.30331164598464966
+    },
+    "field_only/band_information/175/seed42": {
+      "mean_absolute_improvement": 0.03501058742403984,
+      "relative_improvement_percent": 2.6801276206970215,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.031058941036462784,
+      "ci95_high": 0.03906174749135971
+    },
+    "field_only/carrier_parameterization/175/seed42": {
+      "mean_absolute_improvement": 0.19311684370040894,
+      "relative_improvement_percent": 15.190590858459473,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.17014165222644806,
+      "ci95_high": 0.2167789340019226
+    },
+    "field_only/full_method_vs_strong_single/175/seed42": {
+      "mean_absolute_improvement": 0.22812743484973907,
+      "relative_improvement_percent": 17.463592529296875,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.20558369159698486,
+      "ci95_high": 0.25121960043907166
+    },
+    "field_only/band_information/175/seed43": {
+      "mean_absolute_improvement": -0.02069392427802086,
+      "relative_improvement_percent": -1.5983363389968872,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.023371711373329163,
+      "ci95_high": -0.01824900135397911
+    },
+    "field_only/carrier_parameterization/175/seed43": {
+      "mean_absolute_improvement": 0.17625153064727783,
+      "relative_improvement_percent": 13.39897632598877,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.16126270592212677,
+      "ci95_high": 0.1920153647661209
+    },
+    "field_only/full_method_vs_strong_single/175/seed43": {
+      "mean_absolute_improvement": 0.15555761754512787,
+      "relative_improvement_percent": 12.014801025390625,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.14112253487110138,
+      "ci95_high": 0.17090871930122375
+    },
+    "field_only/band_information/175/seed44": {
+      "mean_absolute_improvement": 0.024715565145015717,
+      "relative_improvement_percent": 1.8548781871795654,
+      "fraction_candidate_better": 0.875,
+      "ci95_low": 0.019466787576675415,
+      "ci95_high": 0.029360195621848106
+    },
+    "field_only/carrier_parameterization/175/seed44": {
+      "mean_absolute_improvement": 0.22839698195457458,
+      "relative_improvement_percent": 17.46491813659668,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.20267300307750702,
+      "ci95_high": 0.2545526325702667
+    },
+    "field_only/full_method_vs_strong_single/175/seed44": {
+      "mean_absolute_improvement": 0.2531125545501709,
+      "relative_improvement_percent": 18.9958438873291,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.22739042341709137,
+      "ci95_high": 0.2784194350242615
+    },
+    "field_only/band_information/200/seed42": {
+      "mean_absolute_improvement": 0.011860713362693787,
+      "relative_improvement_percent": 0.9113270044326782,
+      "fraction_candidate_better": 0.875,
+      "ci95_low": 0.00797717273235321,
+      "ci95_high": 0.015705840662121773
+    },
+    "field_only/carrier_parameterization/200/seed42": {
+      "mean_absolute_improvement": 0.1764063835144043,
+      "relative_improvement_percent": 13.67897891998291,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.15516434609889984,
+      "ci95_high": 0.1991322934627533
+    },
+    "field_only/full_method_vs_strong_single/200/seed42": {
+      "mean_absolute_improvement": 0.18826709687709808,
+      "relative_improvement_percent": 14.465645790100098,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.16856415569782257,
+      "ci95_high": 0.20947396755218506
+    },
+    "field_only/band_information/200/seed43": {
+      "mean_absolute_improvement": -0.017568625509738922,
+      "relative_improvement_percent": -1.3554117679595947,
+      "fraction_candidate_better": 0.09375,
+      "ci95_low": -0.021168332546949387,
+      "ci95_high": -0.01401496771723032
+    },
+    "field_only/carrier_parameterization/200/seed43": {
+      "mean_absolute_improvement": 0.1466989517211914,
+      "relative_improvement_percent": 11.166409492492676,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.13518904149532318,
+      "ci95_high": 0.1586933583021164
+    },
+    "field_only/full_method_vs_strong_single/200/seed43": {
+      "mean_absolute_improvement": 0.12913033366203308,
+      "relative_improvement_percent": 9.962348937988281,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.11779115349054337,
+      "ci95_high": 0.14112849533557892
+    },
+    "field_only/band_information/200/seed44": {
+      "mean_absolute_improvement": 0.03130591660737991,
+      "relative_improvement_percent": 2.319441080093384,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.026618115603923798,
+      "ci95_high": 0.03549846261739731
+    },
+    "field_only/carrier_parameterization/200/seed44": {
+      "mean_absolute_improvement": 0.21072334051132202,
+      "relative_improvement_percent": 15.983115196228027,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.18942658603191376,
+      "ci95_high": 0.23231202363967896
+    },
+    "field_only/full_method_vs_strong_single/200/seed44": {
+      "mean_absolute_improvement": 0.24202927947044373,
+      "relative_improvement_percent": 17.931838989257812,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.22115439176559448,
+      "ci95_high": 0.2627302408218384
+    },
+    "known_medium/band_information/90/seed42": {
+      "mean_absolute_improvement": 0.006549258716404438,
+      "relative_improvement_percent": 1.6617112159729004,
+      "fraction_candidate_better": 0.875,
+      "ci95_low": 0.0028656129725277424,
+      "ci95_high": 0.009774014353752136
+    },
+    "known_medium/carrier_parameterization/90/seed42": {
+      "mean_absolute_improvement": -0.0014287279918789864,
+      "relative_improvement_percent": -0.36862966418266296,
+      "fraction_candidate_better": 0.84375,
+      "ci95_low": -0.07420317828655243,
+      "ci95_high": 0.05113079026341438
+    },
+    "known_medium/full_method_vs_strong_single/90/seed42": {
+      "mean_absolute_improvement": 0.005120526067912579,
+      "relative_improvement_percent": 1.2992058992385864,
+      "fraction_candidate_better": 0.84375,
+      "ci95_low": -0.06779645383358002,
+      "ci95_high": 0.057704757899045944
+    },
+    "known_medium/band_information/90/seed43": {
+      "mean_absolute_improvement": 0.008272017352283001,
+      "relative_improvement_percent": 2.792271375656128,
+      "fraction_candidate_better": 0.90625,
+      "ci95_low": 0.005487874615937471,
+      "ci95_high": 0.011101188138127327
+    },
+    "known_medium/carrier_parameterization/90/seed43": {
+      "mean_absolute_improvement": -0.0961742252111435,
+      "relative_improvement_percent": -33.3967399597168,
+      "fraction_candidate_better": 0.25,
+      "ci95_low": -0.17573489248752594,
+      "ci95_high": -0.03744414448738098
+    },
+    "known_medium/full_method_vs_strong_single/90/seed43": {
+      "mean_absolute_improvement": -0.08790221810340881,
+      "relative_improvement_percent": -29.671947479248047,
+      "fraction_candidate_better": 0.25,
+      "ci95_low": -0.16855058073997498,
+      "ci95_high": -0.02875138632953167
+    },
+    "known_medium/band_information/90/seed44": {
+      "mean_absolute_improvement": -0.05374511331319809,
+      "relative_improvement_percent": -18.903215408325195,
+      "fraction_candidate_better": 0.03125,
+      "ci95_low": -0.06175508350133896,
+      "ci95_high": -0.04582787677645683
+    },
+    "known_medium/carrier_parameterization/90/seed44": {
+      "mean_absolute_improvement": -0.04171436280012131,
+      "relative_improvement_percent": -12.339248657226562,
+      "fraction_candidate_better": 0.53125,
+      "ci95_low": -0.11986856162548065,
+      "ci95_high": 0.014164375141263008
+    },
+    "known_medium/full_method_vs_strong_single/90/seed44": {
+      "mean_absolute_improvement": -0.0954594761133194,
+      "relative_improvement_percent": -33.57497787475586,
+      "fraction_candidate_better": 0.25,
+      "ci95_low": -0.1771465241909027,
+      "ci95_high": -0.03563251346349716
+    },
+    "known_medium/band_information/100/seed42": {
+      "mean_absolute_improvement": 0.035243596881628036,
+      "relative_improvement_percent": 6.779186248779297,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.027657857164740562,
+      "ci95_high": 0.042940545827150345
+    },
+    "known_medium/carrier_parameterization/100/seed42": {
+      "mean_absolute_improvement": -0.02267424948513508,
+      "relative_improvement_percent": -4.678616046905518,
+      "fraction_candidate_better": 0.59375,
+      "ci95_low": -0.1074669361114502,
+      "ci95_high": 0.03883743658661842
+    },
+    "known_medium/full_method_vs_strong_single/100/seed42": {
+      "mean_absolute_improvement": 0.012569348327815533,
+      "relative_improvement_percent": 2.417742967605591,
+      "fraction_candidate_better": 0.875,
+      "ci95_low": -0.07102036476135254,
+      "ci95_high": 0.07421732693910599
+    },
+    "known_medium/band_information/100/seed43": {
+      "mean_absolute_improvement": 0.014856977388262749,
+      "relative_improvement_percent": 3.7088170051574707,
+      "fraction_candidate_better": 0.84375,
+      "ci95_low": 0.009542478248476982,
+      "ci95_high": 0.020473258569836617
+    },
+    "known_medium/carrier_parameterization/100/seed43": {
+      "mean_absolute_improvement": -0.11873799562454224,
+      "relative_improvement_percent": -30.782800674438477,
+      "fraction_candidate_better": 0.09375,
+      "ci95_low": -0.20058143138885498,
+      "ci95_high": -0.058057691901922226
+    },
+    "known_medium/full_method_vs_strong_single/100/seed43": {
+      "mean_absolute_improvement": -0.10388101637363434,
+      "relative_improvement_percent": -25.93230438232422,
+      "fraction_candidate_better": 0.125,
+      "ci95_low": -0.18698565661907196,
+      "ci95_high": -0.04234975948929787
+    },
+    "known_medium/band_information/100/seed44": {
+      "mean_absolute_improvement": -0.06472187489271164,
+      "relative_improvement_percent": -16.804195404052734,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.07353521883487701,
+      "ci95_high": -0.05644799768924713
+    },
+    "known_medium/carrier_parameterization/100/seed44": {
+      "mean_absolute_improvement": -0.052136197686195374,
+      "relative_improvement_percent": -11.589042663574219,
+      "fraction_candidate_better": 0.5625,
+      "ci95_low": -0.13926875591278076,
+      "ci95_high": 0.01026818435639143
+    },
+    "known_medium/full_method_vs_strong_single/100/seed44": {
+      "mean_absolute_improvement": -0.11685807257890701,
+      "relative_improvement_percent": -30.34068489074707,
+      "fraction_candidate_better": 0.09375,
+      "ci95_low": -0.2051914930343628,
+      "ci95_high": -0.052280716598033905
+    },
+    "known_medium/band_information/105/seed42": {
+      "mean_absolute_improvement": 0.0013335458934307098,
+      "relative_improvement_percent": 0.0955551490187645,
+      "fraction_candidate_better": 0.5625,
+      "ci95_low": -0.0022854781709611416,
+      "ci95_high": 0.004891466349363327
+    },
+    "known_medium/carrier_parameterization/105/seed42": {
+      "mean_absolute_improvement": 0.8037718534469604,
+      "relative_improvement_percent": 57.64930725097656,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7276780605316162,
+      "ci95_high": 0.8694179058074951
+    },
+    "known_medium/full_method_vs_strong_single/105/seed42": {
+      "mean_absolute_improvement": 0.8051053285598755,
+      "relative_improvement_percent": 57.68977737426758,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7296376824378967,
+      "ci95_high": 0.8700389862060547
+    },
+    "known_medium/band_information/105/seed43": {
+      "mean_absolute_improvement": -0.022559989243745804,
+      "relative_improvement_percent": -1.5682471990585327,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.02678108960390091,
+      "ci95_high": -0.018393026664853096
+    },
+    "known_medium/carrier_parameterization/105/seed43": {
+      "mean_absolute_improvement": 0.870103120803833,
+      "relative_improvement_percent": 59.5509147644043,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7969478964805603,
+      "ci95_high": 0.9335781335830688
+    },
+    "known_medium/full_method_vs_strong_single/105/seed43": {
+      "mean_absolute_improvement": 0.8475431203842163,
+      "relative_improvement_percent": 58.916568756103516,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7729058265686035,
+      "ci95_high": 0.911311686038971
+    },
+    "known_medium/band_information/105/seed44": {
+      "mean_absolute_improvement": 0.033876653760671616,
+      "relative_improvement_percent": 2.2956411838531494,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.028764143586158752,
+      "ci95_high": 0.03911954164505005
+    },
+    "known_medium/carrier_parameterization/105/seed44": {
+      "mean_absolute_improvement": 0.8579472899436951,
+      "relative_improvement_percent": 59.50455093383789,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7777466177940369,
+      "ci95_high": 0.9242711663246155
+    },
+    "known_medium/full_method_vs_strong_single/105/seed44": {
+      "mean_absolute_improvement": 0.891823947429657,
+      "relative_improvement_percent": 60.434181213378906,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.812656044960022,
+      "ci95_high": 0.9575772285461426
+    },
+    "known_medium/band_information/110/seed42": {
+      "mean_absolute_improvement": -0.03705812990665436,
+      "relative_improvement_percent": -2.861262798309326,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.04139743372797966,
+      "ci95_high": -0.03288745880126953
+    },
+    "known_medium/carrier_parameterization/110/seed42": {
+      "mean_absolute_improvement": 0.648461103439331,
+      "relative_improvement_percent": 48.6750373840332,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5812516808509827,
+      "ci95_high": 0.7055450677871704
+    },
+    "known_medium/full_method_vs_strong_single/110/seed42": {
+      "mean_absolute_improvement": 0.6114029884338379,
+      "relative_improvement_percent": 47.20649719238281,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5441401600837708,
+      "ci95_high": 0.668872594833374
+    },
+    "known_medium/band_information/110/seed43": {
+      "mean_absolute_improvement": -0.02540627494454384,
+      "relative_improvement_percent": -1.7654139995574951,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.029523367062211037,
+      "ci95_high": -0.021182823926210403
+    },
+    "known_medium/carrier_parameterization/110/seed43": {
+      "mean_absolute_improvement": 0.7783770561218262,
+      "relative_improvement_percent": 53.1490364074707,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.7160428762435913,
+      "ci95_high": 0.8335519433021545
+    },
+    "known_medium/full_method_vs_strong_single/110/seed43": {
+      "mean_absolute_improvement": 0.7529706954956055,
+      "relative_improvement_percent": 52.32191848754883,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.69032222032547,
+      "ci95_high": 0.8084490895271301
+    },
+    "known_medium/band_information/110/seed44": {
+      "mean_absolute_improvement": 0.0456240177154541,
+      "relative_improvement_percent": 3.187502145767212,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.04137982428073883,
+      "ci95_high": 0.04999310150742531
+    },
+    "known_medium/carrier_parameterization/110/seed44": {
+      "mean_absolute_improvement": 0.707959771156311,
+      "relative_improvement_percent": 51.08979034423828,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.639153242111206,
+      "ci95_high": 0.7666392922401428
+    },
+    "known_medium/full_method_vs_strong_single/110/seed44": {
+      "mean_absolute_improvement": 0.7535837888717651,
+      "relative_improvement_percent": 52.648799896240234,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.6844480037689209,
+      "ci95_high": 0.8126859068870544
+    },
+    "known_medium/band_information/115/seed42": {
+      "mean_absolute_improvement": -0.04142440855503082,
+      "relative_improvement_percent": -3.2493715286254883,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.046632010489702225,
+      "ci95_high": -0.036667391657829285
+    },
+    "known_medium/carrier_parameterization/115/seed42": {
+      "mean_absolute_improvement": 0.5488085746765137,
+      "relative_improvement_percent": 41.69428253173828,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.48406532406806946,
+      "ci95_high": 0.6060808300971985
+    },
+    "known_medium/full_method_vs_strong_single/115/seed42": {
+      "mean_absolute_improvement": 0.507384181022644,
+      "relative_improvement_percent": 39.79971694946289,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.4441206753253937,
+      "ci95_high": 0.5634252429008484
+    },
+    "known_medium/band_information/115/seed43": {
+      "mean_absolute_improvement": -0.029978059232234955,
+      "relative_improvement_percent": -2.220083475112915,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.03336416557431221,
+      "ci95_high": -0.026343900710344315
+    },
+    "known_medium/carrier_parameterization/115/seed43": {
+      "mean_absolute_improvement": 0.6070255041122437,
+      "relative_improvement_percent": 43.97810363769531,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5520443916320801,
+      "ci95_high": 0.655991792678833
+    },
+    "known_medium/full_method_vs_strong_single/115/seed43": {
+      "mean_absolute_improvement": 0.5770474076271057,
+      "relative_improvement_percent": 42.734371185302734,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5221818685531616,
+      "ci95_high": 0.6252461671829224
+    },
+    "known_medium/band_information/115/seed44": {
+      "mean_absolute_improvement": 0.05990191549062729,
+      "relative_improvement_percent": 4.347460746765137,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.05580915883183479,
+      "ci95_high": 0.06434087455272675
+    },
+    "known_medium/carrier_parameterization/115/seed44": {
+      "mean_absolute_improvement": 0.5595511198043823,
+      "relative_improvement_percent": 42.45591735839844,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.49452146887779236,
+      "ci95_high": 0.6159852743148804
+    },
+    "known_medium/full_method_vs_strong_single/115/seed44": {
+      "mean_absolute_improvement": 0.6194530725479126,
+      "relative_improvement_percent": 44.95762634277344,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.5532616972923279,
+      "ci95_high": 0.6771395206451416
+    },
+    "known_medium/band_information/120/seed42": {
+      "mean_absolute_improvement": -0.043532826006412506,
+      "relative_improvement_percent": -3.6099393367767334,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.048181112855672836,
+      "ci95_high": -0.03918832167983055
+    },
+    "known_medium/carrier_parameterization/120/seed42": {
+      "mean_absolute_improvement": 0.41746681928634644,
+      "relative_improvement_percent": 33.41209030151367,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.3571823835372925,
+      "ci95_high": 0.4719817340373993
+    },
+    "known_medium/full_method_vs_strong_single/120/seed42": {
+      "mean_absolute_improvement": 0.3739340305328369,
+      "relative_improvement_percent": 31.008304595947266,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.31509336829185486,
+      "ci95_high": 0.42744165658950806
+    },
+    "known_medium/band_information/120/seed43": {
+      "mean_absolute_improvement": -0.036735475063323975,
+      "relative_improvement_percent": -2.9101569652557373,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.039076417684555054,
+      "ci95_high": -0.03442833945155144
+    },
+    "known_medium/carrier_parameterization/120/seed43": {
+      "mean_absolute_improvement": 0.4588761329650879,
+      "relative_improvement_percent": 35.32384490966797,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.4103770852088928,
+      "ci95_high": 0.5014452338218689
+    },
+    "known_medium/full_method_vs_strong_single/120/seed43": {
+      "mean_absolute_improvement": 0.4221406579017639,
+      "relative_improvement_percent": 33.44166946411133,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.3748117983341217,
+      "ci95_high": 0.4639122486114502
+    },
+    "known_medium/band_information/120/seed44": {
+      "mean_absolute_improvement": 0.08303933590650558,
+      "relative_improvement_percent": 6.317137241363525,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.0793711468577385,
+      "ci95_high": 0.08697360008955002
+    },
+    "known_medium/carrier_parameterization/120/seed44": {
+      "mean_absolute_improvement": 0.41483789682388306,
+      "relative_improvement_percent": 33.6864128112793,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.354356050491333,
+      "ci95_high": 0.468990296125412
+    },
+    "known_medium/full_method_vs_strong_single/120/seed44": {
+      "mean_absolute_improvement": 0.49787724018096924,
+      "relative_improvement_percent": 37.87553024291992,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.43688586354255676,
+      "ci95_high": 0.5524035692214966
+    },
+    "known_medium/band_information/125/seed42": {
+      "mean_absolute_improvement": -0.053611669689416885,
+      "relative_improvement_percent": -4.464243412017822,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.05776031315326691,
+      "ci95_high": -0.04946688935160637
+    },
+    "known_medium/carrier_parameterization/125/seed42": {
+      "mean_absolute_improvement": 0.3677401542663574,
+      "relative_improvement_percent": 29.313112258911133,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.3148191273212433,
+      "ci95_high": 0.41576847434043884
+    },
+    "known_medium/full_method_vs_strong_single/125/seed42": {
+      "mean_absolute_improvement": 0.31412848830223083,
+      "relative_improvement_percent": 26.1574764251709,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.2626384496688843,
+      "ci95_high": 0.36119773983955383
+    },
+    "known_medium/band_information/125/seed43": {
+      "mean_absolute_improvement": -0.014056220650672913,
+      "relative_improvement_percent": -1.1001734733581543,
+      "fraction_candidate_better": 0.0625,
+      "ci95_low": -0.017035581171512604,
+      "ci95_high": -0.011095020920038223
+    },
+    "known_medium/carrier_parameterization/125/seed43": {
+      "mean_absolute_improvement": 0.3954148292541504,
+      "relative_improvement_percent": 30.612138748168945,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.3576224446296692,
+      "ci95_high": 0.4299320578575134
+    },
+    "known_medium/full_method_vs_strong_single/125/seed43": {
+      "mean_absolute_improvement": 0.38135862350463867,
+      "relative_improvement_percent": 29.8487548828125,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.3431229889392853,
+      "ci95_high": 0.4157482385635376
+    },
+    "known_medium/band_information/125/seed44": {
+      "mean_absolute_improvement": 0.07162526249885559,
+      "relative_improvement_percent": 5.45386266708374,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.06740908324718475,
+      "ci95_high": 0.07614392787218094
+    },
+    "known_medium/carrier_parameterization/125/seed44": {
+      "mean_absolute_improvement": 0.3760272264480591,
+      "relative_improvement_percent": 30.284015655517578,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.3236323595046997,
+      "ci95_high": 0.4225490689277649
+    },
+    "known_medium/full_method_vs_strong_single/125/seed44": {
+      "mean_absolute_improvement": 0.4476524591445923,
+      "relative_improvement_percent": 34.08623123168945,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.39585667848587036,
+      "ci95_high": 0.4943558871746063
+    },
+    "known_medium/band_information/150/seed42": {
+      "mean_absolute_improvement": -0.06600645184516907,
+      "relative_improvement_percent": -5.479615688323975,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.07029353827238083,
+      "ci95_high": -0.06195073574781418
+    },
+    "known_medium/carrier_parameterization/150/seed42": {
+      "mean_absolute_improvement": 0.23657095432281494,
+      "relative_improvement_percent": 18.61901092529297,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.20171651244163513,
+      "ci95_high": 0.27101266384124756
+    },
+    "known_medium/full_method_vs_strong_single/150/seed42": {
+      "mean_absolute_improvement": 0.17056450247764587,
+      "relative_improvement_percent": 14.159645080566406,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.13794031739234924,
+      "ci95_high": 0.20296940207481384
+    },
+    "known_medium/band_information/150/seed43": {
+      "mean_absolute_improvement": -0.027847204357385635,
+      "relative_improvement_percent": -2.1724660396575928,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.030105650424957275,
+      "ci95_high": -0.02569599263370037
+    },
+    "known_medium/carrier_parameterization/150/seed43": {
+      "mean_absolute_improvement": 0.277279794216156,
+      "relative_improvement_percent": 21.171703338623047,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.25930628180503845,
+      "ci95_high": 0.29493650794029236
+    },
+    "known_medium/full_method_vs_strong_single/150/seed43": {
+      "mean_absolute_improvement": 0.24943259358406067,
+      "relative_improvement_percent": 19.459184646606445,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.23225310444831848,
+      "ci95_high": 0.2662263810634613
+    },
+    "known_medium/band_information/150/seed44": {
+      "mean_absolute_improvement": 0.08360868692398071,
+      "relative_improvement_percent": 6.325826644897461,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.08018005639314651,
+      "ci95_high": 0.08718152344226837
+    },
+    "known_medium/carrier_parameterization/150/seed44": {
+      "mean_absolute_improvement": 0.2557207942008972,
+      "relative_improvement_percent": 20.654375076293945,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.2246774435043335,
+      "ci95_high": 0.2844070494174957
+    },
+    "known_medium/full_method_vs_strong_single/150/seed44": {
+      "mean_absolute_improvement": 0.33932948112487793,
+      "relative_improvement_percent": 25.673643112182617,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.30778762698173523,
+      "ci95_high": 0.3688545227050781
+    },
+    "known_medium/band_information/175/seed42": {
+      "mean_absolute_improvement": -0.07462665438652039,
+      "relative_improvement_percent": -6.121621131896973,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.07844695448875427,
+      "ci95_high": -0.07082348316907883
+    },
+    "known_medium/carrier_parameterization/175/seed42": {
+      "mean_absolute_improvement": 0.19992922246456146,
+      "relative_improvement_percent": 15.454140663146973,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.17340226471424103,
+      "ci95_high": 0.22710275650024414
+    },
+    "known_medium/full_method_vs_strong_single/175/seed42": {
+      "mean_absolute_improvement": 0.12530255317687988,
+      "relative_improvement_percent": 10.278562545776367,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.10025744140148163,
+      "ci95_high": 0.15054740011692047
+    },
+    "known_medium/band_information/175/seed43": {
+      "mean_absolute_improvement": -0.013359960168600082,
+      "relative_improvement_percent": -1.0208314657211304,
+      "fraction_candidate_better": 0.09375,
+      "ci95_low": -0.01851135864853859,
+      "ci95_high": -0.008707273751497269
+    },
+    "known_medium/carrier_parameterization/175/seed43": {
+      "mean_absolute_improvement": 0.23774603009223938,
+      "relative_improvement_percent": 17.982545852661133,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.2253822684288025,
+      "ci95_high": 0.25025445222854614
+    },
+    "known_medium/full_method_vs_strong_single/175/seed43": {
+      "mean_absolute_improvement": 0.224386066198349,
+      "relative_improvement_percent": 17.145286560058594,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.2125670164823532,
+      "ci95_high": 0.23615619540214539
+    },
+    "known_medium/band_information/175/seed44": {
+      "mean_absolute_improvement": 0.08269435167312622,
+      "relative_improvement_percent": 6.173444747924805,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.07993289083242416,
+      "ci95_high": 0.08560723066329956
+    },
+    "known_medium/carrier_parameterization/175/seed44": {
+      "mean_absolute_improvement": 0.22738111019134521,
+      "relative_improvement_percent": 18.091739654541016,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.2035742551088333,
+      "ci95_high": 0.2502063810825348
+    },
+    "known_medium/full_method_vs_strong_single/175/seed44": {
+      "mean_absolute_improvement": 0.31007546186447144,
+      "relative_improvement_percent": 23.148300170898438,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.2850000560283661,
+      "ci95_high": 0.33420807123184204
+    },
+    "known_medium/band_information/200/seed42": {
+      "mean_absolute_improvement": -0.08503107726573944,
+      "relative_improvement_percent": -6.956436634063721,
+      "fraction_candidate_better": 0.0,
+      "ci95_low": -0.0886257067322731,
+      "ci95_high": -0.08150988072156906
+    },
+    "known_medium/carrier_parameterization/200/seed42": {
+      "mean_absolute_improvement": 0.1657712757587433,
+      "relative_improvement_percent": 12.679773330688477,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.14474835991859436,
+      "ci95_high": 0.18790340423583984
+    },
+    "known_medium/full_method_vs_strong_single/200/seed42": {
+      "mean_absolute_improvement": 0.08074018359184265,
+      "relative_improvement_percent": 6.605396270751953,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.06191347539424896,
+      "ci95_high": 0.10050419718027115
+    },
+    "known_medium/band_information/200/seed43": {
+      "mean_absolute_improvement": -0.017997413873672485,
+      "relative_improvement_percent": -1.3727848529815674,
+      "fraction_candidate_better": 0.09375,
+      "ci95_low": -0.022076953202486038,
+      "ci95_high": -0.014132516458630562
+    },
+    "known_medium/carrier_parameterization/200/seed43": {
+      "mean_absolute_improvement": 0.23014186322689056,
+      "relative_improvement_percent": 17.316761016845703,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.2176179587841034,
+      "ci95_high": 0.2431415617465973
+    },
+    "known_medium/full_method_vs_strong_single/200/seed43": {
+      "mean_absolute_improvement": 0.21214444935321808,
+      "relative_improvement_percent": 16.18169593811035,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.20022302865982056,
+      "ci95_high": 0.22441138327121735
+    },
+    "known_medium/band_information/200/seed44": {
+      "mean_absolute_improvement": 0.08959154784679413,
+      "relative_improvement_percent": 6.614161491394043,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.08601444214582443,
+      "ci95_high": 0.09327802062034607
+    },
+    "known_medium/carrier_parameterization/200/seed44": {
+      "mean_absolute_improvement": 0.2045224905014038,
+      "relative_improvement_percent": 16.168428421020508,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.1854850798845291,
+      "ci95_high": 0.22348608076572418
+    },
+    "known_medium/full_method_vs_strong_single/200/seed44": {
+      "mean_absolute_improvement": 0.29411405324935913,
+      "relative_improvement_percent": 21.713184356689453,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 0.2744212746620178,
+      "ci95_high": 0.3140052258968353
+    }
+  },
+  "seed_aggregate_contrasts": {
+    "field_only/band_information/90": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -7.529132034217045,
+      "relative_improvement_percent_std": 11.10094788136156,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -19.28142595295848,
+        7.361406559240432,
+        -10.667376708933087
+      ]
+    },
+    "field_only/carrier_parameterization/90": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -17.236666020139893,
+      "relative_improvement_percent_std": 11.081520493758632,
+      "fraction_seeds_positive": 0.0,
+      "per_seed_percent": [
+        -1.8710359391263665,
+        -27.588414150942846,
+        -22.25054797035047
+      ]
+    },
+    "field_only/full_method_vs_strong_single/90": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -25.00027033837598,
+      "relative_improvement_percent_std": 7.401912799447117,
+      "fraction_seeds_positive": 0.0,
+      "per_seed_percent": [
+        -21.513224301240736,
+        -18.19611226280449,
+        -35.291474451082706
+      ]
+    },
+    "field_only/band_information/100": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -2.8592309433530176,
+      "relative_improvement_percent_std": 9.838429057434396,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -8.689095072345939,
+        10.99652113864512,
+        -10.885118896358234
+      ]
+    },
+    "field_only/carrier_parameterization/100": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -14.792360367016485,
+      "relative_improvement_percent_std": 8.51469837596944,
+      "fraction_seeds_positive": 0.0,
+      "per_seed_percent": [
+        -2.84403020772345,
+        -22.061974192851466,
+        -19.47107670047454
+      ]
+    },
+    "field_only/full_method_vs_strong_single/100": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -17.631764871090752,
+      "relative_improvement_percent_std": 10.574239628835667,
+      "fraction_seeds_positive": 0.0,
+      "per_seed_percent": [
+        -11.780245768704718,
+        -8.639403398487003,
+        -32.475645446080534
+      ]
+    },
+    "field_only/band_information/105": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.22776906565168872,
+      "relative_improvement_percent_std": 1.4547435598840124,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        1.2873766754029192,
+        -2.1906088257346115,
+        0.21992495337662604
+      ]
+    },
+    "field_only/carrier_parameterization/105": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 59.02120098976238,
+      "relative_improvement_percent_std": 0.7220546691386911,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        59.414583253023096,
+        58.00843252475522,
+        59.640587191508814
+      ]
+    },
+    "field_only/full_method_vs_strong_single/105": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 58.91832653157598,
+      "relative_improvement_percent_std": 1.2966153715338409,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        59.93707044183875,
+        57.08856154157821,
+        59.72934761131096
+      ]
+    },
+    "field_only/band_information/110": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 0.7022765526467305,
+      "relative_improvement_percent_std": 2.0939887892962683,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        3.07854050064526,
+        -2.016283731215335,
+        1.044572888510266
+      ]
+    },
+    "field_only/carrier_parameterization/110": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 50.32276066877554,
+      "relative_improvement_percent_std": 1.3826161723854105,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        48.74302518534848,
+        50.11474661788352,
+        52.1105102030946
+      ]
+    },
+    "field_only/full_method_vs_strong_single/110": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 50.68022037134879,
+      "relative_improvement_percent_std": 1.4520081400580314,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        50.32099191442307,
+        49.10891836966435,
+        52.61075082995896
+      ]
+    },
+    "field_only/band_information/115": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.13665775843708894,
+      "relative_improvement_percent_std": 1.9572749599326313,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        1.3843619497172595,
+        -2.899981180653712,
+        1.1056459556251856
+      ]
+    },
+    "field_only/carrier_parameterization/115": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 41.07990070547772,
+      "relative_improvement_percent_std": 1.769190616770861,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        42.700582551971976,
+        38.61877332661677,
+        41.920346237844434
+      ]
+    },
+    "field_only/full_method_vs_strong_single/115": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 40.96501492329107,
+      "relative_improvement_percent_std": 2.9423924966897976,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        43.49381388453213,
+        36.838729304634256,
+        42.56250158070682
+      ]
+    },
+    "field_only/band_information/120": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 1.3852831132716723,
+      "relative_improvement_percent_std": 2.6059249819591743,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        4.030877751312842,
+        -2.159425382140589,
+        2.284396970642763
+      ]
+    },
+    "field_only/carrier_parameterization/120": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 32.15328918829838,
+      "relative_improvement_percent_std": 1.2941760703202683,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        32.985086532300976,
+        30.325504389384903,
+        33.14927664320928
+      ]
+    },
+    "field_only/full_method_vs_strong_single/120": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 33.06124131934914,
+      "relative_improvement_percent_std": 3.0265657744550545,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        35.68637576933201,
+        28.820935646290852,
+        34.67641254242458
+      ]
+    },
+    "field_only/band_information/125": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 1.1445522807421058,
+      "relative_improvement_percent_std": 2.600917498397826,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        4.567986365480779,
+        -1.7321677877156263,
+        0.5978382644611648
+      ]
+    },
+    "field_only/carrier_parameterization/125": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 27.396422611261432,
+      "relative_improvement_percent_std": 1.9058244102386126,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        26.717405941957118,
+        25.477070105556848,
+        29.99479178627034
+      ]
+    },
+    "field_only/full_method_vs_strong_single/125": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 28.22148749145009,
+      "relative_improvement_percent_std": 2.8569156372114506,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        30.064944846799147,
+        24.186207919463403,
+        30.413309708087727
+      ]
+    },
+    "field_only/band_information/150": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 0.09601816911780231,
+      "relative_improvement_percent_std": 2.030004643831999,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        2.471194280171158,
+        -2.488094899461028,
+        0.3049551266432771
+      ]
+    },
+    "field_only/carrier_parameterization/150": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 18.510583842587845,
+      "relative_improvement_percent_std": 1.8411637392501672,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        18.737821406549852,
+        16.150612864436805,
+        20.64331725677688
+      ]
+    },
+    "field_only/full_method_vs_strong_single/150": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 18.565215928305857,
+      "relative_improvement_percent_std": 3.183093794047362,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        20.745967715893663,
+        14.064360539887526,
+        20.88531952913638
+      ]
+    },
+    "field_only/band_information/175": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 0.97889263808772,
+      "relative_improvement_percent_std": 1.8532547860813664,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        2.6801267085134746,
+        -1.5983343505938614,
+        1.8548855563435467
+      ]
+    },
+    "field_only/carrier_parameterization/175": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 15.351488539564082,
+      "relative_improvement_percent_std": 1.663809031350223,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        15.1905869017722,
+        13.398967706807998,
+        17.46491101011205
+      ]
+    },
+    "field_only/full_method_vs_strong_single/175": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 16.158074249316375,
+      "relative_improvement_percent_std": 2.995778419554082,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        17.463586633551326,
+        12.014793659697029,
+        18.995842454700774
+      ]
+    },
+    "field_only/band_information/200": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 0.6251199060584337,
+      "relative_improvement_percent_std": 1.513839730205118,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        0.9113280842472185,
+        -1.3554089439920773,
+        2.31944057792016
+      ]
+    },
+    "field_only/carrier_parameterization/200": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 13.6095029447827,
+      "relative_improvement_percent_std": 1.9670272315125568,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        13.678979131987095,
+        11.166409813228956,
+        15.983119889132045
+      ]
+    },
+    "field_only/full_method_vs_strong_single/200": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 14.119946574353477,
+      "relative_improvement_percent_std": 3.2627007898404425,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        14.465646837766197,
+        9.962351386568193,
+        17.931841498726047
+      ]
+    },
+    "known_medium/band_information/90": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -4.816416124535205,
+      "relative_improvement_percent_std": 9.971560301896867,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        1.6617062591873402,
+        2.7922630044114944,
+        -18.90321763720445
+      ]
+    },
+    "known_medium/carrier_parameterization/90": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -15.368207324146814,
+      "relative_improvement_percent_std": 13.652712536254231,
+      "fraction_seeds_positive": 0.0,
+      "per_seed_percent": [
+        -0.3686284714052265,
+        -33.396734332805465,
+        -12.33925916822975
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/90": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -20.649245727198743,
+      "relative_improvement_percent_std": 15.601479750819793,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        1.2992033101646008,
+        -29.671946670937455,
+        -33.57499382082337
+      ]
+    },
+    "known_medium/band_information/100": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -2.105392181399786,
+      "relative_improvement_percent_std": 10.46893169225427,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        6.779192697196671,
+        3.708821110636128,
+        -16.80419035203216
+      ]
+    },
+    "known_medium/carrier_parameterization/100": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -15.683483812474387,
+      "relative_improvement_percent_std": 11.043254416694861,
+      "fraction_seeds_positive": 0.0,
+      "per_seed_percent": [
+        -4.678618691303727,
+        -30.782786170884783,
+        -11.589046575234658
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/100": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -17.951740793170778,
+      "relative_improvement_percent_std": 14.515405616386547,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        2.4177465825434843,
+        -25.932286588300904,
+        -30.340682373754913
+      ]
+    },
+    "known_medium/band_information/105": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 0.2743144779541486,
+      "relative_improvement_percent_std": 1.5824828484715674,
+      "fraction_seeds_positive": 0.6666666666666666,
+      "per_seed_percent": [
+        0.09555007922644242,
+        -1.5682480464954591,
+        2.2956414011314625
+      ]
+    },
+    "known_medium/carrier_parameterization/105": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 58.90158522372777,
+      "relative_improvement_percent_std": 0.8857021380509134,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        57.64929935316752,
+        59.55091198566135,
+        59.504544332354456
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/105": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 59.01350340415919,
+      "relative_improvement_percent_std": 1.1224950387092594,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        57.68976548118852,
+        58.91656995305125,
+        60.43417477823777
+      ]
+    },
+    "known_medium/band_information/110": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.4797209514092044,
+      "relative_improvement_percent_std": 2.6314331930933728,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -2.861261588962661,
+        -1.7654116394588466,
+        3.1875103741938946
+      ]
+    },
+    "known_medium/carrier_parameterization/110": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 50.971287038543004,
+      "relative_improvement_percent_std": 1.8284220571808139,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        48.67504080796642,
+        53.149036671166634,
+        51.08978363649596
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/110": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 50.725741877846055,
+      "relative_improvement_percent_std": 2.4920557246948727,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        47.206499465054,
+        52.32192431136082,
+        52.64880185712333
+      ]
+    },
+    "known_medium/band_information/115": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.3739993820242707,
+      "relative_improvement_percent_std": 3.3649192266025403,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -3.2493797551636576,
+        -2.220081855774222,
+        4.347463464865068
+      ]
+    },
+    "known_medium/carrier_parameterization/115": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 42.70943653142024,
+      "relative_improvement_percent_std": 0.9494421415368863,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        41.69428631098699,
+        43.97810499507977,
+        42.455918288193956
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/115": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 42.497237179964664,
+      "relative_improvement_percent_std": 2.1123753112806627,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        39.799712254272514,
+        42.73437306881465,
+        44.95762621680683
+      ]
+    },
+    "known_medium/band_information/120": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.06765018819038342,
+      "relative_improvement_percent_std": 4.523759779853293,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -3.609931401427883,
+        -2.910161787090161,
+        6.317142623946894
+      ]
+    },
+    "known_medium/carrier_parameterization/120": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 34.140782240323176,
+      "relative_improvement_percent_std": 0.8440181287934997,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        33.41208913196694,
+        35.323850156121786,
+        33.6864074328808
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/120": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 34.108504146799945,
+      "relative_improvement_percent_std": 2.842907006671984,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        31.008311227987,
+        33.441669558004065,
+        37.87553165440876
+      ]
+    },
+    "known_medium/band_information/125": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.03685075952779856,
+      "relative_improvement_percent_std": 4.118265928675112,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -4.464240424372197,
+        -1.1001723987839434,
+        5.453860544572745
+      ]
+    },
+    "known_medium/carrier_parameterization/125": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 30.069756060189302,
+      "relative_improvement_percent_std": 0.5515431468911876,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        29.31311132172539,
+        30.61214036632349,
+        30.284016492519015
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/125": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 30.03082065314669,
+      "relative_improvement_percent_std": 3.2394579423448424,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        26.15747866261888,
+        29.848754286526834,
+        34.08622901029436
+      ]
+    },
+    "known_medium/band_information/150": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.4420817044735645,
+      "relative_improvement_percent_std": 4.972438721917804,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -5.479613378402504,
+        -2.1724541613827344,
+        6.325822426364544
+      ]
+    },
+    "known_medium/carrier_parameterization/150": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 20.148363349789214,
+      "relative_improvement_percent_std": 1.101844738629239,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        18.61901140370481,
+        21.171698772346197,
+        20.654379873316635
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/150": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 19.764160277571037,
+      "relative_improvement_percent_std": 4.705512765015969,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        14.159647865106004,
+        19.459190061978713,
+        25.67364290562839
+      ]
+    },
+    "known_medium/band_information/175": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.32300645251747184,
+      "relative_improvement_percent_std": 5.043634598580436,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -6.121623574725262,
+        -1.0208362747018023,
+        6.173440491874649
+      ]
+    },
+    "known_medium/carrier_parameterization/175": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 17.17614181320018,
+      "relative_improvement_percent_std": 1.218453493239748,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        15.454142020558246,
+        17.98254401370828,
+        18.091739405334007
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/175": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 16.85738001650765,
+      "relative_improvement_percent_std": 5.257989474229444,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        10.278562847035,
+        17.145280071412632,
+        23.148297131075324
+      ]
+    },
+    "known_medium/band_information/200": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": -0.5716856709197634,
+      "relative_improvement_percent_std": 5.569054355854489,
+      "fraction_seeds_positive": 0.3333333333333333,
+      "per_seed_percent": [
+        -6.956432524285858,
+        -1.3727825823657729,
+        6.614158093892341
+      ]
+    },
+    "known_medium/carrier_parameterization/200": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 15.388313723291782,
+      "relative_improvement_percent_std": 1.9717707197483536,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        12.679771197144596,
+        17.31675194372584,
+        16.16841802900491
+      ]
+    },
+    "known_medium/full_method_vs_strong_single/200": {
+      "seeds": 3,
+      "relative_improvement_percent_mean": 14.833420169824812,
+      "relative_improvement_percent_std": 6.240970880622571,
+      "fraction_seeds_positive": 1.0,
+      "per_seed_percent": [
+        6.605398400421936,
+        16.181690715875025,
+        21.713171393177475
+      ]
+    }
+  }
+}

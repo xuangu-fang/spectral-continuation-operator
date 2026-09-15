@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "created_utc_date": "2026-09-15",
+  "protocol": {
+    "experiment_matrix": "configs/stage1_experiment_matrix_20260915.json",
+    "dense_horizon_registration_commit": "cd66dd5",
+    "training_code_revision": "bdfe241",
+    "dense_evaluator_revision": "83b0673",
+    "seeds": [42, 43, 44],
+    "tracks": ["known_medium", "field_only"],
+    "factorial_variants_per_track": [
+      "single_direct",
+      "single_carrier",
+      "band_direct",
+      "band_carrier"
+    ],
+    "checkpoint_count": 24,
+    "selection_queries_hz": [90, 100]
+  },
+  "fineband_dataset": {
+    "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
+    "config_sha256": "ce2bfc2a04909c469816d451a6b225c922999fed25afee28e971136fdea84c73",
+    "archive_sha256": "603890808c6cbf541583203730f81abbf61f69ca779647441065db36d782323d",
+    "manifest_sha256": "d95d7c7426c8535c49355dc2b9146ffa40df3f3f053c524e0b7c85c883e27e3c"
+  },
+  "dense_horizon_dataset": {
+    "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+    "config_sha256": "3e3b89b675b2d9be60ec96d7404797d7a9055c66470837c183a9317e7cd04b79",
+    "archive_sha256": "412e437d5c5cbf1b286f84af61e38aab3f896de25029b5a97a3f49a9bfa2383b",
+    "manifest_sha256": "29a70954da0440abfb4690781f67d2cc4d8c27a4e37963975382f70f06f1100f",
+    "new_once_only_queries_hz": [105, 110, 115, 120],
+    "identity_guard": "passed_bitwise",
+    "simulation_count": 2720,
+    "failed_environment_count": 0
+  },
+  "software_sources": {
+    "APEX_repro_fsk": "ebb305e17b15f1f15ed367ed6ffe7a83a8a78b83",
+    "ocean-acoustic-agent": "12a59a0c13058b21522bde5b0d74fe6ad02ee973"
+  },
+  "strict_policy": "32 Ocean strict environments registered; no strict fields generated or read",
+  "compact_results": {
+    "initial_query_summary": "artifacts/stage1_query_formal/query_summary.json",
+    "dense_horizon_summary": "artifacts/stage1_dense_horizon/query_summary.json"
+  }
+}

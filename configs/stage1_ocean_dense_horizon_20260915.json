@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "registered before generation",
+  "status": "completed after all 24 checkpoints were frozen",
   "purpose": "Evaluate already frozen 90/100-Hz-selected operators on a denser, label-blind extrapolation horizon",
   "output_dir": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915",
   "generator": "/home/ubuntu/project/APEX_repro_fsk/apex_modified/tools/build_ocean_octave_dataset.py",
@@ -35,6 +35,13 @@
   "previously_opened_extrapolation_queries_hz": [125, 150, 175, 200],
   "evaluation_contract": "Generate the new labels only after all seed-42/43/44 checkpoints have been selected using 90/100 Hz. Evaluate every frozen checkpoint once; do not use 105/110/115/120 labels for model or hyperparameter selection.",
   "expected_identity_contract": "The deterministic seed/split sampler must reproduce exactly the original 160 development environment IDs and parameters. Shared-frequency fields must be bitwise identical before evaluation.",
-  "paired_fields_sha256": null,
-  "generator_manifest_sha256": null
+  "paired_fields_sha256": "412e437d5c5cbf1b286f84af61e38aab3f896de25029b5a97a3f49a9bfa2383b",
+  "generator_manifest_sha256": "29a70954da0440abfb4690781f67d2cc4d8c27a4e37963975382f70f06f1100f",
+  "generation_audit": {
+    "shape": [160, 17, 48, 384, 2],
+    "n_simulations": 2720,
+    "n_failed_environments": 0,
+    "finite_fraction": 1.0
+  },
+  "evaluation_identity_guard": "passed: IDs, splits, active medium channels and all shared-frequency fields were bitwise identical"
 }

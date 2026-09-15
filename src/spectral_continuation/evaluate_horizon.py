@@ -85,8 +85,7 @@ def run(args):
         output = {
             **source_summary,
             "status": (
-                "frozen checkpoint; dense-horizon labels evaluated once after 90/100-Hz "
-                "selection"
+                "frozen checkpoint; dense-horizon labels evaluated once after 90/100-Hz selection"
             ),
             "extrapolation_query_frequencies_hz": queries,
             "extrapolation": extrapolation,

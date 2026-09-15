@@ -101,20 +101,36 @@ def run(args):
         method = torch.complex(candidate[frequency][selected, 0], candidate[frequency][selected, 1])
         real_scale = float(torch.quantile(target.real.abs().flatten(), 0.995).clamp_min(1e-8))
         error_scale = float(
-            torch.quantile(torch.cat(((base - target).abs().flatten(), (method - target).abs().flatten())), 0.995)
-            .clamp_min(1e-8)
+            torch.quantile(
+                torch.cat(((base - target).abs().flatten(), (method - target).abs().flatten())),
+                0.995,
+            ).clamp_min(1e-8)
         )
-        images = (target.real, base.real, method.real, (base - target).abs(), (method - target).abs())
+        images = (
+            target.real,
+            base.real,
+            method.real,
+            (base - target).abs(),
+            (method - target).abs(),
+        )
         for column, (axis, image) in enumerate(zip(axes[row], images, strict=True)):
             if column < 3:
-                handle = axis.imshow(image, cmap="RdBu_r", vmin=-real_scale, vmax=real_scale, aspect="auto")
+                handle = axis.imshow(
+                    image, cmap="RdBu_r", vmin=-real_scale, vmax=real_scale, aspect="auto"
+                )
             else:
                 handle = axis.imshow(image, cmap="magma", vmin=0, vmax=error_scale, aspect="auto")
             axis.set_xticks([])
             axis.set_yticks([])
             if column == 0:
-                base_rel = metric_vectors(baseline[frequency][selected : selected + 1], targets[frequency][selected : selected + 1])["complex_rel_l2"][0]
-                method_rel = metric_vectors(candidate[frequency][selected : selected + 1], targets[frequency][selected : selected + 1])["complex_rel_l2"][0]
+                base_rel = metric_vectors(
+                    baseline[frequency][selected : selected + 1],
+                    targets[frequency][selected : selected + 1],
+                )["complex_rel_l2"][0]
+                method_rel = metric_vectors(
+                    candidate[frequency][selected : selected + 1],
+                    targets[frequency][selected : selected + 1],
+                )["complex_rel_l2"][0]
                 axis.set_ylabel(f"{frequency:g} Hz\nRelL2 {base_rel:.2f} → {method_rel:.2f}")
             if column in (2, 4):
                 figure.colorbar(handle, ax=axis, fraction=0.025, pad=0.02)

@@ -184,6 +184,16 @@ def run(args):
             )
         axis.axvspan(min(frequencies), args.selection_max_hz, color="#EEEEEE", alpha=0.7)
         axis.axvline(args.selection_max_hz, color="#444444", linestyle="--", linewidth=1)
+        axis.axhline(1.0, color="#555555", linestyle=":", linewidth=1.2)
+        axis.text(
+            max(frequencies),
+            1.015,
+            "zero-field RelL2 = 1",
+            ha="right",
+            va="bottom",
+            fontsize=8.5,
+            color="#444444",
+        )
         axis.text(
             0.015,
             0.98,
