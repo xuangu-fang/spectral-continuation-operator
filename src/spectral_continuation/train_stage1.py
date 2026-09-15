@@ -78,10 +78,16 @@ def run(args: argparse.Namespace) -> None:
         train_positions = train_positions[: args.train_count]
     normalization = fit_normalization(bundle, train_positions, visible, args.target)
     train_dataset = SpectralQueryDataset(
-        bundle, train_positions, visible, args.target, normalization, args.max_slots
+        bundle,
+        train_positions,
+        visible,
+        args.target,
+        normalization,
+        args.max_slots,
+        args.field_only,
     )
     val_dataset = SpectralQueryDataset(
-        bundle, val_positions, visible, args.target, normalization, args.max_slots
+        bundle, val_positions, visible, args.target, normalization, args.max_slots, args.field_only
     )
     train_loader = DataLoader(
         train_dataset,
@@ -168,6 +174,7 @@ def run(args: argparse.Namespace) -> None:
         "visible_frequencies_hz": visible,
         "target_frequency_hz": args.target,
         "parameterization": args.parameterization,
+        "field_only": args.field_only,
         "model_seed": args.seed,
         "train_count": len(train_positions),
         "validation_count": len(val_positions),
@@ -203,6 +210,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--target", type=float, required=True)
     parser.add_argument("--parameterization", choices=("direct", "carrier_relative"), required=True)
     parser.add_argument("--max-slots", type=int, default=3)
+    parser.add_argument("--field-only", action="store_true")
     parser.add_argument("--train-count", type=int)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--width", type=int, default=16)

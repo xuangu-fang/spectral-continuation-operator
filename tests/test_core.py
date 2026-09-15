@@ -3,6 +3,7 @@ import torch
 
 from spectral_continuation.data import (
     FieldBundle,
+    MultiQueryDataset,
     SpectralQueryDataset,
     fit_normalization,
     spectral_carrier,
@@ -47,6 +48,11 @@ def test_dataset_and_matched_reconstruction_contract():
     relative = reconstruct(raw, carrier.unsqueeze(0), norm.target_scale, "carrier_relative")
     assert direct.shape == relative.shape == target.unsqueeze(0).shape
     assert sum(p.numel() for p in model.parameters()) > 0
+
+    multi = MultiQueryDataset(bundle, train, (10.0, 15.0, 20.0), (20.0, 40.0), norm)
+    assert len(multi) == 4
+    assert multi[0][-1] == 0
+    assert multi[1][-1] == 1
 
 
 def test_metrics_and_bootstrap():

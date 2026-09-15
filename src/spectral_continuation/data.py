@@ -244,6 +244,7 @@ class SpectralQueryDataset(Dataset):
         target_frequency: float,
         normalization: Normalization,
         max_slots: int = 3,
+        field_only: bool = False,
     ):
         visible = tuple(sorted(map(float, visible_frequencies)))
         if not visible or len(visible) > max_slots:
@@ -256,6 +257,7 @@ class SpectralQueryDataset(Dataset):
         self.target_frequency = float(target_frequency)
         self.norm = normalization
         self.max_slots = max_slots
+        self.field_only = field_only
         self.carrier = spectral_carrier(
             bundle.fields, visible, self.target_frequency, self.positions
         )
@@ -272,6 +274,8 @@ class SpectralQueryDataset(Dataset):
         env = (
             self.bundle.environment[position] - self.norm.environment_mean[0]
         ) / self.norm.environment_std[0]
+        if self.field_only:
+            env = torch.zeros_like(env)
         height, width = env.shape[-2:]
         channels = [env]
         padding = self.max_slots - len(self.visible)
@@ -300,3 +304,50 @@ class SpectralQueryDataset(Dataset):
         channels.extend((y_coord, x_coord, query))
         target = self.bundle.fields[self.target_frequency][position]
         return torch.cat(channels, dim=0), self.carrier[index], target
+
+
+class MultiQueryDataset(Dataset):
+    """Cartesian product of environments and query frequencies."""
+
+    def __init__(
+        self,
+        bundle: FieldBundle,
+        positions: np.ndarray,
+        visible_frequencies: Sequence[float],
+        query_frequencies: Sequence[float],
+        normalization: Normalization,
+        max_slots: int = 3,
+        field_only: bool = False,
+    ):
+        self.positions = np.asarray(positions, dtype=np.int64)
+        self.queries = tuple(map(float, query_frequencies))
+        if not self.queries:
+            raise ValueError("at least one query frequency is required")
+        for query in self.queries:
+            if query not in bundle.fields:
+                raise KeyError(f"missing query frequency {query:g}")
+        self.datasets = [
+            SpectralQueryDataset(
+                bundle,
+                self.positions,
+                visible_frequencies,
+                query,
+                normalization,
+                max_slots,
+                field_only,
+            )
+            for query in self.queries
+        ]
+
+    @property
+    def input_channels(self) -> int:
+        return self.datasets[0].input_channels
+
+    def __len__(self) -> int:
+        return len(self.positions) * len(self.queries)
+
+    def __getitem__(self, index: int):
+        query_index = index % len(self.queries)
+        position_index = index // len(self.queries)
+        inputs, carrier, target = self.datasets[query_index][position_index]
+        return inputs, carrier, target, query_index
