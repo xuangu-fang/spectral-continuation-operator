@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "development validation only",
+  "domain": "ocean",
+  "target_frequency_hz": 200.0,
+  "train_count": 384,
+  "validation_count": 96,
+  "lineage": {
+    "kind": "ocean-paired-npz",
+    "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/apex_h_ocean_pekeris_dev_20260912/paired_fields.npz"
+  },
+  "conditions": {
+    "100": {
+      "visible_frequencies_hz": [
+        100.0
+      ],
+      "ridge_coefficients": [
+        {
+          "real": -0.008945641107857227,
+          "imag": -0.0070944796316325665
+        }
+      ],
+      "methods": {
+        "copy_top": {
+          "complex_rel_l2": 1.4327999353408813,
+          "amplitude_rel_l2": 0.5388678312301636,
+          "weighted_phase_mae_rad": 1.5749133825302124,
+          "phase_coherence": -0.003255588235333562
+        },
+        "amplitude_spectral_carrier": {
+          "complex_rel_l2": 1.2237480878829956,
+          "amplitude_rel_l2": 0.5388678312301636,
+          "weighted_phase_mae_rad": 1.3475669622421265,
+          "phase_coherence": 0.17754025757312775
+        },
+        "global_complex_ridge": {
+          "complex_rel_l2": 0.9999298453330994,
+          "amplitude_rel_l2": 0.9900646805763245,
+          "weighted_phase_mae_rad": 1.5651479959487915,
+          "phase_coherence": 0.004467294085770845
+        }
+      }
+    },
+    "50+100": {
+      "visible_frequencies_hz": [
+        50.0,
+        100.0
+      ],
+      "ridge_coefficients": [
+        {
+          "real": 0.000993231893517077,
+          "imag": 0.005909894127398729
+        },
+        {
+          "real": -0.008889367803931236,
+          "imag": -0.007265126798301935
+        }
+      ],
+      "methods": {
+        "copy_top": {
+          "complex_rel_l2": 1.4327999353408813,
+          "amplitude_rel_l2": 0.5388678312301636,
+          "weighted_phase_mae_rad": 1.5749133825302124,
+          "phase_coherence": -0.003255588235333562
+        },
+        "amplitude_spectral_carrier": {
+          "complex_rel_l2": 1.3082431554794312,
+          "amplitude_rel_l2": 0.5388678312301636,
+          "weighted_phase_mae_rad": 1.4483623504638672,
+          "phase_coherence": 0.09241435676813126
+        },
+        "global_complex_ridge": {
+          "complex_rel_l2": 0.9999077916145325,
+          "amplitude_rel_l2": 0.9889147877693176,
+          "weighted_phase_mae_rad": 1.5745435953140259,
+          "phase_coherence": -0.002940100384876132
+        }
+      }
+    }
+  },
+  "paired_band_vs_single": {
+    "50+100__amplitude_spectral_carrier": {
+      "mean_absolute_improvement": -0.08449504524469376,
+      "relative_improvement_percent": -6.904611110687256,
+      "fraction_candidate_better": 0.010416666666666666,
+      "ci95_low": -0.09172309935092926,
+      "ci95_high": -0.07715559750795364
+    },
+    "50+100__global_complex_ridge": {
+      "mean_absolute_improvement": 2.2020190954208374e-05,
+      "relative_improvement_percent": 0.0022021736949682236,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 2.067163586616516e-05,
+      "ci95_high": 2.335448152734898e-05
+    }
+  }
+}

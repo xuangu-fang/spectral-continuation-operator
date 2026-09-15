@@ -10,7 +10,9 @@ build/
 # Large datasets and training artifacts are external by design.
 data/*
 !data/README.md
-artifacts/*
-!artifacts/README.md
+artifacts/**/*.pt
+artifacts/**/*.pth
+artifacts/**/*.ckpt
+artifacts/**/*.npz
+artifacts/**/*.npy
 experiments/runs/
-
