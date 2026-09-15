@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# Large datasets and training artifacts are external by design.
+data/*
+!data/README.md
+artifacts/*
+!artifacts/README.md
+experiments/runs/
+
