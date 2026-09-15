@@ -4,6 +4,9 @@
   "question": "Can a phase-equivariant carrier-gauged spectral state support direct continuous-frequency queries without recursive rollout?",
   "data": {
     "output_directory": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915",
+    "archive_sha256": "edb5d0a4a340a60ab9c9ce947105577c0ef3c2d701d7bba632f6c4f3a195ba51",
+    "manifest_sha256": "d2a8e3df340f7ca3c96decc0d60ffdc6e6f33bd9180b4898dc7c622e527bc304",
+    "identity_guard": "PASS: IDs, splits, active environment channels, and all 14 shared frequency tensors are bitwise identical to the earlier dense-horizon archive",
     "solver": "pekeris_mode",
     "seed": 20260912,
     "counts": {
@@ -22,6 +25,14 @@
       "depth_m": [1, 78, 48],
       "range_m": [50, 750, 384],
       "receiver_depth_m": 30
+    },
+    "fractional_query_archive": {
+      "output_directory": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fractional_101p5_124p5_20260915",
+      "frequencies_hz": [101.5, 105.5, 110.5, 115.5, 120.5, 124.5],
+      "archive_sha256": "1575e3a1903798dcf3ae9a28c8f535f55d871c8d0e649c5eb6614e8b995bf5eb",
+      "manifest_sha256": "3b2d492cfd8c0ee69c0f1a70479cd7b87f3f0948b6462f08fde6094f0e724913",
+      "identity_guard": "PASS: IDs, splits, and active environment channels are identical to the integer-frequency archive",
+      "timing": "generated only after the integer-frequency model configuration and three checkpoints were frozen"
     }
   },
   "protocol": {

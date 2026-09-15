@@ -1,0 +1,296 @@
+{
+  "Pole-residue": {
+    "checkpoints": [
+      {
+        "source_summary": "experiments/runs/m3_ocean_dense_poles_seed42/summary.json",
+        "sha256": "3c54f4e65653ed194ca39890ea28e13f40895c64ef58720587dd912f8c523579",
+        "evaluation_summary": "experiments/dense_evaluation/m3_ocean_fractional_poles_seed42/summary.json"
+      },
+      {
+        "source_summary": "experiments/runs/m3_ocean_dense_poles_seed43/summary.json",
+        "sha256": "b3f0e1bb696a4530ac1f3709dcdc186b3c51f95efc4d72a154bd9e15481c66d8",
+        "evaluation_summary": "experiments/dense_evaluation/m3_ocean_fractional_poles_seed43/summary.json"
+      },
+      {
+        "source_summary": "experiments/runs/m3_ocean_dense_poles_seed44/summary.json",
+        "sha256": "a6b79372fcbf4560a570cedb261c8e9a775d4744da814983b0780ef89625d61e",
+        "evaluation_summary": "experiments/dense_evaluation/m3_ocean_fractional_poles_seed44/summary.json"
+      }
+    ],
+    "macro_average": {
+      "complex_rel_l2": {
+        "mean": 0.6760059694449106,
+        "std": 0.007855790669714258
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.4560883310106066,
+        "std": 0.0033256837889303523
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 0.7425180673599243,
+        "std": 0.0011871118139026304
+      },
+      "phase_coherence": {
+        "mean": 0.6108760121795865,
+        "std": 0.001105751887383995
+      }
+    },
+    "frequency_metrics": {
+      "101.5": {
+        "complex_rel_l2": {
+          "mean": 0.4817154010136922,
+          "std": 0.0015069844711777386
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.3047509392102559,
+          "std": 0.000855108223629806
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.4596370458602905,
+          "std": 0.0009505150347598311
+        },
+        "phase_coherence": {
+          "mean": 0.7924567659695944,
+          "std": 0.00029800710833210493
+        }
+      },
+      "105.5": {
+        "complex_rel_l2": {
+          "mean": 0.5548145174980164,
+          "std": 0.0026402824924504084
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.3605017066001892,
+          "std": 0.00023632193663296206
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.5548591812451681,
+          "std": 0.0017000765818663366
+        },
+        "phase_coherence": {
+          "mean": 0.7375157674153646,
+          "std": 0.0013650787714770377
+        }
+      },
+      "110.5": {
+        "complex_rel_l2": {
+          "mean": 0.6543796062469482,
+          "std": 0.006063208122821579
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.43705589572588605,
+          "std": 0.0025440776300855797
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.6895524064699808,
+          "std": 0.002187732100729059
+        },
+        "phase_coherence": {
+          "mean": 0.6527798970540365,
+          "std": 0.002508740426406287
+        }
+      },
+      "115.5": {
+        "complex_rel_l2": {
+          "mean": 0.7283609708150228,
+          "std": 0.009931275216083366
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.49395782748858136,
+          "std": 0.005510175281447667
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.8076204856236776,
+          "std": 0.0018490859264842293
+        },
+        "phase_coherence": {
+          "mean": 0.572154680887858,
+          "std": 0.002728356136464009
+        }
+      },
+      "120.5": {
+        "complex_rel_l2": {
+          "mean": 0.7940510710080465,
+          "std": 0.0124784713572494
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.5484862526257833,
+          "std": 0.006842124521085805
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.9250097274780273,
+          "std": 0.0019723419732380447
+        },
+        "phase_coherence": {
+          "mean": 0.4891464312871297,
+          "std": 0.001800512839905403
+        }
+      },
+      "124.5": {
+        "complex_rel_l2": {
+          "mean": 0.842714250087738,
+          "std": 0.015055294491683174
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.5917773644129435,
+          "std": 0.005989366720356836
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.0184295574824016,
+          "std": 0.010791225638549834
+        },
+        "phase_coherence": {
+          "mean": 0.42120253046353656,
+          "std": 0.006919084528813799
+        }
+      }
+    }
+  },
+  "Image U-Net": {
+    "checkpoints": [
+      {
+        "source_summary": "experiments/runs/m3_ocean_dense_unet_seed42/summary.json",
+        "sha256": "7c7ec82cae9ef27ea0b4ff86f3bf0d5f1d4a9ff72174c2094c36eca422da3bee",
+        "evaluation_summary": "experiments/dense_evaluation/m3_ocean_fractional_unet_seed42/summary.json"
+      },
+      {
+        "source_summary": "experiments/runs/m3_ocean_dense_unet_seed43/summary.json",
+        "sha256": "282a685bb22ac876a5a8019d796bc01c5a95c87e3b454a3577b00aa30944473c",
+        "evaluation_summary": "experiments/dense_evaluation/m3_ocean_fractional_unet_seed43/summary.json"
+      },
+      {
+        "source_summary": "experiments/runs/m3_ocean_dense_unet_seed44/summary.json",
+        "sha256": "f61ae217cf86cc0daf7ccd434dda5fa445987929a90807fcd6ce25aad823cbf6",
+        "evaluation_summary": "experiments/dense_evaluation/m3_ocean_fractional_unet_seed44/summary.json"
+      }
+    ],
+    "macro_average": {
+      "complex_rel_l2": {
+        "mean": 1.180684487024943,
+        "std": 0.06527776403238308
+      },
+      "amplitude_rel_l2": {
+        "mean": 0.5116498486863242,
+        "std": 0.03498375607791589
+      },
+      "weighted_phase_mae_rad": {
+        "mean": 1.5045419898298051,
+        "std": 0.05156730468378039
+      },
+      "phase_coherence": {
+        "mean": 0.049848324981414616,
+        "std": 0.03841538168422671
+      }
+    },
+    "frequency_metrics": {
+      "101.5": {
+        "complex_rel_l2": {
+          "mean": 0.7929030259450277,
+          "std": 0.32761305618575337
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.36257218321164447,
+          "std": 0.06476836902110644
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.0177297393480937,
+          "std": 0.49475928151576987
+        },
+        "phase_coherence": {
+          "mean": 0.4183871404578288,
+          "std": 0.3735045111445334
+        }
+      },
+      "105.5": {
+        "complex_rel_l2": {
+          "mean": 1.2846771876017253,
+          "std": 0.09471973603410287
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.4656866192817688,
+          "std": 0.015538099013467596
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.6689905325571697,
+          "std": 0.20121676904412117
+        },
+        "phase_coherence": {
+          "mean": -0.07321407894293468,
+          "std": 0.1549151974509755
+        }
+      },
+      "110.5": {
+        "complex_rel_l2": {
+          "mean": 1.3204410473505657,
+          "std": 0.033445147990947076
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.5222998062769572,
+          "std": 0.023410339762092326
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.6501124302546184,
+          "std": 0.016675742181078097
+        },
+        "phase_coherence": {
+          "mean": -0.06384978195031484,
+          "std": 0.013464070852158824
+        }
+      },
+      "115.5": {
+        "complex_rel_l2": {
+          "mean": 1.2772337595621746,
+          "std": 0.047641501263288866
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.551949123541514,
+          "std": 0.03440399192898725
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.6028138001759846,
+          "std": 0.012332606157617183
+        },
+        "phase_coherence": {
+          "mean": -0.024892437582214672,
+          "std": 0.009454276998142136
+        }
+      },
+      "120.5": {
+        "complex_rel_l2": {
+          "mean": 1.2255479494730632,
+          "std": 0.03364970166790719
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.5748933752377828,
+          "std": 0.03940024155627777
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.552825887997945,
+          "std": 0.013331882334684707
+        },
+        "phase_coherence": {
+          "mean": 0.01346176831672589,
+          "std": 0.010559367638410965
+        }
+      },
+      "124.5": {
+        "complex_rel_l2": {
+          "mean": 1.183303952217102,
+          "std": 0.046803068530232146
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.592497984568278,
+          "std": 0.04133658540171217
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.5347795486450195,
+          "std": 0.02128969222436406
+        },
+        "phase_coherence": {
+          "mean": 0.029197339589397114,
+          "std": 0.01662795348706637
+        }
+      }
+    }
+  }
+}

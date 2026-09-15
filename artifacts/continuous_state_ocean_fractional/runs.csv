@@ -1,0 +1,37 @@
+label,seed,frequency_hz,summary_path,complex_rel_l2,amplitude_rel_l2,weighted_phase_mae_rad,phase_coherence
+Pole-residue,42,101.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed42/summary.json,0.4817044138908386,0.30542007088661194,0.4607226848602295,0.7921863794326782
+Pole-residue,42,105.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed42/summary.json,0.5541602373123169,0.3602381944656372,0.5557357668876648,0.7373130321502686
+Pole-residue,42,110.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed42/summary.json,0.6534489393234253,0.4351101815700531,0.6886058449745178,0.6540796160697937
+Pole-residue,42,115.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed42/summary.json,0.728661298751831,0.49124911427497864,0.8079472780227661,0.5732815265655518
+Pole-residue,42,120.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed42/summary.json,0.796575665473938,0.5459882616996765,0.9246461391448975,0.4912223219871521
+Pole-residue,42,124.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed42/summary.json,0.847051739692688,0.5892882347106934,1.0156563520431519,0.42482811212539673
+Pole-residue,43,101.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed43/summary.json,0.48322784900665283,0.30378755927085876,0.45895451307296753,0.7927762866020203
+Pole-residue,43,105.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed43/summary.json,0.557720422744751,0.36057206988334656,0.5528997182846069,0.7389708757400513
+Pole-residue,43,110.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed43/summary.json,0.6608543395996094,0.43993479013442993,0.6879973411560059,0.6543720960617065
+Pole-residue,43,115.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed43/summary.json,0.7381386756896973,0.5002980828285217,0.8056297898292542,0.5741391181945801
+Pole-residue,43,120.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed43/summary.json,0.8050742149353027,0.556226372718811,0.9271385669708252,0.48820775747299194
+Pole-residue,43,124.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed43/summary.json,0.8551246523857117,0.5986099243164062,1.0303367376327515,0.41322410106658936
+Pole-residue,44,101.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed44/summary.json,0.4802139401435852,0.3050451874732971,0.45923393964767456,0.7924076318740845
+Pole-residue,44,105.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed44/summary.json,0.5525628924369812,0.36069485545158386,0.5559420585632324,0.7362633943557739
+Pole-residue,44,110.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed44/summary.json,0.6488355398178101,0.43612271547317505,0.692054033279419,0.6498879790306091
+Pole-residue,44,115.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed44/summary.json,0.71828293800354,0.49032628536224365,0.8092843890190125,0.5690433979034424
+Pole-residue,44,120.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed44/summary.json,0.7805033326148987,0.5432441234588623,0.9232444763183594,0.4880092144012451
+Pole-residue,44,124.5,experiments/dense_evaluation/m3_ocean_fractional_poles_seed44/summary.json,0.8259663581848145,0.587433934211731,1.0092955827713013,0.42555537819862366
+Image U-Net,42,101.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed42/summary.json,1.170813798904419,0.292346715927124,1.5865058898925781,-0.01152460090816021
+Image U-Net,42,105.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed42/summary.json,1.1767117977142334,0.46229222416877747,1.4367365837097168,0.1055823564529419
+Image U-Net,42,110.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed42/summary.json,1.358959436416626,0.4971684217453003,1.6423178911209106,-0.0571766160428524
+Image U-Net,42,115.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed42/summary.json,1.332240343093872,0.5134872198104858,1.6075108051300049,-0.028804808855056763
+Image U-Net,42,120.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed42/summary.json,1.2633135318756104,0.530261754989624,1.5579254627227783,0.009786613285541534
+Image U-Net,42,124.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed42/summary.json,1.2335858345031738,0.5453266501426697,1.5490095615386963,0.017680699005723
+Image U-Net,43,101.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed43/summary.json,0.5891861915588379,0.37540870904922485,0.6868979930877686,0.6631346344947815
+Image U-Net,43,105.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed43/summary.json,1.353806972503662,0.45212632417678833,1.7794814109802246,-0.1578589379787445
+Image U-Net,43,110.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed43/summary.json,1.2987676858901978,0.5262426137924194,1.638761281967163,-0.05502565577626228
+Image U-Net,43,115.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed43/summary.json,1.2490828037261963,0.562569260597229,1.588822841644287,-0.014109963551163673
+Image U-Net,43,120.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed43/summary.json,1.214578628540039,0.5895676612854004,1.5628552436828613,0.005231070332229137
+Image U-Net,43,124.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed43/summary.json,1.175318956375122,0.6097699999809265,1.5450248718261719,0.021650996059179306
+Image U-Net,44,101.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed44/summary.json,0.6187090873718262,0.4199611246585846,0.7797853350639343,0.6035513877868652
+Image U-Net,44,105.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed44/summary.json,1.3235127925872803,0.4826413094997406,1.7907536029815674,-0.1673656553030014
+Image U-Net,44,110.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed44/summary.json,1.303596019744873,0.5434883832931519,1.6692581176757812,-0.07934707403182983
+Image U-Net,44,115.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed44/summary.json,1.250378131866455,0.5797908902168274,1.612107753753662,-0.031762540340423584
+Image U-Net,44,120.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed44/summary.json,1.19875168800354,0.604850709438324,1.5376969575881958,0.025367621332406998
+Image U-Net,44,124.5,experiments/dense_evaluation/m3_ocean_fractional_unet_seed44/summary.json,1.1410070657730103,0.6223973035812378,1.5103042125701904,0.04826032370328903

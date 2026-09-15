@@ -182,3 +182,81 @@ POC 使用已打开的 development labels 做架构归因，不能被称为新�
 Git 提交 compact JSON/CSV、图和 provenance。大型 `best.pt`、逐样本 NPZ 与数据集位于本机
 attached storage，并由 summary 中的 SHA256 绑定。旧 APEX 仓库只作为只读证据/生成器来源，
 新实验代码与文档均在本仓库维护。
+
+## 8. 连续 pole–residue 主实验
+
+### 8.1 数据身份
+
+整数频率 archive：
+
+```text
+/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/
+spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz
+SHA256 edb5d0a4a340a60ab9c9ce947105577c0ef3c2d701d7bba632f6c4f3a195ba51
+```
+
+它包含 74–125 Hz 每个整数频率，shape 为 `[160,52,48,384,2]`。与上一节 archive 的
+环境 ID、split、active medium channels 和 14 个共享频率 tensor 均 bitwise identical。
+
+半整数 query archive：
+
+```text
+/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/
+spectral_continuation_ocean_fractional_101p5_124p5_20260915/paired_fields.npz
+SHA256 1575e3a1903798dcf3ae9a28c8f535f55d871c8d0e649c5eb6614e8b995bf5eb
+```
+
+完整生成参数、manifest hashes、严格集策略和冻结顺序记录在
+[`ocean_continuous_poles_stage_20260915.json`](../configs/ocean_continuous_poles_stage_20260915.json)。
+模型配置在 commit `06f2cb1` 冻结，先于整数 archive 的首次读取；三 seed 开发证据在 commit
+`83e9518` 固化。
+
+### 8.2 主模型
+
+以下命令中 `SEED` 取 42、43、44：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_representation_poc \
+  --domain ocean --model carrier_poles --dataset /path/to/integer/paired_fields.npz \
+  --output-dir experiments/runs/m3_ocean_dense_poles_seedSEED \
+  --visible 74,75,76,77,78,79,80 \
+  --train-queries 81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 \
+  --test-queries 101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --poles 4 --state-width 128 --blocks 4 --grouped-training \
+  --pole-growth stable --max-growth-per-hz 0.4 \
+  --max-residual-angle-per-hz 0.25 --pole-anchor residue_sum \
+  --carrier-estimator endpoint_increment --residue-scale 2 \
+  --history-weight 0 --relative-loss-power 1 \
+  --epochs 100 --batch-size 4 --eval-batch-size 4 \
+  --lr 5e-4 --weight-decay 1e-6 --seed SEED
+```
+
+matched recurrence 将模型参数替换为：
+
+```text
+--model stable_recurrence --order 3 --state-width 128 --blocks 4
+--stability-radius 1 --history-weight 1 --grouped-training
+```
+
+matched image baseline 替换为：
+
+```text
+--model image_unet --width 16 --batch-size 16
+```
+
+两者仍使用 `--relative-loss-power 1`、相同 queries、轮数和随机种子。
+
+### 8.3 冻结后的半整数评测
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_representation_checkpoint \
+  --run-summary experiments/runs/m3_ocean_dense_poles_seed42/summary.json \
+  --source-dataset /path/to/integer/paired_fields.npz \
+  --query-dataset /path/to/fractional/paired_fields.npz \
+  --queries 101.5,105.5,110.5,115.5,120.5,124.5 \
+  --output-dir experiments/dense_evaluation/m3_ocean_fractional_poles_seed42
+```
+
+正文图由 `spectral_continuation.summarize_continuous_state` 和
+`spectral_continuation.summarize_fractional_queries` 生成。提交到 Git 的 JSON/CSV 保存三 seed
+逐频率指标；大型 checkpoints 和逐样本 vectors 仍只通过 SHA256 引用。

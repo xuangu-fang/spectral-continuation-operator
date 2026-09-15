@@ -5,12 +5,15 @@
 核心问题不是固定的 `20 Hz → 40 Hz` 映射，而是：相邻低频采样是否足以辨识谱相位速度，
 以及一个轻量 propagation-aware operator 能否把这种信息转化为稳定的高频外推。
 
-第一阶段在 Ocean Pekeris 上只用 90/100 Hz 选择模型。所有 checkpoint 冻结后一次性评估
-105/110 Hz 新标签时，细频带 carrier-relative operator 的 raw complex RelL2 为 0.588/0.683，
-强单频 direct baseline 为 1.437/1.389，三随机种子平均相对下降 59.0%/50.7%；每个 seed 的
-每个 validation 环境都改善。零场阈值下的可用查询 horizon 从 100 Hz 延伸到 125 Hz。
-同时，粗采样 WaveBench/Ocean 反例、in-range 性能损失和远频误差回升都被保留；当前结论
-是“问题值得继续”，不是“方法已经可投稿”。
+最新阶段使用 74–80 Hz 可见场和 81–100 Hz 稠密监督，比较近似严格参数匹配的
+carrier-gauged pole–residue、稳定递推和 query-conditioned image U-Net。三者都能拟合训练频带：
+pole 与 U-Net 的 raw complex RelL2 分别为 0.276 和 0.289；但冻结后在 101–125 Hz 上分别为
+0.669 和 1.217，结构化谱状态降低 **45.1%**。相对稳定递推的 0.765，直接连续查询降低
+**12.6%**。在训练后才生成的六个半整数频率上，pole 为 0.676，U-Net 为 1.181。主要差距
+来自相位，而不是幅值指标，且三 seed 方向稳定。
+
+当前结论是：从低频带估计相位不变的局部传播状态，确实比像素空间 query fitting 更适合
+频带外 continuation；误差仍随距离增长，因此还不能主张任意远频恢复。
 
 本仓库独立于 `APEX_repro_fsk`。旧仓库仅作为只读证据与数据生成器来源；所有新协议、代码、
 实验和 artifact 在这里维护。

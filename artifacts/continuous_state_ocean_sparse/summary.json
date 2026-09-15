@@ -10,6 +10,61 @@
       1227796,
       1227796
     ],
+    "checkpoints": [
+      {
+        "seed": 42,
+        "sha256": "0fc42d32d4f4acdbb9b280ba00e00d785391da4f8a063ae3d85f7bddf0fce5b0",
+        "summary_path": "experiments/runs/m2_screen_endpoint_w128_sum_k4_d40_h0_l1_seed42/summary.json"
+      },
+      {
+        "seed": 43,
+        "sha256": "ed554518997e54c925f1b6f74c1a01d6122373fc105cd8eff48a843038c168ab",
+        "summary_path": "experiments/runs/m2_sparse_endpoint_poles_seed43/summary.json"
+      },
+      {
+        "seed": 44,
+        "sha256": "2b5cf58bd25c90c3f448ec6aee414b4946138272b2716870493497b5b2291fd7",
+        "summary_path": "experiments/runs/m2_sparse_endpoint_poles_seed44/summary.json"
+      }
+    ],
+    "macro_average": {
+      "selection": {
+        "complex_rel_l2": {
+          "mean": 0.32738402982552844,
+          "std": 0.004311960926109668
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.22838663558165231,
+          "std": 0.00416862168687557
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.2671245535214742,
+          "std": 0.005206466732424688
+        },
+        "phase_coherence": {
+          "mean": 0.9102017283439636,
+          "std": 0.003263883143406927
+        }
+      },
+      "extrapolation": {
+        "complex_rel_l2": {
+          "mean": 0.6946839610735576,
+          "std": 0.012740192908501128
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.47140319347381593,
+          "std": 0.009840509552790465
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.7672944347063702,
+          "std": 0.0278249625573694
+        },
+        "phase_coherence": {
+          "mean": 0.5932297388712565,
+          "std": 0.020291270747411615
+        }
+      }
+    },
     "frequency_metrics": {
       "90": {
         "complex_rel_l2": {
@@ -150,6 +205,61 @@
       310282,
       310282
     ],
+    "checkpoints": [
+      {
+        "seed": 42,
+        "sha256": "acd669269ffa642cc12b8b9e77d020847c4b1db4a18b579e9d4266b91f2fd2da",
+        "summary_path": "experiments/runs/representation_poc_ocean_recurrence_history_seed42/summary.json"
+      },
+      {
+        "seed": 43,
+        "sha256": "ce4634c085f46577ceb0bb2f9299bab327746d1a3a861110f9bedf26222346db",
+        "summary_path": "experiments/runs/representation_poc_ocean_recurrence_history_seed43/summary.json"
+      },
+      {
+        "seed": 44,
+        "sha256": "4265ba6c51c302c5828ae8c22dfcdb30f29979f5a675ff5b01a1f81da134c60a",
+        "summary_path": "experiments/runs/representation_poc_ocean_recurrence_history_seed44/summary.json"
+      }
+    ],
+    "macro_average": {
+      "selection": {
+        "complex_rel_l2": {
+          "mean": 0.5714944501717886,
+          "std": 0.0038447583168704485
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.44431236883004505,
+          "std": 0.003151974288582691
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.6027836551268896,
+          "std": 0.007875910861885898
+        },
+        "phase_coherence": {
+          "mean": 0.7039089798927307,
+          "std": 0.0062447374174109055
+        }
+      },
+      "extrapolation": {
+        "complex_rel_l2": {
+          "mean": 0.7761153697967528,
+          "std": 0.0017099265066535347
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.6110584338506063,
+          "std": 0.0025797496321925523
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.0070571740468344,
+          "std": 0.017450226642121584
+        },
+        "phase_coherence": {
+          "mean": 0.42432116270065307,
+          "std": 0.013700250235987211
+        }
+      }
+    },
     "frequency_metrics": {
       "90": {
         "complex_rel_l2": {
@@ -290,6 +400,61 @@
       309210,
       309210
     ],
+    "checkpoints": [
+      {
+        "seed": 42,
+        "sha256": "aaba4f3d9784ff81773a9fa05ca5dcb12c3a4c90b56b268bfcc2b358286ba877",
+        "summary_path": "experiments/runs/representation_poc_ocean_unet7_seed42/summary.json"
+      },
+      {
+        "seed": 43,
+        "sha256": "08dde2ff11373ac63995494a825f56cfb2b8087a9d664234371866598ba4b702",
+        "summary_path": "experiments/runs/representation_poc_ocean_unet7_seed43/summary.json"
+      },
+      {
+        "seed": 44,
+        "sha256": "983a49b4a4309e089cc818d4e514ec724f9f312aa55015da37d65abb8665fad4",
+        "summary_path": "experiments/runs/representation_poc_ocean_unet7_seed44/summary.json"
+      }
+    ],
+    "macro_average": {
+      "selection": {
+        "complex_rel_l2": {
+          "mean": 0.799569845199585,
+          "std": 0.0005897138072429693
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.5799859364827474,
+          "std": 0.0018528895913158335
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 0.8367960453033447,
+          "std": 0.0010863699420070683
+        },
+        "phase_coherence": {
+          "mean": 0.5784605294466019,
+          "std": 0.00121662245306506
+        }
+      },
+      "extrapolation": {
+        "complex_rel_l2": {
+          "mean": 1.1843208074569702,
+          "std": 0.0007777098132829502
+        },
+        "amplitude_rel_l2": {
+          "mean": 0.6370498299598694,
+          "std": 0.002867437801443076
+        },
+        "weighted_phase_mae_rad": {
+          "mean": 1.587971798578898,
+          "std": 0.0031053203850577083
+        },
+        "phase_coherence": {
+          "mean": -0.013483963922287026,
+          "std": 0.002378452306532692
+        }
+      }
+    },
     "frequency_metrics": {
       "90": {
         "complex_rel_l2": {

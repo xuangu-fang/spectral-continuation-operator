@@ -43,11 +43,19 @@ def run(args) -> None:
         by_frequency: dict[float, dict[str, list[float]]] = defaultdict(
             lambda: defaultdict(list)
         )
+        macro_by_split = {
+            split: {metric: [] for metric in METRICS}
+            for split in ("selection", "extrapolation")
+        }
         seeds = []
         for path, summary in runs:
             seed = int(summary["args"]["seed"])
             seeds.append(seed)
             for split_name in ("selection", "extrapolation"):
+                for metric in METRICS:
+                    macro_by_split[split_name][metric].append(
+                        float(summary[split_name]["macro_average"][metric])
+                    )
                 frequency_key = (
                     "selection_query_frequencies_hz"
                     if split_name == "selection"
@@ -70,6 +78,24 @@ def run(args) -> None:
         aggregate[label] = {
             "seeds": seeds,
             "parameters": [int(summary["parameters"]) for _, summary in runs],
+            "checkpoints": [
+                {
+                    "seed": int(summary["args"]["seed"]),
+                    "sha256": summary["checkpoint_sha256"],
+                    "summary_path": str(path),
+                }
+                for path, summary in runs
+            ],
+            "macro_average": {
+                split: {
+                    metric: {
+                        "mean": float(np.mean(values)),
+                        "std": float(np.std(values, ddof=1)) if len(values) > 1 else 0.0,
+                    }
+                    for metric, values in metrics.items()
+                }
+                for split, metrics in macro_by_split.items()
+            },
             "frequency_metrics": {
                 f"{frequency:g}": {
                     metric: {

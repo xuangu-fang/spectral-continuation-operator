@@ -1,6 +1,9 @@
 # 谱连续算子第一阶段报告
 
-更新时间：2026-09-15。本文是当前仓库的主阅读入口；旧 APEX/APEX-H 证据的逐项来源见
+> 状态：历史 M0/M1 报告。当前连续谱状态结果请先读
+> [连续复谱状态](../docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)。
+
+更新时间：2026-09-15。本文是第一阶段历史报告；旧 APEX/APEX-H 证据的逐项来源见
 [冻结证据与归因](../docs/APEX_LEGACY_EVIDENCE_ZH.md)，实验前计划见
 [第一阶段计划](../docs/STAGE1_PLAN_ZH.md)。
 

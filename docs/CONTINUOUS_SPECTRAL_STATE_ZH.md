@@ -1,7 +1,6 @@
 # 连续复谱状态：carrier-gauged pole–residue operator
 
 更新时间：2026-09-15。本文记录当前长程目标中的问题设定、最小方法、已确认结果和实验边界。
-Ocean 稠密频率实验完成后，正文数字将直接补到本文，而不会另起一份互相冲突的报告。
 
 ## 1. 一句话问题
 
@@ -105,8 +104,8 @@ $f_0$ 直接到目标频率，不经过中间预测场。
 PDE residual。可选的 visible-history 项也使用完全相同的复场重建目标，其作用只是让同一个
 state 同时解释可见频带。
 
-当前代码同时支持平方 relative error 和与报告指标一致的非平方 relative error；正式 Ocean
-配置只会在单 seed 开发实验后冻结其中一个。
+当前代码同时保留平方与非平方 relative error 作为可审计消融；正式 Ocean 配置使用与报告
+指标一致的非平方 relative error，并在打开稠密 archive 前冻结。
 
 ## 4. 已确认的受控证据
 
@@ -166,21 +165,68 @@ carrier 并删除与它冲突的 visible-history 项后，单 seed 开发结果�
 而不是可见带内部的平均生成元。visible-history 对 OLS carrier 有正则作用，却会强迫端点状态向后
 拟合一段有曲率的频谱，因此应删除。这个版本最终只保留主 query reconstruction loss。
 
-## 6. 当前 Ocean 稠密协议
+## 6. Ocean 稠密协议与主结果
 
-数据仍使用相同 Pekeris solver、相同 128/32 development environments 和相同 48×384 网格。
+数据使用相同 Pekeris solver、相同 128/32 development environments 和相同 48×384 网格。
 模型只看 74–80 Hz：
 
 - 81–100 Hz：训练，并在独立 validation environments 上选择 checkpoint；
 - 101–125 Hz：完全不参与选择的 development extrapolation curve；
 - strict environments：现在只注册参数，不生成或打开 field bytes。
 
-这个实验不是通过增加物理环境数量取巧，而是增加同一环境沿频率轴的观测密度，直接检验
+这个实验没有增加物理环境数量，而是增加同一环境沿频率轴的观测密度，直接检验
 “谱状态可辨识性”这一归因。matched stable recurrence 与 image U-Net 使用相同数据、训练轮数
 和近似参数量。
 
-只有当整数频率版本同时改善近端和 101–125 Hz macro 后，才生成少量 0.5 Hz offset 的独立
-查询标签；连续频率能力不参与模型选择。
+三 seed 主结果如下：
+
+| 模型 | 参数量 | 81–100 Hz | 101–125 Hz |
+|---|---:|---:|---:|
+| Image U-Net | 1.230M | 0.289 ± 0.003 | 1.217 ± 0.044 |
+| Stable recurrence | 1.210M | 0.391 ± 0.001 | 0.765 ± 0.001 |
+| Continuous pole–residue | 1.228M | **0.2760 ± 0.0005** | **0.669 ± 0.007** |
+
+在训练/选择频带内，U-Net 已经是很强的 0.289，pole 只低 4.6%；但冻结后跨过 100 Hz，U-Net
+立即发生相位崩溃，101–125 Hz macro 变为 1.217。pole 相对它下降 **45.1%**，相对稳定递推
+下降 **12.6%**。这比选择一个弱 direct baseline 更有说服力：三者都能拟合训练频带，区别在于
+latent 是否支持频带外 continuation。
+
+逐物理环境 paired bootstrap 先平均三个 seed 和全部查询，再以 32 个环境为独立单位。相对
+U-Net，带外 32/32 环境改善，平均 absolute improvement 0.549，95% CI `[0.515, 0.583]`；
+相对 recurrence，30/32 环境改善，平均 absolute improvement 0.096，95% CI
+`[0.067, 0.118]`。相反，训练带内 pole 对 U-Net 的 absolute improvement CI 跨过零，说明
+两者的拟合能力接近，带外差距不是由一个明显训练失败的 baseline 造成。
+
+![Ocean 稠密整数频率主结果](../artifacts/continuous_state_ocean_dense/continuous_state.png)
+
+下图环境不是手工挑选：先将三个 seed 和全部 101–125 Hz 查询平均，再按 pole 相对 U-Net 的
+paired improvement 取 32 个 validation environments 的中位数。固定 seed 42 在 110 Hz 上，
+pole RelL2 为 0.653，U-Net 为 1.401；相位误差和复误差的空间分布与汇总指标一致。
+
+![Ocean 110 Hz 中位数环境场级对照](../artifacts/continuous_state_ocean_dense/representative_110hz.png)
+
+机制指标与最初发现一致。在 101–125 Hz：
+
+- pole 与 U-Net 的 amplitude RelL2 为 0.457 对 0.518，差距为 11.7%；
+- weighted phase MAE 为 0.725 对 1.547，差距为 53.1%；
+- phase coherence 为 0.625 对 0.018。
+
+因此主要收益确实来自“幅值相对可迁移，但必须结构化表示高频相位”，不是换一个幅值指标放大
+数字。
+
+整数 gate 通过并冻结三个 checkpoint 后，才独立生成
+101.5/105.5/110.5/115.5/120.5/124.5 Hz 标签。pole 可直接查询这些实数频率，不经过重训或
+相邻整数 rollout：
+
+| 模型 | Fractional raw RelL2 | Amplitude RelL2 | Phase MAE | Coherence |
+|---|---:|---:|---:|---:|
+| Image U-Net | 1.181 ± 0.065 | 0.512 ± 0.035 | 1.505 ± 0.052 | 0.050 ± 0.038 |
+| Continuous pole–residue | **0.676 ± 0.008** | **0.456 ± 0.003** | **0.743 ± 0.001** | **0.611 ± 0.001** |
+
+半整数 raw error 下降 42.7%，曲线与相邻整数查询一致。U-Net 同样可以接收实数 query，因此
+这个对照检验的是连续频率表示，而不是接口是否接受浮点数。
+
+![Ocean 未见半整数查询](../artifacts/continuous_state_ocean_fractional/fractional_queries.png)
 
 完整冻结协议见
 [`ocean_continuous_poles_stage_20260915.json`](../configs/ocean_continuous_poles_stage_20260915.json)。
@@ -191,14 +237,19 @@ carrier 并删除与它冲突的 visible-history 项后，单 seed 开发结果�
 
 1. carrier-gauged pole state 提供相位等变、分辨率灵活、连续且无 rollout 的 query operator；
 2. 受控合成实验中，它比 matched recurrence 和 image representation 更有效；
-3. 稀疏 Ocean 监督已显著降低训练频带误差，并明确定位了长程瓶颈。
+3. 在参数匹配、训练带拟合接近的 Ocean 对照中，它把 101–125 Hz raw error 相对 U-Net 降低
+   45.1%，相对 recurrence 降低 12.6%；
+4. 冻结后的半整数查询保持相同结论，且主要收益来自相位而非幅值。
 
 目前不能主张：
 
-1. 已经在真实 Ocean 上解决长程连续外推；
+1. 已经把真实 Ocean 长程误差降低到可直接部署的精度；
 2. 任意远频都能从有限低频唯一恢复；
 3. learned poles 等同于唯一真实传播路径；
-4. development 调参结果等同于 untouched test 结果。
+4. 单一 Pekeris 数据分布可以代表所有波动系统；
+5. development 调参结果等同于 untouched strict test 结果。
 
-最终 go/no-go 取决于 Ocean 稠密监督能否缩小 state-identification gap，而不是取决于再增加
-多少模型组件。
+本阶段结论为 representation-level GO：结构优势已经稳定且与最初 amplitude/phase 发现一致。
+下一阶段最重要的不是继续在这个 development split 上调数字，而是冻结方法后生成 strict
+environments，并转向第二个真实物理分布检验；绝对 raw error 仍约 0.67，也说明更长程的状态
+仍不完全可辨识。

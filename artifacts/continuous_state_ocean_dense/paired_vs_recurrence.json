@@ -1,0 +1,347 @@
+{
+  "candidate": "Pole-residue",
+  "baseline": "Stable recurrence",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "independent_unit": "physical validation environment after averaging seeds",
+  "selection": {
+    "macro": {
+      "mean_absolute_improvement": 0.11458101868629456,
+      "relative_improvement_percent": 29.33902931213379,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.09013883769512177,
+      "ci95_high": 0.1340959668159485
+    },
+    "per_frequency": {
+      "81": {
+        "mean_absolute_improvement": 0.017403792589902878,
+        "relative_improvement_percent": 22.98505401611328,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.012562385760247707,
+        "ci95_high": 0.02158294804394245
+      },
+      "82": {
+        "mean_absolute_improvement": 0.03573751077055931,
+        "relative_improvement_percent": 25.83919334411621,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.02693874016404152,
+        "ci95_high": 0.043574508279561996
+      },
+      "83": {
+        "mean_absolute_improvement": 0.05497312918305397,
+        "relative_improvement_percent": 29.039533615112305,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.0429614894092083,
+        "ci95_high": 0.06580739468336105
+      },
+      "84": {
+        "mean_absolute_improvement": 0.0686584860086441,
+        "relative_improvement_percent": 27.976425170898438,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.05392030254006386,
+        "ci95_high": 0.08206494152545929
+      },
+      "85": {
+        "mean_absolute_improvement": 0.0794806182384491,
+        "relative_improvement_percent": 28.6946964263916,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.06238358095288277,
+        "ci95_high": 0.09476485848426819
+      },
+      "86": {
+        "mean_absolute_improvement": 0.08929240703582764,
+        "relative_improvement_percent": 28.172008514404297,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.07072602957487106,
+        "ci95_high": 0.10571876913309097
+      },
+      "87": {
+        "mean_absolute_improvement": 0.09566453099250793,
+        "relative_improvement_percent": 28.029373168945312,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.07539889216423035,
+        "ci95_high": 0.11314867436885834
+      },
+      "88": {
+        "mean_absolute_improvement": 0.10464461147785187,
+        "relative_improvement_percent": 28.172155380249023,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.08319760859012604,
+        "ci95_high": 0.12276274710893631
+      },
+      "89": {
+        "mean_absolute_improvement": 0.11153127253055573,
+        "relative_improvement_percent": 28.768238067626953,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.08821138739585876,
+        "ci95_high": 0.13095994293689728
+      },
+      "90": {
+        "mean_absolute_improvement": 0.11793264746665955,
+        "relative_improvement_percent": 28.95707893371582,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.092600978910923,
+        "ci95_high": 0.13897705078125
+      },
+      "91": {
+        "mean_absolute_improvement": 0.12708830833435059,
+        "relative_improvement_percent": 29.68979835510254,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.10078953951597214,
+        "ci95_high": 0.14857740700244904
+      },
+      "92": {
+        "mean_absolute_improvement": 0.13438841700553894,
+        "relative_improvement_percent": 30.509193420410156,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.10548195242881775,
+        "ci95_high": 0.1578102856874466
+      },
+      "93": {
+        "mean_absolute_improvement": 0.13969728350639343,
+        "relative_improvement_percent": 30.500154495239258,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.10926716774702072,
+        "ci95_high": 0.16429433226585388
+      },
+      "94": {
+        "mean_absolute_improvement": 0.14750905334949493,
+        "relative_improvement_percent": 30.906333923339844,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.11516665667295456,
+        "ci95_high": 0.17335671186447144
+      },
+      "95": {
+        "mean_absolute_improvement": 0.15334218740463257,
+        "relative_improvement_percent": 30.558259963989258,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.11955563724040985,
+        "ci95_high": 0.18041297793388367
+      },
+      "96": {
+        "mean_absolute_improvement": 0.15722638368606567,
+        "relative_improvement_percent": 30.359241485595703,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.12196171283721924,
+        "ci95_high": 0.18543162941932678
+      },
+      "97": {
+        "mean_absolute_improvement": 0.16058841347694397,
+        "relative_improvement_percent": 30.156763076782227,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.12439272552728653,
+        "ci95_high": 0.18924343585968018
+      },
+      "98": {
+        "mean_absolute_improvement": 0.1649005115032196,
+        "relative_improvement_percent": 29.83516502380371,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.12754882872104645,
+        "ci95_high": 0.19388015568256378
+      },
+      "99": {
+        "mean_absolute_improvement": 0.1669083833694458,
+        "relative_improvement_percent": 29.458290100097656,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.12895634770393372,
+        "ci95_high": 0.1962953507900238
+      },
+      "100": {
+        "mean_absolute_improvement": 0.16465261578559875,
+        "relative_improvement_percent": 28.141008377075195,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.12682068347930908,
+        "ci95_high": 0.1939074844121933
+      }
+    }
+  },
+  "extrapolation": {
+    "macro": {
+      "mean_absolute_improvement": 0.09613959491252899,
+      "relative_improvement_percent": 12.567846298217773,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.06713640689849854,
+      "ci95_high": 0.11751151084899902
+    },
+    "per_frequency": {
+      "101": {
+        "mean_absolute_improvement": 0.1617896556854248,
+        "relative_improvement_percent": 26.869741439819336,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.12370667606592178,
+        "ci95_high": 0.1909065991640091
+      },
+      "102": {
+        "mean_absolute_improvement": 0.15360762178897858,
+        "relative_improvement_percent": 24.697364807128906,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.11667116731405258,
+        "ci95_high": 0.1815752387046814
+      },
+      "103": {
+        "mean_absolute_improvement": 0.15127968788146973,
+        "relative_improvement_percent": 23.82236099243164,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.11447946727275848,
+        "ci95_high": 0.17894867062568665
+      },
+      "104": {
+        "mean_absolute_improvement": 0.14868080615997314,
+        "relative_improvement_percent": 22.793508529663086,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.11325882375240326,
+        "ci95_high": 0.17535682022571564
+      },
+      "105": {
+        "mean_absolute_improvement": 0.1427868902683258,
+        "relative_improvement_percent": 21.402294158935547,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.10748068988323212,
+        "ci95_high": 0.16900737583637238
+      },
+      "106": {
+        "mean_absolute_improvement": 0.13625405728816986,
+        "relative_improvement_percent": 19.89464569091797,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.10133934020996094,
+        "ci95_high": 0.16231484711170197
+      },
+      "107": {
+        "mean_absolute_improvement": 0.13156664371490479,
+        "relative_improvement_percent": 18.870885848999023,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.09705749899148941,
+        "ci95_high": 0.15730662643909454
+      },
+      "108": {
+        "mean_absolute_improvement": 0.12204600870609283,
+        "relative_improvement_percent": 17.037939071655273,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.08875716477632523,
+        "ci95_high": 0.14662550389766693
+      },
+      "109": {
+        "mean_absolute_improvement": 0.11719679832458496,
+        "relative_improvement_percent": 16.039188385009766,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.08492636680603027,
+        "ci95_high": 0.14101411402225494
+      },
+      "110": {
+        "mean_absolute_improvement": 0.10834281891584396,
+        "relative_improvement_percent": 14.5358247756958,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.07711914926767349,
+        "ci95_high": 0.1312902271747589
+      },
+      "111": {
+        "mean_absolute_improvement": 0.103108711540699,
+        "relative_improvement_percent": 13.599324226379395,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.07212205976247787,
+        "ci95_high": 0.1260252445936203
+      },
+      "112": {
+        "mean_absolute_improvement": 0.09841801226139069,
+        "relative_improvement_percent": 12.80030632019043,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.06801755726337433,
+        "ci95_high": 0.12114745378494263
+      },
+      "113": {
+        "mean_absolute_improvement": 0.09284232556819916,
+        "relative_improvement_percent": 11.916207313537598,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.0629541277885437,
+        "ci95_high": 0.11536689847707748
+      },
+      "114": {
+        "mean_absolute_improvement": 0.08701245486736298,
+        "relative_improvement_percent": 11.027472496032715,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.057526301592588425,
+        "ci95_high": 0.1093798279762268
+      },
+      "115": {
+        "mean_absolute_improvement": 0.08127306401729584,
+        "relative_improvement_percent": 10.170554161071777,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.052461426705121994,
+        "ci95_high": 0.10342855006456375
+      },
+      "116": {
+        "mean_absolute_improvement": 0.07711750268936157,
+        "relative_improvement_percent": 9.522476196289062,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.05124609172344208,
+        "ci95_high": 0.09781865030527115
+      },
+      "117": {
+        "mean_absolute_improvement": 0.07182101905345917,
+        "relative_improvement_percent": 8.765141487121582,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.04626123607158661,
+        "ci95_high": 0.0925179049372673
+      },
+      "118": {
+        "mean_absolute_improvement": 0.06763382256031036,
+        "relative_improvement_percent": 8.172374725341797,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.04244987666606903,
+        "ci95_high": 0.08821985870599747
+      },
+      "119": {
+        "mean_absolute_improvement": 0.06351540237665176,
+        "relative_improvement_percent": 7.6011857986450195,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.03867710754275322,
+        "ci95_high": 0.08390840142965317
+      },
+      "120": {
+        "mean_absolute_improvement": 0.05825860798358917,
+        "relative_improvement_percent": 6.903913497924805,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.03372453898191452,
+        "ci95_high": 0.07855093479156494
+      },
+      "121": {
+        "mean_absolute_improvement": 0.054328612983226776,
+        "relative_improvement_percent": 6.379578590393066,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.03002503328025341,
+        "ci95_high": 0.07446102797985077
+      },
+      "122": {
+        "mean_absolute_improvement": 0.048537783324718475,
+        "relative_improvement_percent": 5.640518665313721,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.02505764551460743,
+        "ci95_high": 0.06782285869121552
+      },
+      "123": {
+        "mean_absolute_improvement": 0.045406755059957504,
+        "relative_improvement_percent": 5.233962535858154,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.022199196740984917,
+        "ci95_high": 0.06449069082736969
+      },
+      "124": {
+        "mean_absolute_improvement": 0.04239841178059578,
+        "relative_improvement_percent": 4.838338851928711,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.019459811970591545,
+        "ci95_high": 0.06122560054063797
+      },
+      "125": {
+        "mean_absolute_improvement": 0.03826622664928436,
+        "relative_improvement_percent": 4.326144695281982,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.01597234420478344,
+        "ci95_high": 0.056614331901073456
+      }
+    }
+  }
+}

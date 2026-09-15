@@ -1,0 +1,406 @@
+label,seed,split,frequency_hz,summary_path,complex_rel_l2,amplitude_rel_l2,weighted_phase_mae_rad,phase_coherence
+Pole-residue,42,selection,81.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.05851186811923981,0.04126088321208954,0.03498360514640808,0.9935848712921143
+Pole-residue,42,selection,82.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.10270201414823532,0.07192713022232056,0.06648971140384674,0.9852690696716309
+Pole-residue,42,selection,83.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.13416366279125214,0.09513971954584122,0.09023483842611313,0.9786258339881897
+Pole-residue,42,selection,84.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.17677295207977295,0.12658700346946716,0.12310110777616501,0.969120442867279
+Pole-residue,42,selection,85.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.1973852664232254,0.14354738593101501,0.13881808519363403,0.9651111364364624
+Pole-residue,42,selection,86.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.22787120938301086,0.1663796752691269,0.1661178171634674,0.9556149244308472
+Pole-residue,42,selection,87.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.24569380283355713,0.1804250180721283,0.18295060098171234,0.9493414759635925
+Pole-residue,42,selection,88.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.26712822914123535,0.1963106095790863,0.2034691870212555,0.9403530359268188
+Pole-residue,42,selection,89.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.2765970528125763,0.20310309529304504,0.21313971281051636,0.9362867474555969
+Pole-residue,42,selection,90.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.2900412380695343,0.21202045679092407,0.2264341562986374,0.9307879209518433
+Pole-residue,42,selection,91.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.3015351891517639,0.21963810920715332,0.23885443806648254,0.9250876903533936
+Pole-residue,42,selection,92.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.3066112697124481,0.2222277671098709,0.24501293897628784,0.9213652610778809
+Pole-residue,42,selection,93.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.3188357949256897,0.2290511429309845,0.25852295756340027,0.9146548509597778
+Pole-residue,42,selection,94.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.33034560084342957,0.2363777756690979,0.27070558071136475,0.907740592956543
+Pole-residue,42,selection,95.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.34895938634872437,0.24753473699092865,0.29281556606292725,0.8959816098213196
+Pole-residue,42,selection,96.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.3612571656703949,0.2539820075035095,0.30729714035987854,0.8880693912506104
+Pole-residue,42,selection,97.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.37252944707870483,0.25981903076171875,0.32115089893341064,0.8801408410072327
+Pole-residue,42,selection,98.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.38839319348335266,0.2688750624656677,0.34039056301116943,0.8693585395812988
+Pole-residue,42,selection,99.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.4002470076084137,0.27485018968582153,0.3557654917240143,0.8600234985351562
+Pole-residue,42,selection,100.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.42065370082855225,0.28739234805107117,0.3814132809638977,0.8455173969268799
+Pole-residue,42,extrapolation,101.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.440202534198761,0.2986166477203369,0.4058386981487274,0.8314154148101807
+Pole-residue,42,extrapolation,102.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.46823281049728394,0.3166345953941345,0.43911945819854736,0.812992513179779
+Pole-residue,42,extrapolation,103.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.48347675800323486,0.32512372732162476,0.45893383026123047,0.8006700277328491
+Pole-residue,42,extrapolation,104.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.5033390522003174,0.3375624716281891,0.4848223030567169,0.7846307754516602
+Pole-residue,42,extrapolation,105.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.5238568782806396,0.35073626041412354,0.5112020969390869,0.768487811088562
+Pole-residue,42,extrapolation,106.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.5474405288696289,0.3659193217754364,0.5411436557769775,0.7502231597900391
+Pole-residue,42,extrapolation,107.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.5642189383506775,0.3764555752277374,0.5638706684112549,0.7356717586517334
+Pole-residue,42,extrapolation,108.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.5929155945777893,0.3966037631034851,0.5982319116592407,0.7148019075393677
+Pole-residue,42,extrapolation,109.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.6120160818099976,0.4106273949146271,0.6253560781478882,0.6969611644744873
+Pole-residue,42,extrapolation,110.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.6352749466896057,0.4271140694618225,0.6569757461547852,0.6768648624420166
+Pole-residue,42,extrapolation,111.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.6536486148834229,0.4401285648345947,0.6828504800796509,0.6597687005996704
+Pole-residue,42,extrapolation,112.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.6694447994232178,0.4509243965148926,0.7069077491760254,0.6435674428939819
+Pole-residue,42,extrapolation,113.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.6854796409606934,0.4629678726196289,0.7314601540565491,0.6269947290420532
+Pole-residue,42,extrapolation,114.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.7014586329460144,0.47476911544799805,0.7565377354621887,0.6097714900970459
+Pole-residue,42,extrapolation,115.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.7175074815750122,0.4863760471343994,0.7829878330230713,0.5917422771453857
+Pole-residue,42,extrapolation,116.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.7327577471733093,0.4990205764770508,0.8094674348831177,0.5734918117523193
+Pole-residue,42,extrapolation,117.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.7480691075325012,0.5104520320892334,0.8365298509597778,0.5547286868095398
+Pole-residue,42,extrapolation,118.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.7609928846359253,0.5201360583305359,0.8592193722724915,0.5385497808456421
+Pole-residue,42,extrapolation,119.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.7735957503318787,0.5298860669136047,0.8811697363853455,0.5228525400161743
+Pole-residue,42,extrapolation,120.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.7875889539718628,0.5409865379333496,0.9054614305496216,0.5055694580078125
+Pole-residue,42,extrapolation,121.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.7995272278785706,0.5505111813545227,0.9264235496520996,0.4901992082595825
+Pole-residue,42,extrapolation,122.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.8146970272064209,0.5639561414718628,0.9524019956588745,0.47143927216529846
+Pole-residue,42,extrapolation,123.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.8250827789306641,0.5729036331176758,0.9726991653442383,0.4562668204307556
+Pole-residue,42,extrapolation,124.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.8373026847839355,0.5831996202468872,0.9956823587417603,0.43955981731414795
+Pole-residue,42,extrapolation,125.0,experiments/runs/m3_ocean_dense_poles_seed42/summary.json,0.8501741886138916,0.593955397605896,1.0199028253555298,0.4218990206718445
+Pole-residue,43,selection,81.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.05793614313006401,0.04045853763818741,0.03516657277941704,0.9937053322792053
+Pole-residue,43,selection,82.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.10183165967464447,0.0710960328578949,0.06629791110754013,0.9857778549194336
+Pole-residue,43,selection,83.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.13348428905010223,0.09486452490091324,0.09030395746231079,0.9789406061172485
+Pole-residue,43,selection,84.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.17552787065505981,0.12662151455879211,0.12264613062143326,0.9694204926490784
+Pole-residue,43,selection,85.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.19616615772247314,0.14396443963050842,0.13825328648090363,0.9652621746063232
+Pole-residue,43,selection,86.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.22593358159065247,0.16676121950149536,0.1647760570049286,0.955833911895752
+Pole-residue,43,selection,87.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.24433787167072296,0.1811911165714264,0.18208207190036774,0.9493081569671631
+Pole-residue,43,selection,88.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.26551854610443115,0.19719532132148743,0.20262953639030457,0.9402409791946411
+Pole-residue,43,selection,89.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.2751553952693939,0.2043040543794632,0.2120322734117508,0.9363589882850647
+Pole-residue,43,selection,90.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.28865763545036316,0.2131372094154358,0.2260611355304718,0.9303625226020813
+Pole-residue,43,selection,91.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.30093052983283997,0.22090333700180054,0.23957422375679016,0.9242470264434814
+Pole-residue,43,selection,92.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.3062784969806671,0.2232723832130432,0.24629133939743042,0.9202263355255127
+Pole-residue,43,selection,93.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.3186817765235901,0.22972960770130157,0.2600158452987671,0.9132587313652039
+Pole-residue,43,selection,94.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.33002763986587524,0.23641294240951538,0.27200978994369507,0.9062842726707458
+Pole-residue,43,selection,95.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.3484085202217102,0.24711814522743225,0.2939131259918213,0.8947712779045105
+Pole-residue,43,selection,96.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.3604329228401184,0.2528737485408783,0.30789944529533386,0.8871760368347168
+Pole-residue,43,selection,97.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.3717653155326843,0.2583382725715637,0.32109302282333374,0.8797300457954407
+Pole-residue,43,selection,98.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.3876076936721802,0.26719558238983154,0.3400129973888397,0.8689611554145813
+Pole-residue,43,selection,99.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.3993953466415405,0.27271777391433716,0.35481762886047363,0.8598592281341553
+Pole-residue,43,selection,100.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.4205746650695801,0.2856261730194092,0.3802127242088318,0.845504641532898
+Pole-residue,43,extrapolation,101.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.44055894017219543,0.29708829522132874,0.4040776789188385,0.8318146467208862
+Pole-residue,43,extrapolation,102.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.4687272608280182,0.31512004137039185,0.4365059435367584,0.8142442107200623
+Pole-residue,43,extrapolation,103.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.4842883050441742,0.32381218671798706,0.4556216597557068,0.8024104833602905
+Pole-residue,43,extrapolation,104.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.5042498111724854,0.3359476327896118,0.4811739921569824,0.7867610454559326
+Pole-residue,43,extrapolation,105.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.5254480838775635,0.3495633006095886,0.5079768896102905,0.7704880237579346
+Pole-residue,43,extrapolation,106.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.5506076812744141,0.36660003662109375,0.5384408235549927,0.7518416047096252
+Pole-residue,43,extrapolation,107.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.5683676600456238,0.37811189889907837,0.5615218877792358,0.7368884682655334
+Pole-residue,43,extrapolation,108.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.5979145169258118,0.3986818194389343,0.5972989797592163,0.7152835726737976
+Pole-residue,43,extrapolation,109.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.6180397272109985,0.414117693901062,0.6252092123031616,0.6969659924507141
+Pole-residue,43,extrapolation,110.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.6425228118896484,0.4315752387046814,0.6576727628707886,0.6764613389968872
+Pole-residue,43,extrapolation,111.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.6616451740264893,0.44529715180397034,0.6837892532348633,0.6588522791862488
+Pole-residue,43,extrapolation,112.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.6778666973114014,0.45658981800079346,0.7076519131660461,0.6424055099487305
+Pole-residue,43,extrapolation,113.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.6945049166679382,0.46956175565719604,0.7326278686523438,0.625190019607544
+Pole-residue,43,extrapolation,114.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.7109827995300293,0.48227357864379883,0.7583103179931641,0.6076900362968445
+Pole-residue,43,extrapolation,115.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.7276155948638916,0.49505218863487244,0.7852352857589722,0.5892831087112427
+Pole-residue,43,extrapolation,116.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.7430489659309387,0.5081424117088318,0.8119407892227173,0.5705217719078064
+Pole-residue,43,extrapolation,117.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.7582732439041138,0.5202349424362183,0.8389465808868408,0.5517190098762512
+Pole-residue,43,extrapolation,118.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.7711378931999207,0.5303345918655396,0.8623052835464478,0.5351049304008484
+Pole-residue,43,extrapolation,119.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.7837697267532349,0.5403469800949097,0.8857080936431885,0.5183364748954773
+Pole-residue,43,extrapolation,120.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.7972416877746582,0.5512365102767944,0.9114618301391602,0.4997566342353821
+Pole-residue,43,extrapolation,121.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.8093597292900085,0.5606516599655151,0.9350797533988953,0.4826316237449646
+Pole-residue,43,extrapolation,122.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.8243485689163208,0.5736804008483887,0.9639893770217896,0.46209144592285156
+Pole-residue,43,extrapolation,123.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.8350090384483337,0.5824859738349915,0.9873493909835815,0.4449385106563568
+Pole-residue,43,extrapolation,124.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.847017765045166,0.5926153659820557,1.012702465057373,0.42622068524360657
+Pole-residue,43,extrapolation,125.0,experiments/runs/m3_ocean_dense_poles_seed43/summary.json,0.8594076633453369,0.6031790971755981,1.0393447875976562,0.40638089179992676
+Pole-residue,44,selection,81.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.0584942102432251,0.041073717176914215,0.035517752170562744,0.993674635887146
+Pole-residue,44,selection,82.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.10317593812942505,0.07215411961078644,0.06754308938980103,0.9852885007858276
+Pole-residue,44,selection,83.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.13534602522850037,0.09593846648931503,0.09193627536296844,0.9782856106758118
+Pole-residue,44,selection,84.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.17797023057937622,0.12763410806655884,0.12495886534452438,0.9686524868011475
+Pole-residue,44,selection,85.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.19896811246871948,0.1449751853942871,0.14118418097496033,0.9643469452857971
+Pole-residue,44,selection,86.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.22918109595775604,0.16802333295345306,0.1680087447166443,0.955001711845398
+Pole-residue,44,selection,87.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.24687768518924713,0.1821719855070114,0.18428492546081543,0.9490166902542114
+Pole-residue,44,selection,88.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.26776033639907837,0.19792449474334717,0.2041938453912735,0.9404534101486206
+Pole-residue,44,selection,89.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.2767205834388733,0.20467346906661987,0.21318267285823822,0.9366103410720825
+Pole-residue,44,selection,90.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.28930434584617615,0.21329616010189056,0.2257692515850067,0.9311929941177368
+Pole-residue,44,selection,91.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.3004307150840759,0.2208373248577118,0.23763340711593628,0.9255398511886597
+Pole-residue,44,selection,92.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.30539998412132263,0.22335517406463623,0.24324865639209747,0.9219340682029724
+Pole-residue,44,selection,93.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.3174551725387573,0.22982928156852722,0.25620609521865845,0.9153455495834351
+Pole-residue,44,selection,94.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.3289327621459961,0.23640559613704681,0.26864075660705566,0.9081459641456604
+Pole-residue,44,selection,95.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.3480137884616852,0.24748112261295319,0.29136162996292114,0.8960814476013184
+Pole-residue,44,selection,96.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.3602900505065918,0.2535912096500397,0.3060426712036133,0.8879830241203308
+Pole-residue,44,selection,97.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.37147635221481323,0.2590803802013397,0.32008373737335205,0.8798533082008362
+Pole-residue,44,selection,98.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.3874132037162781,0.2679561972618103,0.3399925231933594,0.8688126802444458
+Pole-residue,44,selection,99.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.39940911531448364,0.27384138107299805,0.35548514127731323,0.8594347238540649
+Pole-residue,44,selection,100.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.42010921239852905,0.28659892082214355,0.38117483258247375,0.8447626233100891
+Pole-residue,44,extrapolation,101.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.44024723768234253,0.2983757257461548,0.40578609704971313,0.8305656909942627
+Pole-residue,44,extrapolation,102.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.4680957794189453,0.3164321184158325,0.43847596645355225,0.8126760125160217
+Pole-residue,44,extrapolation,103.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.48349276185035706,0.3252548575401306,0.4588286280632019,0.7999327778816223
+Pole-residue,44,extrapolation,104.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.5032521486282349,0.33745843172073364,0.48512041568756104,0.7834209203720093
+Pole-residue,44,extrapolation,105.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.5238052606582642,0.35064688324928284,0.5122818350791931,0.766616940498352
+Pole-residue,44,extrapolation,106.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.5478235483169556,0.36625221371650696,0.5433972477912903,0.7475726008415222
+Pole-residue,44,extrapolation,107.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.5642947554588318,0.3769945204257965,0.5666012763977051,0.7325292825698853
+Pole-residue,44,extrapolation,108.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.5919890403747559,0.39747440814971924,0.6014434099197388,0.7112927436828613
+Pole-residue,44,extrapolation,109.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.6104248762130737,0.4117985963821411,0.6288810968399048,0.6928242444992065
+Pole-residue,44,extrapolation,110.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.6332249641418457,0.42889899015426636,0.6613540053367615,0.6718884706497192
+Pole-residue,44,extrapolation,111.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.6499500274658203,0.440973162651062,0.6884119510650635,0.6537241339683533
+Pole-residue,44,extrapolation,112.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.6640515327453613,0.4511685073375702,0.7122316956520081,0.6372829675674438
+Pole-residue,44,extrapolation,113.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.6788675785064697,0.4628690481185913,0.736688494682312,0.6204494833946228
+Pole-residue,44,extrapolation,114.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.6936763525009155,0.47444382309913635,0.760879397392273,0.6037744879722595
+Pole-residue,44,extrapolation,115.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.7083626389503479,0.48569172620773315,0.7856082320213318,0.5866299867630005
+Pole-residue,44,extrapolation,116.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.722382128238678,0.4971346855163574,0.8111706972122192,0.5688539743423462
+Pole-residue,44,extrapolation,117.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.7363756895065308,0.508175253868103,0.8366875052452087,0.5512051582336426
+Pole-residue,44,extrapolation,118.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.7477402687072754,0.5174329280853271,0.8576638698577881,0.5361155867576599
+Pole-residue,44,extrapolation,119.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.7588841915130615,0.5268563032150269,0.8781996965408325,0.5211508274078369
+Pole-residue,44,extrapolation,120.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.7719407081604004,0.5380834937095642,0.9021493196487427,0.5040495991706848
+Pole-residue,44,extrapolation,121.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.7829327583312988,0.5477436184883118,0.922189474105835,0.48926714062690735
+Pole-residue,44,extrapolation,122.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.7969006896018982,0.5613112449645996,0.9470285773277283,0.4714541733264923
+Pole-residue,44,extrapolation,123.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.8063101768493652,0.5706573724746704,0.9656327366828918,0.4575173258781433
+Pole-residue,44,extrapolation,124.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.8173871636390686,0.5813533067703247,0.9870656132698059,0.4419488310813904
+Pole-residue,44,extrapolation,125.0,experiments/runs/m3_ocean_dense_poles_seed44/summary.json,0.8292219042778015,0.5925548076629639,1.0094733238220215,0.42587876319885254
+Stable recurrence,42,selection,81.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.0758502408862114,0.05892292037606239,0.04649218171834946,0.9936811923980713
+Stable recurrence,42,selection,82.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.13852933049201965,0.1070978045463562,0.0890273004770279,0.9834390878677368
+Stable recurrence,42,selection,83.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.18960708379745483,0.14669321477413177,0.126709446310997,0.9709484577178955
+Stable recurrence,42,selection,84.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.24587202072143555,0.18980608880519867,0.17183133959770203,0.954192042350769
+Stable recurrence,42,selection,85.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.2775598168373108,0.21599718928337097,0.198553204536438,0.943113386631012
+Stable recurrence,42,selection,86.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.31765037775039673,0.2487429976463318,0.23480424284934998,0.9263599514961243
+Stable recurrence,42,selection,87.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.34226730465888977,0.27114468812942505,0.25924962759017944,0.9133139252662659
+Stable recurrence,42,selection,88.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.3726651668548584,0.2981320023536682,0.28910356760025024,0.8976231813430786
+Stable recurrence,42,selection,89.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.3891857862472534,0.31477949023246765,0.3076181411743164,0.8864755630493164
+Stable recurrence,42,selection,90.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.4090401530265808,0.33332106471061707,0.33034205436706543,0.8731563687324524
+Stable recurrence,42,selection,91.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.43000495433807373,0.35252290964126587,0.3555864095687866,0.8580100536346436
+Stable recurrence,42,selection,92.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.44259750843048096,0.36476922035217285,0.37448084354400635,0.8453706502914429
+Stable recurrence,42,selection,93.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.4602210521697998,0.3791320323944092,0.40040233731269836,0.8294936418533325
+Stable recurrence,42,selection,94.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.4795466661453247,0.39479678869247437,0.4298422336578369,0.8113749027252197
+Stable recurrence,42,selection,95.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.5040168762207031,0.41372376680374146,0.46680402755737305,0.7889898419380188
+Stable recurrence,42,selection,96.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.5199992656707764,0.4252409338951111,0.4955219328403473,0.7709493637084961
+Stable recurrence,42,selection,97.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.5345284938812256,0.4355742931365967,0.5231660604476929,0.7527639865875244
+Stable recurrence,42,selection,98.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.554542064666748,0.44953683018684387,0.5571042895317078,0.7314206957817078
+Stable recurrence,42,selection,99.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.5682565569877625,0.45799824595451355,0.585312008857727,0.7125768661499023
+Stable recurrence,42,selection,100.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.5865383148193359,0.47046881914138794,0.6189572811126709,0.6903461813926697
+Stable recurrence,42,extrapolation,101.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.6034082174301147,0.4803208112716675,0.6514970660209656,0.6687790751457214
+Stable recurrence,42,extrapolation,102.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.6229442358016968,0.4926268458366394,0.6868609189987183,0.6453035473823547
+Stable recurrence,42,extrapolation,103.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.6357914209365845,0.49926406145095825,0.7148237228393555,0.6259657144546509
+Stable recurrence,42,extrapolation,104.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.652902364730835,0.5088377594947815,0.748507559299469,0.6032296419143677
+Stable recurrence,42,extrapolation,105.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.6675858497619629,0.5169838070869446,0.778919517993927,0.5823387503623962
+Stable recurrence,42,extrapolation,106.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.6851502060890198,0.5273324251174927,0.8116403818130493,0.5594596862792969
+Stable recurrence,42,extrapolation,107.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.6972640752792358,0.5329504013061523,0.8378496170043945,0.540876030921936
+Stable recurrence,42,extrapolation,108.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.7164469957351685,0.5440805554389954,0.8726553320884705,0.5172320008277893
+Stable recurrence,42,extrapolation,109.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.7308793663978577,0.5520157814025879,0.9013041853904724,0.49709704518318176
+Stable recurrence,42,extrapolation,110.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.7454834580421448,0.5607919692993164,0.9295598268508911,0.47755980491638184
+Stable recurrence,42,extrapolation,111.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.7581605911254883,0.5675225257873535,0.9552930593490601,0.45950767397880554
+Stable recurrence,42,extrapolation,112.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.7687532901763916,0.5724957585334778,0.9779437780380249,0.44327282905578613
+Stable recurrence,42,extrapolation,113.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.7789087891578674,0.5779209136962891,0.998929500579834,0.4280127286911011
+Stable recurrence,42,extrapolation,114.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.7888045310974121,0.5833309888839722,1.0188236236572266,0.4135670065879822
+Stable recurrence,42,extrapolation,115.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.7987568974494934,0.5885300636291504,1.0390937328338623,0.3987077474594116
+Stable recurrence,42,extrapolation,116.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.8094202280044556,0.5949998497962952,1.0592882633209229,0.38395053148269653
+Stable recurrence,42,extrapolation,117.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.8188890218734741,0.6000145673751831,1.0778944492340088,0.37031859159469604
+Stable recurrence,42,extrapolation,118.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.8269845247268677,0.6036500334739685,1.094038486480713,0.3583443760871887
+Stable recurrence,42,extrapolation,119.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.834844708442688,0.6072214841842651,1.109142541885376,0.3471778631210327
+Stable recurrence,42,extrapolation,120.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.842982292175293,0.6116898059844971,1.1239211559295654,0.33626413345336914
+Stable recurrence,42,extrapolation,121.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.8506120443344116,0.6154016256332397,1.1373718976974487,0.3263181447982788
+Stable recurrence,42,extrapolation,122.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.8592503070831299,0.6215938329696655,1.1518735885620117,0.3157869875431061
+Stable recurrence,42,extrapolation,123.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.866100549697876,0.6250072121620178,1.1638967990875244,0.3069002628326416
+Stable recurrence,42,extrapolation,124.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.8747416138648987,0.6302200555801392,1.1783654689788818,0.2963728904724121
+Stable recurrence,42,extrapolation,125.0,experiments/runs/m3_ocean_dense_recurrence_seed42/summary.json,0.8827787041664124,0.6359041929244995,1.1916242837905884,0.2864247262477875
+Stable recurrence,43,selection,81.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.07547557353973389,0.05888308584690094,0.04592106491327286,0.9937067031860352
+Stable recurrence,43,selection,82.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.13794618844985962,0.10724504292011261,0.0878664031624794,0.9835925698280334
+Stable recurrence,43,selection,83.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.1888630986213684,0.1470269411802292,0.12515407800674438,0.9712792634963989
+Stable recurrence,43,selection,84.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.24490611255168915,0.19005703926086426,0.17004144191741943,0.954729437828064
+Stable recurrence,43,selection,85.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.2764117121696472,0.2160293459892273,0.19681480526924133,0.9437636137008667
+Stable recurrence,43,selection,86.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.31640225648880005,0.24854326248168945,0.23324614763259888,0.9271484017372131
+Stable recurrence,43,selection,87.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.3406972289085388,0.2707098722457886,0.2576332688331604,0.9141824245452881
+Stable recurrence,43,selection,88.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.37089163064956665,0.29747337102890015,0.2876226603984833,0.8983349800109863
+Stable recurrence,43,selection,89.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.38706398010253906,0.31388652324676514,0.3063232898712158,0.8869854211807251
+Stable recurrence,43,selection,90.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.40658897161483765,0.3321995139122009,0.3293759822845459,0.8735190629959106
+Stable recurrence,43,selection,91.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.4275757968425751,0.3513263463973999,0.3551824390888214,0.8579747080802917
+Stable recurrence,43,selection,92.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.44004616141319275,0.3635709285736084,0.3740937411785126,0.8451323509216309
+Stable recurrence,43,selection,93.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.4575749933719635,0.37795430421829224,0.4002990126609802,0.8290141820907593
+Stable recurrence,43,selection,94.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.4767417311668396,0.3936195969581604,0.4295971989631653,0.8108826875686646
+Stable recurrence,43,selection,95.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.5013502836227417,0.4125998616218567,0.46685150265693665,0.7882364988327026
+Stable recurrence,43,selection,96.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.5174427032470703,0.4242115616798401,0.4956997036933899,0.7700655460357666
+Stable recurrence,43,selection,97.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.5320842862129211,0.4345998167991638,0.5233969688415527,0.7519129514694214
+Stable recurrence,43,selection,98.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.5523378849029541,0.44861406087875366,0.5570672750473022,0.7307333946228027
+Stable recurrence,43,selection,99.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.5662060379981995,0.45712101459503174,0.5852898955345154,0.71202152967453
+Stable recurrence,43,selection,100.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.5847078561782837,0.46964895725250244,0.6192424297332764,0.689788818359375
+Stable recurrence,43,extrapolation,101.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.6016892194747925,0.47962212562561035,0.6515452861785889,0.6683768033981323
+Stable recurrence,43,extrapolation,102.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.6215198040008545,0.4920215606689453,0.6871503591537476,0.6446828842163086
+Stable recurrence,43,extrapolation,103.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.6345908641815186,0.49867692589759827,0.7155385613441467,0.6251013278961182
+Stable recurrence,43,extrapolation,104.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.6518396735191345,0.5082765817642212,0.7496187686920166,0.602179765701294
+Stable recurrence,43,extrapolation,105.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.6667492389678955,0.5163635015487671,0.7805358171463013,0.581089973449707
+Stable recurrence,43,extrapolation,106.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.6845071911811829,0.5266965627670288,0.8136619329452515,0.5580031871795654
+Stable recurrence,43,extrapolation,107.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.6967843770980835,0.5322753190994263,0.8402532339096069,0.5391619205474854
+Stable recurrence,43,extrapolation,108.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.7156292200088501,0.5431182384490967,0.8748067021369934,0.5153698325157166
+Stable recurrence,43,extrapolation,109.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.7298448085784912,0.5509342551231384,0.9029893279075623,0.4954024851322174
+Stable recurrence,43,extrapolation,110.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.7443675994873047,0.5598205924034119,0.9317300319671631,0.47535189986228943
+Stable recurrence,43,extrapolation,111.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.7572470307350159,0.5666071176528931,0.9575182199478149,0.4570947289466858
+Stable recurrence,43,extrapolation,112.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.7679348587989807,0.5715683102607727,0.9798863530158997,0.4408935308456421
+Stable recurrence,43,extrapolation,113.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.7781664133071899,0.5769212245941162,1.0004197359085083,0.42588889598846436
+Stable recurrence,43,extrapolation,114.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.7880569696426392,0.5822858810424805,1.0196342468261719,0.41200125217437744
+Stable recurrence,43,extrapolation,115.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.7981444001197815,0.5874791145324707,1.0395989418029785,0.39756524562835693
+Stable recurrence,43,extrapolation,116.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8088389039039612,0.5940297245979309,1.0589311122894287,0.38349270820617676
+Stable recurrence,43,extrapolation,117.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8183441758155823,0.5991188883781433,1.0771054029464722,0.37030935287475586
+Stable recurrence,43,extrapolation,118.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8265342712402344,0.6028128862380981,1.0929664373397827,0.3586752414703369
+Stable recurrence,43,extrapolation,119.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8345471620559692,0.606407642364502,1.1081271171569824,0.3475642502307892
+Stable recurrence,43,extrapolation,120.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8428661823272705,0.6109540462493896,1.1230558156967163,0.3367244005203247
+Stable recurrence,43,extrapolation,121.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8506913185119629,0.6146892309188843,1.1367313861846924,0.32661446928977966
+Stable recurrence,43,extrapolation,122.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8596518039703369,0.6208522915840149,1.151686429977417,0.3155190348625183
+Stable recurrence,43,extrapolation,123.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.866716742515564,0.62419593334198,1.164026141166687,0.3064992129802704
+Stable recurrence,43,extrapolation,124.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8755465149879456,0.6294058561325073,1.178209662437439,0.296195387840271
+Stable recurrence,43,extrapolation,125.0,experiments/runs/m3_ocean_dense_recurrence_seed43/summary.json,0.8837717771530151,0.6350200772285461,1.1913108825683594,0.28655487298965454
+Stable recurrence,44,selection,81.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.07582779228687286,0.05924656614661217,0.04605783149600029,0.9937089681625366
+Stable recurrence,44,selection,82.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.1384466290473938,0.10785374045372009,0.08810599148273468,0.9835594892501831
+Stable recurrence,44,selection,83.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.1894432008266449,0.14778926968574524,0.1255291998386383,0.9712214469909668
+Stable recurrence,44,selection,84.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.2454683631658554,0.19087621569633484,0.17052066326141357,0.9546523094177246
+Stable recurrence,44,selection,85.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.27698981761932373,0.2168876975774765,0.19731862843036652,0.9436542987823486
+Stable recurrence,44,selection,86.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.3168104887008667,0.24934449791908264,0.23364707827568054,0.9269734621047974
+Stable recurrence,44,selection,87.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.34093841910362244,0.2712695598602295,0.25799569487571716,0.9139484167098999
+Stable recurrence,44,selection,88.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.3707841634750366,0.29773375391960144,0.287643164396286,0.8981983661651611
+Stable recurrence,44,selection,89.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.386817067861557,0.31390780210494995,0.30609357357025146,0.8868367671966553
+Stable recurrence,44,selection,90.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.4061720669269562,0.33195286989212036,0.3288118839263916,0.8733187913894653
+Stable recurrence,44,selection,91.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.42658063769340515,0.3508045971393585,0.35378047823905945,0.8581836819648743
+Stable recurrence,44,selection,92.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.4388113021850586,0.3628164529800415,0.3726534843444824,0.8455232381820679
+Stable recurrence,44,selection,93.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.4562685489654541,0.3770374655723572,0.39904138445854187,0.8296002149581909
+Stable recurrence,44,selection,94.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.4755447804927826,0.39256876707077026,0.4286474585533142,0.8115925192832947
+Stable recurrence,44,selection,95.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.5000410676002502,0.41151684522628784,0.4656537175178528,0.7891606092453003
+Stable recurrence,44,selection,96.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.5162172913551331,0.4230807423591614,0.49445590376853943,0.7711422443389893
+Stable recurrence,44,selection,97.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.53092360496521,0.4333845376968384,0.5221652984619141,0.7530890703201294
+Stable recurrence,44,selection,98.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.551235556602478,0.4474406838417053,0.555970311164856,0.7319658994674683
+Stable recurrence,44,selection,99.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.5653140544891357,0.4559985399246216,0.5844093561172485,0.7132155895233154
+Stable recurrence,44,selection,100.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.5840493440628052,0.4686327278614044,0.6182360053062439,0.6911511421203613
+Stable recurrence,44,extrapolation,101.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.6012802124023438,0.47867056727409363,0.6510803699493408,0.6695976257324219
+Stable recurrence,44,extrapolation,102.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.6214147210121155,0.49127790331840515,0.6864181160926819,0.6462055444717407
+Stable recurrence,44,extrapolation,103.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.6347146034240723,0.4980807900428772,0.7147411108016968,0.626698911190033
+Stable recurrence,44,extrapolation,104.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.6521413326263428,0.5079243779182434,0.7483713626861572,0.6040165424346924
+Stable recurrence,44,extrapolation,105.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.6671358942985535,0.5161255598068237,0.7789899110794067,0.5829705595970154
+Stable recurrence,44,extrapolation,106.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.6849765181541443,0.5265825986862183,0.812171220779419,0.559689998626709
+Stable recurrence,44,extrapolation,107.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.6975328922271729,0.5322860479354858,0.8391866683959961,0.5404947996139526
+Stable recurrence,44,extrapolation,108.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.7168809175491333,0.5437024235725403,0.8739464282989502,0.5165872573852539
+Stable recurrence,44,extrapolation,109.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.7313469648361206,0.5517405271530151,0.9027225971221924,0.4962235391139984
+Stable recurrence,44,extrapolation,110.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.7462000846862793,0.5606276988983154,0.9321831464767456,0.4757445156574249
+Stable recurrence,44,extrapolation,111.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.759162425994873,0.5674147605895996,0.9580879211425781,0.4574044942855835
+Stable recurrence,44,extrapolation,112.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.7699289321899414,0.5723866820335388,0.9803016185760498,0.44126570224761963
+Stable recurrence,44,extrapolation,113.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.780303955078125,0.5777227878570557,1.001029133796692,0.42610493302345276
+Stable recurrence,44,extrapolation,114.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.7902936339378357,0.5830577611923218,1.020669937133789,0.4118303656578064
+Stable recurrence,44,extrapolation,115.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8004035949707031,0.5882046222686768,1.0411436557769775,0.39687931537628174
+Stable recurrence,44,extrapolation,116.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.811282217502594,0.5946280360221863,1.0614008903503418,0.3820870518684387
+Stable recurrence,44,extrapolation,117.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8209478855133057,0.5997458696365356,1.0801324844360352,0.3684021830558777
+Stable recurrence,44,extrapolation,118.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.829253613948822,0.6033816337585449,1.0971747636795044,0.3558880686759949
+Stable recurrence,44,extrapolation,119.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8374041318893433,0.6069468259811401,1.1133654117584229,0.343995064496994
+Stable recurrence,44,extrapolation,120.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8456987142562866,0.6114566326141357,1.1291143894195557,0.33238786458969116
+Stable recurrence,44,extrapolation,121.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8535021543502808,0.6150972247123718,1.1435093879699707,0.321668803691864
+Stable recurrence,44,extrapolation,122.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8626574277877808,0.6212736368179321,1.1587843894958496,0.3103875517845154
+Stable recurrence,44,extrapolation,123.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8698049783706665,0.6245825290679932,1.1716115474700928,0.3009222745895386
+Stable recurrence,44,extrapolation,124.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8786146640777588,0.6297099590301514,1.1864854097366333,0.2901454567909241
+Stable recurrence,44,extrapolation,125.0,experiments/runs/m3_ocean_dense_recurrence_seed44/summary.json,0.8870519399642944,0.6354187726974487,1.2000070810317993,0.2800840735435486
+Image U-Net,42,selection,81.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.07802549749612808,0.055670417845249176,0.04806574434041977,0.9945397973060608
+Image U-Net,42,selection,82.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.10492517054080963,0.07223627716302872,0.07154355943202972,0.9898018836975098
+Image U-Net,42,selection,83.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.12586720287799835,0.08395342528820038,0.09067381173372269,0.9849205613136292
+Image U-Net,42,selection,84.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.16706489026546478,0.10760461539030075,0.12455685436725616,0.9762734174728394
+Image U-Net,42,selection,85.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.18927499651908875,0.11696542799472809,0.1472804844379425,0.9718320369720459
+Image U-Net,42,selection,86.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.2297849953174591,0.13883450627326965,0.1853969395160675,0.9590238332748413
+Image U-Net,42,selection,87.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.2489321231842041,0.1512497216463089,0.20080208778381348,0.9543013572692871
+Image U-Net,42,selection,88.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.2649317681789398,0.1624116599559784,0.2165859341621399,0.9481021761894226
+Image U-Net,42,selection,89.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.2772349715232849,0.16825583577156067,0.22735914587974548,0.9446401000022888
+Image U-Net,42,selection,90.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.2840891480445862,0.17660680413246155,0.23008248209953308,0.9419665336608887
+Image U-Net,42,selection,91.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.294853150844574,0.18773165345191956,0.2393471896648407,0.9368311166763306
+Image U-Net,42,selection,92.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.3052803874015808,0.20375177264213562,0.24776823818683624,0.9318807125091553
+Image U-Net,42,selection,93.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.34329092502593994,0.24740953743457794,0.3033108711242676,0.8943828344345093
+Image U-Net,42,selection,94.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.3745466470718384,0.28636741638183594,0.36501550674438477,0.8517638444900513
+Image U-Net,42,selection,95.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.41155433654785156,0.3231496214866638,0.4380125105381012,0.8018357753753662
+Image U-Net,42,selection,96.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.4408990144729614,0.35078850388526917,0.48847508430480957,0.7679754495620728
+Image U-Net,42,selection,97.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.4495813846588135,0.3629967272281647,0.4710366427898407,0.7818350791931152
+Image U-Net,42,selection,98.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.4437549114227295,0.3240147829055786,0.44822362065315247,0.8049999475479126
+Image U-Net,42,selection,99.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.4080781042575836,0.27651286125183105,0.3629419505596161,0.8696812391281128
+Image U-Net,42,selection,100.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.3895760178565979,0.26202887296676636,0.3315778076648712,0.8871359825134277
+Image U-Net,42,extrapolation,101.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,0.9723881483078003,0.2752937078475952,1.2583765983581543,0.2396232634782791
+Image U-Net,42,extrapolation,102.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2144317626953125,0.3215956687927246,1.5286439657211304,0.03512558341026306
+Image U-Net,42,extrapolation,103.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2353148460388184,0.38378220796585083,1.5468313694000244,0.027888089418411255
+Image U-Net,42,extrapolation,104.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2084848880767822,0.4241469204425812,1.5616167783737183,0.010744631290435791
+Image U-Net,42,extrapolation,105.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.1477655172348022,0.45137202739715576,1.358731985092163,0.17312410473823547
+Image U-Net,42,extrapolation,106.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2120163440704346,0.46916013956069946,1.5140135288238525,0.04426184669137001
+Image U-Net,42,extrapolation,107.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2587456703186035,0.47740036249160767,1.5263664722442627,0.03855141997337341
+Image U-Net,42,extrapolation,108.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.3339446783065796,0.48414716124534607,1.6579781770706177,-0.07152993232011795
+Image U-Net,42,extrapolation,109.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.3718814849853516,0.4893825650215149,1.7139511108398438,-0.11418232321739197
+Image U-Net,42,extrapolation,110.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.3677139282226562,0.49388381838798523,1.6790180206298828,-0.08667339384555817
+Image U-Net,42,extrapolation,111.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.352118730545044,0.4980652630329132,1.6132166385650635,-0.03470296412706375
+Image U-Net,42,extrapolation,112.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.347663402557373,0.5012247562408447,1.6070290803909302,-0.026885302737355232
+Image U-Net,42,extrapolation,113.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.3508546352386475,0.5049781203269958,1.6271153688430786,-0.04309156537055969
+Image U-Net,42,extrapolation,114.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.3487794399261475,0.5083410143852234,1.630005121231079,-0.04492660611867905
+Image U-Net,42,extrapolation,115.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.3399937152862549,0.5122449398040771,1.6235729455947876,-0.041134562343358994
+Image U-Net,42,extrapolation,116.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.3188161849975586,0.5173600912094116,1.5835570096969604,-0.010011298581957817
+Image U-Net,42,extrapolation,117.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2956123352050781,0.5204294919967651,1.5570849180221558,0.010464943945407867
+Image U-Net,42,extrapolation,118.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2827332019805908,0.5229002237319946,1.5491726398468018,0.016794439405202866
+Image U-Net,42,extrapolation,119.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2800929546356201,0.5254569053649902,1.5635223388671875,0.005135641433298588
+Image U-Net,42,extrapolation,120.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2717504501342773,0.5287090539932251,1.5653576850891113,0.0036846715956926346
+Image U-Net,42,extrapolation,121.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2536602020263672,0.5313395261764526,1.547477126121521,0.01824915036559105
+Image U-Net,42,extrapolation,122.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.2326149940490723,0.5361963510513306,1.5299702882766724,0.03167104721069336
+Image U-Net,42,extrapolation,123.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.227574348449707,0.5386558771133423,1.5294020175933838,0.032891709357500076
+Image U-Net,42,extrapolation,124.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.23167884349823,0.542628824710846,1.543247938156128,0.022142451256513596
+Image U-Net,42,extrapolation,125.0,experiments/runs/m3_ocean_dense_unet_seed42/summary.json,1.235105037689209,0.5468525886535645,1.5527186393737793,0.01442931592464447
+Image U-Net,43,selection,81.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.07918189465999603,0.056627120822668076,0.05044178292155266,0.9942729473114014
+Image U-Net,43,selection,82.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.0994521826505661,0.06827075034379959,0.068846195936203,0.989880383014679
+Image U-Net,43,selection,83.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.11691616475582123,0.07753023505210876,0.08528677374124527,0.9854693412780762
+Image U-Net,43,selection,84.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.15175268054008484,0.10032010823488235,0.11177344620227814,0.9777910709381104
+Image U-Net,43,selection,85.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.17016199231147766,0.1103256344795227,0.12797987461090088,0.9747701287269592
+Image U-Net,43,selection,86.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.23103047907352448,0.13536371290683746,0.188987135887146,0.9598721265792847
+Image U-Net,43,selection,87.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.24493500590324402,0.1486225426197052,0.19747701287269592,0.9555255174636841
+Image U-Net,43,selection,88.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.2677452564239502,0.1637224555015564,0.21769699454307556,0.9472962617874146
+Image U-Net,43,selection,89.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.27684056758880615,0.16967365145683289,0.22547601163387299,0.9452226161956787
+Image U-Net,43,selection,90.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.29061341285705566,0.17829924821853638,0.2365962266921997,0.9406540989875793
+Image U-Net,43,selection,91.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.30076026916503906,0.1861170530319214,0.24624872207641602,0.9359732270240784
+Image U-Net,43,selection,92.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.3090885877609253,0.1902550458908081,0.25438064336776733,0.9329342842102051
+Image U-Net,43,selection,93.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.31928539276123047,0.20434153079986572,0.2643178701400757,0.9259520769119263
+Image U-Net,43,selection,94.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.34182602167129517,0.22251036763191223,0.28598785400390625,0.9157752990722656
+Image U-Net,43,selection,95.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.37125977873802185,0.2527088224887848,0.31760191917419434,0.8975534439086914
+Image U-Net,43,selection,96.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.3900033235549927,0.27730593085289,0.34832897782325745,0.8747375011444092
+Image U-Net,43,selection,97.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.41146039962768555,0.29598116874694824,0.3997945189476013,0.8376569151878357
+Image U-Net,43,selection,98.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.43052393198013306,0.3186754584312439,0.4171181619167328,0.8282524347305298
+Image U-Net,43,selection,99.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.4483036994934082,0.3324364423751831,0.4502410292625427,0.806320309638977
+Image U-Net,43,selection,100.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.4691614806652069,0.34787309169769287,0.48286616802215576,0.7829364538192749
+Image U-Net,43,extrapolation,101.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.5197194814682007,0.36632034182548523,0.5759664177894592,0.7254070043563843
+Image U-Net,43,extrapolation,102.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.6945205926895142,0.3854442834854126,0.8561742901802063,0.5565020442008972
+Image U-Net,43,extrapolation,103.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,0.9447965621948242,0.40034985542297363,1.233877420425415,0.28154242038726807
+Image U-Net,43,extrapolation,104.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.1851972341537476,0.4196990728378296,1.579331636428833,0.0031260643154382706
+Image U-Net,43,extrapolation,105.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.3263185024261475,0.439227819442749,1.7548866271972656,-0.14341261982917786
+Image U-Net,43,extrapolation,106.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.3701602220535278,0.4607844948768616,1.7916786670684814,-0.16643401980400085
+Image U-Net,43,extrapolation,107.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.3726212978363037,0.4760670065879822,1.7677812576293945,-0.1558624505996704
+Image U-Net,43,extrapolation,108.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.3482942581176758,0.49423760175704956,1.7006912231445312,-0.10543066263198853
+Image U-Net,43,extrapolation,109.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.3206826448440552,0.5079771280288696,1.659464955329895,-0.06821180880069733
+Image U-Net,43,extrapolation,110.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.3013559579849243,0.5202115774154663,1.631812572479248,-0.04819558188319206
+Image U-Net,43,extrapolation,111.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.2991657257080078,0.5298696756362915,1.6477299928665161,-0.06249850243330002
+Image U-Net,43,extrapolation,112.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.2996991872787476,0.5369418263435364,1.6783406734466553,-0.08630210906267166
+Image U-Net,43,extrapolation,113.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.2903170585632324,0.5445420145988464,1.6804778575897217,-0.0866449624300003
+Image U-Net,43,extrapolation,114.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.272026538848877,0.552476704120636,1.6416339874267578,-0.05579584091901779
+Image U-Net,43,extrapolation,115.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.2549664974212646,0.5598158836364746,1.6059210300445557,-0.02764994278550148
+Image U-Net,43,extrapolation,116.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.24367094039917,0.5677326917648315,1.5802985429763794,-0.007064969278872013
+Image U-Net,43,extrapolation,117.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.2404590845108032,0.5740064382553101,1.5800532102584839,-0.006040726788341999
+Image U-Net,43,extrapolation,118.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.240969181060791,0.5783774852752686,1.5883294343948364,-0.011346105486154556
+Image U-Net,43,extrapolation,119.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.236903190612793,0.5824353694915771,1.590203046798706,-0.014155663549900055
+Image U-Net,43,extrapolation,120.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.2230925559997559,0.5874440670013428,1.5721502304077148,-0.0017804164672270417
+Image U-Net,43,extrapolation,121.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.2058976888656616,0.5911321640014648,1.5524333715438843,0.013090962544083595
+Image U-Net,43,extrapolation,122.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.187239408493042,0.5973085165023804,1.534555196762085,0.026553722098469734
+Image U-Net,43,extrapolation,123.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.1787893772125244,0.6007425785064697,1.5333125591278076,0.02833976224064827
+Image U-Net,43,extrapolation,124.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.1754446029663086,0.6066727638244629,1.540658712387085,0.024406425654888153
+Image U-Net,43,extrapolation,125.0,experiments/runs/m3_ocean_dense_unet_seed43/summary.json,1.176415205001831,0.6123281121253967,1.5473709106445312,0.01950778253376484
+Image U-Net,44,selection,81.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.0880485400557518,0.0629815012216568,0.05606722831726074,0.9937083721160889
+Image U-Net,44,selection,82.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.10251997411251068,0.07082439959049225,0.06966634094715118,0.9896560907363892
+Image U-Net,44,selection,83.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.12256905436515808,0.08310742676258087,0.08718355000019073,0.9852111339569092
+Image U-Net,44,selection,84.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.16516344249248505,0.1060287207365036,0.12422849982976913,0.9760805368423462
+Image U-Net,44,selection,85.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.18920794129371643,0.1174975335597992,0.1460602879524231,0.9721051454544067
+Image U-Net,44,selection,86.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.22799216210842133,0.13830140233039856,0.18227846920490265,0.9617598056793213
+Image U-Net,44,selection,87.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.24273692071437836,0.15144005417823792,0.19308802485466003,0.9577043652534485
+Image U-Net,44,selection,88.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.2658519446849823,0.16502967476844788,0.21508167684078217,0.9486521482467651
+Image U-Net,44,selection,89.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.27201101183891296,0.17110908031463623,0.21771013736724854,0.9483100175857544
+Image U-Net,44,selection,90.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.28670087456703186,0.17942479252815247,0.22994068264961243,0.943399965763092
+Image U-Net,44,selection,91.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.29560813307762146,0.1864345371723175,0.23915061354637146,0.9387531280517578
+Image U-Net,44,selection,92.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.29972589015960693,0.18974356353282928,0.24261289834976196,0.9373087882995605
+Image U-Net,44,selection,93.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.31409168243408203,0.20222029089927673,0.2560962438583374,0.9300308227539062
+Image U-Net,44,selection,94.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.3385393023490906,0.22723716497421265,0.2824045419692993,0.9162258505821228
+Image U-Net,44,selection,95.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.3762880861759186,0.268778920173645,0.33677926659584045,0.8790783286094666
+Image U-Net,44,selection,96.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.40100720524787903,0.29929232597351074,0.3831752836704254,0.8463959693908691
+Image U-Net,44,selection,97.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.42006200551986694,0.3226925730705261,0.42554140090942383,0.8152821063995361
+Image U-Net,44,selection,98.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.4444579780101776,0.3508610427379608,0.46552160382270813,0.7879705429077148
+Image U-Net,44,selection,99.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.46400654315948486,0.37312740087509155,0.5040459036827087,0.7610490918159485
+Image U-Net,44,selection,100.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.4869716465473175,0.3947010040283203,0.5531452894210815,0.7264111638069153
+Image U-Net,44,extrapolation,101.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.5406390428543091,0.41201791167259216,0.6600966453552246,0.6657004952430725
+Image U-Net,44,extrapolation,102.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.7315037250518799,0.42900246381759644,0.9416536092758179,0.5014446973800659
+Image U-Net,44,extrapolation,103.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,0.9883135557174683,0.44213974475860596,1.3085510730743408,0.2184414565563202
+Image U-Net,44,extrapolation,104.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.209328293800354,0.4581119418144226,1.6527695655822754,-0.05995859578251839
+Image U-Net,44,extrapolation,105.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.3144235610961914,0.47293585538864136,1.8109970092773438,-0.1832822859287262
+Image U-Net,44,extrapolation,106.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.3207728862762451,0.4886868894100189,1.7346007823944092,-0.12395920604467392
+Image U-Net,44,extrapolation,107.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.3097625970840454,0.4992380738258362,1.6466007232666016,-0.056211765855550766
+Image U-Net,44,extrapolation,108.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.319138526916504,0.5127291083335876,1.668971300125122,-0.07645829766988754
+Image U-Net,44,extrapolation,109.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.3357962369918823,0.5252164602279663,1.7331002950668335,-0.13188567757606506
+Image U-Net,44,extrapolation,110.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.3210632801055908,0.5373356342315674,1.7072539329528809,-0.11158862709999084
+Image U-Net,44,extrapolation,111.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.285952091217041,0.5475050210952759,1.6323072910308838,-0.04921813681721687
+Image U-Net,44,extrapolation,112.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.2620315551757812,0.5551904439926147,1.5950303077697754,-0.01863846927881241
+Image U-Net,44,extrapolation,113.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.261225938796997,0.5633112192153931,1.6298794746398926,-0.04516907036304474
+Image U-Net,44,extrapolation,114.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.2637146711349487,0.5708801746368408,1.6535303592681885,-0.06415967643260956
+Image U-Net,44,extrapolation,115.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.2554330825805664,0.5773580074310303,1.6287493705749512,-0.04518178477883339
+Image U-Net,44,extrapolation,116.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.2451707124710083,0.5844540596008301,1.604326844215393,-0.025223420932888985
+Image U-Net,44,extrapolation,117.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.2458844184875488,0.5897471308708191,1.6184780597686768,-0.03737174719572067
+Image U-Net,44,extrapolation,118.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.2499314546585083,0.5937989950180054,1.6389576196670532,-0.05408536642789841
+Image U-Net,44,extrapolation,119.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.238882303237915,0.5978543758392334,1.6107255220413208,-0.03247212618589401
+Image U-Net,44,extrapolation,120.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.2126805782318115,0.6028686761856079,1.5602054595947266,0.008508824743330479
+Image U-Net,44,extrapolation,121.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.1872258186340332,0.6063569784164429,1.5241787433624268,0.0360616073012352
+Image U-Net,44,extrapolation,122.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.1684563159942627,0.6122938394546509,1.5218970775604248,0.0387590229511261
+Image U-Net,44,extrapolation,123.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.1567883491516113,0.6153974533081055,1.519515037536621,0.04039765149354935
+Image U-Net,44,extrapolation,124.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.145737886428833,0.6198030710220337,1.5129239559173584,0.045592136681079865
+Image U-Net,44,extrapolation,125.0,experiments/runs/m3_ocean_dense_unet_seed44/summary.json,1.139020323753357,0.6242550611495972,1.5101079940795898,0.048199161887168884

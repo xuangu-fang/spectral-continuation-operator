@@ -1,0 +1,9 @@
+{
+  "selection_rule": "median validation environment after averaging three seeds and all horizon queries",
+  "validation_index": 20,
+  "environment_id": "ocean_val_00020_e083669f5fd1",
+  "query_hz": 110.0,
+  "pole_rel_l2_seed42": 0.6533834338188171,
+  "unet_rel_l2_seed42": 1.4005420207977295,
+  "paired_improvement_used_for_selection": 0.5320780873298645
+}

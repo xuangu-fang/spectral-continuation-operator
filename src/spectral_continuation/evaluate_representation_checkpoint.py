@@ -13,7 +13,7 @@ from torch.utils.data import DataLoader
 
 from .data import FieldBundle, load_ocean_npz
 from .evaluate_horizon import verify_identity
-from .representation_data import FrequencyBandDataset
+from .representation_data import FrequencyBandDataset, FrequencySetDataset
 from .train_representation_poc import build_model, evaluate, sha256_file
 
 
@@ -51,7 +51,12 @@ def run(args) -> None:
         raise ValueError(f"query dataset is missing frequencies: {sorted(missing)}")
     visible = tuple(map(float, checkpoint["visible"]))
     validation = np.flatnonzero(bundle.split == "val")
-    dataset = FrequencyBandDataset(
+    dataset_type = (
+        FrequencyBandDataset
+        if source_summary["model"] in {"carrier_poles", "stable_recurrence"}
+        else FrequencySetDataset
+    )
+    dataset = dataset_type(
         bundle,
         validation,
         visible,
