@@ -1,0 +1,29 @@
+domain,model,frequency,resolution,mean_complex_rel_l2,std_complex_rel_l2
+synthetic,Image U-Net,20.0,train-grid,1.1336567401885986,0.0
+synthetic,Image U-Net,22.0,train-grid,1.0332257747650146,0.0
+synthetic,Image U-Net,24.0,train-grid,1.0411756038665771,0.0
+synthetic,Image U-Net,20.0,2x-grid,1.1073248386383057,0.0
+synthetic,Image U-Net,22.0,2x-grid,1.0330387353897095,0.0
+synthetic,Image U-Net,24.0,2x-grid,1.0358986854553223,0.0
+synthetic,Stable learned state,20.0,train-grid,0.7283563613891602,0.0
+synthetic,Stable learned state,22.0,train-grid,0.8791357278823853,0.0
+synthetic,Stable learned state,24.0,train-grid,0.9553342461585999,0.0
+synthetic,Stable learned state,20.0,2x-grid,0.7546443343162537,0.0
+synthetic,Stable learned state,22.0,2x-grid,0.9166474342346191,0.0
+synthetic,Stable learned state,24.0,2x-grid,0.9934672117233276,0.0
+synthetic,Prony state probe,20.0,train-grid,0.0206904299557209,0.0
+synthetic,Prony state probe,22.0,train-grid,0.04040012136101723,0.0
+synthetic,Prony state probe,24.0,train-grid,0.06795252859592438,0.0
+synthetic,Prony state probe,20.0,2x-grid,0.020684875547885895,0.0
+synthetic,Prony state probe,22.0,2x-grid,0.04041319340467453,0.0
+synthetic,Prony state probe,24.0,2x-grid,0.06799088418483734,0.0
+ocean,Image U-Net,105.0,native,1.2408772309621174,0.001017578359688892
+ocean,Image U-Net,110.0,native,1.1982582012812297,0.0012273052917643526
+ocean,Image U-Net,115.0,native,1.159898082415263,0.0007021191520529454
+ocean,Image U-Net,120.0,native,1.1531705458958943,0.0008879685148242334
+ocean,Image U-Net,125.0,native,1.1693999767303467,0.0008347465176598232
+ocean,Stable learned state,105.0,native,0.6944741408030192,0.003136079087096257
+ocean,Stable learned state,110.0,native,0.7467524607976278,0.0021980291193746198
+ocean,Stable learned state,115.0,native,0.7822593450546265,0.0012551772364840317
+ocean,Stable learned state,120.0,native,0.812993069489797,0.0005541303692635222
+ocean,Stable learned state,125.0,native,0.8440978328386942,0.00033339601228395084

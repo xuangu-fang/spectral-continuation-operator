@@ -1,0 +1,155 @@
+{
+  "synthetic": {
+    "Image U-Net": {
+      "native_macro": 1.0693527062733967,
+      "double_resolution_macro": 1.0587540864944458,
+      "phase_equivariance_error": 0.3989371657371521
+    },
+    "Stable learned state": {
+      "native_macro": 0.8542754451433817,
+      "double_resolution_macro": 0.8882529934247335,
+      "phase_equivariance_error": 4.557171996566467e-05
+    },
+    "Prony state probe": {
+      "native_macro": 0.043014359970887504,
+      "double_resolution_macro": 0.043029651045799255,
+      "phase_equivariance_error": 2.3645411602046806e-06
+    }
+  },
+  "ocean": {
+    "Image U-Net": {
+      "mean_by_frequency": [
+        1.2408772309621174,
+        1.1982582012812297,
+        1.159898082415263,
+        1.1531705458958943,
+        1.1693999767303467
+      ],
+      "std_by_frequency": [
+        0.001017578359688892,
+        0.0012273052917643526,
+        0.0007021191520529454,
+        0.0008879685148242334,
+        0.0008347465176598232
+      ],
+      "macro_mean": 1.1843208074569702
+    },
+    "Stable learned state": {
+      "mean_by_frequency": [
+        0.6944741408030192,
+        0.7467524607976278,
+        0.7822593450546265,
+        0.812993069489797,
+        0.8440978328386942
+      ],
+      "std_by_frequency": [
+        0.003136079087096257,
+        0.0021980291193746198,
+        0.0012551772364840317,
+        0.0005541303692635222,
+        0.00033339601228395084
+      ],
+      "macro_mean": 0.7761153697967529
+    }
+  },
+  "run_evidence": {
+    "synthetic": {
+      "Image U-Net": {
+        "parameters": 309930,
+        "selected_epoch": 39,
+        "checkpoint_sha256": "4ace60195500b5b9beabb8ce3f9270074b44c84287da95125381b7c260e7a968",
+        "lineage": {
+          "kind": "localized-multipath-synthetic",
+          "seed": 20260915,
+          "shape": [
+            32,
+            64
+          ],
+          "paths": 3
+        }
+      },
+      "Stable learned state": {
+        "parameters": 320334,
+        "selected_epoch": 50,
+        "checkpoint_sha256": "56b1db85a02a0cd9f8b5072946779b651d371351c9b3a40ffea2fb2c9444f9ce",
+        "lineage": {
+          "kind": "localized-multipath-synthetic",
+          "seed": 20260915,
+          "shape": [
+            32,
+            64
+          ],
+          "paths": 3
+        }
+      },
+      "Prony state probe": {
+        "parameters": 0,
+        "selected_epoch": null,
+        "checkpoint_sha256": null,
+        "lineage": {
+          "kind": "localized-multipath-synthetic",
+          "seed": 20260915,
+          "shape": [
+            32,
+            64
+          ],
+          "paths": 3
+        }
+      }
+    },
+    "ocean": {
+      "Image U-Net": [
+        {
+          "seed": 42,
+          "parameters": 309210,
+          "selected_epoch": 55,
+          "checkpoint_sha256": "aaba4f3d9784ff81773a9fa05ca5dcb12c3a4c90b56b268bfcc2b358286ba877",
+          "macro_extrapolation": 1.1839338302612306,
+          "phase_equivariance_error": 0.2418728768825531
+        },
+        {
+          "seed": 43,
+          "parameters": 309210,
+          "selected_epoch": 56,
+          "checkpoint_sha256": "08dde2ff11373ac63995494a825f56cfb2b8087a9d664234371866598ba4b702",
+          "macro_extrapolation": 1.1852160930633544,
+          "phase_equivariance_error": 0.2623630166053772
+        },
+        {
+          "seed": 44,
+          "parameters": 309210,
+          "selected_epoch": 50,
+          "checkpoint_sha256": "983a49b4a4309e089cc818d4e514ec724f9f312aa55015da37d65abb8665fad4",
+          "macro_extrapolation": 1.1838124990463257,
+          "phase_equivariance_error": 0.23611588776111603
+        }
+      ],
+      "Stable learned state": [
+        {
+          "seed": 42,
+          "parameters": 310282,
+          "selected_epoch": 58,
+          "checkpoint_sha256": "acd669269ffa642cc12b8b9e77d020847c4b1db4a18b579e9d4266b91f2fd2da",
+          "macro_extrapolation": 0.7754007339477539,
+          "phase_equivariance_error": 6.40194266452454e-05
+        },
+        {
+          "seed": 43,
+          "parameters": 310282,
+          "selected_epoch": 60,
+          "checkpoint_sha256": "ce4634c085f46577ceb0bb2f9299bab327746d1a3a861110f9bedf26222346db",
+          "macro_extrapolation": 0.7748786926269531,
+          "phase_equivariance_error": 6.0852129536215216e-05
+        },
+        {
+          "seed": 44,
+          "parameters": 310282,
+          "selected_epoch": 58,
+          "checkpoint_sha256": "4265ba6c51c302c5828ae8c22dfcdb30f29979f5a675ff5b01a1f81da134c60a",
+          "macro_extrapolation": 0.7780666828155518,
+          "phase_equivariance_error": 7.079719216562808e-05
+        }
+      ]
+    }
+  }
+}

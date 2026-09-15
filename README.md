@@ -17,10 +17,12 @@
 
 ## 阅读顺序
 
-1. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：结论、方法、结果、失败归因与 go/no-go；
-2. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
-3. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
-4. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
+1. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：最新方法、文献定位、
+   正结果、失败归因与下一步；
+2. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的起点、M1 结果与 go/no-go；
+3. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
+4. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
+5. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
 
 ## 代码入口
 
@@ -29,6 +31,9 @@
 - `spectral_continuation.train_query_operator`：连续查询 M0/M1；
 - `spectral_continuation.evaluate_horizon`：冻结 checkpoint 的一次性新频率评估；
 - `spectral_continuation.summarize_query`：逐环境 paired 统计与正文图。
+- `spectral_continuation.train_representation_poc`：matched image、delay 与稳定谱状态模型；
+- `spectral_continuation.evaluate_prony_poc`：有限秩复谱状态 existence probe；
+- `spectral_continuation.summarize_representation_poc`：POC 汇总与图表。
 
 主指标始终是逐物理环境等权的 raw complex relative L2；幅值、圆周相位误差与 coherence
 只用于机制诊断，不用于替换主指标。

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "completed development POC",
+  "purpose": "Test whether a phase-equivariant stable spectral state is a better representation of oscillatory complex fields than a matched real-imag image U-Net",
+  "synthetic": {
+    "data_seed": 20260915,
+    "counts": {"train": 512, "validation": 128},
+    "train_grid": [32, 64],
+    "zero_shot_grid": [64, 128],
+    "paths": 3,
+    "visible_frequencies": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    "selection_queries": [16, 18],
+    "extrapolation_queries": [20, 22, 24]
+  },
+  "ocean": {
+    "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz",
+    "dataset_sha256": "412e437d5c5cbf1b286f84af61e38aab3f896de25029b5a97a3f49a9bfa2383b",
+    "counts": {"train": 128, "validation": 32},
+    "visible_frequencies": [74, 75, 76, 77, 78, 79, 80],
+    "selection_queries": [90, 100],
+    "development_extrapolation_queries": [105, 110, 115, 120, 125],
+    "seeds": [42, 43, 44]
+  },
+  "matched_models": {
+    "image_unet": {"width": 8, "parameters_ocean": 309210},
+    "stable_spectral_state": {
+      "order": 3,
+      "width": 64,
+      "blocks": 4,
+      "stability_radius": 1.0,
+      "visible_history_weight": 1.0,
+      "parameters_ocean": 310282
+    }
+  },
+  "training": {
+    "epochs": 60,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.000001,
+    "checkpoint_selection": "macro raw complex RelL2 over training query frequencies"
+  },
+  "evidence_boundary": "All Ocean labels in this POC were previously opened development labels; no held-out test claim is allowed."
+}

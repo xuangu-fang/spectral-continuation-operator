@@ -10,7 +10,9 @@ artifact binds its parent data and checkpoint hashes.
 - `stage1_query_formal/`: three-seed 90/100-selected query runs, paired contrasts
   and representative field figure;
 - `stage1_dense_horizon/`: once-only 105/110/115/120 Hz evaluation of the same
-  frozen checkpoints.
+  frozen checkpoints;
+- `representation_poc/`: matched image/state representation comparison on
+  controlled multipath fields and Ocean Pekeris, including three-seed curves.
 
 `query_summary.json` stores aggregate metrics, per-seed improvements, paired
 bootstrap results, source checkpoint SHA256 values and data lineage. CSV files

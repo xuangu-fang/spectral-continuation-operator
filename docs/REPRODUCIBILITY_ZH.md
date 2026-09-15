@@ -135,7 +135,49 @@ bitwise identical；任何一项不一致都会在打开新结果前报错。
 `29a70954da0440abfb4690781f67d2cc4d8c27a4e37963975382f70f06f1100f`。本次 identity guard
 通过，2,720 个 simulations 无失败。
 
-## 6. Artifact 边界
+## 6. 震荡复数场表征 POC
+
+Ocean stable-state run 的命令模板如下；`SEED` 分别取 42、43、44：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_representation_poc \
+  --domain ocean --model stable_recurrence \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_dense_horizon_20260915/paired_fields.npz \
+  --output-dir experiments/runs/representation_poc_ocean_recurrence_history_seedSEED \
+  --visible 74,75,76,77,78,79,80 --train-queries 90,100 \
+  --test-queries 105,110,115,120,125 \
+  --order 3 --state-width 64 --blocks 4 --stability-radius 1.0 \
+  --history-weight 1.0 --epochs 60 --batch-size 8 --eval-batch-size 8 --seed SEED
+```
+
+Matched U-Net 只需将模型和模型尺寸参数替换为：
+
+```text
+--model image_unet --width 8
+```
+
+合成有限秩 existence probe：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_prony_poc \
+  --domain synthetic \
+  --output-dir experiments/runs/representation_poc_synthetic_prony_order5_fp64_matched \
+  --visible 1,2,3,4,5,6,7,8,9,10,11,12,13,14 \
+  --selection-queries 16,18 --test-queries 20,22,24 \
+  --order 5 --ridge 1e-5 --batch-size 8 \
+  --synthetic-train 512 --synthetic-validation 128
+```
+
+最终汇总：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_representation_poc \
+  --run-root experiments/runs --output-dir artifacts/representation_poc
+```
+
+POC 使用已打开的 development labels 做架构归因，不能被称为新的 held-out test。
+
+## 7. Artifact 边界
 
 Git 提交 compact JSON/CSV、图和 provenance。大型 `best.pt`、逐样本 NPZ 与数据集位于本机
 attached storage，并由 summary 中的 SHA256 绑定。旧 APEX 仓库只作为只读证据/生成器来源，

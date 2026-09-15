@@ -12,6 +12,11 @@ from spectral_continuation.data import (
 from spectral_continuation.evaluate_horizon import verify_identity
 from spectral_continuation.metrics import metric_vectors, paired_bootstrap
 from spectral_continuation.model import QueryUNet, reconstruct
+from spectral_continuation.representation import (
+    ComplexDelayOperator,
+    StableSpectralStateOperator,
+    phase_equivariance_error,
+)
 
 
 def make_bundle():
@@ -101,3 +106,29 @@ def test_dense_horizon_identity_check_rejects_changed_ids():
     dense.ids = np.asarray([0, 1, 2, 99])
     with np.testing.assert_raises(RuntimeError):
         verify_identity(source, dense)
+
+
+def test_complex_delay_operator_is_phase_equivariant_and_resolution_flexible():
+    model = ComplexDelayOperator((8.0, 9.0, 10.0), 0, modes=8, blocks=1)
+    for height, width in ((16, 32), (24, 48)):
+        fields = torch.randn(2, 3, height, width, dtype=torch.complex64)
+        context = torch.randn(2, 3, height, width)
+        query = torch.tensor([11.0, 12.0])
+        output = model(fields, context, query)
+        assert output.shape == (2, height, width)
+        assert phase_equivariance_error(model, fields, context, query) < 2e-6
+
+
+def test_stable_spectral_state_is_phase_equivariant_and_has_finite_history_loss():
+    model = StableSpectralStateOperator(
+        (1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0),
+        0,
+        order=3,
+        width=8,
+        blocks=1,
+    )
+    fields = torch.randn(2, 7, 12, 24, dtype=torch.complex64)
+    context = torch.randn(2, 3, 12, 24)
+    query = torch.tensor([8.0, 9.0])
+    assert phase_equivariance_error(model, fields, context, query) < 2e-6
+    assert torch.isfinite(model.visible_reconstruction_loss(fields, context))
