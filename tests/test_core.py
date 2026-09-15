@@ -9,6 +9,7 @@ from spectral_continuation.data import (
     load_ocean_npz,
     spectral_carrier,
 )
+from spectral_continuation.evaluate_horizon import verify_identity
 from spectral_continuation.metrics import metric_vectors, paired_bootstrap
 from spectral_continuation.model import QueryUNet, reconstruct
 
@@ -91,3 +92,12 @@ def test_ocean_loader_excludes_solver_inactive_channel(tmp_path):
     assert bundle.environment.shape == (2, 4, 4, 8)
     assert bundle.lineage["environment_channels"] == names[:4].tolist()
     assert bundle.lineage["excluded_environment_channels"] == [names[-1]]
+
+
+def test_dense_horizon_identity_check_rejects_changed_ids():
+    source = make_bundle()
+    dense = make_bundle()
+    verify_identity(source, dense)
+    dense.ids = np.asarray([0, 1, 2, 99])
+    with np.testing.assert_raises(RuntimeError):
+        verify_identity(source, dense)
