@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "status": "development validation only",
+  "domain": "ocean",
+  "target_frequency_hz": 200.0,
+  "train_count": 128,
+  "validation_count": 32,
+  "lineage": {
+    "kind": "ocean-paired-npz",
+    "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz"
+  },
+  "conditions": {
+    "80": {
+      "visible_frequencies_hz": [
+        80.0
+      ],
+      "ridge_coefficients": [
+        {
+          "real": -0.0008332024444825947,
+          "imag": 0.008590267039835453
+        }
+      ],
+      "methods": {
+        "copy_top": {
+          "complex_rel_l2": 1.4447963237762451,
+          "amplitude_rel_l2": 0.5549174547195435,
+          "weighted_phase_mae_rad": 1.5715718269348145,
+          "phase_coherence": -0.0006243542302399874
+        },
+        "amplitude_spectral_carrier": {
+          "complex_rel_l2": 1.4672290086746216,
+          "amplitude_rel_l2": 0.5549174547195435,
+          "weighted_phase_mae_rad": 1.5860059261322021,
+          "phase_coherence": -0.011667094193398952
+        },
+        "global_complex_ridge": {
+          "complex_rel_l2": 0.999954342842102,
+          "amplitude_rel_l2": 0.9923338294029236,
+          "weighted_phase_mae_rad": 1.5663986206054688,
+          "phase_coherence": 0.0035197907127439976
+        }
+      }
+    },
+    "74+77+80": {
+      "visible_frequencies_hz": [
+        74.0,
+        77.0,
+        80.0
+      ],
+      "ridge_coefficients": [
+        {
+          "real": -0.005097989458590746,
+          "imag": 0.00591899873688817
+        },
+        {
+          "real": -0.005089419428259134,
+          "imag": 0.006240963935852051
+        },
+        {
+          "real": -0.0049888696521520615,
+          "imag": 0.006779682356864214
+        }
+      ],
+      "methods": {
+        "copy_top": {
+          "complex_rel_l2": 1.4447963237762451,
+          "amplitude_rel_l2": 0.5549174547195435,
+          "weighted_phase_mae_rad": 1.5715718269348145,
+          "phase_coherence": -0.0006243542302399874
+        },
+        "amplitude_spectral_carrier": {
+          "complex_rel_l2": 1.4251569509506226,
+          "amplitude_rel_l2": 0.5549174547195435,
+          "weighted_phase_mae_rad": 1.5557383298873901,
+          "phase_coherence": 0.011980600655078888
+        },
+        "global_complex_ridge": {
+          "complex_rel_l2": 0.9998928904533386,
+          "amplitude_rel_l2": 0.989255964756012,
+          "weighted_phase_mae_rad": 1.5671298503875732,
+          "phase_coherence": 0.003112302627414465
+        }
+      }
+    },
+    "79+80": {
+      "visible_frequencies_hz": [
+        79.0,
+        80.0
+      ],
+      "ridge_coefficients": [
+        {
+          "real": 0.005261648911982775,
+          "imag": 0.010304194875061512
+        },
+        {
+          "real": -0.008808855898678303,
+          "imag": 0.007702786009758711
+        }
+      ],
+      "methods": {
+        "copy_top": {
+          "complex_rel_l2": 1.4447963237762451,
+          "amplitude_rel_l2": 0.5549174547195435,
+          "weighted_phase_mae_rad": 1.5715718269348145,
+          "phase_coherence": -0.0006243542302399874
+        },
+        "amplitude_spectral_carrier": {
+          "complex_rel_l2": 1.409877896308899,
+          "amplitude_rel_l2": 0.5549174547195435,
+          "weighted_phase_mae_rad": 1.5361888408660889,
+          "phase_coherence": 0.02780984528362751
+        },
+        "global_complex_ridge": {
+          "complex_rel_l2": 0.9999136328697205,
+          "amplitude_rel_l2": 0.9899914860725403,
+          "weighted_phase_mae_rad": 1.5665467977523804,
+          "phase_coherence": 0.003433594014495611
+        }
+      }
+    },
+    "78+79+80": {
+      "visible_frequencies_hz": [
+        78.0,
+        79.0,
+        80.0
+      ],
+      "ridge_coefficients": [
+        {
+          "real": 0.013915371149778366,
+          "imag": 0.008595003746449947
+        },
+        {
+          "real": -0.0061823902651667595,
+          "imag": 0.022475579753518105
+        },
+        {
+          "real": -0.016824310645461082,
+          "imag": 0.00039470093906857073
+        }
+      ],
+      "methods": {
+        "copy_top": {
+          "complex_rel_l2": 1.4447963237762451,
+          "amplitude_rel_l2": 0.5549174547195435,
+          "weighted_phase_mae_rad": 1.5715718269348145,
+          "phase_coherence": -0.0006243542302399874
+        },
+        "amplitude_spectral_carrier": {
+          "complex_rel_l2": 1.4155738353729248,
+          "amplitude_rel_l2": 0.5549174547195435,
+          "weighted_phase_mae_rad": 1.541359543800354,
+          "phase_coherence": 0.02363736927509308
+        },
+        "global_complex_ridge": {
+          "complex_rel_l2": 0.9998690485954285,
+          "amplitude_rel_l2": 0.9881075620651245,
+          "weighted_phase_mae_rad": 1.5664470195770264,
+          "phase_coherence": 0.0035074891056865454
+        }
+      }
+    }
+  },
+  "paired_band_vs_single": {
+    "74+77+80__amplitude_spectral_carrier": {
+      "mean_absolute_improvement": 0.042072053998708725,
+      "relative_improvement_percent": 2.8674497604370117,
+      "fraction_candidate_better": 0.8125,
+      "ci95_low": 0.027307827025651932,
+      "ci95_high": 0.05908340960741043
+    },
+    "74+77+80__global_complex_ridge": {
+      "mean_absolute_improvement": 6.145425140857697e-05,
+      "relative_improvement_percent": 0.006145705934613943,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 5.596494156634435e-05,
+      "ci95_high": 6.698444485664368e-05
+    },
+    "79+80__amplitude_spectral_carrier": {
+      "mean_absolute_improvement": 0.057351160794496536,
+      "relative_improvement_percent": 3.9088077545166016,
+      "fraction_candidate_better": 0.875,
+      "ci95_low": 0.038734063506126404,
+      "ci95_high": 0.07695801556110382
+    },
+    "79+80__global_complex_ridge": {
+      "mean_absolute_improvement": 4.077330231666565e-05,
+      "relative_improvement_percent": 0.004077516496181488,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 3.6891549825668335e-05,
+      "ci95_high": 4.452471694094129e-05
+    },
+    "78+79+80__amplitude_spectral_carrier": {
+      "mean_absolute_improvement": 0.05165522173047066,
+      "relative_improvement_percent": 3.520596981048584,
+      "fraction_candidate_better": 0.78125,
+      "ci95_low": 0.03274526819586754,
+      "ci95_high": 0.07160741835832596
+    },
+    "78+79+80__global_complex_ridge": {
+      "mean_absolute_improvement": 8.527003228664398e-05,
+      "relative_improvement_percent": 0.008527392521500587,
+      "fraction_candidate_better": 1.0,
+      "ci95_low": 7.746923074591905e-05,
+      "ci95_high": 9.283432882511988e-05
+    }
+  }
+}

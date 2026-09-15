@@ -20,7 +20,8 @@
   "primary_fineband_query_task": {
     "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915/paired_fields.npz",
     "single_context_hz": [80],
-    "band_context_hz": [78, 79, 80],
+    "band_context_hz": [79, 80],
+    "three_point_context_ablation_hz": [78, 79, 80],
     "selection_queries_hz": [90, 100],
     "label_blind_extrapolation_queries_hz": [125, 150, 175, 200],
     "seeds": [42, 43, 44],

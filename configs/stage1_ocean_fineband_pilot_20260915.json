@@ -2,6 +2,12 @@
   "schema_version": 1,
   "purpose": "Resolve spectral phase increments before testing long-range extrapolation",
   "output_dir": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fineband_pilot_20260915",
+  "paired_fields_sha256": "603890808c6cbf541583203730f81abbf61f69ca779647441065db36d782323d",
+  "generator_manifest_sha256": "d95d7c7426c8535c49355dc2b9146ffa40df3f3f053c524e0b7c85c883e27e3c",
+  "generator_revisions": {
+    "APEX_repro_fsk": "ebb305e17b15f1f15ed367ed6ffe7a83a8a78b83",
+    "ocean-acoustic-agent": "12a59a0c13058b21522bde5b0d74fe6ad02ee973"
+  },
   "frequencies_hz": [74, 75, 76, 77, 78, 79, 80, 90, 100, 125, 150, 175, 200],
   "counts": {"train": 128, "validation": 32, "strict_reserved": 32},
   "seed": 20260912,

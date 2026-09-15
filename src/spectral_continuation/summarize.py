@@ -80,6 +80,11 @@ def load_fixed(paths: list[Path]) -> tuple[list[dict], dict]:
             for baseline, candidate, name in (
                 ("single_direct", "band_direct", "band_information"),
                 ("band_direct", "band_carrier", "carrier_parameterization"),
+                (
+                    "field_only_single_direct",
+                    "field_only_band_direct",
+                    "field_only_band_information",
+                ),
             ):
                 if baseline in candidates and candidate in candidates:
                     contrasts[f"{domain}/{name}/seed{seed}"] = paired_bootstrap(
