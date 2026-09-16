@@ -3,6 +3,20 @@
 日期：2026-09-16
 结论：**机制级正结果，预注册方法 gate 未通过；不应把当前模型包装成论文级主方法。**
 
+## 0. 后续 framing 更新
+
+本报告中的数字和停止判断保持不变，但其任务定位已经更新。当前 POC 使用的完整 90--100 Hz 场来自
+与目标相同的 high-fidelity archive，因此它证明的是“稀疏 calibration 能否跨频迁移”的机制，尚未
+实例化 calibrated digital twin 所需的真实 low/high fidelity gap。
+
+今后的核心任务是
+[Few-shot Spectral System Identification](../docs/RESEARCH_MEMORY_ZH.md)：用 pretrained
+population prior、独立产生的 cheap simulator prior 和少量 high-fidelity support，辨识新实例的
+latent operator，再回答完全无观测的条件查询。频率外推是 benchmark，不是最终任务名称。
+
+另需同时披露：主设置的 0.5% 表示每个频率 92 个空间点；六频 sweep 实际使用 92 个物理传感器、
+552 个复数观测。以下旧 POC 仍按当时协议报告，不回溯改变定义。
+
 ## 1. 一句话结果
 
 在一个新环境中，给定完整的 90--100 Hz 波场，再让固定的稀疏传感器阵列扫描
@@ -223,17 +237,14 @@ field 的表示与归纳偏置。
 
 ## 9. 下一步建议
 
-不建议继续仅扩大当前 U-Net 或继续堆 loss。下一阶段最值得做的是一个严格受控的
-multi-component spectral state：用 2--4 个稳定 pole 和可随空间缓慢变化的 mixing weights 表达局部
-modal interference，同时保持同一个 query operator 和无 future-label 训练协议。开始训练前必须先做
-dense oracle：若 multi-pole oracle 在 107--112 Hz 不能把 RelL2 压到约 0.25 以下，就停止该路线。
+后续复盘改变了优先级：不应立即扩大当前 U-Net、堆 loss 或直接训练 multi-pole model。下一阶段先
+验证应用任务本身：用独立 cheap solver 产生 dense prior，用 sparse high-fidelity sweep 做 calibration，
+再预测 disjoint query band。只有 dense calibration oracle 和最小 AR calibrator 都在真实 fidelity gap
+下通过 task gate，才启动 2--4 component spectral state。
 
-第二优先级是 sensor placement：当前随机阵列在干涉零点附近会产生低置信度 phase evidence，适合用
-基于 prior amplitude 与 pole disagreement 的一次性非自适应选点。它应与相同 $K$ 的随机 nested
-mask 做严格比较，不能改变观测预算。
-
-暂不建议进入 diffusion、Transformer 或空间 random-mask generation。当前 POC 已把最关键的科学问题
-定位到“如何从稀疏宽带 evidence 识别多分量复谱状态”，应先突破这个表示瓶颈。
+完整的最小实验矩阵、baseline、成本核算和停止规则见
+[下一阶段 POC 设计](../docs/FEW_SHOT_SPECTRAL_OPERATOR_IDENTIFICATION_POC_ZH.md)。sensor placement、噪声、
+Transformer、diffusion 和第二数据集全部后置。
 
 ## 10. 证据入口
 

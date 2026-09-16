@@ -1,9 +1,15 @@
 # Spectral Continuation Operator
 
-从稀疏低频复波场中辨识可迁移的传播表示，并在训练频带之外查询更高频响应。
+从廉价模拟先验和少量测试时观测中辨识新物理实例的谱响应算子，并在完全无观测的条件上查询
+复杂波场。
 
-核心问题不是固定的 `20 Hz → 40 Hz` 映射，而是：相邻低频采样是否足以辨识谱相位速度，
-以及一个轻量 propagation-aware operator 能否把这种信息转化为稳定的高频外推。
+核心问题不是固定的 `20 Hz → 40 Hz` 映射，而是 few-shot spectral system identification：预训练
+模型提供跨实例共享的幅值和空间先验，固定稀疏阵列的短频率 sweep 辨识实例相关的 phase-sensitive
+latent state，连续 query operator 再回答 support 未覆盖的频率和空间位置。
+
+当前统一任务定义、应用原型、声明边界和强制报告规则见
+[研究记忆](docs/RESEARCH_MEMORY_ZH.md)。频率外推是主要 benchmark；新实例上的 latent operator
+identification 才是 AI 任务。
 
 最新阶段首先诊断了原始 `74–80 Hz → 110 Hz` 长程设置：误差随传播距离和真实谱相位曲率
 显著增加，增加 pole 数、仿射多分量、Neural ODE 和局部曲率都不能突破可辨识性边界。随后在
@@ -22,6 +28,10 @@ matched recurrence 为 0.4741，相近参数量 carrier-relative query U-Net 三
 shuffled-instance control 明显恶化。结果主要来自相位改善，但 12.1% 相对收益没有通过预注册
 20% gate；这是机制级正结果，不是已完成的论文主方法。
 
+这项 POC 尚未实例化真正的 multi-fidelity setting：完整低频场仍来自同一个 high-fidelity archive，
+source 也基本固定。下一阶段先生成独立 low/high fidelity pairs，验证 cheap simulator prior 加 sparse
+high-fidelity calibration 的 task gate；通过后才比较通用适配与 phase-aware multi-component state。
+
 最新的局部 token POC 进一步区分了“可表示”与“可预测”：8×16 patch span 的 oracle 很低，
 但学习自由局部复系数在 110 Hz 仅得到 0.6186，frequency-mask 辅助训练还会退化。把 token
 限制为 frozen hyper-pole 上的局部 carrier slope/curvature 修正后，110 Hz 从 0.4409 小幅降到
@@ -33,21 +43,24 @@ Transformer 或 mask 路线。
 
 ## 阅读顺序
 
-1. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
+1. [当前研究记忆](docs/RESEARCH_MEMORY_ZH.md)：统一任务、AI 定位、应用原型和不可越过的声明边界；
+2. [下一阶段 POC 设计](docs/FEW_SHOT_SPECTRAL_OPERATOR_IDENTIFICATION_POC_ZH.md)：独立 fidelity、
+   最小方法阶梯、baseline、预算和 gate；
+3. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
    复谱状态、三 seed 正式结果和 NO-GO 判定；
-2. [局部复谱 Token POC](reports/LOCAL_SPECTRAL_TOKEN_POC_ZH.md)：自由 local-span、masked
+4. [局部复谱 Token POC](reports/LOCAL_SPECTRAL_TOKEN_POC_ZH.md)：自由 local-span、masked
    reconstruction 和受限 carrier-token 的结果与停止判断；
-3. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
+5. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
    证据合并、子空间旋转、patch token oracle 以及 masked representation 下一步；
-4. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
+6. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
    最终协议、三 seed 结果和结论边界；
-5. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
-6. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
+7. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
+8. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
    文献定位和失败归因；
-7. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
-8. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
-9. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
-10. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
+9. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
+10. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
+11. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
+12. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
 
 ## 代码入口
 
