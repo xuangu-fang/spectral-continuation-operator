@@ -2,7 +2,8 @@
 
 日期：2026-09-16
 
-状态：设计草案，等待审阅后冻结；本文件不代表实验已经开始。
+状态：协议已冻结并完成 P0。独立 Ocean paired-fidelity dense oracle 未通过 task gate，因此 P1 暂停。
+结果与归因见 [P0 Gate 报告](../reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)。
 
 ## 1. POC 只回答什么
 

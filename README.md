@@ -28,9 +28,10 @@ matched recurrence 为 0.4741，相近参数量 carrier-relative query U-Net 三
 shuffled-instance control 明显恶化。结果主要来自相位改善，但 12.1% 相对收益没有通过预注册
 20% gate；这是机制级正结果，不是已完成的论文主方法。
 
-这项 POC 尚未实例化真正的 multi-fidelity setting：完整低频场仍来自同一个 high-fidelity archive，
-source 也基本固定。下一阶段先生成独立 low/high fidelity pairs，验证 cheap simulator prior 加 sparse
-high-fidelity calibration 的 task gate；通过后才比较通用适配与 phase-aware multi-component state。
+随后已补齐真正独立的 Ocean low/high fidelity：8-mode LF 在适用环境中约有 1.8--2.1 倍加速，但
+dense 101--106 Hz calibration oracle 在 107--112 Hz 只改善 15.69%，并随 horizon 快速衰减，未通过
+30% task gate。因此当前暂停神经 calibrator 训练；这也说明原先同一 high-fidelity archive 上的正结果
+不能直接外推到真实 solver gap。
 
 最新的局部 token POC 进一步区分了“可表示”与“可预测”：8×16 patch span 的 oracle 很低，
 但学习自由局部复系数在 110 Hz 仅得到 0.6186，frequency-mask 辅助训练还会退化。把 token
@@ -44,7 +45,7 @@ Transformer 或 mask 路线。
 ## 阅读顺序
 
 1. [当前研究记忆](docs/RESEARCH_MEMORY_ZH.md)：统一任务、AI 定位、应用原型和不可越过的声明边界；
-2. [下一阶段 POC 设计](docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)：独立 fidelity、
+2. [Few-shot Spectral Calibration POC](docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)：独立 fidelity、
    最小方法阶梯、baseline、预算和 gate；
 3. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
    复谱状态、三 seed 正式结果和 NO-GO 判定；
@@ -58,9 +59,13 @@ Transformer 或 mask 路线。
 8. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
    文献定位和失败归因；
 9. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
-10. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
-11. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
-12. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
+10. [Ocean 独立 solver 审计](reports/OCEAN_MULTIFIDELITY_SOLVER_AUDIT_ZH.md)：真实 low/high fidelity
+    的 lineage、成本与适用边界；
+11. [独立多保真 Calibration Gate](reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)：P0 oracle 结果、
+    NO-GO 归因与后续停止线。
+12. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
+13. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
+14. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
 
 ## 代码入口
 
@@ -83,6 +88,10 @@ Transformer 或 mask 路线。
 - `spectral_continuation.train_ar_calibrator`：不用 future labels 训练稀疏宽带稳定谱状态校准器。
 - `spectral_continuation.evaluate_ar_calibration`：冻结模型的预算、mask、horizon 与负对照评测。
 - `spectral_continuation.summarize_sparse_calibration`：跨 seed 聚合、paired 统计和正文图。
+- `spectral_continuation.audit_ocean_multifidelity_solver`：独立 Ocean LF/HF 的成本、质量与 lineage 审计。
+- `spectral_continuation.generate_ocean_multifidelity_pilot`：生成正式 paired-fidelity 双 archive。
+- `spectral_continuation.paired_fidelity_oracle_audit`：无 query 泄漏的 dense calibration task gate。
+- `spectral_continuation.paired_fidelity_protocol`：实例级 split、来源校验、episodic support/query 协议。
 
 主指标始终是逐物理环境等权的 raw complex relative L2；幅值、圆周相位误差与 coherence
 只用于机制诊断，不用于替换主指标。

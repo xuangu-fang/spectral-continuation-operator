@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "status": "training-free paired-fidelity oracle audit",
+  "command": "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/paired_fidelity_oracle_audit.py --low-archive artifacts/ocean_multifidelity_formal_pilot/low.npz --high-archive artifacts/ocean_multifidelity_formal_pilot/high.npz --split validation --calibration-frequencies 101,102,103,104,105,106 --queries 107,108,109,110,111,112 --output-dir artifacts/ocean_paired_fidelity_oracle_20260916",
+  "lineage": {
+    "low_archive": {
+      "path": "/home/ubuntu/project/spectral-continuation-operator/artifacts/ocean_multifidelity_formal_pilot/low.npz",
+      "sha256": "d40fe727f5ff13ca079f321bacc1b8f048daad932969e67dc983354ecf71f89e"
+    },
+    "high_archive": {
+      "path": "/home/ubuntu/project/spectral-continuation-operator/artifacts/ocean_multifidelity_formal_pilot/high.npz",
+      "sha256": "7f94aecbaac3a3cf1f62f395a72dd59d229a49a0b3a525656a1187a4459ce5d3"
+    },
+    "population_prior": null,
+    "environment_count": 2,
+    "environment_ids_sha256": "af11f9d88fba591cb284b9180d8e4cc1511be2b0b1fe4e477d05a1d493f7d3b0",
+    "identity_guard": {
+      "same_resolved_path": false,
+      "same_sha256": false,
+      "fidelity_independent": true,
+      "legacy_same_archive_smoke": false,
+      "formal_protocol_validated": true,
+      "paired_identity_sha256": "834451c6f6486a76448861d4f558c949b08b999e6633d434eaa8692f909f6f91"
+    }
+  },
+  "sensor_access_contract": {
+    "high_fidelity_predictor_input_frequencies_hz": [
+      101.0,
+      102.0,
+      103.0,
+      104.0,
+      105.0,
+      106.0
+    ],
+    "low_fidelity_query_input_frequencies_hz": [
+      107.0,
+      108.0,
+      109.0,
+      110.0,
+      111.0,
+      112.0
+    ],
+    "high_fidelity_query_target_frequencies_hz": [
+      107.0,
+      108.0,
+      109.0,
+      110.0,
+      111.0,
+      112.0
+    ],
+    "high_fidelity_query_sensor_access": false,
+    "prediction_constructed_before_target_binding": true
+  },
+  "calibration_frequencies_hz": [
+    101.0,
+    102.0,
+    103.0,
+    104.0,
+    105.0,
+    106.0
+  ],
+  "query_frequencies_hz": [
+    107.0,
+    108.0,
+    109.0,
+    110.0,
+    111.0,
+    112.0
+  ],
+  "methods": {
+    "cheap_query": {
+      "macro_107_112": {
+        "complex_rel_l2": 0.7057134509086609,
+        "amplitude_rel_l2": 0.5103368759155273,
+        "weighted_phase_mae_rad": 0.6819300651550293,
+        "phase_coherence": 0.6760639548301697
+      },
+      "per_query": [
+        {
+          "query_hz": 107.0,
+          "complex_rel_l2": 0.7070283889770508,
+          "amplitude_rel_l2": 0.5139733552932739,
+          "weighted_phase_mae_rad": 0.6809810996055603,
+          "phase_coherence": 0.67577064037323
+        },
+        {
+          "query_hz": 108.0,
+          "complex_rel_l2": 0.7060004472732544,
+          "amplitude_rel_l2": 0.5123546719551086,
+          "weighted_phase_mae_rad": 0.6778979301452637,
+          "phase_coherence": 0.6752009391784668
+        },
+        {
+          "query_hz": 109.0,
+          "complex_rel_l2": 0.7049844264984131,
+          "amplitude_rel_l2": 0.5095405578613281,
+          "weighted_phase_mae_rad": 0.6819725632667542,
+          "phase_coherence": 0.6756211519241333
+        },
+        {
+          "query_hz": 110.0,
+          "complex_rel_l2": 0.7039575576782227,
+          "amplitude_rel_l2": 0.5101290941238403,
+          "weighted_phase_mae_rad": 0.6786330938339233,
+          "phase_coherence": 0.6767768859863281
+        },
+        {
+          "query_hz": 111.0,
+          "complex_rel_l2": 0.7053893804550171,
+          "amplitude_rel_l2": 0.507509171962738,
+          "weighted_phase_mae_rad": 0.6861992478370667,
+          "phase_coherence": 0.6765543818473816
+        },
+        {
+          "query_hz": 112.0,
+          "complex_rel_l2": 0.7069203853607178,
+          "amplitude_rel_l2": 0.5085144639015198,
+          "weighted_phase_mae_rad": 0.685896635055542,
+          "phase_coherence": 0.6764591932296753
+        }
+      ],
+      "solver_cost": {
+        "training_steps": 0,
+        "trainable_parameters": 0,
+        "cheap_solver_query_calls_per_environment": 6,
+        "high_fidelity_calibration_sensor_calls_per_environment": 0,
+        "high_fidelity_query_sensor_calls_per_environment": 0,
+        "evaluation_only_high_fidelity_target_fields_per_environment": 6,
+        "closed_form_complex_fits_per_spatial_location": 0,
+        "linear_state_dimension": 0
+      },
+      "oracle_gap": {
+        "absolute_rel_l2_gap_to_dense_calibration_ar1": 0.11075806617736816,
+        "relative_improvement_vs_best_uncalibrated_percent": 0.0
+      }
+    },
+    "dense_calibration_ar1": {
+      "macro_107_112": {
+        "complex_rel_l2": 0.5949553847312927,
+        "amplitude_rel_l2": 0.3824036121368408,
+        "weighted_phase_mae_rad": 0.6028568744659424,
+        "phase_coherence": 0.7088455557823181
+      },
+      "per_query": [
+        {
+          "query_hz": 107.0,
+          "complex_rel_l2": 0.38263413310050964,
+          "amplitude_rel_l2": 0.25705939531326294,
+          "weighted_phase_mae_rad": 0.3999543786048889,
+          "phase_coherence": 0.8259162902832031
+        },
+        {
+          "query_hz": 108.0,
+          "complex_rel_l2": 0.5128239989280701,
+          "amplitude_rel_l2": 0.3389222025871277,
+          "weighted_phase_mae_rad": 0.544826865196228,
+          "phase_coherence": 0.7411980628967285
+        },
+        {
+          "query_hz": 109.0,
+          "complex_rel_l2": 0.5917874574661255,
+          "amplitude_rel_l2": 0.37711918354034424,
+          "weighted_phase_mae_rad": 0.6192426681518555,
+          "phase_coherence": 0.6989067792892456
+        },
+        {
+          "query_hz": 110.0,
+          "complex_rel_l2": 0.6478474140167236,
+          "amplitude_rel_l2": 0.41751259565353394,
+          "weighted_phase_mae_rad": 0.6493337154388428,
+          "phase_coherence": 0.6819348335266113
+        },
+        {
+          "query_hz": 111.0,
+          "complex_rel_l2": 0.696381151676178,
+          "amplitude_rel_l2": 0.43946653604507446,
+          "weighted_phase_mae_rad": 0.6920976638793945,
+          "phase_coherence": 0.6584122180938721
+        },
+        {
+          "query_hz": 112.0,
+          "complex_rel_l2": 0.7382581233978271,
+          "amplitude_rel_l2": 0.4643416404724121,
+          "weighted_phase_mae_rad": 0.7116860151290894,
+          "phase_coherence": 0.6467050313949585
+        }
+      ],
+      "solver_cost": {
+        "training_steps": 0,
+        "trainable_parameters": 0,
+        "cheap_solver_query_calls_per_environment": 6,
+        "high_fidelity_calibration_sensor_calls_per_environment": 6,
+        "high_fidelity_query_sensor_calls_per_environment": 0,
+        "evaluation_only_high_fidelity_target_fields_per_environment": 6,
+        "closed_form_complex_fits_per_spatial_location": 1,
+        "linear_state_dimension": 1
+      },
+      "oracle_gap": {
+        "absolute_rel_l2_gap_to_dense_calibration_ar1": 0.0,
+        "relative_improvement_vs_best_uncalibrated_percent": 15.694481384017628
+      }
+    },
+    "damped_velocity_linear_state": {
+      "macro_107_112": {
+        "complex_rel_l2": 0.745729386806488,
+        "amplitude_rel_l2": 0.445757657289505,
+        "weighted_phase_mae_rad": 0.7334539294242859,
+        "phase_coherence": 0.6216323375701904
+      },
+      "per_query": [
+        {
+          "query_hz": 107.0,
+          "complex_rel_l2": 0.4993579685688019,
+          "amplitude_rel_l2": 0.30505311489105225,
+          "weighted_phase_mae_rad": 0.5116312503814697,
+          "phase_coherence": 0.7564416527748108
+        },
+        {
+          "query_hz": 108.0,
+          "complex_rel_l2": 0.6588488817214966,
+          "amplitude_rel_l2": 0.3963567912578583,
+          "weighted_phase_mae_rad": 0.6916533708572388,
+          "phase_coherence": 0.6450334787368774
+        },
+        {
+          "query_hz": 109.0,
+          "complex_rel_l2": 0.7466465830802917,
+          "amplitude_rel_l2": 0.4451058506965637,
+          "weighted_phase_mae_rad": 0.7509040832519531,
+          "phase_coherence": 0.6121894121170044
+        },
+        {
+          "query_hz": 110.0,
+          "complex_rel_l2": 0.8157424926757812,
+          "amplitude_rel_l2": 0.4876309633255005,
+          "weighted_phase_mae_rad": 0.7943624258041382,
+          "phase_coherence": 0.5846028923988342
+        },
+        {
+          "query_hz": 111.0,
+          "complex_rel_l2": 0.8582215309143066,
+          "amplitude_rel_l2": 0.5070406198501587,
+          "weighted_phase_mae_rad": 0.8230366110801697,
+          "phase_coherence": 0.5674132108688354
+        },
+        {
+          "query_hz": 112.0,
+          "complex_rel_l2": 0.8955589532852173,
+          "amplitude_rel_l2": 0.5333588123321533,
+          "weighted_phase_mae_rad": 0.8291356563568115,
+          "phase_coherence": 0.5641133189201355
+        }
+      ],
+      "solver_cost": {
+        "training_steps": 0,
+        "trainable_parameters": 0,
+        "cheap_solver_query_calls_per_environment": 6,
+        "high_fidelity_calibration_sensor_calls_per_environment": 6,
+        "high_fidelity_query_sensor_calls_per_environment": 0,
+        "evaluation_only_high_fidelity_target_fields_per_environment": 6,
+        "closed_form_complex_fits_per_spatial_location": 1,
+        "linear_state_dimension": 2
+      },
+      "oracle_gap": {
+        "absolute_rel_l2_gap_to_dense_calibration_ar1": 0.1507740020751953,
+        "relative_improvement_vs_best_uncalibrated_percent": -5.6702810250114295
+      }
+    },
+    "global_rational_ar2": {
+      "macro_107_112": {
+        "complex_rel_l2": 0.6872491240501404,
+        "amplitude_rel_l2": 0.4900350272655487,
+        "weighted_phase_mae_rad": 0.6795401573181152,
+        "phase_coherence": 0.6750819683074951
+      },
+      "per_query": [
+        {
+          "query_hz": 107.0,
+          "complex_rel_l2": 0.6644983887672424,
+          "amplitude_rel_l2": 0.45399904251098633,
+          "weighted_phase_mae_rad": 0.6952557563781738,
+          "phase_coherence": 0.6592910289764404
+        },
+        {
+          "query_hz": 108.0,
+          "complex_rel_l2": 0.675888180732727,
+          "amplitude_rel_l2": 0.4714379906654358,
+          "weighted_phase_mae_rad": 0.6806758642196655,
+          "phase_coherence": 0.6675097346305847
+        },
+        {
+          "query_hz": 109.0,
+          "complex_rel_l2": 0.6843442916870117,
+          "amplitude_rel_l2": 0.4947633147239685,
+          "weighted_phase_mae_rad": 0.669735312461853,
+          "phase_coherence": 0.6815518140792847
+        },
+        {
+          "query_hz": 110.0,
+          "complex_rel_l2": 0.6927038431167603,
+          "amplitude_rel_l2": 0.5042577981948853,
+          "weighted_phase_mae_rad": 0.6656604409217834,
+          "phase_coherence": 0.6846131086349487
+        },
+        {
+          "query_hz": 111.0,
+          "complex_rel_l2": 0.7009017467498779,
+          "amplitude_rel_l2": 0.506522536277771,
+          "weighted_phase_mae_rad": 0.682675302028656,
+          "phase_coherence": 0.6790249347686768
+        },
+        {
+          "query_hz": 112.0,
+          "complex_rel_l2": 0.705157995223999,
+          "amplitude_rel_l2": 0.5092294216156006,
+          "weighted_phase_mae_rad": 0.6832382678985596,
+          "phase_coherence": 0.6785010099411011
+        }
+      ],
+      "solver_cost": {
+        "training_steps": 0,
+        "trainable_parameters": 0,
+        "cheap_solver_query_calls_per_environment": 6,
+        "high_fidelity_calibration_sensor_calls_per_environment": 6,
+        "high_fidelity_query_sensor_calls_per_environment": 0,
+        "evaluation_only_high_fidelity_target_fields_per_environment": 6,
+        "closed_form_complex_fits_per_spatial_location": 1,
+        "linear_state_dimension": 2
+      },
+      "oracle_gap": {
+        "absolute_rel_l2_gap_to_dense_calibration_ar1": 0.09229373931884766,
+        "relative_improvement_vs_best_uncalibrated_percent": 2.6164056862946645
+      }
+    },
+    "global_rational_ar4": {
+      "macro_107_112": {
+        "complex_rel_l2": 0.6780484318733215,
+        "amplitude_rel_l2": 0.4779949486255646,
+        "weighted_phase_mae_rad": 0.681857168674469,
+        "phase_coherence": 0.6732568144798279
+      },
+      "per_query": [
+        {
+          "query_hz": 107.0,
+          "complex_rel_l2": 0.6528348922729492,
+          "amplitude_rel_l2": 0.4458272457122803,
+          "weighted_phase_mae_rad": 0.6889691352844238,
+          "phase_coherence": 0.663976788520813
+        },
+        {
+          "query_hz": 108.0,
+          "complex_rel_l2": 0.6629873514175415,
+          "amplitude_rel_l2": 0.45936036109924316,
+          "weighted_phase_mae_rad": 0.6830174326896667,
+          "phase_coherence": 0.6671959161758423
+        },
+        {
+          "query_hz": 109.0,
+          "complex_rel_l2": 0.6737414598464966,
+          "amplitude_rel_l2": 0.4731624722480774,
+          "weighted_phase_mae_rad": 0.6831198930740356,
+          "phase_coherence": 0.6715565919876099
+        },
+        {
+          "query_hz": 110.0,
+          "complex_rel_l2": 0.6846624612808228,
+          "amplitude_rel_l2": 0.48969966173171997,
+          "weighted_phase_mae_rad": 0.6738056540489197,
+          "phase_coherence": 0.6786519289016724
+        },
+        {
+          "query_hz": 111.0,
+          "complex_rel_l2": 0.6936612129211426,
+          "amplitude_rel_l2": 0.4959111511707306,
+          "weighted_phase_mae_rad": 0.6820168495178223,
+          "phase_coherence": 0.6785355806350708
+        },
+        {
+          "query_hz": 112.0,
+          "complex_rel_l2": 0.7004034519195557,
+          "amplitude_rel_l2": 0.5040090680122375,
+          "weighted_phase_mae_rad": 0.6802141070365906,
+          "phase_coherence": 0.6796241998672485
+        }
+      ],
+      "solver_cost": {
+        "training_steps": 0,
+        "trainable_parameters": 0,
+        "cheap_solver_query_calls_per_environment": 6,
+        "high_fidelity_calibration_sensor_calls_per_environment": 6,
+        "high_fidelity_query_sensor_calls_per_environment": 0,
+        "evaluation_only_high_fidelity_target_fields_per_environment": 6,
+        "closed_form_complex_fits_per_spatial_location": 1,
+        "linear_state_dimension": 4
+      },
+      "oracle_gap": {
+        "absolute_rel_l2_gap_to_dense_calibration_ar1": 0.08309304714202881,
+        "relative_improvement_vs_best_uncalibrated_percent": 3.920149034954413
+      }
+    }
+  },
+  "task_gate": {
+    "threshold_relative_improvement_percent": 30.0,
+    "required_query_coverage_hz": [
+      107.0,
+      108.0,
+      109.0,
+      110.0
+    ],
+    "best_uncalibrated_method": "cheap_query",
+    "best_calibrated_method": "dense_calibration_ar1",
+    "macro_relative_improvement_percent": 15.694481384017628,
+    "per_query_relative_improvement_percent": {
+      "107": 45.88136291503906,
+      "108": 27.362085342407227,
+      "109": 16.05666160583496,
+      "110": 7.9706711769104
+    },
+    "coverage_present": true,
+    "every_required_query_meets_threshold": false,
+    "fidelity_independent": true,
+    "passed": false,
+    "forced_failure_reason": null
+  },
+  "prediction_wall_seconds_all_methods": 0.007148034870624542
+}

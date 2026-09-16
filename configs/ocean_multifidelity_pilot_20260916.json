@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "status": "development-only microbenchmark and tiny pilot",
+  "frequency_hz": 110.0,
+  "receiver_grid": {
+    "range_start_m": 100.0,
+    "range_end_m": 8000.0,
+    "range_steps": 128,
+    "depth_start_m": 2.0,
+    "depth_end_fraction": 0.98,
+    "depth_steps": 32
+  },
+  "high_fidelity": {
+    "solver_id": "mode_all_auto_grid",
+    "family": "pekeris_mode",
+    "nmodes": 0,
+    "ngrid": 0,
+    "max_bounces": 3
+  },
+  "legacy_high_fidelity_reproduction": {
+    "shard": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/development_shards/ocean_train_00000_75a38a92a0be.npz",
+    "frequency_hz": 110.0,
+    "complex_rel_l2_max": 0.000001,
+    "phase_coherence_min": 0.999999
+  },
+  "low_fidelity_candidates": [
+    {
+      "solver_id": "mode_n4",
+      "family": "pekeris_mode",
+      "nmodes": 4,
+      "ngrid": 0,
+      "max_bounces": 3
+    },
+    {
+      "solver_id": "mode_n8",
+      "family": "pekeris_mode",
+      "nmodes": 8,
+      "ngrid": 0,
+      "max_bounces": 3
+    },
+    {
+      "solver_id": "mode_n12",
+      "family": "pekeris_mode",
+      "nmodes": 12,
+      "ngrid": 0,
+      "max_bounces": 3
+    },
+    {
+      "solver_id": "mode_coarse_grid_11",
+      "family": "pekeris_mode",
+      "nmodes": 0,
+      "ngrid": 11,
+      "max_bounces": 3
+    },
+    {
+      "solver_id": "ray_bounces_1",
+      "family": "pekeris_ray",
+      "nmodes": 0,
+      "ngrid": 0,
+      "max_bounces": 1
+    },
+    {
+      "solver_id": "ray_bounces_3",
+      "family": "pekeris_ray",
+      "nmodes": 0,
+      "ngrid": 0,
+      "max_bounces": 3
+    }
+  ],
+  "benchmark": {
+    "repetitions": 5
+  },
+  "go_gate": {
+    "median_wall_time_speedup_min": 1.5,
+    "median_allocation_reduction_min": 1.2,
+    "median_complex_rel_l2_max": 0.8,
+    "median_phase_coherence_min": 0.65
+  },
+  "audit_environments": [
+    {
+      "case_id": "shallow_090m",
+      "water_speed_mps": 1485.0,
+      "water_depth_m": 90.0,
+      "seabed_speed_mps": 1750.0,
+      "seabed_density_kgm3": 1800.0,
+      "source_depth_m": 18.0
+    },
+    {
+      "case_id": "shelf_130m",
+      "water_speed_mps": 1500.0,
+      "water_depth_m": 130.0,
+      "seabed_speed_mps": 1850.0,
+      "seabed_density_kgm3": 1950.0,
+      "source_depth_m": 35.0
+    },
+    {
+      "case_id": "shelf_200m",
+      "water_speed_mps": 1510.0,
+      "water_depth_m": 200.0,
+      "seabed_speed_mps": 1950.0,
+      "seabed_density_kgm3": 2050.0,
+      "source_depth_m": 60.0
+    },
+    {
+      "case_id": "deep_260m",
+      "water_speed_mps": 1495.0,
+      "water_depth_m": 260.0,
+      "seabed_speed_mps": 2050.0,
+      "seabed_density_kgm3": 2150.0,
+      "source_depth_m": 80.0
+    }
+  ],
+  "pilot_environments": [
+    {
+      "case_id": "pilot_100m",
+      "water_speed_mps": 1490.0,
+      "water_depth_m": 100.0,
+      "seabed_speed_mps": 1800.0,
+      "seabed_density_kgm3": 1850.0,
+      "source_depth_m": 24.0,
+      "source_id": "source_024m",
+      "split": "train"
+    },
+    {
+      "case_id": "pilot_160m",
+      "water_speed_mps": 1505.0,
+      "water_depth_m": 160.0,
+      "seabed_speed_mps": 1900.0,
+      "seabed_density_kgm3": 2000.0,
+      "source_depth_m": 45.0,
+      "source_id": "source_045m",
+      "split": "validation"
+    },
+    {
+      "case_id": "pilot_220m",
+      "water_speed_mps": 1498.0,
+      "water_depth_m": 220.0,
+      "seabed_speed_mps": 2000.0,
+      "seabed_density_kgm3": 2100.0,
+      "source_depth_m": 70.0,
+      "source_id": "source_070m",
+      "split": "validation"
+    }
+  ],
+  "pilot": {
+    "selected_candidate": "mode_n8",
+    "frequencies_hz": [
+      101.0,
+      102.0,
+      103.0,
+      104.0,
+      105.0,
+      106.0,
+      107.0,
+      108.0,
+      109.0,
+      110.0,
+      111.0,
+      112.0
+    ],
+    "receiver_grid": {
+      "range_start_m": 100.0,
+      "range_end_m": 8000.0,
+      "range_steps": 128,
+      "depth_start_m": 2.0,
+      "depth_end_m": 80.0,
+      "depth_steps": 32
+    }
+  }
+}

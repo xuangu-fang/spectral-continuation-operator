@@ -151,13 +151,18 @@ $$
 
 ## 9. 当前研究决策
 
-下一阶段优先验证任务是否在真实 fidelity gap 下仍成立，而不是继续调当前 AR calibrator。采用两级
-gate：
+2026-09-16 已完成真实 fidelity gap 的第一轮 P0。Ocean LF/HF 由独立 Pekeris 求解产生，8-mode LF
+在适用环境中约有 1.8--2.1 倍求解加速；但 dense 101--106 Hz calibration oracle 在 107--112 Hz
+只将 raw complex RelL2 从 0.7057 降到 0.5950，改善 15.69%，且到 112 Hz 已变为负收益。因此 task
+gate 未通过，当前不训练新的 calibrator，也不把单步 107 Hz 正结果改写成完整 continuation 成功。
+
+项目仍采用两级 gate：
 
 1. **Task gate**：独立产生的 cheap prior 加 sparse high-fidelity calibration，必须能改善完全无观测
    query；
 2. **Representation gate**：只有 task gate 通过，才比较物理结构化 latent state 与通用 set encoder、
    latent optimization 和参数高效微调。
 
-下一阶段具体协议见
-[Few-shot Spectral Calibration POC](FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)。
+具体协议见 [Few-shot Spectral Calibration POC](FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)，实证结论见
+[独立多保真 P0 Gate 报告](../reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)。若以后重启，先改变
+fidelity 定义或校准的信息结构，并要求新的 dense oracle 在更大实例集通过，再进入表征学习。
