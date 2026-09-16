@@ -3,13 +3,13 @@
 从廉价模拟先验和少量测试时观测中辨识新物理实例的谱响应算子，并在完全无观测的条件上查询
 复杂波场。
 
-核心问题不是固定的 `20 Hz → 40 Hz` 映射，而是 few-shot spectral system identification：预训练
+核心问题不是固定的 `20 Hz → 40 Hz` 映射，而是 few-shot spectral calibration：预训练
 模型提供跨实例共享的幅值和空间先验，固定稀疏阵列的短频率 sweep 辨识实例相关的 phase-sensitive
 latent state，连续 query operator 再回答 support 未覆盖的频率和空间位置。
 
 当前统一任务定义、应用原型、声明边界和强制报告规则见
 [研究记忆](docs/RESEARCH_MEMORY_ZH.md)。频率外推是主要 benchmark；新实例上的 latent operator
-identification 才是 AI 任务。
+calibration 才是 AI 任务；system identification 只解释 calibration 所恢复的内部状态。
 
 最新阶段首先诊断了原始 `74–80 Hz → 110 Hz` 长程设置：误差随传播距离和真实谱相位曲率
 显著增加，增加 pole 数、仿射多分量、Neural ODE 和局部曲率都不能突破可辨识性边界。随后在
@@ -44,7 +44,7 @@ Transformer 或 mask 路线。
 ## 阅读顺序
 
 1. [当前研究记忆](docs/RESEARCH_MEMORY_ZH.md)：统一任务、AI 定位、应用原型和不可越过的声明边界；
-2. [下一阶段 POC 设计](docs/FEW_SHOT_SPECTRAL_OPERATOR_IDENTIFICATION_POC_ZH.md)：独立 fidelity、
+2. [下一阶段 POC 设计](docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)：独立 fidelity、
    最小方法阶梯、baseline、预算和 gate；
 3. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
    复谱状态、三 seed 正式结果和 NO-GO 判定；

@@ -226,7 +226,7 @@ environments 上达到 0.3106，相对 LF-only 的三 seed 0.4106 有约 24.4% �
 ## 10. 后续任务定位说明
 
 本预注册协议保留为历史记录，不回溯修改。后续研究不再把 `90--100 Hz → 107--125 Hz` 的固定映射
-视为最终任务，而将它作为 few-shot spectral operator identification 的一个 benchmark。
+视为最终任务，而将它作为 few-shot spectral calibration 的一个 benchmark。
 
 当前协议中的完整 90--100 Hz 输入来自同一个 high-fidelity archive，因此还不能被称为 cheap
 simulator prior；主设置的 0.5% 也只表示每个频率的空间覆盖，实际预算为 92 个固定传感器、六个
@@ -234,4 +234,4 @@ calibration frequencies、共 552 个复数观测。新的 multi-fidelity claim 
 low/high fidelity pairs 上。
 
 当前统一 framing 见[研究记忆](RESEARCH_MEMORY_ZH.md)，下一阶段实验设置见
-[Few-shot Spectral Operator Identification POC](FEW_SHOT_SPECTRAL_OPERATOR_IDENTIFICATION_POC_ZH.md)。
+[Few-shot Spectral Calibration POC](FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)。

@@ -10,7 +10,7 @@
 实例化 calibrated digital twin 所需的真实 low/high fidelity gap。
 
 今后的核心任务是
-[Few-shot Spectral System Identification](../docs/RESEARCH_MEMORY_ZH.md)：用 pretrained
+[Few-shot Spectral Calibration](../docs/RESEARCH_MEMORY_ZH.md)：用 pretrained
 population prior、独立产生的 cheap simulator prior 和少量 high-fidelity support，辨识新实例的
 latent operator，再回答完全无观测的条件查询。频率外推是 benchmark，不是最终任务名称。
 
@@ -243,7 +243,7 @@ field 的表示与归纳偏置。
 下通过 task gate，才启动 2--4 component spectral state。
 
 完整的最小实验矩阵、baseline、成本核算和停止规则见
-[下一阶段 POC 设计](../docs/FEW_SHOT_SPECTRAL_OPERATOR_IDENTIFICATION_POC_ZH.md)。sensor placement、噪声、
+[下一阶段 POC 设计](../docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)。sensor placement、噪声、
 Transformer、diffusion 和第二数据集全部后置。
 
 ## 10. 证据入口

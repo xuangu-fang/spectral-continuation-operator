@@ -1,4 +1,4 @@
-# 研究记忆：Few-shot Spectral Operator Identification
+# 研究记忆：Few-shot Spectral Calibration
 
 更新日期：2026-09-16
 
@@ -15,14 +15,14 @@
 
 暂定英文名称：
 
-**Few-shot Spectral System Identification for Neural Operators**
+**Few-shot Spectral Calibration of Neural Operators**
 
 备选名称：
 
-**Sparse Spectral Adaptation of Pretrained Neural Operators**
+**Sparse Spectral Calibration of Pretrained Neural Operators**
 
-“frequency extrapolation”是主要 benchmark；“few-shot latent operator identification”才是 AI
-任务。
+“frequency extrapolation”是主要 benchmark；“few-shot calibration of a latent operator”才是 AI
+任务。System identification 描述 calibration 所恢复的内部机制，不作为论文主任务名称。
 
 ## 2. 形式化
 
@@ -160,4 +160,4 @@ gate：
    latent optimization 和参数高效微调。
 
 下一阶段具体协议见
-[Few-shot Spectral Operator Identification POC](FEW_SHOT_SPECTRAL_OPERATOR_IDENTIFICATION_POC_ZH.md)。
+[Few-shot Spectral Calibration POC](FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)。

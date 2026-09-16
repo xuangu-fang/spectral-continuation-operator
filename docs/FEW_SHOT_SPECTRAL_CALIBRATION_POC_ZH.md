@@ -1,4 +1,4 @@
-# 下一阶段 POC：Few-shot Spectral Operator Identification
+# 下一阶段 POC：Few-shot Spectral Calibration
 
 日期：2026-09-16
 
