@@ -22,6 +22,7 @@ from spectral_continuation.representation import (
     CarrierGaugedPoleOperator,
     ComplexDelayOperator,
     EquivariantSpectralGenerator,
+    LocalSpanQueryOperator,
     PhaseEquivariantNeuralODE,
     StableSpectralStateOperator,
     phase_equivariance_error,
@@ -230,6 +231,27 @@ def test_carrier_gauged_poles_are_continuous_anchored_and_phase_equivariant():
     )
     assert torch.allclose(endpoint.carrier_slope(fields), expected_increment)
 
+    tokenized = CarrierGaugedPoleOperator(
+        visible,
+        environment_channels=2,
+        poles=2,
+        width=8,
+        blocks=1,
+        carrier_estimator="endpoint_increment",
+        local_carrier_token_grid=(2, 3),
+        local_carrier_token_width=8,
+    )
+    loaded = tokenized.load_state_dict(endpoint.state_dict(), strict=False)
+    assert loaded.missing_keys
+    assert not loaded.unexpected_keys
+    assert torch.allclose(
+        tokenized(fields, context, fractional),
+        endpoint(fields, context, fractional),
+        rtol=1e-5,
+        atol=1e-5,
+    )
+    assert phase_equivariance_error(tokenized, fields, context, fractional) < 2e-5
+
     hyper = CarrierGaugedPoleOperator(
         visible,
         environment_channels=2,
@@ -356,3 +378,26 @@ def test_global_subspace_helpers_recover_low_rank_continuous_sequence():
     rotation = torch.polar(torch.ones(()), torch.tensor(0.37))
     rotated = _gauge(rotation * field, frequencies, visible_count=4)
     assert torch.allclose(gauged, rotated, atol=2e-5)
+
+
+def test_local_span_query_is_phase_equivariant_and_supports_token_masks():
+    torch.manual_seed(23)
+    visible = (90.0, 91.0, 92.0, 93.0)
+    model = LocalSpanQueryOperator(
+        visible,
+        environment_channels=2,
+        token_grid=(2, 4),
+        width=16,
+        blocks=2,
+    )
+    fields = torch.complex(torch.randn(3, 4, 8, 16), torch.randn(3, 4, 8, 16))
+    context = torch.randn(3, 5, 8, 16)
+    query = torch.tensor([94.0, 95.0, 96.0])
+    output = model(fields, context, query)
+    assert output.shape == (3, 8, 16)
+    assert torch.allclose(output, fields[:, -1])
+    assert phase_equivariance_error(model, fields, context, query) < 2e-6
+    frequency_loss = model.masked_reconstruction_loss(fields, context, "frequency")
+    joint_loss = model.masked_reconstruction_loss(fields, context, "joint")
+    assert torch.isfinite(frequency_loss)
+    assert torch.isfinite(joint_loss)

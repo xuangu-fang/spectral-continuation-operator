@@ -23,6 +23,7 @@ from .representation import (
     ComplexDelayOperator,
     EquivariantSpectralGenerator,
     ImageQueryOperator,
+    LocalSpanQueryOperator,
     PhaseEquivariantNeuralODE,
     StableSpectralStateOperator,
     phase_equivariance_error,
@@ -141,6 +142,18 @@ def build_model(args, visible, environment_channels, frequency_scale):
             max_delay=args.max_delay,
             frequency_scale=frequency_scale,
         )
+    if args.model == "local_span":
+        return LocalSpanQueryOperator(
+            visible,
+            environment_channels,
+            token_grid=tuple(args.token_grid),
+            width=args.state_width,
+            blocks=args.blocks,
+            frequency_scale=args.token_frequency_scale,
+            weight_bound=args.token_weight_bound,
+            joint_mask_fraction=args.joint_mask_fraction,
+            carrier_mode=args.token_carrier,
+        )
     if args.model == "carrier_poles":
         return CarrierGaugedPoleOperator(
             visible,
@@ -172,6 +185,16 @@ def build_model(args, visible, environment_channels, frequency_scale):
             max_hyper_slope_per_hz=getattr(args, "max_hyper_slope_per_hz", 0.08),
             max_hyper_curvature_per_hz2=getattr(
                 args, "max_hyper_curvature_per_hz2", 0.005
+            ),
+            local_carrier_token_grid=(
+                tuple(args.local_carrier_token_grid)
+                if args.local_carrier_token_grid is not None
+                else None
+            ),
+            local_carrier_token_width=args.local_carrier_token_width,
+            max_local_token_slope_per_hz=args.max_local_token_slope_per_hz,
+            max_local_token_curvature_per_hz2=(
+                args.max_local_token_curvature_per_hz2
             ),
         )
     if args.model == "component_generator":
@@ -252,7 +275,13 @@ def run(args):
         FrequencyBandDataset
         if args.grouped_training
         and args.model
-        in {"carrier_poles", "stable_recurrence", "component_generator", "carrier_ode"}
+        in {
+            "carrier_poles",
+            "stable_recurrence",
+            "component_generator",
+            "carrier_ode",
+            "local_span",
+        }
         else FrequencySetDataset
     )
     selection_dataset = evaluation_dataset_type(
@@ -299,10 +328,27 @@ def run(args):
         train_dataset.environment_channels,
         normalization.frequency_scale,
     ).to(device)
+    checkpoint_load = None
     if args.initial_checkpoint is not None:
         initial = torch.load(args.initial_checkpoint, map_location=device, weights_only=False)
-        model.load_state_dict(initial["model"])
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
+        incompatible = model.load_state_dict(
+            initial["model"], strict=not args.allow_partial_initial_checkpoint
+        )
+        checkpoint_load = {
+            "missing_keys": incompatible.missing_keys,
+            "unexpected_keys": incompatible.unexpected_keys,
+        }
+    if args.freeze_initial_backbone:
+        if args.initial_checkpoint is None:
+            raise ValueError("freezing the initial backbone requires --initial-checkpoint")
+        for name, parameter in model.named_parameters():
+            parameter.requires_grad = name.startswith("local_carrier_")
+    trainable_parameters = [parameter for parameter in model.parameters() if parameter.requires_grad]
+    if not trainable_parameters:
+        raise ValueError("the model has no trainable parameters")
+    optimizer = torch.optim.AdamW(
+        trainable_parameters, lr=args.lr, weight_decay=args.weight_decay
+    )
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
     selection, _ = evaluate(
         model, selection_loader, train_queries, normalization, device
@@ -380,6 +426,10 @@ def run(args):
             ) and args.history_weight > 0:
                 loss = loss + args.history_weight * model.visible_reconstruction_loss(
                     fields, context
+                )
+            if isinstance(model, LocalSpanQueryOperator) and args.mask_weight > 0:
+                loss = loss + args.mask_weight * model.masked_reconstruction_loss(
+                    fields, context, args.mask_pretraining
                 )
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
@@ -467,6 +517,7 @@ def run(args):
         "selection_query_frequencies_hz": train_queries,
         "test_query_frequencies_hz": test_queries,
         "parameters": parameter_count(model),
+        "trainable_parameters": sum(parameter.numel() for parameter in trainable_parameters),
         "selected_epoch": best_epoch,
         "selection": selection,
         "extrapolation": extrapolation,
@@ -477,6 +528,7 @@ def run(args):
             else None
         ),
         "checkpoint_sha256": sha256_file(checkpoint_path),
+        "initial_checkpoint_load": checkpoint_load,
         "lineage": bundle.lineage,
         "elapsed_seconds": time.perf_counter() - started,
         "args": {
@@ -501,6 +553,7 @@ def parse_args():
             "carrier_poles",
             "component_generator",
             "carrier_ode",
+            "local_span",
         ),
         required=True,
     )
@@ -557,8 +610,23 @@ def parse_args():
     parser.add_argument("--hyper-carrier-correction", action="store_true")
     parser.add_argument("--max-hyper-slope-per-hz", type=float, default=0.08)
     parser.add_argument("--max-hyper-curvature-per-hz2", type=float, default=0.005)
+    parser.add_argument("--local-carrier-token-grid", type=int, nargs=2)
+    parser.add_argument("--local-carrier-token-width", type=int, default=32)
+    parser.add_argument("--max-local-token-slope-per-hz", type=float, default=0.08)
+    parser.add_argument("--max-local-token-curvature-per-hz2", type=float, default=0.005)
     parser.add_argument("--ode-teacher-forcing", action="store_true")
+    parser.add_argument("--token-grid", type=int, nargs=2, default=(4, 8))
+    parser.add_argument("--token-frequency-scale", type=float, default=10.0)
+    parser.add_argument("--token-weight-bound", type=float, default=2.0)
+    parser.add_argument("--token-carrier", choices=("raw", "endpoint"), default="raw")
+    parser.add_argument(
+        "--mask-pretraining", choices=("frequency", "joint"), default="frequency"
+    )
+    parser.add_argument("--mask-weight", type=float, default=0.0)
+    parser.add_argument("--joint-mask-fraction", type=float, default=0.5)
     parser.add_argument("--initial-checkpoint", type=Path)
+    parser.add_argument("--allow-partial-initial-checkpoint", action="store_true")
+    parser.add_argument("--freeze-initial-backbone", action="store_true")
     parser.add_argument("--width", type=int, default=8)
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--batch-size", type=int, default=16)

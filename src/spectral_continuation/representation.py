@@ -198,6 +198,299 @@ class ImageQueryOperator(nn.Module):
         return torch.complex(raw[:, 0], raw[:, 1])
 
 
+class TokenResidualBlock(nn.Module):
+    """Small residual mixer on the spatial token grid."""
+
+    def __init__(self, channels: int):
+        super().__init__()
+        groups = min(8, channels)
+        while channels % groups:
+            groups -= 1
+        self.net = nn.Sequential(
+            nn.Conv2d(channels, channels, 3, padding=1),
+            nn.GroupNorm(groups, channels),
+            nn.SiLU(),
+            nn.Conv2d(channels, channels, 3, padding=1),
+            nn.GroupNorm(groups, channels),
+        )
+        self.scale = nn.Parameter(torch.tensor(0.1))
+
+    def forward(self, value: torch.Tensor) -> torch.Tensor:
+        return value + self.scale * self.net(value)
+
+
+class LocalSpanQueryOperator(nn.Module):
+    """Predict query-dependent local coefficients over the visible field span.
+
+    The coefficient network sees only phase-invariant patch statistics. Its
+    complex coefficients are smoothly upsampled and applied to the visible
+    complex fields, so the complete operator is equivariant to a shared global
+    phase rotation.  The construction is the learned counterpart of the patch
+    projection oracle in :mod:`diagnose_global_subspace`.
+    """
+
+    def __init__(
+        self,
+        visible_frequencies: tuple[float, ...],
+        environment_channels: int,
+        *,
+        token_grid: tuple[int, int] = (4, 8),
+        width: int = 64,
+        blocks: int = 4,
+        frequency_scale: float = 10.0,
+        weight_bound: float = 2.0,
+        joint_mask_fraction: float = 0.5,
+        carrier_mode: str = "raw",
+    ):
+        super().__init__()
+        if min(token_grid) < 1:
+            raise ValueError("token grid dimensions must be positive")
+        if len(visible_frequencies) < 3:
+            raise ValueError("local span query requires at least three visible fields")
+        self.register_buffer(
+            "visible_frequency_tensor",
+            torch.tensor(visible_frequencies, dtype=torch.float32),
+        )
+        self.visible_frequencies = tuple(map(float, visible_frequencies))
+        self.reference_frequency = float(visible_frequencies[-1])
+        self.token_grid = tuple(map(int, token_grid))
+        self.frequency_scale = float(frequency_scale)
+        self.weight_bound = float(weight_bound)
+        self.joint_mask_fraction = float(joint_mask_fraction)
+        self.carrier_mode = carrier_mode
+        if carrier_mode not in {"raw", "endpoint"}:
+            raise ValueError(f"unknown local span carrier mode: {carrier_mode}")
+        count = len(visible_frequencies)
+        # Magnitude, adjacent complex correlation, endpoint complex correlation,
+        # observation flag, and environment/coordinates.  The encoded state is
+        # deliberately query-independent; a bounded quadratic generator below
+        # supplies the continuous query dependence.
+        input_channels = count + 2 * (count - 1) + 2 * count + count
+        input_channels += environment_channels + 2
+        groups = min(8, width)
+        while width % groups:
+            groups -= 1
+        self.stem = nn.Sequential(
+            nn.Conv2d(input_channels, width, 1),
+            nn.GroupNorm(groups, width),
+            nn.SiLU(),
+        )
+        self.blocks = nn.ModuleList(TokenResidualBlock(width) for _ in range(blocks))
+        self.head = nn.Conv2d(width, 4 * count, 1)
+        nn.init.zeros_(self.head.weight)
+        nn.init.zeros_(self.head.bias)
+
+    @staticmethod
+    def _confidence_correlation(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
+        cross = left * right.conj()
+        denominator = left.abs().square() + right.abs().square() + 1e-8
+        return 2.0 * cross / denominator
+
+    def _full_resolution_mask(
+        self, token_mask: torch.Tensor, shape: tuple[int, int]
+    ) -> torch.Tensor:
+        return F.interpolate(token_mask, size=shape, mode="nearest")
+
+    def invariant_tokens(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequency: torch.Tensor,
+        token_mask: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        full_mask = self._full_resolution_mask(token_mask, fields.shape[-2:])
+        observed = fields * full_mask
+        if self.carrier_mode == "endpoint":
+            step = self.visible_frequency_tensor[-1] - self.visible_frequency_tensor[-2]
+            slope = torch.angle(fields[:, -1] * fields[:, -2].conj()) / step
+            reference = fields[:, -1] / fields[:, -1].abs().clamp_min(1e-8)
+            visible_delta = self.visible_frequency_tensor.to(fields.device)
+            visible_delta = visible_delta - self.reference_frequency
+            visible_carrier = reference[:, None] * torch.polar(
+                torch.ones_like(observed.real),
+                slope[:, None] * visible_delta.view(1, -1, 1, 1),
+            )
+            representation = observed * visible_carrier.conj()
+            query_delta = query_frequency - self.reference_frequency
+            query_carrier = reference * torch.polar(
+                torch.ones_like(reference.real), slope * query_delta[:, None, None]
+            )
+        else:
+            representation = observed
+            query_carrier = torch.ones_like(fields[:, 0])
+        adjacent = self._confidence_correlation(
+            representation[:, 1:], representation[:, :-1]
+        )
+        endpoint = representation[:, -1:]
+        relative = self._confidence_correlation(representation, endpoint)
+        invariant = torch.cat(
+            (
+                representation.abs(),
+                adjacent.real,
+                adjacent.imag,
+                relative.real,
+                relative.imag,
+                full_mask,
+                environment_and_coordinates[:, :-1],
+            ),
+            dim=1,
+        )
+        return (
+            F.adaptive_avg_pool2d(invariant, self.token_grid),
+            representation,
+            query_carrier,
+        )
+
+    def coefficient_tokens(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequency: torch.Tensor,
+        token_mask: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        tokens, representation, query_carrier = self.invariant_tokens(
+            fields, environment_and_coordinates, query_frequency, token_mask
+        )
+        hidden = self.stem(tokens)
+        for block in self.blocks:
+            hidden = block(hidden)
+        raw = self.head(hidden)
+        count = len(self.visible_frequencies)
+        slope = torch.complex(
+            torch.tanh(raw[:, :count]), torch.tanh(raw[:, count : 2 * count])
+        )
+        curvature = torch.complex(
+            torch.tanh(raw[:, 2 * count : 3 * count]),
+            torch.tanh(raw[:, 3 * count :]),
+        )
+        delta = (
+            (query_frequency - self.reference_frequency) / self.frequency_scale
+        ).view(-1, 1, 1, 1)
+        correction = self.weight_bound * (
+            delta * slope + 0.5 * delta.square() * curvature
+        )
+        # The exact endpoint anchor stabilizes optimization and makes the
+        # reference-frequency query an identity before learning.
+        base = torch.zeros_like(correction)
+        base[:, -1] = 1.0
+        coefficients = base + correction
+        return coefficients, representation, query_carrier
+
+    def _forward_with_mask(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequency: torch.Tensor,
+        token_mask: torch.Tensor,
+    ) -> torch.Tensor:
+        coefficients, representation, query_carrier = self.coefficient_tokens(
+            fields, environment_and_coordinates, query_frequency, token_mask
+        )
+        real = F.interpolate(
+            coefficients.real, size=fields.shape[-2:], mode="bilinear", align_corners=False
+        )
+        imaginary = F.interpolate(
+            coefficients.imag,
+            size=fields.shape[-2:],
+            mode="bilinear",
+            align_corners=False,
+        )
+        coefficients = torch.complex(real, imaginary)
+        return query_carrier * torch.sum(coefficients * representation, dim=1)
+
+    def forward(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequency: torch.Tensor,
+    ) -> torch.Tensor:
+        token_mask = torch.ones(
+            fields.shape[0],
+            fields.shape[1],
+            *self.token_grid,
+            device=fields.device,
+            dtype=fields.real.dtype,
+        )
+        return self._forward_with_mask(
+            fields, environment_and_coordinates, query_frequency, token_mask
+        )
+
+    def forward_queries(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequencies: tuple[float, ...],
+    ) -> torch.Tensor:
+        outputs = []
+        for frequency in query_frequencies:
+            query = torch.full(
+                (fields.shape[0],),
+                frequency,
+                device=fields.device,
+                dtype=fields.real.dtype,
+            )
+            outputs.append(self(fields, environment_and_coordinates, query))
+        return torch.stack(outputs, dim=1)
+
+    def masked_reconstruction_loss(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        mode: str,
+    ) -> torch.Tensor:
+        """Reconstruct one visible field after frequency or token masking."""
+
+        if mode not in {"frequency", "joint"}:
+            raise ValueError(f"unknown token mask mode: {mode}")
+        batch, count, height, width = fields.shape
+        candidate_count = count - 2 if self.carrier_mode == "endpoint" else count
+        target_index = torch.randint(candidate_count, (batch,), device=fields.device)
+        target = fields[torch.arange(batch, device=fields.device), target_index]
+        query = self.visible_frequency_tensor.to(fields.device)[target_index]
+        token_mask = torch.ones(
+            batch,
+            count,
+            *self.token_grid,
+            device=fields.device,
+            dtype=fields.real.dtype,
+        )
+        if mode == "frequency":
+            token_mask[torch.arange(batch, device=fields.device), target_index] = 0.0
+            score_mask = torch.ones(
+                batch, height, width, device=fields.device, dtype=fields.real.dtype
+            )
+        else:
+            missing = (
+                torch.rand(batch, *self.token_grid, device=fields.device)
+                < self.joint_mask_fraction
+            )
+            # Avoid degenerate samples with no supervised hidden token.
+            missing[:, 0, 0] = True
+            token_mask[torch.arange(batch, device=fields.device), target_index] = (
+                ~missing
+            ).to(fields.real.dtype)
+            nuisance = torch.rand_like(token_mask) < 0.1
+            target_selector = F.one_hot(target_index, count).bool()[:, :, None, None]
+            if self.carrier_mode == "endpoint":
+                nuisance[:, -2:] = False
+            token_mask = token_mask.masked_fill(nuisance & ~target_selector, 0.0)
+            score_mask = F.interpolate(
+                missing[:, None].to(fields.real.dtype),
+                size=(height, width),
+                mode="nearest",
+            )[:, 0]
+        prediction = self._forward_with_mask(
+            fields, environment_and_coordinates, query, token_mask
+        )
+        numerator = (
+            (prediction - target).abs().square() * score_mask
+        ).flatten(1).sum(1)
+        denominator = (
+            target.abs().square() * score_mask
+        ).flatten(1).sum(1).clamp_min(1e-8)
+        return (numerator / denominator).clamp_min(1e-12).sqrt().mean()
+
+
 class PronyFrequencyOperator(nn.Module):
     """Per-location finite-rank spectral recurrence used as an analytic POC.
 
@@ -493,6 +786,10 @@ class CarrierGaugedPoleOperator(nn.Module):
         hyper_carrier_correction: bool = False,
         max_hyper_slope_per_hz: float = 0.08,
         max_hyper_curvature_per_hz2: float = 0.005,
+        local_carrier_token_grid: tuple[int, int] | None = None,
+        local_carrier_token_width: int = 32,
+        max_local_token_slope_per_hz: float = 0.08,
+        max_local_token_curvature_per_hz2: float = 0.005,
     ):
         super().__init__()
         if len(visible_frequencies) < 3:
@@ -525,6 +822,15 @@ class CarrierGaugedPoleOperator(nn.Module):
         self.hyper_carrier_correction = bool(hyper_carrier_correction)
         self.max_hyper_slope_per_hz = float(max_hyper_slope_per_hz)
         self.max_hyper_curvature_per_hz2 = float(max_hyper_curvature_per_hz2)
+        self.local_carrier_token_grid = (
+            tuple(map(int, local_carrier_token_grid))
+            if local_carrier_token_grid is not None
+            else None
+        )
+        self.max_local_token_slope_per_hz = float(max_local_token_slope_per_hz)
+        self.max_local_token_curvature_per_hz2 = float(
+            max_local_token_curvature_per_hz2
+        )
         if self.hyper_carrier_correction and self.global_latent_channels <= 0:
             raise ValueError("hyper carrier correction requires a positive global latent")
         if self.global_latent_channels > 0 and state_backbone != "dilated":
@@ -541,6 +847,21 @@ class CarrierGaugedPoleOperator(nn.Module):
         visible_count = len(visible_frequencies)
         invariant_channels = 3 * visible_count + 2 * (visible_count - 1)
         invariant_channels += environment_channels + 2
+        if self.local_carrier_token_grid is not None:
+            if min(self.local_carrier_token_grid) < 1:
+                raise ValueError("local carrier token grid dimensions must be positive")
+            self.local_carrier_encoder = nn.Sequential(
+                nn.Conv2d(invariant_channels, local_carrier_token_width, 1),
+                nn.SiLU(),
+                TokenResidualBlock(local_carrier_token_width),
+                TokenResidualBlock(local_carrier_token_width),
+            )
+            self.local_carrier_head = nn.Conv2d(local_carrier_token_width, 2, 1)
+            nn.init.zeros_(self.local_carrier_head.weight)
+            nn.init.zeros_(self.local_carrier_head.bias)
+        else:
+            self.local_carrier_encoder = None
+            self.local_carrier_head = None
         if self.global_latent_channels > 0:
             latent = self.global_latent_channels
             self.global_encoder = nn.Sequential(
@@ -800,6 +1121,25 @@ class CarrierGaugedPoleOperator(nn.Module):
             hyper_curvature = torch.sum(coefficients[:, 1] * basis, dim=1)
             curvature = curvature + self.max_hyper_curvature_per_hz2 * torch.tanh(
                 hyper_curvature[:, None]
+            )
+        if self.local_carrier_encoder is not None and self.local_carrier_head is not None:
+            token_state = F.adaptive_avg_pool2d(
+                invariant, self.local_carrier_token_grid
+            )
+            local_raw = self.local_carrier_head(
+                self.local_carrier_encoder(token_state)
+            )
+            local_raw = F.interpolate(
+                local_raw,
+                size=fields.shape[-2:],
+                mode="bilinear",
+                align_corners=False,
+            )
+            slope = slope + self.max_local_token_slope_per_hz * torch.tanh(
+                local_raw[:, 0]
+            )
+            curvature = curvature + self.max_local_token_curvature_per_hz2 * torch.tanh(
+                local_raw[:, 1:2]
             )
         if residue_raw is not None:
             residue = torch.complex(

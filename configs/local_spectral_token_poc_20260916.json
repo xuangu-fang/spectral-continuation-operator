@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "completed development POC; strict environments unopened",
+  "data": {
+    "archive": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+    "archive_sha256": "edb5d0a4a340a60ab9c9ce947105577c0ef3c2d701d7bba632f6c4f3a195ba51",
+    "training_environments": 128,
+    "validation_environments": 32
+  },
+  "protocol": {
+    "visible_frequencies_hz": [90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100],
+    "training_queries_hz": [101, 102, 103, 104, 105, 106],
+    "primary_unseen_queries_hz": [107, 108, 109, 110, 111, 112],
+    "stress_queries_hz": [113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125],
+    "primary_query_hz": 110,
+    "primary_metric": "per-environment raw complex relative L2",
+    "representation_gate": {
+      "query_110_complex_rel_l2_max": 0.4,
+      "query_107_112_better_than_hyper_pole": true
+    },
+    "mask_transfer_relative_improvement_min_percent": 5.0
+  },
+  "models": {
+    "free_local_span": {
+      "token_grid": [8, 16],
+      "parameters": 303984,
+      "carrier": "endpoint_increment",
+      "query_generator": "bounded quadratic local complex coefficients"
+    },
+    "local_carrier_tokens": {
+      "token_grid": [8, 16],
+      "base_checkpoint": "experiments/runs/m4_balanced_train106_hyper_seed42/best.pt",
+      "base_frozen": true,
+      "total_parameters": 1509476,
+      "new_trainable_parameters": 39236,
+      "outputs": ["local_carrier_slope", "local_carrier_curvature"]
+    }
+  },
+  "results": {
+    "hyper_pole": {
+      "query_107_112_macro_complex_rel_l2": 0.4042345087,
+      "query_110_complex_rel_l2": 0.4409491122,
+      "query_110_phase_coherence": 0.8629976511
+    },
+    "free_local_span": {
+      "query_107_112_macro_complex_rel_l2": 0.5865934590,
+      "query_110_complex_rel_l2": 0.6186161041,
+      "query_110_phase_coherence": 0.7077846527
+    },
+    "free_local_span_frequency_mask": {
+      "query_107_112_macro_complex_rel_l2": 0.6142018735,
+      "query_110_complex_rel_l2": 0.6479423642,
+      "query_110_phase_coherence": 0.6990777254
+    },
+    "local_carrier_tokens": {
+      "query_107_112_macro_complex_rel_l2": 0.4004140844,
+      "query_110_complex_rel_l2": 0.4366760254,
+      "query_110_phase_coherence": 0.8653717637,
+      "paired_relative_improvement_percent": 0.9690675735,
+      "paired_fraction_better": 0.90625,
+      "paired_ci95_absolute": [0.0026492889, 0.0061411485]
+    }
+  },
+  "decision": "mechanism-level weak positive; method-level NO-GO"
+}

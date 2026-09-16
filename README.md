@@ -16,22 +16,30 @@ matched recurrence 为 0.4741，相近参数量 carrier-relative query U-Net 三
 当前结论是：从低频带估计相位不变的局部传播状态，确实比像素空间 query fitting 更适合
 频带外 continuation；误差仍随距离增长，因此还不能主张任意远频恢复。
 
+最新的局部 token POC 进一步区分了“可表示”与“可预测”：8×16 patch span 的 oracle 很低，
+但学习自由局部复系数在 110 Hz 仅得到 0.6186，frequency-mask 辅助训练还会退化。把 token
+限制为 frozen hyper-pole 上的局部 carrier slope/curvature 修正后，110 Hz 从 0.4409 小幅降到
+0.4367（paired 95% CI 为正），但相对增益仅 0.97%，未通过方法 gate。当前不继续扩大 token、
+Transformer 或 mask 路线。
+
 本仓库独立于 `APEX_repro_fsk`。旧仓库仅作为只读证据与数据生成器来源；所有新协议、代码、
 实验和 artifact 在这里维护。
 
 ## 阅读顺序
 
-1. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
+1. [局部复谱 Token POC](reports/LOCAL_SPECTRAL_TOKEN_POC_ZH.md)：自由 local-span、masked
+   reconstruction 和受限 carrier-token 的结果与停止判断；
+2. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
    证据合并、子空间旋转、patch token oracle 以及 masked representation 下一步；
-2. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
+3. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
    最终协议、三 seed 结果和结论边界；
-3. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
-4. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
+4. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
+5. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
    文献定位和失败归因；
-5. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
-6. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
-7. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
-8. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
+6. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
+7. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
+8. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
+9. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
 
 ## 代码入口
 
@@ -50,6 +58,7 @@ matched recurrence 为 0.4741，相近参数量 carrier-relative query U-Net 三
 - `spectral_continuation.summarize_fractional_evaluations`：独立非整数频率评测汇总。
 - `spectral_continuation.diagnose_global_subspace`：全局/局部复数子空间与 masked-frequency oracle。
 - `spectral_continuation.summarize_global_subspace`：子空间旋转、局部性与容量权衡图。
+- `spectral_continuation.summarize_token_poc`：局部 token POC 曲线与逐环境 paired 统计。
 
 主指标始终是逐物理环境等权的 raw complex relative L2；幅值、圆周相位误差与 coherence
 只用于机制诊断，不用于替换主指标。

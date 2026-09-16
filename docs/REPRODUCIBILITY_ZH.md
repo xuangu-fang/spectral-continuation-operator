@@ -368,3 +368,62 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_global_subspa
 
 所有 projection 都按 validation environment 独立计算；`low_band_span`、`patch_span` 和
 `full_band_oracle` 使用目标真值求投影系数，只能解释 representation floor，不是预测结果。
+
+## 11. 局部复谱 token POC
+
+自由 local-span 主实验：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_representation_poc \
+  --domain ocean --model local_span --dataset /path/to/integer/paired_fields.npz \
+  --output-dir experiments/runs/token_poc_gauged_quadratic_8x16_seed42 \
+  --visible 90,91,92,93,94,95,96,97,98,99,100 \
+  --train-queries 101,102,103,104,105,106 \
+  --test-queries 107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --token-grid 8 16 --state-width 64 --blocks 4 \
+  --token-weight-bound 2 --token-carrier endpoint \
+  --grouped-training --relative-loss-power 1 --epochs 50 \
+  --batch-size 4 --eval-batch-size 4 --lr 5e-4 --weight-decay 1e-6 --seed 42
+```
+
+frequency-mask 版本增加：
+
+```text
+--mask-pretraining frequency --mask-weight 0.1
+```
+
+受限 local-carrier-token fallback 从冻结 hyper-pole checkpoint 初始化。除新增 token branch 外，
+所有参数均冻结：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_representation_poc \
+  --domain ocean --model carrier_poles --dataset /path/to/integer/paired_fields.npz \
+  --output-dir experiments/runs/token_poc_hyper_localcarrier_8x16_frozen_seed42 \
+  --visible 90,91,92,93,94,95,96,97,98,99,100 \
+  --train-queries 101,102,103,104,105,106 \
+  --test-queries 107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --poles 4 --state-width 128 --blocks 4 --grouped-training \
+  --pole-growth stable --max-growth-per-hz 0.4 \
+  --max-residual-angle-per-hz 0.25 --pole-anchor residue_sum \
+  --carrier-estimator endpoint_increment --residue-scale 2 \
+  --global-latent-channels 64 --hyper-carrier-correction \
+  --max-hyper-slope-per-hz 0.08 --max-hyper-curvature-per-hz2 0.005 \
+  --local-carrier-token-grid 8 16 --local-carrier-token-width 32 \
+  --max-local-token-slope-per-hz 0.08 --max-local-token-curvature-per-hz2 0.005 \
+  --initial-checkpoint experiments/runs/m4_balanced_train106_hyper_seed42/best.pt \
+  --allow-partial-initial-checkpoint --freeze-initial-backbone \
+  --history-weight 0 --relative-loss-power 1 --epochs 50 \
+  --batch-size 4 --eval-batch-size 4 --lr 5e-4 --weight-decay 1e-6 --seed 42
+```
+
+汇总图与 paired bootstrap：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_token_poc \
+  --run 'Hyper-pole=experiments/runs/m4_balanced_train106_hyper_seed42/summary.json' \
+  --run 'Free local span=experiments/runs/token_poc_gauged_quadratic_8x16_seed42/summary.json' \
+  --run 'Span + freq mask=experiments/runs/token_poc_gauged_quadratic_8x16_frequencymask_seed42/summary.json' \
+  --run 'Local carrier tokens=experiments/runs/token_poc_hyper_localcarrier_8x16_frozen_seed42/summary.json' \
+  --baseline-label 'Hyper-pole' --candidate-label 'Local carrier tokens' \
+  --output-dir artifacts/token_poc
+```

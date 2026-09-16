@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "development POC; strict environments unopened",
+  "primary": {
+    "Hyper-pole": {
+      "parameters": 1470240,
+      "trainable_parameters": 1470240,
+      "selected_epoch": 85,
+      "selection_macro_complex_rel_l2": 0.13488048315048218,
+      "query_107_112_macro_complex_rel_l2": 0.40423450867335003,
+      "query_110_complex_rel_l2": 0.44094911217689514,
+      "query_110_phase_coherence": 0.8629976511001587
+    },
+    "Free local span": {
+      "parameters": 303984,
+      "trainable_parameters": 303984,
+      "selected_epoch": 41,
+      "selection_macro_complex_rel_l2": 0.23660549893975258,
+      "query_107_112_macro_complex_rel_l2": 0.5865934590498606,
+      "query_110_complex_rel_l2": 0.6186161041259766,
+      "query_110_phase_coherence": 0.7077846527099609
+    },
+    "Span + freq mask": {
+      "parameters": 303984,
+      "trainable_parameters": 303984,
+      "selected_epoch": 41,
+      "selection_macro_complex_rel_l2": 0.2374988247950872,
+      "query_107_112_macro_complex_rel_l2": 0.6142018735408783,
+      "query_110_complex_rel_l2": 0.6479423642158508,
+      "query_110_phase_coherence": 0.6990777254104614
+    },
+    "Local carrier tokens": {
+      "parameters": 1509476,
+      "trainable_parameters": 39236,
+      "selected_epoch": 20,
+      "selection_macro_complex_rel_l2": 0.13444487191736698,
+      "query_107_112_macro_complex_rel_l2": 0.40041408439477283,
+      "query_110_complex_rel_l2": 0.436676025390625,
+      "query_110_phase_coherence": 0.8653717637062073
+    }
+  },
+  "paired_110_hz_baseline_vs_candidate": {
+    "mean_absolute_improvement": 0.004273094702512026,
+    "relative_improvement_percent": 0.9690675735473633,
+    "fraction_candidate_better": 0.90625,
+    "ci95_low": 0.002649288857355714,
+    "ci95_high": 0.006141148507595062
+  },
+  "baseline_label": "Hyper-pole",
+  "candidate_label": "Local carrier tokens"
+}
