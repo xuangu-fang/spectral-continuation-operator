@@ -1,0 +1,3767 @@
+{
+  "schema_version": 1,
+  "status": "linear representation diagnostic; projection methods using target coefficients are oracles",
+  "domain": "synthetic",
+  "visible_frequencies_hz": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0
+  ],
+  "query_frequencies_hz": [
+    15.0,
+    16.0,
+    17.0,
+    18.0,
+    19.0,
+    20.0,
+    21.0,
+    22.0,
+    23.0,
+    24.0
+  ],
+  "validation_environments": 32,
+  "ranks": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    8,
+    12,
+    14
+  ],
+  "definitions": {
+    "low_band_span": "target projected with oracle coefficients onto the per-environment low-band spatial span",
+    "full_band_oracle": "target projected onto a basis fitted with all query fields; representation lower bound only",
+    "latent_polynomial": "deployable per-environment polynomial extrapolation of low-band latent coefficients",
+    "masked_frequency_polynomial": "odd visible frequencies withheld and reconstructed from even frequency tokens",
+    "patch_span": "each spatial patch has an independent low-band basis; target coefficients remain oracle"
+  },
+  "mean_effective_ranks": {
+    "raw": {
+      "visible_rank_95": 4.0,
+      "visible_rank_99": 4.90625,
+      "full_rank_95": 6.03125,
+      "full_rank_99": 7.5
+    },
+    "carrier_gauged": {
+      "visible_rank_95": 4.90625,
+      "visible_rank_99": 8.34375,
+      "full_rank_95": 8.0,
+      "full_rank_99": 13.625
+    }
+  },
+  "metrics": {
+    "carrier_gauged/full_band_oracle/rank1/f15": {
+      "complex_rel_l2": {
+        "mean": 0.6176013741642237,
+        "std": 0.15513301779142227
+      },
+      "phase_coherence": {
+        "mean": 0.7063036123290658,
+        "std": 0.17309204459353383
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f16": {
+      "complex_rel_l2": {
+        "mean": 0.6470496873371303,
+        "std": 0.1685140012096195
+      },
+      "phase_coherence": {
+        "mean": 0.6788448207080364,
+        "std": 0.18708912433167166
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f17": {
+      "complex_rel_l2": {
+        "mean": 0.6905969292856753,
+        "std": 0.18009386021019255
+      },
+      "phase_coherence": {
+        "mean": 0.6199776609428227,
+        "std": 0.21085342132649507
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f18": {
+      "complex_rel_l2": {
+        "mean": 0.7387079633772373,
+        "std": 0.18226236053786618
+      },
+      "phase_coherence": {
+        "mean": 0.546709846064914,
+        "std": 0.23951182535488377
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f19": {
+      "complex_rel_l2": {
+        "mean": 0.7823344925418496,
+        "std": 0.17249695475954874
+      },
+      "phase_coherence": {
+        "mean": 0.4826323401648551,
+        "std": 0.24294715786800342
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f20": {
+      "complex_rel_l2": {
+        "mean": 0.8185572158545256,
+        "std": 0.15860294326987798
+      },
+      "phase_coherence": {
+        "mean": 0.4279204201302491,
+        "std": 0.2436067470673231
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f21": {
+      "complex_rel_l2": {
+        "mean": 0.8485415559262037,
+        "std": 0.14649702413686286
+      },
+      "phase_coherence": {
+        "mean": 0.3811792394844815,
+        "std": 0.24339519267729637
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f22": {
+      "complex_rel_l2": {
+        "mean": 0.8739293813705444,
+        "std": 0.13521890983042997
+      },
+      "phase_coherence": {
+        "mean": 0.3348450896501163,
+        "std": 0.24004516113759983
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f23": {
+      "complex_rel_l2": {
+        "mean": 0.8968292940407991,
+        "std": 0.12187329428579513
+      },
+      "phase_coherence": {
+        "mean": 0.29444371796853375,
+        "std": 0.22577484825843203
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank1/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9185281582176685,
+        "std": 0.10632177303242533
+      },
+      "phase_coherence": {
+        "mean": 0.2514600573958887,
+        "std": 0.2117174003786588
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f15": {
+      "complex_rel_l2": {
+        "mean": 0.450164632871747,
+        "std": 0.11984653272929965
+      },
+      "phase_coherence": {
+        "mean": 0.8613547198474407,
+        "std": 0.08398674022618513
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f16": {
+      "complex_rel_l2": {
+        "mean": 0.4937531603500247,
+        "std": 0.14730742511256936
+      },
+      "phase_coherence": {
+        "mean": 0.8285359293222427,
+        "std": 0.09749964374105803
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f17": {
+      "complex_rel_l2": {
+        "mean": 0.5516602601855993,
+        "std": 0.17942368569523226
+      },
+      "phase_coherence": {
+        "mean": 0.7661730078980327,
+        "std": 0.14370933605647215
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f18": {
+      "complex_rel_l2": {
+        "mean": 0.6084918912965804,
+        "std": 0.2035392490085556
+      },
+      "phase_coherence": {
+        "mean": 0.6996818007901311,
+        "std": 0.202728879165246
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f19": {
+      "complex_rel_l2": {
+        "mean": 0.6556162345223129,
+        "std": 0.20847722178845257
+      },
+      "phase_coherence": {
+        "mean": 0.6574573619291186,
+        "std": 0.203697943437359
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f20": {
+      "complex_rel_l2": {
+        "mean": 0.69641835661605,
+        "std": 0.20333453802335513
+      },
+      "phase_coherence": {
+        "mean": 0.6134619200602174,
+        "std": 0.2024272161728866
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f21": {
+      "complex_rel_l2": {
+        "mean": 0.736431822180748,
+        "std": 0.19508857431351542
+      },
+      "phase_coherence": {
+        "mean": 0.5702612278982997,
+        "std": 0.21181799688052047
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f22": {
+      "complex_rel_l2": {
+        "mean": 0.7787210522219539,
+        "std": 0.179651963283901
+      },
+      "phase_coherence": {
+        "mean": 0.519970865920186,
+        "std": 0.2201141010584063
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f23": {
+      "complex_rel_l2": {
+        "mean": 0.82306909840554,
+        "std": 0.15766785637358618
+      },
+      "phase_coherence": {
+        "mean": 0.4641563349869102,
+        "std": 0.21960554710679103
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank2/f24": {
+      "complex_rel_l2": {
+        "mean": 0.8659566305577755,
+        "std": 0.1348784626101386
+      },
+      "phase_coherence": {
+        "mean": 0.40110272174933925,
+        "std": 0.2113973023488828
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f15": {
+      "complex_rel_l2": {
+        "mean": 0.38089965423569083,
+        "std": 0.1383257901878598
+      },
+      "phase_coherence": {
+        "mean": 0.8946378417313099,
+        "std": 0.07807776062989512
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f16": {
+      "complex_rel_l2": {
+        "mean": 0.4471092578023672,
+        "std": 0.1570482352612304
+      },
+      "phase_coherence": {
+        "mean": 0.8483135662972927,
+        "std": 0.09938082367021693
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f17": {
+      "complex_rel_l2": {
+        "mean": 0.4961799846496433,
+        "std": 0.16595129819513127
+      },
+      "phase_coherence": {
+        "mean": 0.8072381280362606,
+        "std": 0.11542672351206922
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f18": {
+      "complex_rel_l2": {
+        "mean": 0.5043674854096025,
+        "std": 0.16682946731948808
+      },
+      "phase_coherence": {
+        "mean": 0.8073622668161988,
+        "std": 0.12914884173869273
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f19": {
+      "complex_rel_l2": {
+        "mean": 0.47399187088012695,
+        "std": 0.15497443689519616
+      },
+      "phase_coherence": {
+        "mean": 0.8321270681917667,
+        "std": 0.10764244531555214
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f20": {
+      "complex_rel_l2": {
+        "mean": 0.4259342961013317,
+        "std": 0.14803974758564242
+      },
+      "phase_coherence": {
+        "mean": 0.8591207945719361,
+        "std": 0.1036398553572325
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f21": {
+      "complex_rel_l2": {
+        "mean": 0.3986111980630085,
+        "std": 0.16006009103766158
+      },
+      "phase_coherence": {
+        "mean": 0.8776174131780863,
+        "std": 0.08820835066801937
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f22": {
+      "complex_rel_l2": {
+        "mean": 0.43679278332274407,
+        "std": 0.17561046358820942
+      },
+      "phase_coherence": {
+        "mean": 0.8590518357232213,
+        "std": 0.11114106591837354
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f23": {
+      "complex_rel_l2": {
+        "mean": 0.542326170951128,
+        "std": 0.17818663041056032
+      },
+      "phase_coherence": {
+        "mean": 0.8029803028330207,
+        "std": 0.13038869116141316
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank3/f24": {
+      "complex_rel_l2": {
+        "mean": 0.6684958217665553,
+        "std": 0.17409449298005086
+      },
+      "phase_coherence": {
+        "mean": 0.702367446385324,
+        "std": 0.14469677538943324
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f15": {
+      "complex_rel_l2": {
+        "mean": 0.30308842041995376,
+        "std": 0.1322715063334014
+      },
+      "phase_coherence": {
+        "mean": 0.9238774999976158,
+        "std": 0.07515730641335623
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f16": {
+      "complex_rel_l2": {
+        "mean": 0.36338795500341803,
+        "std": 0.1542272585933002
+      },
+      "phase_coherence": {
+        "mean": 0.8922663666307926,
+        "std": 0.07440906545923665
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f17": {
+      "complex_rel_l2": {
+        "mean": 0.41616949951276183,
+        "std": 0.1654733298023246
+      },
+      "phase_coherence": {
+        "mean": 0.8619847930967808,
+        "std": 0.0889451883359853
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f18": {
+      "complex_rel_l2": {
+        "mean": 0.4387847811449319,
+        "std": 0.16176055377635706
+      },
+      "phase_coherence": {
+        "mean": 0.8521270342171192,
+        "std": 0.09366239894771641
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f19": {
+      "complex_rel_l2": {
+        "mean": 0.429001763346605,
+        "std": 0.14065807652895712
+      },
+      "phase_coherence": {
+        "mean": 0.8651740793138742,
+        "std": 0.07297075677604808
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f20": {
+      "complex_rel_l2": {
+        "mean": 0.39184450230095536,
+        "std": 0.12417369028327639
+      },
+      "phase_coherence": {
+        "mean": 0.8849351014941931,
+        "std": 0.06646374352690623
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f21": {
+      "complex_rel_l2": {
+        "mean": 0.3510995580581948,
+        "std": 0.12729075118785915
+      },
+      "phase_coherence": {
+        "mean": 0.9024754893034697,
+        "std": 0.06417395628386206
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f22": {
+      "complex_rel_l2": {
+        "mean": 0.36077750159893185,
+        "std": 0.1520094642146178
+      },
+      "phase_coherence": {
+        "mean": 0.8976883348077536,
+        "std": 0.08334562453219299
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f23": {
+      "complex_rel_l2": {
+        "mean": 0.45459651527926326,
+        "std": 0.17503417660948126
+      },
+      "phase_coherence": {
+        "mean": 0.8555505936965346,
+        "std": 0.11314005479812152
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank4/f24": {
+      "complex_rel_l2": {
+        "mean": 0.5927202117163688,
+        "std": 0.18336707036287925
+      },
+      "phase_coherence": {
+        "mean": 0.7717149909585714,
+        "std": 0.12662103771044378
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f15": {
+      "complex_rel_l2": {
+        "mean": 0.23103729424474295,
+        "std": 0.12091456647869511
+      },
+      "phase_coherence": {
+        "mean": 0.9484349880367517,
+        "std": 0.0550169662526449
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f16": {
+      "complex_rel_l2": {
+        "mean": 0.2913152064429596,
+        "std": 0.13817245919142176
+      },
+      "phase_coherence": {
+        "mean": 0.9274906795471907,
+        "std": 0.05444408907306993
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f17": {
+      "complex_rel_l2": {
+        "mean": 0.3072373546892777,
+        "std": 0.1285421886209388
+      },
+      "phase_coherence": {
+        "mean": 0.9273137655109167,
+        "std": 0.044016763478636395
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f18": {
+      "complex_rel_l2": {
+        "mean": 0.28109313678578474,
+        "std": 0.11207678025528031
+      },
+      "phase_coherence": {
+        "mean": 0.9369297213852406,
+        "std": 0.038953083795436654
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f19": {
+      "complex_rel_l2": {
+        "mean": 0.2650019536667969,
+        "std": 0.11467239223697397
+      },
+      "phase_coherence": {
+        "mean": 0.9394346531480551,
+        "std": 0.04327234070347989
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f20": {
+      "complex_rel_l2": {
+        "mean": 0.2940933632053202,
+        "std": 0.1275510193573626
+      },
+      "phase_coherence": {
+        "mean": 0.9265946391969919,
+        "std": 0.05515864475292926
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f21": {
+      "complex_rel_l2": {
+        "mean": 0.31509852010640316,
+        "std": 0.1238725479527849
+      },
+      "phase_coherence": {
+        "mean": 0.9159000515937805,
+        "std": 0.06380610822080596
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f22": {
+      "complex_rel_l2": {
+        "mean": 0.27300297876354307,
+        "std": 0.10816475719687456
+      },
+      "phase_coherence": {
+        "mean": 0.9361874312162399,
+        "std": 0.056049330468132
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f23": {
+      "complex_rel_l2": {
+        "mean": 0.23490586251136847,
+        "std": 0.10382802696266304
+      },
+      "phase_coherence": {
+        "mean": 0.9555844403803349,
+        "std": 0.034682358140640586
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank6/f24": {
+      "complex_rel_l2": {
+        "mean": 0.3744069483364001,
+        "std": 0.14623240596877138
+      },
+      "phase_coherence": {
+        "mean": 0.9151035714894533,
+        "std": 0.059543399690872655
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f15": {
+      "complex_rel_l2": {
+        "mean": 0.191033061419148,
+        "std": 0.11212647487051512
+      },
+      "phase_coherence": {
+        "mean": 0.9597937222570181,
+        "std": 0.04612604012793997
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f16": {
+      "complex_rel_l2": {
+        "mean": 0.21950883100362262,
+        "std": 0.1101197565437196
+      },
+      "phase_coherence": {
+        "mean": 0.9551144801080227,
+        "std": 0.03479147861329741
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f17": {
+      "complex_rel_l2": {
+        "mean": 0.21001388571676216,
+        "std": 0.09531484410334946
+      },
+      "phase_coherence": {
+        "mean": 0.9659730829298496,
+        "std": 0.021374267830100078
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f18": {
+      "complex_rel_l2": {
+        "mean": 0.2182774766224611,
+        "std": 0.10841178077817555
+      },
+      "phase_coherence": {
+        "mean": 0.958299245685339,
+        "std": 0.034379696064379246
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f19": {
+      "complex_rel_l2": {
+        "mean": 0.22736966681259219,
+        "std": 0.10178691951562521
+      },
+      "phase_coherence": {
+        "mean": 0.9545422736555338,
+        "std": 0.03379177967739959
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f20": {
+      "complex_rel_l2": {
+        "mean": 0.20644119844291708,
+        "std": 0.0946036566173383
+      },
+      "phase_coherence": {
+        "mean": 0.9600899498909712,
+        "std": 0.03245670045851733
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f21": {
+      "complex_rel_l2": {
+        "mean": 0.21689317593700252,
+        "std": 0.10660370950607283
+      },
+      "phase_coherence": {
+        "mean": 0.9571195393800735,
+        "std": 0.04107334651902488
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f22": {
+      "complex_rel_l2": {
+        "mean": 0.24229456261673477,
+        "std": 0.10725312512965508
+      },
+      "phase_coherence": {
+        "mean": 0.9471849072724581,
+        "std": 0.043710226183742616
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f23": {
+      "complex_rel_l2": {
+        "mean": 0.18315241124219028,
+        "std": 0.08282826258781617
+      },
+      "phase_coherence": {
+        "mean": 0.9704562742263079,
+        "std": 0.026504614446597293
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank8/f24": {
+      "complex_rel_l2": {
+        "mean": 0.24601936326507712,
+        "std": 0.11096435319734071
+      },
+      "phase_coherence": {
+        "mean": 0.9624392110854387,
+        "std": 0.031811154008947955
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f15": {
+      "complex_rel_l2": {
+        "mean": 0.12786597257682786,
+        "std": 0.07826233338708123
+      },
+      "phase_coherence": {
+        "mean": 0.9796946663409472,
+        "std": 0.019355109295142947
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f16": {
+      "complex_rel_l2": {
+        "mean": 0.12500072207897261,
+        "std": 0.06823017472568846
+      },
+      "phase_coherence": {
+        "mean": 0.9865510985255241,
+        "std": 0.009952937841029609
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f17": {
+      "complex_rel_l2": {
+        "mean": 0.1318364212110339,
+        "std": 0.0700022836852106
+      },
+      "phase_coherence": {
+        "mean": 0.9862461984157562,
+        "std": 0.011737803780706522
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f18": {
+      "complex_rel_l2": {
+        "mean": 0.13202834339323033,
+        "std": 0.07231839929333875
+      },
+      "phase_coherence": {
+        "mean": 0.9834250342100859,
+        "std": 0.014862379882383248
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f19": {
+      "complex_rel_l2": {
+        "mean": 0.13731156196674732,
+        "std": 0.07208470639016429
+      },
+      "phase_coherence": {
+        "mean": 0.9823908656835556,
+        "std": 0.016178559014018615
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f20": {
+      "complex_rel_l2": {
+        "mean": 0.13207691015728074,
+        "std": 0.07254975499252247
+      },
+      "phase_coherence": {
+        "mean": 0.9830753672868013,
+        "std": 0.015670905280749086
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f21": {
+      "complex_rel_l2": {
+        "mean": 0.1434882615599804,
+        "std": 0.08079060771038814
+      },
+      "phase_coherence": {
+        "mean": 0.979632830247283,
+        "std": 0.021045777130841135
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f22": {
+      "complex_rel_l2": {
+        "mean": 0.1306031484635497,
+        "std": 0.07889087324188152
+      },
+      "phase_coherence": {
+        "mean": 0.9830504152923822,
+        "std": 0.017747251843292067
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f23": {
+      "complex_rel_l2": {
+        "mean": 0.15357522475143526,
+        "std": 0.08006522764397699
+      },
+      "phase_coherence": {
+        "mean": 0.9777090530842543,
+        "std": 0.019692745596866162
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank12/f24": {
+      "complex_rel_l2": {
+        "mean": 0.11511206835636756,
+        "std": 0.06362205752246941
+      },
+      "phase_coherence": {
+        "mean": 0.9912591837346554,
+        "std": 0.008723019211704743
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f15": {
+      "complex_rel_l2": {
+        "mean": 0.10828205582072314,
+        "std": 0.07245689949994652
+      },
+      "phase_coherence": {
+        "mean": 0.9852019045501947,
+        "std": 0.014249363903179412
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f16": {
+      "complex_rel_l2": {
+        "mean": 0.10376183675783324,
+        "std": 0.05893186603552614
+      },
+      "phase_coherence": {
+        "mean": 0.9904231671243906,
+        "std": 0.008234384429474237
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f17": {
+      "complex_rel_l2": {
+        "mean": 0.09905008828243922,
+        "std": 0.056112147997392135
+      },
+      "phase_coherence": {
+        "mean": 0.99182372353971,
+        "std": 0.007751398156424645
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f18": {
+      "complex_rel_l2": {
+        "mean": 0.10720481022525519,
+        "std": 0.05774496512546047
+      },
+      "phase_coherence": {
+        "mean": 0.9905287567526102,
+        "std": 0.007833023034507907
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f19": {
+      "complex_rel_l2": {
+        "mean": 0.10346995526413139,
+        "std": 0.059540445862221694
+      },
+      "phase_coherence": {
+        "mean": 0.9901748076081276,
+        "std": 0.010541540251101668
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f20": {
+      "complex_rel_l2": {
+        "mean": 0.10773314969437564,
+        "std": 0.060768931249485014
+      },
+      "phase_coherence": {
+        "mean": 0.9887022916227579,
+        "std": 0.011393192582698775
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f21": {
+      "complex_rel_l2": {
+        "mean": 0.11295681227251464,
+        "std": 0.07347612113137338
+      },
+      "phase_coherence": {
+        "mean": 0.9874353278428316,
+        "std": 0.015097552240565054
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f22": {
+      "complex_rel_l2": {
+        "mean": 0.10288433802421082,
+        "std": 0.06803615628375545
+      },
+      "phase_coherence": {
+        "mean": 0.9897546786814928,
+        "std": 0.012607029489332313
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f23": {
+      "complex_rel_l2": {
+        "mean": 0.12657387593350933,
+        "std": 0.07422478151775544
+      },
+      "phase_coherence": {
+        "mean": 0.9854482915252447,
+        "std": 0.01425451541399036
+      }
+    },
+    "carrier_gauged/full_band_oracle/rank14/f24": {
+      "complex_rel_l2": {
+        "mean": 0.0776931858275276,
+        "std": 0.04783472130051646
+      },
+      "phase_coherence": {
+        "mean": 0.9955270513892174,
+        "std": 0.004982516668742971
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f15": {
+      "complex_rel_l2": {
+        "mean": 0.858985795173794,
+        "std": 0.32283263351585795
+      },
+      "phase_coherence": {
+        "mean": 0.7982828561216593,
+        "std": 0.10732195308091765
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f16": {
+      "complex_rel_l2": {
+        "mean": 1.6682520527392626,
+        "std": 0.5879212030013506
+      },
+      "phase_coherence": {
+        "mean": 0.6009728577919304,
+        "std": 0.16011880444902285
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f17": {
+      "complex_rel_l2": {
+        "mean": 2.7279354482889175,
+        "std": 0.9658284550977116
+      },
+      "phase_coherence": {
+        "mean": 0.4411944468738511,
+        "std": 0.19138808464842516
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f18": {
+      "complex_rel_l2": {
+        "mean": 4.07864722982049,
+        "std": 1.4869639111951405
+      },
+      "phase_coherence": {
+        "mean": 0.323897284013583,
+        "std": 0.20380231148934794
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f19": {
+      "complex_rel_l2": {
+        "mean": 5.7099516205489635,
+        "std": 1.9612080928052071
+      },
+      "phase_coherence": {
+        "mean": 0.24211672064848244,
+        "std": 0.2042109566502115
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f20": {
+      "complex_rel_l2": {
+        "mean": 7.675216238945723,
+        "std": 2.4400160614576403
+      },
+      "phase_coherence": {
+        "mean": 0.19054686999152182,
+        "std": 0.1948448181279999
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f21": {
+      "complex_rel_l2": {
+        "mean": 10.074173651635647,
+        "std": 3.1426325849626124
+      },
+      "phase_coherence": {
+        "mean": 0.1565983872205834,
+        "std": 0.18599987612323113
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f22": {
+      "complex_rel_l2": {
+        "mean": 12.928348653018475,
+        "std": 3.9691362926253686
+      },
+      "phase_coherence": {
+        "mean": 0.13597261323593557,
+        "std": 0.17780323232007814
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f23": {
+      "complex_rel_l2": {
+        "mean": 16.25736713409424,
+        "std": 4.795076151313822
+      },
+      "phase_coherence": {
+        "mean": 0.1302282488613855,
+        "std": 0.1657538506563148
+      }
+    },
+    "carrier_gauged/latent_polynomial/rank6/f24": {
+      "complex_rel_l2": {
+        "mean": 20.183267548680305,
+        "std": 5.849413254975198
+      },
+      "phase_coherence": {
+        "mean": 0.1296481532335747,
+        "std": 0.15250699536578166
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f15": {
+      "complex_rel_l2": {
+        "mean": 0.8230603719130158,
+        "std": 0.13149582192186413
+      },
+      "phase_coherence": {
+        "mean": 0.44166683848015964,
+        "std": 0.2222744810344761
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f16": {
+      "complex_rel_l2": {
+        "mean": 0.8550436310470104,
+        "std": 0.12053203214549096
+      },
+      "phase_coherence": {
+        "mean": 0.38107854314148426,
+        "std": 0.22350166742386512
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f17": {
+      "complex_rel_l2": {
+        "mean": 0.8876227103173733,
+        "std": 0.1082202222246096
+      },
+      "phase_coherence": {
+        "mean": 0.3259947066253517,
+        "std": 0.22485390394675236
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f18": {
+      "complex_rel_l2": {
+        "mean": 0.9145817663520575,
+        "std": 0.09551357476236554
+      },
+      "phase_coherence": {
+        "mean": 0.28404601238435134,
+        "std": 0.2049998777728236
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f19": {
+      "complex_rel_l2": {
+        "mean": 0.9339485112577677,
+        "std": 0.08382118559709656
+      },
+      "phase_coherence": {
+        "mean": 0.2452290413202718,
+        "std": 0.1942215272101683
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f20": {
+      "complex_rel_l2": {
+        "mean": 0.9468306861817837,
+        "std": 0.07435503911131354
+      },
+      "phase_coherence": {
+        "mean": 0.21584392170188949,
+        "std": 0.19042329745999148
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f21": {
+      "complex_rel_l2": {
+        "mean": 0.955252630636096,
+        "std": 0.06732911281500832
+      },
+      "phase_coherence": {
+        "mean": 0.19152737425611122,
+        "std": 0.1882767005024805
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f22": {
+      "complex_rel_l2": {
+        "mean": 0.961158012971282,
+        "std": 0.06175238790194872
+      },
+      "phase_coherence": {
+        "mean": 0.17847580423403997,
+        "std": 0.17781681966409374
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9661152791231871,
+        "std": 0.05562288252393166
+      },
+      "phase_coherence": {
+        "mean": 0.1708989138933248,
+        "std": 0.16409389047064643
+      }
+    },
+    "carrier_gauged/low_band_span/rank1/f24": {
+      "complex_rel_l2": {
+        "mean": 0.970993684604764,
+        "std": 0.047878086337984384
+      },
+      "phase_coherence": {
+        "mean": 0.1578364602464717,
+        "std": 0.152056117882865
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f15": {
+      "complex_rel_l2": {
+        "mean": 0.570810747332871,
+        "std": 0.14707731318150374
+      },
+      "phase_coherence": {
+        "mean": 0.7916990024968982,
+        "std": 0.1457617092682134
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f16": {
+      "complex_rel_l2": {
+        "mean": 0.6798265101388097,
+        "std": 0.15525773769878395
+      },
+      "phase_coherence": {
+        "mean": 0.7031022077426314,
+        "std": 0.16139406111580154
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f17": {
+      "complex_rel_l2": {
+        "mean": 0.772393194027245,
+        "std": 0.1571360818761506
+      },
+      "phase_coherence": {
+        "mean": 0.5993695007637143,
+        "std": 0.20105680448571064
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f18": {
+      "complex_rel_l2": {
+        "mean": 0.8391745574772358,
+        "std": 0.1481725416142523
+      },
+      "phase_coherence": {
+        "mean": 0.4833603914594278,
+        "std": 0.2374982941999724
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f19": {
+      "complex_rel_l2": {
+        "mean": 0.8816381543874741,
+        "std": 0.13155242988381327
+      },
+      "phase_coherence": {
+        "mean": 0.4052775677992031,
+        "std": 0.22682143145238945
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f20": {
+      "complex_rel_l2": {
+        "mean": 0.9078200943768024,
+        "std": 0.11460744095807449
+      },
+      "phase_coherence": {
+        "mean": 0.3428973234258592,
+        "std": 0.21914678295057446
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f21": {
+      "complex_rel_l2": {
+        "mean": 0.9246570207178593,
+        "std": 0.10041409524931115
+      },
+      "phase_coherence": {
+        "mean": 0.29090723280387465,
+        "std": 0.21567320090108086
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9366609491407871,
+        "std": 0.08871876000466214
+      },
+      "phase_coherence": {
+        "mean": 0.25368270237231627,
+        "std": 0.20864735524609082
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9462387468665838,
+        "std": 0.07779713700663617
+      },
+      "phase_coherence": {
+        "mean": 0.22966205512057059,
+        "std": 0.2015297143988445
+      }
+    },
+    "carrier_gauged/low_band_span/rank2/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9539153967052698,
+        "std": 0.0666599219187563
+      },
+      "phase_coherence": {
+        "mean": 0.21249930032354314,
+        "std": 0.19040093062584054
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f15": {
+      "complex_rel_l2": {
+        "mean": 0.4636247558519244,
+        "std": 0.14194960200710635
+      },
+      "phase_coherence": {
+        "mean": 0.8806730937212706,
+        "std": 0.11105678213449216
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f16": {
+      "complex_rel_l2": {
+        "mean": 0.6158976322039962,
+        "std": 0.17020493639692968
+      },
+      "phase_coherence": {
+        "mean": 0.7816861271858215,
+        "std": 0.13169124155091474
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f17": {
+      "complex_rel_l2": {
+        "mean": 0.7330516930669546,
+        "std": 0.1746983236313773
+      },
+      "phase_coherence": {
+        "mean": 0.6529119769111276,
+        "std": 0.18589032777533884
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f18": {
+      "complex_rel_l2": {
+        "mean": 0.812431875616312,
+        "std": 0.1633028804411755
+      },
+      "phase_coherence": {
+        "mean": 0.5164056441280991,
+        "std": 0.23394202991408514
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f19": {
+      "complex_rel_l2": {
+        "mean": 0.8618197739124298,
+        "std": 0.14397276193910272
+      },
+      "phase_coherence": {
+        "mean": 0.4308908125385642,
+        "std": 0.22452818034813837
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f20": {
+      "complex_rel_l2": {
+        "mean": 0.8921314487233758,
+        "std": 0.12487761080165001
+      },
+      "phase_coherence": {
+        "mean": 0.36772713134996593,
+        "std": 0.2117140397003627
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f21": {
+      "complex_rel_l2": {
+        "mean": 0.9110536202788353,
+        "std": 0.10928297563012339
+      },
+      "phase_coherence": {
+        "mean": 0.3232043891912326,
+        "std": 0.20619106474256388
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9240368157625198,
+        "std": 0.09675777589066871
+      },
+      "phase_coherence": {
+        "mean": 0.2905703788273968,
+        "std": 0.1993411277899038
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9348669592291117,
+        "std": 0.08536831920509812
+      },
+      "phase_coherence": {
+        "mean": 0.26248959873919375,
+        "std": 0.19075223259057233
+      }
+    },
+    "carrier_gauged/low_band_span/rank3/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9441948644816875,
+        "std": 0.07394165071286198
+      },
+      "phase_coherence": {
+        "mean": 0.24462098293588497,
+        "std": 0.17847415137799552
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f15": {
+      "complex_rel_l2": {
+        "mean": 0.4094133940525353,
+        "std": 0.14686868574420314
+      },
+      "phase_coherence": {
+        "mean": 0.9084263294935226,
+        "std": 0.0923256710082674
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f16": {
+      "complex_rel_l2": {
+        "mean": 0.5814509214833379,
+        "std": 0.18270436457185954
+      },
+      "phase_coherence": {
+        "mean": 0.8026880864053965,
+        "std": 0.1241171127264019
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f17": {
+      "complex_rel_l2": {
+        "mean": 0.7094004270620644,
+        "std": 0.18951781284706862
+      },
+      "phase_coherence": {
+        "mean": 0.6591443829238415,
+        "std": 0.18680235192553307
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f18": {
+      "complex_rel_l2": {
+        "mean": 0.7960919011384249,
+        "std": 0.17903948299563324
+      },
+      "phase_coherence": {
+        "mean": 0.5228429026901722,
+        "std": 0.22712944943193467
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f19": {
+      "complex_rel_l2": {
+        "mean": 0.8504027388989925,
+        "std": 0.16125797106010575
+      },
+      "phase_coherence": {
+        "mean": 0.4310870748013258,
+        "std": 0.22461683504803268
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f20": {
+      "complex_rel_l2": {
+        "mean": 0.8828059630468488,
+        "std": 0.1434367360221768
+      },
+      "phase_coherence": {
+        "mean": 0.37065093661658466,
+        "std": 0.21198271074230446
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f21": {
+      "complex_rel_l2": {
+        "mean": 0.9021734725683928,
+        "std": 0.12854770701025453
+      },
+      "phase_coherence": {
+        "mean": 0.3334306974429637,
+        "std": 0.20639244933459241
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9155615977942944,
+        "std": 0.11606000276447379
+      },
+      "phase_coherence": {
+        "mean": 0.29823509068228304,
+        "std": 0.2010821793129552
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9269716795533895,
+        "std": 0.10378474444140057
+      },
+      "phase_coherence": {
+        "mean": 0.27229820750653744,
+        "std": 0.19196646616183036
+      }
+    },
+    "carrier_gauged/low_band_span/rank4/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9367848448455334,
+        "std": 0.09087806078495285
+      },
+      "phase_coherence": {
+        "mean": 0.25844930694438517,
+        "std": 0.17667856712690747
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f15": {
+      "complex_rel_l2": {
+        "mean": 0.3477856818062719,
+        "std": 0.14986313733127546
+      },
+      "phase_coherence": {
+        "mean": 0.9264524318277836,
+        "std": 0.07224469436027103
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f16": {
+      "complex_rel_l2": {
+        "mean": 0.5407856068923138,
+        "std": 0.19450022681389822
+      },
+      "phase_coherence": {
+        "mean": 0.8086211858317256,
+        "std": 0.12734131682370647
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f17": {
+      "complex_rel_l2": {
+        "mean": 0.68219108809717,
+        "std": 0.20629848294583292
+      },
+      "phase_coherence": {
+        "mean": 0.6596178179606795,
+        "std": 0.18642736999819914
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f18": {
+      "complex_rel_l2": {
+        "mean": 0.7763100429438055,
+        "std": 0.19671008825390912
+      },
+      "phase_coherence": {
+        "mean": 0.52912382571958,
+        "std": 0.2214328051580627
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f19": {
+      "complex_rel_l2": {
+        "mean": 0.8352081910707057,
+        "std": 0.17818649144535584
+      },
+      "phase_coherence": {
+        "mean": 0.4442676571197808,
+        "std": 0.21797532487436785
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f20": {
+      "complex_rel_l2": {
+        "mean": 0.8710701358504593,
+        "std": 0.16004529334946083
+      },
+      "phase_coherence": {
+        "mean": 0.38434233563020825,
+        "std": 0.21088490455626352
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f21": {
+      "complex_rel_l2": {
+        "mean": 0.8921098792925477,
+        "std": 0.1453472434896911
+      },
+      "phase_coherence": {
+        "mean": 0.34752634074538946,
+        "std": 0.20980572473435108
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9067701976746321,
+        "std": 0.13318885702211755
+      },
+      "phase_coherence": {
+        "mean": 0.3162313159555197,
+        "std": 0.20619332389751213
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9187835594639182,
+        "std": 0.12173914737306198
+      },
+      "phase_coherence": {
+        "mean": 0.2880961212795228,
+        "std": 0.20217236886344803
+      }
+    },
+    "carrier_gauged/low_band_span/rank6/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9289924558252096,
+        "std": 0.10956885062159182
+      },
+      "phase_coherence": {
+        "mean": 0.27202181925531477,
+        "std": 0.19089706272068577
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f15": {
+      "complex_rel_l2": {
+        "mean": 0.30646581745895674,
+        "std": 0.14839224264010645
+      },
+      "phase_coherence": {
+        "mean": 0.9341945294290781,
+        "std": 0.06305774923600499
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f16": {
+      "complex_rel_l2": {
+        "mean": 0.5108666407759301,
+        "std": 0.1986740782008834
+      },
+      "phase_coherence": {
+        "mean": 0.8114540623500943,
+        "std": 0.1281932271242837
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f17": {
+      "complex_rel_l2": {
+        "mean": 0.6621184322575573,
+        "std": 0.2135830917450728
+      },
+      "phase_coherence": {
+        "mean": 0.661603294312954,
+        "std": 0.1854262153123475
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f18": {
+      "complex_rel_l2": {
+        "mean": 0.7610007823677734,
+        "std": 0.20733349566753298
+      },
+      "phase_coherence": {
+        "mean": 0.5389281236566603,
+        "std": 0.21553893711604452
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f19": {
+      "complex_rel_l2": {
+        "mean": 0.8232954726554453,
+        "std": 0.19202939101710914
+      },
+      "phase_coherence": {
+        "mean": 0.4523540851660073,
+        "std": 0.22023852346044057
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f20": {
+      "complex_rel_l2": {
+        "mean": 0.8613418978638947,
+        "std": 0.17659923255123433
+      },
+      "phase_coherence": {
+        "mean": 0.3940279255621135,
+        "std": 0.21303837170406958
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f21": {
+      "complex_rel_l2": {
+        "mean": 0.8837323831394315,
+        "std": 0.16373952616105988
+      },
+      "phase_coherence": {
+        "mean": 0.35868902900256217,
+        "std": 0.2146609735252472
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f22": {
+      "complex_rel_l2": {
+        "mean": 0.8988069295883179,
+        "std": 0.15221519531679456
+      },
+      "phase_coherence": {
+        "mean": 0.32820341270416975,
+        "std": 0.2109160900493269
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9119024341925979,
+        "std": 0.1402749986232039
+      },
+      "phase_coherence": {
+        "mean": 0.2983162220334634,
+        "std": 0.20712488349224953
+      }
+    },
+    "carrier_gauged/low_band_span/rank8/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9227436110377312,
+        "std": 0.12652966122031492
+      },
+      "phase_coherence": {
+        "mean": 0.2794696206692606,
+        "std": 0.19660652540608192
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f15": {
+      "complex_rel_l2": {
+        "mean": 0.24796613452986094,
+        "std": 0.14376044079576722
+      },
+      "phase_coherence": {
+        "mean": 0.9441017359495163,
+        "std": 0.057095691235800064
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f16": {
+      "complex_rel_l2": {
+        "mean": 0.4653234121831247,
+        "std": 0.20321178830782474
+      },
+      "phase_coherence": {
+        "mean": 0.8228840623050928,
+        "std": 0.12693308197391323
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f17": {
+      "complex_rel_l2": {
+        "mean": 0.6283345080973959,
+        "std": 0.22314686826582614
+      },
+      "phase_coherence": {
+        "mean": 0.6818199027329683,
+        "std": 0.18605287712951302
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f18": {
+      "complex_rel_l2": {
+        "mean": 0.7345871699326381,
+        "std": 0.21815179941526178
+      },
+      "phase_coherence": {
+        "mean": 0.5658407784067094,
+        "std": 0.21524756818892832
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f19": {
+      "complex_rel_l2": {
+        "mean": 0.8034730791114271,
+        "std": 0.20461441000124356
+      },
+      "phase_coherence": {
+        "mean": 0.4771446632221341,
+        "std": 0.22422046570488233
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f20": {
+      "complex_rel_l2": {
+        "mean": 0.8449022078420967,
+        "std": 0.1915905243023516
+      },
+      "phase_coherence": {
+        "mean": 0.4167216056957841,
+        "std": 0.21903428334656558
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f21": {
+      "complex_rel_l2": {
+        "mean": 0.8698723335401155,
+        "std": 0.18287527957740607
+      },
+      "phase_coherence": {
+        "mean": 0.37847065296955407,
+        "std": 0.217724228096298
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f22": {
+      "complex_rel_l2": {
+        "mean": 0.886291028931737,
+        "std": 0.17704063384756377
+      },
+      "phase_coherence": {
+        "mean": 0.3463731133379042,
+        "std": 0.2151004303070406
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f23": {
+      "complex_rel_l2": {
+        "mean": 0.8995313701452687,
+        "std": 0.17125567047876233
+      },
+      "phase_coherence": {
+        "mean": 0.32145540812052786,
+        "std": 0.2083687763324683
+      }
+    },
+    "carrier_gauged/low_band_span/rank12/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9101670240052044,
+        "std": 0.16329610617501888
+      },
+      "phase_coherence": {
+        "mean": 0.29824834573082626,
+        "std": 0.20393080498876423
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f15": {
+      "complex_rel_l2": {
+        "mean": 0.2057181320785446,
+        "std": 0.1445241400585611
+      },
+      "phase_coherence": {
+        "mean": 0.9508743602782488,
+        "std": 0.055899737829912484
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f16": {
+      "complex_rel_l2": {
+        "mean": 0.41885668787017494,
+        "std": 0.21421789958593906
+      },
+      "phase_coherence": {
+        "mean": 0.8472383841872215,
+        "std": 0.122923931110758
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f17": {
+      "complex_rel_l2": {
+        "mean": 0.5912205801741948,
+        "std": 0.2349199372250039
+      },
+      "phase_coherence": {
+        "mean": 0.720526278950274,
+        "std": 0.18105896870841906
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f18": {
+      "complex_rel_l2": {
+        "mean": 0.7079877038449922,
+        "std": 0.22812853732694896
+      },
+      "phase_coherence": {
+        "mean": 0.6048194076865911,
+        "std": 0.21555559191350931
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f19": {
+      "complex_rel_l2": {
+        "mean": 0.7818476943793939,
+        "std": 0.2140348395047571
+      },
+      "phase_coherence": {
+        "mean": 0.513279287610203,
+        "std": 0.23017833135368237
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f20": {
+      "complex_rel_l2": {
+        "mean": 0.8290287948620971,
+        "std": 0.19876600297559457
+      },
+      "phase_coherence": {
+        "mean": 0.4464654470793903,
+        "std": 0.22882425298361156
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f21": {
+      "complex_rel_l2": {
+        "mean": 0.8587052599177696,
+        "std": 0.18661951476799588
+      },
+      "phase_coherence": {
+        "mean": 0.40283129387535155,
+        "std": 0.22509561601097336
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f22": {
+      "complex_rel_l2": {
+        "mean": 0.8781984391389415,
+        "std": 0.17901012564620675
+      },
+      "phase_coherence": {
+        "mean": 0.36642959620803595,
+        "std": 0.22069244568589091
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f23": {
+      "complex_rel_l2": {
+        "mean": 0.8936783574754372,
+        "std": 0.17243129456299042
+      },
+      "phase_coherence": {
+        "mean": 0.3380961883813143,
+        "std": 0.211942529753633
+      }
+    },
+    "carrier_gauged/low_band_span/rank14/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9054963430389762,
+        "std": 0.16426746147549945
+      },
+      "phase_coherence": {
+        "mean": 0.31613914179615676,
+        "std": 0.20661681235974133
+      }
+    },
+    "carrier_gauged/masked_frequency_polynomial/rank6/f2": {
+      "complex_rel_l2": {
+        "mean": 0.38975513365585357,
+        "std": 0.18562990266475177
+      },
+      "phase_coherence": {
+        "mean": 0.8916925825178623,
+        "std": 0.09538401560299763
+      }
+    },
+    "carrier_gauged/masked_frequency_polynomial/rank6/f4": {
+      "complex_rel_l2": {
+        "mean": 0.33799893443938345,
+        "std": 0.14328993143262742
+      },
+      "phase_coherence": {
+        "mean": 0.9148385021835566,
+        "std": 0.07196933125775982
+      }
+    },
+    "carrier_gauged/masked_frequency_polynomial/rank6/f6": {
+      "complex_rel_l2": {
+        "mean": 0.36497547128237784,
+        "std": 0.13651082828381272
+      },
+      "phase_coherence": {
+        "mean": 0.9013012088835239,
+        "std": 0.07916495491026974
+      }
+    },
+    "carrier_gauged/masked_frequency_polynomial/rank6/f8": {
+      "complex_rel_l2": {
+        "mean": 0.3635850618593395,
+        "std": 0.1327202152533457
+      },
+      "phase_coherence": {
+        "mean": 0.9075122717767954,
+        "std": 0.07303495701237
+      }
+    },
+    "carrier_gauged/masked_frequency_polynomial/rank6/f10": {
+      "complex_rel_l2": {
+        "mean": 0.36526683962438256,
+        "std": 0.1472094271609847
+      },
+      "phase_coherence": {
+        "mean": 0.9040338285267353,
+        "std": 0.06969796464456925
+      }
+    },
+    "carrier_gauged/masked_frequency_polynomial/rank6/f12": {
+      "complex_rel_l2": {
+        "mean": 0.28571692074183375,
+        "std": 0.12708237040028542
+      },
+      "phase_coherence": {
+        "mean": 0.934756688773632,
+        "std": 0.0580218814505955
+      }
+    },
+    "carrier_gauged/masked_frequency_polynomial/rank6/f14": {
+      "complex_rel_l2": {
+        "mean": 0.6826247037388384,
+        "std": 0.24361034824559297
+      },
+      "phase_coherence": {
+        "mean": 0.8923995178192854,
+        "std": 0.04558792428864192
+      }
+    },
+    "carrier_gauged/patch_span_4x8/rank1/f20": {
+      "complex_rel_l2": {
+        "mean": 0.8016744442284107,
+        "std": 0.12696272424136926
+      },
+      "phase_coherence": {
+        "mean": 0.48953883862122893,
+        "std": 0.16566516688232452
+      }
+    },
+    "carrier_gauged/patch_span_4x8/rank2/f20": {
+      "complex_rel_l2": {
+        "mean": 0.7094268510118127,
+        "std": 0.16397100139885856
+      },
+      "phase_coherence": {
+        "mean": 0.6142370123416185,
+        "std": 0.16885850577064102
+      }
+    },
+    "carrier_gauged/patch_span_4x8/rank3/f20": {
+      "complex_rel_l2": {
+        "mean": 0.6591553934849799,
+        "std": 0.17599729203302988
+      },
+      "phase_coherence": {
+        "mean": 0.6692626252770424,
+        "std": 0.15911454322840304
+      }
+    },
+    "carrier_gauged/patch_span_4x8/rank4/f20": {
+      "complex_rel_l2": {
+        "mean": 0.611090003978461,
+        "std": 0.1899720484417919
+      },
+      "phase_coherence": {
+        "mean": 0.7133204564452171,
+        "std": 0.15687445893439608
+      }
+    },
+    "carrier_gauged/patch_span_4x8/rank6/f20": {
+      "complex_rel_l2": {
+        "mean": 0.532303543179296,
+        "std": 0.20487820455389877
+      },
+      "phase_coherence": {
+        "mean": 0.7803663909435272,
+        "std": 0.14448526261049402
+      }
+    },
+    "carrier_gauged/patch_span_4x8/rank8/f20": {
+      "complex_rel_l2": {
+        "mean": 0.461997422069544,
+        "std": 0.20181228994123673
+      },
+      "phase_coherence": {
+        "mean": 0.8313871510326862,
+        "std": 0.12403857584740206
+      }
+    },
+    "carrier_gauged/patch_span_4x8/rank12/f20": {
+      "complex_rel_l2": {
+        "mean": 0.3399832918330503,
+        "std": 0.17709161539475785
+      },
+      "phase_coherence": {
+        "mean": 0.905023742467165,
+        "std": 0.08971613790077046
+      }
+    },
+    "carrier_gauged/patch_span_4x8/rank14/f20": {
+      "complex_rel_l2": {
+        "mean": 0.28153803526038246,
+        "std": 0.1638945623621152
+      },
+      "phase_coherence": {
+        "mean": 0.9315254930406809,
+        "std": 0.07303642397158208
+      }
+    },
+    "raw/full_band_oracle/rank1/f15": {
+      "complex_rel_l2": {
+        "mean": 0.8857052754610777,
+        "std": 0.12338414874955927
+      },
+      "phase_coherence": {
+        "mean": 0.3105649311619345,
+        "std": 0.2289232371775051
+      }
+    },
+    "raw/full_band_oracle/rank1/f16": {
+      "complex_rel_l2": {
+        "mean": 0.8868445102125406,
+        "std": 0.13863122426797203
+      },
+      "phase_coherence": {
+        "mean": 0.29509795834019314,
+        "std": 0.24394161817250617
+      }
+    },
+    "raw/full_band_oracle/rank1/f17": {
+      "complex_rel_l2": {
+        "mean": 0.8880726676434278,
+        "std": 0.16119838817563661
+      },
+      "phase_coherence": {
+        "mean": 0.2773262956761755,
+        "std": 0.26145336138989633
+      }
+    },
+    "raw/full_band_oracle/rank1/f18": {
+      "complex_rel_l2": {
+        "mean": 0.891940588131547,
+        "std": 0.1791919722060696
+      },
+      "phase_coherence": {
+        "mean": 0.2539467276656069,
+        "std": 0.27849669320588205
+      }
+    },
+    "raw/full_band_oracle/rank1/f19": {
+      "complex_rel_l2": {
+        "mean": 0.9014759650453925,
+        "std": 0.18067890904993497
+      },
+      "phase_coherence": {
+        "mean": 0.226127809859463,
+        "std": 0.2866361907079923
+      }
+    },
+    "raw/full_band_oracle/rank1/f20": {
+      "complex_rel_l2": {
+        "mean": 0.9171793283894658,
+        "std": 0.1620039514373992
+      },
+      "phase_coherence": {
+        "mean": 0.19604187316417665,
+        "std": 0.2800731569510166
+      }
+    },
+    "raw/full_band_oracle/rank1/f21": {
+      "complex_rel_l2": {
+        "mean": 0.935803946107626,
+        "std": 0.13080356583352146
+      },
+      "phase_coherence": {
+        "mean": 0.1686172576573881,
+        "std": 0.2551925709523534
+      }
+    },
+    "raw/full_band_oracle/rank1/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9538195244967937,
+        "std": 0.09678046168194845
+      },
+      "phase_coherence": {
+        "mean": 0.13801881021936424,
+        "std": 0.21859846521653495
+      }
+    },
+    "raw/full_band_oracle/rank1/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9692969918251038,
+        "std": 0.06635373149374592
+      },
+      "phase_coherence": {
+        "mean": 0.1042366315741674,
+        "std": 0.1741762768776338
+      }
+    },
+    "raw/full_band_oracle/rank1/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9812592249363661,
+        "std": 0.042635418758290466
+      },
+      "phase_coherence": {
+        "mean": 0.07040035522595645,
+        "std": 0.12872058315123466
+      }
+    },
+    "raw/full_band_oracle/rank2/f15": {
+      "complex_rel_l2": {
+        "mean": 0.6484947511926293,
+        "std": 0.13783353753194744
+      },
+      "phase_coherence": {
+        "mean": 0.6918137846514583,
+        "std": 0.1654178708058267
+      }
+    },
+    "raw/full_band_oracle/rank2/f16": {
+      "complex_rel_l2": {
+        "mean": 0.6589687718078494,
+        "std": 0.13589425137962227
+      },
+      "phase_coherence": {
+        "mean": 0.6754351989366114,
+        "std": 0.1590158199608692
+      }
+    },
+    "raw/full_band_oracle/rank2/f17": {
+      "complex_rel_l2": {
+        "mean": 0.6697642933577299,
+        "std": 0.1557488181495677
+      },
+      "phase_coherence": {
+        "mean": 0.6482682609930634,
+        "std": 0.18366747484204088
+      }
+    },
+    "raw/full_band_oracle/rank2/f18": {
+      "complex_rel_l2": {
+        "mean": 0.6851660776883364,
+        "std": 0.17895562815665048
+      },
+      "phase_coherence": {
+        "mean": 0.6272459211759269,
+        "std": 0.21060674585227795
+      }
+    },
+    "raw/full_band_oracle/rank2/f19": {
+      "complex_rel_l2": {
+        "mean": 0.7104602521285415,
+        "std": 0.19540614838585613
+      },
+      "phase_coherence": {
+        "mean": 0.597239424707368,
+        "std": 0.23362828575183048
+      }
+    },
+    "raw/full_band_oracle/rank2/f20": {
+      "complex_rel_l2": {
+        "mean": 0.7499179523438215,
+        "std": 0.19993591084528423
+      },
+      "phase_coherence": {
+        "mean": 0.5458990960614756,
+        "std": 0.24768133033559012
+      }
+    },
+    "raw/full_band_oracle/rank2/f21": {
+      "complex_rel_l2": {
+        "mean": 0.801359505392611,
+        "std": 0.18194953905833428
+      },
+      "phase_coherence": {
+        "mean": 0.47610333445481956,
+        "std": 0.25354605418368
+      }
+    },
+    "raw/full_band_oracle/rank2/f22": {
+      "complex_rel_l2": {
+        "mean": 0.8547996245324612,
+        "std": 0.14473836096652615
+      },
+      "phase_coherence": {
+        "mean": 0.40370848029851913,
+        "std": 0.23191712706124556
+      }
+    },
+    "raw/full_band_oracle/rank2/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9028752092272043,
+        "std": 0.10358894699207431
+      },
+      "phase_coherence": {
+        "mean": 0.3202521111816168,
+        "std": 0.20006272872540742
+      }
+    },
+    "raw/full_band_oracle/rank2/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9417000934481621,
+        "std": 0.0684144225283014
+      },
+      "phase_coherence": {
+        "mean": 0.23241648846305907,
+        "std": 0.16249138817190373
+      }
+    },
+    "raw/full_band_oracle/rank3/f15": {
+      "complex_rel_l2": {
+        "mean": 0.5212760223075747,
+        "std": 0.13191901654753127
+      },
+      "phase_coherence": {
+        "mean": 0.8056133091449738,
+        "std": 0.10359869370284674
+      }
+    },
+    "raw/full_band_oracle/rank3/f16": {
+      "complex_rel_l2": {
+        "mean": 0.5311741251498461,
+        "std": 0.10441463237163547
+      },
+      "phase_coherence": {
+        "mean": 0.8051336146891117,
+        "std": 0.07828008165028837
+      }
+    },
+    "raw/full_band_oracle/rank3/f17": {
+      "complex_rel_l2": {
+        "mean": 0.5221443362534046,
+        "std": 0.09515937480558999
+      },
+      "phase_coherence": {
+        "mean": 0.8121204217895865,
+        "std": 0.0974079180502965
+      }
+    },
+    "raw/full_band_oracle/rank3/f18": {
+      "complex_rel_l2": {
+        "mean": 0.498808360658586,
+        "std": 0.12071356972696826
+      },
+      "phase_coherence": {
+        "mean": 0.8222230579704046,
+        "std": 0.12504317100641613
+      }
+    },
+    "raw/full_band_oracle/rank3/f19": {
+      "complex_rel_l2": {
+        "mean": 0.4845668403431773,
+        "std": 0.13790673457441555
+      },
+      "phase_coherence": {
+        "mean": 0.8294606246054173,
+        "std": 0.13069870470822104
+      }
+    },
+    "raw/full_band_oracle/rank3/f20": {
+      "complex_rel_l2": {
+        "mean": 0.4961816375143826,
+        "std": 0.16921522004469056
+      },
+      "phase_coherence": {
+        "mean": 0.8153720377013087,
+        "std": 0.14794781836647697
+      }
+    },
+    "raw/full_band_oracle/rank3/f21": {
+      "complex_rel_l2": {
+        "mean": 0.5472425986081362,
+        "std": 0.21048480827301422
+      },
+      "phase_coherence": {
+        "mean": 0.7647081902250648,
+        "std": 0.1942710047660353
+      }
+    },
+    "raw/full_band_oracle/rank3/f22": {
+      "complex_rel_l2": {
+        "mean": 0.6419037571176887,
+        "std": 0.2059528084698757
+      },
+      "phase_coherence": {
+        "mean": 0.6840897251386195,
+        "std": 0.2135306225283187
+      }
+    },
+    "raw/full_band_oracle/rank3/f23": {
+      "complex_rel_l2": {
+        "mean": 0.7531372355297208,
+        "std": 0.1579805208262425
+      },
+      "phase_coherence": {
+        "mean": 0.5810092738829553,
+        "std": 0.1949070400460024
+      }
+    },
+    "raw/full_band_oracle/rank3/f24": {
+      "complex_rel_l2": {
+        "mean": 0.8498553298413754,
+        "std": 0.10752451724447222
+      },
+      "phase_coherence": {
+        "mean": 0.4558401859831065,
+        "std": 0.17139594101547173
+      }
+    },
+    "raw/full_band_oracle/rank4/f15": {
+      "complex_rel_l2": {
+        "mean": 0.3300821101292968,
+        "std": 0.11329119277913695
+      },
+      "phase_coherence": {
+        "mean": 0.9185716044157743,
+        "std": 0.06716327453932076
+      }
+    },
+    "raw/full_band_oracle/rank4/f16": {
+      "complex_rel_l2": {
+        "mean": 0.3393210326321423,
+        "std": 0.11926254939043482
+      },
+      "phase_coherence": {
+        "mean": 0.9148629363626242,
+        "std": 0.057703432693247125
+      }
+    },
+    "raw/full_band_oracle/rank4/f17": {
+      "complex_rel_l2": {
+        "mean": 0.3842741562984884,
+        "std": 0.11698303561556232
+      },
+      "phase_coherence": {
+        "mean": 0.8918781206011772,
+        "std": 0.06664901927227754
+      }
+    },
+    "raw/full_band_oracle/rank4/f18": {
+      "complex_rel_l2": {
+        "mean": 0.42207342153415084,
+        "std": 0.11622635480044217
+      },
+      "phase_coherence": {
+        "mean": 0.8725750036537647,
+        "std": 0.07719374368040836
+      }
+    },
+    "raw/full_band_oracle/rank4/f19": {
+      "complex_rel_l2": {
+        "mean": 0.4178116312250495,
+        "std": 0.10623676797349318
+      },
+      "phase_coherence": {
+        "mean": 0.8830466140061617,
+        "std": 0.06697626206898852
+      }
+    },
+    "raw/full_band_oracle/rank4/f20": {
+      "complex_rel_l2": {
+        "mean": 0.36819806741550565,
+        "std": 0.10870378107493606
+      },
+      "phase_coherence": {
+        "mean": 0.9075546488165855,
+        "std": 0.06470985743834239
+      }
+    },
+    "raw/full_band_oracle/rank4/f21": {
+      "complex_rel_l2": {
+        "mean": 0.32538411393761635,
+        "std": 0.1435354280475901
+      },
+      "phase_coherence": {
+        "mean": 0.9196942914277315,
+        "std": 0.08684972152559947
+      }
+    },
+    "raw/full_band_oracle/rank4/f22": {
+      "complex_rel_l2": {
+        "mean": 0.3871700130403042,
+        "std": 0.16975273274974684
+      },
+      "phase_coherence": {
+        "mean": 0.8863429240882397,
+        "std": 0.1113170498830034
+      }
+    },
+    "raw/full_band_oracle/rank4/f23": {
+      "complex_rel_l2": {
+        "mean": 0.5481369271874428,
+        "std": 0.1536873441456616
+      },
+      "phase_coherence": {
+        "mean": 0.7947848541662097,
+        "std": 0.13115540308250015
+      }
+    },
+    "raw/full_band_oracle/rank4/f24": {
+      "complex_rel_l2": {
+        "mean": 0.7147191241383553,
+        "std": 0.12352260821003082
+      },
+      "phase_coherence": {
+        "mean": 0.6548740323632956,
+        "std": 0.14561251016022167
+      }
+    },
+    "raw/full_band_oracle/rank6/f15": {
+      "complex_rel_l2": {
+        "mean": 0.13475058291805908,
+        "std": 0.08395942588099925
+      },
+      "phase_coherence": {
+        "mean": 0.9840165711939335,
+        "std": 0.017400116181830783
+      }
+    },
+    "raw/full_band_oracle/rank6/f16": {
+      "complex_rel_l2": {
+        "mean": 0.1724543907912448,
+        "std": 0.08173229937067114
+      },
+      "phase_coherence": {
+        "mean": 0.9754379335790873,
+        "std": 0.020526238458848052
+      }
+    },
+    "raw/full_band_oracle/rank6/f17": {
+      "complex_rel_l2": {
+        "mean": 0.18145482940599322,
+        "std": 0.08628711747794103
+      },
+      "phase_coherence": {
+        "mean": 0.9737461432814598,
+        "std": 0.026621857007874988
+      }
+    },
+    "raw/full_band_oracle/rank6/f18": {
+      "complex_rel_l2": {
+        "mean": 0.14644548913929611,
+        "std": 0.10683300786618105
+      },
+      "phase_coherence": {
+        "mean": 0.9797044843435287,
+        "std": 0.040858921183069115
+      }
+    },
+    "raw/full_band_oracle/rank6/f19": {
+      "complex_rel_l2": {
+        "mean": 0.14633490290725604,
+        "std": 0.12379942786027323
+      },
+      "phase_coherence": {
+        "mean": 0.9770694691687822,
+        "std": 0.043662750766190105
+      }
+    },
+    "raw/full_band_oracle/rank6/f20": {
+      "complex_rel_l2": {
+        "mean": 0.20737514889333397,
+        "std": 0.11562510125013341
+      },
+      "phase_coherence": {
+        "mean": 0.96377182751894,
+        "std": 0.03431504479554267
+      }
+    },
+    "raw/full_band_oracle/rank6/f21": {
+      "complex_rel_l2": {
+        "mean": 0.21981086721643806,
+        "std": 0.08898532818606997
+      },
+      "phase_coherence": {
+        "mean": 0.9662554189562798,
+        "std": 0.02394494297197018
+      }
+    },
+    "raw/full_band_oracle/rank6/f22": {
+      "complex_rel_l2": {
+        "mean": 0.1469648126512766,
+        "std": 0.0564416311519948
+      },
+      "phase_coherence": {
+        "mean": 0.987294614315033,
+        "std": 0.008800582856832264
+      }
+    },
+    "raw/full_band_oracle/rank6/f23": {
+      "complex_rel_l2": {
+        "mean": 0.156146643566899,
+        "std": 0.10282406528516397
+      },
+      "phase_coherence": {
+        "mean": 0.9794839564710855,
+        "std": 0.02295312971508906
+      }
+    },
+    "raw/full_band_oracle/rank6/f24": {
+      "complex_rel_l2": {
+        "mean": 0.37462129537016153,
+        "std": 0.15150409599469947
+      },
+      "phase_coherence": {
+        "mean": 0.9075449854135513,
+        "std": 0.07378401093076198
+      }
+    },
+    "raw/full_band_oracle/rank8/f15": {
+      "complex_rel_l2": {
+        "mean": 0.043819619953865185,
+        "std": 0.04082937054002661
+      },
+      "phase_coherence": {
+        "mean": 0.9975998811423779,
+        "std": 0.00437352040446214
+      }
+    },
+    "raw/full_band_oracle/rank8/f16": {
+      "complex_rel_l2": {
+        "mean": 0.051440756855299696,
+        "std": 0.03834180490751122
+      },
+      "phase_coherence": {
+        "mean": 0.9973107967525721,
+        "std": 0.0036548433146453485
+      }
+    },
+    "raw/full_band_oracle/rank8/f17": {
+      "complex_rel_l2": {
+        "mean": 0.03670671657891944,
+        "std": 0.035725789983253
+      },
+      "phase_coherence": {
+        "mean": 0.9982225075364113,
+        "std": 0.003921715162492213
+      }
+    },
+    "raw/full_band_oracle/rank8/f18": {
+      "complex_rel_l2": {
+        "mean": 0.047884590152534656,
+        "std": 0.061538564981230996
+      },
+      "phase_coherence": {
+        "mean": 0.996177801862359,
+        "std": 0.009479962693422331
+      }
+    },
+    "raw/full_band_oracle/rank8/f19": {
+      "complex_rel_l2": {
+        "mean": 0.0625622809457127,
+        "std": 0.052343798855756955
+      },
+      "phase_coherence": {
+        "mean": 0.9956828635185957,
+        "std": 0.006593286478553777
+      }
+    },
+    "raw/full_band_oracle/rank8/f20": {
+      "complex_rel_l2": {
+        "mean": 0.04110798874171451,
+        "std": 0.028591199666500255
+      },
+      "phase_coherence": {
+        "mean": 0.9985949285328388,
+        "std": 0.0017221942215255638
+      }
+    },
+    "raw/full_band_oracle/rank8/f21": {
+      "complex_rel_l2": {
+        "mean": 0.047049380191310775,
+        "std": 0.05334207034794524
+      },
+      "phase_coherence": {
+        "mean": 0.9969631694257259,
+        "std": 0.005560071941064759
+      }
+    },
+    "raw/full_band_oracle/rank8/f22": {
+      "complex_rel_l2": {
+        "mean": 0.07765614247182384,
+        "std": 0.05918795490537005
+      },
+      "phase_coherence": {
+        "mean": 0.9945176299661398,
+        "std": 0.006643053686807814
+      }
+    },
+    "raw/full_band_oracle/rank8/f23": {
+      "complex_rel_l2": {
+        "mean": 0.04458953338325955,
+        "std": 0.02397140115526467
+      },
+      "phase_coherence": {
+        "mean": 0.9986006785184145,
+        "std": 0.0015462469783786381
+      }
+    },
+    "raw/full_band_oracle/rank8/f24": {
+      "complex_rel_l2": {
+        "mean": 0.11066428036428988,
+        "std": 0.09485678442258266
+      },
+      "phase_coherence": {
+        "mean": 0.9897547028958797,
+        "std": 0.016557392841146563
+      }
+    },
+    "raw/full_band_oracle/rank12/f15": {
+      "complex_rel_l2": {
+        "mean": 0.0011220808245013814,
+        "std": 0.0015290510795071732
+      },
+      "phase_coherence": {
+        "mean": 0.99999725446105,
+        "std": 5.6283862094508295e-06
+      }
+    },
+    "raw/full_band_oracle/rank12/f16": {
+      "complex_rel_l2": {
+        "mean": 0.00037784783383187914,
+        "std": 0.0005671235509043351
+      },
+      "phase_coherence": {
+        "mean": 0.9999996963888407,
+        "std": 7.786756514255115e-07
+      }
+    },
+    "raw/full_band_oracle/rank12/f17": {
+      "complex_rel_l2": {
+        "mean": 0.001237752209092946,
+        "std": 0.0018853990776621454
+      },
+      "phase_coherence": {
+        "mean": 0.9999963250011206,
+        "std": 1.0405248850379867e-05
+      }
+    },
+    "raw/full_band_oracle/rank12/f18": {
+      "complex_rel_l2": {
+        "mean": 0.0006042819819640499,
+        "std": 0.0007601118595135632
+      },
+      "phase_coherence": {
+        "mean": 0.999999450519681,
+        "std": 1.0713586915947486e-06
+      }
+    },
+    "raw/full_band_oracle/rank12/f19": {
+      "complex_rel_l2": {
+        "mean": 0.001237325664682487,
+        "std": 0.0020660667710739934
+      },
+      "phase_coherence": {
+        "mean": 0.9999967236071825,
+        "std": 9.112243910615934e-06
+      }
+    },
+    "raw/full_band_oracle/rank12/f20": {
+      "complex_rel_l2": {
+        "mean": 0.0009590295497616808,
+        "std": 0.0011850419547140322
+      },
+      "phase_coherence": {
+        "mean": 0.9999985285103321,
+        "std": 2.5454534368171667e-06
+      }
+    },
+    "raw/full_band_oracle/rank12/f21": {
+      "complex_rel_l2": {
+        "mean": 0.0012353430938318866,
+        "std": 0.001972019310335674
+      },
+      "phase_coherence": {
+        "mean": 0.9999970849603415,
+        "std": 6.6850759722947415e-06
+      }
+    },
+    "raw/full_band_oracle/rank12/f22": {
+      "complex_rel_l2": {
+        "mean": 0.0012308302916039793,
+        "std": 0.0014968174101191232
+      },
+      "phase_coherence": {
+        "mean": 0.9999980106949806,
+        "std": 3.365513560838051e-06
+      }
+    },
+    "raw/full_band_oracle/rank12/f23": {
+      "complex_rel_l2": {
+        "mean": 0.0021797207963629717,
+        "std": 0.0031777537337048297
+      },
+      "phase_coherence": {
+        "mean": 0.9999900981783867,
+        "std": 2.9358460861654068e-05
+      }
+    },
+    "raw/full_band_oracle/rank12/f24": {
+      "complex_rel_l2": {
+        "mean": 0.0009396641533356842,
+        "std": 0.0015493938170977235
+      },
+      "phase_coherence": {
+        "mean": 0.999997965991497,
+        "std": 6.31248037833996e-06
+      }
+    },
+    "raw/full_band_oracle/rank14/f15": {
+      "complex_rel_l2": {
+        "mean": 6.522799816366387e-05,
+        "std": 9.92060479302216e-05
+      },
+      "phase_coherence": {
+        "mean": 0.9999999850988388,
+        "std": 4.282124090833066e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f16": {
+      "complex_rel_l2": {
+        "mean": 5.279476781794301e-05,
+        "std": 8.877935729400944e-05
+      },
+      "phase_coherence": {
+        "mean": 0.9999999888241291,
+        "std": 3.841252677672726e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f17": {
+      "complex_rel_l2": {
+        "mean": 7.373880994521187e-05,
+        "std": 0.00011684668114723146
+      },
+      "phase_coherence": {
+        "mean": 0.9999999888241291,
+        "std": 3.5303185114896186e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f18": {
+      "complex_rel_l2": {
+        "mean": 5.98065569334949e-05,
+        "std": 0.0001130667412704237
+      },
+      "phase_coherence": {
+        "mean": 0.9999999925494194,
+        "std": 2.9317699482319636e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f19": {
+      "complex_rel_l2": {
+        "mean": 7.973392198579177e-05,
+        "std": 0.00012646777155763758
+      },
+      "phase_coherence": {
+        "mean": 0.9999999906867743,
+        "std": 3.7420763713023324e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f20": {
+      "complex_rel_l2": {
+        "mean": 7.829929226232935e-05,
+        "std": 0.0001383490061203
+      },
+      "phase_coherence": {
+        "mean": 0.9999999757856131,
+        "std": 4.989036373807761e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f21": {
+      "complex_rel_l2": {
+        "mean": 6.709652826941692e-05,
+        "std": 9.492222291154306e-05
+      },
+      "phase_coherence": {
+        "mean": 0.9999999981373549,
+        "std": 1.0536712127723509e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f22": {
+      "complex_rel_l2": {
+        "mean": 0.0001398094970852526,
+        "std": 0.0002247269538132244
+      },
+      "phase_coherence": {
+        "mean": 0.9999999608844519,
+        "std": 9.882500317280953e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f23": {
+      "complex_rel_l2": {
+        "mean": 9.055667159429959e-05,
+        "std": 0.00015360885388983233
+      },
+      "phase_coherence": {
+        "mean": 0.999999986961484,
+        "std": 4.723547547169403e-08
+      }
+    },
+    "raw/full_band_oracle/rank14/f24": {
+      "complex_rel_l2": {
+        "mean": 2.4307265555023605e-05,
+        "std": 4.0822641897336e-05
+      },
+      "phase_coherence": {
+        "mean": 1.0,
+        "std": 0.0
+      }
+    },
+    "raw/latent_polynomial/rank6/f15": {
+      "complex_rel_l2": {
+        "mean": 1.8472357392311096,
+        "std": 0.04825275282612136
+      },
+      "phase_coherence": {
+        "mean": -0.4382304782047868,
+        "std": 0.11371069325381694
+      }
+    },
+    "raw/latent_polynomial/rank6/f16": {
+      "complex_rel_l2": {
+        "mean": 2.600874401628971,
+        "std": 0.2986826642072159
+      },
+      "phase_coherence": {
+        "mean": -0.5283259358257055,
+        "std": 0.1332872097913632
+      }
+    },
+    "raw/latent_polynomial/rank6/f17": {
+      "complex_rel_l2": {
+        "mean": 2.8457232639193535,
+        "std": 0.6129321162565065
+      },
+      "phase_coherence": {
+        "mean": 0.24427264730184106,
+        "std": 0.19789134154085966
+      }
+    },
+    "raw/latent_polynomial/rank6/f18": {
+      "complex_rel_l2": {
+        "mean": 4.1929794400930405,
+        "std": 0.7859886610522127
+      },
+      "phase_coherence": {
+        "mean": 0.11336432270127261,
+        "std": 0.14475601159908505
+      }
+    },
+    "raw/latent_polynomial/rank6/f19": {
+      "complex_rel_l2": {
+        "mean": 5.892523154616356,
+        "std": 1.1271969084385087
+      },
+      "phase_coherence": {
+        "mean": -0.0438036659293175,
+        "std": 0.11715697507199192
+      }
+    },
+    "raw/latent_polynomial/rank6/f20": {
+      "complex_rel_l2": {
+        "mean": 7.678238570690155,
+        "std": 1.4876462838668048
+      },
+      "phase_coherence": {
+        "mean": 0.006560219925859201,
+        "std": 0.06622173265066153
+      }
+    },
+    "raw/latent_polynomial/rank6/f21": {
+      "complex_rel_l2": {
+        "mean": 9.898129940032959,
+        "std": 1.9030584252006502
+      },
+      "phase_coherence": {
+        "mean": 0.012193693488370627,
+        "std": 0.06679147197222264
+      }
+    },
+    "raw/latent_polynomial/rank6/f22": {
+      "complex_rel_l2": {
+        "mean": 12.537786394357681,
+        "std": 2.502162608535065
+      },
+      "phase_coherence": {
+        "mean": 0.01379039415041916,
+        "std": 0.055579868479181296
+      }
+    },
+    "raw/latent_polynomial/rank6/f23": {
+      "complex_rel_l2": {
+        "mean": 15.64904659986496,
+        "std": 3.2172728109345026
+      },
+      "phase_coherence": {
+        "mean": -0.032680124471880845,
+        "std": 0.06342869908515553
+      }
+    },
+    "raw/latent_polynomial/rank6/f24": {
+      "complex_rel_l2": {
+        "mean": 19.269069343805313,
+        "std": 4.139424659982048
+      },
+      "phase_coherence": {
+        "mean": -0.028658495743002277,
+        "std": 0.060295270155325376
+      }
+    },
+    "raw/low_band_span/rank1/f15": {
+      "complex_rel_l2": {
+        "mean": 0.9776127208024263,
+        "std": 0.02701540516431463
+      },
+      "phase_coherence": {
+        "mean": 0.1140955145638145,
+        "std": 0.0969924010056568
+      }
+    },
+    "raw/low_band_span/rank1/f16": {
+      "complex_rel_l2": {
+        "mean": 0.9893742706626654,
+        "std": 0.0127736839624271
+      },
+      "phase_coherence": {
+        "mean": 0.0612894586438415,
+        "std": 0.06997065593054701
+      }
+    },
+    "raw/low_band_span/rank1/f17": {
+      "complex_rel_l2": {
+        "mean": 0.995537469163537,
+        "std": 0.005355081947161848
+      },
+      "phase_coherence": {
+        "mean": 0.030460764988674782,
+        "std": 0.062353242421569734
+      }
+    },
+    "raw/low_band_span/rank1/f18": {
+      "complex_rel_l2": {
+        "mean": 0.9982138946652412,
+        "std": 0.0020973908149283516
+      },
+      "phase_coherence": {
+        "mean": 0.015124311259569367,
+        "std": 0.0565692594629187
+      }
+    },
+    "raw/low_band_span/rank1/f19": {
+      "complex_rel_l2": {
+        "mean": 0.9992120265960693,
+        "std": 0.0010190600979507179
+      },
+      "phase_coherence": {
+        "mean": 0.016764915470730557,
+        "std": 0.05003925118537899
+      }
+    },
+    "raw/low_band_span/rank1/f20": {
+      "complex_rel_l2": {
+        "mean": 0.9995580706745386,
+        "std": 0.0007018668944944158
+      },
+      "phase_coherence": {
+        "mean": 0.024173654972400982,
+        "std": 0.0389607983552431
+      }
+    },
+    "raw/low_band_span/rank1/f21": {
+      "complex_rel_l2": {
+        "mean": 0.9996801968663931,
+        "std": 0.0005827175244033894
+      },
+      "phase_coherence": {
+        "mean": 0.027024762291148363,
+        "std": 0.04144551452385712
+      }
+    },
+    "raw/low_band_span/rank1/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9997329711914062,
+        "std": 0.0005678962427818695
+      },
+      "phase_coherence": {
+        "mean": 0.022311495735948483,
+        "std": 0.04117042060972471
+      }
+    },
+    "raw/low_band_span/rank1/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9997626319527626,
+        "std": 0.0005459564292039336
+      },
+      "phase_coherence": {
+        "mean": 0.019336747047418612,
+        "std": 0.0358821820774149
+      }
+    },
+    "raw/low_band_span/rank1/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9997903686016798,
+        "std": 0.00047657238875552043
+      },
+      "phase_coherence": {
+        "mean": 0.016372869817132596,
+        "std": 0.032307316831203615
+      }
+    },
+    "raw/low_band_span/rank2/f15": {
+      "complex_rel_l2": {
+        "mean": 0.8705295529216528,
+        "std": 0.08008835831219385
+      },
+      "phase_coherence": {
+        "mean": 0.4260112252086401,
+        "std": 0.14969086546161672
+      }
+    },
+    "raw/low_band_span/rank2/f16": {
+      "complex_rel_l2": {
+        "mean": 0.9390514437109232,
+        "std": 0.04601490872756764
+      },
+      "phase_coherence": {
+        "mean": 0.2820005868561566,
+        "std": 0.12554664846484756
+      }
+    },
+    "raw/low_band_span/rank2/f17": {
+      "complex_rel_l2": {
+        "mean": 0.9733727518469095,
+        "std": 0.025444004468498135
+      },
+      "phase_coherence": {
+        "mean": 0.16876243560545845,
+        "std": 0.10636309732380776
+      }
+    },
+    "raw/low_band_span/rank2/f18": {
+      "complex_rel_l2": {
+        "mean": 0.9874681066721678,
+        "std": 0.014289998879174225
+      },
+      "phase_coherence": {
+        "mean": 0.12125457648289739,
+        "std": 0.08410821512674595
+      }
+    },
+    "raw/low_band_span/rank2/f19": {
+      "complex_rel_l2": {
+        "mean": 0.9930935967713594,
+        "std": 0.009317301887439544
+      },
+      "phase_coherence": {
+        "mean": 0.08691805466514779,
+        "std": 0.08135970175153492
+      }
+    },
+    "raw/low_band_span/rank2/f20": {
+      "complex_rel_l2": {
+        "mean": 0.9958326369524002,
+        "std": 0.006654257821613597
+      },
+      "phase_coherence": {
+        "mean": 0.0539682244125288,
+        "std": 0.08034931667420626
+      }
+    },
+    "raw/low_band_span/rank2/f21": {
+      "complex_rel_l2": {
+        "mean": 0.9973129034042358,
+        "std": 0.004832680585600246
+      },
+      "phase_coherence": {
+        "mean": 0.03884283121442422,
+        "std": 0.07327743715116773
+      }
+    },
+    "raw/low_band_span/rank2/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9980786833912134,
+        "std": 0.003911380013315047
+      },
+      "phase_coherence": {
+        "mean": 0.04497952743986389,
+        "std": 0.06050161195379334
+      }
+    },
+    "raw/low_band_span/rank2/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9984636474400759,
+        "std": 0.003281546519083907
+      },
+      "phase_coherence": {
+        "mean": 0.04020454757846892,
+        "std": 0.058479614824232216
+      }
+    },
+    "raw/low_band_span/rank2/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9987652599811554,
+        "std": 0.002517803004079158
+      },
+      "phase_coherence": {
+        "mean": 0.03543228360672401,
+        "std": 0.04738945772611098
+      }
+    },
+    "raw/low_band_span/rank3/f15": {
+      "complex_rel_l2": {
+        "mean": 0.7113890601322055,
+        "std": 0.1183292722041804
+      },
+      "phase_coherence": {
+        "mean": 0.6622107140719891,
+        "std": 0.14600364084062195
+      }
+    },
+    "raw/low_band_span/rank3/f16": {
+      "complex_rel_l2": {
+        "mean": 0.8550856895744801,
+        "std": 0.08337083590065085
+      },
+      "phase_coherence": {
+        "mean": 0.4763583317399025,
+        "std": 0.16203622686015867
+      }
+    },
+    "raw/low_band_span/rank3/f17": {
+      "complex_rel_l2": {
+        "mean": 0.9352856893092394,
+        "std": 0.04803152381895598
+      },
+      "phase_coherence": {
+        "mean": 0.3164159826701507,
+        "std": 0.15325320314659593
+      }
+    },
+    "raw/low_band_span/rank3/f18": {
+      "complex_rel_l2": {
+        "mean": 0.971816023811698,
+        "std": 0.02463199442286297
+      },
+      "phase_coherence": {
+        "mean": 0.19839940866222605,
+        "std": 0.12743258856009088
+      }
+    },
+    "raw/low_band_span/rank3/f19": {
+      "complex_rel_l2": {
+        "mean": 0.9860624801367521,
+        "std": 0.013813314045096193
+      },
+      "phase_coherence": {
+        "mean": 0.14412793645169586,
+        "std": 0.10089834245488623
+      }
+    },
+    "raw/low_band_span/rank3/f20": {
+      "complex_rel_l2": {
+        "mean": 0.9915710762143135,
+        "std": 0.010409838903799663
+      },
+      "phase_coherence": {
+        "mean": 0.10923079604981467,
+        "std": 0.08993940161034907
+      }
+    },
+    "raw/low_band_span/rank3/f21": {
+      "complex_rel_l2": {
+        "mean": 0.994199289008975,
+        "std": 0.00851926945883489
+      },
+      "phase_coherence": {
+        "mean": 0.07077565418148879,
+        "std": 0.09913199549001382
+      }
+    },
+    "raw/low_band_span/rank3/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9958013519644737,
+        "std": 0.007287051762345295
+      },
+      "phase_coherence": {
+        "mean": 0.05857340764487162,
+        "std": 0.09491278834336979
+      }
+    },
+    "raw/low_band_span/rank3/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9967365022748709,
+        "std": 0.007064576546421455
+      },
+      "phase_coherence": {
+        "mean": 0.050656739782425575,
+        "std": 0.07703601524446546
+      }
+    },
+    "raw/low_band_span/rank3/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9972955044358969,
+        "std": 0.006706389880440943
+      },
+      "phase_coherence": {
+        "mean": 0.04463449298054911,
+        "std": 0.06793962753915103
+      }
+    },
+    "raw/low_band_span/rank4/f15": {
+      "complex_rel_l2": {
+        "mean": 0.5140700722113252,
+        "std": 0.15029453147170327
+      },
+      "phase_coherence": {
+        "mean": 0.8488118853420019,
+        "std": 0.11098195794703121
+      }
+    },
+    "raw/low_band_span/rank4/f16": {
+      "complex_rel_l2": {
+        "mean": 0.7217223299667239,
+        "std": 0.1370825322644088
+      },
+      "phase_coherence": {
+        "mean": 0.6894713807851076,
+        "std": 0.16100286570694386
+      }
+    },
+    "raw/low_band_span/rank4/f17": {
+      "complex_rel_l2": {
+        "mean": 0.8606399577111006,
+        "std": 0.09598962695397316
+      },
+      "phase_coherence": {
+        "mean": 0.5044006728567183,
+        "std": 0.1930037021898556
+      }
+    },
+    "raw/low_band_span/rank4/f18": {
+      "complex_rel_l2": {
+        "mean": 0.9366834033280611,
+        "std": 0.05297166503166581
+      },
+      "phase_coherence": {
+        "mean": 0.337535209604539,
+        "std": 0.1867608421062848
+      }
+    },
+    "raw/low_band_span/rank4/f19": {
+      "complex_rel_l2": {
+        "mean": 0.9717386234551668,
+        "std": 0.024070420387378392
+      },
+      "phase_coherence": {
+        "mean": 0.22570877090038266,
+        "std": 0.15292098354654915
+      }
+    },
+    "raw/low_band_span/rank4/f20": {
+      "complex_rel_l2": {
+        "mean": 0.9858374502509832,
+        "std": 0.012627175109124587
+      },
+      "phase_coherence": {
+        "mean": 0.16570917765420745,
+        "std": 0.10550601443192882
+      }
+    },
+    "raw/low_band_span/rank4/f21": {
+      "complex_rel_l2": {
+        "mean": 0.9911115169525146,
+        "std": 0.010292735285106904
+      },
+      "phase_coherence": {
+        "mean": 0.10002166469348595,
+        "std": 0.10357238133562954
+      }
+    },
+    "raw/low_band_span/rank4/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9934432320296764,
+        "std": 0.00889114842863151
+      },
+      "phase_coherence": {
+        "mean": 0.08205175315379165,
+        "std": 0.09721905922408554
+      }
+    },
+    "raw/low_band_span/rank4/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9947465248405933,
+        "std": 0.008420469793751429
+      },
+      "phase_coherence": {
+        "mean": 0.06968759524170309,
+        "std": 0.08836458023785447
+      }
+    },
+    "raw/low_band_span/rank4/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9956212900578976,
+        "std": 0.00797656386753708
+      },
+      "phase_coherence": {
+        "mean": 0.05238875407121668,
+        "std": 0.08480810291903369
+      }
+    },
+    "raw/low_band_span/rank6/f15": {
+      "complex_rel_l2": {
+        "mean": 0.16954989591613412,
+        "std": 0.10396847478199993
+      },
+      "phase_coherence": {
+        "mean": 0.9860288724303246,
+        "std": 0.015793690030490366
+      }
+    },
+    "raw/low_band_span/rank6/f16": {
+      "complex_rel_l2": {
+        "mean": 0.36979652708396316,
+        "std": 0.17579445662315157
+      },
+      "phase_coherence": {
+        "mean": 0.935188539326191,
+        "std": 0.06112068861727948
+      }
+    },
+    "raw/low_band_span/rank6/f17": {
+      "complex_rel_l2": {
+        "mean": 0.5771910571493208,
+        "std": 0.2015147564134084
+      },
+      "phase_coherence": {
+        "mean": 0.8316579014062881,
+        "std": 0.12930797440834485
+      }
+    },
+    "raw/low_band_span/rank6/f18": {
+      "complex_rel_l2": {
+        "mean": 0.7464763391762972,
+        "std": 0.17582424306221411
+      },
+      "phase_coherence": {
+        "mean": 0.6725961323827505,
+        "std": 0.21187363976452908
+      }
+    },
+    "raw/low_band_span/rank6/f19": {
+      "complex_rel_l2": {
+        "mean": 0.8607087153941393,
+        "std": 0.12482917744621519
+      },
+      "phase_coherence": {
+        "mean": 0.5082232735585421,
+        "std": 0.23584112257399423
+      }
+    },
+    "raw/low_band_span/rank6/f20": {
+      "complex_rel_l2": {
+        "mean": 0.9283150415867567,
+        "std": 0.0759566402048714
+      },
+      "phase_coherence": {
+        "mean": 0.3575027725310065,
+        "std": 0.21432752116674894
+      }
+    },
+    "raw/low_band_span/rank6/f21": {
+      "complex_rel_l2": {
+        "mean": 0.9636743441224098,
+        "std": 0.03979929106321126
+      },
+      "phase_coherence": {
+        "mean": 0.25203035766026005,
+        "std": 0.1708169653973089
+      }
+    },
+    "raw/low_band_span/rank6/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9799331966787577,
+        "std": 0.01928382287929015
+      },
+      "phase_coherence": {
+        "mean": 0.18388710588988033,
+        "std": 0.13159907489825537
+      }
+    },
+    "raw/low_band_span/rank6/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9865620173513889,
+        "std": 0.013418055117983064
+      },
+      "phase_coherence": {
+        "mean": 0.1426409250125289,
+        "std": 0.10378248616556916
+      }
+    },
+    "raw/low_band_span/rank6/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9892619904130697,
+        "std": 0.013523919487372311
+      },
+      "phase_coherence": {
+        "mean": 0.11135607186224661,
+        "std": 0.09576475171076398
+      }
+    },
+    "raw/low_band_span/rank8/f15": {
+      "complex_rel_l2": {
+        "mean": 0.03425952757970663,
+        "std": 0.030410321979038545
+      },
+      "phase_coherence": {
+        "mean": 0.999012615531683,
+        "std": 0.0014136708603753002
+      }
+    },
+    "raw/low_band_span/rank8/f16": {
+      "complex_rel_l2": {
+        "mean": 0.1210906479973346,
+        "std": 0.09435528008545283
+      },
+      "phase_coherence": {
+        "mean": 0.9907723683863878,
+        "std": 0.012167887100112814
+      }
+    },
+    "raw/low_band_span/rank8/f17": {
+      "complex_rel_l2": {
+        "mean": 0.2645114440238103,
+        "std": 0.1757030007038443
+      },
+      "phase_coherence": {
+        "mean": 0.9605957288295031,
+        "std": 0.05019031509617189
+      }
+    },
+    "raw/low_band_span/rank8/f18": {
+      "complex_rel_l2": {
+        "mean": 0.4400951403658837,
+        "std": 0.23551329135855067
+      },
+      "phase_coherence": {
+        "mean": 0.8920684028416872,
+        "std": 0.12876790803686733
+      }
+    },
+    "raw/low_band_span/rank8/f19": {
+      "complex_rel_l2": {
+        "mean": 0.6077956925146282,
+        "std": 0.24055407599426662
+      },
+      "phase_coherence": {
+        "mean": 0.7825163467787206,
+        "std": 0.19810385292305044
+      }
+    },
+    "raw/low_band_span/rank8/f20": {
+      "complex_rel_l2": {
+        "mean": 0.7449547918513417,
+        "std": 0.20621861422933743
+      },
+      "phase_coherence": {
+        "mean": 0.6421828763559461,
+        "std": 0.25232336508854386
+      }
+    },
+    "raw/low_band_span/rank8/f21": {
+      "complex_rel_l2": {
+        "mean": 0.8458709353581071,
+        "std": 0.15771466774969553
+      },
+      "phase_coherence": {
+        "mean": 0.5103487921878695,
+        "std": 0.2562685173218592
+      }
+    },
+    "raw/low_band_span/rank8/f22": {
+      "complex_rel_l2": {
+        "mean": 0.9115967489778996,
+        "std": 0.10798539541887356
+      },
+      "phase_coherence": {
+        "mean": 0.3815397092839703,
+        "std": 0.2392894039437525
+      }
+    },
+    "raw/low_band_span/rank8/f23": {
+      "complex_rel_l2": {
+        "mean": 0.9482743609696627,
+        "std": 0.06485572597271731
+      },
+      "phase_coherence": {
+        "mean": 0.28027142537757754,
+        "std": 0.1996485921437429
+      }
+    },
+    "raw/low_band_span/rank8/f24": {
+      "complex_rel_l2": {
+        "mean": 0.9671026580035686,
+        "std": 0.034755334442686664
+      },
+      "phase_coherence": {
+        "mean": 0.21894259075634181,
+        "std": 0.15261484666072397
+      }
+    },
+    "raw/low_band_span/rank12/f15": {
+      "complex_rel_l2": {
+        "mean": 0.0006462574227725781,
+        "std": 0.0008731633960104547
+      },
+      "phase_coherence": {
+        "mean": 0.9999992288649082,
+        "std": 1.6279068989326984e-06
+      }
+    },
+    "raw/low_band_span/rank12/f16": {
+      "complex_rel_l2": {
+        "mean": 0.00505047782235124,
+        "std": 0.006601255276155549
+      },
+      "phase_coherence": {
+        "mean": 0.9999600816518068,
+        "std": 8.899210774698033e-05
+      }
+    },
+    "raw/low_band_span/rank12/f17": {
+      "complex_rel_l2": {
+        "mean": 0.02111219628386607,
+        "std": 0.026903338246578132
+      },
+      "phase_coherence": {
+        "mean": 0.9992760792374611,
+        "std": 0.0016658569262867284
+      }
+    },
+    "raw/low_band_span/rank12/f18": {
+      "complex_rel_l2": {
+        "mean": 0.061100260296370834,
+        "std": 0.07454913509553897
+      },
+      "phase_coherence": {
+        "mean": 0.9957151208072901,
+        "std": 0.008336984617770863
+      }
+    },
+    "raw/low_band_span/rank12/f19": {
+      "complex_rel_l2": {
+        "mean": 0.13319356772990432,
+        "std": 0.14467530272934598
+      },
+      "phase_coherence": {
+        "mean": 0.985113974660635,
+        "std": 0.02416253987785761
+      }
+    },
+    "raw/low_band_span/rank12/f20": {
+      "complex_rel_l2": {
+        "mean": 0.23636751098092645,
+        "std": 0.21820202445316564
+      },
+      "phase_coherence": {
+        "mean": 0.9586189854890108,
+        "std": 0.05842769556758509
+      }
+    },
+    "raw/low_band_span/rank12/f21": {
+      "complex_rel_l2": {
+        "mean": 0.3607264820020646,
+        "std": 0.2771980243300878
+      },
+      "phase_coherence": {
+        "mean": 0.9056008402258158,
+        "std": 0.12450783781318514
+      }
+    },
+    "raw/low_band_span/rank12/f22": {
+      "complex_rel_l2": {
+        "mean": 0.48710108222439885,
+        "std": 0.29843993879959146
+      },
+      "phase_coherence": {
+        "mean": 0.8308840040117502,
+        "std": 0.19654753051502516
+      }
+    },
+    "raw/low_band_span/rank12/f23": {
+      "complex_rel_l2": {
+        "mean": 0.6023695068433881,
+        "std": 0.2811544047162602
+      },
+      "phase_coherence": {
+        "mean": 0.7421016176231205,
+        "std": 0.25759783045723106
+      }
+    },
+    "raw/low_band_span/rank12/f24": {
+      "complex_rel_l2": {
+        "mean": 0.7062801327556372,
+        "std": 0.24700455226596077
+      },
+      "phase_coherence": {
+        "mean": 0.6579738559667021,
+        "std": 0.27530255583108215
+      }
+    },
+    "raw/low_band_span/rank14/f15": {
+      "complex_rel_l2": {
+        "mean": 0.00011624888827554969,
+        "std": 0.00010596862154083888
+      },
+      "phase_coherence": {
+        "mean": 0.9999999888241291,
+        "std": 3.5303185114896186e-08
+      }
+    },
+    "raw/low_band_span/rank14/f16": {
+      "complex_rel_l2": {
+        "mean": 0.0011397355247027008,
+        "std": 0.0010894678426285752
+      },
+      "phase_coherence": {
+        "mean": 0.9999986104667187,
+        "std": 2.5845482422187377e-06
+      }
+    },
+    "raw/low_band_span/rank14/f17": {
+      "complex_rel_l2": {
+        "mean": 0.005921370897340239,
+        "std": 0.005937466676195277
+      },
+      "phase_coherence": {
+        "mean": 0.9999573118984699,
+        "std": 9.069693670661737e-05
+      }
+    },
+    "raw/low_band_span/rank14/f18": {
+      "complex_rel_l2": {
+        "mean": 0.021156049420824274,
+        "std": 0.021671414584316175
+      },
+      "phase_coherence": {
+        "mean": 0.9995392896234989,
+        "std": 0.0009135790097247983
+      }
+    },
+    "raw/low_band_span/rank14/f19": {
+      "complex_rel_l2": {
+        "mean": 0.05654164978477638,
+        "std": 0.05397516371581554
+      },
+      "phase_coherence": {
+        "mean": 0.9972655307501554,
+        "std": 0.004415848005192608
+      }
+    },
+    "raw/low_band_span/rank14/f20": {
+      "complex_rel_l2": {
+        "mean": 0.12156190071254969,
+        "std": 0.10260599864043875
+      },
+      "phase_coherence": {
+        "mean": 0.9890086762607098,
+        "std": 0.015190966721624974
+      }
+    },
+    "raw/low_band_span/rank14/f21": {
+      "complex_rel_l2": {
+        "mean": 0.2213952065212652,
+        "std": 0.16406317610930005
+      },
+      "phase_coherence": {
+        "mean": 0.9683148078620434,
+        "std": 0.03940229820019985
+      }
+    },
+    "raw/low_band_span/rank14/f22": {
+      "complex_rel_l2": {
+        "mean": 0.3488439084030688,
+        "std": 0.2204555911466007
+      },
+      "phase_coherence": {
+        "mean": 0.9277169220149517,
+        "std": 0.081090397566857
+      }
+    },
+    "raw/low_band_span/rank14/f23": {
+      "complex_rel_l2": {
+        "mean": 0.48558089206926525,
+        "std": 0.24726509235647418
+      },
+      "phase_coherence": {
+        "mean": 0.8634370565414429,
+        "std": 0.1322630383344877
+      }
+    },
+    "raw/low_band_span/rank14/f24": {
+      "complex_rel_l2": {
+        "mean": 0.6142750950530171,
+        "std": 0.23809610878649626
+      },
+      "phase_coherence": {
+        "mean": 0.7666782261803746,
+        "std": 0.20447978583550344
+      }
+    },
+    "raw/masked_frequency_polynomial/rank6/f2": {
+      "complex_rel_l2": {
+        "mean": 1.1067024748772383,
+        "std": 0.12347141737236497
+      },
+      "phase_coherence": {
+        "mean": -0.09135751111898571,
+        "std": 0.3007681044636414
+      }
+    },
+    "raw/masked_frequency_polynomial/rank6/f4": {
+      "complex_rel_l2": {
+        "mean": 1.0952345561236143,
+        "std": 0.09592485291052759
+      },
+      "phase_coherence": {
+        "mean": -0.1268948334036395,
+        "std": 0.26890068633422953
+      }
+    },
+    "raw/masked_frequency_polynomial/rank6/f6": {
+      "complex_rel_l2": {
+        "mean": 1.0361300110816956,
+        "std": 0.048012933682564235
+      },
+      "phase_coherence": {
+        "mean": -0.007637278555193916,
+        "std": 0.2345605959945792
+      }
+    },
+    "raw/masked_frequency_polynomial/rank6/f8": {
+      "complex_rel_l2": {
+        "mean": 1.0324264373630285,
+        "std": 0.04593234238690667
+      },
+      "phase_coherence": {
+        "mean": 0.021712887719331775,
+        "std": 0.16243152663536542
+      }
+    },
+    "raw/masked_frequency_polynomial/rank6/f10": {
+      "complex_rel_l2": {
+        "mean": 1.1207283325493336,
+        "std": 0.08917973454369242
+      },
+      "phase_coherence": {
+        "mean": -0.1576938779617194,
+        "std": 0.22637047548613645
+      }
+    },
+    "raw/masked_frequency_polynomial/rank6/f12": {
+      "complex_rel_l2": {
+        "mean": 1.1248968876898289,
+        "std": 0.08616376640737348
+      },
+      "phase_coherence": {
+        "mean": -0.18730407911061775,
+        "std": 0.2399829231134631
+      }
+    },
+    "raw/masked_frequency_polynomial/rank6/f14": {
+      "complex_rel_l2": {
+        "mean": 2.0040456242859364,
+        "std": 0.1721015595053638
+      },
+      "phase_coherence": {
+        "mean": -0.09547049447428435,
+        "std": 0.12301503414473107
+      }
+    },
+    "raw/patch_span_4x8/rank1/f20": {
+      "complex_rel_l2": {
+        "mean": 0.7790677957236767,
+        "std": 0.09573336145399838
+      },
+      "phase_coherence": {
+        "mean": 0.5941492393612862,
+        "std": 0.1276955529497024
+      }
+    },
+    "raw/patch_span_4x8/rank2/f20": {
+      "complex_rel_l2": {
+        "mean": 0.5235030567273498,
+        "std": 0.10648471849519
+      },
+      "phase_coherence": {
+        "mean": 0.8667898420244455,
+        "std": 0.058876083120022994
+      }
+    },
+    "raw/patch_span_4x8/rank3/f20": {
+      "complex_rel_l2": {
+        "mean": 0.3467170768417418,
+        "std": 0.10566063094979562
+      },
+      "phase_coherence": {
+        "mean": 0.9445409867912531,
+        "std": 0.03392183667031889
+      }
+    },
+    "raw/patch_span_4x8/rank4/f20": {
+      "complex_rel_l2": {
+        "mean": 0.20471378741785884,
+        "std": 0.07381409539679619
+      },
+      "phase_coherence": {
+        "mean": 0.9808327555656433,
+        "std": 0.012297107719104753
+      }
+    },
+    "raw/patch_span_4x8/rank6/f20": {
+      "complex_rel_l2": {
+        "mean": 0.06723058212082833,
+        "std": 0.035218366282076724
+      },
+      "phase_coherence": {
+        "mean": 0.9975476134568453,
+        "std": 0.002008127417373882
+      }
+    },
+    "raw/patch_span_4x8/rank8/f20": {
+      "complex_rel_l2": {
+        "mean": 0.018091090712914593,
+        "std": 0.013325965800717564
+      },
+      "phase_coherence": {
+        "mean": 0.9997797999531031,
+        "std": 0.0002659557309088828
+      }
+    },
+    "raw/patch_span_4x8/rank12/f20": {
+      "complex_rel_l2": {
+        "mean": 0.0016657760697853519,
+        "std": 0.0011243054119026972
+      },
+      "phase_coherence": {
+        "mean": 0.9999981112778187,
+        "std": 2.154584975363769e-06
+      }
+    },
+    "raw/patch_span_4x8/rank14/f20": {
+      "complex_rel_l2": {
+        "mean": 0.001458532437482063,
+        "std": 0.0009554970274403409
+      },
+      "phase_coherence": {
+        "mean": 0.9999985713511705,
+        "std": 1.5768078435435513e-06
+      }
+    }
+  }
+}

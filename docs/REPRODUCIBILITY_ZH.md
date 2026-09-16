@@ -327,3 +327,44 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_fractional_ev
 
 当前阶段仍使用 development environments。任何后续 strict 结果必须在本配置和 checkpoint hashes
 冻结后另行生成，且不能回流调参。
+
+## 10. 全局与局部复数子空间诊断
+
+Ocean 主诊断：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.diagnose_global_subspace \
+  --domain ocean --dataset /path/to/integer/paired_fields.npz \
+  --output-dir artifacts/global_subspace/ocean_90_100 \
+  --visible 90,91,92,93,94,95,96,97,98,99,100 \
+  --queries 101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --ranks 1 2 4 8 11 --polynomial-rank 6 --polynomial-degree 3 \
+  --patch-grid 4 8 --patch-query 110 --max-environments 32
+```
+
+可控三路径数据由脚本确定性生成，不依赖外部 archive：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.diagnose_global_subspace \
+  --domain synthetic --output-dir artifacts/global_subspace/synthetic_1_14 \
+  --visible 1,2,3,4,5,6,7,8,9,10,11,12,13,14 \
+  --queries 15,16,17,18,19,20,21,22,23,24 \
+  --ranks 1 2 3 4 6 8 12 14 --polynomial-rank 6 --polynomial-degree 3 \
+  --patch-grid 4 8 --patch-query 20 --max-environments 32 \
+  --synthetic-train 64 --synthetic-validation 32
+```
+
+Ocean 的 2×4 与 8×16 patch 扫描只需把 `--queries` 改为 `110`，并分别设置
+`--patch-grid 2 4` 与 `--patch-grid 8 16`。汇总图命令：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_global_subspace \
+  --ocean artifacts/global_subspace/ocean_90_100 \
+  --synthetic artifacts/global_subspace/synthetic_1_14 \
+  --grid-2x4 artifacts/global_subspace/ocean_grid_2x4 \
+  --grid-8x16 artifacts/global_subspace/ocean_grid_8x16 \
+  --output-dir artifacts/global_subspace
+```
+
+所有 projection 都按 validation environment 独立计算；`low_band_span`、`patch_span` 和
+`full_band_oracle` 使用目标真值求投影系数，只能解释 representation floor，不是预测结果。

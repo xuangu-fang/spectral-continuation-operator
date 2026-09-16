@@ -9,6 +9,12 @@ from spectral_continuation.data import (
     load_ocean_npz,
     spectral_carrier,
 )
+from spectral_continuation.diagnose_global_subspace import (
+    _basis,
+    _gauge,
+    _polynomial_prediction,
+    _project,
+)
 from spectral_continuation.evaluate_horizon import verify_identity
 from spectral_continuation.metrics import metric_vectors, paired_bootstrap
 from spectral_continuation.model import QueryUNet, reconstruct
@@ -320,3 +326,33 @@ def test_relative_training_loss_can_match_reported_unsquared_metric():
     assert torch.allclose(
         complex_relative_loss(prediction, target, power=2), torch.tensor(0.625)
     )
+
+
+def test_global_subspace_helpers_recover_low_rank_continuous_sequence():
+    torch.manual_seed(17)
+    spatial_basis = torch.complex(torch.randn(24, 2), torch.randn(24, 2))
+    frequencies = torch.arange(1.0, 7.0)
+    coefficients = torch.stack(
+        (
+            1.0 + 0.1 * frequencies,
+            -0.2 + 0.05 * frequencies.square(),
+        )
+    ).to(torch.complex64)
+    matrix = spatial_basis @ coefficients
+    basis, _ = _basis(matrix[:, :4], 2)
+    assert torch.allclose(_project(basis, matrix[:, 5], 2), matrix[:, 5], atol=2e-5)
+    prediction = _polynomial_prediction(
+        basis,
+        matrix[:, :4],
+        frequencies[:4],
+        query_frequency=6.0,
+        rank=2,
+        degree=2,
+    )
+    assert torch.allclose(prediction, matrix[:, 5], atol=2e-4)
+
+    field = matrix.T.reshape(6, 4, 6)
+    gauged = _gauge(field, frequencies, visible_count=4)
+    rotation = torch.polar(torch.ones(()), torch.tensor(0.37))
+    rotated = _gauge(rotation * field, frequencies, visible_count=4)
+    assert torch.allclose(gauged, rotated, atol=2e-5)
