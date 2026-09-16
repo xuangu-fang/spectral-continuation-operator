@@ -20,4 +20,6 @@ experiments/runs/
 experiments/dense_evaluation/
 experiments/diagnostics/
 experiments/evaluations/
+experiments/sparse_calibration/
+experiments/sparse_calibration_pilot/
 experiments/*.log

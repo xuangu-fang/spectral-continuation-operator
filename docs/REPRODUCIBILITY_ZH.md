@@ -427,3 +427,62 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_token_poc \
   --baseline-label 'Hyper-pole' --candidate-label 'Local carrier tokens' \
   --output-dir artifacts/token_poc
 ```
+
+## 12. 稀疏谱校准 POC
+
+实验前协议见
+[`SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md`](SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)，结果解释见
+[`SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md`](../reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)。
+整数频率 archive 使用第 8.1 节给出的路径和 SHA256。
+
+六频稳定谱状态 calibrator 的命令如下，`SEED` 取 42、43、44，并与同 seed 的冻结 base checkpoint
+配对：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_ar_calibrator \
+  --base-run-summary experiments/runs/m4_balanced_train106_hyper_seedSEED/summary.json \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz \
+  --output-dir experiments/runs/sparse_ar1_calibrator_seedSEED \
+  --calibration-frequencies 101,102,103,104,105,106 \
+  --fit-environments 112 --sensor-budget 92 --sensor-token-grid 2 4 \
+  --width 32 --rollout-offsets 0,1,2,3,4,5,6 \
+  --epochs 120 --batch-size 4 --learning-rate 3e-4 \
+  --weight-decay 1e-6 --seed SEED
+```
+
+训练只读取 90--100 Hz visible fields 和 101--106 Hz calibration fields。offset 1--6 的 target 是由
+calibration fields 拟合出的稳定 AR 状态的解析 rollout，不读取真实 107--112 Hz labels。三次训练
+选中的 epoch 分别为 109、96、106，checkpoint SHA256 分别为：
+
+```text
+seed42 695a351e1c8529f344368846dc8033f93c9017e560dbdb1aad45e50995104ef1
+seed43 b8f9d52954123ced8a2fd339f9dee5879a4cf62078561ab24dd1a485409872e2
+seed44 2be4530e3ee2d9f2c16d7c25e49493132cce2ab8e2437dbe5273533ce7fecf3d
+```
+
+冻结评测命令中 `SEED` 与 checkpoint 对应；三个 run 使用相同的三个 mask seeds：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_ar_calibration \
+  --calibrator-summary experiments/runs/sparse_ar1_calibrator_seedSEED/summary.json \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz \
+  --output-dir experiments/sparse_calibration/ar1_seedSEED_validation \
+  --split val \
+  --queries 107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --sensor-budgets 23,46,92,184,369 \
+  --mask-seeds 4201,4301,4401
+```
+
+最终聚合和作图：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_sparse_calibration \
+  --run-dirs \
+    experiments/sparse_calibration/ar1_seed42_validation \
+    experiments/sparse_calibration/ar1_seed43_validation \
+    experiments/sparse_calibration/ar1_seed44_validation \
+  --output-dir artifacts/sparse_spectral_calibration
+```
+
+聚合 artifact 保留全部逐方法、预算、mask seed 和查询频率的均值记录；逐环境 vectors 和大型
+checkpoints 不提交 Git，但由上述 checkpoint hash 与每个 evaluation summary 绑定。

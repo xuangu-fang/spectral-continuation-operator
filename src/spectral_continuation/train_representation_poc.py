@@ -187,14 +187,16 @@ def build_model(args, visible, environment_channels, frequency_scale):
                 args, "max_hyper_curvature_per_hz2", 0.005
             ),
             local_carrier_token_grid=(
-                tuple(args.local_carrier_token_grid)
-                if args.local_carrier_token_grid is not None
+                tuple(getattr(args, "local_carrier_token_grid", ()))
+                if getattr(args, "local_carrier_token_grid", None) is not None
                 else None
             ),
-            local_carrier_token_width=args.local_carrier_token_width,
-            max_local_token_slope_per_hz=args.max_local_token_slope_per_hz,
+            local_carrier_token_width=getattr(args, "local_carrier_token_width", 32),
+            max_local_token_slope_per_hz=getattr(
+                args, "max_local_token_slope_per_hz", 0.08
+            ),
             max_local_token_curvature_per_hz2=(
-                args.max_local_token_curvature_per_hz2
+                getattr(args, "max_local_token_curvature_per_hz2", 0.005)
             ),
         )
     if args.model == "component_generator":

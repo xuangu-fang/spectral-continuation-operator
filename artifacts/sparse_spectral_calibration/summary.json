@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "status": "POC complete; near-horizon positive but preregistered gate not met",
+  "source_evaluations": [
+    {
+      "model_seed": 42,
+      "path": "experiments/sparse_calibration/ar1_seed42_validation",
+      "calibrator_checkpoint_sha256": "695a351e1c8529f344368846dc8033f93c9017e560dbdb1aad45e50995104ef1",
+      "base_checkpoint_sha256": "2b798966b2e138845f8894ba4f9f0be6f68e9fe07e80d0925379b0237cda0388"
+    },
+    {
+      "model_seed": 43,
+      "path": "experiments/sparse_calibration/ar1_seed43_validation",
+      "calibrator_checkpoint_sha256": "b8f9d52954123ced8a2fd339f9dee5879a4cf62078561ab24dd1a485409872e2",
+      "base_checkpoint_sha256": "fe8c3f4834e114e029b519912f4e9b0ca671dab4f6dd977dc6a373b725f925ce"
+    },
+    {
+      "model_seed": 44,
+      "path": "experiments/sparse_calibration/ar1_seed44_validation",
+      "calibrator_checkpoint_sha256": "2be4530e3ee2d9f2c16d7c25e49493132cce2ab8e2437dbe5273533ce7fecf3d",
+      "base_checkpoint_sha256": "7702a5bef84b5684fd64654aaf5d2b8a5b3db1951a6565232d051ee312342995"
+    }
+  ],
+  "protocol": {
+    "visible_range_hz": [
+      90,
+      100
+    ],
+    "calibration_range_hz": [
+      101,
+      106
+    ],
+    "zero_observation_query_range_hz": [
+      107,
+      125
+    ],
+    "environment_count": 32,
+    "model_seeds": [
+      42,
+      43,
+      44
+    ],
+    "mask_seeds": [
+      4201,
+      4301,
+      4401
+    ]
+  },
+  "near_band_107_112": {
+    "hyper_pole_mean": 0.4105702539285024,
+    "hyper_pole_std": 0.005872174357565734,
+    "dense_ar1_oracle_mean": 0.31056643029054004,
+    "budget_summary": {
+      "23": {
+        "near_macro_mean": 0.37196425100167596,
+        "near_macro_std": 0.0065291937005136245,
+        "full_macro_mean": 0.6335883532699786,
+        "full_macro_std": 0.007834511396344073,
+        "near_relative_improvement_percent": 9.40301996002598,
+        "near_oracle_gap_closure_percent": 38.60452682948339
+      },
+      "46": {
+        "near_macro_mean": 0.3657358167348085,
+        "near_macro_std": 0.0043890218060326875,
+        "full_macro_mean": 0.6327205220161125,
+        "full_macro_std": 0.003929978886439785,
+        "near_relative_improvement_percent": 10.92004030119081,
+        "near_oracle_gap_closure_percent": 44.83272295267953
+      },
+      "92": {
+        "near_macro_mean": 0.361090921693378,
+        "near_macro_std": 0.004516231700269234,
+        "full_macro_mean": 0.6320506585271736,
+        "full_macro_std": 0.0043244605060041375,
+        "near_relative_improvement_percent": 12.051368008686973,
+        "near_oracle_gap_closure_percent": 49.47744039693059
+      },
+      "184": {
+        "near_macro_mean": 0.3596277648100146,
+        "near_macro_std": 0.0025131672178887953,
+        "full_macro_mean": 0.6353230379652559,
+        "full_macro_std": 0.0010023368658252318,
+        "near_relative_improvement_percent": 12.407739876683564,
+        "near_oracle_gap_closure_percent": 50.940541336610984
+      },
+      "369": {
+        "near_macro_mean": 0.3622878072438417,
+        "near_macro_std": 0.002432887467267323,
+        "full_macro_mean": 0.6429147113833511,
+        "full_macro_std": 0.005103630397079142,
+        "near_relative_improvement_percent": 11.75985016514828,
+        "near_oracle_gap_closure_percent": 48.280600609287355
+      }
+    }
+  },
+  "full_band_107_125": {
+    "hyper_pole_mean": 0.6516579274545636,
+    "dense_ar1_oracle_mean": 0.6255930019052405,
+    "amortized_k92_mean": 0.6320506585271736
+  },
+  "query_110": {
+    "hyper_pole_complex_rel_l2": 0.4473005334536235,
+    "amortized_k92_complex_rel_l2": 0.4043605691856808,
+    "dense_ar1_oracle_complex_rel_l2": 0.3723829984664917,
+    "hyper_pole_phase_coherence": 0.8602531552314758,
+    "amortized_k92_phase_coherence": 0.8736576702859666,
+    "hyper_pole_amplitude_rel_l2": 0.2646339237689972,
+    "amortized_k92_amplitude_rel_l2": 0.28896382119920516,
+    "shuffled_k92_complex_rel_l2": 0.5515214337242974,
+    "paired_environment_statistics": {
+      "mean_absolute_improvement": 0.04293996840715408,
+      "relative_improvement_percent": 9.599802017211914,
+      "fraction_candidate_better": 0.625,
+      "ci95_low": 0.013150321319699287,
+      "ci95_high": 0.0811549499630928
+    }
+  },
+  "gate": {
+    "required_near_relative_improvement_percent": 20.0,
+    "observed_near_relative_improvement_percent": 12.051368008686973,
+    "required_query_110_rel_l2_below": 0.35,
+    "observed_query_110_rel_l2": 0.4043605691856808,
+    "passed": false
+  }
+}

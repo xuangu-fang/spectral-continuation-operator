@@ -21,6 +21,9 @@ artifact binds its parent data and checkpoint hashes.
   extrapolation curves for three parameter-matched models;
 - `continuous_state_ocean_fractional/`: frozen-checkpoint evaluation at six
   independently generated half-integer frequencies.
+- `sparse_spectral_calibration/`: three-model-seed × three-mask-seed sparse
+  broadband calibration results, raw records, error–budget/horizon figure and
+  amplitude–phase mechanism figure. The preregistered method gate was not met.
 
 `query_summary.json` stores aggregate metrics, per-seed improvements, paired
 bootstrap results, source checkpoint SHA256 values and data lineage. CSV files

@@ -31,6 +31,21 @@ from spectral_continuation.representation_data import (
     FrequencyBandDataset,
     fit_representation_normalization,
 )
+from spectral_continuation.sparse_calibration import (
+    CalibratedState,
+    CalibrationConfig,
+    calibrated_components,
+    nested_sensor_indices,
+    stratified_energy_sensor_indices,
+)
+from spectral_continuation.spectral_calibrator import (
+    InvariantAR1Calibrator,
+    InvariantSpectralCalibrator,
+    ar1_query,
+    endpoint_carrier_query,
+    enforce_sensor_consistency,
+    fit_stable_ar1,
+)
 from spectral_continuation.train_representation_poc import complex_relative_loss
 
 
@@ -83,6 +98,116 @@ def test_metrics_and_bootstrap():
     assert np.allclose(exact["complex_rel_l2"], 0.0)
     stats = paired_bootstrap(np.ones(6), np.full(6, 0.8), replicates=100)
     np.testing.assert_allclose(stats["relative_improvement_percent"], 20.0)
+
+
+def test_sparse_calibration_masks_are_nested_and_phase_state_is_bounded():
+    order = nested_sensor_indices(3, 64, 16, seed=17)
+    assert order.shape == (3, 16)
+    for row in order:
+        assert len(set(row[:8])) == 8
+        assert set(row[:4]).issubset(set(row[:8]))
+
+    base_slope = torch.zeros(2, 6, 10)
+    base_curvature = torch.zeros(2, 3, 6, 10)
+    calibration = CalibratedState(
+        slope_token=torch.full((2, 1, 2, 4), 20.0),
+        curvature_token=torch.full((2, 1, 2, 4), -20.0),
+        loss_history=[],
+    )
+    config = CalibrationConfig(
+        token_grid=(2, 4),
+        max_slope_correction_per_hz=0.12,
+        max_curvature_correction_per_hz2=0.03,
+    )
+    slope, curvature = calibrated_components(base_slope, base_curvature, calibration, config)
+    assert slope.shape == base_slope.shape
+    assert curvature.shape == base_curvature.shape
+    assert torch.all(slope <= 0.120001)
+    assert torch.all(curvature >= -0.030001)
+
+    prior = torch.ones(2, 2, 8, 16, dtype=torch.complex64)
+    prior[:, :, 1, 1] = 5.0
+    stratified = stratified_energy_sensor_indices(prior, 16, (2, 4))
+    assert stratified.shape == (2, 16)
+    assert all(len(set(row.tolist())) == 16 for row in stratified)
+
+
+def test_amortized_calibrator_is_anchored_equivariant_and_data_consistent():
+    torch.manual_seed(9)
+    model = InvariantSpectralCalibrator(
+        visible_count=3,
+        environment_channels=1,
+        width=8,
+        sensor_token_grid=(2, 4),
+    )
+    visible = torch.randn(2, 3, 16, 32, dtype=torch.complex64)
+    prior = torch.randn(2, 2, 16, 32, dtype=torch.complex64)
+    target = torch.randn(2, 2, 16, 32, dtype=torch.complex64)
+    mask = torch.zeros(2, 1, 16, 32)
+    mask[:, :, 2, 3] = 1.0
+    context = torch.randn(2, 4, 16, 32)
+    prediction = model(visible, prior, target * mask, mask, context)
+    assert torch.allclose(prediction, prior)
+    angle = torch.tensor(0.71)
+    rotation = torch.polar(torch.tensor(1.0), angle)
+    rotated = model(
+        visible * rotation,
+        prior * rotation,
+        target * mask * rotation,
+        mask,
+        context,
+    )
+    assert torch.allclose(rotated, prediction * rotation, atol=2e-6)
+    consistent = enforce_sensor_consistency(prediction, target * mask, mask)
+    assert torch.allclose(consistent[:, :, 2, 3], target[:, :, 2, 3])
+
+    frequencies = (5.0, 6.0)
+    delay = torch.full((2, 16, 32), 0.04)
+    calibration = torch.stack(
+        [torch.polar(torch.ones_like(delay), 2 * torch.pi * f * delay) for f in frequencies],
+        dim=1,
+    )
+    queried = endpoint_carrier_query(calibration, frequencies, 8.5)
+    expected = torch.polar(torch.ones_like(delay), 2 * torch.pi * 8.5 * delay)
+    assert torch.allclose(queried, expected, atol=2e-5)
+
+
+def test_ar1_calibrator_is_stable_anchored_and_phase_equivariant():
+    torch.manual_seed(11)
+    model = InvariantAR1Calibrator(
+        visible_count=3,
+        environment_channels=1,
+        calibration_count=4,
+        width=8,
+        sensor_token_grid=(2, 4),
+    )
+    visible = torch.randn(2, 3, 16, 32, dtype=torch.complex64)
+    prior = torch.randn(2, 4, 16, 32, dtype=torch.complex64)
+    target = torch.randn(2, 4, 16, 32, dtype=torch.complex64)
+    mask = torch.zeros(2, 1, 16, 32)
+    mask[:, :, 3, 7] = 1.0
+    context = torch.randn(2, 4, 16, 32)
+    reference, pole = model(visible, prior, target * mask, mask, context)
+    assert torch.allclose(reference, prior[:, -1], atol=2e-6)
+    assert torch.allclose(pole, fit_stable_ar1(prior), atol=2e-6)
+    assert torch.all(pole.abs() <= 1.000001)
+    rotation = torch.polar(torch.tensor(1.0), torch.tensor(0.37))
+    rotated_reference, rotated_pole = model(
+        visible * rotation,
+        prior * rotation,
+        target * mask * rotation,
+        mask,
+        context,
+    )
+    assert torch.allclose(rotated_reference, reference * rotation, atol=2e-6)
+    assert torch.allclose(rotated_pole, pole, atol=2e-6)
+
+    delay = torch.full((2, 16, 32), 0.04)
+    coefficient = torch.polar(torch.ones_like(delay), 2 * torch.pi * delay)
+    reference = torch.polar(torch.ones_like(delay), 2 * torch.pi * 6.0 * delay)
+    queried = ar1_query(reference, coefficient, 6.0, 8.5)
+    expected = torch.polar(torch.ones_like(delay), 2 * torch.pi * 8.5 * delay)
+    assert torch.allclose(queried, expected, atol=2e-5)
 
 
 def test_ocean_loader_excludes_solver_inactive_channel(tmp_path):
