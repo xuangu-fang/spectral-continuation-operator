@@ -15,6 +15,8 @@ from spectral_continuation.model import QueryUNet, reconstruct
 from spectral_continuation.representation import (
     CarrierGaugedPoleOperator,
     ComplexDelayOperator,
+    EquivariantSpectralGenerator,
+    PhaseEquivariantNeuralODE,
     StableSpectralStateOperator,
     phase_equivariance_error,
 )
@@ -221,6 +223,72 @@ def test_carrier_gauged_poles_are_continuous_anchored_and_phase_equivariant():
         fields[:, -1] * torch.conj(fields[:, -2])
     )
     assert torch.allclose(endpoint.carrier_slope(fields), expected_increment)
+
+    hyper = CarrierGaugedPoleOperator(
+        visible,
+        environment_channels=2,
+        poles=2,
+        width=8,
+        blocks=1,
+        pole_growth="stable",
+        pole_anchor="residue_sum",
+        carrier_estimator="endpoint_increment",
+        global_latent_channels=8,
+        hyper_carrier_correction=True,
+    )
+    hyper_state = hyper.spectral_state(fields, context)
+    assert hyper_state[4].shape == hyper_state[2].real.shape
+    assert torch.allclose(
+        hyper(fields, context, anchor), fields[:, -1], rtol=1e-5, atol=1e-5
+    )
+    assert phase_equivariance_error(hyper, fields, context, fractional) < 2e-5
+
+
+def test_component_generator_is_exactly_anchored_continuous_and_equivariant():
+    torch.manual_seed(11)
+    visible = (1.0, 2.0, 3.0, 4.0, 5.0)
+    model = EquivariantSpectralGenerator(
+        visible,
+        environment_channels=2,
+        components=4,
+        complex_width=8,
+        state_width=8,
+        blocks=1,
+        max_curvature_per_hz2=0.02,
+    )
+    fields = torch.complex(torch.randn(2, 5, 8, 12), torch.randn(2, 5, 8, 12))
+    context = torch.randn(2, 5, 8, 12)
+    anchor = torch.full((2,), 5.0)
+    fractional = torch.tensor([6.25, 7.75])
+    anchored = model(fields, context, anchor)
+    queried = model(fields, context, fractional)
+    grouped = model.forward_queries(fields, context, (6.25, 7.75))
+    state = model.spectral_state(fields, context)
+    assert torch.allclose(anchored, fields[:, -1], rtol=1e-5, atol=1e-5)
+    assert torch.allclose(state[0].sum(dim=1), fields[:, -1], rtol=1e-5, atol=1e-5)
+    assert torch.all(state[1] <= 0)
+    assert torch.isfinite(queried.real).all()
+    assert torch.isfinite(queried.imag).all()
+    assert torch.allclose(grouped[:, 0], model(fields, context, torch.full((2,), 6.25)))
+    assert phase_equivariance_error(model, fields, context, fractional) < 2e-5
+
+
+def test_neural_ode_reuses_equivariant_vector_field_for_fractional_queries():
+    torch.manual_seed(13)
+    model = PhaseEquivariantNeuralODE(
+        (1.0, 2.0, 3.0),
+        environment_channels=2,
+        width=4,
+        max_update_rate=0.5,
+    )
+    fields = torch.complex(torch.randn(2, 3, 16, 32), torch.randn(2, 3, 16, 32))
+    context = torch.randn(2, 5, 16, 32)
+    queries = model.forward_queries(fields, context, (4.0, 4.5, 5.0))
+    direct = model(fields, context, torch.full((2,), 4.5))
+    assert queries.shape == (2, 3, 16, 32)
+    assert torch.allclose(queries[:, 1], direct)
+    assert torch.isfinite(queries.real).all()
+    assert phase_equivariance_error(model, fields, context, torch.full((2,), 4.5)) < 2e-5
 
 
 def test_frequency_band_dataset_returns_one_environment_with_all_queries():

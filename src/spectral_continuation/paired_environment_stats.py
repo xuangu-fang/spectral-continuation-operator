@@ -28,6 +28,8 @@ def _runs(pattern: str) -> dict[int, Path]:
 
 def _vectors(run: Path, prefix: str, frequencies: tuple[float, ...]) -> np.ndarray:
     with np.load(run / "validation_metrics.npz", allow_pickle=False) as archive:
+        if prefix == "test" and f"test_{frequencies[0]:g}_complex_rel_l2" not in archive:
+            prefix = "extrapolation"
         return np.stack(
             [archive[f"{prefix}_{frequency:g}_complex_rel_l2"] for frequency in frequencies]
         )

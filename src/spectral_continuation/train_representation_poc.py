@@ -21,7 +21,9 @@ from .model import parameter_count
 from .representation import (
     CarrierGaugedPoleOperator,
     ComplexDelayOperator,
+    EquivariantSpectralGenerator,
     ImageQueryOperator,
+    PhaseEquivariantNeuralODE,
     StableSpectralStateOperator,
     phase_equivariance_error,
 )
@@ -164,6 +166,39 @@ def build_model(args, visible, environment_channels, frequency_scale):
             state_normalization=getattr(args, "state_normalization", False),
             pole_anchor=getattr(args, "pole_anchor", "reference_residual"),
             carrier_estimator=getattr(args, "carrier_estimator", "band_ols"),
+            max_curvature_per_hz2=getattr(args, "max_curvature_per_hz2", 0.0),
+            global_latent_channels=getattr(args, "global_latent_channels", 0),
+            hyper_carrier_correction=getattr(args, "hyper_carrier_correction", False),
+            max_hyper_slope_per_hz=getattr(args, "max_hyper_slope_per_hz", 0.08),
+            max_hyper_curvature_per_hz2=getattr(
+                args, "max_hyper_curvature_per_hz2", 0.005
+            ),
+        )
+    if args.model == "component_generator":
+        return EquivariantSpectralGenerator(
+            visible,
+            environment_channels,
+            components=getattr(args, "components", 8),
+            complex_width=getattr(args, "complex_width", 24),
+            state_width=args.state_width,
+            blocks=args.blocks,
+            max_growth_per_hz=getattr(args, "max_growth_per_hz", 0.025),
+            max_angle_per_hz=getattr(args, "max_residual_angle_per_hz", math.pi),
+            max_curvature_per_hz2=getattr(args, "max_curvature_per_hz2", 0.01),
+            carrier_mode=getattr(args, "generator_carrier", "endpoint"),
+            carrier_kernel=getattr(args, "carrier_kernel", 5),
+            parameter_smoothing=getattr(args, "parameter_smoothing", 1),
+            stable_growth=getattr(args, "pole_growth", "stable") == "stable",
+        )
+    if args.model == "carrier_ode":
+        return PhaseEquivariantNeuralODE(
+            visible,
+            environment_channels,
+            width=args.width,
+            frequency_scale=frequency_scale,
+            max_update_rate=getattr(args, "max_update_rate", 1.0),
+            carrier_mode=getattr(args, "generator_carrier", "endpoint"),
+            carrier_kernel=getattr(args, "carrier_kernel", 5),
         )
     return StableSpectralStateOperator(
         visible,
@@ -215,7 +250,9 @@ def run(args):
     )
     evaluation_dataset_type = (
         FrequencyBandDataset
-        if args.grouped_training and args.model in {"carrier_poles", "stable_recurrence"}
+        if args.grouped_training
+        and args.model
+        in {"carrier_poles", "stable_recurrence", "component_generator", "carrier_ode"}
         else FrequencySetDataset
     )
     selection_dataset = evaluation_dataset_type(
@@ -262,6 +299,9 @@ def run(args):
         train_dataset.environment_channels,
         normalization.frequency_scale,
     ).to(device)
+    if args.initial_checkpoint is not None:
+        initial = torch.load(args.initial_checkpoint, map_location=device, weights_only=False)
+        model.load_state_dict(initial["model"])
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
     selection, _ = evaluate(
@@ -289,7 +329,37 @@ def run(args):
             query = query.to(device)
             context = coordinates(environment, query, normalization.frequency_scale)
             optimizer.zero_grad(set_to_none=True)
-            if grouped and hasattr(model, "forward_queries"):
+            if (
+                grouped
+                and isinstance(model, PhaseEquivariantNeuralODE)
+                and args.ode_teacher_forcing
+            ):
+                static = model.static_features(fields)
+                sequence = torch.cat((fields[:, -2:], target), dim=1)
+                predictions = []
+                for index in range(len(train_queries)):
+                    predictions.append(
+                        model.step(
+                            fields,
+                            static,
+                            sequence[:, index],
+                            sequence[:, index + 1],
+                            context,
+                            model.reference_frequency + index,
+                            model.frequency_step,
+                        )
+                    )
+                prediction = torch.stack(predictions, dim=1)
+                query_losses = [
+                    complex_relative_loss(
+                        prediction[:, index],
+                        target[:, index],
+                        power=args.relative_loss_power,
+                    )
+                    for index in range(len(train_queries))
+                ]
+                loss = torch.stack(query_losses).mean()
+            elif grouped and hasattr(model, "forward_queries"):
                 prediction = model.forward_queries(fields, context, train_queries)
                 query_losses = [
                     complex_relative_loss(
@@ -424,7 +494,14 @@ def parse_args():
     parser.add_argument("--domain", choices=("synthetic", "ocean"), required=True)
     parser.add_argument(
         "--model",
-        choices=("image_unet", "complex_delay", "stable_recurrence", "carrier_poles"),
+        choices=(
+            "image_unet",
+            "complex_delay",
+            "stable_recurrence",
+            "carrier_poles",
+            "component_generator",
+            "carrier_ode",
+        ),
         required=True,
     )
     parser.add_argument("--output-dir", type=Path, required=True)
@@ -437,6 +514,8 @@ def parse_args():
     parser.add_argument("--modes", type=int, default=48)
     parser.add_argument("--order", type=int, default=3)
     parser.add_argument("--poles", type=int, default=4)
+    parser.add_argument("--components", type=int, default=8)
+    parser.add_argument("--complex-width", type=int, default=24)
     parser.add_argument("--state-width", type=int, default=64)
     parser.add_argument("--stability-radius", type=float, default=1.0)
     parser.add_argument("--history-weight", type=float, default=0.0)
@@ -445,6 +524,7 @@ def parse_args():
     parser.add_argument("--max-delay", type=float, default=0.65)
     parser.add_argument("--max-growth-per-hz", type=float, default=0.025)
     parser.add_argument("--max-residual-angle-per-hz", type=float, default=math.pi)
+    parser.add_argument("--max-curvature-per-hz2", type=float, default=0.0)
     parser.add_argument("--residue-scale", type=float, default=1.0)
     parser.add_argument("--state-backbone", choices=("dilated", "unet"), default="dilated")
     parser.add_argument(
@@ -465,6 +545,20 @@ def parse_args():
         choices=("band_ols", "endpoint_increment"),
         default="band_ols",
     )
+    parser.add_argument(
+        "--generator-carrier",
+        choices=("none", "endpoint", "coherent_endpoint"),
+        default="endpoint",
+    )
+    parser.add_argument("--carrier-kernel", type=int, default=5)
+    parser.add_argument("--parameter-smoothing", type=int, default=1)
+    parser.add_argument("--max-update-rate", type=float, default=1.0)
+    parser.add_argument("--global-latent-channels", type=int, default=0)
+    parser.add_argument("--hyper-carrier-correction", action="store_true")
+    parser.add_argument("--max-hyper-slope-per-hz", type=float, default=0.08)
+    parser.add_argument("--max-hyper-curvature-per-hz2", type=float, default=0.005)
+    parser.add_argument("--ode-teacher-forcing", action="store_true")
+    parser.add_argument("--initial-checkpoint", type=Path)
     parser.add_argument("--width", type=int, default=8)
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--batch-size", type=int, default=16)

@@ -12,7 +12,8 @@ PYTHONPATH=src .venv/bin/python -m pytest -q
 .venv/bin/ruff check src tests
 ```
 
-正式运行使用 Python 3.11、PyTorch 2.11.0+cu128 和一张 NVIDIA A100 80 GB。代码不要求
+正式运行使用 Python 3.11、PyTorch 2.8.0+cu128 和一张 NVIDIA A100 80 GB。项目限制
+`torch<2.9`，以免当前机器误解析到需要更新驱动的 CUDA 13 wheel。代码不要求
 该型号 GPU；CPU 可运行但训练较慢。
 
 ## 2. 数据身份
@@ -260,3 +261,69 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_representation
 正文图由 `spectral_continuation.summarize_continuous_state` 和
 `spectral_continuation.summarize_fractional_queries` 生成。提交到 Git 的 JSON/CSV 保存三 seed
 逐频率指标；大型 checkpoints 和逐样本 vectors 仍只通过 SHA256 引用。
+
+## 9. 连续谱生成器 gate
+
+完整协议见
+[`ocean_generator_gate_20260916.json`](../configs/ocean_generator_gate_20260916.json)。主模型命令中
+`SEED` 取 42、43、44：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_representation_poc \
+  --domain ocean --model carrier_poles --dataset /path/to/integer/paired_fields.npz \
+  --output-dir experiments/runs/m4_balanced_train106_hyper_seedSEED \
+  --visible 90,91,92,93,94,95,96,97,98,99,100 \
+  --train-queries 101,102,103,104,105,106 \
+  --test-queries 107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --poles 4 --width 8 --blocks 4 --grouped-training \
+  --pole-growth stable --max-growth-per-hz 0.4 \
+  --max-residual-angle-per-hz 0.25 --pole-anchor residue_sum \
+  --carrier-estimator endpoint_increment --residue-scale 2 \
+  --global-latent-channels 64 --hyper-carrier-correction \
+  --max-hyper-slope-per-hz 0.08 --max-hyper-curvature-per-hz2 0.005 \
+  --history-weight 0 --relative-loss-power 1 \
+  --epochs 100 --batch-size 4 --eval-batch-size 4 \
+  --lr 5e-4 --weight-decay 1e-6 --seed SEED
+```
+
+matched recurrence 使用完全相同的频率、训练轮数和 seed，并替换为：
+
+```text
+--model stable_recurrence --order 3 --state-width 128 --blocks 4
+--stability-radius 1 --history-weight 1
+```
+
+carrier-relative query U-Net：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_query_operator \
+  --dataset /path/to/integer/paired_fields.npz \
+  --output-dir experiments/runs/m4_balanced_train106_carrier_unet_seedSEED \
+  --visible 90,91,92,93,94,95,96,97,98,99,100 \
+  --train-queries 101,102,103,104,105,106 \
+  --extrapolation-queries 107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --parameterization carrier_relative --max-slots 11 --width 16 \
+  --epochs 100 --batch-size 16 --eval-batch-size 16 \
+  --lr 5e-4 --weight-decay 1e-6 --seed SEED
+```
+
+整数结果、paired statistics 和场级图：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_continuous_state \
+  --run 'Hyper pole=experiments/runs/m4_balanced_train106_hyper_seed*/summary.json' \
+  --run 'Stable recurrence=experiments/runs/m4_balanced_train106_recurrence_seed*/summary.json' \
+  --run 'Carrier U-Net=experiments/runs/m4_balanced_train106_carrier_unet_seed*/summary.json' \
+  --output-dir artifacts/spectral_generator_gate
+```
+
+分数频率先用 `evaluate_representation_checkpoint` 逐 seed 评测，再运行：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_fractional_evaluations \
+  --evaluation 'Hyper pole=experiments/evaluations/m4_balanced_fractional_hyper_seed*/summary.json' \
+  --output-dir artifacts/spectral_generator_gate
+```
+
+当前阶段仍使用 development environments。任何后续 strict 结果必须在本配置和 checkpoint hashes
+冻结后另行生成，且不能回流调参。

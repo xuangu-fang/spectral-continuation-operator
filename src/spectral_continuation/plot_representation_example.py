@@ -55,25 +55,25 @@ def _predict(summary_path: Path, fields, environment, query, environment_channel
 
 
 def run(args) -> None:
-    pole_summaries = sorted(Path().glob(args.pole_glob))
-    unet_summaries = sorted(Path().glob(args.unet_glob))
-    if not pole_summaries or not unet_summaries:
+    candidate_summaries = sorted(Path().glob(args.candidate_glob))
+    baseline_summaries = sorted(Path().glob(args.baseline_glob))
+    if not candidate_summaries or not baseline_summaries:
         raise RuntimeError("checkpoint globs must match at least one summary")
     frequencies = tuple(map(float, args.horizon.split(",")))
-    pole_error = _mean_environment_error(pole_summaries, frequencies)
-    unet_error = _mean_environment_error(unet_summaries, frequencies)
-    improvement = unet_error - pole_error
+    candidate_error = _mean_environment_error(candidate_summaries, frequencies)
+    baseline_error = _mean_environment_error(baseline_summaries, frequencies)
+    improvement = baseline_error - candidate_error
     order = np.argsort(improvement)
     validation_index = int(order[len(order) // 2])
 
     bundle = load_ocean_npz(args.dataset)
     validation_positions = np.flatnonzero(bundle.split == "val")
     position = int(validation_positions[validation_index])
-    pole_checkpoint = torch.load(
-        pole_summaries[0].parent / "best.pt", map_location="cpu", weights_only=False
+    candidate_checkpoint = torch.load(
+        candidate_summaries[0].parent / "best.pt", map_location="cpu", weights_only=False
     )
-    normalization = pole_checkpoint["normalization"]
-    visible = tuple(map(float, pole_checkpoint["visible"]))
+    normalization = candidate_checkpoint["normalization"]
+    visible = tuple(map(float, candidate_checkpoint["visible"]))
     fields = torch.stack(
         [
             torch.complex(
@@ -89,13 +89,13 @@ def run(args) -> None:
     query = torch.tensor([args.query], dtype=fields.real.dtype)
     target_raw = bundle.fields[args.query][position]
     target = torch.complex(target_raw[0], target_raw[1])
-    pole = _predict(
-        pole_summaries[0], fields, environment, query, bundle.environment.shape[1]
+    candidate = _predict(
+        candidate_summaries[0], fields, environment, query, bundle.environment.shape[1]
     )
-    unet = _predict(
-        unet_summaries[0], fields, environment, query, bundle.environment.shape[1]
+    baseline = _predict(
+        baseline_summaries[0], fields, environment, query, bundle.environment.shape[1]
     )
-    predictions = (target, pole, unet)
+    predictions = (target, candidate, baseline)
     errors = []
     for prediction in predictions:
         errors.append(
@@ -114,12 +114,16 @@ def run(args) -> None:
     real_limit = float(
         np.quantile(np.concatenate([value.real.abs().flatten().numpy() for value in predictions]), 0.995)
     )
-    error_maps = [target.abs() / rms, (pole - target).abs() / rms, (unet - target).abs() / rms]
+    error_maps = [
+        target.abs() / rms,
+        (candidate - target).abs() / rms,
+        (baseline - target).abs() / rms,
+    ]
     error_limit = float(np.quantile(torch.cat([value.flatten() for value in error_maps]), 0.99))
     alpha = (target.abs() / target.abs().quantile(0.95).clamp_min(1e-12)).clamp(0.15, 1.0)
 
     figure, axes = plt.subplots(3, 3, figsize=(12.4, 6.6), constrained_layout=True)
-    names = ("Target", "Pole-residue", "Image U-Net")
+    names = ("Target", args.candidate_label, args.baseline_label)
     for column, (name, value, rel_error) in enumerate(zip(names, predictions, errors, strict=True)):
         image = axes[0, column].imshow(
             value.real,
@@ -175,12 +179,14 @@ def run(args) -> None:
     figure.savefig(args.output.with_suffix(".pdf"), bbox_inches="tight")
     plt.close(figure)
     metadata = {
-        "selection_rule": "median validation environment after averaging three seeds and all horizon queries",
+        "selection_rule": "median validation environment after averaging seeds and all horizon queries",
         "validation_index": validation_index,
         "environment_id": environment_id,
         "query_hz": args.query,
-        "pole_rel_l2_seed42": errors[1],
-        "unet_rel_l2_seed42": errors[2],
+        "candidate": args.candidate_label,
+        "baseline": args.baseline_label,
+        "candidate_rel_l2_first_seed": errors[1],
+        "baseline_rel_l2_first_seed": errors[2],
         "paired_improvement_used_for_selection": float(improvement[validation_index]),
     }
     args.output.with_suffix(".json").write_text(
@@ -191,8 +197,10 @@ def run(args) -> None:
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset", type=Path, required=True)
-    parser.add_argument("--pole-glob", required=True)
-    parser.add_argument("--unet-glob", required=True)
+    parser.add_argument("--candidate-glob", required=True)
+    parser.add_argument("--baseline-glob", required=True)
+    parser.add_argument("--candidate-label", default="Candidate")
+    parser.add_argument("--baseline-label", default="Baseline")
     parser.add_argument("--horizon", required=True)
     parser.add_argument("--query", type=float, required=True)
     parser.add_argument("--output", type=Path, required=True)

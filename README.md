@@ -5,12 +5,13 @@
 核心问题不是固定的 `20 Hz → 40 Hz` 映射，而是：相邻低频采样是否足以辨识谱相位速度，
 以及一个轻量 propagation-aware operator 能否把这种信息转化为稳定的高频外推。
 
-最新阶段使用 74–80 Hz 可见场和 81–100 Hz 稠密监督，比较近似严格参数匹配的
-carrier-gauged pole–residue、稳定递推和 query-conditioned image U-Net。三者都能拟合训练频带：
-pole 与 U-Net 的 raw complex RelL2 分别为 0.276 和 0.289；但冻结后在 101–125 Hz 上分别为
-0.669 和 1.217，结构化谱状态降低 **45.1%**。相对稳定递推的 0.765，直接连续查询降低
-**12.6%**。在训练后才生成的六个半整数频率上，pole 为 0.676，U-Net 为 1.181。主要差距
-来自相位，而不是幅值指标，且三 seed 方向稳定。
+最新阶段首先诊断了原始 `74–80 Hz → 110 Hz` 长程设置：误差随传播距离和真实谱相位曲率
+显著增加，增加 pole 数、仿射多分量、Neural ODE 和局部曲率都不能突破可辨识性边界。随后在
+明确标注为 development calibration 的协议中，模型看 90–100 Hz、用 101–106 Hz 监督，冻结后
+查询 107–125 Hz。加入 64 维环境级表征和受限 hyper-carrier 后，110 Hz 三 seed raw complex
+RelL2 为 **0.4473 ± 0.0048**，phase coherence 为 **0.8603 ± 0.0020**，通过预设 gate。
+matched recurrence 为 0.4741，相近参数量 carrier-relative query U-Net 三 seed 为 0.6125；
+方法的优势集中在 107–112 Hz，113 Hz 后与 recurrence 发生交叉。
 
 当前结论是：从低频带估计相位不变的局部传播状态，确实比像素空间 query fitting 更适合
 频带外 continuation；误差仍随距离增长，因此还不能主张任意远频恢复。
@@ -20,14 +21,15 @@ pole 与 U-Net 的 raw complex RelL2 分别为 0.276 和 0.289；但冻结后在
 
 ## 阅读顺序
 
-1. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：当前长程目标、pole–residue 方法、
-   最新结果与严格结论边界；
-2. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
+1. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
+   最终协议、三 seed 结果和结论边界；
+2. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
+3. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
    文献定位和失败归因；
-3. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
-4. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
-5. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
-6. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
+4. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
+5. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
+6. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
+7. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
 
 ## 代码入口
 
@@ -41,6 +43,9 @@ pole 与 U-Net 的 raw complex RelL2 分别为 0.276 和 0.289；但冻结后在
 - `spectral_continuation.summarize_representation_poc`：POC 汇总与图表。
 - `spectral_continuation.evaluate_representation_checkpoint`：冻结连续谱状态在独立查询数据上的评测；
 - `spectral_continuation.summarize_continuous_state`：跨 seed 频率曲线、机制指标与正文图。
+- `spectral_continuation.oracle_spectral_diagnostics`：低频可辨识性与 representation oracle。
+- `spectral_continuation.analyze_error_mechanism`：按距离、干涉节点和谱曲率归因误差。
+- `spectral_continuation.summarize_fractional_evaluations`：独立非整数频率评测汇总。
 
 主指标始终是逐物理环境等权的 raw complex relative L2；幅值、圆周相位误差与 coherence
 只用于机制诊断，不用于替换主指标。

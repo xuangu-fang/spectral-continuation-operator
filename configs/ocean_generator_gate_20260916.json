@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "status": "development protocol; strict environments remain unopened",
+  "question": "How far beyond the supervised boundary is a low-band complex spectral state identifiable, and can a globally conditioned continuous generator improve that horizon?",
+  "data": {
+    "archive": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+    "archive_sha256": "edb5d0a4a340a60ab9c9ce947105577c0ef3c2d701d7bba632f6c4f3a195ba51",
+    "fractional_archive": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_fractional_101p5_124p5_20260915/paired_fields.npz",
+    "fractional_archive_sha256": "1575e3a1903798dcf3ae9a28c8f535f55d871c8d0e649c5eb6614e8b995bf5eb",
+    "train_environments": 128,
+    "validation_environments": 32,
+    "strict_reserved_environments": 32
+  },
+  "protocol": {
+    "visible_frequencies_hz": [90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100],
+    "training_and_selection_queries_hz": [101, 102, 103, 104, 105, 106],
+    "unseen_development_queries_hz": [107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125],
+    "primary_gate_query_hz": 110,
+    "gate": {
+      "three_seed_mean_complex_rel_l2_max": 0.45,
+      "three_seed_mean_phase_coherence_min": 0.8,
+      "qualitative_wavefront": "credible on a median paired-improvement validation environment",
+      "baseline": "better than matched stable recurrence at 110 Hz",
+      "continuous_query": "supports unseen integer and fractional frequencies"
+    },
+    "primary_metric": "per-environment raw complex relative L2",
+    "selection_rule": "minimum validation 101--106 Hz macro raw complex relative L2",
+    "disclosure": "This is a calibrated development protocol selected after the 74--80 Hz extreme-horizon protocol failed; it is not an untouched test."
+  },
+  "frozen_model": {
+    "model": "carrier_poles",
+    "poles": 4,
+    "carrier_estimator": "endpoint_increment",
+    "pole_growth": "stable",
+    "pole_anchor": "residue_sum",
+    "max_growth_per_hz": 0.4,
+    "max_residual_angle_per_hz": 0.25,
+    "residue_scale": 2.0,
+    "local_width": 8,
+    "local_blocks": 4,
+    "global_latent_channels": 64,
+    "global_conditioning": "FiLM on every local residual block",
+    "hyper_carrier_correction": true,
+    "max_hyper_slope_per_hz": 0.08,
+    "max_hyper_curvature_per_hz2": 0.005,
+    "history_weight": 0.0,
+    "relative_loss_power": 1,
+    "epochs": 100,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.000001,
+    "seeds": [42, 43, 44],
+    "parameters": 1470240
+  },
+  "matched_baselines": {
+    "stable_recurrence": {
+      "parameters": 1224202,
+      "seeds": [42, 43, 44]
+    },
+    "carrier_relative_query_unet": {
+      "parameters": 1234450,
+      "seeds": [42, 43, 44]
+    }
+  },
+  "frozen_results": {
+    "hyper_pole": {
+      "selected_epochs": [85, 88, 82],
+      "checkpoint_sha256": [
+        "2b798966b2e138845f8894ba4f9f0be6f68e9fe07e80d0925379b0237cda0388",
+        "fe8c3f4834e114e029b519912f4e9b0ca671dab4f6dd977dc6a373b725f925ce",
+        "7702a5bef84b5684fd64654aaf5d2b8a5b3db1951a6565232d051ee312342995"
+      ],
+      "110_hz_complex_rel_l2_mean": 0.4473005235,
+      "110_hz_phase_coherence_mean": 0.8602531552
+    },
+    "stable_recurrence": {
+      "selected_epochs": [98, 100, 94],
+      "checkpoint_sha256": [
+        "3ddab7ab8324fdd79e85cea66133e2ea46ecfa6ae9430004d33d45fab2af5883",
+        "4200c877183b2ea1da0261e92957f1fc273d8acc2f6a4c49d38b27281e50fc86",
+        "0ca09b64508e8280622c5a941fa0b3a6dd374e2ede6eb4ace346a237f0ed988b"
+      ],
+      "110_hz_complex_rel_l2_mean": 0.4740987122
+    },
+    "carrier_relative_query_unet": {
+      "selected_epochs": [47, 32, 28],
+      "checkpoint_sha256": [
+        "506ca0e304b152a0c664372ead26130ca9dcd89cf7028a3628ee7979573c49f8",
+        "e41dba71b8a2909fbee3d58d26cf919f6b722302896832cb577fce0db2b87131",
+        "8c4eba59dc2f4318c3a83cf7cdfc632fde84212f75b7b05870b83208cae95ace"
+      ],
+      "110_hz_complex_rel_l2_mean": 0.6125452121
+    }
+  }
+}

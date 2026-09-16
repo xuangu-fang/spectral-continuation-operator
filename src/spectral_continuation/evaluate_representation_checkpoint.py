@@ -53,7 +53,8 @@ def run(args) -> None:
     validation = np.flatnonzero(bundle.split == "val")
     dataset_type = (
         FrequencyBandDataset
-        if source_summary["model"] in {"carrier_poles", "stable_recurrence"}
+        if source_summary["model"]
+        in {"carrier_poles", "stable_recurrence", "component_generator", "carrier_ode"}
         else FrequencySetDataset
     )
     dataset = dataset_type(

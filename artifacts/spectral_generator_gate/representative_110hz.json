@@ -1,0 +1,11 @@
+{
+  "selection_rule": "median validation environment after averaging seeds and all horizon queries",
+  "validation_index": 2,
+  "environment_id": "ocean_val_00002_f2a973f6afd0",
+  "query_hz": 110.0,
+  "candidate": "Hyper pole",
+  "baseline": "Stable recurrence",
+  "candidate_rel_l2_first_seed": 0.12007606029510498,
+  "baseline_rel_l2_first_seed": 0.19425974786281586,
+  "paired_improvement_used_for_selection": 0.06985358893871307
+}

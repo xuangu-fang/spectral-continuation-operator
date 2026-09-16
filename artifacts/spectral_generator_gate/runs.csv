@@ -1,0 +1,226 @@
+label,seed,split,frequency_hz,summary_path,complex_rel_l2,amplitude_rel_l2,weighted_phase_mae_rad,phase_coherence
+Hyper pole,42,selection,101.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.053104184567928314,0.03754647821187973,0.03134652227163315,0.9931190013885498
+Hyper pole,42,selection,102.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.10354205220937729,0.07357341051101685,0.06938397884368896,0.9817066192626953
+Hyper pole,42,selection,103.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.11197543144226074,0.08229714632034302,0.07464507222175598,0.9808199405670166
+Hyper pole,42,selection,104.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.14185191690921783,0.10354650020599365,0.09756520390510559,0.9742648005485535
+Hyper pole,42,selection,105.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.17008844017982483,0.11830206960439682,0.12379327416419983,0.9641767144203186
+Hyper pole,42,selection,106.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.22872087359428406,0.1493535041809082,0.17305418848991394,0.9463212490081787
+Hyper pole,42,extrapolation,107.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.26366451382637024,0.16238322854042053,0.20271910727024078,0.9325972199440002
+Hyper pole,42,extrapolation,108.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.33466222882270813,0.20239649713039398,0.25936153531074524,0.9091126918792725
+Hyper pole,42,extrapolation,109.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.38576066493988037,0.23034651577472687,0.303548663854599,0.8873841762542725
+Hyper pole,42,extrapolation,110.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.44094911217689514,0.2627526521682739,0.3516174554824829,0.8629976511001587
+Hyper pole,42,extrapolation,111.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.48169735074043274,0.28502607345581055,0.3880466818809509,0.842414379119873
+Hyper pole,42,extrapolation,112.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.5186731815338135,0.30484360456466675,0.42078298330307007,0.8227687478065491
+Hyper pole,42,extrapolation,113.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.5554413795471191,0.32571542263031006,0.45647940039634705,0.8004615902900696
+Hyper pole,42,extrapolation,114.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.5897955894470215,0.345186710357666,0.49180933833122253,0.7781656980514526
+Hyper pole,42,extrapolation,115.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.6238046884536743,0.36440837383270264,0.5287747383117676,0.7546040415763855
+Hyper pole,42,extrapolation,116.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.6610562801361084,0.3856246769428253,0.5696171522140503,0.7294090390205383
+Hyper pole,42,extrapolation,117.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.6897350549697876,0.4007939100265503,0.6072924137115479,0.7050719261169434
+Hyper pole,42,extrapolation,118.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.7138078212738037,0.4133162796497345,0.6392186284065247,0.6833382844924927
+Hyper pole,42,extrapolation,119.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.7352932691574097,0.4247772693634033,0.6716703176498413,0.6610770225524902
+Hyper pole,42,extrapolation,120.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.7556443214416504,0.43642693758010864,0.7080339193344116,0.6363574266433716
+Hyper pole,42,extrapolation,121.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.7726995944976807,0.4470647871494293,0.7412559986114502,0.6136236786842346
+Hyper pole,42,extrapolation,122.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.7914748191833496,0.4616977572441101,0.7810996770858765,0.5869178771972656
+Hyper pole,42,extrapolation,123.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.8027770519256592,0.47096073627471924,0.8123973608016968,0.5648564100265503
+Hyper pole,42,extrapolation,124.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.8143450617790222,0.4829114079475403,0.8460921049118042,0.5409564971923828
+Hyper pole,42,extrapolation,125.0,experiments/runs/m4_balanced_train106_hyper_seed42/summary.json,0.8270941972732544,0.4973151981830597,0.8803727626800537,0.5168576240539551
+Hyper pole,43,selection,101.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.056992970407009125,0.04029648005962372,0.03361152857542038,0.9915670156478882
+Hyper pole,43,selection,102.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.10833761096000671,0.076316699385643,0.0733637735247612,0.9792219400405884
+Hyper pole,43,selection,103.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.11187400668859482,0.08202502131462097,0.07405225187540054,0.9817984104156494
+Hyper pole,43,selection,104.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.13599713146686554,0.1002546176314354,0.09248277544975281,0.9765200614929199
+Hyper pole,43,selection,105.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.16618594527244568,0.1152808889746666,0.1198556199669838,0.9661038517951965
+Hyper pole,43,selection,106.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.22816869616508484,0.14749163389205933,0.1708030253648758,0.9475765824317932
+Hyper pole,43,extrapolation,107.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.265744686126709,0.16187024116516113,0.20209744572639465,0.9331616163253784
+Hyper pole,43,extrapolation,108.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.33813539147377014,0.20292305946350098,0.26045137643814087,0.9087469577789307
+Hyper pole,43,extrapolation,109.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.39095568656921387,0.23159120976924896,0.3075818419456482,0.8855190873146057
+Hyper pole,43,extrapolation,110.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.44831931591033936,0.2644213140010834,0.3592386841773987,0.8591910004615784
+Hyper pole,43,extrapolation,111.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.49257051944732666,0.2878809869289398,0.4007004499435425,0.8359566926956177
+Hyper pole,43,extrapolation,112.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.5341509580612183,0.309042751789093,0.43897947669029236,0.8129769563674927
+Hyper pole,43,extrapolation,113.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.576480507850647,0.3311912715435028,0.48045721650123596,0.7869271636009216
+Hyper pole,43,extrapolation,114.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.6180238723754883,0.35252809524536133,0.522753119468689,0.7602097392082214
+Hyper pole,43,extrapolation,115.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.6585041284561157,0.372263103723526,0.5662106275558472,0.7320887446403503
+Hyper pole,43,extrapolation,116.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.7035784721374512,0.3946852684020996,0.6153140664100647,0.7006291151046753
+Hyper pole,43,extrapolation,117.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.7404803037643433,0.41054344177246094,0.6622129082679749,0.6696019172668457
+Hyper pole,43,extrapolation,118.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.7736469507217407,0.4239886403083801,0.7044551372528076,0.6401049494743347
+Hyper pole,43,extrapolation,119.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.8039484620094299,0.4360331892967224,0.7477625608444214,0.6093370318412781
+Hyper pole,43,extrapolation,120.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.8313072919845581,0.44743582606315613,0.7945058941841125,0.5763437747955322
+Hyper pole,43,extrapolation,121.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.855068564414978,0.4580826163291931,0.8383989334106445,0.5445623397827148
+Hyper pole,43,extrapolation,122.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.8776050806045532,0.4718247950077057,0.8876667022705078,0.5093955993652344
+Hyper pole,43,extrapolation,123.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.8924461603164673,0.4813435673713684,0.9292620420455933,0.47852838039398193
+Hyper pole,43,extrapolation,124.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.9053831696510315,0.49358707666397095,0.9716227054595947,0.44671180844306946
+Hyper pole,43,extrapolation,125.0,experiments/runs/m4_balanced_train106_hyper_seed43/summary.json,0.9174825549125671,0.5091676712036133,1.0136514902114868,0.41559872031211853
+Hyper pole,44,selection,101.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.055982090532779694,0.03908019885420799,0.03283841535449028,0.9918954372406006
+Hyper pole,44,selection,102.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.10681149363517761,0.07582787424325943,0.07195357978343964,0.9798496961593628
+Hyper pole,44,selection,103.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.11088882386684418,0.08187834918498993,0.07359898090362549,0.9817058444023132
+Hyper pole,44,selection,104.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.136572003364563,0.10062289237976074,0.09327943623065948,0.9764215350151062
+Hyper pole,44,selection,105.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.1682206243276596,0.11657513678073883,0.12192180752754211,0.9657987952232361
+Hyper pole,44,selection,106.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.2303229123353958,0.14900806546211243,0.17291247844696045,0.9471781253814697
+Hyper pole,44,extrapolation,107.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.2681693434715271,0.1637325882911682,0.20412465929985046,0.9328640699386597
+Hyper pole,44,extrapolation,108.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.34147024154663086,0.2052483856678009,0.26278382539749146,0.9084376692771912
+Hyper pole,44,extrapolation,109.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.3949241638183594,0.23432597517967224,0.3092406988143921,0.8854299783706665
+Hyper pole,44,extrapolation,110.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.4526331424713135,0.26672786474227905,0.3610770106315613,0.8585708141326904
+Hyper pole,44,extrapolation,111.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.4977700114250183,0.2896859347820282,0.4029194116592407,0.8344970345497131
+Hyper pole,44,extrapolation,112.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.5400137901306152,0.310005784034729,0.4419635534286499,0.8106541633605957
+Hyper pole,44,extrapolation,113.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.5831208229064941,0.330962598323822,0.4848911762237549,0.7834416627883911
+Hyper pole,44,extrapolation,114.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.6256734132766724,0.3514341711997986,0.5286011099815369,0.7554686069488525
+Hyper pole,44,extrapolation,115.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.6668037176132202,0.3699687719345093,0.5734710693359375,0.7259699106216431
+Hyper pole,44,extrapolation,116.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.7124853134155273,0.391130268573761,0.6245925426483154,0.6928647756576538
+Hyper pole,44,extrapolation,117.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.7504053115844727,0.40665102005004883,0.6736897826194763,0.6603419780731201
+Hyper pole,44,extrapolation,118.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.7836387157440186,0.4188411235809326,0.7182626724243164,0.6291157007217407
+Hyper pole,44,extrapolation,119.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.8138036727905273,0.4297027885913849,0.7636027336120605,0.5969265699386597
+Hyper pole,44,extrapolation,120.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.8410977125167847,0.44030505418777466,0.8126878142356873,0.5623122453689575
+Hyper pole,44,extrapolation,121.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.864497721195221,0.4504138231277466,0.8589416146278381,0.5291479229927063
+Hyper pole,44,extrapolation,122.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.8867890238761902,0.46465492248535156,0.9096083045005798,0.49296778440475464
+Hyper pole,44,extrapolation,123.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.901252031326294,0.4745074212551117,0.952759325504303,0.4608730971813202
+Hyper pole,44,extrapolation,124.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.9131828546524048,0.48665088415145874,0.9968713521957397,0.4279576539993286
+Hyper pole,44,extrapolation,125.0,experiments/runs/m4_balanced_train106_hyper_seed44/summary.json,0.924561619758606,0.5034613609313965,1.0401592254638672,0.39592331647872925
+Stable recurrence,42,selection,101.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.06277169287204742,0.05099525302648544,0.03366658836603165,0.9950401782989502
+Stable recurrence,42,selection,102.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.12943778932094574,0.10486903786659241,0.07368592172861099,0.9842360019683838
+Stable recurrence,42,selection,103.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.1554749608039856,0.1312347948551178,0.08156395703554153,0.9827854037284851
+Stable recurrence,42,selection,104.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.1975836455821991,0.16788023710250854,0.10345885902643204,0.9771339893341064
+Stable recurrence,42,selection,105.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.23541167378425598,0.20034635066986084,0.12877900898456573,0.9690555930137634
+Stable recurrence,42,selection,106.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.2898581326007843,0.24167229235172272,0.17816348373889923,0.9521921873092651
+Stable recurrence,42,extrapolation,107.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.32290351390838623,0.2666316330432892,0.21641194820404053,0.9345662593841553
+Stable recurrence,42,extrapolation,108.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.3834184408187866,0.3084193468093872,0.285800963640213,0.9018491506576538
+Stable recurrence,42,extrapolation,109.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.42650163173675537,0.3368738293647766,0.3478919267654419,0.8663418889045715
+Stable recurrence,42,extrapolation,110.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.4752528667449951,0.3678608238697052,0.4181690812110901,0.824765682220459
+Stable recurrence,42,extrapolation,111.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.5086283683776855,0.38772475719451904,0.47582370042800903,0.7871357202529907
+Stable recurrence,42,extrapolation,112.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.5388357639312744,0.4045881927013397,0.5296489000320435,0.7512357234954834
+Stable recurrence,42,extrapolation,113.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.5674121379852295,0.4204162359237671,0.5807735919952393,0.716325044631958
+Stable recurrence,42,extrapolation,114.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.5940921902656555,0.43470650911331177,0.6281116008758545,0.6840130090713501
+Stable recurrence,42,extrapolation,115.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.6191373467445374,0.4478806257247925,0.6723140478134155,0.6535609364509583
+Stable recurrence,42,extrapolation,116.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.6462692022323608,0.46225425601005554,0.7170165777206421,0.6230926513671875
+Stable recurrence,42,extrapolation,117.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.6681076288223267,0.47349250316619873,0.7566682696342468,0.5954388380050659
+Stable recurrence,42,extrapolation,118.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.6866393685340881,0.4817296862602234,0.7907980680465698,0.571117103099823
+Stable recurrence,42,extrapolation,119.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.7043875455856323,0.4895623028278351,0.8236100077629089,0.5478125214576721
+Stable recurrence,42,extrapolation,120.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.7231128811836243,0.4989599585533142,0.8575080633163452,0.5241054892539978
+Stable recurrence,42,extrapolation,121.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.7395116090774536,0.5064750909805298,0.8869465589523315,0.5032892227172852
+Stable recurrence,42,extrapolation,122.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.7593962550163269,0.5176570415496826,0.9201269149780273,0.4805140495300293
+Stable recurrence,42,extrapolation,123.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.7732439637184143,0.5237663984298706,0.9457919597625732,0.46209365129470825
+Stable recurrence,42,extrapolation,124.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.7891691327095032,0.532912015914917,0.9732160568237305,0.4428194761276245
+Stable recurrence,42,extrapolation,125.0,experiments/runs/m4_balanced_train106_recurrence_seed42/summary.json,0.8058624267578125,0.5428628921508789,1.000082015991211,0.42368701100349426
+Stable recurrence,43,selection,101.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.06247522309422493,0.05091775953769684,0.033355552703142166,0.9951372742652893
+Stable recurrence,43,selection,102.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.12876497209072113,0.10463883727788925,0.07277531921863556,0.9845765233039856
+Stable recurrence,43,selection,103.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.15452373027801514,0.1308126449584961,0.08009900897741318,0.9832854270935059
+Stable recurrence,43,selection,104.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.19626882672309875,0.16729825735092163,0.10117246210575104,0.9778153896331787
+Stable recurrence,43,selection,105.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.23378321528434753,0.1995639204978943,0.12583540380001068,0.9699121713638306
+Stable recurrence,43,selection,106.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.28791946172714233,0.24071024358272552,0.17520484328269958,0.9533241987228394
+Stable recurrence,43,extrapolation,107.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.32060596346855164,0.2654814124107361,0.21325580775737762,0.9360536336898804
+Stable recurrence,43,extrapolation,108.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.38087010383605957,0.3072047829627991,0.28217923641204834,0.9037647247314453
+Stable recurrence,43,extrapolation,109.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.42418208718299866,0.3356505036354065,0.34429606795310974,0.868356466293335
+Stable recurrence,43,extrapolation,110.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.4730740487575531,0.3665980398654938,0.41481077671051025,0.8266244530677795
+Stable recurrence,43,extrapolation,111.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.506704568862915,0.38650378584861755,0.4732908606529236,0.7886112332344055
+Stable recurrence,43,extrapolation,112.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.5372311472892761,0.4034457206726074,0.5280103087425232,0.7523030042648315
+Stable recurrence,43,extrapolation,113.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.5662585496902466,0.4193788170814514,0.5802151560783386,0.7168499827384949
+Stable recurrence,43,extrapolation,114.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.5931462049484253,0.4337801933288574,0.6279016733169556,0.6842713356018066
+Stable recurrence,43,extrapolation,115.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.6184645891189575,0.4470610022544861,0.6724434494972229,0.6536574363708496
+Stable recurrence,43,extrapolation,116.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.6460084319114685,0.4617181420326233,0.7174482345581055,0.6232351064682007
+Stable recurrence,43,extrapolation,117.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.6681923866271973,0.47317737340927124,0.7573003172874451,0.5955644249916077
+Stable recurrence,43,extrapolation,118.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.6869467496871948,0.4815095365047455,0.7915911078453064,0.5713056921958923
+Stable recurrence,43,extrapolation,119.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.704921543598175,0.48941656947135925,0.82444167137146,0.5479775667190552
+Stable recurrence,43,extrapolation,120.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.72395920753479,0.4988488554954529,0.8585993647575378,0.5239880681037903
+Stable recurrence,43,extrapolation,121.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.7406302094459534,0.5064282417297363,0.8882806301116943,0.5029315948486328
+Stable recurrence,43,extrapolation,122.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.7608653903007507,0.5178335905075073,0.9216117858886719,0.47992241382598877
+Stable recurrence,43,extrapolation,123.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.7748328447341919,0.5238794684410095,0.9473245143890381,0.46135213971138
+Stable recurrence,43,extrapolation,124.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.790920615196228,0.5330313444137573,0.9750065803527832,0.44180309772491455
+Stable recurrence,43,extrapolation,125.0,experiments/runs/m4_balanced_train106_recurrence_seed43/summary.json,0.8077113628387451,0.5430940985679626,1.0020344257354736,0.42238152027130127
+Stable recurrence,44,selection,101.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.06254784762859344,0.050803691148757935,0.033621128648519516,0.9950906038284302
+Stable recurrence,44,selection,102.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.1289719045162201,0.10444293171167374,0.07338254153728485,0.984355092048645
+Stable recurrence,44,selection,103.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.15466047823429108,0.13045373558998108,0.0810685083270073,0.9829232692718506
+Stable recurrence,44,selection,104.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.1965699940919876,0.1669313609600067,0.10284659266471863,0.9772146344184875
+Stable recurrence,44,selection,105.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.23435187339782715,0.19930654764175415,0.12811654806137085,0.9689780473709106
+Stable recurrence,44,selection,106.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.2888493239879608,0.24067193269729614,0.17770951986312866,0.9519699811935425
+Stable recurrence,44,extrapolation,107.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.3217712938785553,0.26560136675834656,0.21601901948451996,0.9343889951705933
+Stable recurrence,44,extrapolation,108.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.3820860683917999,0.30745431780815125,0.28500545024871826,0.9019534587860107
+Stable recurrence,44,extrapolation,109.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.42521071434020996,0.33605068922042847,0.34644654393196106,0.8668416738510132
+Stable recurrence,44,extrapolation,110.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.4739692211151123,0.3670439124107361,0.41624772548675537,0.825545072555542
+Stable recurrence,44,extrapolation,111.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.5075017809867859,0.3869137763977051,0.4737163484096527,0.7880719304084778
+Stable recurrence,44,extrapolation,112.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.5378806591033936,0.40380603075027466,0.5275543928146362,0.7523185014724731
+Stable recurrence,44,extrapolation,113.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.566797137260437,0.4196469187736511,0.5790746212005615,0.7173163890838623
+Stable recurrence,44,extrapolation,114.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.5938469171524048,0.43403682112693787,0.6270834803581238,0.684723973274231
+Stable recurrence,44,extrapolation,115.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.6192030906677246,0.44731879234313965,0.6716176867485046,0.6540975570678711
+Stable recurrence,44,extrapolation,116.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.646657407283783,0.4617772102355957,0.7168195843696594,0.623401403427124
+Stable recurrence,44,extrapolation,117.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.6687802672386169,0.4730539917945862,0.7569301128387451,0.5955085158348083
+Stable recurrence,44,extrapolation,118.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.6876522302627563,0.48133084177970886,0.7913010716438293,0.5710181593894958
+Stable recurrence,44,extrapolation,119.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.7057839632034302,0.489215612411499,0.8243007659912109,0.5474619269371033
+Stable recurrence,44,extrapolation,120.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.7249279022216797,0.4986347556114197,0.8585860729217529,0.5233767628669739
+Stable recurrence,44,extrapolation,121.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.7417500019073486,0.5062170028686523,0.8883342742919922,0.5021292567253113
+Stable recurrence,44,extrapolation,122.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.7620279788970947,0.5176472067832947,0.9216441512107849,0.47916969656944275
+Stable recurrence,44,extrapolation,123.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.7762448787689209,0.5237764120101929,0.9478083848953247,0.4603806436061859
+Stable recurrence,44,extrapolation,124.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.7925849556922913,0.5328952074050903,0.9761048555374146,0.44054722785949707
+Stable recurrence,44,extrapolation,125.0,experiments/runs/m4_balanced_train106_recurrence_seed44/summary.json,0.8096965551376343,0.5429338216781616,1.003659963607788,0.42085719108581543
+Carrier query U-Net,42,selection,101.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.3062559962272644,0.20110104978084564,0.27148932218551636,0.8933861255645752
+Carrier query U-Net,42,selection,102.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.29172268509864807,0.19467824697494507,0.2518013119697571,0.8966084718704224
+Carrier query U-Net,42,selection,103.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.2849296033382416,0.19273287057876587,0.23799960315227509,0.8978240489959717
+Carrier query U-Net,42,selection,104.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.3005630373954773,0.20619872212409973,0.2572453022003174,0.8913326263427734
+Carrier query U-Net,42,selection,105.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.3301517367362976,0.2247546762228012,0.29620689153671265,0.8782052993774414
+Carrier query U-Net,42,selection,106.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.3853551745414734,0.25528407096862793,0.3582165837287903,0.8525729179382324
+Carrier query U-Net,42,extrapolation,107.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.4373350143432617,0.27605170011520386,0.42799973487854004,0.811893105506897
+Carrier query U-Net,42,extrapolation,108.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.5043343305587769,0.30895891785621643,0.5092781186103821,0.7656909823417664
+Carrier query U-Net,42,extrapolation,109.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.5570985078811646,0.3337287902832031,0.5729837417602539,0.724976122379303
+Carrier query U-Net,42,extrapolation,110.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.6124972105026245,0.3616708517074585,0.6421481966972351,0.6797666549682617
+Carrier query U-Net,42,extrapolation,111.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.6563973426818848,0.37972724437713623,0.700553297996521,0.6391916275024414
+Carrier query U-Net,42,extrapolation,112.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.6962001323699951,0.39550209045410156,0.7546730637550354,0.6012818217277527
+Carrier query U-Net,42,extrapolation,113.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.7324981689453125,0.4104626774787903,0.8060407042503357,0.5649198293685913
+Carrier query U-Net,42,extrapolation,114.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.7644585371017456,0.4238956570625305,0.8486350178718567,0.5350376963615417
+Carrier query U-Net,42,extrapolation,115.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.7938888072967529,0.43567216396331787,0.8913170099258423,0.5048022270202637
+Carrier query U-Net,42,extrapolation,116.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.8236247301101685,0.4485637843608856,0.9284080266952515,0.4792838990688324
+Carrier query U-Net,42,extrapolation,117.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.8474489450454712,0.458149790763855,0.9586538076400757,0.4573223292827606
+Carrier query U-Net,42,extrapolation,118.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.8693383932113647,0.4653654098510742,0.9865692853927612,0.4367809593677521
+Carrier query U-Net,42,extrapolation,119.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.8901469707489014,0.4721001088619232,1.0134732723236084,0.4168395400047302
+Carrier query U-Net,42,extrapolation,120.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.9090832471847534,0.4789474308490753,1.0394065380096436,0.39777761697769165
+Carrier query U-Net,42,extrapolation,121.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.9282187819480896,0.48507750034332275,1.0623112916946411,0.38081154227256775
+Carrier query U-Net,42,extrapolation,122.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.9471461176872253,0.49296918511390686,1.0888948440551758,0.36188557744026184
+Carrier query U-Net,42,extrapolation,123.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.963936448097229,0.4978151023387909,1.1103394031524658,0.34591981768608093
+Carrier query U-Net,42,extrapolation,124.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.9814528226852417,0.5040261149406433,1.1344099044799805,0.328186571598053
+Carrier query U-Net,42,extrapolation,125.0,experiments/runs/m4_balanced_train106_carrier_unet_seed42/summary.json,0.9995667934417725,0.510995090007782,1.1588706970214844,0.3106735944747925
+Carrier query U-Net,43,selection,101.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.3096703886985779,0.19752605259418488,0.27776265144348145,0.8923166990280151
+Carrier query U-Net,43,selection,102.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.29468870162963867,0.1904119849205017,0.2592628002166748,0.8944602012634277
+Carrier query U-Net,43,selection,103.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.28491854667663574,0.18724361062049866,0.2398158311843872,0.8974324464797974
+Carrier query U-Net,43,selection,104.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.2993719279766083,0.2010224163532257,0.2537233233451843,0.8923276662826538
+Carrier query U-Net,43,selection,105.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.32705891132354736,0.21949666738510132,0.2899645268917084,0.8804503679275513
+Carrier query U-Net,43,selection,106.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.37962162494659424,0.2497043013572693,0.34993651509284973,0.856346607208252
+Carrier query U-Net,43,extrapolation,107.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.4325350522994995,0.2706768810749054,0.42083004117012024,0.8150837421417236
+Carrier query U-Net,43,extrapolation,108.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.4994371235370636,0.3050327003002167,0.5011544227600098,0.7697010040283203
+Carrier query U-Net,43,extrapolation,109.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.5515350699424744,0.3296707272529602,0.5661981105804443,0.7284791469573975
+Carrier query U-Net,43,extrapolation,110.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.6066694259643555,0.3574680685997009,0.6352356672286987,0.6839120984077454
+Carrier query U-Net,43,extrapolation,111.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.650577187538147,0.3760824203491211,0.6928858757019043,0.6441807746887207
+Carrier query U-Net,43,extrapolation,112.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.6903139352798462,0.3919922113418579,0.7469947338104248,0.6068733930587769
+Carrier query U-Net,43,extrapolation,113.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.7268328070640564,0.40672314167022705,0.7996740341186523,0.5696510076522827
+Carrier query U-Net,43,extrapolation,114.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.7586989998817444,0.4200866222381592,0.8431289196014404,0.5390514731407166
+Carrier query U-Net,43,extrapolation,115.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.7880127429962158,0.43181073665618896,0.8856821656227112,0.5088925361633301
+Carrier query U-Net,43,extrapolation,116.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.8181949853897095,0.44510364532470703,0.9238137006759644,0.48255619406700134
+Carrier query U-Net,43,extrapolation,117.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.8419907689094543,0.4547233581542969,0.9550148248672485,0.4601035416126251
+Carrier query U-Net,43,extrapolation,118.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.8638780117034912,0.46205970644950867,0.9818103313446045,0.44063305854797363
+Carrier query U-Net,43,extrapolation,119.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.8848496079444885,0.468922883272171,1.0097137689590454,0.4197884798049927
+Carrier query U-Net,43,extrapolation,120.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.9039812088012695,0.4760291278362274,1.036644458770752,0.3999902009963989
+Carrier query U-Net,43,extrapolation,121.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.9233509302139282,0.4822668433189392,1.0595753192901611,0.38293904066085815
+Carrier query U-Net,43,extrapolation,122.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.942625105381012,0.4904106855392456,1.0861432552337646,0.3642232418060303
+Carrier query U-Net,43,extrapolation,123.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.9595556259155273,0.49525484442710876,1.1086571216583252,0.3473077416419983
+Carrier query U-Net,43,extrapolation,124.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.9776602983474731,0.5017244219779968,1.1330167055130005,0.3292791247367859
+Carrier query U-Net,43,extrapolation,125.0,experiments/runs/m4_balanced_train106_carrier_unet_seed43/summary.json,0.9963079690933228,0.5090267658233643,1.1577458381652832,0.3114960193634033
+Carrier query U-Net,44,selection,101.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.31106382608413696,0.2035083770751953,0.2747393548488617,0.8945128917694092
+Carrier query U-Net,44,selection,102.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.2958224415779114,0.19599966704845428,0.2583334445953369,0.8951783180236816
+Carrier query U-Net,44,selection,103.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.28832781314849854,0.1930968463420868,0.24398815631866455,0.8962281942367554
+Carrier query U-Net,44,selection,104.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.3052665591239929,0.20672205090522766,0.26264524459838867,0.8892373442649841
+Carrier query U-Net,44,selection,105.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.33485299348831177,0.2247946560382843,0.30101335048675537,0.8756212592124939
+Carrier query U-Net,44,selection,106.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.3898472189903259,0.2555124759674072,0.3630635738372803,0.8498896360397339
+Carrier query U-Net,44,extrapolation,107.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.4426499009132385,0.27625057101249695,0.4349137544631958,0.8072093725204468
+Carrier query U-Net,44,extrapolation,108.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.5105806589126587,0.31054458022117615,0.5159607529640198,0.7613741755485535
+Carrier query U-Net,44,extrapolation,109.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.5632864236831665,0.33507150411605835,0.5811716914176941,0.7197175621986389
+Carrier query U-Net,44,extrapolation,110.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.6184689998626709,0.3625400960445404,0.6506843566894531,0.6743185520172119
+Carrier query U-Net,44,extrapolation,111.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.662542462348938,0.3808897137641907,0.709054708480835,0.6339198350906372
+Carrier query U-Net,44,extrapolation,112.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.7020403742790222,0.39641767740249634,0.762722373008728,0.5964457988739014
+Carrier query U-Net,44,extrapolation,113.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.737687349319458,0.41092318296432495,0.8121181726455688,0.5615005493164062
+Carrier query U-Net,44,extrapolation,114.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.7691223621368408,0.42404842376708984,0.8541702032089233,0.5318853855133057
+Carrier query U-Net,44,extrapolation,115.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.7975839376449585,0.43540245294570923,0.8941205143928528,0.5036710500717163
+Carrier query U-Net,44,extrapolation,116.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.827042818069458,0.44815266132354736,0.931692361831665,0.47742563486099243
+Carrier query U-Net,44,extrapolation,117.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.8506774306297302,0.457758367061615,0.9607324004173279,0.45645713806152344
+Carrier query U-Net,44,extrapolation,118.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.8723260164260864,0.4649387300014496,0.9883848428726196,0.43625420331954956
+Carrier query U-Net,44,extrapolation,119.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.8929217457771301,0.4716172218322754,1.0141621828079224,0.41716066002845764
+Carrier query U-Net,44,extrapolation,120.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.9117728471755981,0.4783785939216614,1.0409088134765625,0.39748114347457886
+Carrier query U-Net,44,extrapolation,121.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.930987536907196,0.4844992160797119,1.0645418167114258,0.37990447878837585
+Carrier query U-Net,44,extrapolation,122.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.9501659870147705,0.49247175455093384,1.0909518003463745,0.3611062169075012
+Carrier query U-Net,44,extrapolation,123.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.9669090509414673,0.4972219467163086,1.1126530170440674,0.34485572576522827
+Carrier query U-Net,44,extrapolation,124.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,0.9848918914794922,0.503486156463623,1.136738896369934,0.32708364725112915
+Carrier query U-Net,44,extrapolation,125.0,experiments/runs/m4_balanced_train106_carrier_unet_seed44/summary.json,1.0034265518188477,0.5106905698776245,1.161102294921875,0.3094305992126465

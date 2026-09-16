@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "status": "oracle diagnostic; not a deployable model",
+  "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "validation_environments": 32,
+  "queries_hz": [
+    110.0
+  ],
+  "definitions": {
+    "visible": "fit only 74--80 Hz; measures low-band identifiability",
+    "representation_oracle": "fit through 100 Hz on each validation environment; measures function-class capacity and is not a valid inference baseline"
+  },
+  "metrics": {
+    "ar_visible_order1_ridge0.0001": {
+      "complex_rel_l2_mean": 565015.25,
+      "complex_rel_l2_std": 3191942.25,
+      "weighted_phase_mae_rad_mean": 1.2919152975082397,
+      "phase_coherence_mean": 0.21324630081653595
+    },
+    "ar_visible_order1_ridge0.001": {
+      "complex_rel_l2_mean": 549972.0,
+      "complex_rel_l2_std": 3106958.25,
+      "weighted_phase_mae_rad_mean": 1.2919152975082397,
+      "phase_coherence_mean": 0.21324630081653595
+    },
+    "ar_visible_order1_ridge0.01": {
+      "complex_rel_l2_mean": 420455.71875,
+      "complex_rel_l2_std": 2375281.75,
+      "weighted_phase_mae_rad_mean": 1.2919152975082397,
+      "phase_coherence_mean": 0.21324628591537476
+    },
+    "ar_visible_order2_ridge0.0001": {
+      "complex_rel_l2_mean": "Infinity",
+      "complex_rel_l2_std": "NaN",
+      "weighted_phase_mae_rad_mean": 1.232785701751709,
+      "phase_coherence_mean": 0.2579716444015503
+    },
+    "ar_visible_order2_ridge0.001": {
+      "complex_rel_l2_mean": "Infinity",
+      "complex_rel_l2_std": "NaN",
+      "weighted_phase_mae_rad_mean": 1.2639867067337036,
+      "phase_coherence_mean": 0.23350338637828827
+    },
+    "ar_visible_order2_ridge0.01": {
+      "complex_rel_l2_mean": 3546405767479296.0,
+      "complex_rel_l2_std": 2.0061444347265024e+16,
+      "weighted_phase_mae_rad_mean": 1.2709786891937256,
+      "phase_coherence_mean": 0.22868835926055908
+    },
+    "ar_visible_order3_ridge0.0001": {
+      "complex_rel_l2_mean": "Infinity",
+      "complex_rel_l2_std": "NaN",
+      "weighted_phase_mae_rad_mean": 1.17646062374115,
+      "phase_coherence_mean": 0.3020317852497101
+    },
+    "ar_visible_order3_ridge0.001": {
+      "complex_rel_l2_mean": "Infinity",
+      "complex_rel_l2_std": "NaN",
+      "weighted_phase_mae_rad_mean": 1.2439225912094116,
+      "phase_coherence_mean": 0.2489079087972641
+    },
+    "ar_visible_order3_ridge0.01": {
+      "complex_rel_l2_mean": 3702859883347968.0,
+      "complex_rel_l2_std": 2.0946183987920896e+16,
+      "weighted_phase_mae_rad_mean": 1.2560102939605713,
+      "phase_coherence_mean": 0.23988640308380127
+    },
+    "polynomial_carrier_visible_degree1": {
+      "complex_rel_l2_mean": 23710434.0,
+      "complex_rel_l2_std": 77569760.0,
+      "weighted_phase_mae_rad_mean": 1.2904822826385498,
+      "phase_coherence_mean": 0.214331716299057
+    },
+    "polynomial_carrier_visible_degree2": {
+      "complex_rel_l2_mean": "Infinity",
+      "complex_rel_l2_std": "NaN",
+      "weighted_phase_mae_rad_mean": "NaN",
+      "phase_coherence_mean": "NaN"
+    },
+    "polynomial_carrier_visible_degree3": {
+      "complex_rel_l2_mean": "Infinity",
+      "complex_rel_l2_std": "NaN",
+      "weighted_phase_mae_rad_mean": "NaN",
+      "phase_coherence_mean": "NaN"
+    },
+    "ar_representation_oracle_order1_ridge0.0001": {
+      "complex_rel_l2_mean": 0.7234168648719788,
+      "complex_rel_l2_std": 0.14749495685100555,
+      "weighted_phase_mae_rad_mean": 0.647611677646637,
+      "phase_coherence_mean": 0.6812406778335571
+    },
+    "ar_representation_oracle_order1_ridge0.001": {
+      "complex_rel_l2_mean": 0.7198011875152588,
+      "complex_rel_l2_std": 0.14648768305778503,
+      "weighted_phase_mae_rad_mean": 0.647611677646637,
+      "phase_coherence_mean": 0.6812406778335571
+    },
+    "ar_representation_oracle_order1_ridge0.01": {
+      "complex_rel_l2_mean": 0.6909981369972229,
+      "complex_rel_l2_std": 0.13576196134090424,
+      "weighted_phase_mae_rad_mean": 0.647611677646637,
+      "phase_coherence_mean": 0.6812406778335571
+    },
+    "ar_representation_oracle_order2_ridge0.0001": {
+      "complex_rel_l2_mean": 12.753421783447266,
+      "complex_rel_l2_std": 62.41162109375,
+      "weighted_phase_mae_rad_mean": 0.624462902545929,
+      "phase_coherence_mean": 0.6980085372924805
+    },
+    "ar_representation_oracle_order2_ridge0.001": {
+      "complex_rel_l2_mean": 1.0086389780044556,
+      "complex_rel_l2_std": 1.6576335430145264,
+      "weighted_phase_mae_rad_mean": 0.6258102655410767,
+      "phase_coherence_mean": 0.6974766850471497
+    },
+    "ar_representation_oracle_order2_ridge0.01": {
+      "complex_rel_l2_mean": 0.6916342377662659,
+      "complex_rel_l2_std": 0.12981411814689636,
+      "weighted_phase_mae_rad_mean": 0.6406978368759155,
+      "phase_coherence_mean": 0.6871166825294495
+    },
+    "ar_representation_oracle_order3_ridge0.0001": {
+      "complex_rel_l2_mean": 12.384540557861328,
+      "complex_rel_l2_std": 62.06766128540039,
+      "weighted_phase_mae_rad_mean": 0.5999058485031128,
+      "phase_coherence_mean": 0.7162744402885437
+    },
+    "ar_representation_oracle_order3_ridge0.001": {
+      "complex_rel_l2_mean": 1.150610089302063,
+      "complex_rel_l2_std": 2.4558537006378174,
+      "weighted_phase_mae_rad_mean": 0.5977340936660767,
+      "phase_coherence_mean": 0.7183940410614014
+    },
+    "ar_representation_oracle_order3_ridge0.01": {
+      "complex_rel_l2_mean": 0.6872413754463196,
+      "complex_rel_l2_std": 0.1569223552942276,
+      "weighted_phase_mae_rad_mean": 0.6206831932067871,
+      "phase_coherence_mean": 0.7032541632652283
+    },
+    "ar_representation_oracle_order4_ridge0.0001": {
+      "complex_rel_l2_mean": 67.85669708251953,
+      "complex_rel_l2_std": 325.8634948730469,
+      "weighted_phase_mae_rad_mean": 0.6043163537979126,
+      "phase_coherence_mean": 0.7135668396949768
+    },
+    "ar_representation_oracle_order4_ridge0.001": {
+      "complex_rel_l2_mean": 1.2378027439117432,
+      "complex_rel_l2_std": 2.9261364936828613,
+      "weighted_phase_mae_rad_mean": 0.5967995524406433,
+      "phase_coherence_mean": 0.7195606827735901
+    },
+    "ar_representation_oracle_order4_ridge0.01": {
+      "complex_rel_l2_mean": 0.694692075252533,
+      "complex_rel_l2_std": 0.20805612206459045,
+      "weighted_phase_mae_rad_mean": 0.6092239618301392,
+      "phase_coherence_mean": 0.7119700312614441
+    },
+    "ar_representation_oracle_order6_ridge0.0001": {
+      "complex_rel_l2_mean": 463.5773620605469,
+      "complex_rel_l2_std": 2256.418701171875,
+      "weighted_phase_mae_rad_mean": 0.6297414898872375,
+      "phase_coherence_mean": 0.6960387229919434
+    },
+    "ar_representation_oracle_order6_ridge0.001": {
+      "complex_rel_l2_mean": 5.378145694732666,
+      "complex_rel_l2_std": 25.775911331176758,
+      "weighted_phase_mae_rad_mean": 0.6184791922569275,
+      "phase_coherence_mean": 0.7044236660003662
+    },
+    "ar_representation_oracle_order6_ridge0.01": {
+      "complex_rel_l2_mean": 0.7228336334228516,
+      "complex_rel_l2_std": 0.24028369784355164,
+      "weighted_phase_mae_rad_mean": 0.6191118359565735,
+      "phase_coherence_mean": 0.7055359482765198
+    },
+    "ar_representation_oracle_order8_ridge0.0001": {
+      "complex_rel_l2_mean": 784.260009765625,
+      "complex_rel_l2_std": 4207.0263671875,
+      "weighted_phase_mae_rad_mean": 0.6748007535934448,
+      "phase_coherence_mean": 0.6640728712081909
+    },
+    "ar_representation_oracle_order8_ridge0.001": {
+      "complex_rel_l2_mean": 13.223901748657227,
+      "complex_rel_l2_std": 67.84098815917969,
+      "weighted_phase_mae_rad_mean": 0.6530352830886841,
+      "phase_coherence_mean": 0.6805320978164673
+    },
+    "ar_representation_oracle_order8_ridge0.01": {
+      "complex_rel_l2_mean": 0.7937687039375305,
+      "complex_rel_l2_std": 0.35834959149360657,
+      "weighted_phase_mae_rad_mean": 0.6425039768218994,
+      "phase_coherence_mean": 0.6890531778335571
+    },
+    "polynomial_carrier_representation_oracle_degree1": {
+      "complex_rel_l2_mean": 1.1948171854019165,
+      "complex_rel_l2_std": 0.19816854596138,
+      "weighted_phase_mae_rad_mean": 0.888765811920166,
+      "phase_coherence_mean": 0.5094784498214722
+    },
+    "polynomial_carrier_representation_oracle_degree2": {
+      "complex_rel_l2_mean": 15.504201889038086,
+      "complex_rel_l2_std": 8.88469123840332,
+      "weighted_phase_mae_rad_mean": 1.0658718347549438,
+      "phase_coherence_mean": 0.38012170791625977
+    },
+    "polynomial_carrier_representation_oracle_degree3": {
+      "complex_rel_l2_mean": 1859235.75,
+      "complex_rel_l2_std": 6564359.5,
+      "weighted_phase_mae_rad_mean": 1.277557134628296,
+      "phase_coherence_mean": 0.22622546553611755
+    },
+    "endpoint_carrier_kernel1": {
+      "complex_rel_l2_mean": 1.0854929685592651,
+      "complex_rel_l2_std": 0.13925732672214508,
+      "weighted_phase_mae_rad_mean": 1.187692642211914,
+      "phase_coherence_mean": 0.2896765470504761
+    },
+    "endpoint_carrier_kernel3": {
+      "complex_rel_l2_mean": 1.0828394889831543,
+      "complex_rel_l2_std": 0.1391468346118927,
+      "weighted_phase_mae_rad_mean": 1.1812231540679932,
+      "phase_coherence_mean": 0.294437050819397
+    },
+    "endpoint_carrier_kernel5": {
+      "complex_rel_l2_mean": 1.0811313390731812,
+      "complex_rel_l2_std": 0.13994072377681732,
+      "weighted_phase_mae_rad_mean": 1.1766996383666992,
+      "phase_coherence_mean": 0.297775536775589
+    },
+    "endpoint_carrier_kernel9": {
+      "complex_rel_l2_mean": 1.0846624374389648,
+      "complex_rel_l2_std": 0.1391182392835617,
+      "weighted_phase_mae_rad_mean": 1.1811223030090332,
+      "phase_coherence_mean": 0.29369449615478516
+    },
+    "endpoint_carrier_kernel15": {
+      "complex_rel_l2_mean": 1.0906734466552734,
+      "complex_rel_l2_std": 0.13758701086044312,
+      "weighted_phase_mae_rad_mean": 1.1884995698928833,
+      "phase_coherence_mean": 0.28679943084716797
+    }
+  }
+}

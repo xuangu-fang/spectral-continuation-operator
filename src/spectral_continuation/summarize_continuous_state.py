@@ -59,7 +59,11 @@ def run(args) -> None:
                 frequency_key = (
                     "selection_query_frequencies_hz"
                     if split_name == "selection"
-                    else "test_query_frequencies_hz"
+                    else (
+                        "test_query_frequencies_hz"
+                        if "test_query_frequencies_hz" in summary
+                        else "extrapolation_query_frequencies_hz"
+                    )
                 )
                 for frequency in summary[frequency_key]:
                     values = summary[split_name][f"{frequency:g}"]

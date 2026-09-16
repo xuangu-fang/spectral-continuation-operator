@@ -1,0 +1,116 @@
+{
+  "candidate": "Hyper-conditioned continuous pole",
+  "baseline": "Stable recurrence",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "independent_unit": "physical validation environment after averaging seeds",
+  "selection": {
+    "macro": {
+      "mean_absolute_improvement": 0.04303264245390892,
+      "relative_improvement_percent": 24.20416259765625,
+      "fraction_candidate_better": 0.90625,
+      "ci95_low": 0.027833346277475357,
+      "ci95_high": 0.055968351662158966
+    },
+    "per_frequency": {
+      "101": {
+        "mean_absolute_improvement": 0.007238508202135563,
+        "relative_improvement_percent": 11.563434600830078,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": -0.005775314290076494,
+        "ci95_high": 0.017107859253883362
+      },
+      "102": {
+        "mean_absolute_improvement": 0.022827839478850365,
+        "relative_improvement_percent": 17.688016891479492,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.007806500419974327,
+        "ci95_high": 0.034689489752054214
+      },
+      "103": {
+        "mean_absolute_improvement": 0.04330696910619736,
+        "relative_improvement_percent": 27.960474014282227,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.02966167964041233,
+        "ci95_high": 0.05523063242435455
+      },
+      "104": {
+        "mean_absolute_improvement": 0.0586671382188797,
+        "relative_improvement_percent": 29.809404373168945,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.0449955053627491,
+        "ci95_high": 0.07158173620700836
+      },
+      "105": {
+        "mean_absolute_improvement": 0.06635057926177979,
+        "relative_improvement_percent": 28.29261016845703,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.049276016652584076,
+        "ci95_high": 0.08205721527338028
+      },
+      "106": {
+        "mean_absolute_improvement": 0.05980480834841728,
+        "relative_improvement_percent": 20.702613830566406,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.03688047453761101,
+        "ci95_high": 0.07935508340597153
+      }
+    }
+  },
+  "extrapolation": {
+    "macro": {
+      "mean_absolute_improvement": 0.030909119173884392,
+      "relative_improvement_percent": 7.001260280609131,
+      "fraction_candidate_better": 0.875,
+      "ci95_low": -0.011584818363189697,
+      "ci95_high": 0.0637638121843338
+    },
+    "per_frequency": {
+      "107": {
+        "mean_absolute_improvement": 0.055900730192661285,
+        "relative_improvement_percent": 17.373411178588867,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.026088660582900047,
+        "ci95_high": 0.08004991710186005
+      },
+      "108": {
+        "mean_absolute_improvement": 0.04403560236096382,
+        "relative_improvement_percent": 11.523876190185547,
+        "fraction_candidate_better": 0.84375,
+        "ci95_low": 0.0074314214289188385,
+        "ci95_high": 0.07310328632593155
+      },
+      "109": {
+        "mean_absolute_improvement": 0.034751322120428085,
+        "relative_improvement_percent": 8.171049118041992,
+        "fraction_candidate_better": 0.84375,
+        "ci95_low": -0.007394169457256794,
+        "ci95_high": 0.06748256087303162
+      },
+      "110": {
+        "mean_absolute_improvement": 0.026798190549016,
+        "relative_improvement_percent": 5.652450084686279,
+        "fraction_candidate_better": 0.875,
+        "ci95_low": -0.019924553111195564,
+        "ci95_high": 0.06283346563577652
+      },
+      "111": {
+        "mean_absolute_improvement": 0.01693229004740715,
+        "relative_improvement_percent": 3.335678815841675,
+        "fraction_candidate_better": 0.875,
+        "ci95_low": -0.033867333084344864,
+        "ci95_high": 0.05584289878606796
+      },
+      "112": {
+        "mean_absolute_improvement": 0.007036574184894562,
+        "relative_improvement_percent": 1.3079558610916138,
+        "fraction_candidate_better": 0.84375,
+        "ci95_low": -0.04647649824619293,
+        "ci95_high": 0.048741284757852554
+      }
+    }
+  }
+}

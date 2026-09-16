@@ -1,0 +1,116 @@
+{
+  "candidate": "Hyper-conditioned continuous pole",
+  "baseline": "Carrier-relative query U-Net",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "independent_unit": "physical validation environment after averaging seeds",
+  "selection": {
+    "macro": {
+      "mean_absolute_improvement": 0.18299178779125214,
+      "relative_improvement_percent": 57.5899772644043,
+      "fraction_candidate_better": 0.96875,
+      "ci95_low": 0.15449628233909607,
+      "ci95_high": 0.209599107503891
+    },
+    "per_frequency": {
+      "101": {
+        "mean_absolute_improvement": 0.2536369860172272,
+        "relative_improvement_percent": 82.08403778076172,
+        "fraction_candidate_better": 0.96875,
+        "ci95_low": 0.22182247042655945,
+        "ci95_high": 0.28056541085243225
+      },
+      "102": {
+        "mean_absolute_improvement": 0.1878475546836853,
+        "relative_improvement_percent": 63.876792907714844,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.15145806968212128,
+        "ci95_high": 0.220865398645401
+      },
+      "103": {
+        "mean_absolute_improvement": 0.17447924613952637,
+        "relative_improvement_percent": 60.99422073364258,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.13989438116550446,
+        "ci95_high": 0.20585457980632782
+      },
+      "104": {
+        "mean_absolute_improvement": 0.16359347105026245,
+        "relative_improvement_percent": 54.217811584472656,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.13125832378864288,
+        "ci95_high": 0.19348616898059845
+      },
+      "105": {
+        "mean_absolute_improvement": 0.16252288222312927,
+        "relative_improvement_percent": 49.146915435791016,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.13004231452941895,
+        "ci95_high": 0.1933976411819458
+      },
+      "106": {
+        "mean_absolute_improvement": 0.1558704972267151,
+        "relative_improvement_percent": 40.49201202392578,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.12119293212890625,
+        "ci95_high": 0.1886502355337143
+      }
+    }
+  },
+  "extrapolation": {
+    "macro": {
+      "mean_absolute_improvement": 0.16690196096897125,
+      "relative_improvement_percent": 28.902164459228516,
+      "fraction_candidate_better": 0.9375,
+      "ci95_low": 0.11809195578098297,
+      "ci95_high": 0.20754295587539673
+    },
+    "per_frequency": {
+      "107": {
+        "mean_absolute_improvement": 0.17164713144302368,
+        "relative_improvement_percent": 39.2330322265625,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.1324118822813034,
+        "ci95_high": 0.20696990191936493
+      },
+      "108": {
+        "mean_absolute_improvement": 0.1666947603225708,
+        "relative_improvement_percent": 33.02298355102539,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.12204878777265549,
+        "ci95_high": 0.20636802911758423
+      },
+      "109": {
+        "mean_absolute_improvement": 0.16675984859466553,
+        "relative_improvement_percent": 29.922456741333008,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.11778008192777634,
+        "ci95_high": 0.20801907777786255
+      },
+      "110": {
+        "mean_absolute_improvement": 0.16524474322795868,
+        "relative_improvement_percent": 26.976741790771484,
+        "fraction_candidate_better": 0.9375,
+        "ci95_low": 0.1120593473315239,
+        "ci95_high": 0.20900185406208038
+      },
+      "111": {
+        "mean_absolute_improvement": 0.16582641005516052,
+        "relative_improvement_percent": 25.25894546508789,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.10881438106298447,
+        "ci95_high": 0.21249982714653015
+      },
+      "112": {
+        "mean_absolute_improvement": 0.16523881256580353,
+        "relative_improvement_percent": 23.734909057617188,
+        "fraction_candidate_better": 0.90625,
+        "ci95_low": 0.10518014430999756,
+        "ci95_high": 0.2140761911869049
+      }
+    }
+  }
+}

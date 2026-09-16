@@ -488,6 +488,11 @@ class CarrierGaugedPoleOperator(nn.Module):
         state_normalization: bool = False,
         pole_anchor: str = "reference_residual",
         carrier_estimator: str = "band_ols",
+        max_curvature_per_hz2: float = 0.0,
+        global_latent_channels: int = 0,
+        hyper_carrier_correction: bool = False,
+        max_hyper_slope_per_hz: float = 0.08,
+        max_hyper_curvature_per_hz2: float = 0.005,
     ):
         super().__init__()
         if len(visible_frequencies) < 3:
@@ -515,6 +520,15 @@ class CarrierGaugedPoleOperator(nn.Module):
         self.state_normalization = bool(state_normalization)
         self.pole_anchor = pole_anchor
         self.carrier_estimator = carrier_estimator
+        self.max_curvature_per_hz2 = float(max_curvature_per_hz2)
+        self.global_latent_channels = int(global_latent_channels)
+        self.hyper_carrier_correction = bool(hyper_carrier_correction)
+        self.max_hyper_slope_per_hz = float(max_hyper_slope_per_hz)
+        self.max_hyper_curvature_per_hz2 = float(max_hyper_curvature_per_hz2)
+        if self.hyper_carrier_correction and self.global_latent_channels <= 0:
+            raise ValueError("hyper carrier correction requires a positive global latent")
+        if self.global_latent_channels > 0 and state_backbone != "dilated":
+            raise ValueError("global hyper conditioning currently requires the dilated backbone")
         if residue_mode not in {"predicted", "least_squares"}:
             raise ValueError(f"unknown residue mode: {residue_mode}")
         if pole_growth not in {"signed", "stable"}:
@@ -527,6 +541,30 @@ class CarrierGaugedPoleOperator(nn.Module):
         visible_count = len(visible_frequencies)
         invariant_channels = 3 * visible_count + 2 * (visible_count - 1)
         invariant_channels += environment_channels + 2
+        if self.global_latent_channels > 0:
+            latent = self.global_latent_channels
+            self.global_encoder = nn.Sequential(
+                nn.Conv2d(invariant_channels, 32, 5, stride=2, padding=2),
+                nn.SiLU(),
+                nn.Conv2d(32, 64, 5, stride=2, padding=2),
+                nn.SiLU(),
+                nn.Conv2d(64, latent, 3, stride=2, padding=1),
+                nn.SiLU(),
+                nn.AdaptiveAvgPool2d(1),
+            )
+            self.global_film = nn.Linear(latent, 2 * width * (blocks + 1))
+            nn.init.zeros_(self.global_film.weight)
+            nn.init.zeros_(self.global_film.bias)
+            self.hyper_carrier_head = (
+                nn.Linear(latent, 12) if self.hyper_carrier_correction else None
+            )
+            if self.hyper_carrier_head is not None:
+                nn.init.zeros_(self.hyper_carrier_head.weight)
+                nn.init.zeros_(self.hyper_carrier_head.bias)
+        else:
+            self.global_encoder = None
+            self.global_film = None
+            self.hyper_carrier_head = None
         if state_backbone == "dilated":
             groups = min(8, width)
             while width % groups:
@@ -549,6 +587,9 @@ class CarrierGaugedPoleOperator(nn.Module):
                 else None
             )
             self.pole_head = nn.Conv2d(width, 2 * poles, 1)
+            self.curvature_head = (
+                nn.Conv2d(width, poles, 1) if self.max_curvature_per_hz2 > 0 else None
+            )
             self.carrier_head = (
                 nn.Conv2d(width, 1, 1) if learn_carrier_correction else None
             )
@@ -557,12 +598,16 @@ class CarrierGaugedPoleOperator(nn.Module):
                 nn.init.zeros_(self.residue_head.bias)
             nn.init.zeros_(self.pole_head.weight)
             nn.init.zeros_(self.pole_head.bias)
+            if self.curvature_head is not None:
+                nn.init.zeros_(self.curvature_head.weight)
+                nn.init.zeros_(self.curvature_head.bias)
             if self.carrier_head is not None:
                 nn.init.zeros_(self.carrier_head.weight)
                 nn.init.zeros_(self.carrier_head.bias)
             angle_bias = self.pole_head.bias[poles:]
         elif state_backbone == "unet":
             state_channels = (4 if residue_mode == "predicted" else 2) * poles
+            state_channels += poles if self.max_curvature_per_hz2 > 0 else 0
             state_channels += int(learn_carrier_correction)
             self.backbone = QueryUNet(
                 invariant_channels, width=width, output_channels=state_channels
@@ -622,7 +667,7 @@ class CarrierGaugedPoleOperator(nn.Module):
         self,
         fields: torch.Tensor,
         environment_and_coordinates: torch.Tensor,
-    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
         if not torch.is_complex(fields):
             raise TypeError("fields must be a complex tensor")
         if fields.shape[1] != len(self.visible_frequencies):
@@ -650,10 +695,28 @@ class CarrierGaugedPoleOperator(nn.Module):
             ),
             dim=1,
         )
+        global_state = (
+            self.global_encoder(invariant).flatten(1)
+            if self.global_encoder is not None
+            else None
+        )
+        film = None
+        if global_state is not None and self.global_film is not None:
+            film = self.global_film(global_state).view(
+                fields.shape[0], 2, len(self.blocks) + 1, -1, 1, 1
+            )
+
+        def modulate(value: torch.Tensor, index: int) -> torch.Tensor:
+            if film is None:
+                return value
+            scale = 0.25 * torch.tanh(film[:, 0, index])
+            shift = 0.25 * film[:, 1, index]
+            return value * (1.0 + scale) + shift
+
         if self.state_backbone == "dilated":
-            hidden = self.stem(invariant)
-            for block in self.blocks:
-                hidden = block(hidden)
+            hidden = modulate(self.stem(invariant), 0)
+            for index, block in enumerate(self.blocks):
+                hidden = modulate(block(hidden), index + 1)
             pole_raw = self.pole_head(hidden)
             carrier_raw = (
                 self.carrier_head(hidden)[:, 0]
@@ -676,10 +739,20 @@ class CarrierGaugedPoleOperator(nn.Module):
             raw = raw[:, :state_channel_count]
             if self.residue_mode == "predicted":
                 residue_raw = raw[:, : 2 * self.poles]
-                pole_raw = raw[:, 2 * self.poles :]
+                pole_raw = raw[:, 2 * self.poles : 4 * self.poles]
+                curvature_raw = (
+                    raw[:, 4 * self.poles : 5 * self.poles]
+                    if self.max_curvature_per_hz2 > 0
+                    else None
+                )
             else:
                 residue_raw = None
-                pole_raw = raw
+                pole_raw = raw[:, : 2 * self.poles]
+                curvature_raw = (
+                    raw[:, 2 * self.poles : 3 * self.poles]
+                    if self.max_curvature_per_hz2 > 0
+                    else None
+                )
         if self.pole_growth == "stable":
             # Negative real parts make every learned mode non-growing toward
             # higher frequencies. The offset initializes close to the unit circle.
@@ -692,9 +765,41 @@ class CarrierGaugedPoleOperator(nn.Module):
             )
         angle = self.max_residual_angle_per_hz * torch.tanh(pole_raw[:, self.poles :])
         pole = torch.complex(growth, angle)
+        if self.state_backbone == "dilated":
+            curvature_raw = (
+                self.curvature_head(hidden) if self.curvature_head is not None else None
+            )
+        curvature = (
+            self.max_curvature_per_hz2 * torch.tanh(curvature_raw)
+            if curvature_raw is not None
+            else torch.zeros_like(growth)
+        )
         if carrier_raw is not None:
             slope = slope + self.max_carrier_correction_per_hz * torch.tanh(
                 carrier_raw
+            )
+        if self.hyper_carrier_head is not None and global_state is not None:
+            coefficients = self.hyper_carrier_head(global_state).view(
+                fields.shape[0], 2, 6, 1, 1
+            )
+            yy = environment_and_coordinates[:, -3]
+            xx = environment_and_coordinates[:, -2]
+            basis = torch.stack(
+                (
+                    torch.ones_like(xx),
+                    xx,
+                    yy,
+                    xx.square(),
+                    xx * yy,
+                    yy.square(),
+                ),
+                dim=1,
+            )
+            hyper_slope = torch.sum(coefficients[:, 0] * basis, dim=1)
+            slope = slope + self.max_hyper_slope_per_hz * torch.tanh(hyper_slope)
+            hyper_curvature = torch.sum(coefficients[:, 1] * basis, dim=1)
+            curvature = curvature + self.max_hyper_curvature_per_hz2 * torch.tanh(
+                hyper_curvature[:, None]
             )
         if residue_raw is not None:
             residue = torch.complex(
@@ -708,7 +813,7 @@ class CarrierGaugedPoleOperator(nn.Module):
                 residue = residue + (anchor - residue.sum(dim=1, keepdim=True)) / self.poles
         else:
             residue = self.solve_residues(gauged, pole)
-        return fields[:, -1].abs(), residue, pole, slope
+        return fields[:, -1].abs(), residue, pole, slope, curvature
 
     def solve_residues(
         self, gauged_fields: torch.Tensor, pole: torch.Tensor
@@ -744,11 +849,16 @@ class CarrierGaugedPoleOperator(nn.Module):
         fields: torch.Tensor,
         query_frequency: torch.Tensor,
         slope: torch.Tensor,
+        curvature: torch.Tensor | None = None,
     ) -> torch.Tensor:
         delta = (
             query_frequency.to(fields.real.dtype) - self.reference_frequency
         ).view(-1, 1, 1, 1)
         exponent = pole * delta
+        if curvature is not None:
+            exponent = exponent + torch.complex(
+                torch.zeros_like(exponent.real), 0.5 * curvature * delta.square()
+            )
         exponent = torch.complex(exponent.real.clamp(-6.0, 6.0), exponent.imag)
         if self.residue_mode == "predicted" and self.pole_anchor == "reference_residual":
             basis = torch.exp(exponent) - 1.0
@@ -764,11 +874,17 @@ class CarrierGaugedPoleOperator(nn.Module):
         environment_and_coordinates: torch.Tensor,
         query_frequency: torch.Tensor,
     ) -> torch.Tensor:
-        reference_amplitude, residue, pole, slope = self.spectral_state(
+        reference_amplitude, residue, pole, slope, curvature = self.spectral_state(
             fields, environment_and_coordinates
         )
         return self.decode(
-            reference_amplitude, residue, pole, fields, query_frequency, slope
+            reference_amplitude,
+            residue,
+            pole,
+            fields,
+            query_frequency,
+            slope,
+            curvature,
         )
 
     def forward_queries(
@@ -788,7 +904,7 @@ class CarrierGaugedPoleOperator(nn.Module):
                 device=fields.device,
                 dtype=fields.real.dtype,
             )
-            outputs.append(self.decode(*state[:3], fields, query, state[3]))
+            outputs.append(self.decode(*state[:3], fields, query, state[3], state[4]))
         return torch.stack(outputs, dim=1)
 
     def visible_reconstruction_loss(
@@ -798,7 +914,7 @@ class CarrierGaugedPoleOperator(nn.Module):
     ) -> torch.Tensor:
         """Fit one query-independent state to every non-anchor visible field."""
 
-        reference_amplitude, residue, pole, slope = self.spectral_state(
+        reference_amplitude, residue, pole, slope, curvature = self.spectral_state(
             fields, environment_and_coordinates
         )
         losses = []
@@ -807,13 +923,443 @@ class CarrierGaugedPoleOperator(nn.Module):
                 (fields.shape[0],), frequency, device=fields.device, dtype=fields.real.dtype
             )
             prediction = self.decode(
-                reference_amplitude, residue, pole, fields, query, slope
+                reference_amplitude, residue, pole, fields, query, slope, curvature
             )
             numerator = (prediction - fields[:, index]).abs().square().flatten(1).sum(1)
             denominator = fields[:, index].abs().square().flatten(1).sum(1).clamp_min(1e-8)
             losses.append(numerator / denominator)
         return torch.stack(losses, dim=1).mean()
 
+
+class EquivariantSpectralGenerator(nn.Module):
+    """Phase-equivariant multi-component affine frequency generator.
+
+    A complex encoder decomposes the visible band into coherent endpoint
+    components.  A separate invariant encoder predicts a stable affine generator
+    for each component.  The exact endpoint projection makes the components sum
+    to the last visible field, while the affine imaginary generator captures
+    first-order dispersion curvature without a rollout or auxiliary loss.
+    """
+
+    def __init__(
+        self,
+        visible_frequencies: tuple[float, ...],
+        environment_channels: int,
+        *,
+        components: int = 8,
+        complex_width: int = 24,
+        state_width: int = 64,
+        blocks: int = 4,
+        max_growth_per_hz: float = 0.025,
+        max_angle_per_hz: float = math.pi,
+        max_curvature_per_hz2: float = 0.01,
+        carrier_mode: str = "endpoint",
+        carrier_kernel: int = 5,
+        parameter_smoothing: int = 1,
+        stable_growth: bool = True,
+    ):
+        super().__init__()
+        if len(visible_frequencies) < 3:
+            raise ValueError("the component generator requires at least three fields")
+        frequencies = torch.tensor(visible_frequencies, dtype=torch.float32)
+        gaps = torch.diff(frequencies)
+        if not torch.allclose(gaps, gaps[0]):
+            raise ValueError("the component generator currently requires a uniform lattice")
+        if components < 1:
+            raise ValueError("components must be positive")
+        if carrier_mode not in {"none", "endpoint", "coherent_endpoint"}:
+            raise ValueError(f"unknown carrier mode: {carrier_mode}")
+        if carrier_kernel % 2 != 1 or carrier_kernel < 1:
+            raise ValueError("carrier kernel must be a positive odd integer")
+        if parameter_smoothing % 2 != 1 or parameter_smoothing < 1:
+            raise ValueError("parameter smoothing must be a positive odd integer")
+        self.register_buffer("visible_frequency_tensor", frequencies)
+        self.visible_frequencies = tuple(map(float, visible_frequencies))
+        self.reference_frequency = float(visible_frequencies[-1])
+        self.frequency_step = float(gaps[0])
+        self.components = int(components)
+        self.max_growth_per_hz = float(max_growth_per_hz)
+        self.max_angle_per_hz = float(max_angle_per_hz)
+        self.max_curvature_per_hz2 = float(max_curvature_per_hz2)
+        self.carrier_mode = carrier_mode
+        self.carrier_kernel = int(carrier_kernel)
+        self.parameter_smoothing = int(parameter_smoothing)
+        self.stable_growth = bool(stable_growth)
+
+        visible_count = len(visible_frequencies)
+        self.complex_stem = ComplexConv2d(visible_count, complex_width, 3)
+        self.complex_activation = ComplexModReLU(complex_width)
+        self.complex_blocks = nn.ModuleList(
+            ComplexResidualBlock(complex_width, dilation=(1, 2, 4, 1)[index % 4])
+            for index in range(blocks)
+        )
+        self.context_gate = nn.Sequential(
+            nn.Conv2d(environment_channels + 2, complex_width, 3, padding=1),
+            nn.SiLU(),
+            nn.Conv2d(complex_width, complex_width, 1),
+        )
+        self.component_head = ComplexConv2d(complex_width, components, 1)
+        nn.init.zeros_(self.component_head.weight_real)
+        nn.init.zeros_(self.component_head.weight_imag)
+
+        # |u|, confidence-weighted adjacent correlations, correlations with the
+        # endpoint, and phase-invariant environment/coordinate channels.
+        invariant_channels = visible_count + 2 * (visible_count - 1) + 2 * visible_count
+        invariant_channels += environment_channels + 2
+        groups = min(8, state_width)
+        while state_width % groups:
+            groups -= 1
+        self.generator_stem = nn.Sequential(
+            nn.Conv2d(invariant_channels, state_width, 3, padding=1),
+            nn.GroupNorm(groups, state_width),
+            nn.SiLU(),
+        )
+        self.generator_blocks = nn.ModuleList(
+            NormalizedRealResidualBlock(
+                state_width, dilation=(1, 2, 4, 1)[index % 4]
+            )
+            for index in range(blocks)
+        )
+        self.generator_head = nn.Conv2d(state_width, 3 * components, 1)
+        nn.init.zeros_(self.generator_head.weight)
+        nn.init.zeros_(self.generator_head.bias)
+        # Break component permutation symmetry while starting around the
+        # analytic carrier.  Residual phase rates remain well inside the bound.
+        initial = torch.linspace(-0.30, 0.30, components).clamp(-0.95, 0.95)
+        with torch.no_grad():
+            self.generator_head.bias[components : 2 * components].copy_(
+                torch.atanh(initial)
+            )
+
+    @staticmethod
+    def _confidence_correlation(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
+        cross = left * right.conj()
+        denominator = left.abs().square() + right.abs().square() + 1e-8
+        return 2.0 * cross / denominator
+
+    def carrier_slope(self, fields: torch.Tensor) -> torch.Tensor:
+        if self.carrier_mode == "none":
+            return torch.zeros_like(fields[:, 0].real)
+        cross = fields[:, -1] * fields[:, -2].conj()
+        if self.carrier_mode == "coherent_endpoint" and self.carrier_kernel > 1:
+            padding = self.carrier_kernel // 2
+            real = F.avg_pool2d(
+                F.pad(cross.real[:, None], (padding,) * 4, mode="replicate"),
+                self.carrier_kernel,
+                stride=1,
+            )[:, 0]
+            imag = F.avg_pool2d(
+                F.pad(cross.imag[:, None], (padding,) * 4, mode="replicate"),
+                self.carrier_kernel,
+                stride=1,
+            )[:, 0]
+            cross = torch.complex(real, imag)
+        return torch.angle(cross) / self.frequency_step
+
+    def invariant_features(
+        self, fields: torch.Tensor, environment_and_coordinates: torch.Tensor
+    ) -> torch.Tensor:
+        adjacent = self._confidence_correlation(fields[:, 1:], fields[:, :-1])
+        endpoint = fields[:, -1:]
+        relative = self._confidence_correlation(fields, endpoint)
+        return torch.cat(
+            (
+                fields.abs(),
+                adjacent.real,
+                adjacent.imag,
+                relative.real,
+                relative.imag,
+                environment_and_coordinates[:, :-1],
+            ),
+            dim=1,
+        )
+
+    def spectral_state(
+        self, fields: torch.Tensor, environment_and_coordinates: torch.Tensor
+    ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+        if not torch.is_complex(fields):
+            raise TypeError("fields must be a complex tensor")
+        hidden = self.complex_activation(self.complex_stem(fields))
+        gate = 2.0 * torch.sigmoid(self.context_gate(environment_and_coordinates[:, :-1]))
+        hidden = hidden * gate
+        for block in self.complex_blocks:
+            hidden = block(hidden)
+        component = self.component_head(hidden)
+        # Exact endpoint anchor without selecting a potentially singular local
+        # phase gauge.  The correction is itself complex phase equivariant.
+        component = component + (
+            fields[:, -1:] - component.sum(dim=1, keepdim=True)
+        ) / self.components
+
+        invariant = self.invariant_features(fields, environment_and_coordinates)
+        generator_hidden = self.generator_stem(invariant)
+        for block in self.generator_blocks:
+            generator_hidden = block(generator_hidden)
+        raw = self.generator_head(generator_hidden)
+        if self.parameter_smoothing > 1:
+            padding = self.parameter_smoothing // 2
+            raw = F.avg_pool2d(
+                F.pad(raw, (padding,) * 4, mode="replicate"),
+                self.parameter_smoothing,
+                stride=1,
+            )
+        if self.stable_growth:
+            growth = -self.max_growth_per_hz * torch.sigmoid(
+                raw[:, : self.components] - 3.0
+            )
+        else:
+            growth = self.max_growth_per_hz * torch.tanh(raw[:, : self.components])
+        residual_angle = self.max_angle_per_hz * torch.tanh(
+            raw[:, self.components : 2 * self.components]
+        )
+        curvature = self.max_curvature_per_hz2 * torch.tanh(
+            raw[:, 2 * self.components :]
+        )
+        return component, growth, residual_angle, curvature
+
+    def decode(
+        self,
+        fields: torch.Tensor,
+        query_frequency: torch.Tensor,
+        component: torch.Tensor,
+        growth: torch.Tensor,
+        residual_angle: torch.Tensor,
+        curvature: torch.Tensor,
+    ) -> torch.Tensor:
+        delta = (
+            query_frequency.to(fields.real.dtype) - self.reference_frequency
+        ).view(-1, 1, 1, 1)
+        slope = self.carrier_slope(fields)[:, None]
+        angle = slope + residual_angle
+        exponent = torch.complex(
+            (growth * delta).clamp(-6.0, 6.0),
+            angle * delta + 0.5 * curvature * delta.square(),
+        )
+        return torch.sum(component * torch.exp(exponent), dim=1)
+
+    def forward(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequency: torch.Tensor,
+    ) -> torch.Tensor:
+        state = self.spectral_state(fields, environment_and_coordinates)
+        return self.decode(fields, query_frequency, *state)
+
+    def forward_queries(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequencies: tuple[float, ...],
+    ) -> torch.Tensor:
+        state = self.spectral_state(fields, environment_and_coordinates)
+        outputs = []
+        for frequency in query_frequencies:
+            query = torch.full(
+                (fields.shape[0],),
+                frequency,
+                device=fields.device,
+                dtype=fields.real.dtype,
+            )
+            outputs.append(self.decode(fields, query, *state))
+        return torch.stack(outputs, dim=1)
+
+
+class PhaseEquivariantNeuralODE(nn.Module):
+    """State-dependent carrier integrator along the frequency axis.
+
+    The vector field is represented in the instantaneous carrier gauge, so the
+    real U-Net only sees phase-invariant quantities.  A one-Hz update is reused
+    recurrently, while fractional queries use the same vector field with a
+    shorter integration step.  Unlike the fixed spectral recurrence, the update
+    depends on the evolving complex field, environment, coordinates, and current
+    frequency.
+    """
+
+    def __init__(
+        self,
+        visible_frequencies: tuple[float, ...],
+        environment_channels: int,
+        *,
+        width: int = 8,
+        frequency_scale: float = 200.0,
+        max_update_rate: float = 1.0,
+        carrier_mode: str = "endpoint",
+        carrier_kernel: int = 5,
+    ):
+        super().__init__()
+        if len(visible_frequencies) < 2:
+            raise ValueError("the neural ODE requires at least two visible fields")
+        frequencies = torch.tensor(visible_frequencies, dtype=torch.float32)
+        gaps = torch.diff(frequencies)
+        if not torch.allclose(gaps, gaps[0]):
+            raise ValueError("the neural ODE currently requires a uniform visible lattice")
+        if carrier_mode not in {"endpoint", "coherent_endpoint"}:
+            raise ValueError(f"unknown carrier mode: {carrier_mode}")
+        if carrier_kernel % 2 != 1 or carrier_kernel < 1:
+            raise ValueError("carrier kernel must be a positive odd integer")
+        self.register_buffer("visible_frequency_tensor", frequencies)
+        self.visible_frequencies = tuple(map(float, visible_frequencies))
+        self.reference_frequency = float(visible_frequencies[-1])
+        self.frequency_step = float(gaps[-1])
+        self.frequency_scale = float(frequency_scale)
+        self.max_update_rate = float(max_update_rate)
+        self.carrier_mode = carrier_mode
+        self.carrier_kernel = int(carrier_kernel)
+        visible_count = len(visible_frequencies)
+        # Static band: magnitudes and confidence-weighted phase increments.
+        static_channels = visible_count + 2 * (visible_count - 1)
+        # Dynamic state: previous/current magnitudes, their correlation, and
+        # correlation to the original endpoint, plus current f and step size.
+        dynamic_channels = 2 + 2 + 2 + 2
+        input_channels = static_channels + dynamic_channels + environment_channels + 2
+        self.vector_field = QueryUNet(input_channels, width=width, output_channels=2)
+        nn.init.zeros_(self.vector_field.out.weight)
+        nn.init.zeros_(self.vector_field.out.bias)
+
+    @staticmethod
+    def _confidence_correlation(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
+        cross = left * right.conj()
+        return 2.0 * cross / (left.abs().square() + right.abs().square() + 1e-8)
+
+    def static_features(self, fields: torch.Tensor) -> torch.Tensor:
+        adjacent = self._confidence_correlation(fields[:, 1:], fields[:, :-1])
+        return torch.cat((fields.abs(), adjacent.real, adjacent.imag), dim=1)
+
+    def slope(self, current: torch.Tensor, previous: torch.Tensor) -> torch.Tensor:
+        cross = current * previous.conj()
+        if self.carrier_mode == "coherent_endpoint" and self.carrier_kernel > 1:
+            padding = self.carrier_kernel // 2
+            real = F.avg_pool2d(
+                F.pad(cross.real[:, None], (padding,) * 4, mode="replicate"),
+                self.carrier_kernel,
+                stride=1,
+            )[:, 0]
+            imag = F.avg_pool2d(
+                F.pad(cross.imag[:, None], (padding,) * 4, mode="replicate"),
+                self.carrier_kernel,
+                stride=1,
+            )[:, 0]
+            cross = torch.complex(real, imag)
+        return torch.angle(cross) / self.frequency_step
+
+    def step(
+        self,
+        fields: torch.Tensor,
+        static: torch.Tensor,
+        previous: torch.Tensor,
+        current: torch.Tensor,
+        context: torch.Tensor,
+        current_frequency: float,
+        step_size: float,
+    ) -> torch.Tensor:
+        slope = self.slope(current, previous)
+        rotation = torch.polar(torch.ones_like(slope), slope * step_size)
+        carrier_unit = current / current.abs().clamp_min(1e-8) * rotation
+        dynamic_cross = self._confidence_correlation(current, previous)
+        endpoint_cross = self._confidence_correlation(current, fields[:, -1])
+        batch, _, height, width = fields.shape
+        frequency_map = torch.full(
+            (batch, 1, height, width),
+            current_frequency / self.frequency_scale,
+            device=fields.device,
+            dtype=fields.real.dtype,
+        )
+        step_map = torch.full_like(frequency_map, step_size / self.frequency_step)
+        invariant = torch.cat(
+            (
+                static,
+                previous.abs()[:, None],
+                current.abs()[:, None],
+                dynamic_cross.real[:, None],
+                dynamic_cross.imag[:, None],
+                endpoint_cross.real[:, None],
+                endpoint_cross.imag[:, None],
+                context[:, :-1],
+                frequency_map,
+                step_map,
+            ),
+            dim=1,
+        )
+        raw = torch.tanh(self.vector_field(invariant))
+        local_scale = fields.abs().mean(dim=1)
+        correction = torch.complex(raw[:, 0], raw[:, 1])
+        coefficient = current.abs() + (
+            step_size * self.max_update_rate * local_scale * correction
+        )
+        return carrier_unit * coefficient
+
+    def forward_queries(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequencies: tuple[float, ...],
+    ) -> torch.Tensor:
+        if min(query_frequencies) < self.reference_frequency:
+            raise ValueError("the neural ODE only continues toward higher frequencies")
+        static = self.static_features(fields)
+        previous = fields[:, -2]
+        current = fields[:, -1]
+        current_frequency = self.reference_frequency
+        integer_states: dict[int, tuple[torch.Tensor, torch.Tensor]] = {
+            round(current_frequency): (previous, current)
+        }
+        maximum_integer = math.floor(max(query_frequencies))
+        while current_frequency < maximum_integer:
+            next_field = self.step(
+                fields,
+                static,
+                previous,
+                current,
+                environment_and_coordinates,
+                current_frequency,
+                self.frequency_step,
+            )
+            previous, current = current, next_field
+            current_frequency += self.frequency_step
+            integer_states[round(current_frequency)] = (previous, current)
+        outputs = []
+        for query_frequency in query_frequencies:
+            lower = math.floor(query_frequency)
+            fractional = query_frequency - lower
+            state_previous, state_current = integer_states[lower]
+            if fractional < 1e-7:
+                outputs.append(state_current)
+            else:
+                outputs.append(
+                    self.step(
+                        fields,
+                        static,
+                        state_previous,
+                        state_current,
+                        environment_and_coordinates,
+                        float(lower),
+                        fractional,
+                    )
+                )
+        return torch.stack(outputs, dim=1)
+
+    def forward(
+        self,
+        fields: torch.Tensor,
+        environment_and_coordinates: torch.Tensor,
+        query_frequency: torch.Tensor,
+    ) -> torch.Tensor:
+        unique = torch.unique(query_frequency.detach().cpu())
+        if len(unique) == 1:
+            return self.forward_queries(
+                fields, environment_and_coordinates, (float(unique[0]),)
+            )[:, 0]
+        outputs = []
+        for index, frequency in enumerate(query_frequency):
+            outputs.append(
+                self.forward_queries(
+                    fields[index : index + 1],
+                    environment_and_coordinates[index : index + 1],
+                    (float(frequency),),
+                )[0, 0]
+            )
+        return torch.stack(outputs)
 
 def phase_equivariance_error(
     model: nn.Module,
