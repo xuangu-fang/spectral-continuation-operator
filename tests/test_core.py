@@ -61,6 +61,7 @@ from spectral_continuation.spectral_calibrator import (
     enforce_sensor_consistency,
     fit_stable_ar1,
 )
+from spectral_continuation.summarize_sequential_calibration import _first_trigger, _trajectory
 from spectral_continuation.train_representation_poc import complex_relative_loss
 
 
@@ -113,6 +114,20 @@ def test_metrics_and_bootstrap():
     assert np.allclose(exact["complex_rel_l2"], 0.0)
     stats = paired_bootstrap(np.ones(6), np.full(6, 0.8), replicates=100)
     np.testing.assert_allclose(stats["relative_improvement_percent"], 20.0)
+
+
+def test_sequential_policy_selects_first_risk_crossing_and_only_changes_future():
+    frequencies = np.asarray([107.0, 108.0, 109.0, 110.0])
+    endpoints = np.asarray([107.0, 108.0, 109.0])
+    probabilities = np.asarray([[0.05, 0.20, 0.30, 0.40], [0.01, 0.02, 0.03, 0.04]])
+    selected = _first_trigger(probabilities, frequencies, endpoints, threshold=0.1)
+    np.testing.assert_array_equal(selected, np.asarray([108.0, 109.0]))
+
+    base = np.ones((2, 4))
+    calibrated = np.zeros((2, 3, 4))
+    trajectory = _trajectory(base, calibrated, frequencies, endpoints, selected)
+    np.testing.assert_array_equal(trajectory[0], np.asarray([1.0, 0.0, 0.0, 0.0]))
+    np.testing.assert_array_equal(trajectory[1], np.asarray([1.0, 1.0, 0.0, 0.0]))
 
 
 def test_reliable_horizon_is_prefix_safe_and_marks_recovery():
