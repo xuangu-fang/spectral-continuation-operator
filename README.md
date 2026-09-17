@@ -10,6 +10,8 @@ latent state，连续 query operator 再回答 support 未覆盖的频率和空�
 当前统一任务定义、应用原型、声明边界和强制报告规则见
 [研究记忆](docs/RESEARCH_MEMORY_ZH.md)。频率外推是主要 benchmark；新实例上的 latent operator
 calibration 才是 AI 任务；system identification 只解释 calibration 所恢复的内部状态。
+关于“哪些结论来自经典理论、哪些是项目在 AI 表征学习交叉处获得的增量证据”，见
+[谱可预测性、可辨识性与校准科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)。
 
 最新阶段首先诊断了原始 `74–80 Hz → 110 Hz` 长程设置：误差随传播距离和真实谱相位曲率
 显著增加，增加 pole 数、仿射多分量、Neural ODE 和局部曲率都不能突破可辨识性边界。随后在
@@ -45,27 +47,29 @@ Transformer 或 mask 路线。
 ## 阅读顺序
 
 1. [当前研究记忆](docs/RESEARCH_MEMORY_ZH.md)：统一任务、AI 定位、应用原型和不可越过的声明边界；
-2. [Few-shot Spectral Calibration POC](docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)：独立 fidelity、
+2. [谱可预测性、可辨识性与校准科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)：
+   通俗理论基础、术语表、证据分层、实验可视化与长期 formulation；
+3. [Few-shot Spectral Calibration POC](docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)：独立 fidelity、
    最小方法阶梯、baseline、预算和 gate；
-3. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
+4. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
    复谱状态、三 seed 正式结果和 NO-GO 判定；
-4. [局部复谱 Token POC](reports/LOCAL_SPECTRAL_TOKEN_POC_ZH.md)：自由 local-span、masked
+5. [局部复谱 Token POC](reports/LOCAL_SPECTRAL_TOKEN_POC_ZH.md)：自由 local-span、masked
    reconstruction 和受限 carrier-token 的结果与停止判断；
-5. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
+6. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
    证据合并、子空间旋转、patch token oracle 以及 masked representation 下一步；
-6. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
+7. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
    最终协议、三 seed 结果和结论边界；
-7. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
-8. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
+8. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
+9. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
    文献定位和失败归因；
-9. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
-10. [Ocean 独立 solver 审计](reports/OCEAN_MULTIFIDELITY_SOLVER_AUDIT_ZH.md)：真实 low/high fidelity
+10. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
+11. [Ocean 独立 solver 审计](reports/OCEAN_MULTIFIDELITY_SOLVER_AUDIT_ZH.md)：真实 low/high fidelity
     的 lineage、成本与适用边界；
-11. [独立多保真 Calibration Gate](reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)：P0 oracle 结果、
+12. [独立多保真 Calibration Gate](reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)：P0 oracle 结果、
     NO-GO 归因与后续停止线。
-12. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
-13. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
-14. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
+13. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
+14. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
+15. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
 
 ## 代码入口
 
