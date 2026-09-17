@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "status": "environment-fold cross-validated post-reset target-free risk",
+  "source_sequential_errors": "artifacts/reliable_horizon_map/sequential_replay_ocean_m2b_20260917/sequential_errors.npz",
+  "environment_count": 32,
+  "valid_state_query_count": 6208,
+  "folds": 4,
+  "error_threshold": 0.5,
+  "safe_probability": 0.1,
+  "results": {
+    "distance_after_reset": {
+      "features": [
+        "offset_after_reset_hz"
+      ],
+      "failure_auroc": 0.7827272595396821,
+      "failure_auprc": 0.911589371185786,
+      "error_spearman": 0.44409784942233116,
+      "brier_score": 0.14236239665059203,
+      "expected_calibration_error": 0.025010570966244088,
+      "accepted_query_fraction_at_safe_probability": 0.0,
+      "empirical_safe_rate_at_safe_probability": NaN,
+      "within_query_frequency_auroc": 0.4812881657104174,
+      "within_query_frequency_error_spearman": 0.035812364957431495,
+      "within_query_frequency_count": 18,
+      "within_offset_auroc": 0.3412035541457833,
+      "within_offset_error_spearman": -0.12701896122798734,
+      "within_offset_count": 20,
+      "fold_coefficients": [
+        [
+          1.6386884448249586,
+          1.303057209226081
+        ],
+        [
+          1.7407717463490369,
+          1.305799928310979
+        ],
+        [
+          1.9512794074390638,
+          1.6371933786342563
+        ],
+        [
+          1.5206427387474362,
+          1.314020942026462
+        ]
+      ]
+    },
+    "disagreement_only": {
+      "features": [
+        "seed_complex_disagreement"
+      ],
+      "failure_auroc": 0.9009938644122902,
+      "failure_auprc": 0.9708951647634481,
+      "error_spearman": 0.7175340593337894,
+      "brier_score": 0.10565624645469442,
+      "expected_calibration_error": 0.02715256589743549,
+      "accepted_query_fraction_at_safe_probability": 0.014819587628865979,
+      "empirical_safe_rate_at_safe_probability": 0.8804347826086957,
+      "within_query_frequency_auroc": 0.7923051405128778,
+      "within_query_frequency_error_spearman": 0.4387337095460957,
+      "within_query_frequency_count": 18,
+      "within_offset_auroc": 0.9018389552255798,
+      "within_offset_error_spearman": 0.6805055235393066,
+      "within_offset_count": 20,
+      "fold_coefficients": [
+        [
+          2.5283724508231815,
+          2.6336893935435484
+        ],
+        [
+          2.637104487334944,
+          2.5881681248455917
+        ],
+        [
+          2.490697133038073,
+          2.394420439995505
+        ],
+        [
+          2.136200380248504,
+          2.340774619181984
+        ]
+      ]
+    },
+    "distance_disagreement": {
+      "features": [
+        "offset_after_reset_hz",
+        "seed_complex_disagreement"
+      ],
+      "failure_auroc": 0.9266367536763502,
+      "failure_auprc": 0.977131944031051,
+      "error_spearman": 0.7591810938850001,
+      "brier_score": 0.08583606226779161,
+      "expected_calibration_error": 0.013482459388883088,
+      "accepted_query_fraction_at_safe_probability": 0.04381443298969072,
+      "empirical_safe_rate_at_safe_probability": 0.9522058823529411,
+      "within_query_frequency_auroc": 0.8078397270508435,
+      "within_query_frequency_error_spearman": 0.4720706717294663,
+      "within_query_frequency_count": 18,
+      "within_offset_auroc": 0.8806593942086698,
+      "within_offset_error_spearman": 0.6767531518104635,
+      "within_offset_count": 20,
+      "fold_coefficients": [
+        [
+          3.01538115732544,
+          1.1331909189524476,
+          2.7843177551443907
+        ],
+        [
+          3.0892147063882778,
+          1.011436616305008,
+          2.6748599267834097
+        ],
+        [
+          3.276288731200254,
+          1.4029441147769541,
+          2.625296895798454
+        ],
+        [
+          2.6241594187689947,
+          1.1297186238116383,
+          2.5109485044979563
+        ]
+      ]
+    },
+    "disagreement_combo": {
+      "features": [
+        "offset_after_reset_hz",
+        "seed_complex_disagreement",
+        "seed_amplitude_disagreement",
+        "seed_phase_disagreement"
+      ],
+      "failure_auroc": 0.9419280912769431,
+      "failure_auprc": 0.9829242111096417,
+      "error_spearman": 0.8147381558517229,
+      "brier_score": 0.07955636613775034,
+      "expected_calibration_error": 0.011277352032877547,
+      "accepted_query_fraction_at_safe_probability": 0.05782860824742268,
+      "empirical_safe_rate_at_safe_probability": 0.9526462395543176,
+      "within_query_frequency_auroc": 0.8600833536772001,
+      "within_query_frequency_error_spearman": 0.5752193444198972,
+      "within_query_frequency_count": 18,
+      "within_offset_auroc": 0.9186558318750784,
+      "within_offset_error_spearman": 0.7843603417521436,
+      "within_offset_count": 20,
+      "fold_coefficients": [
+        [
+          3.274980400661607,
+          0.3173497553619212,
+          11.372860528353975,
+          -9.063163386966604,
+          0.7756425331541321
+        ],
+        [
+          3.2908385579183492,
+          0.2007181787223713,
+          12.325298212329404,
+          -9.652006758121695,
+          0.17397329485921006
+        ],
+        [
+          3.343476125479201,
+          0.7271774196582521,
+          10.454480282116391,
+          -7.8823542270153375,
+          0.11700026174123854
+        ],
+        [
+          3.0181004445930264,
+          0.25786345306982106,
+          10.332509189372177,
+          -9.146024875953994,
+          1.8548125764717256
+        ]
+      ]
+    }
+  }
+}

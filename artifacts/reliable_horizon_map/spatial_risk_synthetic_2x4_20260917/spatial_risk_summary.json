@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "environment-fold cross-validated target-free patch risk map",
+  "domain": "synthetic",
+  "model": "carrier_poles",
+  "run_summaries": [
+    "experiments/runs/m2_synthetic_endpoint_poles_seed42/summary.json",
+    "experiments/runs/m2_synthetic_endpoint_poles_seed43/summary.json",
+    "experiments/runs/m2_synthetic_endpoint_poles_seed44/summary.json"
+  ],
+  "checkpoint_sha256": [
+    "4b929d7b708b9fd0fd9a51fc63c6c23937d824f43388d604edf44da9814852d7",
+    "e90f09e17979418a5e6af6ae43dd470b7fa0aba765c6a716d339fcbe3946c2f7",
+    "597753c75fb2b514a3734fc902cfad390ccfe7091c99556c280b3ed03e16de95"
+  ],
+  "environment_count": 128,
+  "queries_hz": [
+    19.0,
+    19.5,
+    20.0,
+    21.0,
+    22.0,
+    23.0,
+    24.0
+  ],
+  "reference_frequency_hz": 18.0,
+  "patch_grid": [
+    2,
+    4
+  ],
+  "error_threshold": 0.5,
+  "energy_floor_fraction": 0.1,
+  "local_error_definition": "patch complex RelL2 with denominator floored by energy_floor_fraction times the uniform per-patch target energy",
+  "results": {
+    "distance_only": {
+      "features": [
+        "query_offset_hz"
+      ],
+      "failure_auroc": 0.7861342002479126,
+      "failure_auprc": 0.7921628147411354,
+      "error_spearman": 0.5701933641165452,
+      "brier_score": 0.18471516009141156,
+      "expected_calibration_error": 0.012930531702352198,
+      "within_frequency_auroc": 0.46526586523730773,
+      "within_environment_frequency_spatial_auroc": 0.5,
+      "accepted_patch_fraction_at_safe_probability": 0.0,
+      "empirical_safe_rate_at_safe_probability": NaN,
+      "top_risk_20_percent_failure_recall": 0.33512641204948895,
+      "patch_horizon_mae_hz": 2.64208984375,
+      "patch_unsafe_overreach_rate": 0.0
+    },
+    "global_disagreement": {
+      "features": [
+        "query_offset_hz",
+        "global_seed_disagreement"
+      ],
+      "failure_auroc": 0.853001379891012,
+      "failure_auprc": 0.868467014524474,
+      "error_spearman": 0.7025095874155555,
+      "brier_score": 0.15632714580193902,
+      "expected_calibration_error": 0.019034013920106962,
+      "within_frequency_auroc": 0.7546074276187275,
+      "within_environment_frequency_spatial_auroc": 0.5,
+      "accepted_patch_fraction_at_safe_probability": 0.03459821428571429,
+      "empirical_safe_rate_at_safe_probability": 0.9596774193548387,
+      "top_risk_20_percent_failure_recall": 0.3622915545992469,
+      "patch_horizon_mae_hz": 2.47314453125,
+      "patch_unsafe_overreach_rate": 0.0068359375
+    },
+    "local_disagreement": {
+      "features": [
+        "query_offset_hz",
+        "local_seed_disagreement"
+      ],
+      "failure_auroc": 0.9618602022280952,
+      "failure_auprc": 0.9667089206751805,
+      "error_spearman": 0.9130951444621264,
+      "brier_score": 0.0774862528593968,
+      "expected_calibration_error": 0.01493276286678178,
+      "within_frequency_auroc": 0.9476169146632999,
+      "within_environment_frequency_spatial_auroc": 0.9358512352309345,
+      "accepted_patch_fraction_at_safe_probability": 0.29854910714285715,
+      "empirical_safe_rate_at_safe_probability": 0.9742990654205608,
+      "top_risk_20_percent_failure_recall": 0.38488434642280794,
+      "patch_horizon_mae_hz": 1.12109375,
+      "patch_unsafe_overreach_rate": 0.044921875
+    },
+    "local_combo": {
+      "features": [
+        "query_offset_hz",
+        "global_seed_disagreement",
+        "local_seed_disagreement",
+        "local_amplitude_disagreement",
+        "local_phase_disagreement",
+        "predicted_patch_energy_ratio",
+        "patch_y",
+        "patch_x"
+      ],
+      "failure_auroc": 0.9644496417740565,
+      "failure_auprc": 0.9693200059644421,
+      "error_spearman": 0.915126519702278,
+      "brier_score": 0.07393383625128237,
+      "expected_calibration_error": 0.011129282903407058,
+      "within_frequency_auroc": 0.9521494942279125,
+      "within_environment_frequency_spatial_auroc": 0.94109291084855,
+      "accepted_patch_fraction_at_safe_probability": 0.3091517857142857,
+      "empirical_safe_rate_at_safe_probability": 0.9720216606498195,
+      "top_risk_20_percent_failure_recall": 0.38461538461538464,
+      "patch_horizon_mae_hz": 1.080078125,
+      "patch_unsafe_overreach_rate": 0.05078125
+    }
+  },
+  "leakage_note": "risk features use only frozen seed predictions, query offsets and patch coordinates; query targets only define evaluation labels"
+}

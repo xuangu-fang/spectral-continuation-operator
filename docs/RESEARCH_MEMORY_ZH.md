@@ -171,3 +171,27 @@ gate 未通过，当前不训练新的 calibrator，也不把单步 107 Hz 正�
 具体协议见 [Few-shot Spectral Calibration POC](FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)，实证结论见
 [独立多保真 P0 Gate 报告](../reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)。若以后重启，先改变
 fidelity 定义或校准的信息结构，并要求新的 dense oracle 在更大实例集通过，再进入表征学习。
+
+## 10. Reliable-horizon Map 阶段结论
+
+2026-09-17 完成了实例级、空间级和 post-reset reliability POC。需要长期保留的发现是：
+
+1. 三 seed disagreement 在 Ocean 与 localized-multipath synthetic 的 fixed-frequency failure AUROC
+   分别为 0.906 和 0.960，显著高于 distance-only 的 0.371 和 0.394；
+2. 在同一环境、同一频率内部，4×8 patch risk 的 spatial AUROC 为 0.945 和 0.921；2×4 到 8×16
+   三个尺度方向一致；
+3. Ocean 一次 risk-triggered calibration 把 macro raw complex RelL2 从 0.6314 降到 0.5720，优于
+   最佳固定触发的 0.5920，且 shuffled-instance calibration 退回 0.6312；
+4. reset 后 failure risk 仍可预测，但第二、三次重复 reset 不再降低 Ocean raw error；
+5. synthetic post-reset AUROC 约 0.982，但 sparse action 的 raw improvement 只有约 0.2%，dense action
+   ceiling 也很低。
+
+因此后续必须区分两个变量：
+
+- failure risk：当前 prediction 是否即将失效；
+- calibration value：候选观测和状态更新器能否真正修复该失效。
+
+当前 Reliable-horizon Map 判为 GO，完整 repeated sequential calibration 判为 NO-GO。若继续 active
+acquisition，应学习 value-of-calibration 或 actionable uncertainty，而不是继续扩大 failure-risk head
+或直接训练 RL。完整证据见
+[Reliable-horizon Map 最终报告](../reports/RELIABLE_HORIZON_MAP_FINAL_ZH.md)。

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "status": "sparse complex sum-to-one ensemble-mixture calibration replay",
+  "domain": "synthetic",
+  "model": "carrier_poles",
+  "environment_count": 128,
+  "query_hz": [
+    19.0,
+    19.5,
+    20.0,
+    21.0,
+    22.0,
+    23.0,
+    24.0
+  ],
+  "calibration_endpoints_hz": [
+    18.0,
+    19.0,
+    20.0,
+    21.0,
+    22.0,
+    23.0,
+    24.0
+  ],
+  "window": 4,
+  "sensor_budget_per_frequency": 10,
+  "spatial_observation_fraction": 0.0048828125,
+  "total_complex_observations_per_trigger": 40,
+  "ridge": 1.0,
+  "run_summaries": [
+    "experiments/runs/m2_synthetic_endpoint_poles_seed42/summary.json",
+    "experiments/runs/m2_synthetic_endpoint_poles_seed43/summary.json",
+    "experiments/runs/m2_synthetic_endpoint_poles_seed44/summary.json"
+  ],
+  "checkpoint_sha256": [
+    "4b929d7b708b9fd0fd9a51fc63c6c23937d824f43388d604edf44da9814852d7",
+    "e90f09e17979418a5e6af6ae43dd470b7fa0aba765c6a716d339fcbe3946c2f7",
+    "597753c75fb2b514a3734fc902cfad390ccfe7091c99556c280b3ed03e16de95"
+  ],
+  "base_macro_complex_rel_l2": 0.5283336639404297,
+  "endpoint_macro_complex_rel_l2": {
+    "18": {
+      "sparse_calibration": 0.5281729698181152,
+      "shuffled_instance": 0.5316874980926514,
+      "dense_calibration_ceiling": 0.5281445980072021
+    },
+    "19": {
+      "sparse_calibration": 0.5279460549354553,
+      "shuffled_instance": 0.5338543653488159,
+      "dense_calibration_ceiling": 0.5277275443077087
+    },
+    "20": {
+      "sparse_calibration": 0.5276727676391602,
+      "shuffled_instance": 0.5359607934951782,
+      "dense_calibration_ceiling": 0.5270037055015564
+    },
+    "21": {
+      "sparse_calibration": 0.5273739099502563,
+      "shuffled_instance": 0.5381509065628052,
+      "dense_calibration_ceiling": 0.5260744690895081
+    },
+    "22": {
+      "sparse_calibration": 0.5271819233894348,
+      "shuffled_instance": 0.5399234890937805,
+      "dense_calibration_ceiling": 0.5250985026359558
+    },
+    "23": {
+      "sparse_calibration": 0.5271522402763367,
+      "shuffled_instance": 0.5408798456192017,
+      "dense_calibration_ceiling": 0.5242639780044556
+    },
+    "24": {
+      "sparse_calibration": 0.5274029970169067,
+      "shuffled_instance": 0.5407266020774841,
+      "dense_calibration_ceiling": 0.5237177014350891
+    }
+  },
+  "best_endpoint_macro_complex_rel_l2": {
+    "sparse_calibration": 0.5271524786949158,
+    "dense_calibration_ceiling": 0.5237175822257996
+  },
+  "leakage_note": "mixture weights use only the rolling sparse calibration window; future query targets are used only for scoring"
+}

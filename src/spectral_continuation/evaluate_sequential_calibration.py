@@ -33,6 +33,48 @@ def _base_decode(model, state, visible, frequency: float) -> torch.Tensor:
     return model.decode(*state[:3], visible, query, state[3], state[4])
 
 
+def _ensemble_features(predictions: torch.Tensor) -> dict[str, np.ndarray]:
+    """Target-free summaries for one calibrated state.
+
+    ``predictions`` has shape ``[seed, environment, query, height, width]``.  The
+    summaries deliberately use only the frozen seed predictions; query targets
+    enter the replay only when errors are scored below.
+    """
+    ensemble = predictions.mean(dim=0)
+    ensemble_energy = ensemble.abs().square().flatten(2).sum(2).clamp_min(1e-8)
+    complex_disagreement = (
+        (predictions - ensemble.unsqueeze(0))
+        .abs()
+        .square()
+        .flatten(3)
+        .sum(3)
+        .mean(0)
+        .div(ensemble_energy)
+        .sqrt()
+    )
+    amplitude_disagreement = (
+        (predictions.abs() - ensemble.abs().unsqueeze(0))
+        .square()
+        .flatten(3)
+        .sum(3)
+        .mean(0)
+        .div(ensemble_energy)
+        .sqrt()
+    )
+    cross = predictions * ensemble.conj().unsqueeze(0)
+    phase_cosine = cross.real / cross.abs().clamp_min(1e-8)
+    weights = ensemble.abs()
+    phase_disagreement = (
+        (weights.unsqueeze(0) * (1.0 - phase_cosine)).flatten(3).sum(3)
+        / weights.flatten(2).sum(2).clamp_min(1e-8).unsqueeze(0)
+    ).mean(0)
+    return {
+        "complex": complex_disagreement.cpu().numpy(),
+        "amplitude": amplitude_disagreement.cpu().numpy(),
+        "phase": phase_disagreement.cpu().numpy(),
+    }
+
+
 @torch.no_grad()
 def run(args: argparse.Namespace) -> None:
     device = torch.device(args.device)
@@ -150,6 +192,9 @@ def run(args: argparse.Namespace) -> None:
     calibrated_error = np.empty((len(index), len(endpoints), len(queries)), dtype=np.float32)
     shuffled_error = np.empty_like(calibrated_error)
     dense_oracle_error = np.empty_like(calibrated_error)
+    calibrated_complex_disagreement = np.empty_like(calibrated_error)
+    calibrated_amplitude_disagreement = np.empty_like(calibrated_error)
+    calibrated_phase_disagreement = np.empty_like(calibrated_error)
     for endpoint_index, endpoint in enumerate(endpoints):
         calibration_frequencies = tuple(endpoint - offset for offset in range(window - 1, -1, -1))
         calibration_target = _complex_fields(
@@ -192,10 +237,15 @@ def run(args: argparse.Namespace) -> None:
                     dim=1,
                 )
             )
-        calibrated_ensemble = torch.stack(correct_predictions).mean(dim=0)
+        calibrated_seed_predictions = torch.stack(correct_predictions)
+        calibrated_ensemble = calibrated_seed_predictions.mean(dim=0)
         shuffled_ensemble = torch.stack(shuffled_predictions).mean(dim=0)
         calibrated_error[:, endpoint_index] = _relative_error(calibrated_ensemble, query_target)
         shuffled_error[:, endpoint_index] = _relative_error(shuffled_ensemble, query_target)
+        state_features = _ensemble_features(calibrated_seed_predictions)
+        calibrated_complex_disagreement[:, endpoint_index] = state_features["complex"]
+        calibrated_amplitude_disagreement[:, endpoint_index] = state_features["amplitude"]
+        calibrated_phase_disagreement[:, endpoint_index] = state_features["phase"]
         dense_pole = fit_stable_ar1(calibration_target, calibrator_args.ar_ridge)
         dense_prediction = torch.stack(
             [
@@ -218,10 +268,13 @@ def run(args: argparse.Namespace) -> None:
         calibrated_error=calibrated_error,
         shuffled_error=shuffled_error,
         dense_oracle_error=dense_oracle_error,
+        calibrated_seed_complex_disagreement=calibrated_complex_disagreement,
+        calibrated_seed_amplitude_disagreement=calibrated_amplitude_disagreement,
+        calibrated_seed_phase_disagreement=calibrated_phase_disagreement,
         sensor_indices=order,
     )
     output = {
-        "schema_version": 1,
+        "schema_version": 2,
         "status": "M2a one-trigger rolling sparse-sweep replay",
         "dataset": str(args.dataset),
         "split": args.split,
@@ -239,6 +292,11 @@ def run(args: argparse.Namespace) -> None:
             "full-field RelL2 remains evaluated at sweep frequencies; observed sensor points "
             "are not removed or force-copied, making the score conservative"
         ),
+        "target_free_state_features": [
+            "calibrated_seed_complex_disagreement",
+            "calibrated_seed_amplitude_disagreement",
+            "calibrated_seed_phase_disagreement",
+        ],
     }
     (args.output_dir / "summary.json").write_text(
         json.dumps(output, indent=2) + "\n", encoding="utf-8"

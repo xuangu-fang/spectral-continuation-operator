@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "status": "environment-fold cross-validated target-free patch risk map",
+  "domain": "ocean",
+  "model": "carrier_poles",
+  "run_summaries": [
+    "experiments/runs/m4_balanced_train106_hyper_seed42/summary.json",
+    "experiments/runs/m4_balanced_train106_hyper_seed43/summary.json",
+    "experiments/runs/m4_balanced_train106_hyper_seed44/summary.json"
+  ],
+  "checkpoint_sha256": [
+    "2b798966b2e138845f8894ba4f9f0be6f68e9fe07e80d0925379b0237cda0388",
+    "fe8c3f4834e114e029b519912f4e9b0ca671dab4f6dd977dc6a373b725f925ce",
+    "7702a5bef84b5684fd64654aaf5d2b8a5b3db1951a6565232d051ee312342995"
+  ],
+  "environment_count": 32,
+  "queries_hz": [
+    107.0,
+    108.0,
+    109.0,
+    110.0,
+    111.0,
+    112.0,
+    113.0,
+    114.0,
+    115.0,
+    116.0,
+    117.0,
+    118.0,
+    119.0,
+    120.0,
+    121.0,
+    122.0,
+    123.0,
+    124.0,
+    125.0
+  ],
+  "reference_frequency_hz": 106.0,
+  "patch_grid": [
+    4,
+    8
+  ],
+  "error_threshold": 0.5,
+  "energy_floor_fraction": 0.1,
+  "local_error_definition": "patch complex RelL2 with denominator floored by energy_floor_fraction times the uniform per-patch target energy",
+  "results": {
+    "distance_only": {
+      "features": [
+        "query_offset_hz"
+      ],
+      "failure_auroc": 0.7484657437321283,
+      "failure_auprc": 0.838958724401556,
+      "error_spearman": 0.493072597296492,
+      "brier_score": 0.18177954327668452,
+      "expected_calibration_error": 0.025030591297207427,
+      "within_frequency_auroc": 0.44478997137436976,
+      "within_environment_frequency_spatial_auroc": 0.5,
+      "accepted_patch_fraction_at_safe_probability": 0.0,
+      "empirical_safe_rate_at_safe_probability": NaN,
+      "top_risk_20_percent_failure_recall": 0.26331857731644026,
+      "patch_horizon_mae_hz": 6.1318359375,
+      "patch_unsafe_overreach_rate": 0.0
+    },
+    "global_disagreement": {
+      "features": [
+        "query_offset_hz",
+        "global_seed_disagreement"
+      ],
+      "failure_auroc": 0.7903024702382369,
+      "failure_auprc": 0.8796426335694388,
+      "error_spearman": 0.6196468044956669,
+      "brier_score": 0.16979475664386223,
+      "expected_calibration_error": 0.024588338537007016,
+      "within_frequency_auroc": 0.6682531386917941,
+      "within_environment_frequency_spatial_auroc": 0.5,
+      "accepted_patch_fraction_at_safe_probability": 0.0,
+      "empirical_safe_rate_at_safe_probability": NaN,
+      "top_risk_20_percent_failure_recall": 0.2763700198442986,
+      "patch_horizon_mae_hz": 6.1318359375,
+      "patch_unsafe_overreach_rate": 0.0
+    },
+    "local_disagreement": {
+      "features": [
+        "query_offset_hz",
+        "local_seed_disagreement"
+      ],
+      "failure_auroc": 0.9213749007989275,
+      "failure_auprc": 0.96348140791399,
+      "error_spearman": 0.8269989353041447,
+      "brier_score": 0.10470788970692783,
+      "expected_calibration_error": 0.016533959205585716,
+      "within_frequency_auroc": 0.8979631373469895,
+      "within_environment_frequency_spatial_auroc": 0.9288549626633313,
+      "accepted_patch_fraction_at_safe_probability": 0.0717516447368421,
+      "empirical_safe_rate_at_safe_probability": 0.8717765042979942,
+      "top_risk_20_percent_failure_recall": 0.2962906426499771,
+      "patch_horizon_mae_hz": 5.1787109375,
+      "patch_unsafe_overreach_rate": 0.037109375
+    },
+    "local_combo": {
+      "features": [
+        "query_offset_hz",
+        "global_seed_disagreement",
+        "local_seed_disagreement",
+        "local_amplitude_disagreement",
+        "local_phase_disagreement",
+        "predicted_patch_energy_ratio",
+        "patch_y",
+        "patch_x"
+      ],
+      "failure_auroc": 0.9384028066365993,
+      "failure_auprc": 0.9706855284503156,
+      "error_spearman": 0.8435782657768803,
+      "brier_score": 0.09272779366000242,
+      "expected_calibration_error": 0.017242255455151137,
+      "within_frequency_auroc": 0.9170610129659927,
+      "within_environment_frequency_spatial_auroc": 0.9453135819664455,
+      "accepted_patch_fraction_at_safe_probability": 0.13029399671052633,
+      "empirical_safe_rate_at_safe_probability": 0.9108481262327416,
+      "top_risk_20_percent_failure_recall": 0.2961379941993589,
+      "patch_horizon_mae_hz": 4.162109375,
+      "patch_unsafe_overreach_rate": 0.05078125
+    }
+  },
+  "leakage_note": "risk features use only frozen seed predictions, query offsets and patch coordinates; query targets only define evaluation labels"
+}

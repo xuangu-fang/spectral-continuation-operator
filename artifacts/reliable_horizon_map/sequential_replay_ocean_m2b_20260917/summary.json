@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "status": "M2a one-trigger rolling sparse-sweep replay",
+  "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "split": "val",
+  "environment_count": 32,
+  "query_hz": [
+    107.0,
+    108.0,
+    109.0,
+    110.0,
+    111.0,
+    112.0,
+    113.0,
+    114.0,
+    115.0,
+    116.0,
+    117.0,
+    118.0,
+    119.0,
+    120.0,
+    121.0,
+    122.0,
+    123.0,
+    124.0,
+    125.0
+  ],
+  "calibration_endpoints_hz": [
+    106.0,
+    107.0,
+    108.0,
+    109.0,
+    110.0,
+    111.0,
+    112.0,
+    113.0,
+    114.0,
+    115.0,
+    116.0,
+    117.0,
+    118.0,
+    119.0,
+    120.0
+  ],
+  "window": 6,
+  "sensor_budget_per_frequency": 92,
+  "total_complex_observations_per_trigger": 552,
+  "mask_seed": 4201,
+  "calibrator_summaries": [
+    "experiments/runs/sparse_ar1_calibrator_seed42/summary.json",
+    "experiments/runs/sparse_ar1_calibrator_seed43/summary.json",
+    "experiments/runs/sparse_ar1_calibrator_seed44/summary.json"
+  ],
+  "checkpoint_sha256": [
+    {
+      "calibrator": "695a351e1c8529f344368846dc8033f93c9017e560dbdb1aad45e50995104ef1",
+      "base": "2b798966b2e138845f8894ba4f9f0be6f68e9fe07e80d0925379b0237cda0388"
+    },
+    {
+      "calibrator": "b8f9d52954123ced8a2fd339f9dee5879a4cf62078561ab24dd1a485409872e2",
+      "base": "fe8c3f4834e114e029b519912f4e9b0ca671dab4f6dd977dc6a373b725f925ce"
+    },
+    {
+      "calibrator": "2be4530e3ee2d9f2c16d7c25e49493132cce2ab8e2437dbe5273533ce7fecf3d",
+      "base": "7702a5bef84b5684fd64654aaf5d2b8a5b3db1951a6565232d051ee312342995"
+    }
+  ],
+  "base_macro_complex_rel_l2": 0.6313779950141907,
+  "evaluation_note": "full-field RelL2 remains evaluated at sweep frequencies; observed sensor points are not removed or force-copied, making the score conservative",
+  "target_free_state_features": [
+    "calibrated_seed_complex_disagreement",
+    "calibrated_seed_amplitude_disagreement",
+    "calibrated_seed_phase_disagreement"
+  ]
+}

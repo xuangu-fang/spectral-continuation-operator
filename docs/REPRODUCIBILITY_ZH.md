@@ -486,3 +486,118 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_sparse_calibr
 
 聚合 artifact 保留全部逐方法、预算、mask seed 和查询频率的均值记录；逐环境 vectors 和大型
 checkpoints 不提交 Git，但由上述 checkpoint hash 与每个 evaluation summary 绑定。
+
+## 13. Reliable-horizon Map、空间风险与 Sequential Calibration
+
+实验前协议见 [`RELIABLE_HORIZON_MAP_POC_ZH.md`](RELIABLE_HORIZON_MAP_POC_ZH.md)，最终解释和
+gate 审计见
+[`RELIABLE_HORIZON_MAP_FINAL_ZH.md`](../reports/RELIABLE_HORIZON_MAP_FINAL_ZH.md)。大型逐实例 NPZ
+由 `.gitignore` 排除，但以下命令可从冻结 checkpoint 重建；JSON、PNG 和 PDF 汇总已提交。
+
+### 13.1 Ocean rolling reset replay
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_sequential_calibration \
+  --calibrator-summary experiments/runs/sparse_ar1_calibrator_seed42/summary.json \
+  --calibrator-summary experiments/runs/sparse_ar1_calibrator_seed43/summary.json \
+  --calibrator-summary experiments/runs/sparse_ar1_calibrator_seed44/summary.json \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz \
+  --output-dir artifacts/reliable_horizon_map/sequential_replay_ocean_m2b_20260917 \
+  --split val \
+  --queries 107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --endpoints 106,107,108,109,110,111,112,113,114,115,116,117,118,119,120 \
+  --window 6 --sensor-budget 92 --mask-seed 4201 --device cuda:0
+```
+
+该命令除逐 endpoint error 外，还保存 calibrated seed 的 complex、amplitude 和 phase disagreement。
+这些 feature 只依赖冻结预测与已经购买的 sparse sweep，不读取未来 query target。
+
+### 13.2 Reset 后 risk 与 repeated frontier
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_calibrated_state_risk \
+  --sequential-errors artifacts/reliable_horizon_map/sequential_replay_ocean_m2b_20260917/sequential_errors.npz \
+  --output-dir artifacts/reliable_horizon_map/calibrated_state_risk_ocean_20260917 \
+  --error-threshold 0.5 --safe-probability 0.1 --folds 4 --ridge 0.1
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_repeated_calibration \
+  --sequential-errors artifacts/reliable_horizon_map/sequential_replay_ocean_m2b_20260917/sequential_errors.npz \
+  --base-risk artifacts/reliable_horizon_map/risk_ocean_hyper_20260917/risk_predictions.npz \
+  --calibrated-risk artifacts/reliable_horizon_map/calibrated_state_risk_ocean_20260917/calibrated_state_risk.npz \
+  --output-dir artifacts/reliable_horizon_map/repeated_calibration_ocean_20260917 \
+  --maximum-actions 3 --sensor-budget 92 --window 6 --random-replicates 2000 \
+  --failure-probability 0.1 --calibrated-failure-probability 0.1 \
+  --reference-frequency 106 --error-threshold 0.5 \
+  --calibrated-risk-method disagreement_only
+```
+
+固定策略穷举至多三次 action 的所有 endpoint 组合。报告同时给出 gross cost 和允许复用重叠
+sensor-frequency 对后的 unique cost；所有 query 仍按完整空间场评价。
+
+### 13.3 Synthetic 无训练 sparse ensemble calibration
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_ensemble_mixture_calibration \
+  --run-summary experiments/runs/m2_synthetic_endpoint_poles_seed42/summary.json \
+  --run-summary experiments/runs/m2_synthetic_endpoint_poles_seed43/summary.json \
+  --run-summary experiments/runs/m2_synthetic_endpoint_poles_seed44/summary.json \
+  --output-dir artifacts/reliable_horizon_map/sequential_replay_synthetic_mixture_ridge1.0_20260917 \
+  --queries 19,19.5,20,21,22,23,24 --endpoints 18,19,20,21,22,23,24 \
+  --window 4 --sensor-budget 10 --mask-seed 4201 --ridge 1.0 \
+  --split val --device cuda:0
+```
+
+后续 `evaluate_calibrated_state_risk` 和 `evaluate_repeated_calibration` 命令与 Ocean 相同，只需替换
+artifact 路径，并使用 `--sensor-budget 10 --window 4 --reference-frequency 18`。该 action 的权重满足
+sum-to-one 约束，只用 rolling calibration window 拟合，不读取未来标签。
+
+### 13.4 两域空间风险图
+
+Ocean 主网格：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_spatial_horizon_risk \
+  --run-summary experiments/runs/m4_balanced_train106_hyper_seed42/summary.json \
+  --run-summary experiments/runs/m4_balanced_train106_hyper_seed43/summary.json \
+  --run-summary experiments/runs/m4_balanced_train106_hyper_seed44/summary.json \
+  --output-dir artifacts/reliable_horizon_map/spatial_risk_ocean_20260917 \
+  --queries 107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125 \
+  --reference-frequency 106 --patch-grid 4 8 --error-threshold 0.5 \
+  --safe-probability 0.1 --energy-floor-fraction 0.1 --folds 4 --ridge 0.1 \
+  --split val --batch-size 4 --device cuda:0
+```
+
+Synthetic 主网格：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_spatial_horizon_risk \
+  --run-summary experiments/runs/m2_synthetic_endpoint_poles_seed42/summary.json \
+  --run-summary experiments/runs/m2_synthetic_endpoint_poles_seed43/summary.json \
+  --run-summary experiments/runs/m2_synthetic_endpoint_poles_seed44/summary.json \
+  --output-dir artifacts/reliable_horizon_map/spatial_risk_synthetic_20260917 \
+  --queries 19,19.5,20,21,22,23,24 --reference-frequency 18 \
+  --patch-grid 4 8 --error-threshold 0.5 --safe-probability 0.1 \
+  --energy-floor-fraction 0.1 --folds 4 --ridge 0.1 \
+  --split val --batch-size 8 --device cuda:0
+```
+
+尺度敏感性只需将 `--patch-grid 4 8` 分别替换为 `2 4` 和 `8 16`。
+
+### 13.5 最终总图
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_reliable_horizon_final \
+  --ocean-risk artifacts/reliable_horizon_map/risk_ocean_hyper_20260917/risk_summary.json \
+  --synthetic-risk artifacts/reliable_horizon_map/risk_synthetic_poles_20260917/risk_summary.json \
+  --ocean-calibrated-risk artifacts/reliable_horizon_map/calibrated_state_risk_ocean_20260917/calibrated_state_risk_summary.json \
+  --synthetic-calibrated-risk artifacts/reliable_horizon_map/calibrated_state_risk_synthetic_20260917/calibrated_state_risk_summary.json \
+  --ocean-repeated artifacts/reliable_horizon_map/repeated_calibration_ocean_20260917/repeated_calibration_summary.json \
+  --synthetic-repeated artifacts/reliable_horizon_map/repeated_calibration_synthetic_20260917/repeated_calibration_summary.json \
+  --ocean-spatial artifacts/reliable_horizon_map/spatial_risk_ocean_2x4_20260917/spatial_risk_summary.json \
+  --ocean-spatial artifacts/reliable_horizon_map/spatial_risk_ocean_20260917/spatial_risk_summary.json \
+  --ocean-spatial artifacts/reliable_horizon_map/spatial_risk_ocean_8x16_20260917/spatial_risk_summary.json \
+  --synthetic-spatial artifacts/reliable_horizon_map/spatial_risk_synthetic_2x4_20260917/spatial_risk_summary.json \
+  --synthetic-spatial artifacts/reliable_horizon_map/spatial_risk_synthetic_20260917/spatial_risk_summary.json \
+  --synthetic-spatial artifacts/reliable_horizon_map/spatial_risk_synthetic_8x16_20260917/spatial_risk_summary.json \
+  --output-dir artifacts/reliable_horizon_map/final_summary_20260917
+```

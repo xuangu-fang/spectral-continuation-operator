@@ -4,6 +4,9 @@
 
 状态：实验前协议。本文冻结第一阶段问题、数据使用、指标和停止线；后续结果不得反向修改 gate。
 
+执行结果见 [`RELIABLE_HORIZON_MAP_FINAL_ZH.md`](../reports/RELIABLE_HORIZON_MAP_FINAL_ZH.md)。M1
+实例/空间 reliability gate 通过；M2 sequential gate 未通过，原始 gate 保持不变。
+
 ## 1. 核心问题
 
 现有实验已经说明，复杂波场频率外推通常只有有限有效范围，而且这个范围随实例、空间位置、模型和

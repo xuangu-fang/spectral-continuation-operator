@@ -15,7 +15,21 @@ from spectral_continuation.diagnose_global_subspace import (
     _polynomial_prediction,
     _project,
 )
+from spectral_continuation.evaluate_ensemble_mixture_calibration import (
+    _fit_sum_one_mixture,
+    _weighted_prediction,
+)
 from spectral_continuation.evaluate_horizon import verify_identity
+from spectral_continuation.evaluate_repeated_calibration import (
+    _unique_frequency_cost,
+    adaptive_schedules,
+    schedule_trajectory,
+)
+from spectral_continuation.evaluate_sequential_calibration import _ensemble_features
+from spectral_continuation.evaluate_spatial_horizon_risk import (
+    _patch_sum,
+    _spatial_features,
+)
 from spectral_continuation.horizon import (
     complex_relative_error,
     prefix_safe_mask,
@@ -128,6 +142,75 @@ def test_sequential_policy_selects_first_risk_crossing_and_only_changes_future()
     trajectory = _trajectory(base, calibrated, frequencies, endpoints, selected)
     np.testing.assert_array_equal(trajectory[0], np.asarray([1.0, 0.0, 0.0, 0.0]))
     np.testing.assert_array_equal(trajectory[1], np.asarray([1.0, 1.0, 0.0, 0.0]))
+
+
+def test_calibrated_state_disagreement_is_target_free_and_zero_for_identical_seeds():
+    prediction = torch.complex(torch.randn(2, 3, 4, 5), torch.randn(2, 3, 4, 5))
+    identical = prediction.unsqueeze(0).repeat(3, 1, 1, 1, 1)
+    features = _ensemble_features(identical)
+    assert set(features) == {"complex", "amplitude", "phase"}
+    for value in features.values():
+        assert value.shape == (2, 3)
+        np.testing.assert_allclose(value, 0.0, atol=1e-6)
+
+
+def test_repeated_reset_policy_uses_active_state_risk_and_reuses_observations():
+    frequencies = np.asarray([107.0, 108.0, 109.0, 110.0])
+    endpoints = np.asarray([107.0, 108.0, 109.0, 110.0])
+    base_probability = np.asarray([[0.2, 0.2, 0.2, 0.2]])
+    calibrated_probability = np.zeros((1, 4, 4))
+    calibrated_probability[0, 0, 2:] = 0.3
+    schedules = adaptive_schedules(
+        base_probability,
+        calibrated_probability,
+        frequencies,
+        endpoints,
+        base_threshold=0.1,
+        calibrated_threshold=0.1,
+        maximum_actions=2,
+    )
+    assert schedules == [(107.0, 109.0)]
+
+    base_error = np.ones((1, 4))
+    calibrated_error = np.stack(
+        (np.full((1, 4), 0.7), np.full((1, 4), 0.6), np.full((1, 4), 0.2), np.zeros((1, 4))),
+        axis=1,
+    )
+    trajectory = schedule_trajectory(
+        base_error, calibrated_error, frequencies, endpoints, schedules
+    )
+    np.testing.assert_allclose(trajectory, [[0.7, 0.7, 0.2, 0.2]])
+    np.testing.assert_array_equal(
+        _unique_frequency_cost(schedules, window=3, sensors=2), np.asarray([10])
+    )
+
+
+def test_complex_ensemble_mixture_recovers_sum_one_combination():
+    rng = np.random.default_rng(31)
+    predictions = rng.normal(size=(3, 2, 4, 2, 3)) + 1j * rng.normal(size=(3, 2, 4, 2, 3))
+    true_weights = np.asarray([[0.6 + 0.1j, 0.3 - 0.2j, 0.1 + 0.1j], [0.2, 0.5 + 0.1j, 0.3 - 0.1j]])
+    target = _weighted_prediction(predictions, true_weights)
+    sensors = np.broadcast_to(np.arange(6), (2, 6))
+    fitted = _fit_sum_one_mixture(predictions, target, sensors, ridge=1e-10)
+    np.testing.assert_allclose(fitted.sum(axis=1), 1.0, atol=1e-6)
+    np.testing.assert_allclose(fitted, true_weights, atol=1e-5)
+
+
+def test_patch_risk_features_have_local_geometry_and_zero_seed_disagreement():
+    target = np.ones((2, 3, 4, 8), dtype=np.complex64)
+    predictions = np.repeat(target[None], 3, axis=0)
+    features, error, names = _spatial_features(
+        predictions,
+        target,
+        np.asarray([11.0, 12.0, 13.0]),
+        reference_frequency=10.0,
+        patch_grid=(2, 4),
+        energy_floor_fraction=0.1,
+    )
+    assert features.shape == (2, 3, 2, 4, len(names))
+    np.testing.assert_allclose(error, 0.0)
+    np.testing.assert_allclose(features[..., names.index("local_seed_disagreement")], 0.0)
+    np.testing.assert_allclose(_patch_sum(np.ones((1, 4, 8)), (2, 4)), 4.0)
 
 
 def test_reliable_horizon_is_prefix_safe_and_marks_recovery():
