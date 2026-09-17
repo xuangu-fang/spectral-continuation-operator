@@ -16,6 +16,14 @@ from spectral_continuation.diagnose_global_subspace import (
     _project,
 )
 from spectral_continuation.evaluate_horizon import verify_identity
+from spectral_continuation.horizon import (
+    complex_relative_error,
+    prefix_safe_mask,
+    recovery_after_failure,
+    reliable_horizon,
+    safe_survival,
+    target_free_ensemble_features,
+)
 from spectral_continuation.metrics import metric_vectors, paired_bootstrap
 from spectral_continuation.model import QueryUNet, reconstruct
 from spectral_continuation.representation import (
@@ -30,6 +38,13 @@ from spectral_continuation.representation import (
 from spectral_continuation.representation_data import (
     FrequencyBandDataset,
     fit_representation_normalization,
+)
+from spectral_continuation.risk import (
+    RidgeLogisticRegression,
+    average_precision,
+    prefix_horizon_from_risk,
+    risk_coverage_auc,
+    roc_auc,
 )
 from spectral_continuation.sparse_calibration import (
     CalibratedState,
@@ -98,6 +113,72 @@ def test_metrics_and_bootstrap():
     assert np.allclose(exact["complex_rel_l2"], 0.0)
     stats = paired_bootstrap(np.ones(6), np.full(6, 0.8), replicates=100)
     np.testing.assert_allclose(stats["relative_improvement_percent"], 20.0)
+
+
+def test_reliable_horizon_is_prefix_safe_and_marks_recovery():
+    frequencies = np.asarray([11.0, 12.0, 13.0, 14.0])
+    errors = np.asarray(
+        [
+            [0.1, 0.2, 0.6, 0.7],
+            [0.6, 0.2, 0.3, 0.7],
+            [0.1, 0.2, 0.3, 0.4],
+        ]
+    )
+    safe = prefix_safe_mask(errors, 0.5)
+    np.testing.assert_array_equal(
+        safe,
+        np.asarray(
+            [
+                [True, True, False, False],
+                [False, False, False, False],
+                [True, True, True, True],
+            ]
+        ),
+    )
+    horizon, first_unsafe, censored = reliable_horizon(errors, frequencies, 10.0, 0.5)
+    np.testing.assert_allclose(horizon, [2.0, 0.0, 4.0])
+    np.testing.assert_allclose(first_unsafe[:2], [13.0, 11.0])
+    assert np.isnan(first_unsafe[2])
+    np.testing.assert_array_equal(censored, [False, False, True])
+    np.testing.assert_array_equal(recovery_after_failure(errors, 0.5), [False, True, False])
+    np.testing.assert_allclose(safe_survival(errors, 0.5), [2 / 3, 2 / 3, 1 / 3, 1 / 3])
+
+
+def test_target_free_horizon_features_are_finite_and_detect_disagreement():
+    endpoint = np.ones((2, 3, 4), dtype=np.complex64)
+    base = np.stack((endpoint * 1.1, endpoint * 1.2), axis=1)
+    predictions = np.stack((base, base.copy()), axis=0)
+    features, names = target_free_ensemble_features(
+        predictions, endpoint, np.asarray([11.0, 12.0]), 10.0
+    )
+    assert features.shape == (2, 2, len(names))
+    assert np.isfinite(features).all()
+    disagreement_index = names.index("seed_complex_disagreement")
+    np.testing.assert_allclose(features[..., disagreement_index], 0.0)
+    predictions[1, :, 1] *= np.exp(1j * 0.4)
+    changed, _ = target_free_ensemble_features(
+        predictions, endpoint, np.asarray([11.0, 12.0]), 10.0
+    )
+    assert np.all(changed[:, 1, disagreement_index] > 0)
+    np.testing.assert_allclose(complex_relative_error(base, base), 0.0)
+
+
+def test_risk_metrics_and_logistic_calibration():
+    features = np.asarray([[-2.0], [-1.0], [1.0], [2.0]])
+    labels = np.asarray([0, 0, 1, 1])
+    model = RidgeLogisticRegression(ridge=0.1).fit(features, labels)
+    probability = model.predict_proba(features)
+    assert np.all(np.diff(probability) > 0)
+    assert roc_auc(labels, probability) == 1.0
+    assert average_precision(labels, probability) == 1.0
+    assert risk_coverage_auc(np.asarray([0.1, 0.2, 0.8, 0.9]), probability) < 0.5
+    horizon = prefix_horizon_from_risk(
+        np.asarray([[0.01, 0.05, 0.2], [0.2, 0.3, 0.4]]),
+        np.asarray([11.0, 12.0, 13.0]),
+        10.0,
+        0.1,
+    )
+    np.testing.assert_allclose(horizon, [2.0, 0.0])
 
 
 def test_sparse_calibration_masks_are_nested_and_phase_state_is_bounded():
@@ -274,10 +355,7 @@ def test_stable_spectral_state_is_phase_equivariant_and_has_finite_history_loss(
     assert torch.isfinite(model.visible_reconstruction_loss(fields, context))
     grouped = model.forward_queries(fields, context, (8.0, 9.0))
     separate = torch.stack(
-        [
-            model(fields, context, torch.full((2,), frequency))
-            for frequency in (8.0, 9.0)
-        ],
+        [model(fields, context, torch.full((2,), frequency)) for frequency in (8.0, 9.0)],
         dim=1,
     )
     assert torch.allclose(grouped, separate)
@@ -286,9 +364,7 @@ def test_stable_spectral_state_is_phase_equivariant_and_has_finite_history_loss(
 def test_carrier_gauged_poles_are_continuous_anchored_and_phase_equivariant():
     torch.manual_seed(7)
     visible = (1.0, 2.0, 3.0, 4.0, 5.0)
-    model = CarrierGaugedPoleOperator(
-        visible, environment_channels=2, poles=3, width=8, blocks=2
-    )
+    model = CarrierGaugedPoleOperator(visible, environment_channels=2, poles=3, width=8, blocks=2)
     fields = torch.complex(torch.randn(2, 5, 8, 12), torch.randn(2, 5, 8, 12))
     context = torch.randn(2, 5, 8, 12)
     anchor = torch.full((2,), 5.0)
@@ -339,9 +415,7 @@ def test_carrier_gauged_poles_are_continuous_anchored_and_phase_equivariant():
         rtol=1e-5,
         atol=1e-5,
     )
-    assert torch.allclose(
-        stable_sum(fields, context, anchor), fields[:, -1], rtol=1e-5, atol=1e-5
-    )
+    assert torch.allclose(stable_sum(fields, context, anchor), fields[:, -1], rtol=1e-5, atol=1e-5)
 
     endpoint = CarrierGaugedPoleOperator(
         visible,
@@ -351,9 +425,7 @@ def test_carrier_gauged_poles_are_continuous_anchored_and_phase_equivariant():
         blocks=1,
         carrier_estimator="endpoint_increment",
     )
-    expected_increment = torch.angle(
-        fields[:, -1] * torch.conj(fields[:, -2])
-    )
+    expected_increment = torch.angle(fields[:, -1] * torch.conj(fields[:, -2]))
     assert torch.allclose(endpoint.carrier_slope(fields), expected_increment)
 
     tokenized = CarrierGaugedPoleOperator(
@@ -391,9 +463,7 @@ def test_carrier_gauged_poles_are_continuous_anchored_and_phase_equivariant():
     )
     hyper_state = hyper.spectral_state(fields, context)
     assert hyper_state[4].shape == hyper_state[2].real.shape
-    assert torch.allclose(
-        hyper(fields, context, anchor), fields[:, -1], rtol=1e-5, atol=1e-5
-    )
+    assert torch.allclose(hyper(fields, context, anchor), fields[:, -1], rtol=1e-5, atol=1e-5)
     assert phase_equivariance_error(hyper, fields, context, fractional) < 2e-5
 
 
@@ -449,12 +519,8 @@ def test_frequency_band_dataset_returns_one_environment_with_all_queries():
     positions = np.asarray([0, 1])
     visible = (10.0, 15.0)
     queries = (20.0, 40.0)
-    normalization = fit_representation_normalization(
-        bundle, positions, visible, queries
-    )
-    dataset = FrequencyBandDataset(
-        bundle, positions, visible, queries, normalization
-    )
+    normalization = fit_representation_normalization(bundle, positions, visible, queries)
+    dataset = FrequencyBandDataset(bundle, positions, visible, queries, normalization)
     fields, environment, targets = dataset[0]
     assert len(dataset) == 2
     assert fields.shape == (2, 16, 32)
@@ -467,12 +533,8 @@ def test_frequency_band_dataset_returns_one_environment_with_all_queries():
 def test_relative_training_loss_can_match_reported_unsquared_metric():
     target = torch.ones(2, 4, 8, dtype=torch.complex64)
     prediction = torch.stack((0.5 * target[0], torch.zeros_like(target[1])))
-    assert torch.allclose(
-        complex_relative_loss(prediction, target, power=1), torch.tensor(0.75)
-    )
-    assert torch.allclose(
-        complex_relative_loss(prediction, target, power=2), torch.tensor(0.625)
-    )
+    assert torch.allclose(complex_relative_loss(prediction, target, power=1), torch.tensor(0.75))
+    assert torch.allclose(complex_relative_loss(prediction, target, power=2), torch.tensor(0.625))
 
 
 def test_global_subspace_helpers_recover_low_rank_continuous_sequence():

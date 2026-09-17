@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "status": "environment-fold cross-validated target-free risk POC",
+  "source_features": "artifacts/reliable_horizon_map/features_synthetic_poles_20260917/horizon_features.npz",
+  "environment_count": 128,
+  "query_count": 7,
+  "folds": 4,
+  "error_threshold": 0.5,
+  "safe_probability": 0.1,
+  "reference_frequency_hz": 18.0,
+  "oracle_risk_coverage_auc": 0.37730333139848843,
+  "results": {
+    "distance_only": {
+      "failure_auroc": 0.8805132902823147,
+      "failure_auprc": 0.8974160951828425,
+      "error_spearman": 0.7503355483659764,
+      "brier_score": 0.13242905032873048,
+      "expected_calibration_error": 0.013617983278057981,
+      "risk_coverage_auc": 0.423998882910123,
+      "accepted_query_fraction_at_safe_probability": 0.03571428571428571,
+      "empirical_safe_rate_at_safe_probability": 0.90625,
+      "horizon_mae_hz": 2.16796875,
+      "unsafe_overreach_rate": 0.0234375,
+      "mean_conservative_horizon_gap_hz": 2.12109375,
+      "top_risk_20_percent_failure_recall": 0.34279918864097364,
+      "within_frequency_auroc": 0.3942688842138122,
+      "within_frequency_auroc_frequency_count": 7,
+      "within_frequency_error_spearman": -0.09061371780304385,
+      "features": [
+        "query_offset_hz"
+      ],
+      "fold_coefficients": [
+        [
+          0.4565346778987632,
+          2.0969128869017397
+        ],
+        [
+          0.5809570679232159,
+          2.0937498954499056
+        ],
+        [
+          0.5775711625465052,
+          2.0132743496600938
+        ],
+        [
+          0.43258860520798914,
+          2.049638072300154
+        ]
+      ],
+      "risk_coverage_relative_improvement_over_distance_percent": 0.0,
+      "risk_coverage_oracle_gap_closure_percent": 0.0
+    },
+    "disagreement_only": {
+      "failure_auroc": 0.9804005456037125,
+      "failure_auprc": 0.9843361897920325,
+      "error_spearman": 0.9595893267529166,
+      "brier_score": 0.05551672465234623,
+      "expected_calibration_error": 0.021007484841364613,
+      "risk_coverage_auc": 0.38399946572228993,
+      "accepted_query_fraction_at_safe_probability": 0.32142857142857145,
+      "empirical_safe_rate_at_safe_probability": 0.9826388888888888,
+      "horizon_mae_hz": 0.77734375,
+      "unsafe_overreach_rate": 0.0390625,
+      "mean_conservative_horizon_gap_hz": 0.72265625,
+      "top_risk_20_percent_failure_recall": 0.3630831643002028,
+      "within_frequency_auroc": 0.9603084044849263,
+      "within_frequency_auroc_frequency_count": 7,
+      "within_frequency_error_spearman": 0.8980277356318832,
+      "features": [
+        "seed_complex_disagreement"
+      ],
+      "fold_coefficients": [
+        [
+          1.9021901692382948,
+          6.357507000141574
+        ],
+        [
+          2.280197649889676,
+          6.585758914145471
+        ],
+        [
+          2.2406354958826817,
+          6.333370166807744
+        ],
+        [
+          1.9974867372516307,
+          6.565568756292157
+        ]
+      ],
+      "risk_coverage_relative_improvement_over_distance_percent": 9.433849663304875,
+      "risk_coverage_oracle_gap_closure_percent": 85.66001662463906
+    },
+    "distance_disagreement": {
+      "failure_auroc": 0.9804911440061607,
+      "failure_auprc": 0.9844170305667391,
+      "error_spearman": 0.9599813624558584,
+      "brier_score": 0.055498192578514904,
+      "expected_calibration_error": 0.017594262700363687,
+      "risk_coverage_auc": 0.38406125261178287,
+      "accepted_query_fraction_at_safe_probability": 0.32254464285714285,
+      "empirical_safe_rate_at_safe_probability": 0.9826989619377162,
+      "horizon_mae_hz": 0.76953125,
+      "unsafe_overreach_rate": 0.0390625,
+      "mean_conservative_horizon_gap_hz": 0.71484375,
+      "top_risk_20_percent_failure_recall": 0.3630831643002028,
+      "within_frequency_auroc": 0.9603131238695285,
+      "within_frequency_auroc_frequency_count": 7,
+      "within_frequency_error_spearman": 0.8978364441363433,
+      "features": [
+        "query_offset_hz",
+        "seed_complex_disagreement"
+      ],
+      "fold_coefficients": [
+        [
+          1.9168970820002142,
+          -0.24530195136088012,
+          6.626192606237995
+        ],
+        [
+          2.305524724240226,
+          -0.5204893754251941,
+          7.197702371855766
+        ],
+        [
+          2.2736479096725963,
+          -0.5100782840003154,
+          6.923939268225475
+        ],
+        [
+          2.0225730400559727,
+          -0.428211309435028,
+          7.055550449889667
+        ]
+      ],
+      "risk_coverage_relative_improvement_over_distance_percent": 9.419277245314321,
+      "risk_coverage_oracle_gap_closure_percent": 85.5276980471884
+    },
+    "physics_combo": {
+      "failure_auroc": 0.980239481777138,
+      "failure_auprc": 0.9847607790009466,
+      "error_spearman": 0.959484895114601,
+      "brier_score": 0.05619162059821682,
+      "expected_calibration_error": 0.02093328148748541,
+      "risk_coverage_auc": 0.38472750951832074,
+      "accepted_query_fraction_at_safe_probability": 0.3404017857142857,
+      "empirical_safe_rate_at_safe_probability": 0.9836065573770492,
+      "horizon_mae_hz": 0.67578125,
+      "unsafe_overreach_rate": 0.03125,
+      "mean_conservative_horizon_gap_hz": 0.61328125,
+      "top_risk_20_percent_failure_recall": 0.3630831643002028,
+      "within_frequency_auroc": 0.957326732672734,
+      "within_frequency_auroc_frequency_count": 7,
+      "within_frequency_error_spearman": 0.8837430023281972,
+      "features": [
+        "query_offset_hz",
+        "seed_complex_disagreement",
+        "seed_phase_disagreement",
+        "predicted_norm_ratio",
+        "predicted_spatial_roughness",
+        "predicted_step_change",
+        "predicted_spectral_curvature"
+      ],
+      "fold_coefficients": [
+        [
+          2.264420615525848,
+          -1.63379596014241,
+          3.6701097181757687,
+          3.2377807019270772,
+          -1.5372408851968096,
+          0.06895332946569471,
+          0.38636507678219406,
+          0.5799255312737722
+        ],
+        [
+          2.606959248625055,
+          -1.5759471794431705,
+          4.5957645869481,
+          2.5122198672939735,
+          -1.3236355300138547,
+          0.6483088429227272,
+          0.21123054893934629,
+          0.5089738125469948
+        ],
+        [
+          2.548780893871707,
+          -1.4500418960166104,
+          4.399303601533795,
+          2.6933173500633765,
+          -1.082378533439323,
+          0.0032827393223918773,
+          0.2044251389055546,
+          0.47224290948601283
+        ],
+        [
+          2.329550813779008,
+          -1.416065131326665,
+          4.713833702836968,
+          3.0346645382754396,
+          -0.22480295152821017,
+          0.0385777529532112,
+          0.4155186380845266,
+          0.6471600744237566
+        ]
+      ],
+      "risk_coverage_relative_improvement_over_distance_percent": 9.262140768452635,
+      "risk_coverage_oracle_gap_closure_percent": 84.10088781587145
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "status": "frozen target-free seed-ensemble horizon features",
+  "domain": "synthetic",
+  "model": "carrier_poles",
+  "run_summaries": [
+    "experiments/runs/m2_synthetic_endpoint_poles_seed42/summary.json",
+    "experiments/runs/m2_synthetic_endpoint_poles_seed43/summary.json",
+    "experiments/runs/m2_synthetic_endpoint_poles_seed44/summary.json"
+  ],
+  "checkpoint_sha256": [
+    "4b929d7b708b9fd0fd9a51fc63c6c23937d824f43388d604edf44da9814852d7",
+    "e90f09e17979418a5e6af6ae43dd470b7fa0aba765c6a716d339fcbe3946c2f7",
+    "597753c75fb2b514a3734fc902cfad390ccfe7091c99556c280b3ed03e16de95"
+  ],
+  "environment_count": 128,
+  "queries_hz": [
+    19.0,
+    19.5,
+    20.0,
+    21.0,
+    22.0,
+    23.0,
+    24.0
+  ],
+  "reference_frequency_hz": 18.0,
+  "feature_names": [
+    "query_offset_hz",
+    "seed_complex_disagreement",
+    "seed_amplitude_disagreement",
+    "seed_phase_disagreement",
+    "predicted_norm_ratio",
+    "predicted_low_amplitude_fraction",
+    "predicted_spatial_roughness",
+    "predicted_step_change",
+    "predicted_spectral_curvature"
+  ],
+  "target_definition": "raw complex RelL2 of pointwise complex seed-ensemble mean",
+  "aggregate": {
+    "19": {
+      "ensemble_complex_rel_l2": 0.34241753816604614,
+      "mean_seed_complex_rel_l2": 0.37311676144599915
+    },
+    "19.5": {
+      "ensemble_complex_rel_l2": 0.4200294613838196,
+      "mean_seed_complex_rel_l2": 0.45207616686820984
+    },
+    "20": {
+      "ensemble_complex_rel_l2": 0.4329744577407837,
+      "mean_seed_complex_rel_l2": 0.4717101752758026
+    },
+    "21": {
+      "ensemble_complex_rel_l2": 0.5199512243270874,
+      "mean_seed_complex_rel_l2": 0.568487286567688
+    },
+    "22": {
+      "ensemble_complex_rel_l2": 0.5981782674789429,
+      "mean_seed_complex_rel_l2": 0.6569321751594543
+    },
+    "23": {
+      "ensemble_complex_rel_l2": 0.6643206477165222,
+      "mean_seed_complex_rel_l2": 0.7328058481216431
+    },
+    "24": {
+      "ensemble_complex_rel_l2": 0.7204639911651611,
+      "mean_seed_complex_rel_l2": 0.7978872060775757
+    }
+  },
+  "lineage": {
+    "kind": "localized-multipath-synthetic",
+    "seed": 20260915,
+    "shape": [
+      32,
+      64
+    ],
+    "paths": 3
+  },
+  "leakage_note": "features use only visible fields and frozen predictions; query targets only form labels"
+}

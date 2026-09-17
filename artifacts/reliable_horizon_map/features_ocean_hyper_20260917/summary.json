@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "status": "frozen target-free seed-ensemble horizon features",
+  "domain": "ocean",
+  "model": "carrier_poles",
+  "run_summaries": [
+    "experiments/runs/m4_balanced_train106_hyper_seed42/summary.json",
+    "experiments/runs/m4_balanced_train106_hyper_seed43/summary.json",
+    "experiments/runs/m4_balanced_train106_hyper_seed44/summary.json"
+  ],
+  "checkpoint_sha256": [
+    "2b798966b2e138845f8894ba4f9f0be6f68e9fe07e80d0925379b0237cda0388",
+    "fe8c3f4834e114e029b519912f4e9b0ca671dab4f6dd977dc6a373b725f925ce",
+    "7702a5bef84b5684fd64654aaf5d2b8a5b3db1951a6565232d051ee312342995"
+  ],
+  "environment_count": 32,
+  "queries_hz": [
+    107.0,
+    108.0,
+    109.0,
+    110.0,
+    111.0,
+    112.0,
+    113.0,
+    114.0,
+    115.0,
+    116.0,
+    117.0,
+    118.0,
+    119.0,
+    120.0,
+    121.0,
+    122.0,
+    123.0,
+    124.0,
+    125.0
+  ],
+  "reference_frequency_hz": 106.0,
+  "feature_names": [
+    "query_offset_hz",
+    "seed_complex_disagreement",
+    "seed_amplitude_disagreement",
+    "seed_phase_disagreement",
+    "predicted_norm_ratio",
+    "predicted_low_amplitude_fraction",
+    "predicted_spatial_roughness",
+    "predicted_step_change",
+    "predicted_spectral_curvature"
+  ],
+  "target_definition": "raw complex RelL2 of pointwise complex seed-ensemble mean",
+  "aggregate": {
+    "107": {
+      "ensemble_complex_rel_l2": 0.2602928876876831,
+      "mean_seed_complex_rel_l2": 0.2658595144748688
+    },
+    "108": {
+      "ensemble_complex_rel_l2": 0.3319717049598694,
+      "mean_seed_complex_rel_l2": 0.3380892872810364
+    },
+    "109": {
+      "ensemble_complex_rel_l2": 0.38359639048576355,
+      "mean_seed_complex_rel_l2": 0.3905467987060547
+    },
+    "110": {
+      "ensemble_complex_rel_l2": 0.43937334418296814,
+      "mean_seed_complex_rel_l2": 0.447300523519516
+    },
+    "111": {
+      "ensemble_complex_rel_l2": 0.4815112352371216,
+      "mean_seed_complex_rel_l2": 0.4906792640686035
+    },
+    "112": {
+      "ensemble_complex_rel_l2": 0.5203447341918945,
+      "mean_seed_complex_rel_l2": 0.5309459567070007
+    },
+    "113": {
+      "ensemble_complex_rel_l2": 0.5595383048057556,
+      "mean_seed_complex_rel_l2": 0.5716809034347534
+    },
+    "114": {
+      "ensemble_complex_rel_l2": 0.5972900390625,
+      "mean_seed_complex_rel_l2": 0.6111642718315125
+    },
+    "115": {
+      "ensemble_complex_rel_l2": 0.6338167190551758,
+      "mean_seed_complex_rel_l2": 0.6497042179107666
+    },
+    "116": {
+      "ensemble_complex_rel_l2": 0.6745247840881348,
+      "mean_seed_complex_rel_l2": 0.6923733353614807
+    },
+    "117": {
+      "ensemble_complex_rel_l2": 0.706666111946106,
+      "mean_seed_complex_rel_l2": 0.726873517036438
+    },
+    "118": {
+      "ensemble_complex_rel_l2": 0.7340855598449707,
+      "mean_seed_complex_rel_l2": 0.7570312023162842
+    },
+    "119": {
+      "ensemble_complex_rel_l2": 0.7585534453392029,
+      "mean_seed_complex_rel_l2": 0.7843484878540039
+    },
+    "120": {
+      "ensemble_complex_rel_l2": 0.7808912396430969,
+      "mean_seed_complex_rel_l2": 0.809349775314331
+    },
+    "121": {
+      "ensemble_complex_rel_l2": 0.7994028329849243,
+      "mean_seed_complex_rel_l2": 0.830755352973938
+    },
+    "122": {
+      "ensemble_complex_rel_l2": 0.8182294368743896,
+      "mean_seed_complex_rel_l2": 0.8519562482833862
+    },
+    "123": {
+      "ensemble_complex_rel_l2": 0.8289384245872498,
+      "mean_seed_complex_rel_l2": 0.8654916882514954
+    },
+    "124": {
+      "ensemble_complex_rel_l2": 0.8386722803115845,
+      "mean_seed_complex_rel_l2": 0.8776370286941528
+    },
+    "125": {
+      "ensemble_complex_rel_l2": 0.8484823703765869,
+      "mean_seed_complex_rel_l2": 0.8897128105163574
+    }
+  },
+  "lineage": {
+    "kind": "ocean-paired-npz",
+    "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+    "environment_channels": [
+      "water_speed_mps",
+      "water_depth_m",
+      "seabed_speed_mps",
+      "seabed_density_kgm3"
+    ],
+    "excluded_environment_channels": [
+      "seabed_attenuation_dbperlambda"
+    ],
+    "exclusion_reason": "The Pekeris solver does not use fluid-halfspace attenuation; inactive random channels are excluded before every formal run."
+  },
+  "leakage_note": "features use only visible fields and frozen predictions; query targets only form labels"
+}

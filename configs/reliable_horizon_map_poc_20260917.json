@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "preregistered development POC; strict environments unopened",
+  "primary_question": "Can a frozen spectral operator predict its own instance-conditioned reliable frequency horizon before raw complex field error exceeds tolerance?",
+  "deployment_prediction": {
+    "primary": "pointwise complex mean of three independently trained seed predictions",
+    "sensitivity": "each single seed",
+    "frozen_before_risk_evaluation": true
+  },
+  "thresholds": {
+    "primary_complex_rel_l2": 0.5,
+    "sensitivity_complex_rel_l2": [0.4, 0.6],
+    "minimum_class_fraction_for_classification": 0.1
+  },
+  "domains": {
+    "ocean": {
+      "visible_hz": [90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100],
+      "development_calibration_hz": [101, 102, 103, 104, 105, 106],
+      "query_hz": [107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125],
+      "base_models": ["hyper_pole_seed_42_43_44", "stable_recurrence_seed_42_43_44"],
+      "strict_policy": "registered strict environment fields remain unopened until risk method and gates are frozen"
+    },
+    "synthetic": {
+      "query_hz": [19, 19.5, 20, 21, 22, 23, 24],
+      "base_models": ["endpoint_poles_seed_42_43_44", "stable_recurrence_seed_42_43_44"]
+    }
+  },
+  "leakage_policy": {
+    "split_unit": "physical environment",
+    "forbidden_features": [
+      "query target field",
+      "query target amplitude or phase",
+      "query target curvature",
+      "unobserved sequential calibration values"
+    ],
+    "risk_calibration": "fixed environment-hash folds during development; one-shot strict evaluation after freeze"
+  },
+  "m1_primary_metrics": [
+    "failure_auroc",
+    "failure_auprc",
+    "error_spearman",
+    "brier_score",
+    "expected_calibration_error",
+    "risk_coverage_auc",
+    "horizon_mae_hz",
+    "unsafe_overreach_rate"
+  ],
+  "m1_gate": {
+    "failure_auroc_min": 0.75,
+    "error_spearman_min": 0.5,
+    "risk_coverage_oracle_gap_closure_percent_min": 50.0,
+    "nominal_safe_coverage": 0.9,
+    "empirical_safe_coverage_min": 0.85,
+    "unsafe_overreach_rate_max": 0.15,
+    "cross_domain_directional_consistency_required": true,
+    "amendment_20260917": "The original 15% raw AURC improvement gate exceeded the empirical oracle ceilings (13.4% Ocean, 10.5% synthetic). It was replaced before any sequential experiment by 50% closure of the attainable oracle ranking gap; raw improvement remains mandatory reporting."
+  },
+  "m2_gate": {
+    "matched_cost_complex_rel_l2_relative_improvement_percent_min": 10.0,
+    "matched_error_observation_reduction_percent_min": 20.0,
+    "query_coverage_must_be_reported": true,
+    "worst_quartile_allowed_regression_percent": 5.0,
+    "shuffled_instance_control_required": true
+  }
+}
