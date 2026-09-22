@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "status": "M0A retrospective audit plus frozen M0B/M1 development POC",
+  "task": "predict the counterfactual value of a candidate sparse spectral calibration action before purchasing its observations",
+  "domain": "ocean development environments",
+  "visible_hz": [90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100],
+  "query_hz": [107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125],
+  "actions": {
+    "calibration_endpoints_hz": [106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120],
+    "mask_seeds": [4201, 4301, 4401],
+    "sensor_budget_per_frequency": 92,
+    "window_frequencies": 6,
+    "complex_observations_per_action": 552,
+    "allow_no_action": true
+  },
+  "primary_utility": "mean no-calibration error minus action trajectory error over the fixed 107--125 Hz deployment interval",
+  "secondary_utility": "mean error reduction over the first six post-action query frequencies",
+  "features_allowed": [
+    "candidate endpoint and mask geometry",
+    "frozen prediction features",
+    "seed disagreement",
+    "environment-OOF instance risk",
+    "environment-OOF spatial risk sampled by the candidate mask"
+  ],
+  "features_forbidden": [
+    "query targets",
+    "true query errors",
+    "unobserved candidate calibration values",
+    "post-action calibrated disagreement",
+    "other actions from a held-out environment in training"
+  ],
+  "validation": {
+    "folds": 4,
+    "split_unit": "physical environment",
+    "primary_model": "standardized ridge regression on within-environment centered action utility",
+    "no_action_gate": "separate standardized ridge regression on absolute action utility",
+    "primary_preexisting_mask_id": 4201,
+    "ridge_grid": [0.01, 0.1, 1.0, 10.0]
+  },
+  "mechanism_gate_existing_action_space": {
+    "oracle_relative_improvement_over_best_fixed_percent_min": 5.0,
+    "oracle_absolute_rel_l2_gap_min": 0.02,
+    "environment_fraction_with_nonfixed_oracle_min": 0.5
+  },
+  "paper_level_task_gate_expanded_action_space": {
+    "oracle_relative_improvement_over_fold_specific_best_fixed_percent_min": 10.0,
+    "strict_environment_evaluation_required_for_claim": true,
+    "second_positive_domain_required_for_claim": true
+  },
+  "m1_gate": {
+    "oof_policy_must_beat_fold_specific_best_fixed": true,
+    "fixed_to_oracle_gap_closure_percent_min": 30.0,
+    "harmful_rate_must_not_exceed_best_fixed": true,
+    "shuffled_control_required": true
+  }
+}

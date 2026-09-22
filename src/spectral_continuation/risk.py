@@ -60,6 +60,41 @@ class RidgeLogisticRegression:
         return sigmoid(design @ self.coefficients_)
 
 
+class RidgeLinearRegression:
+    """Deterministic standardized ridge regression for small grouped POCs."""
+
+    def __init__(self, ridge: float = 1.0):
+        self.ridge = ridge
+        self.mean_: np.ndarray | None = None
+        self.scale_: np.ndarray | None = None
+        self.coefficients_: np.ndarray | None = None
+
+    def fit(self, features: np.ndarray, targets: np.ndarray) -> RidgeLinearRegression:
+        features = np.asarray(features, dtype=float)
+        targets = np.asarray(targets, dtype=float)
+        if features.ndim != 2 or targets.shape != (len(features),):
+            raise ValueError("features or targets have an invalid shape")
+        self.mean_ = features.mean(axis=0)
+        self.scale_ = features.std(axis=0)
+        self.scale_[self.scale_ < 1e-8] = 1.0
+        standardized = (features - self.mean_) / self.scale_
+        design = np.column_stack((np.ones(len(features)), standardized))
+        penalty = np.eye(design.shape[1]) * self.ridge
+        penalty[0, 0] = 0.0
+        self.coefficients_ = np.linalg.solve(
+            design.T @ design + penalty,
+            design.T @ targets,
+        )
+        return self
+
+    def predict(self, features: np.ndarray) -> np.ndarray:
+        if self.mean_ is None or self.scale_ is None or self.coefficients_ is None:
+            raise RuntimeError("model must be fitted before prediction")
+        standardized = (np.asarray(features, dtype=float) - self.mean_) / self.scale_
+        design = np.column_stack((np.ones(len(standardized)), standardized))
+        return design @ self.coefficients_
+
+
 def average_ranks(values: np.ndarray) -> np.ndarray:
     """One-based average ranks with deterministic tie handling."""
     values = np.asarray(values, dtype=float)

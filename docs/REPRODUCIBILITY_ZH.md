@@ -601,3 +601,37 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_reliable_hori
   --synthetic-spatial artifacts/reliable_horizon_map/spatial_risk_synthetic_8x16_20260917/spatial_risk_summary.json \
   --output-dir artifacts/reliable_horizon_map/final_summary_20260917
 ```
+
+## 14. Actionable Horizon / Value-of-Calibration Map
+
+冻结协议见 [`ACTIONABLE_HORIZON_POC_ZH.md`](ACTIONABLE_HORIZON_POC_ZH.md)，结果解释见
+[`ACTIONABLE_HORIZON_POC_ZH.md`](../reports/ACTIONABLE_HORIZON_POC_ZH.md)。已有 mask 4201 replay 直接复用
+13.1 的产物。新增两个等成本 mask replay 时，保持其他参数完全相同，只分别替换：
+
+```bash
+--output-dir artifacts/actionable_horizon/replay_ocean_mask4301_20260922 --mask-seed 4301
+--output-dir artifacts/actionable_horizon/replay_ocean_mask4401_20260922 --mask-seed 4401
+```
+
+三个 replay 完成后运行环境级 OOF value probe：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_actionable_horizon \
+  --sequential-errors artifacts/reliable_horizon_map/sequential_replay_ocean_m2b_20260917/sequential_errors.npz \
+  --sequential-errors artifacts/actionable_horizon/replay_ocean_mask4301_20260922/sequential_errors.npz \
+  --sequential-errors artifacts/actionable_horizon/replay_ocean_mask4401_20260922/sequential_errors.npz \
+  --mask-ids 4201 4301 4401 \
+  --features artifacts/reliable_horizon_map/features_ocean_hyper_20260917/horizon_features.npz \
+  --risk-predictions artifacts/reliable_horizon_map/risk_ocean_hyper_20260917/risk_predictions.npz \
+  --spatial-risk-predictions artifacts/reliable_horizon_map/spatial_risk_ocean_20260917/spatial_risk_predictions.npz \
+  --output-dir artifacts/actionable_horizon/value_probe_ocean_20260922 \
+  --risk-method disagreement_only --spatial-risk-method local_combo \
+  --primary-model state_action --ridge-grid 0.01 0.1 1 10 \
+  --failure-probability 0.1 --primary-mask-id 4201 \
+  --reference-frequency 106 --error-threshold 0.5 --shuffled-replicates 20000 \
+  --local-window 6 --sensor-budget 92 --window 6 --field-shape 48 384 --seed 20260922
+```
+
+`actionable_horizon_predictions.npz` 保存逐环境逐 action 的 utility、特征和 OOF prediction，由
+`.gitignore` 排除；JSON、PNG 和 PDF 汇总提交 Git。mask 4301/4401 的 replay NPZ 也不提交，但其
+summary 保留数据、checkpoint hash、预算和 mask seed。

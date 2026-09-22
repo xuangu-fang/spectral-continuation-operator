@@ -15,6 +15,10 @@ from spectral_continuation.diagnose_global_subspace import (
     _polynomial_prediction,
     _project,
 )
+from spectral_continuation.evaluate_actionable_horizon import (
+    action_trajectories,
+    cross_validated_value_prediction,
+)
 from spectral_continuation.evaluate_ensemble_mixture_calibration import (
     _fit_sum_one_mixture,
     _weighted_prediction,
@@ -54,6 +58,7 @@ from spectral_continuation.representation_data import (
     fit_representation_normalization,
 )
 from spectral_continuation.risk import (
+    RidgeLinearRegression,
     RidgeLogisticRegression,
     average_precision,
     prefix_horizon_from_risk,
@@ -128,6 +133,36 @@ def test_metrics_and_bootstrap():
     assert np.allclose(exact["complex_rel_l2"], 0.0)
     stats = paired_bootstrap(np.ones(6), np.full(6, 0.8), replicates=100)
     np.testing.assert_allclose(stats["relative_improvement_percent"], 20.0)
+
+
+def test_ridge_linear_regression_and_grouped_value_prediction():
+    features = np.arange(20, dtype=float).reshape(10, 2)
+    targets = 2.0 * features[:, 0] - features[:, 1] + 3.0
+    model = RidgeLinearRegression(ridge=1e-8).fit(features, targets)
+    np.testing.assert_allclose(model.predict(features), targets, atol=1e-6)
+
+    action = np.asarray([0.0, 1.0, 2.0])
+    grouped_features = np.broadcast_to(action[None, :, None], (8, 3, 1)).copy()
+    grouped_utility = np.broadcast_to(action[None], (8, 3)).copy()
+    folds = np.arange(8) % 4
+    prediction, selected = cross_validated_value_prediction(
+        grouped_features, grouped_utility, folds, (0.01, 1.0)
+    )
+    assert len(selected) == 4
+    np.testing.assert_array_equal(prediction.argmax(axis=1), np.full(8, 2))
+
+
+def test_action_trajectory_only_replaces_post_endpoint_queries():
+    base = np.ones((1, 4))
+    calibrated = np.zeros((1, 2, 4))
+    trajectory = action_trajectories(
+        base,
+        calibrated,
+        np.asarray([107.0, 108.0, 109.0, 110.0]),
+        np.asarray([108.0, 110.0]),
+    )
+    np.testing.assert_array_equal(trajectory[0, 0], [1.0, 0.0, 0.0, 0.0])
+    np.testing.assert_array_equal(trajectory[0, 1], [1.0, 1.0, 1.0, 0.0])
 
 
 def test_sequential_policy_selects_first_risk_crossing_and_only_changes_future():

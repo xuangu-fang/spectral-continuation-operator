@@ -195,3 +195,28 @@ fidelity 定义或校准的信息结构，并要求新的 dense oracle 在更大
 acquisition，应学习 value-of-calibration 或 actionable uncertainty，而不是继续扩大 failure-risk head
 或直接训练 RL。完整证据见
 [Reliable-horizon Map 最终报告](../reports/RELIABLE_HORIZON_MAP_FINAL_ZH.md)。
+
+## 11. Actionable-horizon 阶段结论
+
+2026-09-22 完成了第一阶段 value-of-calibration POC。任务是在购买观测前，从冻结谱状态、实例风险图、
+空间风险图和候选 action 描述中预测该动作对 107--125 Hz 完整部署轨迹的真实 raw-error 收益。
+
+必须长期保留的结果是：
+
+1. 32 个 Ocean development environments 上，15 个 endpoints × 3 个等成本随机 masks 形成 45 个
+   actions；每个 action 使用 92 个传感器扫描 6 个频率，共 552 个复数观测；
+2. 三-mask oracle raw complex RelL2 为 0.5540，最佳 development fixed action 为 0.5920，相对 headroom
+   只有 6.42%，未过 10% paper-level task gate；
+3. 环境级四折 OOF 的线性 state--action value probe 达到 within-environment utility Spearman 0.624；
+   shuffled-instance control 显著退化，说明 value signal 确实具有实例性；
+4. value policy raw error 为 0.5846，虽然优于 OOF fold-specific fixed 0.6025，但差于已经冻结的简单
+   risk-trigger 0.5720，且 paired 区间方向稳定地不利于 value policy；
+5. 新增两个随机 masks 仅把单-mask oracle 从 0.5566 降到 0.5540。当前主要决策自由度是 endpoint，
+   随机 mask 没有改变校准器的有效可控子空间。
+
+因此当前停止增加 selector 容量。Actionable value 是一个真实、可部分学习的科学量，但现有 action space
+和 AR state update 的 controllability 不足以支持复杂 policy 贡献。若重启，先用 oracle audit 检验风险定向
+传感器、不同频率窗口、不同 source/boundary excitation 或更丰富观测类型；只有新 action space 先产生
+至少 10% fixed-to-oracle headroom，才训练 action-conditioned representation。详细协议和结果见
+[Actionable Horizon POC](ACTIONABLE_HORIZON_POC_ZH.md)与
+[第一阶段报告](../reports/ACTIONABLE_HORIZON_POC_ZH.md)。
