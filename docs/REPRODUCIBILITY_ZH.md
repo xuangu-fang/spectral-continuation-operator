@@ -1,7 +1,11 @@
-# 第一阶段复现说明
+# 技术复现档案
 
-本文只记录如何复核报告数字。研究判断与结果请先读
-[第一阶段主报告](../reports/STAGE1_REPORT_ZH.md)。所有命令从仓库根目录运行。
+> 本文保存全部阶段的具体命令、路径与数据 hash，因此有意保持详细。当前科学结论请先读
+> [一页式状态](CURRENT_STATUS_ZH.md)；最新 wave-system representation 的命令在
+> [第 15 节](#15-wave-system-representation-poc)，其余章节均为历史实验复现档案。
+
+所有命令从仓库根目录运行。旧阶段的研究判断与主要负结果已压缩到
+[历史探索索引](archive/INDEX_ZH.md)。
 
 ## 1. 环境
 

@@ -1,0 +1,27 @@
+# 源码索引
+
+源码暂不物理移动：历史 checkpoint、artifact manifest、命令和测试都依赖现有 module path。这里用接口
+分区替代目录搬迁，避免为了整理破坏复现性。
+
+## Active：当前 wave-system representation
+
+- `wave_operator_data.py`：system-major 多源、多频数据生成；
+- `audit_wave_operator_representation.py`：RBF、reciprocity、Nyström 与 view-rank 审计；
+- `train_wave_operator_identifier.py`：missing-block 完整复场负对照；
+- `train_wave_operator_contrastive.py`：跨 source-frequency system retrieval；
+- `train_wave_medium_probe.py`：hidden-medium spatial sufficiency 与 noise training；
+- `evaluate_wave_medium_ood.py`：geometry、noise、resolution、boundary stress tests；
+- `summarize_wave_representation_poc.py`：汇总表、正文图和机器可读 summary。
+
+## Supporting：共享基础设施
+
+- `data.py`、`metrics.py`、`model.py`：数据、指标和通用网络组件；
+- `paired_environment_stats.py`：逐环境 paired 统计；
+- `representation.py`、`representation_data.py`：早期表示工具，若复用必须重新核对当前协议。
+
+## Archived：历史实验实现
+
+其余 `train_*`、`evaluate_*`、`summarize_*`、calibration、horizon、pole / recurrence、ocean
+multi-fidelity 模块属于已结束的谱延拓与校准路线。它们保持可执行但默认冻结，不应被误认为当前模型的
+组成部分。主要科学结论见 [`docs/archive/INDEX_ZH.md`](../../docs/archive/INDEX_ZH.md)，完整命令见
+[`docs/REPRODUCIBILITY_ZH.md`](../../docs/REPRODUCIBILITY_ZH.md)。

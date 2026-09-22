@@ -1,4 +1,8 @@
-# 研究记忆：Few-shot Spectral Calibration
+# 历史研究日志：Few-shot Spectral Calibration
+
+> **归档说明（2026-09-22）：** 本文记录项目从频率延拓走向 sparse calibration 的历史 framing，
+> 不再是当前方向入口。当前结论请从[一页式状态](CURRENT_STATUS_ZH.md)开始；各历史路线的压缩结论见
+> [归档索引](archive/INDEX_ZH.md)。下文保留原样，用于追踪当时的任务定义和研究决策。
 
 更新日期：2026-09-16
 

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "spectral-continuation-operator"
 version = "0.1.0"
-description = "Sparse low-frequency wave fields to queryable high-frequency responses"
+description = "Response-conditioned representations for complex wave systems"
 requires-python = ">=3.10"
 dependencies = [
   "numpy>=1.24",

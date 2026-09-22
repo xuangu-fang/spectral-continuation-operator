@@ -1,31 +1,25 @@
-# Artifact policy and index
+# Artifact 索引与保存策略
 
-Large checkpoints and per-sample arrays remain on attached storage. Compact
-summaries, manifests, CSV tables and paper figures are committed. Every compact
-artifact binds its parent data and checkpoint hashes.
+## 当前正文级结果
 
-- `provenance/`: frozen APEX/APEX-H source evidence and file hashes;
-- `stage1_fixed/`: WaveBench/Ocean coarse-band fixed-target controls;
-- `stage1_fineband_analytic/`: training-free phase-identifiability horizon;
-- `stage1_query_formal/`: three-seed 90/100-selected query runs, paired contrasts
-  and representative field figure;
-- `stage1_dense_horizon/`: once-only 105/110/115/120 Hz evaluation of the same
-  frozen checkpoints;
-- `representation_poc/`: matched image/state representation comparison on
-  controlled multipath fields and Ocean Pekeris, including three-seed curves.
-- `continuous_state_synthetic/`: three-seed controlled multipath comparison of
-  continuous poles, lattice recurrence and image U-Net, including 19.5 Hz and
-  cross-resolution evidence;
-- `continuous_state_ocean_sparse/`: frozen 90/100 Hz sparse-supervision result;
-- `continuous_state_ocean_dense/`: main 81–100 Hz training and 101–125 Hz
-  extrapolation curves for three parameter-matched models;
-- `continuous_state_ocean_fractional/`: frozen-checkpoint evaluation at six
-  independently generated half-integer frequencies.
-- `sparse_spectral_calibration/`: three-model-seed × three-mask-seed sparse
-  broadband calibration results, raw records, error–budget/horizon figure and
-  amplitude–phase mechanism figure. The preregistered method gate was not met.
+`wave_operator_representation/` 是当前唯一 active artifact collection：
 
-`query_summary.json` stores aggregate metrics, per-seed improvements, paired
-bootstrap results, source checkpoint SHA256 values and data lineage. CSV files
-are flattened views for plotting or paper tables. PDFs are vector originals;
-PNGs are web previews.
+- `summary/wave_representation_main.png`：检索、介质恢复、source budget 与 stress-test 主图；
+- `summary/wave_representation_examples.png`：隐藏介质恢复定性结果；
+- `summary/summary.json`：机器可读的主结果、三 seed 聚合与 failure boundary；
+- 子目录中的 JSON / CSV / PDF：matched ablation 和绘图源数据。
+
+完整解释见
+[`reports/WAVEFIELD_REPRESENTATION_POC_ZH.md`](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)。
+
+## 历史冻结 collections
+
+其余目录记录早期 spectral continuation、continuous state、sparse calibration、reliable/actionable
+horizon 与 paired multi-fidelity 实验。它们不再构成当前主页故事，只作为负结果、研究决策和复现证据
+保留。对应结论见 [`docs/archive/INDEX_ZH.md`](../docs/archive/INDEX_ZH.md)。
+
+## 保存规则
+
+大型 checkpoint、逐样本数组与可再生中间结果留在 attached storage，并由 `.gitignore` 排除。Git 只
+保存配置、manifest、汇总 JSON / CSV 和论文级 PNG / PDF。每个正式汇总应记录父数据与 checkpoint
+hash；任何手工挑选的可视化都必须能追溯到机器可读 summary。

@@ -1,7 +1,9 @@
 # 下一阶段协议：Wave-System Encoder
 
-> 本文是实验前执行协议；结果解释见
-> [波动场表征学习 POC 报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)。
+> 导航：[项目主页](../README.md) · [一页式当前状态](CURRENT_STATUS_ZH.md) ·
+> [波动场表征学习 POC 报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)
+>
+> 本文是实验前执行协议，不记录完成后的结果解释。
 
 ## 1. 冻结的科学命题
 

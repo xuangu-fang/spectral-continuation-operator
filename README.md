@@ -1,161 +1,109 @@
-# Spectral Continuation Operator
+# 从复波动响应中学习 Wave-System Representation
 
-当前主线是：**从少量复波动 response views 中识别可复用的 wave-system representation**。
+> 仓库名 `spectral-continuation-operator` 是历史名称。当前研究主线已经从“直接做远频率延拓”推进到一个
+> 更基础的问题：**能否从少量复波动 response views 中识别可复用、可查询的隐藏波动系统表示？**
 
-2026-09-22 的新 POC 已从原来的窄频率延拓问题退回到底层表征学习：raw complex image、全局
-carrier 和低秩 Green completion 都不足；由归一化幅值与固定物理间距上的局部复相位增量构成的
-5-channel token，在 source 与 frequency 都不重叠的系统检索中达到 100% Top-1，并将隐藏介质系数
-恢复误差从 raw 的 **0.3588 ± 0.0120** 降到 **0.0504 ± 0.0008**。未见 ellipse geometry 上仍为
-0.0955，但 10 dB 噪声和强反射边界尚未通过。
+我们的核心发现很简单：完整复场不适合直接当作普通图片处理。绝对相位会随 source、frequency 和
+全局相位基准快速变化，但**归一化幅值与局部复相位增量**可以把“局部能量”和“局部传播”分开表示，
+从而更稳定地识别产生这些响应的物理系统。
 
-最新结果、传统理论与项目增量发现的严格区分、负结果和下一步 gate 见
-[波动场表征学习 POC 报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)；下一阶段冻结协议见
-[Wave-System Encoder 计划](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)。
+![波动场表征主结果](artifacts/wave_operator_representation/summary/wave_representation_main.png)
 
-以下 spectral calibration 内容保留为历史证据，而不是当前唯一主线。
+## 当前最强结果
 
-核心问题不是固定的 `20 Hz → 40 Hz` 映射，而是 few-shot spectral calibration：预训练
-模型提供跨实例共享的幅值和空间先验，固定稀疏阵列的短频率 sweep 辨识实例相关的 phase-sensitive
-latent state，连续 query operator 再回答 support 未覆盖的频率和空间位置。
+主实验在 160 个二维变速声学系统上进行，按介质严格划分 train / validation / test。检索任务的两组
+response views 在 source 和 frequency 上都不重叠；OOD 测试使用训练中未见过的 ellipse geometry。
 
-当前统一任务定义、应用原型、声明边界和强制报告规则见
-[研究记忆](docs/RESEARCH_MEMORY_ZH.md)。频率外推是主要 benchmark；新实例上的 latent operator
-calibration 才是 AI 任务；system identification 只解释 calibration 所恢复的内部状态。
-关于“哪些结论来自经典理论、哪些是项目在 AI 表征学习交叉处获得的增量证据”，见
-[谱可预测性、可辨识性与校准科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)。
+| 表示 | 跨视图系统检索 Top-1 | IID 介质恢复 RelL2 | OOD ellipse RelL2 |
+|---|---:|---:|---:|
+| Raw complex | 38.9% ± 2.0% | 0.3588 ± 0.0120 | 0.4637 ± 0.0279 |
+| Amplitude only | 61.1% ± 3.9% | 0.2478 ± 0.0071 | 0.4407 ± 0.0283 |
+| Amplitude + local phase advance | **100.0% ± 0.0%** | **0.0504 ± 0.0008** | **0.0955 ± 0.0020** |
 
-最新阶段首先诊断了原始 `74–80 Hz → 110 Hz` 长程设置：误差随传播距离和真实谱相位曲率
-显著增加，增加 pole 数、仿射多分量、Neural ODE 和局部曲率都不能突破可辨识性边界。随后在
-明确标注为 development calibration 的协议中，模型看 90–100 Hz、用 101–106 Hz 监督，冻结后
-查询 107–125 Hz。加入 64 维环境级表征和受限 hyper-carrier 后，110 Hz 三 seed raw complex
-RelL2 为 **0.4473 ± 0.0048**，phase coherence 为 **0.8603 ± 0.0020**，通过预设 gate。
-matched recurrence 为 0.4741，相近参数量 carrier-relative query U-Net 三 seed 为 0.6125；
-方法的优势集中在 107–112 Hz，113 Hz 后与 recurrence 发生交叉。
+相对 raw complex，结构化 token 将 IID 和 OOD 恢复误差分别降低 **86.0%** 和 **79.4%**。这支持的
+不是“相位不可迁移”，而是更精确的判断：
 
-当前结论是：从低频带估计相位不变的局部传播状态，确实比像素空间 query fitting 更适合
-频带外 continuation；误差仍随距离增长，因此还不能主张任意远频恢复。
+> **绝对相位难迁移；经过 gauge-invariant 局部化后，相位 advance 是很强的可迁移传播表征，并与
+> amplitude 互补。**
 
-最新 Actionable-horizon POC 将问题从“预测何时失败”推进为“执行前预测哪一个 sparse calibration
-action 真能降低未来完整场误差”。32 个 Ocean development environments、45 个等成本 actions 上，
-线性 value probe 的环境内 utility Spearman 为 0.624，实例打乱 control 显著失效；但 learned policy
-raw complex RelL2 为 0.5846，差于更简单的 risk-trigger 0.5720。expanded oracle 相对最佳固定 action
-只有 6.42% headroom，未过 10% paper-level gate。当前停止扩大 selector，后续若重启应先设计物理上
-信息子空间不同的 actions。
+![隐藏介质恢复示例](artifacts/wave_operator_representation/summary/wave_representation_examples.png)
 
-最新 Reliable-horizon Map POC 将问题进一步拆成“预测是否会失败”和“当前 calibration 是否能修复”。
-冻结 seed disagreement 在 Ocean 与 synthetic 上的 fixed-frequency AUROC 分别达到 0.906 和 0.960；
-4×8 空间 patch 的同一场内 AUROC 达到 0.945 和 0.921，并在 2×4 到 8×16 三个尺度上稳定。Ocean
-的一次 risk-triggered sparse calibration 将 macro raw complex RelL2 从 0.6314 降到 0.5720，优于
-最佳固定触发的 0.5920；但 repeated reset 没有继续降低误差，完整 sequential gate 未通过。当前最重要
-的新认识是：failure predictability 很强，不代表既定 action 具有足够 controllability。
+## 表示是什么
 
-最新的稀疏谱校准 POC 研究一个不同于同频稀疏重建的任务：给定完整 90--100 Hz，再用固定稀疏
-阵列扫描 101--106 Hz，预测完全无观测的 107--125 Hz。六频稳定 AR 状态在每频率 0.5% 传感器下
-将 107--112 Hz raw complex RelL2 从 0.4106 降至 0.3611，关闭 dense oracle gap 的 49.5%，且
-shuffled-instance control 明显恶化。结果主要来自相位改善，但 12.1% 相对收益没有通过预注册
-20% gate；这是机制级正结果，不是已完成的论文主方法。
+对每个复场 `u`，当前最小表示只有 5 个实通道：
 
-随后已补齐真正独立的 Ocean low/high fidelity：8-mode LF 在适用环境中约有 1.8--2.1 倍加速，但
-dense 101--106 Hz calibration oracle 在 107--112 Hz 只改善 15.69%，并随 horizon 快速衰减，未通过
-30% task gate。因此当前暂停神经 calibrator 训练；这也说明原先同一 high-fidelity archive 上的正结果
-不能直接外推到真实 solver gap。
+```text
+log-normalized amplitude,
+real/imag horizontal phase advance,
+real/imag vertical phase advance
+```
 
-最新的局部 token POC 进一步区分了“可表示”与“可预测”：8×16 patch span 的 oracle 很低，
-但学习自由局部复系数在 110 Hz 仅得到 0.6186，frequency-mask 辅助训练还会退化。把 token
-限制为 frozen hyper-pole 上的局部 carrier slope/curvature 修正后，110 Hz 从 0.4409 小幅降到
-0.4367（paired 95% CI 为正），但相对增益仅 0.97%，未通过方法 gate。当前不继续扩大 token、
-Transformer 或 mask 路线。
+相位增量直接由相邻位置的复共轭乘积计算，不做 phase unwrapping，不需要已知 source location、解析
+travel time 或 eikonal solver。低幅值区域使用 amplitude gate 抑制不可信相位；跨分辨率时，增量的
+offset 按固定物理距离而不是固定像素数定义。
 
-本仓库独立于 `APEX_repro_fsk`。旧仓库仅作为只读证据与数据生成器来源；所有新协议、代码、
-实验和 artifact 在这里维护。
+## 当前结论边界
 
-## 阅读顺序
+这是一项有力的 representation POC，**还不是完整的通用波动生成器**。
 
-如果只想了解当前状态，优先阅读新的波动场表征报告与下一阶段协议；其余是
-用于复核数字和研究决策的阶段档案。
+- 已成立：在当前二维 acoustic 数据上，该表示能跨 source、frequency 和未见 geometry 识别系统并恢复
+  隐藏空间结构；中高 SNR 下局部 phase 明显补充 amplitude。
+- 关键负结果：RBF 坐标插值、简单 eikonal demodulation 和少源 Nyström completion 的 complex error
+  接近或超过 1；直接预测未见 source-frequency 的完整复场仍约为 0.93--0.97。
+- 尚未通过：10 dB 噪声、partial / closed 强反射边界、真实部分观测、第二 PDE 数据域，以及可用精度的
+  unseen-query field generation。
+- 因而当前不主张“通用波动基础模型”或“任意远频率恢复”。
 
-1. [波动场表征学习 POC 报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)：最新任务、方法、正负结果、
-   OOD/噪声/分辨率边界和方向判断；
-2. [Wave-System Encoder 计划](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)：下一阶段顺序、gate 与
-   stop rules；
-3. [当前研究记忆](docs/RESEARCH_MEMORY_ZH.md)：统一任务、AI 定位、应用原型和不可越过的声明边界；
-4. [谱可预测性、可辨识性与校准科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)：
-   通俗理论基础、术语表、证据分层、实验可视化与长期 formulation；
-5. [Actionable-horizon POC 报告](reports/ACTIONABLE_HORIZON_POC_ZH.md)：动作价值、oracle headroom、
-   OOF value probe、强基线与停止判断；
-6. [Actionable-horizon 问题设定](docs/ACTIONABLE_HORIZON_POC_ZH.md)：状态、动作、utility、无泄漏协议
-   与阶段 gate；
-7. [Reliable-horizon Map 最终报告](reports/RELIABLE_HORIZON_MAP_FINAL_ZH.md)：两域实例与空间风险、
-   post-reset reliability、sequential error--cost frontier 和最终 gate；
-8. [Reliable-horizon Map POC](docs/RELIABLE_HORIZON_MAP_POC_ZH.md)：风险图、selective prediction、
-   sequential calibration、无泄漏协议和 go/no-go gate；
-9. [Reliable-horizon M0 报告](reports/RELIABLE_HORIZON_MAP_M0_ZH.md)：两个数据域的真实 horizon
-   标签、阈值敏感性、可视化与 M1 决策；
-10. [Reliable-horizon M1 报告](reports/RELIABLE_HORIZON_MAP_M1_ZH.md)：target-free disagreement、
-   fixed-frequency 实例辨别、可靠性校准、跨域结果和 M2 决策；
-11. [Reliable-horizon M2a 报告](reports/RELIABLE_HORIZON_MAP_M2A_ZH.md)：matched-cost 自适应触发、
-   permutation/shuffled controls、oracle gap 与 repeated-reset 决策；
-12. [Few-shot Spectral Calibration POC](docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)：独立 fidelity、
-   最小方法阶梯、baseline、预算和 gate；
-13. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
-   复谱状态、三 seed 正式结果和 NO-GO 判定；
-14. [局部复谱 Token POC](reports/LOCAL_SPECTRAL_TOKEN_POC_ZH.md)：自由 local-span、masked
-   reconstruction 和受限 carrier-token 的结果与停止判断；
-15. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
-   证据合并、子空间旋转、patch token oracle 以及 masked representation 下一步；
-16. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
-   最终协议、三 seed 结果和结论边界；
-17. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
-18. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
-   文献定位和失败归因；
-19. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
-20. [Ocean 独立 solver 审计](reports/OCEAN_MULTIFIDELITY_SOLVER_AUDIT_ZH.md)：真实 low/high fidelity
-    的 lineage、成本与适用边界；
-21. [独立多保真 Calibration Gate](reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)：P0 oracle 结果、
-    NO-GO 归因与后续停止线。
-22. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
-23. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
-24. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
+## 接下来只推进三个 gate
 
-## 代码入口
+1. **共享 set encoder**：用同一组参数处理可变 source、frequency 和 spatial masks，消除固定通道拼接
+   带来的预算混淆。
+2. **多尺度物理 phase advance**：优先解决跨分辨率、噪声和强反射边界；暂不叠加额外 physics loss。
+3. **Oracle decoder gate**：先验证真实介质到 unseen response 的 decoder 能否低于 0.30 complex RelL2；
+   gate 未过，不训练端到端生成模型。
 
-- `spectral_continuation.wave_operator_data`：多源、多频 system-major 数据生成；
-- `spectral_continuation.audit_wave_operator_representation`：RBF、reciprocity metric、Nyström 与 view-rank M0；
-- `spectral_continuation.train_wave_operator_identifier`：missing source--frequency block 的完整复场负对照；
-- `spectral_continuation.train_wave_operator_contrastive`：跨 source、跨 frequency system representation；
-- `spectral_continuation.train_wave_medium_probe`：hidden-medium spatial sufficiency、budget 与 noise training；
-- `spectral_continuation.evaluate_wave_medium_ood`：geometry、noise、resolution 和 boundary stress tests；
-- `spectral_continuation.summarize_wave_representation_poc`：正文图、汇总表与机器可读 summary；
-- `spectral_continuation.audit_baselines`：training-free identifiability 与线性对照；
-- `spectral_continuation.train_stage1`：固定目标 matched 对照；
-- `spectral_continuation.train_query_operator`：连续查询 M0/M1；
-- `spectral_continuation.evaluate_horizon`：冻结 checkpoint 的一次性新频率评估；
-- `spectral_continuation.summarize_query`：逐环境 paired 统计与正文图。
-- `spectral_continuation.train_representation_poc`：matched image、delay 与稳定谱状态模型；
-- `spectral_continuation.evaluate_prony_poc`：有限秩复谱状态 existence probe；
-- `spectral_continuation.summarize_representation_poc`：POC 汇总与图表。
-- `spectral_continuation.evaluate_representation_checkpoint`：冻结连续谱状态在独立查询数据上的评测；
-- `spectral_continuation.summarize_continuous_state`：跨 seed 频率曲线、机制指标与正文图。
-- `spectral_continuation.oracle_spectral_diagnostics`：低频可辨识性与 representation oracle。
-- `spectral_continuation.analyze_error_mechanism`：按距离、干涉节点和谱曲率归因误差。
-- `spectral_continuation.summarize_fractional_evaluations`：独立非整数频率评测汇总。
-- `spectral_continuation.diagnose_global_subspace`：全局/局部复数子空间与 masked-frequency oracle。
-- `spectral_continuation.summarize_global_subspace`：子空间旋转、局部性与容量权衡图。
-- `spectral_continuation.summarize_token_poc`：局部 token POC 曲线与逐环境 paired 统计。
-- `spectral_continuation.train_ar_calibrator`：不用 future labels 训练稀疏宽带稳定谱状态校准器。
-- `spectral_continuation.evaluate_ar_calibration`：冻结模型的预算、mask、horizon 与负对照评测。
-- `spectral_continuation.summarize_sparse_calibration`：跨 seed 聚合、paired 统计和正文图。
-- `spectral_continuation.audit_ocean_multifidelity_solver`：独立 Ocean LF/HF 的成本、质量与 lineage 审计。
-- `spectral_continuation.generate_ocean_multifidelity_pilot`：生成正式 paired-fidelity 双 archive。
-- `spectral_continuation.paired_fidelity_oracle_audit`：无 query 泄漏的 dense calibration task gate。
-- `spectral_continuation.paired_fidelity_protocol`：实例级 split、来源校验、episodic support/query 协议。
-- `spectral_continuation.evaluate_spatial_horizon_risk`：跨尺度 patch-level failure map。
-- `spectral_continuation.evaluate_calibrated_state_risk`：reset 后状态的 target-free risk。
-- `spectral_continuation.evaluate_repeated_calibration`：fixed/random/adaptive/oracle error--cost frontier。
-- `spectral_continuation.evaluate_actionable_horizon`：反事实 action table、OOF value probe、action regret
-  与 shuffled-instance control。
-- `spectral_continuation.evaluate_ensemble_mixture_calibration`：无需训练的复数 ensemble calibration。
-- `spectral_continuation.summarize_reliable_horizon_final`：Reliable-horizon POC 总结图。
+之后才进入 encoder--decoder cascade、真实部分观测和第二独立物理域。
 
-主指标始终是逐物理环境等权的 raw complex relative L2；幅值、圆周相位误差与 coherence
-只用于机制诊断，不用于替换主指标。
+## 推荐阅读顺序
+
+1. [当前状态：一页式结论与决策](docs/CURRENT_STATUS_ZH.md) — 五分钟了解现在做到哪里、相信什么、
+   下一步为何这样做；
+2. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
+   stress tests 与声明边界；
+3. [下一阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 顺序、gates 和 stop rules；
+4. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
+   可预测性和可辨识性的通俗解释；
+5. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
+   关键正负结论与原始证据入口。
+
+具体命令、数据 hash 和旧实验参数统一放在[复现档案](docs/REPRODUCIBILITY_ZH.md)，不再占据主页。
+按目录浏览时可使用 [docs 导航](docs/README.md) 和 [reports 导航](reports/README.md)。
+
+## 当前代码入口
+
+```text
+src/spectral_continuation/wave_operator_data.py
+src/spectral_continuation/audit_wave_operator_representation.py
+src/spectral_continuation/train_wave_operator_identifier.py
+src/spectral_continuation/train_wave_operator_contrastive.py
+src/spectral_continuation/train_wave_medium_probe.py
+src/spectral_continuation/evaluate_wave_medium_ood.py
+src/spectral_continuation/summarize_wave_representation_poc.py
+```
+
+代码按 `active / supporting / archived` 的完整分类见
+[源码索引](src/spectral_continuation/README.md)，配置分类见 [configs/README.md](configs/README.md)，artifact
+分类见 [artifacts/README.md](artifacts/README.md)。历史文件暂不物理移动，以免破坏 checkpoint、manifest
+和旧报告中的复现路径；它们已从当前接口中明确冻结。
+
+## 最小复核
+
+```bash
+python -m venv .venv
+.venv/bin/pip install -e '.[dev]'
+PYTHONPATH=src .venv/bin/python -m pytest -q
+.venv/bin/ruff check src tests
+```
+
+本仓库独立于 `APEX_repro_fsk`。旧仓库只作为原始论文、历史代码和数据来源；新方向的协议、实验与
+结论均以本仓库为准。
