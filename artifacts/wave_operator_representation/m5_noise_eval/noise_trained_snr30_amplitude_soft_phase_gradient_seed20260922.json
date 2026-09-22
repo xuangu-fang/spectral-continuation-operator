@@ -1,0 +1,11 @@
+{
+  "representation": "amplitude_soft_phase_gradient",
+  "seed": 20260922,
+  "source_count": 6,
+  "evaluation_set": "noise_trained",
+  "snr_db": 30.0,
+  "contrast_rel_l2_mean": 0.10598936676979065,
+  "contrast_rel_l2_std": 0.04986072704195976,
+  "inclusion_iou_mean": 0.9863656396351436,
+  "pixel_correlation_mean": 0.9922678987891693
+}

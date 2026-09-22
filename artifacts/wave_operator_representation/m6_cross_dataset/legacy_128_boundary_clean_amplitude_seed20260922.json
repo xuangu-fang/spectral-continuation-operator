@@ -1,0 +1,11 @@
+{
+  "representation": "amplitude",
+  "seed": 20260922,
+  "source_count": 6,
+  "evaluation_set": "legacy_128_boundary",
+  "snr_db": null,
+  "contrast_rel_l2_mean": 0.7222503423690796,
+  "contrast_rel_l2_std": 0.12406645715236664,
+  "inclusion_iou_mean": 0.5061410972466421,
+  "pixel_correlation_mean": 0.679483510398345
+}

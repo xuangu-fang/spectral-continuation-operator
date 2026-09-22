@@ -1,0 +1,40 @@
+{
+  "experiment": "wave_operator_representation_poc",
+  "seed": 20260922,
+  "data": {
+    "grid": 64,
+    "media": 160,
+    "sources": [
+      [0.50, 0.28],
+      [0.30, 0.30],
+      [0.70, 0.30],
+      [0.40, 0.55],
+      [0.60, 0.50],
+      [0.25, 0.60],
+      [0.75, 0.62],
+      [0.50, 0.72],
+      [0.35, 0.45]
+    ],
+    "frequency_band": [6.0, 24.0],
+    "frequencies": 8,
+    "duration": 4.0,
+    "peak_frequency": 12.0,
+    "boundary_absorption": 40.0,
+    "scatterer_fraction": [0.03, 0.22],
+    "scatterer_contrast": [0.20, 0.60],
+    "split": {"train": 112, "validation": 24, "test": 24}
+  },
+  "episode": {
+    "low_frequency_indices": [0, 1, 2, 3],
+    "high_frequency_indices": [4, 5, 6, 7],
+    "context_source_indices": [0, 1, 2, 3, 4, 5],
+    "query_source_indices": [6, 7, 8],
+    "context": "all sources at low frequencies plus context sources at high frequencies",
+    "query": "the missing query-source by high-frequency block"
+  },
+  "gates": {
+    "representation_existence": "at least 15% relative improvement over a matched raw-field model on held-out media",
+    "operator_query": "test complex RelL2 below 0.75 on the missing source-frequency block",
+    "robustness": "positive direction for every held-out query source and high frequency"
+  }
+}

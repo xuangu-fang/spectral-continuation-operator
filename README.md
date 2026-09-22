@@ -1,7 +1,18 @@
 # Spectral Continuation Operator
 
-从廉价模拟先验和少量测试时观测中辨识新物理实例的谱响应算子，并在完全无观测的条件上查询
-复杂波场。
+当前主线是：**从少量复波动 response views 中识别可复用的 wave-system representation**。
+
+2026-09-22 的新 POC 已从原来的窄频率延拓问题退回到底层表征学习：raw complex image、全局
+carrier 和低秩 Green completion 都不足；由归一化幅值与固定物理间距上的局部复相位增量构成的
+5-channel token，在 source 与 frequency 都不重叠的系统检索中达到 100% Top-1，并将隐藏介质系数
+恢复误差从 raw 的 **0.3588 ± 0.0120** 降到 **0.0504 ± 0.0008**。未见 ellipse geometry 上仍为
+0.0955，但 10 dB 噪声和强反射边界尚未通过。
+
+最新结果、传统理论与项目增量发现的严格区分、负结果和下一步 gate 见
+[波动场表征学习 POC 报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)；下一阶段冻结协议见
+[Wave-System Encoder 计划](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)。
+
+以下 spectral calibration 内容保留为历史证据，而不是当前唯一主线。
 
 核心问题不是固定的 `20 Hz → 40 Hz` 映射，而是 few-shot spectral calibration：预训练
 模型提供跨实例共享的幅值和空间先验，固定稀疏阵列的短频率 sweep 辨识实例相关的 phase-sensitive
@@ -60,50 +71,61 @@ Transformer 或 mask 路线。
 
 ## 阅读顺序
 
-如果只想了解当前状态，优先阅读前三份：研究记忆、科学备忘录、Actionable-horizon 最新报告；其余是
+如果只想了解当前状态，优先阅读新的波动场表征报告与下一阶段协议；其余是
 用于复核数字和研究决策的阶段档案。
 
-1. [当前研究记忆](docs/RESEARCH_MEMORY_ZH.md)：统一任务、AI 定位、应用原型和不可越过的声明边界；
-2. [谱可预测性、可辨识性与校准科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)：
+1. [波动场表征学习 POC 报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)：最新任务、方法、正负结果、
+   OOD/噪声/分辨率边界和方向判断；
+2. [Wave-System Encoder 计划](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)：下一阶段顺序、gate 与
+   stop rules；
+3. [当前研究记忆](docs/RESEARCH_MEMORY_ZH.md)：统一任务、AI 定位、应用原型和不可越过的声明边界；
+4. [谱可预测性、可辨识性与校准科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)：
    通俗理论基础、术语表、证据分层、实验可视化与长期 formulation；
-3. [Actionable-horizon POC 报告](reports/ACTIONABLE_HORIZON_POC_ZH.md)：动作价值、oracle headroom、
+5. [Actionable-horizon POC 报告](reports/ACTIONABLE_HORIZON_POC_ZH.md)：动作价值、oracle headroom、
    OOF value probe、强基线与停止判断；
-4. [Actionable-horizon 问题设定](docs/ACTIONABLE_HORIZON_POC_ZH.md)：状态、动作、utility、无泄漏协议
+6. [Actionable-horizon 问题设定](docs/ACTIONABLE_HORIZON_POC_ZH.md)：状态、动作、utility、无泄漏协议
    与阶段 gate；
-5. [Reliable-horizon Map 最终报告](reports/RELIABLE_HORIZON_MAP_FINAL_ZH.md)：两域实例与空间风险、
+7. [Reliable-horizon Map 最终报告](reports/RELIABLE_HORIZON_MAP_FINAL_ZH.md)：两域实例与空间风险、
    post-reset reliability、sequential error--cost frontier 和最终 gate；
-6. [Reliable-horizon Map POC](docs/RELIABLE_HORIZON_MAP_POC_ZH.md)：风险图、selective prediction、
+8. [Reliable-horizon Map POC](docs/RELIABLE_HORIZON_MAP_POC_ZH.md)：风险图、selective prediction、
    sequential calibration、无泄漏协议和 go/no-go gate；
-7. [Reliable-horizon M0 报告](reports/RELIABLE_HORIZON_MAP_M0_ZH.md)：两个数据域的真实 horizon
+9. [Reliable-horizon M0 报告](reports/RELIABLE_HORIZON_MAP_M0_ZH.md)：两个数据域的真实 horizon
    标签、阈值敏感性、可视化与 M1 决策；
-8. [Reliable-horizon M1 报告](reports/RELIABLE_HORIZON_MAP_M1_ZH.md)：target-free disagreement、
+10. [Reliable-horizon M1 报告](reports/RELIABLE_HORIZON_MAP_M1_ZH.md)：target-free disagreement、
    fixed-frequency 实例辨别、可靠性校准、跨域结果和 M2 决策；
-9. [Reliable-horizon M2a 报告](reports/RELIABLE_HORIZON_MAP_M2A_ZH.md)：matched-cost 自适应触发、
+11. [Reliable-horizon M2a 报告](reports/RELIABLE_HORIZON_MAP_M2A_ZH.md)：matched-cost 自适应触发、
    permutation/shuffled controls、oracle gap 与 repeated-reset 决策；
-10. [Few-shot Spectral Calibration POC](docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)：独立 fidelity、
+12. [Few-shot Spectral Calibration POC](docs/FEW_SHOT_SPECTRAL_CALIBRATION_POC_ZH.md)：独立 fidelity、
    最小方法阶梯、baseline、预算和 gate；
-11. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
+13. [稀疏谱校准 POC](reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)：新任务、两频失败、六频稳定
    复谱状态、三 seed 正式结果和 NO-GO 判定；
-12. [局部复谱 Token POC](reports/LOCAL_SPECTRAL_TOKEN_POC_ZH.md)：自由 local-span、masked
+14. [局部复谱 Token POC](reports/LOCAL_SPECTRAL_TOKEN_POC_ZH.md)：自由 local-span、masked
    reconstruction 和受限 carrier-token 的结果与停止判断；
-13. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
+15. [全局隐空间与局部 token 诊断](reports/GLOBAL_LATENT_DIAGNOSTIC_ZH.md)：与同目录低秩项目的
    证据合并、子空间旋转、patch token oracle 以及 masked representation 下一步；
-14. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
+16. [连续谱生成器 Gate 报告](reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)：最新诊断、方法搜索、
    最终协议、三 seed 结果和结论边界；
-15. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
-16. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
+17. [连续复谱状态](docs/CONTINUOUS_SPECTRAL_STATE_ZH.md)：上一阶段 pole–residue 方法与稠密协议；
+18. [震荡复数场表征学习 POC](docs/OSCILLATORY_REPRESENTATION_POC_ZH.md)：离散谱状态的起点、
    文献定位和失败归因；
-17. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
-18. [Ocean 独立 solver 审计](reports/OCEAN_MULTIFIDELITY_SOLVER_AUDIT_ZH.md)：真实 low/high fidelity
+19. [第一阶段中文主报告](reports/STAGE1_REPORT_ZH.md)：谱连续任务的 M1 结果与 go/no-go；
+20. [Ocean 独立 solver 审计](reports/OCEAN_MULTIFIDELITY_SOLVER_AUDIT_ZH.md)：真实 low/high fidelity
     的 lineage、成本与适用边界；
-19. [独立多保真 Calibration Gate](reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)：P0 oracle 结果、
+21. [独立多保真 Calibration Gate](reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md)：P0 oracle 结果、
     NO-GO 归因与后续停止线。
-20. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
-21. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
-22. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
+22. [复现说明](docs/REPRODUCIBILITY_ZH.md)：数据身份、命令和泄漏防护；
+23. [APEX/APEX-H 冻结证据](docs/APEX_LEGACY_EVIDENCE_ZH.md)：旧结果可保留与不可保留的主张；
+24. [实验前阶段计划](docs/STAGE1_PLAN_ZH.md)：用于核对哪些判断是在看结果前提出的。
 
 ## 代码入口
 
+- `spectral_continuation.wave_operator_data`：多源、多频 system-major 数据生成；
+- `spectral_continuation.audit_wave_operator_representation`：RBF、reciprocity metric、Nyström 与 view-rank M0；
+- `spectral_continuation.train_wave_operator_identifier`：missing source--frequency block 的完整复场负对照；
+- `spectral_continuation.train_wave_operator_contrastive`：跨 source、跨 frequency system representation；
+- `spectral_continuation.train_wave_medium_probe`：hidden-medium spatial sufficiency、budget 与 noise training；
+- `spectral_continuation.evaluate_wave_medium_ood`：geometry、noise、resolution 和 boundary stress tests；
+- `spectral_continuation.summarize_wave_representation_poc`：正文图、汇总表与机器可读 summary；
 - `spectral_continuation.audit_baselines`：training-free identifiability 与线性对照；
 - `spectral_continuation.train_stage1`：固定目标 matched 对照；
 - `spectral_continuation.train_query_operator`：连续查询 M0/M1；

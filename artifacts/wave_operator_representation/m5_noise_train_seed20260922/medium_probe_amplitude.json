@@ -1,0 +1,50 @@
+{
+  "representation": "amplitude",
+  "source_count": 6,
+  "train_snr_db": 20.0,
+  "seed": 20260922,
+  "steps": 3000,
+  "parameters": 1204033,
+  "selected_threshold": 0.09999999999999999,
+  "test_contrast_rel_l2_mean": 0.2644537687301636,
+  "test_inclusion_iou_mean": 0.9092702234856596,
+  "test_pixel_correlation_mean": 0.9566529387589991,
+  "elapsed_seconds": 35.202600955963135,
+  "history": [
+    {
+      "step": 1,
+      "loss": 0.11206666380167007,
+      "validation_rel_l2": 2.06777286529541
+    },
+    {
+      "step": 500,
+      "loss": 0.003929704427719116,
+      "validation_rel_l2": 0.3849351406097412
+    },
+    {
+      "step": 1000,
+      "loss": 0.00018965797789860517,
+      "validation_rel_l2": 0.28227266669273376
+    },
+    {
+      "step": 1500,
+      "loss": 2.5863009796012193e-05,
+      "validation_rel_l2": 0.2807263135910034
+    },
+    {
+      "step": 2000,
+      "loss": 2.352795490878634e-05,
+      "validation_rel_l2": 0.28329557180404663
+    },
+    {
+      "step": 2500,
+      "loss": 2.0967996533727273e-05,
+      "validation_rel_l2": 0.2845970690250397
+    },
+    {
+      "step": 3000,
+      "loss": 1.9576917111407965e-05,
+      "validation_rel_l2": 0.28478148579597473
+    }
+  ]
+}

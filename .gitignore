@@ -16,6 +16,12 @@ artifacts/**/*.pth
 artifacts/**/*.ckpt
 artifacts/**/*.npz
 artifacts/**/*.npy
+# Per-case matrices and failed exploratory contrastive runs remain local; the
+# frozen JSON summaries and paper figures are versioned.
+artifacts/**/*_records.csv
+artifacts/**/*_similarity.csv
+artifacts/wave_operator_representation/m2_contrastive/
+artifacts/wave_operator_representation/m2_contrastive_seed*/
 experiments/runs/
 experiments/dense_evaluation/
 experiments/diagnostics/

@@ -1,0 +1,10 @@
+{
+  "representation": "amplitude_phase_gradient",
+  "seed": 20260924,
+  "source_count": 6,
+  "geometry_family": "ellipses",
+  "contrast_rel_l2_mean": 0.09839603304862976,
+  "contrast_rel_l2_std": 0.04314109683036804,
+  "inclusion_iou_mean": 0.9868934747336849,
+  "pixel_correlation_mean": 0.9935903236018113
+}

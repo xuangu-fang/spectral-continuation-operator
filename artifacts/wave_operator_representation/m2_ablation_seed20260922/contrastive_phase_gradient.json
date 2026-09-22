@@ -1,0 +1,77 @@
+{
+  "representation": "phase_gradient",
+  "seed": 20260922,
+  "steps": 2500,
+  "parameters": 319297,
+  "test_systems": 24,
+  "chance_top1": 0.041666666666666664,
+  "test_top1": 1.0,
+  "test_top5": 1.0,
+  "test_mean_reciprocal_rank": 1.0,
+  "test_same_system_cosine": 0.9426000118255615,
+  "test_different_system_cosine": 0.00975647009909153,
+  "test_cosine_margin": 0.9328435659408569,
+  "elapsed_seconds": 68.75601243972778,
+  "history": [
+    {
+      "step": 1,
+      "loss": 3.785654067993164,
+      "top1": 0.08333333333333333,
+      "top5": 0.20833333333333334,
+      "mean_reciprocal_rank": 0.20036263377077246,
+      "same_system_cosine": 0.9071850776672363,
+      "different_system_cosine": 0.9025238752365112,
+      "cosine_margin": 0.004661202430725098
+    },
+    {
+      "step": 500,
+      "loss": 0.04964063689112663,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9441285133361816,
+      "different_system_cosine": -0.006630368530750275,
+      "cosine_margin": 0.9507588744163513
+    },
+    {
+      "step": 1000,
+      "loss": 0.018305381760001183,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9537671208381653,
+      "different_system_cosine": 0.003654599655419588,
+      "cosine_margin": 0.950112521648407
+    },
+    {
+      "step": 1500,
+      "loss": 0.010443680919706821,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9556074142456055,
+      "different_system_cosine": 0.008765965700149536,
+      "cosine_margin": 0.9468414783477783
+    },
+    {
+      "step": 2000,
+      "loss": 0.01521947793662548,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9543485641479492,
+      "different_system_cosine": -0.00665258476510644,
+      "cosine_margin": 0.9610011577606201
+    },
+    {
+      "step": 2500,
+      "loss": 0.010796884074807167,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9535596966743469,
+      "different_system_cosine": -0.010650481097400188,
+      "cosine_margin": 0.9642101526260376
+    }
+  ]
+}

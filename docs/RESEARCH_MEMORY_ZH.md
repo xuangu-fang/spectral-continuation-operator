@@ -220,3 +220,34 @@ acquisition，应学习 value-of-calibration 或 actionable uncertainty，而不
 至少 10% fixed-to-oracle headroom，才训练 action-conditioned representation。详细协议和结果见
 [Actionable Horizon POC](ACTIONABLE_HORIZON_POC_ZH.md)与
 [第一阶段报告](../reports/ACTIONABLE_HORIZON_POC_ZH.md)。
+
+## 12. 波动场表征学习阶段结论
+
+2026-09-22 项目从窄的 spectral continuation 暂时退回更底层的 wave-system representation。新任务是：
+只给同一未知系统的部分 source--frequency response views，学习一个能跨不重叠 source 和 frequency
+保持 system identity、并支持隐藏系数恢复的表示。
+
+必须长期保留的结果是：
+
+1. 新数据包含 160 个独立介质、9 个源、8 个频率；split 严格按介质，112/24/24；
+2. 普通 source--frequency RBF、oracle eikonal 后的坐标插值和 6-source Nyström 均约为 1.0 error；
+3. 物理 metric 修正可把 reciprocity error 从约 0.84 降到 $2.1\times10^{-6}$，但没有令 Green
+   completion 变成低秩；
+4. 在 source 与 frequency 均不重叠的 24-way system retrieval 中，raw / amplitude / 5-channel token
+   的三 seed Top-1 分别为 38.9% / 61.1% / 100%；随机为 4.17%；
+5. 5-channel token 由 log amplitude 与横纵局部复相位增量组成，不需要 source location、travel time
+   或 phase unwrapping；
+6. 隐藏介质 contrast recovery 的三 seed RelL2 从 raw 的 0.3588 降到 0.0504，ellipse OOD 从
+   0.4637 降到 0.0955；
+7. unit-normalized phase increment 对噪声敏感；amplitude-gated soft coherence 配合 20 dB noise training
+   在 clean/30/20 dB 分别为 0.110/0.106/0.093，但 10 dB 退化到 1.282；
+8. phase increment 必须按固定物理距离定义。修正后 64→128 open-boundary error 为 0.357，但
+   partial/closed 仍为 0.614/0.637，说明强多路径需要 multi-scale 或 multi-branch token；
+9. 完整 missing-block complex field generation 尚未通过：raw context、carrier context 和 oracle medium
+   decoder 均约 0.93--0.97。因此当前正结果是 representation / identification，不是高频生成成功。
+
+新的核心判断是：**绝对 phase 难迁移，但局部 phase advance 可以迁移；它与 amplitude 组合后构成比
+raw complex image 更合适的波动场表示。** 下一步先做 shared set encoder、固定物理尺度的 multi-scale
+phase token 与公平预算曲线；oracle query decoder 低于 0.30 之前，不训练端到端生成模型。完整结果见
+[波动场表征学习 POC 报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)，冻结协议见
+[Wave-System Encoder 计划](WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)。

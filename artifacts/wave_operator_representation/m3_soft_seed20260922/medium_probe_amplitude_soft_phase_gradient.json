@@ -1,0 +1,49 @@
+{
+  "representation": "amplitude_soft_phase_gradient",
+  "source_count": 6,
+  "seed": 20260922,
+  "steps": 3000,
+  "parameters": 1231681,
+  "selected_threshold": 0.10999999999999999,
+  "test_contrast_rel_l2_mean": 0.06177762150764465,
+  "test_inclusion_iou_mean": 0.9933153715768271,
+  "test_pixel_correlation_mean": 0.9968385638549554,
+  "elapsed_seconds": 46.693809270858765,
+  "history": [
+    {
+      "step": 1,
+      "loss": 0.1397915482521057,
+      "validation_rel_l2": 2.5098233222961426
+    },
+    {
+      "step": 500,
+      "loss": 0.0003515715943649411,
+      "validation_rel_l2": 0.13231302797794342
+    },
+    {
+      "step": 1000,
+      "loss": 5.527075700229034e-05,
+      "validation_rel_l2": 0.07751008123159409
+    },
+    {
+      "step": 1500,
+      "loss": 3.927004217985086e-05,
+      "validation_rel_l2": 0.06727384775876999
+    },
+    {
+      "step": 2000,
+      "loss": 2.4321147066075355e-05,
+      "validation_rel_l2": 0.06595960259437561
+    },
+    {
+      "step": 2500,
+      "loss": 1.594351851963438e-05,
+      "validation_rel_l2": 0.06105366349220276
+    },
+    {
+      "step": 3000,
+      "loss": 1.3699156625079922e-05,
+      "validation_rel_l2": 0.059932857751846313
+    }
+  ]
+}

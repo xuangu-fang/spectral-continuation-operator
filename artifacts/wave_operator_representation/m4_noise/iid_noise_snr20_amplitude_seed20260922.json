@@ -1,0 +1,11 @@
+{
+  "representation": "amplitude",
+  "seed": 20260922,
+  "source_count": 6,
+  "evaluation_set": "iid_noise",
+  "snr_db": 20.0,
+  "contrast_rel_l2_mean": 0.3341201841831207,
+  "contrast_rel_l2_std": 0.12494412809610367,
+  "inclusion_iou_mean": 0.8769200168985026,
+  "pixel_correlation_mean": 0.935761598068288
+}

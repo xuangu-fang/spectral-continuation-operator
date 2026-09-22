@@ -1,0 +1,11 @@
+{
+  "representation": "amplitude_phase_gradient",
+  "seed": 20260922,
+  "source_count": 6,
+  "evaluation_set": "iid_noise",
+  "snr_db": 0.0,
+  "contrast_rel_l2_mean": 2.6315081119537354,
+  "contrast_rel_l2_std": 1.7988351583480835,
+  "inclusion_iou_mean": 0.1822981436121931,
+  "pixel_correlation_mean": 0.26462526594190366
+}

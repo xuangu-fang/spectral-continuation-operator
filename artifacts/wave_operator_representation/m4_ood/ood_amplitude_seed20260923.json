@@ -1,0 +1,10 @@
+{
+  "representation": "amplitude",
+  "seed": 20260923,
+  "source_count": 6,
+  "geometry_family": "ellipses",
+  "contrast_rel_l2_mean": 0.4193074703216553,
+  "contrast_rel_l2_std": 0.09590494632720947,
+  "inclusion_iou_mean": 0.7902452311958892,
+  "pixel_correlation_mean": 0.8869891441954345
+}

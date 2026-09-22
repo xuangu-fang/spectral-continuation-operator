@@ -1,0 +1,77 @@
+{
+  "representation": "phase_space",
+  "seed": 20260922,
+  "steps": 2500,
+  "parameters": 321697,
+  "test_systems": 24,
+  "chance_top1": 0.041666666666666664,
+  "test_top1": 1.0,
+  "test_top5": 1.0,
+  "test_mean_reciprocal_rank": 1.0,
+  "test_same_system_cosine": 0.9425808787345886,
+  "test_different_system_cosine": 0.012113421224057674,
+  "test_cosine_margin": 0.9304674863815308,
+  "elapsed_seconds": 91.27556324005127,
+  "history": [
+    {
+      "step": 1,
+      "loss": 3.776388645172119,
+      "top1": 0.08333333333333333,
+      "top5": 0.3333333333333333,
+      "mean_reciprocal_rank": 0.22226974103972186,
+      "same_system_cosine": 0.9709253311157227,
+      "different_system_cosine": 0.96912682056427,
+      "cosine_margin": 0.0017985105514526367
+    },
+    {
+      "step": 500,
+      "loss": 0.01564100943505764,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9591572880744934,
+      "different_system_cosine": 0.028508245944976807,
+      "cosine_margin": 0.9306490421295166
+    },
+    {
+      "step": 1000,
+      "loss": 0.010745717212557793,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9601413607597351,
+      "different_system_cosine": 0.01434832438826561,
+      "cosine_margin": 0.9457930326461792
+    },
+    {
+      "step": 1500,
+      "loss": 0.006640308070927858,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9600898623466492,
+      "different_system_cosine": 0.010796661488711834,
+      "cosine_margin": 0.9492931962013245
+    },
+    {
+      "step": 2000,
+      "loss": 0.006729344837367535,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.9585587382316589,
+      "different_system_cosine": 0.00022475270088762045,
+      "cosine_margin": 0.9583339691162109
+    },
+    {
+      "step": 2500,
+      "loss": 0.005664972122758627,
+      "top1": 1.0,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "same_system_cosine": 0.957680881023407,
+      "different_system_cosine": -0.009511655196547508,
+      "cosine_margin": 0.967192530632019
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "representation": "raw",
+  "seed": 20260922,
+  "source_count": 6,
+  "evaluation_set": "legacy_128_boundary",
+  "snr_db": null,
+  "contrast_rel_l2_mean": 0.9462625980377197,
+  "contrast_rel_l2_std": 0.14257630705833435,
+  "inclusion_iou_mean": 0.17219829665091693,
+  "pixel_correlation_mean": 0.1924969731552417
+}

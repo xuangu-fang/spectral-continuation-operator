@@ -1,0 +1,77 @@
+{
+  "representation": "homogeneous_carrier",
+  "seed": 20260922,
+  "steps": 2500,
+  "parameters": 317697,
+  "test_systems": 24,
+  "chance_top1": 0.041666666666666664,
+  "test_top1": 0.5416666666666666,
+  "test_top5": 0.9583333333333334,
+  "test_mean_reciprocal_rank": 0.7161706349206348,
+  "test_same_system_cosine": 0.7473878860473633,
+  "test_different_system_cosine": 0.0889957919716835,
+  "test_cosine_margin": 0.658392071723938,
+  "elapsed_seconds": 53.05276966094971,
+  "history": [
+    {
+      "step": 1,
+      "loss": 4.053670406341553,
+      "top1": 0.041666666666666664,
+      "top5": 0.20833333333333334,
+      "mean_reciprocal_rank": 0.15598833725831807,
+      "same_system_cosine": 0.9042253494262695,
+      "different_system_cosine": 0.8964061141014099,
+      "cosine_margin": 0.00781923532485962
+    },
+    {
+      "step": 500,
+      "loss": 0.5169888734817505,
+      "top1": 0.5416666666666666,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 0.7118055555555555,
+      "same_system_cosine": 0.7946193218231201,
+      "different_system_cosine": 0.21159249544143677,
+      "cosine_margin": 0.5830268263816833
+    },
+    {
+      "step": 1000,
+      "loss": 0.15858179330825806,
+      "top1": 0.7083333333333334,
+      "top5": 1.0,
+      "mean_reciprocal_rank": 0.8125,
+      "same_system_cosine": 0.7749664187431335,
+      "different_system_cosine": 0.1169922724366188,
+      "cosine_margin": 0.657974123954773
+    },
+    {
+      "step": 1500,
+      "loss": 0.10898548364639282,
+      "top1": 0.6666666666666666,
+      "top5": 0.9166666666666666,
+      "mean_reciprocal_rank": 0.7563492063492063,
+      "same_system_cosine": 0.701262891292572,
+      "different_system_cosine": 0.017418142408132553,
+      "cosine_margin": 0.6838447451591492
+    },
+    {
+      "step": 2000,
+      "loss": 0.07361147552728653,
+      "top1": 0.625,
+      "top5": 0.9583333333333334,
+      "mean_reciprocal_rank": 0.7427579365079365,
+      "same_system_cosine": 0.7097446322441101,
+      "different_system_cosine": 0.057521287351846695,
+      "cosine_margin": 0.6522233486175537
+    },
+    {
+      "step": 2500,
+      "loss": 0.07510966807603836,
+      "top1": 0.625,
+      "top5": 0.9166666666666666,
+      "mean_reciprocal_rank": 0.7385416666666668,
+      "same_system_cosine": 0.6943171620368958,
+      "different_system_cosine": 0.028071511536836624,
+      "cosine_margin": 0.6662456393241882
+    }
+  ]
+}

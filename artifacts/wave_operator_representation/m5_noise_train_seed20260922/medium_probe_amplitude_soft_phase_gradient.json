@@ -1,0 +1,50 @@
+{
+  "representation": "amplitude_soft_phase_gradient",
+  "source_count": 6,
+  "train_snr_db": 20.0,
+  "seed": 20260922,
+  "steps": 3000,
+  "parameters": 1231681,
+  "selected_threshold": 0.11999999999999998,
+  "test_contrast_rel_l2_mean": 0.08740022778511047,
+  "test_inclusion_iou_mean": 0.9882941233077362,
+  "test_pixel_correlation_mean": 0.9947740626139648,
+  "elapsed_seconds": 46.70322823524475,
+  "history": [
+    {
+      "step": 1,
+      "loss": 0.14028076827526093,
+      "validation_rel_l2": 2.5126988887786865
+    },
+    {
+      "step": 500,
+      "loss": 0.0005009013693779707,
+      "validation_rel_l2": 0.14576376974582672
+    },
+    {
+      "step": 1000,
+      "loss": 5.711728226742707e-05,
+      "validation_rel_l2": 0.090535007417202
+    },
+    {
+      "step": 1500,
+      "loss": 2.209544982179068e-05,
+      "validation_rel_l2": 0.08439639955759048
+    },
+    {
+      "step": 2000,
+      "loss": 1.8524675397202373e-05,
+      "validation_rel_l2": 0.07906625419855118
+    },
+    {
+      "step": 2500,
+      "loss": 1.533774775452912e-05,
+      "validation_rel_l2": 0.07935100793838501
+    },
+    {
+      "step": 3000,
+      "loss": 1.2487635103752837e-05,
+      "validation_rel_l2": 0.07940298318862915
+    }
+  ]
+}

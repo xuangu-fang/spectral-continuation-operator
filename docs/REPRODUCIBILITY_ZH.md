@@ -635,3 +635,57 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.evaluate_actionable_hor
 `actionable_horizon_predictions.npz` 保存逐环境逐 action 的 utility、特征和 OOF prediction，由
 `.gitignore` 排除；JSON、PNG 和 PDF 汇总提交 Git。mask 4301/4401 的 replay NPZ 也不提交，但其
 summary 保留数据、checkpoint hash、预算和 mask seed。
+
+## 15. Wave-system representation POC
+
+数据路径与 SHA-256 见 [`data/README.md`](../data/README.md)。以下命令均在仓库根目录执行。
+
+生成主数据与 ellipse OOD：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.wave_operator_data \
+  --config configs/wave_operator_representation_poc_20260922.json \
+  --output /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.wave_operator_data \
+  --config configs/wave_operator_ood_ellipses_20260922.json \
+  --output /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_ood_ellipses_24.npz
+```
+
+M0 与 matched field baseline：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.audit_wave_operator_representation \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output artifacts/wave_operator_representation/m0
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_wave_operator_identifier \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output artifacts/wave_operator_representation/m1 \
+  --representation raw --steps 3000 --seed 20260922
+```
+
+稳定 cross-view representation 与 hidden-medium probe：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_wave_operator_contrastive \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output artifacts/wave_operator_representation/m2_ablation_seed20260922 \
+  --representation amplitude_phase_gradient --steps 2500 \
+  --batch-size 24 --views-per-set 6 --learning-rate 0.001 --seed 20260922
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_wave_medium_probe \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output artifacts/wave_operator_representation/m3_ablation_seed20260922 \
+  --representation amplitude_phase_gradient --steps 3000 --seed 20260922
+```
+
+噪声训练版本将最后一条命令替换为
+`--representation amplitude_soft_phase_gradient --train-snr-db 20 --noise-seed 9173`。
+正式结果使用 seed 20260922、20260923、20260924。最终汇总：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_wave_representation_poc
+```
+
+checkpoint 与 prediction NPZ 受 `.gitignore` 排除；JSON、CSV、PNG、PDF 和配置进入版本管理。

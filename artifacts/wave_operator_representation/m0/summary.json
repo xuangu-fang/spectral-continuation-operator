@@ -1,0 +1,40 @@
+{
+  "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+  "protocol": "low-frequency all-source plus high-frequency context-source -> missing high-frequency query-source block",
+  "selected_on_validation": {
+    "source_rbf": {
+      "length": 0.08,
+      "ridge": 0.5
+    },
+    "frequency_rbf": {
+      "length": 0.08,
+      "ridge": 0.5
+    },
+    "metric_nystrom": {
+      "ridge": 1.0
+    }
+  },
+  "test_records": [
+    {
+      "method": "source_rbf",
+      "mean_complex_rel_l2": 1.030806277389389,
+      "median_complex_rel_l2": 1.0030105439626755
+    },
+    {
+      "method": "frequency_rbf",
+      "mean_complex_rel_l2": 1.0077605375411491,
+      "median_complex_rel_l2": 1.0000000745233204
+    },
+    {
+      "method": "metric_nystrom",
+      "mean_complex_rel_l2": 0.9870328199349001,
+      "median_complex_rel_l2": 0.9925139980011162
+    }
+  ],
+  "weighted_reciprocity_rel_l2_mean": 1.2661384864857974e-06,
+  "view_rank_mean": {
+    "rank90": 37.958333333333336,
+    "rank95": 48.166666666666664,
+    "rank99": 62.541666666666664
+  }
+}

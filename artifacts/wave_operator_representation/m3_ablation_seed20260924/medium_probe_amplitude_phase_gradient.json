@@ -1,0 +1,48 @@
+{
+  "representation": "amplitude_phase_gradient",
+  "seed": 20260924,
+  "steps": 3000,
+  "parameters": 1231681,
+  "selected_threshold": 0.13999999999999999,
+  "test_contrast_rel_l2_mean": 0.04945531114935875,
+  "test_inclusion_iou_mean": 0.9970421157053949,
+  "test_pixel_correlation_mean": 0.9982739756425603,
+  "elapsed_seconds": 51.40156674385071,
+  "history": [
+    {
+      "step": 1,
+      "loss": 0.14681601524353027,
+      "validation_rel_l2": 2.953313112258911
+    },
+    {
+      "step": 500,
+      "loss": 0.0005150798242539167,
+      "validation_rel_l2": 0.16015435755252838
+    },
+    {
+      "step": 1000,
+      "loss": 9.822667925618589e-05,
+      "validation_rel_l2": 0.087056003510952
+    },
+    {
+      "step": 1500,
+      "loss": 4.4475636968854815e-05,
+      "validation_rel_l2": 0.06986495852470398
+    },
+    {
+      "step": 2000,
+      "loss": 1.715084545139689e-05,
+      "validation_rel_l2": 0.06460188329219818
+    },
+    {
+      "step": 2500,
+      "loss": 1.6450199836981483e-05,
+      "validation_rel_l2": 0.0630640760064125
+    },
+    {
+      "step": 3000,
+      "loss": 1.511600839876337e-05,
+      "validation_rel_l2": 0.06275635212659836
+    }
+  ]
+}
