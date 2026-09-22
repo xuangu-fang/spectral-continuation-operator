@@ -3,6 +3,7 @@ import torch
 
 from spectral_continuation.train_wave_operator_contrastive import (
     ViewEncoder,
+    _multiscale_phase_gradient_channels,
     _phase_gradient_channels,
     _phase_space_channels,
     anti_collapse_loss,
@@ -19,6 +20,7 @@ def test_view_encoder_and_phase_space_shapes():
     value = np.ones((16, 16), dtype=np.complex64)
     assert _phase_gradient_channels(value, include_amplitude=False).shape == (4, 16, 16)
     assert _phase_gradient_channels(value, include_amplitude=True).shape == (5, 16, 16)
+    assert _multiscale_phase_gradient_channels(value).shape == (13, 16, 16)
 
 
 def test_retrieval_metrics_perfect_alignment():

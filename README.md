@@ -7,6 +7,19 @@
 全局相位基准快速变化，但**归一化幅值与局部复相位增量**可以把“局部能量”和“局部传播”分开表示，
 从而更稳定地识别产生这些响应的物理系统。
 
+## 最新进展：可变观测 Wave Set Operator
+
+固定通道 POC 已升级为 shared 4-slot set operator：同一 checkpoint 接收任意顺序和数量的
+source-frequency views，参数量不随预算增长。三 seed 结果显示，full-context 下 phase token 与 strong raw
+接近（0.0533 vs 0.0593）；真正稳定的优势出现在每源只有 1--2 个频率时，相对 raw 降低 24--30%。在
+clean-trained 20 dB 测试上为 0.112，raw 为 0.529。
+
+这个结果同时收缩了 claim：phase token 不是 universal OOD winner。clean ellipse 和 128-grid boundary
+上 raw 更强，10 dB 仍失败；instance-contrastive pretraining 也没有提高 full-label 最优精度。完整结果见
+[Wave Set Operator M0 报告](reports/WAVE_SET_OPERATOR_M0_ZH.md)。
+
+![可变观测预算结果](artifacts/wave_set_m0/summary/wave_set_budget_scaling.png)
+
 ![波动场表征主结果](artifacts/wave_operator_representation/summary/wave_representation_main.png)
 
 ## 当前最强结果

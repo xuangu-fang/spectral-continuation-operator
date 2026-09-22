@@ -693,3 +693,38 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_wave_represen
 ```
 
 checkpoint 与 prediction NPZ 受 `.gitignore` 排除；JSON、CSV、PNG、PDF 和配置进入版本管理。
+
+## 16. Variable-budget Wave Set Operator M0
+
+正式协议见 `configs/wave_set_operator_m0_formal_20260922.json`。先生成只用于携带 representation、scale 和
+architecture schema 的 initializer；正式 probe 使用 `--reset-encoder`，不会读取其训练权重：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_wave_set_encoder \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output experiments/wave_set_m0_formal/initializers/phase_slots \
+  --representation amplitude_soft_phase_gradient --steps 1 --evaluate-every 1 \
+  --batch-size 24 --aggregation slots --slots 4 --width 24 --dimension 128 --seed 20260922
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.probe_wave_set_encoder \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --encoder-checkpoint experiments/wave_set_m0_formal/initializers/phase_slots/set_encoder_amplitude_soft_phase_gradient_seed20260922.pt \
+  --output experiments/wave_set_m0_formal/amplitude_soft_phase_gradient_seed20260922 \
+  --train-systems 112 --finetune --reset-encoder --steps 2500 \
+  --batch-size 16 --full-context-probability 0.5 --training-view-domain low --seed 20260922
+```
+
+将 representation 替换为 `raw` 和 `amplitude`，并运行 seeds 20260922、20260923、20260924。正式汇总：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_wave_set_m0 \
+  --root experiments/wave_set_m0_formal --output artifacts/wave_set_m0/summary
+```
+
+shift evaluation 使用 `spectral_continuation.evaluate_wave_set_probe`，分别输入 ellipse、IID noise 与 legacy
+128-grid 数据；三 seed JSON 完成后运行：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_wave_set_robustness \
+  --root experiments/wave_set_m0_robustness/formal --output artifacts/wave_set_m0/summary
+```

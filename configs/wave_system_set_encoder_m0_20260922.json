@@ -1,0 +1,39 @@
+{
+  "experiment": "wave_system_set_encoder_m0",
+  "date": "2026-09-22",
+  "hypothesis": "A shared permutation-invariant encoder over amplitude and local phase advance learns a reusable system representation rather than only helping a fixed supervised inverse model.",
+  "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+  "representations": [
+    "raw_normalized",
+    "amplitude",
+    "amplitude_soft_phase_gradient",
+    "amplitude_multiscale_phase_gradient"
+  ],
+  "pretraining": {
+    "objective": "symmetric cross-view system contrastive learning with anti-collapse regularization",
+    "low_group": "sources 0-5, frequencies 0-3",
+    "high_group": "sources 6-8, frequencies 4-7",
+    "variable_view_budget": true,
+    "raw_global_phase_augmentation": true
+  },
+  "frozen_probe_train_system_counts": [8, 28, 112],
+  "seeds": [20260922, 20260923, 20260924],
+  "primary_metrics": [
+    "cross-view retrieval",
+    "frozen hidden-medium contrast relative L2",
+    "inclusion IoU",
+    "cross-group hidden-medium transfer"
+  ],
+  "gates": {
+    "fair_budget": "one shared checkpoint for every source/frequency budget; no parameter growth with view count",
+    "frozen_transfer_vs_raw": "at least 30% lower contrast relative L2 on at least two label budgets",
+    "frozen_transfer_vs_amplitude": "at least 15% lower contrast relative L2 on at least two label budgets",
+    "direction_stability": "same direction for every formal seed",
+    "multiscale_promotion": "promote only if it improves at least two hard shifts over the single-scale token"
+  },
+  "stop_rules": [
+    "Do not add attention before the shared mean/std set encoder is evaluated.",
+    "Do not add spectral phase advance before M0 frozen transfer passes.",
+    "Do not interpret saturated 24-way retrieval as sufficient evidence."
+  ]
+}

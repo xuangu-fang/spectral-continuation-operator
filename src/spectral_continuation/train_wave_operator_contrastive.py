@@ -93,6 +93,36 @@ def _phase_gradient_channels(
     return np.stack(channels).astype(np.float32)
 
 
+def _multiscale_phase_gradient_channels(
+    value: np.ndarray,
+    *,
+    offsets: tuple[int, ...] = (1, 2, 4),
+    soft_floor: float = 0.05,
+) -> np.ndarray:
+    """Amplitude plus confidence-valued phase advances at fixed physical offsets.
+
+    ``offsets`` are expressed on the 64-grid reference mesh.  They are converted
+    to pixel strides on the observed grid, so the represented distances stay
+    fixed under a resolution change.
+    """
+
+    amplitude = np.abs(value)
+    reference = np.sqrt(np.mean(amplitude**2)) + 1e-8
+    channels: list[np.ndarray] = [np.log1p(amplitude / reference)]
+    resolution_scale = max((value.shape[-1] - 1) / 63.0, 1.0)
+    floor = soft_floor * reference**2
+    for offset in offsets:
+        stride = max(round(offset * resolution_scale), 1)
+        horizontal = np.zeros_like(value)
+        vertical = np.zeros_like(value)
+        horizontal[:, stride:] = value[:, stride:] * np.conj(value[:, :-stride])
+        vertical[stride:, :] = value[stride:, :] * np.conj(value[:-stride, :])
+        horizontal /= np.abs(horizontal) + floor + 1e-8
+        vertical /= np.abs(vertical) + floor + 1e-8
+        channels.extend((horizontal.real, horizontal.imag, vertical.real, vertical.imag))
+    return np.stack(channels).astype(np.float32)
+
+
 class ContrastiveFieldBank:
     def __init__(
         self, data: np.lib.npyio.NpzFile, representation: str,
@@ -133,6 +163,14 @@ class ContrastiveFieldBank:
                     channels = np.stack((value.real, value.imag), axis=1).astype(np.float32)
                 elif representation == "raw":
                     channels = np.stack((value.real, value.imag), axis=1).astype(np.float32)
+                elif representation == "raw_normalized":
+                    reference = np.sqrt(
+                        np.mean(np.abs(value) ** 2, axis=(1, 2), keepdims=True)
+                    )
+                    normalized = value / (reference + 1e-8)
+                    channels = np.stack(
+                        (normalized.real, normalized.imag), axis=1
+                    ).astype(np.float32)
                 elif representation == "phase_space":
                     channels = np.stack([_phase_space_channels(item) for item in value])
                 elif representation == "phase_gradient":
@@ -151,6 +189,10 @@ class ContrastiveFieldBank:
                             )
                             for item in value
                         ]
+                    )
+                elif representation == "amplitude_multiscale_phase_gradient":
+                    channels = np.stack(
+                        [_multiscale_phase_gradient_channels(item) for item in value]
                     )
                 elif representation == "amplitude":
                     amplitude = np.abs(value)
@@ -350,9 +392,9 @@ def main() -> None:
     parser.add_argument(
         "--representation",
         choices=(
-            "raw", "homogeneous_carrier", "phase_space", "amplitude",
+            "raw", "raw_normalized", "homogeneous_carrier", "phase_space", "amplitude",
             "phase_gradient", "amplitude_phase_gradient",
-            "amplitude_soft_phase_gradient",
+            "amplitude_soft_phase_gradient", "amplitude_multiscale_phase_gradient",
         ),
         required=True,
     )

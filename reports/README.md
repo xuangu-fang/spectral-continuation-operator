@@ -1,5 +1,8 @@
 # 报告导航
 
+- [`WAVE_SET_OPERATOR_M0_ZH.md`](WAVE_SET_OPERATOR_M0_ZH.md)：当前最新正式结果；shared slot set
+  operator、可变 source-frequency budget、三 seed matched baselines 与 noise/OOD 边界。
+
 ## 当前主报告
 
 - [`WAVEFIELD_REPRESENTATION_POC_ZH.md`](WAVEFIELD_REPRESENTATION_POC_ZH.md)：当前 wave-system

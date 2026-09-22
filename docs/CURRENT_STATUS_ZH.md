@@ -3,6 +3,24 @@
 > 更新日期：2026-09-22  
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
+## 2026-09-22 M0 更新
+
+shared view encoder 与 permutation-invariant 4-slot aggregation 已完成三 seed 正式评估。最重要的结果不再是
+固定 24-channel concat，而是一个参数量不随 view budget 增长的 set operator：
+
+| 表示 | 24 views | 6 sources × 1 frequency | 20 dB |
+|---|---:|---:|---:|
+| Raw complex | 0.0593 | 0.2283 | 0.5288 |
+| Amplitude only | 0.1226 | 0.5836 | 1.0807 |
+| Amplitude + phase advance | **0.0533** | **0.1622** | **0.1124** |
+
+新结论是：局部 phase advance 主要提高 frequency-poor 与 noisy regime 的观测效率。full-context 相对 raw
+仅改善 10.1%，paired bootstrap 区间跨零；clean ellipse 和 128-grid boundary 上 raw 更强；10 dB 仍失败。
+详见 [M0 正式报告](../reports/WAVE_SET_OPERATOR_M0_ZH.md)。
+
+当前 instance-contrastive pretraining 不是贡献：冻结 probe 约 0.31，且 full-label 下从头训练为 0.0491，
+优于预训练初始化的 0.0639。后续不再继续扫 pooling 或 auxiliary loss。
+
 ## 一句话问题
 
 给定一个未知物理系统产生的少量复波动响应，能否学到一个跨 source、frequency、geometry 与

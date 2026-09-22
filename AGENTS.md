@@ -12,25 +12,22 @@
 
 ## 当前主线
 
-研究问题是：从少量 complex response views 中学习可复用的 wave-system representation。当前最强证据
-来自 5-channel token：归一化 amplitude，加两个空间方向上固定物理距离的复相位 advance。
+研究问题是：从少量 complex response views 中学习可变观测预算的 wave-system representation。当前 M0
+方法是 5-channel token 加 shared 4-slot set operator；所有预算共用约 0.98M 参数。
 
-三 seed 主结果：
+新的三 seed set-operator 结果：full-context RelL2 为 0.0533，raw 为 0.0593；每源只有 1--2 个频率时
+相对 raw 降低 24--30%，20 dB 为 0.112 vs raw 0.529。10 dB 仍失败；clean ellipse 与 128-grid boundary
+上 raw 更强。instance-contrastive 预训练冻结 probe 约 0.31，且不改善 full-label 最优点，不是当前贡献。
 
-- 跨 source、frequency 不重叠的 system retrieval：100.0% Top-1；
-- IID hidden-medium contrast RelL2：0.0504，raw complex 为 0.3588；
-- 未见 ellipse geometry：0.0955，raw complex 为 0.4637。
-
-这些结果证明 representation sufficiency，不证明 unseen-query complex field generation 已解决。当前
-missing-block field error 仍约 0.93--0.97；10 dB 与 partial/closed 强反射边界也未通过。
+这些结果支持 measurement-efficiency representation，不证明 unseen-query complex field generation 已解决。
 
 ## 当前执行顺序
 
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
-1. shared view encoder + permutation-invariant set aggregation；
-2. multi-scale、fixed-physical-offset phase advance 与 confidence fallback；
-3. oracle-medium unseen-query decoder gate；
+1. 冻结 M0：single-scale phase token + shared slot set operator；
+2. 研究 frequency-poor / noisy observation efficiency 与 acquisition shift，不再刷 full-context IID；
+3. 若继续 field generation，先过 oracle-medium unseen-query decoder gate；
 4. encoder--decoder cascade；
 5. 真正部分观测和第二独立物理域。
 
@@ -42,6 +39,9 @@ missing-block field error 仍约 0.93--0.97；10 dB 与 partial/closed 强反射
 - 把若干相距很远的低频 raw fields 直接拼接，期待模型自动解开 phase alias；
 - 把极低的 patch-span oracle 当成可部署方法；oracle 使用了 query truth 来拟合系数；
 - 在相同 90--106 Hz 协议上扩大 free local coefficients、frequency-mask loss 或 Transformer；
+- 为 set encoder 继续扫 moment、更多 slot、slot-stack、metadata FiLM、coordinate basis 或 masked-view
+  prediction；这些 matched POC 均未改善冻结 transfer；
+- 把当前 instance-contrastive checkpoint 当成核心贡献；从头监督训练最终更好（0.0491 vs 0.0639）；
 - 在当前 AR calibrator 上继续搜索随机 sensor masks、value head、RL policy 或重复 reset；
 - 在 dense oracle 没有先通过时训练昂贵的 sparse multi-fidelity calibrator；
 - 因使用 flow/diffusion 就声称任务多模态。必须先有同一条件对应多个真实可行 target 的证据；

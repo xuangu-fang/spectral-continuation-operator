@@ -10,6 +10,12 @@
 - `train_wave_operator_identifier.py`：missing-block 完整复场负对照；
 - `train_wave_operator_contrastive.py`：跨 source-frequency system retrieval；
 - `train_wave_medium_probe.py`：hidden-medium spatial sufficiency 与 noise training；
+- `train_wave_set_encoder.py`：可变观测预算的 self-supervised shared set encoder；
+- `probe_wave_set_encoder.py`：冻结/微调 spatial latent、可变预算与跨 view-group probe；
+- `wave_set_encoder.py`：共享 view backbone、moment/slot/coordinate-basis aggregation；
+- `evaluate_wave_set_probe.py`：set operator 的 geometry、noise、resolution 与 boundary shift；
+- `summarize_wave_set_m0.py`：三 seed budget scaling 与 paired bootstrap；
+- `summarize_wave_set_robustness.py`：shift 汇总与正文级可视化；
 - `evaluate_wave_medium_ood.py`：geometry、noise、resolution、boundary stress tests；
 - `summarize_wave_representation_poc.py`：汇总表、正文图和机器可读 summary。
 

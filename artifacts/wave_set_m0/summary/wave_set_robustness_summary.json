@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "shift_rows": [
+    {
+      "representation": "raw",
+      "condition": "ellipse",
+      "rel_l2_mean": 0.07345303148031235,
+      "rel_l2_seed_std": 0.0071504365041711315
+    },
+    {
+      "representation": "raw",
+      "condition": "iid_snr20",
+      "rel_l2_mean": 0.5287992755572001,
+      "rel_l2_seed_std": 0.0747430226459397
+    },
+    {
+      "representation": "raw",
+      "condition": "iid_snr10",
+      "rel_l2_mean": 1.6525346835454304,
+      "rel_l2_seed_std": 0.11611002510879985
+    },
+    {
+      "representation": "raw",
+      "condition": "legacy128",
+      "rel_l2_mean": 0.2881738891204198,
+      "rel_l2_seed_std": 0.04603533973504354
+    },
+    {
+      "representation": "amplitude",
+      "condition": "ellipse",
+      "rel_l2_mean": 0.1843946228424708,
+      "rel_l2_seed_std": 0.0034214213035202216
+    },
+    {
+      "representation": "amplitude",
+      "condition": "iid_snr20",
+      "rel_l2_mean": 1.0806533495585124,
+      "rel_l2_seed_std": 0.044297256927823464
+    },
+    {
+      "representation": "amplitude",
+      "condition": "iid_snr10",
+      "rel_l2_mean": 1.0872361461321514,
+      "rel_l2_seed_std": 0.07604792660375918
+    },
+    {
+      "representation": "amplitude",
+      "condition": "legacy128",
+      "rel_l2_mean": 0.5322213570276896,
+      "rel_l2_seed_std": 0.01748626511646261
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "condition": "ellipse",
+      "rel_l2_mean": 0.10044994453589122,
+      "rel_l2_seed_std": 0.007930550045417565
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "condition": "iid_snr20",
+      "rel_l2_mean": 0.11236651986837387,
+      "rel_l2_seed_std": 0.011628732713278848
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "condition": "iid_snr10",
+      "rel_l2_mean": 0.7970730066299438,
+      "rel_l2_seed_std": 0.060058592859986715
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "condition": "legacy128",
+      "rel_l2_mean": 0.39424842596054077,
+      "rel_l2_seed_std": 0.023115439713737015
+    }
+  ],
+  "boundary_rows": [
+    {
+      "representation": "raw",
+      "boundary": "open",
+      "rel_l2_mean": 0.20267949998378754,
+      "rel_l2_seed_std": 0.02084245639184858
+    },
+    {
+      "representation": "raw",
+      "boundary": "partial",
+      "rel_l2_mean": 0.2926206737756729,
+      "rel_l2_seed_std": 0.06354890653896773
+    },
+    {
+      "representation": "raw",
+      "boundary": "closed",
+      "rel_l2_mean": 0.3692214985688527,
+      "rel_l2_seed_std": 0.05500787548265529
+    },
+    {
+      "representation": "amplitude",
+      "boundary": "open",
+      "rel_l2_mean": 0.441308856010437,
+      "rel_l2_seed_std": 0.024962285099651725
+    },
+    {
+      "representation": "amplitude",
+      "boundary": "partial",
+      "rel_l2_mean": 0.5768947601318359,
+      "rel_l2_seed_std": 0.014853873322538343
+    },
+    {
+      "representation": "amplitude",
+      "boundary": "closed",
+      "rel_l2_mean": 0.5784606138865153,
+      "rel_l2_seed_std": 0.018656776865756515
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "boundary": "open",
+      "rel_l2_mean": 0.32033994793891907,
+      "rel_l2_seed_std": 0.01447902594816377
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "boundary": "partial",
+      "rel_l2_mean": 0.41869399944941205,
+      "rel_l2_seed_std": 0.026668531235585
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "boundary": "closed",
+      "rel_l2_mean": 0.4437112311522166,
+      "rel_l2_seed_std": 0.03185302700051209
+    }
+  ]
+}

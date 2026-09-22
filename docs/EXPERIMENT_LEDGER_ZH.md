@@ -33,6 +33,9 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 | F9 | 物理测度决定 Green reciprocity | 普通 metric error 0.84，加权后 2.1e-6 | 强诊断，未深挖 |
 | F10 | amplitude + local spatial phase advance 是当前最强 system representation | retrieval 100%；IID 0.0504；ellipse 0.0955 | A 级主结果 |
 | F11 | 当前 representation 尚未解决完整 complex response query | raw/carrier/oracle-medium decoder 约 0.93--0.97 | 架构级失败 |
+| F12 | shared slot set operator 将 phase token 的优势定位到低频率预算与 20 dB | 1--2 frequency 相对 raw 降 24--30%；20 dB 0.112 vs 0.529 | A 级主结果 |
+| F13 | phase token 不是 universal clean-OOD winner | ellipse 0.100 vs raw 0.073；128-grid overall 0.394 vs 0.288 | A 级边界 |
+| F14 | instance-contrastive 预训练不改善 full-label 上限 | pretrained 0.0639；scratch 0.0491；frozen 约 0.31 | 冻结负结果 |
 
 ## 3. 路线级复盘
 
@@ -163,6 +166,23 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
   source-selection generalization。
 - **注意**：它没有救活少源 Nyström，不能写成 Green completion 已解决。
 - **证据**：[Wave-system POC，第 5.2 节](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md#52-一个额外的物理诊断互易性依赖正确-metric)。
+
+### E12：Variable-budget wave set operator
+
+- **假设**：物理 phase token 能在参数量固定的 shared set operator 中提高观测效率，而不是只帮助固定通道
+  U-Net。
+- **正式结果**：24-view 为 0.0533，raw 为 0.0593；每源 1--2 frequencies 时相对 raw 稳定降低
+  24--30%；20 dB 为 0.112，raw 为 0.529。
+- **强负对照**：amplitude-only 为 0.1226，说明幅值稳定但不充分；strong raw 在信息充分时几乎追平。
+- **边界**：10 dB 为 0.797；ellipse 与 128-grid partial/closed 均弱于 raw。
+- **预训练归因**：instance contrastive 只加速早期训练，冻结可读性差，最终不如 scratch。
+- **已停止架构**：moment、slot-stack、masked-view prediction、metadata FiLM、coordinate basis 与
+  13-channel multi-scale token 均未过 frozen/cross-group gate。
+- **正确 claim**：measurement efficiency 与 moderate-noise inductive bias，不是 universal OOD、foundation
+  model 或 unseen-field generator。
+- **重启条件**：新 acquisition 信息、可证明 identifiability 的自监督目标，或第二物理域上重复出现相同
+  budget scaling。
+- **证据**：[M0 报告](../reports/WAVE_SET_OPERATOR_M0_ZH.md)。
 
 ## 4. 值得从正反馈继续挖的方向
 

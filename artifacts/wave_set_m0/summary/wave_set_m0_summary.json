@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "task": "variable_budget_wave_set_operator",
+  "seeds": [
+    20260922,
+    20260923,
+    20260924
+  ],
+  "full_context": {
+    "raw": {
+      "mean": 0.059323410193125405,
+      "seed_std": 0.0057150399854523195
+    },
+    "amplitude": {
+      "mean": 0.12258012344439824,
+      "seed_std": 0.008007235529197835
+    },
+    "amplitude_soft_phase_gradient": {
+      "mean": 0.053313590586185455,
+      "seed_std": 0.003033526429085519
+    }
+  },
+  "phase_vs_raw_paired_bootstrap": {
+    "relative_reduction_vs_raw": 0.10130606105474622,
+    "system_cluster_bootstrap_95_lower": -0.02665018825925778,
+    "system_cluster_bootstrap_95_upper": 0.20844299643289804
+  },
+  "budget_rows": [
+    {
+      "representation": "raw",
+      "source_count": 1,
+      "frequency_count": 1,
+      "views": 1,
+      "rel_l2_mean": 0.5184781551361084,
+      "rel_l2_seed_std": 0.007027555496351725
+    },
+    {
+      "representation": "raw",
+      "source_count": 1,
+      "frequency_count": 2,
+      "views": 2,
+      "rel_l2_mean": 0.30059900879859924,
+      "rel_l2_seed_std": 0.011206428116268622
+    },
+    {
+      "representation": "raw",
+      "source_count": 1,
+      "frequency_count": 4,
+      "views": 4,
+      "rel_l2_mean": 0.14314871529738107,
+      "rel_l2_seed_std": 0.00817348158118046
+    },
+    {
+      "representation": "raw",
+      "source_count": 2,
+      "frequency_count": 1,
+      "views": 2,
+      "rel_l2_mean": 0.34653131167093915,
+      "rel_l2_seed_std": 0.01451189063050356
+    },
+    {
+      "representation": "raw",
+      "source_count": 2,
+      "frequency_count": 2,
+      "views": 4,
+      "rel_l2_mean": 0.20220868786176047,
+      "rel_l2_seed_std": 0.014821472104664533
+    },
+    {
+      "representation": "raw",
+      "source_count": 2,
+      "frequency_count": 4,
+      "views": 8,
+      "rel_l2_mean": 0.09625027577082317,
+      "rel_l2_seed_std": 0.009168808177180724
+    },
+    {
+      "representation": "raw",
+      "source_count": 4,
+      "frequency_count": 1,
+      "views": 4,
+      "rel_l2_mean": 0.2580597052971522,
+      "rel_l2_seed_std": 0.01872625632409436
+    },
+    {
+      "representation": "raw",
+      "source_count": 4,
+      "frequency_count": 2,
+      "views": 8,
+      "rel_l2_mean": 0.15117781360944113,
+      "rel_l2_seed_std": 0.01258289805119348
+    },
+    {
+      "representation": "raw",
+      "source_count": 4,
+      "frequency_count": 4,
+      "views": 16,
+      "rel_l2_mean": 0.06809991598129272,
+      "rel_l2_seed_std": 0.00700571416202552
+    },
+    {
+      "representation": "raw",
+      "source_count": 6,
+      "frequency_count": 1,
+      "views": 6,
+      "rel_l2_mean": 0.22830617427825928,
+      "rel_l2_seed_std": 0.017144839204304842
+    },
+    {
+      "representation": "raw",
+      "source_count": 6,
+      "frequency_count": 2,
+      "views": 12,
+      "rel_l2_mean": 0.13211112221082053,
+      "rel_l2_seed_std": 0.01042216594491518
+    },
+    {
+      "representation": "raw",
+      "source_count": 6,
+      "frequency_count": 4,
+      "views": 24,
+      "rel_l2_mean": 0.059323410193125405,
+      "rel_l2_seed_std": 0.0057150399854523195
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 1,
+      "frequency_count": 1,
+      "views": 1,
+      "rel_l2_mean": 0.9581339756647745,
+      "rel_l2_seed_std": 0.022814824441469296
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 1,
+      "frequency_count": 2,
+      "views": 2,
+      "rel_l2_mean": 0.6362926761309305,
+      "rel_l2_seed_std": 0.020422418994226293
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 1,
+      "frequency_count": 4,
+      "views": 4,
+      "rel_l2_mean": 0.3152125080426534,
+      "rel_l2_seed_std": 0.01874705171156985
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 2,
+      "frequency_count": 1,
+      "views": 2,
+      "rel_l2_mean": 0.8052394390106201,
+      "rel_l2_seed_std": 0.015578523143678571
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 2,
+      "frequency_count": 2,
+      "views": 4,
+      "rel_l2_mean": 0.46724868814150494,
+      "rel_l2_seed_std": 0.015219647127077112
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 2,
+      "frequency_count": 4,
+      "views": 8,
+      "rel_l2_mean": 0.20524853467941284,
+      "rel_l2_seed_std": 0.013097711404370176
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 4,
+      "frequency_count": 1,
+      "views": 4,
+      "rel_l2_mean": 0.6447194218635559,
+      "rel_l2_seed_std": 0.010614251780216577
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 4,
+      "frequency_count": 2,
+      "views": 8,
+      "rel_l2_mean": 0.34357141455014545,
+      "rel_l2_seed_std": 0.01183713425903931
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 4,
+      "frequency_count": 4,
+      "views": 16,
+      "rel_l2_mean": 0.14215251306692758,
+      "rel_l2_seed_std": 0.007331532896139915
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 6,
+      "frequency_count": 1,
+      "views": 6,
+      "rel_l2_mean": 0.5836362242698669,
+      "rel_l2_seed_std": 0.020412925148797226
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 6,
+      "frequency_count": 2,
+      "views": 12,
+      "rel_l2_mean": 0.2983509103457133,
+      "rel_l2_seed_std": 0.01066554511045231
+    },
+    {
+      "representation": "amplitude",
+      "source_count": 6,
+      "frequency_count": 4,
+      "views": 24,
+      "rel_l2_mean": 0.12258012344439824,
+      "rel_l2_seed_std": 0.008007235529197835
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 1,
+      "frequency_count": 1,
+      "views": 1,
+      "rel_l2_mean": 0.38416391611099243,
+      "rel_l2_seed_std": 0.014378641958057145
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 1,
+      "frequency_count": 2,
+      "views": 2,
+      "rel_l2_mean": 0.22198672592639923,
+      "rel_l2_seed_std": 0.009020328511586715
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 1,
+      "frequency_count": 4,
+      "views": 4,
+      "rel_l2_mean": 0.12874017159144083,
+      "rel_l2_seed_std": 0.00431473986635425
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 2,
+      "frequency_count": 1,
+      "views": 2,
+      "rel_l2_mean": 0.2630271116892497,
+      "rel_l2_seed_std": 0.01474036463104329
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 2,
+      "frequency_count": 2,
+      "views": 4,
+      "rel_l2_mean": 0.15176541109879813,
+      "rel_l2_seed_std": 0.007944134267792878
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 2,
+      "frequency_count": 4,
+      "views": 8,
+      "rel_l2_mean": 0.08965132633845012,
+      "rel_l2_seed_std": 0.003210576673455207
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 4,
+      "frequency_count": 1,
+      "views": 4,
+      "rel_l2_mean": 0.18954739471276602,
+      "rel_l2_seed_std": 0.009631048778306494
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 4,
+      "frequency_count": 2,
+      "views": 8,
+      "rel_l2_mean": 0.10639579594135284,
+      "rel_l2_seed_std": 0.004675734348828195
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 4,
+      "frequency_count": 4,
+      "views": 16,
+      "rel_l2_mean": 0.06046054760615031,
+      "rel_l2_seed_std": 0.0031219798098873837
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 6,
+      "frequency_count": 1,
+      "views": 6,
+      "rel_l2_mean": 0.16221817334493002,
+      "rel_l2_seed_std": 0.008404565792059204
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 6,
+      "frequency_count": 2,
+      "views": 12,
+      "rel_l2_mean": 0.0930228407184283,
+      "rel_l2_seed_std": 0.003592749620946429
+    },
+    {
+      "representation": "amplitude_soft_phase_gradient",
+      "source_count": 6,
+      "frequency_count": 4,
+      "views": 24,
+      "rel_l2_mean": 0.053313590586185455,
+      "rel_l2_seed_std": 0.003033526429085519
+    }
+  ]
+}

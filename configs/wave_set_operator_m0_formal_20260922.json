@@ -1,0 +1,27 @@
+{
+  "experiment": "wave_set_operator_m0_formal",
+  "date": "2026-09-22",
+  "hypothesis": "Local phase advance improves measurement efficiency when a shared set operator must infer the same wave system from variable source-frequency response budgets.",
+  "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+  "system_split": {"train": 112, "validation": 24, "test": 24},
+  "representations": ["raw", "amplitude", "amplitude_soft_phase_gradient"],
+  "architecture": {
+    "view_backbone_width": 24,
+    "aggregation": "four compressed spatial slots plus mean and standard deviation",
+    "decoder": "shared multiscale spatial decoder",
+    "trainable_parameters_approx": 980000,
+    "parameter_count_independent_of_view_budget": true
+  },
+  "training": {
+    "from_scratch": true,
+    "steps": 2500,
+    "full_context_probability": 0.5,
+    "variable_source_frequency_rectangles": true,
+    "seeds": [20260922, 20260923, 20260924]
+  },
+  "primary_metric": "per-system equally weighted hidden-medium contrast relative L2",
+  "primary_analysis": "error versus source-frequency observation budget",
+  "stress_tests": ["ellipse geometry", "20 dB", "10 dB", "64-to-128 grid", "partial boundary", "closed boundary"],
+  "frozen_claim": "The phase token is an observation-efficiency and moderate-noise inductive bias, not a universal clean-OOD winner.",
+  "artifacts": "artifacts/wave_set_m0/summary"
+}
