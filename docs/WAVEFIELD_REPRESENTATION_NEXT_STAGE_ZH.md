@@ -1,6 +1,7 @@
 # 下一阶段协议：Wave-System Encoder
 
 > 导航：[项目主页](../README.md) · [一页式当前状态](CURRENT_STATUS_ZH.md) ·
+> [实验账本](EXPERIMENT_LEDGER_ZH.md) ·
 > [波动场表征学习 POC 报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)
 >
 > 本文是实验前执行协议，不记录完成后的结果解释。

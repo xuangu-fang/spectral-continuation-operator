@@ -97,6 +97,7 @@ learned encoder 接上去，也不扩大端到端生成模型。
 ## 入口
 
 - [完整方法与实验报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)
+- [实验账本：正负结果、禁重复清单与未开发信号](EXPERIMENT_LEDGER_ZH.md)
 - [下一阶段冻结协议](WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)
 - [科学备忘录](SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)
 - [数据与复现档案](REPRODUCIBILITY_ZH.md)

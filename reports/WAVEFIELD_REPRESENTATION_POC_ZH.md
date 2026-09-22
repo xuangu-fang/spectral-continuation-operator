@@ -1,6 +1,7 @@
 # 波动场表征学习 POC：从复数像素到局部传播 Token
 
 > 导航：[项目主页](../README.md) · [一页式当前状态](../docs/CURRENT_STATUS_ZH.md) ·
+> [实验账本](../docs/EXPERIMENT_LEDGER_ZH.md) ·
 > [下一阶段协议](../docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)
 
 > 日期：2026-09-22
