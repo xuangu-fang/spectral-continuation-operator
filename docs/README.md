@@ -3,11 +3,13 @@
 ## 当前必读
 
 1. [`CURRENT_STATUS_ZH.md`](CURRENT_STATUS_ZH.md)：一页式状态、核心结果、负结果与决策 gate；
-2. [`EXPERIMENT_LEDGER_ZH.md`](EXPERIMENT_LEDGER_ZH.md)：所有路线的证据账本、禁重复实验、重启条件和
+2. [`../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md`](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)：
+   当前最新的第二数据集结果、HarmoCore 归因与高维表示设计；
+3. [`EXPERIMENT_LEDGER_ZH.md`](EXPERIMENT_LEDGER_ZH.md)：所有路线的证据账本、禁重复实验、重启条件和
    未充分开发的正信号；
-3. [`../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md`](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)：
+4. [`../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md`](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)：
    当前 POC 的完整方法和实验；
-4. [`WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md`](WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)：下一阶段
+5. [`WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md`](WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)：下一阶段
    冻结协议和 stop rules。
 
 ## 科学背景

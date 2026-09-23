@@ -22,6 +22,7 @@ artifacts/**/*_records.csv
 artifacts/**/*_similarity.csv
 artifacts/wave_operator_representation/m2_contrastive/
 artifacts/wave_operator_representation/m2_contrastive_seed*/
+artifacts/wavebench_representation_m1/pilot*/
 experiments/runs/
 experiments/dense_evaluation/
 experiments/diagnostics/

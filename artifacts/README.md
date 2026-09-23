@@ -4,6 +4,9 @@
 
 当前 active artifact collections 为：
 
+- `wavebench_representation_m1/summary/`：公开 WaveBench 三 seed budget scaling、paired bootstrap、固定
+  test examples、CSV/JSON 与正文图；对应
+  [`reports/WAVEBENCH_REPRESENTATION_M1_ZH.md`](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)；
 - `wave_set_m0/summary/`：最新 shared set operator 的三 seed budget scaling、robustness、CSV/JSON 与
   正文图；对应 [`reports/WAVE_SET_OPERATOR_M0_ZH.md`](../reports/WAVE_SET_OPERATOR_M0_ZH.md)；
 - `wave_operator_representation/`：此前固定通道 representation POC 与完整消融。

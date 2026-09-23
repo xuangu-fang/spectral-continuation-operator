@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "task": "wavebench_variable_frequency_system_identification",
+  "dataset": "WaveBench isotropic acoustic time-harmonic",
+  "representation": "amplitude",
+  "seed": 20260923,
+  "split_seed": 42,
+  "frequencies_hz": [
+    10,
+    15,
+    20,
+    40
+  ],
+  "split": {
+    "train": 8000,
+    "validation": 500,
+    "test": 500,
+    "train_sha256": "0edfea141af6ddecb8810134d0034fb06ff2808d73b0f290d20c001a3de64692",
+    "validation_sha256": "3afd98b18b6b7b9d387448cc344fc176e28b60af87af2dc0c90c2d3ae07cb61f",
+    "test_sha256": "a6acce080129527137b9179758ac6f26867162571e35bc6eaa44e3fd0726ea5d"
+  },
+  "target_mean": 3.245037078857422,
+  "target_std": 0.5404880046844482,
+  "response_scales": [
+    0.018510451540350914,
+    0.030848953872919083,
+    0.03372907638549805,
+    0.028582584112882614
+  ],
+  "steps": 3000,
+  "parameters": 977421,
+  "frequency_budget": {
+    "1": {
+      "frequency_subsets": 4,
+      "contrast_rel_l2_mean": 0.38364696502685547,
+      "contrast_rel_l2_system_std": 0.035815246403217316,
+      "physical_rel_l2_mean": 0.06314472109079361,
+      "subsets": {
+        "10": {
+          "contrast_rel_l2_mean": 0.40525442361831665,
+          "physical_rel_l2_mean": 0.06675688922405243
+        },
+        "15": {
+          "contrast_rel_l2_mean": 0.39190778136253357,
+          "physical_rel_l2_mean": 0.06453225761651993
+        },
+        "20": {
+          "contrast_rel_l2_mean": 0.3850507140159607,
+          "physical_rel_l2_mean": 0.06331715732812881
+        },
+        "40": {
+          "contrast_rel_l2_mean": 0.35237500071525574,
+          "physical_rel_l2_mean": 0.05797259882092476
+        }
+      }
+    },
+    "2": {
+      "frequency_subsets": 6,
+      "contrast_rel_l2_mean": 0.2917935252189636,
+      "contrast_rel_l2_system_std": 0.02694576047360897,
+      "physical_rel_l2_mean": 0.04802129045128822,
+      "subsets": {
+        "10+15": {
+          "contrast_rel_l2_mean": 0.32272809743881226,
+          "physical_rel_l2_mean": 0.05326636880636215
+        },
+        "10+20": {
+          "contrast_rel_l2_mean": 0.3044736981391907,
+          "physical_rel_l2_mean": 0.05011880397796631
+        },
+        "10+40": {
+          "contrast_rel_l2_mean": 0.26196643710136414,
+          "physical_rel_l2_mean": 0.043081436306238174
+        },
+        "15+20": {
+          "contrast_rel_l2_mean": 0.31442371010780334,
+          "physical_rel_l2_mean": 0.05171734839677811
+        },
+        "15+40": {
+          "contrast_rel_l2_mean": 0.26752227544784546,
+          "physical_rel_l2_mean": 0.04397771507501602
+        },
+        "20+40": {
+          "contrast_rel_l2_mean": 0.2796470820903778,
+          "physical_rel_l2_mean": 0.04596608132123947
+        }
+      }
+    },
+    "3": {
+      "frequency_subsets": 4,
+      "contrast_rel_l2_mean": 0.24244755506515503,
+      "contrast_rel_l2_system_std": 0.020058523863554,
+      "physical_rel_l2_mean": 0.03989613056182861,
+      "subsets": {
+        "10+15+20": {
+          "contrast_rel_l2_mean": 0.27627483010292053,
+          "physical_rel_l2_mean": 0.04554848372936249
+        },
+        "10+15+40": {
+          "contrast_rel_l2_mean": 0.22790126502513885,
+          "physical_rel_l2_mean": 0.03747265040874481
+        },
+        "10+20+40": {
+          "contrast_rel_l2_mean": 0.22814615070819855,
+          "physical_rel_l2_mean": 0.03751906752586365
+        },
+        "15+20+40": {
+          "contrast_rel_l2_mean": 0.23746797442436218,
+          "physical_rel_l2_mean": 0.039044320583343506
+        }
+      }
+    },
+    "4": {
+      "frequency_subsets": 1,
+      "contrast_rel_l2_mean": 0.21127134561538696,
+      "contrast_rel_l2_system_std": 0.01733393408358097,
+      "physical_rel_l2_mean": 0.034736938774585724,
+      "subsets": {
+        "10+15+20+40": {
+          "contrast_rel_l2_mean": 0.21127134561538696,
+          "physical_rel_l2_mean": 0.034736938774585724
+        }
+      }
+    }
+  },
+  "best_validation": 0.3087846711277962,
+  "elapsed_seconds": 460.6482801437378,
+  "history": [
+    {
+      "step": 1,
+      "train_normalized_mse": 1.1495044231414795,
+      "selection_contrast_rel_l2": 1.0721429288387299,
+      "validation_subsets": [
+        1.0750499963760376,
+        1.0728098154067993,
+        1.071136236190796,
+        1.0695756673812866
+      ]
+    },
+    {
+      "step": 300,
+      "train_normalized_mse": 0.3476502299308777,
+      "selection_contrast_rel_l2": 0.5784392580389977,
+      "validation_subsets": [
+        0.6795534491539001,
+        0.6319996118545532,
+        0.5355991721153259,
+        0.4666047990322113
+      ]
+    },
+    {
+      "step": 600,
+      "train_normalized_mse": 0.11478391289710999,
+      "selection_contrast_rel_l2": 0.4528396725654602,
+      "validation_subsets": [
+        0.561575174331665,
+        0.5064694285392761,
+        0.40214213728904724,
+        0.3411719501018524
+      ]
+    },
+    {
+      "step": 900,
+      "train_normalized_mse": 0.08208277821540833,
+      "selection_contrast_rel_l2": 0.413870632648468,
+      "validation_subsets": [
+        0.5185345411300659,
+        0.45481446385383606,
+        0.3590588867664337,
+        0.3230746388435364
+      ]
+    },
+    {
+      "step": 1200,
+      "train_normalized_mse": 0.07269811630249023,
+      "selection_contrast_rel_l2": 0.4109347313642502,
+      "validation_subsets": [
+        0.5310131311416626,
+        0.4608621299266815,
+        0.3422996401786804,
+        0.3095640242099762
+      ]
+    },
+    {
+      "step": 1500,
+      "train_normalized_mse": 0.15844964981079102,
+      "selection_contrast_rel_l2": 0.36127808690071106,
+      "validation_subsets": [
+        0.47103363275527954,
+        0.39453092217445374,
+        0.3104937672615051,
+        0.26905402541160583
+      ]
+    },
+    {
+      "step": 1800,
+      "train_normalized_mse": 0.05196052044630051,
+      "selection_contrast_rel_l2": 0.3324535936117172,
+      "validation_subsets": [
+        0.43927234411239624,
+        0.37916409969329834,
+        0.2815952003002167,
+        0.22978273034095764
+      ]
+    },
+    {
+      "step": 2100,
+      "train_normalized_mse": 0.06300675123929977,
+      "selection_contrast_rel_l2": 0.32900430634617805,
+      "validation_subsets": [
+        0.4391287863254547,
+        0.36593103408813477,
+        0.2830827236175537,
+        0.22787468135356903
+      ]
+    },
+    {
+      "step": 2400,
+      "train_normalized_mse": 0.05450703203678131,
+      "selection_contrast_rel_l2": 0.31791379675269127,
+      "validation_subsets": [
+        0.4195042848587036,
+        0.35863709449768066,
+        0.2733556926250458,
+        0.22015811502933502
+      ]
+    },
+    {
+      "step": 2700,
+      "train_normalized_mse": 0.04212939739227295,
+      "selection_contrast_rel_l2": 0.30885495245456696,
+      "validation_subsets": [
+        0.407003253698349,
+        0.3531586825847626,
+        0.2620389461517334,
+        0.21321892738342285
+      ]
+    },
+    {
+      "step": 3000,
+      "train_normalized_mse": 0.047835253179073334,
+      "selection_contrast_rel_l2": 0.3087846711277962,
+      "validation_subsets": [
+        0.4067380428314209,
+        0.3533722758293152,
+        0.2628611922264099,
+        0.2121671736240387
+      ]
+    }
+  ]
+}

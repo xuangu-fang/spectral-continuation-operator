@@ -1,6 +1,6 @@
 # 实验账本：有效事实、失败边界与可重启条件
 
-> 更新日期：2026-09-22  
+> 更新日期：2026-09-23
 > 目的：让新的研究者或 Agent 在十分钟内知道哪些问题已经做过、结果究竟否定了什么，以及哪些正信号
 > 仍未充分开发。本文是决策账本，不替代原始报告和机器可读 artifact。
 
@@ -36,6 +36,8 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 | F12 | shared slot set operator 将 phase token 的优势定位到低频率预算与 20 dB | 1--2 frequency 相对 raw 降 24--30%；20 dB 0.112 vs 0.529 | A 级主结果 |
 | F13 | phase token 不是 universal clean-OOD winner | ellipse 0.100 vs raw 0.073；128-grid overall 0.394 vs 0.288 | A 级边界 |
 | F14 | instance-contrastive 预训练不改善 full-label 上限 | pretrained 0.0639；scratch 0.0491；frozen 约 0.31 | 冻结负结果 |
+| F15 | phase-coordinate 的观测效率在公开 WaveBench 上可复现，但效应为中等 | 1--4 frequencies 相对 raw 降 7.6%--12.7%；三 seed 全同向 | A 级正结果，15% gate 未过 |
+| F16 | 更复杂的 fixed complex-edge normalization 不自动带来更好表示 | symmetric/directed edge 在全部 budgets 弱于 soft phase token | development 负结果 |
 
 ## 3. 路线级复盘
 
@@ -183,6 +185,29 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **重启条件**：新 acquisition 信息、可证明 identifiability 的自监督目标，或第二物理域上重复出现相同
   budget scaling。
 - **证据**：[M0 报告](../reports/WAVE_SET_OPERATOR_M0_ZH.md)。
+
+### E13：WaveBench 独立验证与 complex-connection 表示
+
+- **假设**：amplitude + local phase advance 的优势来自一般的复传播坐标，而非原 simulator 或固定
+  source layout；同一个表示应在公开独立数据上提高频率观测效率。
+- **冻结协议**：WaveBench isotropic 10/15/20/40 Hz；按 50,000 个物理系统固定切分，8,000 / 500 /
+  500 train/validation/test；同一 checkpoint 随机接受 1--4 个频率；raw、amplitude、phase-coordinate
+  使用完全相同 encoder/decoder；三 seed，枚举每个预算的所有频率组合。
+- **正式正结果**：1/2/3/4-frequency contrast RelL2 从 raw 的 0.3024/0.2422/0.2077/0.1811 降到
+  0.2794/0.2140/0.1814/0.1584；相对降低 7.6%/11.6%/12.7%/12.5%。完整四频 paired bootstrap
+  95% 区间为 12.10%--12.93%。
+- **强负对照**：amplitude-only 为 0.3807/0.2891/0.2398/0.2088，说明稳定 envelope 不足以辨识
+  system，local phase transport 提供独立信息。
+- **未过 gate**：预注册要求至少两个 sparse budgets 平均改善 15%，本轮未达到；只能声称稳定中等效应，
+  不能声称碾压 strong raw baseline。
+- **方法负结果**：symmetric Hermitian edge 与 directed amplitude-transport edge 都略差于当前 soft
+  phase token。不要继续枚举 fixed normalization 或把更多方向硬塞进 channel axis。
+- **HarmoCore 归因**：Functional Tucker 的 continuous coordinate basis 和 3D scaling 值得继承；但
+  per-frequency independent core 没有显式 system latent 或 frequency dynamics，不应用其 sparse
+  reconstruction 成功替代跨频 system representation 问题。
+- **重启/推进条件**：下一方法只测试 dimension-agnostic shared edge kernel；两个二维域至少一域稳定
+  改善、另一域不退化，才进入 3D。3D 先做 system readout，不先做生成。
+- **证据**：[WaveBench M1 报告](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)。
 
 ## 4. 值得从正反馈继续挖的方向
 

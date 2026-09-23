@@ -18,6 +18,10 @@
 - `summarize_wave_set_robustness.py`：shift 汇总与正文级可视化；
 - `evaluate_wave_medium_ood.py`：geometry、noise、resolution、boundary stress tests；
 - `summarize_wave_representation_poc.py`：汇总表、正文图和机器可读 summary。
+- `train_wavebench_identifier.py`：依赖无关的 WaveBench FFCV reader、可变频率 system-identification
+  matched experiment 与 fixed edge development variants；
+- `summarize_wavebench_representation.py`：WaveBench 三 seed、逐系统 paired bootstrap 与预算主图；
+- `plot_wavebench_examples.py`：固定测试系统的定性恢复与误差图。
 
 ## Supporting：共享基础设施
 

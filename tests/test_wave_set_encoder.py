@@ -5,6 +5,7 @@ from spectral_continuation.train_wave_set_encoder import dense_system_contrastiv
 from spectral_continuation.wave_set_encoder import (
     FrozenMediumDecoder,
     QueryViewDecoder,
+    ScalarFieldDecoder,
     WaveSetEncoder,
     apply_independent_phase_rotation,
     sample_rectangular_views,
@@ -25,6 +26,16 @@ def test_set_encoder_is_permutation_invariant_and_decodes_spatial_map():
     torch.testing.assert_close(first, second, atol=1e-6, rtol=1e-6)
     assert prediction.shape == (2, 1, 32, 32)
     assert 0.0 <= float(prediction.min()) <= float(prediction.max()) <= 0.7
+
+
+def test_unrestricted_scalar_decoder_matches_spatial_shape():
+    torch.manual_seed(31)
+    encoder = WaveSetEncoder(5, width=8, dimension=16, aggregation="slots", slots=2)
+    decoder = ScalarFieldDecoder(width=8)
+    views = torch.randn(2, 3, 5, 32, 32)
+    metadata = torch.randn(2, 3, 3)
+    prediction = decoder(encoder.spatial(views, metadata))
+    assert prediction.shape == (2, 1, 32, 32)
 
 
 def test_set_encoder_mask_matches_removing_a_view():

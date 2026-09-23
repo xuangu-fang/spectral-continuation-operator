@@ -728,3 +728,52 @@ shift evaluation 使用 `spectral_continuation.evaluate_wave_set_probe`，分别
 PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_wave_set_robustness \
   --root experiments/wave_set_m0_robustness/formal --output artifacts/wave_set_m0/summary
 ```
+
+## 17. WaveBench representation M1
+
+冻结协议见 `configs/wavebench_representation_m1_20260923.json`。公开数据原始路径为：
+
+```text
+/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/
+wavebench_full_remotezip_20260912
+```
+
+其中包含 `isotropic_10.beton`、`isotropic_15.beton`、`isotropic_20.beton`、`isotropic_40.beton`。reader
+直接解析固定 WaveBench FFCV v2 layout，不要求安装 FFCV。以下为单个正式 run；依次替换 representation 和
+seed。三种正式 representation 为 `raw`、`amplitude`、`amplitude_soft_phase_gradient`，seeds 为
+20260923、20260924、20260925。
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_wavebench_identifier \
+  --data-root /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/wavebench_full_remotezip_20260912 \
+  --output artifacts/wavebench_representation_m1/formal_seed20260925 \
+  --representation amplitude_soft_phase_gradient \
+  --train-systems 8000 --validation-systems 500 --test-systems 500 \
+  --steps 3000 --evaluate-every 300 --batch-size 12 --eval-batch-size 32 \
+  --width 24 --dimension 128 --slots 4 --learning-rate 0.001 \
+  --full-context-probability 0.5 --split-seed 42 --seed 20260925
+```
+
+三 seed 汇总与 paired bootstrap：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_wavebench_representation \
+  --roots artifacts/wavebench_representation_m1/development_seed20260923 \
+          artifacts/wavebench_representation_m1/formal_seed20260924 \
+          artifacts/wavebench_representation_m1/formal_seed20260925 \
+  --output artifacts/wavebench_representation_m1/summary
+```
+
+固定测试样本可视化：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.plot_wavebench_examples \
+  --data-root /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/wavebench_full_remotezip_20260912 \
+  --raw-checkpoint artifacts/wavebench_representation_m1/development_seed20260923/raw_seed20260923.pt \
+  --phase-checkpoint artifacts/wavebench_representation_m1/development_seed20260923/amplitude_soft_phase_gradient_seed20260923.pt \
+  --output artifacts/wavebench_representation_m1/summary/wavebench_examples.png
+```
+
+`*.pt` checkpoint 与 `*_records.csv` 逐系统文件不提交 Git；三 seed JSON、聚合 CSV/JSON 和 PNG/PDF
+保留。开发型 `amplitude_edge_connection` 与 `amplitude_transport_connection` 只用于冻结负结果，不计入
+正式三 seed 比较。

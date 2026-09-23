@@ -19,17 +19,23 @@
 相对 raw 降低 24--30%，20 dB 为 0.112 vs raw 0.529。10 dB 仍失败；clean ellipse 与 128-grid boundary
 上 raw 更强。instance-contrastive 预训练冻结 probe 约 0.31，且不改善 full-label 最优点，不是当前贡献。
 
+2026-09-23 的公开 WaveBench 独立验证使用 8,000/500/500 system split 和三 seed。phase-coordinate 在
+1--4 frequency budgets 相对 raw 分别降低 7.6%/11.6%/12.7%/12.5%，所有 seed 同向；full-context
+paired bootstrap 95% 区间为 12.10%--12.93%。该结果确立跨数据集实用性，但未过预注册 15% 强效应
+gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手工 normalization。
+
 这些结果支持 measurement-efficiency representation，不证明 unseen-query complex field generation 已解决。
 
 ## 当前执行顺序
 
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
-1. 冻结 M0：single-scale phase token + shared slot set operator；
-2. 研究 frequency-poor / noisy observation efficiency 与 acquisition shift，不再刷 full-context IID；
-3. 若继续 field generation，先过 oracle-medium unseen-query decoder gate；
-4. encoder--decoder cascade；
-5. 真正部分观测和第二独立物理域。
+1. 冻结二维 baseline：single-scale soft phase token + shared slot set operator；
+2. 只推进 dimension-agnostic complex-connection graph/point operator，先在 synthetic 与 WaveBench matched
+   比较；至少一域改善、另一域不退化才进入下一步；
+3. 通过后才做 3D system-readout existence gate；
+4. 若继续 field generation，先过 continuous oracle-medium unseen-query decoder gate；
+5. encoder--decoder cascade 与真实部分观测。
 
 `docs/EXPERIMENT_LEDGER_ZH.md` 中的 underexplored signals 是候选支线，不得全部并入第一阶段。
 

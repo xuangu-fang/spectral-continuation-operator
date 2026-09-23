@@ -6,6 +6,8 @@
 - `wave_operator_ood_ellipses_20260922.json`：未见 ellipse geometry 的 OOD 数据。
 - `wave_system_set_encoder_m0_20260922.json`：M0 自监督 set encoder 的预注册探索协议。
 - `wave_set_operator_m0_formal_20260922.json`：冻结后的三 seed variable-budget 正式协议与 claim 边界。
+- `wavebench_representation_m1_20260923.json`：公开 WaveBench 的系统级固定 split、三 seed matched
+  representation comparison、15% promotion gate 与开发型 edge variants。
 
 下一阶段的新实验必须使用新的日期化配置，不回写这些已产生结果的文件。
 

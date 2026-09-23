@@ -1,5 +1,7 @@
 # 报告导航
 
+- [`WAVEBENCH_REPRESENTATION_M1_ZH.md`](WAVEBENCH_REPRESENTATION_M1_ZH.md)：当前最新正式结果；公开
+  WaveBench 三 seed 独立验证、HarmoCore 方法归因、fixed complex-edge 负结果与 2D/3D/时空表示路线。
 - [`WAVE_SET_OPERATOR_M0_ZH.md`](WAVE_SET_OPERATOR_M0_ZH.md)：当前最新正式结果；shared slot set
   operator、可变 source-frequency budget、三 seed matched baselines 与 noise/OOD 边界。
 

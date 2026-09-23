@@ -7,7 +7,27 @@
 全局相位基准快速变化，但**归一化幅值与局部复相位增量**可以把“局部能量”和“局部传播”分开表示，
 从而更稳定地识别产生这些响应的物理系统。
 
-## 最新进展：可变观测 Wave Set Operator
+## 最新进展：在公开 WaveBench 上复现
+
+频率感知表示已在第二个、独立的公开数据集 WaveBench 上完成三随机种子 matched comparison。同一个
+shared set operator 接收任意 1--4 个频率响应并恢复产生它们的 wavespeed field；所有表示使用相同网络、
+split 和训练预算。
+
+| 观测频率数 | Raw complex | Amplitude only | Amplitude + phase advance | 相对 raw 改善 |
+|---:|---:|---:|---:|---:|
+| 1 | 0.3024 | 0.3807 | **0.2794** | **7.6%** |
+| 2 | 0.2422 | 0.2891 | **0.2140** | **11.6%** |
+| 3 | 0.2077 | 0.2398 | **0.1814** | **12.7%** |
+| 4 | 0.1811 | 0.2088 | **0.1584** | **12.5%** |
+
+完整四频的逐系统 paired bootstrap 改善为 12.52%，95% 区间为 12.10%--12.93%；普通 physical RelL2
+从 2.98% 降到 2.61%。结果跨全部 seed 和 budget 同向，但没有通过预注册的 sparse-budget 15% 强效应
+gate。因此它建立的是**可复现的跨数据集 measurement-efficiency prior**，不是已经完成的通用新架构。
+完整归因见 [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)。
+
+![WaveBench 独立验证](artifacts/wavebench_representation_m1/summary/wavebench_representation_budget.png)
+
+## 上一阶段：可变观测 Wave Set Operator
 
 固定通道 POC 已升级为 shared 4-slot set operator：同一 checkpoint 接收任意顺序和数量的
 source-frequency views，参数量不随预算增长。三 seed 结果显示，full-context 下 phase token 与 strong raw
@@ -69,26 +89,29 @@ offset 按固定物理距离而不是固定像素数定义。
 
 ## 接下来只推进三个 gate
 
-1. **共享 set encoder**：用同一组参数处理可变 source、frequency 和 spatial masks，消除固定通道拼接
-   带来的预算混淆。
-2. **多尺度物理 phase advance**：优先解决跨分辨率、噪声和强反射边界；暂不叠加额外 physics loss。
-3. **Oracle decoder gate**：先验证真实介质到 unseen response 的 decoder 能否低于 0.30 complex RelL2；
-   gate 未过，不训练端到端生成模型。
+1. **学习 complex connection operator**：把当前二维固定 channel token 改写为 node amplitude + complex
+   edge transport 的图/点算子；先在两个二维数据集 matched 比较，不再手工堆更多 phase channels。
+2. **3D existence gate**：只有 connection operator 在二维至少一域改善且另一域不退化，才进入 3D；要求
+   相同 edge rule 和共享参数自然适用，而不是另写 voxel 专用方法。
+3. **Continuous oracle decoder**：借鉴 functional latent 的连续坐标解码，但 system latent 必须跨频共享；
+   true-medium oracle 未达可用精度前，不训练完整 unseen-frequency generator。
 
-之后才进入 encoder--decoder cascade、真实部分观测和第二独立物理域。
+稀疏系数/场重构继续作为历史参考，不切换为当前主任务。
 
 ## 推荐阅读顺序
 
 1. [当前状态：一页式结论与决策](docs/CURRENT_STATUS_ZH.md) — 五分钟了解现在做到哪里、相信什么、
    下一步为何这样做；
-2. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
+2. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
+   归因与 2D/3D/时空表示路线；
+3. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
    仍未充分开发的正信号；
-3. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
+4. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
    stress tests 与声明边界；
-4. [下一阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 顺序、gates 和 stop rules；
-5. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
+5. [下一阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 顺序、gates 和 stop rules；
+6. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
    可预测性和可辨识性的通俗解释；
-6. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
+7. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
    关键正负结论与原始证据入口。
 
 具体命令、数据 hash 和旧实验参数统一放在[复现档案](docs/REPRODUCIBILITY_ZH.md)，不再占据主页。
@@ -104,6 +127,9 @@ src/spectral_continuation/train_wave_operator_contrastive.py
 src/spectral_continuation/train_wave_medium_probe.py
 src/spectral_continuation/evaluate_wave_medium_ood.py
 src/spectral_continuation/summarize_wave_representation_poc.py
+src/spectral_continuation/train_wavebench_identifier.py
+src/spectral_continuation/summarize_wavebench_representation.py
+src/spectral_continuation/plot_wavebench_examples.py
 ```
 
 代码按 `active / supporting / archived` 的完整分类见

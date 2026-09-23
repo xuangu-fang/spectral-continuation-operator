@@ -1,0 +1,32 @@
+{
+  "experiment": "wavebench_representation_m1",
+  "date": "2026-09-23",
+  "hypothesis": "A gauge-invariant local propagation representation improves wavespeed identification from frequency-poor complex responses on an independent public wave benchmark.",
+  "dataset": {
+    "name": "WaveBench isotropic acoustic time-harmonic",
+    "doi": "10.5281/zenodo.8015144",
+    "local_root": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/wavebench_full_remotezip_20260912",
+    "frequencies_hz": [10, 15, 20, 40],
+    "split_seed": 42,
+    "systems": {"train": 8000, "validation": 500, "test": 500}
+  },
+  "representations": [
+    "raw",
+    "amplitude",
+    "amplitude_soft_phase_gradient",
+    "amplitude_edge_connection",
+    "amplitude_transport_connection"
+  ],
+  "matched_model": {
+    "architecture": "shared four-slot set operator plus scalar field decoder",
+    "width": 24,
+    "parameters_independent_of_frequency_budget": true,
+    "steps": 3000,
+    "seeds": [20260923, 20260924, 20260925]
+  },
+  "primary_metric": "per-system wavespeed contrast relative L2",
+  "secondary_metric": "physical wavespeed relative L2",
+  "primary_analysis": "error versus all frequency subsets of sizes 1, 2, 3, and 4",
+  "promotion_gate": "phase-aware representation improves raw by at least 15% in two frequency-poor budgets with the same sign for all three seeds",
+  "stop_rule": "If neither phase representation beats raw in the one- and two-frequency regimes, do not claim cross-dataset measurement efficiency and audit source conventions and target identifiability before changing the model."
+}

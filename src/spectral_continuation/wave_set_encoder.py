@@ -365,6 +365,36 @@ class FrozenMediumDecoder(nn.Module):
         return 0.7 * torch.sigmoid(self.head(value))
 
 
+class ScalarFieldDecoder(nn.Module):
+    """Decode an unrestricted scalar coefficient field from a set pyramid.
+
+    ``FrozenMediumDecoder`` retains the bounded contrast convention of the
+    original synthetic benchmark.  Public datasets such as WaveBench use a
+    different coefficient range, so silently reusing its sigmoid would make a
+    matched representation comparison impossible.  This decoder keeps the
+    same topology and parameter budget but leaves the output affine.
+    """
+
+    def __init__(self, width: int = 24):
+        super().__init__()
+        self.deep = ResidualBlock(4 * width)
+        self.up_second = nn.ConvTranspose2d(4 * width, 2 * width, 4, stride=2, padding=1)
+        self.decode_second = nn.Sequential(
+            nn.Conv2d(4 * width, 2 * width, 3, padding=1), ResidualBlock(2 * width)
+        )
+        self.up_first = nn.ConvTranspose2d(2 * width, width, 4, stride=2, padding=1)
+        self.decode_first = nn.Sequential(
+            nn.Conv2d(2 * width, width, 3, padding=1), ResidualBlock(width)
+        )
+        self.head = nn.Conv2d(width, 1, 1)
+
+    def forward(self, features: tuple[torch.Tensor, torch.Tensor, torch.Tensor]) -> torch.Tensor:
+        first, second, third = features
+        value = self.decode_second(torch.cat((self.up_second(self.deep(third)), second), dim=1))
+        value = self.decode_first(torch.cat((self.up_first(value), first), dim=1))
+        return self.head(value)
+
+
 class QueryViewDecoder(nn.Module):
     """Decode a held-out response token from a system pyramid and query metadata."""
 

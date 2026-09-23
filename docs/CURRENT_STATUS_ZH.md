@@ -1,7 +1,27 @@
 # 当前状态：Wave-System Representation
 
-> 更新日期：2026-09-22  
+> 更新日期：2026-09-23
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
+
+## 2026-09-23 M1 更新：第二数据集成立，但强效应 gate 未过
+
+在公开 WaveBench time-harmonic acoustic 数据上，使用 8,000 / 500 / 500 个 system-held-out
+train/validation/test split，完成了三个随机种子的 matched comparison。同一个 shared set operator 从任意
+1--4 个 frequency responses 恢复隐藏 wavespeed：
+
+| 表示 | 1 frequency | 2 frequencies | 3 frequencies | 4 frequencies |
+|---|---:|---:|---:|---:|
+| Raw complex | 0.3024 | 0.2422 | 0.2077 | 0.1811 |
+| Amplitude only | 0.3807 | 0.2891 | 0.2398 | 0.2088 |
+| Amplitude + phase advance | **0.2794** | **0.2140** | **0.1814** | **0.1584** |
+
+相对 raw 的改善为 7.6%、11.6%、12.7%、12.5%，所有 seed 和 budget 同向。完整四频 paired bootstrap
+的 95% 区间为 12.10%--12.93%。这使“phase-coordinate 有跨数据集实用性”从单域观察升级为 A 级事实；
+但没有达到预注册的“两个 sparse budgets 至少 15%”强门槛，不能包装成显著架构突破。
+
+两个更复杂的 fixed complex-edge tokens 均弱于当前 soft phase advance。下一步不再继续手工加通道，
+而是检验 shared complex-edge graph/point operator。详见
+[WaveBench M1 报告](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)。
 
 ## 2026-09-22 M0 更新
 
@@ -91,30 +111,34 @@ context representation、multi-branch propagation 和 oscillatory decoding。
 
 ## 下一阶段的三个决策 gate
 
-### Gate 1：公平的可变观测编码
+### Gate 1：从二维 raster token 到 learned complex connection operator
 
-建立 shared view encoder 与 permutation-invariant set aggregation。所有 source / frequency budget 共用
-参数，性能应随有效观测量增加而稳定改善。
+把 node amplitude 与 gauge-invariant complex edge transport 作为 observation primitive，用 displacement-
+conditioned shared kernel 聚合，而不是为 x/y/z/t 手工增加方向通道。先在当前 synthetic 和 WaveBench
+matched 比较：至少一域改善、另一域不退化，才继续。
 
-### Gate 2：跨条件稳定的局部传播表示
+### Gate 2：3D existence，不先做完整生成
 
-只增加多尺度固定物理 offset 与 confidence fusion。要求跨 64→128、partial / closed boundary 和 20 dB
-噪声稳定优于 amplitude-only；10 dB 至少能可靠退回 amplitude fallback。
+优先用已有 3D Helmholtz 数据做 system readout。方法必须复用同一个 node/edge 定义和参数共享规则；若
+需要重新发明 3D 专用 token，就没有通过“维度无关”gate。
 
-### Gate 3：先证明 decoder 可行
+### Gate 3：连续 query decoder
 
-使用真实 coefficient field 单独训练 unseen-query decoder。若 raw complex RelL2 不能低于 0.30，就不把
-learned encoder 接上去，也不扩大端到端生成模型。
+借鉴 HarmoCore 的 continuous function bases，但不使用 per-frequency independent cores。先用真实
+coefficient/system latent 训练 oracle decoder；若 raw complex RelL2 不能低于 0.30，就不把 learned
+encoder 接上去。
 
 ## 当前判断
 
-这个 POC 足以支持继续投入，但还不足以独立支撑“通用波动表征”的论文主张。下一阶段的价值不在于
-继续刷当前 IID 数字，而在于验证该坐标系是否能通过公平 set encoding、强反射边界和 oracle decoder
-三个结构性 gate。若其中两个失败，应停止当前 token 路线并转向显式 multi-branch / microlocal 表示。
+两个数据集已经足以说明局部复传播坐标是值得继续投入的科学信号，但仍不足以支撑“通用波动表征”的
+论文主张。缺口不再是再加一个 dataset 数字，而是把二维手工 token 提升为真正 dimension-agnostic、
+coordinate-continuous 的学习算子。若 learned connection operator 不能在两个二维域至少一赢一平，就应
+冻结当前表征，不进入 3D 或完整生成。
 
 ## 入口
 
 - [完整方法与实验报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)
+- [WaveBench 独立验证与高维路线](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)
 - [实验账本：正负结果、禁重复清单与未开发信号](EXPERIMENT_LEDGER_ZH.md)
 - [下一阶段冻结协议](WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)
 - [科学备忘录](SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)
