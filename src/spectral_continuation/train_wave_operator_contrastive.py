@@ -123,6 +123,74 @@ def _multiscale_phase_gradient_channels(
     return np.stack(channels).astype(np.float32)
 
 
+def _wave_packet_gram_channels_batch(
+    value: np.ndarray,
+    *,
+    frequency: float,
+    reference_speed: float = 1.0,
+    orientations: int = 8,
+    radial_scales: tuple[float, ...] = (1.0,),
+    batch_size: int = 32,
+) -> np.ndarray:
+    """Phase token plus gauge-invariant directional packet Gram features."""
+
+    base = np.stack(
+        [
+            _phase_gradient_channels(item, include_amplitude=True, soft_floor=0.05)
+            for item in value
+        ]
+    )
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    height, width = value.shape[-2:]
+    ky = torch.fft.fftfreq(height, device=device)
+    kx = torch.fft.fftfreq(width, device=device)
+    grid_y, grid_x = torch.meshgrid(ky, kx, indexing="ij")
+    spacing = 1.0 / (width - 1)
+    center_frequency = float(frequency) * spacing / reference_speed
+    bandwidth = max(0.45 * center_frequency, 1.0 / width)
+    angles = torch.arange(orientations, device=device) * (2.0 * torch.pi / orientations)
+    scale = torch.as_tensor(radial_scales, device=device)
+    center_y = (center_frequency * scale[:, None] * torch.sin(angles)[None]).reshape(-1)
+    center_x = (center_frequency * scale[:, None] * torch.cos(angles)[None]).reshape(-1)
+    packet_bandwidth = (
+        bandwidth * scale[:, None].expand(-1, orientations).reshape(-1)
+    ).clamp_min(1.0 / width)
+    filters = torch.exp(
+        -0.5
+        * (
+            (grid_y[None] - center_y[:, None, None]).square()
+            + (grid_x[None] - center_x[:, None, None]).square()
+        )
+        / packet_bandwidth[:, None, None] ** 2
+    )
+    orientation_edges = ((0, 1), (1, 2), (2, 3), (3, 0), (0, 4), (1, 5), (2, 6), (3, 7))
+    edges = []
+    for scale_index in range(len(radial_scales)):
+        offset = scale_index * orientations
+        edges.extend((offset + first, offset + second) for first, second in orientation_edges)
+    for scale_index in range(len(radial_scales) - 1):
+        first_offset = scale_index * orientations
+        second_offset = (scale_index + 1) * orientations
+        edges.extend(
+            (first_offset + orientation, second_offset + orientation)
+            for orientation in range(orientations)
+        )
+    extra = []
+    for start in range(0, len(value), batch_size):
+        wave = torch.from_numpy(value[start : start + batch_size]).to(device)
+        components = torch.fft.ifft2(torch.fft.fft2(wave)[:, None] * filters[None])
+        energy = components.abs().square()
+        total = energy.sum(dim=1, keepdim=True).clamp_min(1e-10)
+        channels = list((energy / total).unbind(dim=1))
+        for first, second in edges:
+            cross = components[:, second] * components[:, first].conj()
+            denominator = torch.sqrt(energy[:, first] * energy[:, second])
+            cross = cross / (denominator + 0.01 * total[:, 0] + 1e-8)
+            channels.extend((cross.real, cross.imag))
+        extra.append(torch.stack(channels, dim=1).float().cpu().numpy())
+    return np.concatenate((base, np.concatenate(extra)), axis=1).astype(np.float32)
+
+
 class ContrastiveFieldBank:
     def __init__(
         self, data: np.lib.npyio.NpzFile, representation: str,
@@ -193,6 +261,17 @@ class ContrastiveFieldBank:
                 elif representation == "amplitude_multiscale_phase_gradient":
                     channels = np.stack(
                         [_multiscale_phase_gradient_channels(item) for item in value]
+                    )
+                elif representation == "amplitude_phase_wave_packet_gram":
+                    channels = _wave_packet_gram_channels_batch(
+                        value,
+                        frequency=float(self.frequencies[frequency]),
+                    )
+                elif representation == "amplitude_phase_multiscale_packet_gram":
+                    channels = _wave_packet_gram_channels_batch(
+                        value,
+                        frequency=float(self.frequencies[frequency]),
+                        radial_scales=(0.75, 1.5),
                     )
                 elif representation == "amplitude":
                     amplitude = np.abs(value)
@@ -395,6 +474,8 @@ def main() -> None:
             "raw", "raw_normalized", "homogeneous_carrier", "phase_space", "amplitude",
             "phase_gradient", "amplitude_phase_gradient",
             "amplitude_soft_phase_gradient", "amplitude_multiscale_phase_gradient",
+            "amplitude_phase_wave_packet_gram",
+            "amplitude_phase_multiscale_packet_gram",
         ),
         required=True,
     )

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task": "wave_set_operator_shift_evaluation",
+  "label": "residual_multiscale_gram_128_seed20260924",
+  "representation": "amplitude_phase_multiscale_packet_gram",
+  "seed": 20260924,
+  "snr_db": null,
+  "systems": 30,
+  "contrast_rel_l2_mean": 0.32931044697761536,
+  "contrast_rel_l2_std": 0.15592600405216217,
+  "inclusion_iou_mean": 0.8584461056929669,
+  "pixel_correlation_mean": 0.933748443650842,
+  "groups": {
+    "closed": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.35666289925575256,
+      "inclusion_iou_mean": 0.8328396043242406
+    },
+    "open": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.28626784682273865,
+      "inclusion_iou_mean": 0.9000183001476083
+    },
+    "partial": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.345000684261322,
+      "inclusion_iou_mean": 0.842480412607052
+    }
+  }
+}

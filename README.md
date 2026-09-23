@@ -7,7 +7,25 @@
 全局相位基准快速变化，但**归一化幅值与局部复相位增量**可以把“局部能量”和“局部传播”分开表示，
 从而更稳定地识别产生这些响应的物理系统。
 
-## 最新进展：在公开 WaveBench 上复现
+## 最新进展：多分支相空间 POC
+
+新的 oracle 审计证明：复杂波场局部确实存在单个 phase advance 无法表达的多分支信息，但尺度必须按
+波长定义。约 1.5-wavelength 的局部窗口中，K=4 相对 K=1 在 partial/closed boundary 上将 held-out
+complex error 降低 26.3%/25.7%；固定 33-pixel 窗口却只有约 6%，说明“局部”的物理单位是波长而非
+像素。
+
+由此设计的 two-scale complex packet Gram quotient 一个共同 global phase，同时保留分支之间的相对相位。
+在三 seed synthetic 任务中，它在单频观测预算下相对现有五通道 token 改善 12%--18%；在 64→128
+boundary shift 上，open/partial/closed 的逐系统改善为 5.1%/11.1%/11.7%，30/30 个系统同向。由于困难
+条件仍未达到预注册 15% gate，当前结论是**oracle 机制成立、fixed 69-channel 实现只关闭部分 gap**，不把
+它提升为论文主方法。
+
+完整公式、尺度诊断、三 seed 表格、负结果与 stop decision 见
+[多分支相空间 MPS-1 报告](reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)。
+
+![多分支相空间 POC](artifacts/multibranch_phase_space_mps1/summary/multibranch_phase_space_summary.png)
+
+## 独立复现：公开 WaveBench
 
 频率感知表示已在第二个、独立的公开数据集 WaveBench 上完成三随机种子 matched comparison。同一个
 shared set operator 接收任意 1--4 个频率响应并恢复产生它们的 wavespeed field；所有表示使用相同网络、
@@ -87,26 +105,24 @@ offset 按固定物理距离而不是固定像素数定义。
   unseen-query field generation。
 - 因而当前不主张“通用波动基础模型”或“任意远频率恢复”。
 
-## 当前新问题：从单分支 phase advance 到多分支相空间 token
+## 已检验的新问题：从单分支 phase advance 到多分支相空间 token
 
 现有 token 可以看成局部传播关系的一阶、单尺度、单分支近似。同一位置存在直达、反射和绕射分量时，
-一个相邻复共轭乘积会把多个传播方向压成单个统计量。下一阶段先验证：允许一个局部窗口产生多个带
-位置、波矢、尺度、复系数和置信度的 soft wave tokens，能否改善当前明确失败的 multipath 与 boundary
-regime。
+一个相邻复共轭乘积会把多个传播方向压成单个统计量。MPS-0/1 已验证：多分支信息的 oracle headroom
+存在，但 fixed packet Gram 的三 seed downstream 增益仍低于 promotion gate。后续不再无条件增加固定
+filter、半径或手工 phase channels。
 
 完整科学命题、传统理论与本项目新增证据的边界、相关论文以及 24 小时最小 POC 见
-[多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)。首轮先做 branch
-identifiability/oracle gate，不直接堆叠 Transformer、完整 Green operator 或 3D generator。
+[多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)，执行结果见
+[MPS-1 报告](reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)。
 
-## 接下来只推进三个 gate
+## 后续研究边界
 
-1. **学习 complex connection operator**：把当前二维固定 channel token 改写为 node amplitude + complex
-   edge transport 的图/点算子；多分支路线先通过局部分支可辨识性与 fixed wave-packet POC，不再手工堆
-   更多 phase channels。
-2. **3D existence gate**：只有 connection operator 在二维至少一域改善且另一域不退化，才进入 3D；要求
-   相同 edge rule 和共享参数自然适用，而不是另写 voxel 专用方法。
-3. **Continuous oracle decoder**：借鉴 functional latent 的连续坐标解码，但 system latent 必须跨频共享；
-   true-medium oracle 未达可用精度前，不训练完整 unseen-frequency generator。
+1. **停止 fixed front-end enumeration**：当前 69-channel Gram 是机制 POC，不再扫更多半径、方向和 edge。
+2. **只有引入新的可归因能力才重启多分支方法**：优先考虑受波长约束的 learnable analysis、显式 sparse
+   branch routing 或直接需要 multipath 的 query；必须复用本轮三 seed gate。
+3. **高维与生成仍需单独 existence gate**：二维方法未过门槛前不进入 3D；true-medium oracle decoder
+   未达可用精度前不接完整 unseen-frequency generator。
 
 稀疏系数/场重构继续作为历史参考，不切换为当前主任务。
 
@@ -114,18 +130,20 @@ identifiability/oracle gate，不直接堆叠 Transformer、完整 Green operato
 
 1. [当前状态：一页式结论与决策](docs/CURRENT_STATUS_ZH.md) — 五分钟了解现在做到哪里、相信什么、
    下一步为何这样做；
-2. [多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md) — 当前 active 科学命题、
-   相关工作、应用任务与首轮 POC；
-3. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
+2. [多分支相空间 MPS-1 报告](reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md) — 当前最新 oracle、方法、
+   三 seed 正负结果与 gate；
+3. [多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md) — 冻结科学命题、相关工作与
+   原始 POC 协议；
+4. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
    归因与 2D/3D/时空表示路线；
-4. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
+5. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
    仍未充分开发的正信号；
-5. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
+6. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
    stress tests 与声明边界；
-6. [下一阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 顺序、gates 和 stop rules；
-7. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
+7. [下一阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 顺序、gates 和 stop rules；
+8. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
    可预测性和可辨识性的通俗解释；
-8. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
+9. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
    关键正负结论与原始证据入口。
 
 具体命令、数据 hash 和旧实验参数统一放在[复现档案](docs/REPRODUCIBILITY_ZH.md)，不再占据主页。
@@ -144,6 +162,9 @@ src/spectral_continuation/summarize_wave_representation_poc.py
 src/spectral_continuation/train_wavebench_identifier.py
 src/spectral_continuation/summarize_wavebench_representation.py
 src/spectral_continuation/plot_wavebench_examples.py
+src/spectral_continuation/audit_multibranch_phase_space.py
+src/spectral_continuation/audit_wavelength_scaled_phase_space.py
+src/spectral_continuation/summarize_multibranch_phase_space.py
 ```
 
 代码按 `active / supporting / archived` 的完整分类见

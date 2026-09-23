@@ -27,6 +27,11 @@ REPRESENTATIONS = (
     "raw",
     "amplitude",
     "amplitude_soft_phase_gradient",
+    "amplitude_windowed_coherence",
+    "amplitude_phase_windowed_coherence",
+    "amplitude_phase_wave_packets",
+    "amplitude_phase_wave_packet_gram",
+    "amplitude_phase_multiscale_packet_gram",
     "amplitude_edge_connection",
     "amplitude_transport_connection",
 )
@@ -121,7 +126,254 @@ def _view_rms(value: torch.Tensor) -> torch.Tensor:
     return torch.sqrt(value.square().sum(2).mean(dim=(-2, -1), keepdim=True) + 1e-12)
 
 
-def response_coordinates(value: torch.Tensor, representation: str) -> torch.Tensor:
+def _shifted_products(
+    value: torch.Tensor, dy: int, dx: int
+) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+    """Return gauge-invariant products and paired endpoint energies."""
+
+    height, width = value.shape[-2:]
+    base_y = slice(max(0, -dy), min(height, height - dy))
+    base_x = slice(max(0, -dx), min(width, width - dx))
+    shifted_y = slice(max(0, -dy) + dy, min(height, height - dy) + dy)
+    shifted_x = slice(max(0, -dx) + dx, min(width, width - dx) + dx)
+    product = torch.zeros_like(value)
+    first_energy = torch.zeros_like(value.real)
+    second_energy = torch.zeros_like(value.real)
+    base = value[:, base_y, base_x]
+    shifted = value[:, shifted_y, shifted_x]
+    product[:, base_y, base_x] = shifted * base.conj()
+    first_energy[:, base_y, base_x] = shifted.abs().square()
+    second_energy[:, base_y, base_x] = base.abs().square()
+    return product, first_energy, second_energy
+
+
+def _windowed_coherence_coordinates(
+    complex_value: torch.Tensor,
+    log_amplitude: torch.Tensor,
+    reference: torch.Tensor,
+    frequency_hz: tuple[int, ...],
+    *,
+    reference_speed: float = 2.5,
+) -> torch.Tensor:
+    """Amplitude plus wavelength-scaled local complex autocorrelations.
+
+    Two radial lags and four undirected orientations yield eight complex
+    coherence samples.  Unlike a hard top-K spectrum, this representation is
+    continuous when two local branches exchange order.  The default reference
+    speed is in the public WaveBench coordinate units and is not a target-field
+    input.
+    """
+
+    if len(frequency_hz) != complex_value.shape[1]:
+        raise ValueError("one physical frequency is required for every response view")
+    spacing = 1.0 / (complex_value.shape[-1] - 1)
+    output = []
+    for view, frequency in enumerate(frequency_hz):
+        wavelength_pixels = reference_speed / (float(frequency) * spacing)
+        window = int(np.clip(round(1.5 * wavelength_pixels), 7, 47))
+        if window % 2 == 0:
+            window += 1 if window < 47 else -1
+        radii = (max(1, round(0.25 * wavelength_pixels)), max(1, round(0.50 * wavelength_pixels)))
+        offsets = []
+        for radius in radii:
+            diagonal = max(1, round(radius / np.sqrt(2.0)))
+            offsets.extend(((0, radius), (radius, 0), (diagonal, diagonal), (diagonal, -diagonal)))
+
+        packed = []
+        for dy, dx in offsets:
+            product, first_energy, second_energy = _shifted_products(
+                complex_value[:, view], dy, dx
+            )
+            packed.extend((product.real, product.imag, first_energy, second_energy))
+        smoothed = torch.nn.functional.avg_pool2d(
+            torch.stack(packed, dim=1), window, stride=1, padding=window // 2
+        )
+        channels = [log_amplitude[:, view]]
+        floor = 0.05 * reference[:, view].square()
+        for index in range(len(offsets)):
+            real = smoothed[:, 4 * index]
+            imaginary = smoothed[:, 4 * index + 1]
+            denominator = torch.sqrt(
+                smoothed[:, 4 * index + 2] * smoothed[:, 4 * index + 3]
+            )
+            denominator = denominator + floor + 1e-8
+            channels.extend((real / denominator, imaginary / denominator))
+        output.append(torch.stack(channels, dim=1))
+    return torch.stack(output, dim=1).float()
+
+
+def _wave_packet_components(
+    complex_value: torch.Tensor,
+    frequency_hz: tuple[int, ...],
+    *,
+    reference_speed: float = 2.5,
+    orientations: int = 8,
+    radial_scales: tuple[float, ...] = (1.0,),
+) -> list[torch.Tensor]:
+    """Analyze every view with a fixed directional complex packet bank."""
+
+    if len(frequency_hz) != complex_value.shape[1]:
+        raise ValueError("one physical frequency is required for every response view")
+    height, width = complex_value.shape[-2:]
+    ky = torch.fft.fftfreq(height, device=complex_value.device)
+    kx = torch.fft.fftfreq(width, device=complex_value.device)
+    grid_y, grid_x = torch.meshgrid(ky, kx, indexing="ij")
+    spacing = 1.0 / (width - 1)
+    angles = torch.arange(orientations, device=complex_value.device) * (
+        2.0 * torch.pi / orientations
+    )
+    output: list[torch.Tensor] = []
+    for view, frequency in enumerate(frequency_hz):
+        center_frequency = float(frequency) * spacing / reference_speed
+        bandwidth = max(0.45 * center_frequency, 1.0 / width)
+        scale = torch.as_tensor(radial_scales, device=complex_value.device)
+        center_y = (center_frequency * scale[:, None] * torch.sin(angles)[None]).reshape(-1)
+        center_x = (center_frequency * scale[:, None] * torch.cos(angles)[None]).reshape(-1)
+        packet_bandwidth = (
+            bandwidth * scale[:, None].expand(-1, orientations).reshape(-1)
+        ).clamp_min(1.0 / width)
+        filters = torch.exp(
+            -0.5
+            * (
+                (grid_y[None] - center_y[:, None, None]).square()
+                + (grid_x[None] - center_x[:, None, None]).square()
+            )
+            / packet_bandwidth[:, None, None] ** 2
+        )
+        spectrum = torch.fft.fft2(complex_value[:, view])
+        components = torch.fft.ifft2(spectrum[:, None] * filters[None])
+        output.append(components)
+    return output
+
+
+def _wave_packet_coordinates(
+    complex_value: torch.Tensor,
+    log_amplitude: torch.Tensor,
+    reference: torch.Tensor,
+    frequency_hz: tuple[int, ...],
+    *,
+    reference_speed: float = 2.5,
+    orientations: int = 8,
+) -> torch.Tensor:
+    """Fixed directional complex wave packets with branch-wise phase advance."""
+
+    component_views = _wave_packet_components(
+        complex_value,
+        frequency_hz,
+        reference_speed=reference_speed,
+        orientations=orientations,
+    )
+    spacing = 1.0 / (complex_value.shape[-1] - 1)
+    angles = torch.arange(orientations, device=complex_value.device) * (
+        2.0 * torch.pi / orientations
+    )
+    output = []
+    for view, (frequency, components) in enumerate(zip(frequency_hz, component_views, strict=True)):
+        center_frequency = float(frequency) * spacing / reference_speed
+        wavelength_pixels = 1.0 / max(center_frequency, 1e-8)
+        step = max(1, round(0.25 * wavelength_pixels))
+        channels = [log_amplitude[:, view]]
+        for orientation in range(orientations):
+            dy = round(step * float(torch.sin(angles[orientation])))
+            dx = round(step * float(torch.cos(angles[orientation])))
+            product, _, _ = _shifted_products(components[:, orientation], dy, dx)
+            branch_rms = torch.sqrt(
+                components[:, orientation].abs().square().mean(dim=(-2, -1), keepdim=True)
+                + 1e-12
+            )
+            branch_amplitude = torch.log1p(
+                components[:, orientation].abs() / (branch_rms + 1e-8)
+            )
+            advance = product / (product.abs() + 0.05 * branch_rms.square() + 1e-8)
+            channels.extend((branch_amplitude, advance.real, advance.imag))
+        output.append(torch.stack(channels, dim=1))
+    return torch.stack(output, dim=1).float()
+
+
+def _wave_packet_gram_coordinates(
+    complex_value: torch.Tensor,
+    log_amplitude: torch.Tensor,
+    frequency_hz: tuple[int, ...],
+    *,
+    reference_speed: float = 2.5,
+    orientations: int = 8,
+) -> torch.Tensor:
+    """Encode packet energy and inter-branch phase modulo one global phase."""
+
+    component_views = _wave_packet_components(
+        complex_value,
+        frequency_hz,
+        reference_speed=reference_speed,
+        orientations=orientations,
+    )
+    # Eight edges make a connected orientation graph while explicitly linking
+    # counter-propagating packets, which are important for standing waves.
+    edges = ((0, 1), (1, 2), (2, 3), (3, 0), (0, 4), (1, 5), (2, 6), (3, 7))
+    output = []
+    for view, components in enumerate(component_views):
+        energy = components.abs().square()
+        total_energy = energy.sum(dim=1, keepdim=True).clamp_min(1e-10)
+        channels = [log_amplitude[:, view]]
+        channels.extend((energy / total_energy).unbind(dim=1))
+        for first, second in edges:
+            cross = components[:, second] * components[:, first].conj()
+            denominator = torch.sqrt(energy[:, first] * energy[:, second])
+            cross = cross / (denominator + 0.01 * total_energy[:, 0] + 1e-8)
+            channels.extend((cross.real, cross.imag))
+        output.append(torch.stack(channels, dim=1))
+    return torch.stack(output, dim=1).float()
+
+
+def _multiscale_wave_packet_gram_coordinates(
+    complex_value: torch.Tensor,
+    log_amplitude: torch.Tensor,
+    frequency_hz: tuple[int, ...],
+    *,
+    reference_speed: float = 2.5,
+    orientations: int = 8,
+    radial_scales: tuple[float, ...] = (0.75, 1.5),
+) -> torch.Tensor:
+    """Two-radius packet Gram with within-scale and cross-scale phase edges."""
+
+    component_views = _wave_packet_components(
+        complex_value,
+        frequency_hz,
+        reference_speed=reference_speed,
+        orientations=orientations,
+        radial_scales=radial_scales,
+    )
+    orientation_edges = ((0, 1), (1, 2), (2, 3), (3, 0), (0, 4), (1, 5), (2, 6), (3, 7))
+    output = []
+    for view, components in enumerate(component_views):
+        energy = components.abs().square()
+        total_energy = energy.sum(dim=1, keepdim=True).clamp_min(1e-10)
+        channels = [log_amplitude[:, view]]
+        channels.extend((energy / total_energy).unbind(dim=1))
+        edges = []
+        for scale_index in range(len(radial_scales)):
+            offset = scale_index * orientations
+            edges.extend((offset + first, offset + second) for first, second in orientation_edges)
+        for scale_index in range(len(radial_scales) - 1):
+            first_offset = scale_index * orientations
+            second_offset = (scale_index + 1) * orientations
+            edges.extend(
+                (first_offset + orientation, second_offset + orientation)
+                for orientation in range(orientations)
+            )
+        for first, second in edges:
+            cross = components[:, second] * components[:, first].conj()
+            denominator = torch.sqrt(energy[:, first] * energy[:, second])
+            cross = cross / (denominator + 0.01 * total_energy[:, 0] + 1e-8)
+            channels.extend((cross.real, cross.imag))
+        output.append(torch.stack(channels, dim=1))
+    return torch.stack(output, dim=1).float()
+
+
+def response_coordinates(
+    value: torch.Tensor,
+    representation: str,
+    frequency_hz: tuple[int, ...] | None = None,
+) -> torch.Tensor:
     """Map ``[B,V,2,H,W]`` responses to matched real-valued coordinates."""
 
     if representation == "raw":
@@ -132,6 +384,124 @@ def response_coordinates(value: torch.Tensor, representation: str) -> torch.Tens
     log_amplitude = torch.log1p(amplitude / reference)
     if representation == "amplitude":
         return log_amplitude[:, :, None]
+    if representation == "amplitude_windowed_coherence":
+        if frequency_hz is None:
+            raise ValueError("windowed coherence requires physical frequencies")
+        return _windowed_coherence_coordinates(
+            complex_value, log_amplitude, reference, frequency_hz
+        )
+    if representation == "amplitude_phase_windowed_coherence":
+        if frequency_hz is None:
+            raise ValueError("windowed coherence requires physical frequencies")
+        coherence = _windowed_coherence_coordinates(
+            complex_value, log_amplitude, reference, frequency_hz
+        )
+        floor = 0.05 * reference.square()
+        horizontal = torch.ones_like(complex_value)
+        vertical = torch.ones_like(complex_value)
+        horizontal[:, :, :, 1:] = (
+            complex_value[:, :, :, 1:] * complex_value[:, :, :, :-1].conj()
+        )
+        vertical[:, :, 1:, :] = (
+            complex_value[:, :, 1:, :] * complex_value[:, :, :-1, :].conj()
+        )
+        horizontal = horizontal / (horizontal.abs() + floor + 1e-8)
+        vertical = vertical / (vertical.abs() + floor + 1e-8)
+        base = torch.stack(
+            (
+                log_amplitude,
+                horizontal.real,
+                horizontal.imag,
+                vertical.real,
+                vertical.imag,
+            ),
+            dim=2,
+        )
+        return torch.cat((base, coherence[:, :, 1:]), dim=2).float()
+    if representation == "amplitude_phase_wave_packets":
+        if frequency_hz is None:
+            raise ValueError("wave packets require physical frequencies")
+        packets = _wave_packet_coordinates(
+            complex_value, log_amplitude, reference, frequency_hz
+        )
+        floor = 0.05 * reference.square()
+        horizontal = torch.ones_like(complex_value)
+        vertical = torch.ones_like(complex_value)
+        horizontal[:, :, :, 1:] = (
+            complex_value[:, :, :, 1:] * complex_value[:, :, :, :-1].conj()
+        )
+        vertical[:, :, 1:, :] = (
+            complex_value[:, :, 1:, :] * complex_value[:, :, :-1, :].conj()
+        )
+        horizontal = horizontal / (horizontal.abs() + floor + 1e-8)
+        vertical = vertical / (vertical.abs() + floor + 1e-8)
+        base = torch.stack(
+            (
+                log_amplitude,
+                horizontal.real,
+                horizontal.imag,
+                vertical.real,
+                vertical.imag,
+            ),
+            dim=2,
+        )
+        return torch.cat((base, packets[:, :, 1:]), dim=2).float()
+    if representation == "amplitude_phase_wave_packet_gram":
+        if frequency_hz is None:
+            raise ValueError("wave packet Gram coordinates require physical frequencies")
+        packet_gram = _wave_packet_gram_coordinates(
+            complex_value, log_amplitude, frequency_hz
+        )
+        floor = 0.05 * reference.square()
+        horizontal = torch.ones_like(complex_value)
+        vertical = torch.ones_like(complex_value)
+        horizontal[:, :, :, 1:] = (
+            complex_value[:, :, :, 1:] * complex_value[:, :, :, :-1].conj()
+        )
+        vertical[:, :, 1:, :] = (
+            complex_value[:, :, 1:, :] * complex_value[:, :, :-1, :].conj()
+        )
+        horizontal = horizontal / (horizontal.abs() + floor + 1e-8)
+        vertical = vertical / (vertical.abs() + floor + 1e-8)
+        base = torch.stack(
+            (
+                log_amplitude,
+                horizontal.real,
+                horizontal.imag,
+                vertical.real,
+                vertical.imag,
+            ),
+            dim=2,
+        )
+        return torch.cat((base, packet_gram[:, :, 1:]), dim=2).float()
+    if representation == "amplitude_phase_multiscale_packet_gram":
+        if frequency_hz is None:
+            raise ValueError("multiscale packet Gram coordinates require physical frequencies")
+        packet_gram = _multiscale_wave_packet_gram_coordinates(
+            complex_value, log_amplitude, frequency_hz
+        )
+        floor = 0.05 * reference.square()
+        horizontal = torch.ones_like(complex_value)
+        vertical = torch.ones_like(complex_value)
+        horizontal[:, :, :, 1:] = (
+            complex_value[:, :, :, 1:] * complex_value[:, :, :, :-1].conj()
+        )
+        vertical[:, :, 1:, :] = (
+            complex_value[:, :, 1:, :] * complex_value[:, :, :-1, :].conj()
+        )
+        horizontal = horizontal / (horizontal.abs() + floor + 1e-8)
+        vertical = vertical / (vertical.abs() + floor + 1e-8)
+        base = torch.stack(
+            (
+                log_amplitude,
+                horizontal.real,
+                horizontal.imag,
+                vertical.real,
+                vertical.imag,
+            ),
+            dim=2,
+        )
+        return torch.cat((base, packet_gram[:, :, 1:]), dim=2).float()
     if representation not in {
         "amplitude_soft_phase_gradient",
         "amplitude_edge_connection",
@@ -253,7 +623,11 @@ def evaluate(
             for start in range(0, len(indices), batch_size):
                 batch_indices = indices[start : start + batch_size]
                 response, target = bank.load(batch_indices, subset)
-                value = response_coordinates(torch.from_numpy(response).to(device), representation)
+                value = response_coordinates(
+                    torch.from_numpy(response).to(device),
+                    representation,
+                    tuple(FREQUENCIES[index] for index in subset),
+                )
                 metadata = torch.from_numpy(bank.metadata(len(batch_indices), subset)).to(device)
                 prediction_normalized = decoder(encoder.spatial(value, metadata))
                 prediction = (
@@ -306,7 +680,15 @@ def train(args: argparse.Namespace) -> dict:
         args.split_seed, args.train_systems, args.validation_systems, args.test_systems
     )
     bank = WaveBenchBank(args.data_root, split.train)
-    channels = {"raw": 2, "amplitude": 1}.get(args.representation, 5)
+    channels = {
+        "raw": 2,
+        "amplitude": 1,
+        "amplitude_windowed_coherence": 17,
+        "amplitude_phase_windowed_coherence": 21,
+        "amplitude_phase_wave_packets": 29,
+        "amplitude_phase_wave_packet_gram": 29,
+        "amplitude_phase_multiscale_packet_gram": 69,
+    }.get(args.representation, 5)
     encoder = WaveSetEncoder(
         channels,
         width=args.width,
@@ -315,6 +697,34 @@ def train(args: argparse.Namespace) -> dict:
         slots=args.slots,
     ).to(device)
     decoder = ScalarFieldDecoder(args.width).to(device)
+    initialization = None
+    if args.initial_checkpoint is not None:
+        checkpoint = torch.load(args.initial_checkpoint, map_location="cpu", weights_only=False)
+        source_encoder = checkpoint["encoder"]
+        target_encoder = encoder.state_dict()
+        for name, target in target_encoder.items():
+            source = source_encoder[name]
+            if source.shape == target.shape:
+                target.copy_(source)
+            elif name == "backbone.first.0.weight" and (
+                source.shape[0] == target.shape[0]
+                and source.shape[2:] == target.shape[2:]
+                and source.shape[1] < target.shape[1]
+            ):
+                target.zero_()
+                target[:, : source.shape[1]].copy_(source)
+            else:
+                raise ValueError(
+                    f"cannot transfer {name}: source {tuple(source.shape)} target {tuple(target.shape)}"
+                )
+        encoder.load_state_dict(target_encoder)
+        decoder.load_state_dict(checkpoint["decoder"])
+        initialization = {
+            "checkpoint": str(args.initial_checkpoint),
+            "source_representation": checkpoint["summary"]["representation"],
+            "source_best_validation": checkpoint["summary"]["best_validation"],
+            "extra_input_weights_zero_initialized": True,
+        }
     parameters = list(encoder.parameters()) + list(decoder.parameters())
     optimizer = torch.optim.AdamW(parameters, lr=args.learning_rate, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.steps)
@@ -331,7 +741,11 @@ def train(args: argparse.Namespace) -> dict:
         )
         frequency_indices = tuple(int(value) for value in rng.choice(4, budget, replace=False))
         response, target = bank.load(indices, frequency_indices)
-        value = response_coordinates(torch.from_numpy(response).to(device), args.representation)
+        value = response_coordinates(
+            torch.from_numpy(response).to(device),
+            args.representation,
+            tuple(FREQUENCIES[index] for index in frequency_indices),
+        )
         metadata = torch.from_numpy(bank.metadata(len(indices), frequency_indices)).to(device)
         truth = torch.from_numpy((target - bank.target_mean) / bank.target_std).to(device)
         encoder.train()
@@ -359,7 +773,11 @@ def train(args: argparse.Namespace) -> dict:
                         batch_metadata = torch.from_numpy(
                             bank.metadata(len(batch_response), subset)
                         ).to(device)
-                        coordinate = response_coordinates(batch_response, args.representation)
+                        coordinate = response_coordinates(
+                            batch_response,
+                            args.representation,
+                            tuple(FREQUENCIES[index] for index in subset),
+                        )
                         predictions.append(
                             decoder(encoder.spatial(coordinate, batch_metadata)).cpu().numpy()
                         )
@@ -429,6 +847,7 @@ def train(args: argparse.Namespace) -> dict:
         "best_validation": best_validation,
         "elapsed_seconds": time.time() - started,
         "history": history,
+        "initialization": initialization,
     }
     args.output.mkdir(parents=True, exist_ok=True)
     stem = f"{args.representation}_seed{args.seed}"
@@ -461,6 +880,7 @@ def main() -> None:
     parser.add_argument("--full-context-probability", type=float, default=0.5)
     parser.add_argument("--split-seed", type=int, default=42)
     parser.add_argument("--seed", type=int, default=20260923)
+    parser.add_argument("--initial-checkpoint", type=Path)
     train(parser.parse_args())
 
 

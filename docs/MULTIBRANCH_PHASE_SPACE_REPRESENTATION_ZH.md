@@ -1,10 +1,24 @@
 # 多分支相空间波表征：科学命题、相关工作与首轮 POC
 
-> 状态：2026-09-23 active research brief  
-> 目的：定义下一阶段真正需要验证的表征命题，而不是预先承诺完整架构。  
+> 状态：2026-09-23 frozen research brief；MPS-0/1 已完成
+>
+> 结果：波长尺度 oracle 通过；fixed multiscale Gram 未通过 15% downstream gate
+>
+> 目的：记录被检验的表征命题与预注册边界，而不是把事后结果写回假设。
 > 相关入口：[项目主页](../README.md) · [当前状态](CURRENT_STATUS_ZH.md) ·
 > [实验账本](EXPERIMENT_LEDGER_ZH.md) ·
-> [WaveBench 独立验证](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)
+> [MPS-1 结果报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)
+
+## 执行后摘要
+
+- 受控 2/3 分支混合中，正确的 K 将 held-out complex RelL2 从 0.664/0.772 降到 0.313/0.326；
+- 固定 33-pixel 大窗口 oracle 只改善约 5%--8%，但按约 1.5 个局部波长设置窗口后，partial/closed 的
+  K=4 相对 K=1 改善为 26.3%/25.7%，oracle gate 通过；
+- 由此实现的 two-scale complex packet Gram 在三 seed 64→128 boundary shift 上改善 5.1%/11.1%/11.7%
+  （open/partial/closed），所有系统同向，但未达到预注册 15%；
+- 最符合已观察证据的情形是后文“结果 B”：表示空间存在，但固定滤波器组与 69-channel raster 只关闭了
+  部分 gap。完整方法、表格、图和后续 stop decision 见
+  [MPS-1 报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)。
 
 ## 0. 一句话命题
 
@@ -388,5 +402,6 @@ kernel。不得声称现实 multipath 已被表示。
 > **从少量复杂波动响应中，学习一个紧凑、可查询的表示，描述物理系统如何传播和散射相干波。**
 
 多分支相空间 token 是表示层的候选答案；few-measurement system cloning、active interrogation 和环境变化
-更新是任务层的候选答案。当前 24 小时阶段只负责回答更窄的问题：多分支局部表示是否比单分支 phase
-advance 更接近困难波场的充分统计量。只有该问题得到正答案，才值得继续建设完整系统。
+更新是任务层的候选答案。本阶段回答了更窄的问题：多分支局部表示在 oracle 层面比单分支 phase
+advance 更接近困难波场的充分统计量，但当前 fixed Gram 实现尚未达到主方法门槛。后续若重启，必须带来
+可学习分析或显式分支 routing 等新的归因变量，不能继续枚举固定通道。

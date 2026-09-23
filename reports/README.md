@@ -1,5 +1,7 @@
 # 报告导航
 
+- [`MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：当前最新结果；波长尺度
+  oracle、global-gauge complex Gram 方法、三 seed downstream 结果与未过 15% gate 的严格归因。
 - [`WAVEBENCH_REPRESENTATION_M1_ZH.md`](WAVEBENCH_REPRESENTATION_M1_ZH.md)：当前最新正式结果；公开
   WaveBench 三 seed 独立验证、HarmoCore 方法归因、fixed complex-edge 负结果与 2D/3D/时空表示路线。
 - [`WAVE_SET_OPERATOR_M0_ZH.md`](WAVE_SET_OPERATOR_M0_ZH.md)：当前最新正式结果；shared slot set

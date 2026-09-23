@@ -3,16 +3,27 @@
 > 更新日期：2026-09-23
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
-## 2026-09-23 新阶段：多分支相空间表示
+## 2026-09-23 最新阶段：多分支机制成立，fixed 实现未过方法 gate
 
-两数据集结果已经建立 local phase advance 的有效性，但 partial/closed boundary、128-grid 与复杂场生成
-仍失败。当前工作假设是：单个局部复相位增量把同一邻域内共存的直达、反射和绕射分量压成一个平均
-传播统计量。首轮 POC 将先比较 K=1 与 soft top-K complex wave-packet 表示的 oracle 信息上限，再做
-matched downstream system readout；未过 oracle gate 不训练大模型。
+单个 local phase advance 会把同一邻域内的多个相干传播分量压成一个统计量。MPS-0/1 已完成从
+information oracle 到 matched downstream 的逐层检验：
 
-问题定义、相关论文、长期应用与完整 stop rules 见
-[多分支相空间波表征](MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)。这是一项 active hypothesis，
-尚不是已有正结论。
+| 层级 | 主结果 | 判断 |
+|---|---|---|
+| 受控 2/3 分支混合 | 正确 K 将 RelL2 0.664/0.772 降到 0.313/0.326 | 分支可辨识 |
+| wavelength-scaled real-field oracle | partial/closed 改善 26.3%/25.7% | oracle gate 通过 |
+| three-seed synthetic single-frequency readout | 改善 12%--18% | 稳定正信号 |
+| 64→128 partial/closed boundary | 改善 11.1%/11.7%，30/30 system 同向 | **15% gate 未过** |
+| WaveBench relative-phase Gram | 单 seed full-context 改善 3.54% | 机制结果，不是正式验证 |
+
+最重要的新原则是：局部分析尺度应随波长变化；复分支表示只应 quotient 一个共同 global phase，同时保留
+分支之间决定干涉的相对相位。当前 two-scale packet Gram 把这两个原则实现成固定 69-channel raster，
+但只关闭了部分 oracle gap。因此停止继续枚举固定滤波器、半径和手工 edge；若重启，必须引入 learnable
+analysis、显式 branch routing 或新的 multipath query。
+
+完整方法、三 seed 统计和 stop decision 见
+[MPS-1 报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)；原始命题与相关工作见
+[多分支相空间波表征](MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)。
 
 ## 2026-09-23 M1 更新：第二数据集成立，但强效应 gate 未过
 
@@ -120,13 +131,13 @@ context representation、multi-branch propagation 和 oscillatory decoding。
 - 不能声称在 10 dB、强混响边界或真实稀疏阵列上稳健。
 - 不能把经典 phase-gradient 理论本身写成新的理论贡献。
 
-## 下一阶段的三个决策 gate
+## 后续三个决策 gate
 
-### Gate 1：从二维 raster token 到 learned complex connection operator
+### Gate 1：learnable multibranch analysis，而不是更多固定通道
 
-把 node amplitude 与 gauge-invariant complex edge transport 作为 observation primitive，用 displacement-
-conditioned shared kernel 聚合，而不是为 x/y/z/t 手工增加方向通道。先在当前 synthetic 和 WaveBench
-matched 比较：至少一域改善、另一域不退化，才继续。
+若继续多分支路线，新增方法必须让 packet center、bandwidth 或 branch assignment 至少一项根据局部场
+自适应，同时保留波长定标与 global-gauge 约束。继续扫固定方向、半径或 Gram edge 不算新实验。仍使用
+本轮三 seed partial/closed ≥15%、另一域/IID 不退化超过 2% 的门槛。
 
 ### Gate 2：3D existence，不先做完整生成
 
@@ -141,14 +152,15 @@ encoder 接上去。
 
 ## 当前判断
 
-两个数据集已经足以说明局部复传播坐标是值得继续投入的科学信号，但仍不足以支撑“通用波动表征”的
-论文主张。缺口不再是再加一个 dataset 数字，而是把二维手工 token 提升为真正 dimension-agnostic、
-coordinate-continuous 的学习算子。若 learned connection operator 不能在两个二维域至少一赢一平，就应
-冻结当前表征，不进入 3D 或完整生成。
+两个数据集已经足以说明局部复传播坐标是值得继续投入的科学信号，MPS oracle 又说明多分支容量确实
+缺失；但 fixed Gram 没有达到“通用波动表征”的方法门槛。缺口不再是再加一个 dataset 数字，而是能否
+学习 compact、dimension-agnostic 的 branch analysis，而不退化成 69-channel image feature。若新方法
+不能在困难二维条件达到 gate，就应冻结该路线，不进入 3D 或完整生成。
 
 ## 入口
 
 - [完整方法与实验报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)
+- [多分支相空间 MPS-1 报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)
 - [WaveBench 独立验证与高维路线](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)
 - [实验账本：正负结果、禁重复清单与未开发信号](EXPERIMENT_LEDGER_ZH.md)
 - [下一阶段冻结协议](WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)

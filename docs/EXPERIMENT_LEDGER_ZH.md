@@ -209,22 +209,46 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
   改善、另一域不退化，才进入 3D。3D 先做 system readout，不先做生成。
 - **证据**：[WaveBench M1 报告](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)。
 
+### E14：多分支相空间 oracle 与 fixed Gram POC
+
+- **单一假设**：partial/closed boundary 的失败部分来自单个 phase advance 把同一局部邻域中的多个相干
+  传播分支压成一个统计量。
+- **oracle 正结果**：受控 2/3 分支混合在正确 K 下，held-out complex RelL2 从 0.664/0.772 降到
+  0.313/0.326；约 1.5-wavelength 的真实场窗口中，K=4 相对 K=1 在 partial/closed 上改善
+  26.3%/25.7%，95% 区间均严格为正。
+- **关键尺度发现**：固定 33-pixel 窗口只改善约 6%；9/17/25/33 pixels 的增益单调减小。局部
+  plane-wave sparsity 必须按 wavelength，而不是 raster pixels 定标。
+- **方法设计**：8 orientations × 2 radial scales 的固定 complex packet bank；归一化 packet energy 加
+  complex Gram edges。Gram quotient 一个共同 global phase，同时保留 branch-to-branch relative phase。
+- **WaveBench 机制结果**：relative-phase Gram 的单 seed full-context paired 改善为 3.54%，优于逐 packet
+  独立 phase quotient 的 2.27%；只是 development evidence。
+- **三 seed正结果**：synthetic 的 1-frequency budgets 改善 12.1%--17.7%；full context 仅改善 1.9%。
+  64→128 boundary shift 中 open/partial/closed 的逐系统改善为 5.1%/11.1%/11.7%，所有 30 个物理系统
+  同向。
+- **未过 gate**：partial/closed 均未达到预注册 15%。不能用某个 seed 的 15%--16% 或 oracle 的 26%
+  替代正式方法结果；fixed multiscale Gram 不提升为主方法。
+- **失败归因**：oracle 用目标 patch 自适应选 atoms 与系数；fixed filters 不适应局部 wavespeed/curved
+  wavefront，69-channel raster 没有显式 branch routing，下游 loss 仅间接监督局部分解。
+- **不要重复**：更多固定半径、方向、bandwidth、Gram edge 或从头训练大通道前端。
+- **重启条件**：引入受 wavelength 约束的 learnable analysis、显式 sparse branch routing，或一个直接
+  需要 multipath 的 query；仍需通过同一三 seed 15%/2% gate。
+- **证据**：[MPS-1 完整报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)；机器汇总
+  `artifacts/multibranch_phase_space_mps1/summary/summary.json`。
+
 ## 4. 值得从正反馈继续挖的方向
 
 以下按“与当前主线的连接强度 / 最小验证成本”排序。它们不是要求同时实现的组件清单。
 
-### P0：多分支相空间 wave tokens
+### P0：多分支相空间 wave tokens（首轮已完成）
 
-**为什么现在是第一优先级。** 当前 local phase advance 在两个数据集成立，但它本质上是单尺度、单分支
-统计量；而最明确的失败恰好集中于 partial/closed boundary、分辨率变化和强 multipath。固定 edge
-normalization 已经失败，下一步必须检验“分支数不足”这个不同的机制假设，而不是继续堆 channels。
+**当前状态。** wavelength-scaled oracle 已通过，fixed multiscale Gram 的三 seed downstream gate 未过。
+见 E14。本条不再是可以原样执行的计划。
 
-**最小 POC。** 先在受控 1--3 分支混合与真实困难 patches 上比较 K=1、windowed/steerable top-K oracle；
-oracle 相对 K=1 的 local complex error 未降低至少 15% 就停止。通过后才接当前 matched set operator，
-比较当前 phase token 与 K=2/K=4 soft wave tokens。
+**若重启。** 只允许加入 learnable wavelength-constrained analysis、显式 sparse routing 或直接的
+multipath query；不再枚举 fixed filter channels。
 
-**进入下一阶段的门槛。** 在一个预先指定困难条件相对当前 token 降低至少 15% paired system RelL2，
-另一二维域和 IID 不退化超过 2%。
+**进入下一阶段的门槛不变。** 在一个预先指定困难条件相对当前 token 降低至少 15% paired system
+RelL2，另一二维域和 IID 不退化超过 2%。
 
 **完整协议。** [多分支相空间波表征](MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)。
 
@@ -306,10 +330,10 @@ unit test：恢复阶数、跨分辨率与 phase equivariance。由于真实场�
 
 ### 立即推进
 
-1. P0 multi-branch branch-identifiability/oracle gate；
-2. 只有 P0 oracle 通过后，做 fixed complex wave-packet + soft top-K matched set-operator POC；
-3. multi-scale fixed-physical spatial advance 与 10 dB fallback；
-4. oracle-medium decoder gate。
+1. 先决定是否有足够简洁的新机制来做 learnable multibranch analysis；没有则冻结 P0；
+2. 若重启，第一阶段只做 compact branch analysis/routing，不同时加入 propagation Transformer 或生成器；
+3. oracle-medium decoder gate；
+4. multi-scale fixed-physical spatial advance 与 10 dB fallback 仅作为独立诊断，不并入 MPS 主模型。
 
 ### 小成本并行诊断
 

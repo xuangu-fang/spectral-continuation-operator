@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "task": "finetuned_spatial_medium_probe",
+  "representation": "amplitude_phase_multiscale_packet_gram",
+  "encoder_seed": 20260922,
+  "probe_seed": 20260923,
+  "train_systems": 112,
+  "finetune": true,
+  "reset_encoder": false,
+  "residual_initialize": true,
+  "source_representation": "amplitude_soft_phase_gradient",
+  "full_context_probability": 0.5,
+  "training_view_domain": "low",
+  "steps": 800,
+  "encoder_parameters": 655316,
+  "aggregation": "slots",
+  "slots": 4,
+  "metadata_conditioning": "deep_add",
+  "basis_dimension": 4,
+  "trainable_parameters": 1018221,
+  "selected_threshold": 0.12999999999999998,
+  "primary_low_s6_f4": {
+    "contrast_rel_l2_mean": 0.04606747627258301,
+    "contrast_rel_l2_std": 0.012376016937196255,
+    "inclusion_iou_mean": 0.9963916475778317,
+    "pixel_correlation_mean": 0.9988144521468718
+  },
+  "low_group_budgets": {
+    "s1_f1": {
+      "views": 1,
+      "contrast_rel_l2_mean": 0.33812522888183594,
+      "contrast_rel_l2_std": 0.09161608666181564
+    },
+    "s1_f2": {
+      "views": 2,
+      "contrast_rel_l2_mean": 0.192427396774292,
+      "contrast_rel_l2_std": 0.04476756975054741
+    },
+    "s1_f4": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.11578911542892456,
+      "contrast_rel_l2_std": 0.031332794576883316
+    },
+    "s2_f1": {
+      "views": 2,
+      "contrast_rel_l2_mean": 0.22784829139709473,
+      "contrast_rel_l2_std": 0.0471322163939476
+    },
+    "s2_f2": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.13099008798599243,
+      "contrast_rel_l2_std": 0.02374281734228134
+    },
+    "s2_f4": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.07803457230329514,
+      "contrast_rel_l2_std": 0.02090400643646717
+    },
+    "s4_f1": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.15386880934238434,
+      "contrast_rel_l2_std": 0.03840440511703491
+    },
+    "s4_f2": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.0881865993142128,
+      "contrast_rel_l2_std": 0.023077232763171196
+    },
+    "s4_f4": {
+      "views": 16,
+      "contrast_rel_l2_mean": 0.05258030816912651,
+      "contrast_rel_l2_std": 0.013479026034474373
+    },
+    "s6_f1": {
+      "views": 6,
+      "contrast_rel_l2_mean": 0.12998992204666138,
+      "contrast_rel_l2_std": 0.040399085730314255
+    },
+    "s6_f2": {
+      "views": 12,
+      "contrast_rel_l2_mean": 0.07781509310007095,
+      "contrast_rel_l2_std": 0.02196604013442993
+    },
+    "s6_f4": {
+      "views": 24,
+      "contrast_rel_l2_mean": 0.04606747627258301,
+      "contrast_rel_l2_std": 0.012376016937196255
+    }
+  },
+  "disjoint_high_group_budgets": {
+    "s1_f1": {
+      "views": 1,
+      "contrast_rel_l2_mean": 1.7014354467391968,
+      "contrast_rel_l2_std": 1.1759620904922485
+    },
+    "s1_f2": {
+      "views": 2,
+      "contrast_rel_l2_mean": 1.1370657682418823,
+      "contrast_rel_l2_std": 0.6231688857078552
+    },
+    "s1_f4": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.545537531375885,
+      "contrast_rel_l2_std": 0.16555587947368622
+    },
+    "s2_f1": {
+      "views": 2,
+      "contrast_rel_l2_mean": 1.3918933868408203,
+      "contrast_rel_l2_std": 0.8944668769836426
+    },
+    "s2_f2": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.9145027995109558,
+      "contrast_rel_l2_std": 0.4537331461906433
+    },
+    "s2_f4": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.4427734315395355,
+      "contrast_rel_l2_std": 0.12178988754749298
+    },
+    "s3_f1": {
+      "views": 3,
+      "contrast_rel_l2_mean": 1.2265381813049316,
+      "contrast_rel_l2_std": 0.7423626184463501
+    },
+    "s3_f2": {
+      "views": 6,
+      "contrast_rel_l2_mean": 0.8031306266784668,
+      "contrast_rel_l2_std": 0.3501160442829132
+    },
+    "s3_f4": {
+      "views": 12,
+      "contrast_rel_l2_mean": 0.39368191361427307,
+      "contrast_rel_l2_std": 0.09557977318763733
+    }
+  },
+  "elapsed_seconds": 158.3864963054657,
+  "history": [
+    {
+      "step": 1,
+      "loss": 9.922482422553003e-05,
+      "validation_rel_l2": 0.16351328790187836,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.16351328790187836,
+      "views": 24
+    },
+    {
+      "step": 100,
+      "loss": 0.0002081294369418174,
+      "validation_rel_l2": 0.06115884706377983,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.06115884706377983,
+      "views": 24
+    },
+    {
+      "step": 200,
+      "loss": 7.355640991590917e-05,
+      "validation_rel_l2": 0.056053515523672104,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.056053515523672104,
+      "views": 24
+    },
+    {
+      "step": 300,
+      "loss": 0.0001247456530109048,
+      "validation_rel_l2": 0.07096963375806808,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.07096963375806808,
+      "views": 24
+    },
+    {
+      "step": 400,
+      "loss": 0.003550637746229768,
+      "validation_rel_l2": 0.052950043231248856,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.052950043231248856,
+      "views": 1
+    },
+    {
+      "step": 500,
+      "loss": 7.395793363684788e-05,
+      "validation_rel_l2": 0.048500146716833115,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.048500146716833115,
+      "views": 24
+    },
+    {
+      "step": 600,
+      "loss": 6.657979974988848e-05,
+      "validation_rel_l2": 0.04241231083869934,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04241231083869934,
+      "views": 12
+    },
+    {
+      "step": 700,
+      "loss": 9.999190660892054e-05,
+      "validation_rel_l2": 0.04340900480747223,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04340900480747223,
+      "views": 12
+    },
+    {
+      "step": 800,
+      "loss": 5.247355147730559e-05,
+      "validation_rel_l2": 0.04401825740933418,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04401825740933418,
+      "views": 24
+    }
+  ],
+  "checkpoint": "artifacts/multibranch_phase_space_mps1/synthetic_residual_multiscale_gram_seed20260923/set_probe_amplitude_phase_multiscale_packet_gram_enc20260922_labels112_seed20260923_finetune.pt"
+}

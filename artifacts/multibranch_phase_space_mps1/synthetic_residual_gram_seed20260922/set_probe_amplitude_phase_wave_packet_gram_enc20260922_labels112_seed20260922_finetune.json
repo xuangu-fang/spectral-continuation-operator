@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "task": "finetuned_spatial_medium_probe",
+  "representation": "amplitude_phase_wave_packet_gram",
+  "encoder_seed": 20260922,
+  "probe_seed": 20260922,
+  "train_systems": 112,
+  "finetune": true,
+  "reset_encoder": false,
+  "residual_initialize": true,
+  "source_representation": "amplitude_soft_phase_gradient",
+  "full_context_probability": 0.5,
+  "training_view_domain": "low",
+  "steps": 800,
+  "encoder_parameters": 631316,
+  "aggregation": "slots",
+  "slots": 4,
+  "metadata_conditioning": "deep_add",
+  "basis_dimension": 4,
+  "trainable_parameters": 994221,
+  "selected_threshold": 0.13999999999999999,
+  "primary_low_s6_f4": {
+    "contrast_rel_l2_mean": 0.04050236567854881,
+    "contrast_rel_l2_std": 0.015394852496683598,
+    "inclusion_iou_mean": 0.9976986685133902,
+    "pixel_correlation_mean": 0.9989740222425727
+  },
+  "low_group_budgets": {
+    "s1_f1": {
+      "views": 1,
+      "contrast_rel_l2_mean": 0.3328050971031189,
+      "contrast_rel_l2_std": 0.0940762609243393
+    },
+    "s1_f2": {
+      "views": 2,
+      "contrast_rel_l2_mean": 0.1857997179031372,
+      "contrast_rel_l2_std": 0.04926241934299469
+    },
+    "s1_f4": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.10916519165039062,
+      "contrast_rel_l2_std": 0.0358554869890213
+    },
+    "s2_f1": {
+      "views": 2,
+      "contrast_rel_l2_mean": 0.21756839752197266,
+      "contrast_rel_l2_std": 0.05303589254617691
+    },
+    "s2_f2": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.12451215833425522,
+      "contrast_rel_l2_std": 0.03138885274529457
+    },
+    "s2_f4": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.07295596599578857,
+      "contrast_rel_l2_std": 0.025167277082800865
+    },
+    "s4_f1": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.1508084386587143,
+      "contrast_rel_l2_std": 0.05286475643515587
+    },
+    "s4_f2": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.08423271030187607,
+      "contrast_rel_l2_std": 0.03167969733476639
+    },
+    "s4_f4": {
+      "views": 16,
+      "contrast_rel_l2_mean": 0.04685969278216362,
+      "contrast_rel_l2_std": 0.01640801504254341
+    },
+    "s6_f1": {
+      "views": 6,
+      "contrast_rel_l2_mean": 0.12950682640075684,
+      "contrast_rel_l2_std": 0.05727683752775192
+    },
+    "s6_f2": {
+      "views": 12,
+      "contrast_rel_l2_mean": 0.0738452598452568,
+      "contrast_rel_l2_std": 0.027444347739219666
+    },
+    "s6_f4": {
+      "views": 24,
+      "contrast_rel_l2_mean": 0.04050236567854881,
+      "contrast_rel_l2_std": 0.015394852496683598
+    }
+  },
+  "disjoint_high_group_budgets": {
+    "s1_f1": {
+      "views": 1,
+      "contrast_rel_l2_mean": 1.796207308769226,
+      "contrast_rel_l2_std": 1.2066376209259033
+    },
+    "s1_f2": {
+      "views": 2,
+      "contrast_rel_l2_mean": 1.281676173210144,
+      "contrast_rel_l2_std": 0.7186889052391052
+    },
+    "s1_f4": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.5988109111785889,
+      "contrast_rel_l2_std": 0.22619539499282837
+    },
+    "s2_f1": {
+      "views": 2,
+      "contrast_rel_l2_mean": 1.5553418397903442,
+      "contrast_rel_l2_std": 1.0055198669433594
+    },
+    "s2_f2": {
+      "views": 4,
+      "contrast_rel_l2_mean": 1.0960893630981445,
+      "contrast_rel_l2_std": 0.5892475843429565
+    },
+    "s2_f4": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.48735103011131287,
+      "contrast_rel_l2_std": 0.1793922781944275
+    },
+    "s3_f1": {
+      "views": 3,
+      "contrast_rel_l2_mean": 1.4610847234725952,
+      "contrast_rel_l2_std": 0.9163028001785278
+    },
+    "s3_f2": {
+      "views": 6,
+      "contrast_rel_l2_mean": 1.019377589225769,
+      "contrast_rel_l2_std": 0.5202823877334595
+    },
+    "s3_f4": {
+      "views": 12,
+      "contrast_rel_l2_mean": 0.4382878839969635,
+      "contrast_rel_l2_std": 0.14981983602046967
+    }
+  },
+  "elapsed_seconds": 75.7936339378357,
+  "history": [
+    {
+      "step": 1,
+      "loss": 5.031259934185073e-05,
+      "validation_rel_l2": 0.18278014659881592,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.18278014659881592,
+      "views": 24
+    },
+    {
+      "step": 100,
+      "loss": 0.00011169424396939576,
+      "validation_rel_l2": 0.05607292428612709,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.05607292428612709,
+      "views": 24
+    },
+    {
+      "step": 200,
+      "loss": 0.0008801565854810178,
+      "validation_rel_l2": 0.05423519387841225,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.05423519387841225,
+      "views": 4
+    },
+    {
+      "step": 300,
+      "loss": 7.59959511924535e-05,
+      "validation_rel_l2": 0.05389854311943054,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.05389854311943054,
+      "views": 15
+    },
+    {
+      "step": 400,
+      "loss": 0.000504960014950484,
+      "validation_rel_l2": 0.05228777602314949,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.05228777602314949,
+      "views": 4
+    },
+    {
+      "step": 500,
+      "loss": 4.6886696509318426e-05,
+      "validation_rel_l2": 0.04021717235445976,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04021717235445976,
+      "views": 24
+    },
+    {
+      "step": 600,
+      "loss": 3.512866169330664e-05,
+      "validation_rel_l2": 0.037880100309848785,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.037880100309848785,
+      "views": 24
+    },
+    {
+      "step": 700,
+      "loss": 4.160658863838762e-05,
+      "validation_rel_l2": 0.03738751262426376,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.03738751262426376,
+      "views": 24
+    },
+    {
+      "step": 800,
+      "loss": 4.509636346483603e-05,
+      "validation_rel_l2": 0.03724674880504608,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.03724674880504608,
+      "views": 24
+    }
+  ],
+  "checkpoint": "artifacts/multibranch_phase_space_mps1/synthetic_residual_gram_seed20260922/set_probe_amplitude_phase_wave_packet_gram_enc20260922_labels112_seed20260922_finetune.pt"
+}

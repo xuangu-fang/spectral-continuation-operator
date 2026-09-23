@@ -1,0 +1,37 @@
+{
+  "experiment": "multibranch_phase_space_mps0",
+  "date": "2026-09-23",
+  "hypothesis": "The failure of a single local phase advance in reflective fields is partly caused by collapsing multiple coexisting propagation branches into one local statistic.",
+  "datasets": {
+    "iid": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+    "boundary": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_legacy_geometry_128_30.npz"
+  },
+  "controlled": {
+    "samples_per_branch_count": 384,
+    "branch_counts": [1, 2, 3],
+    "snr_db": 30.0
+  },
+  "real_fields": {
+    "source_indices": [0, 4, 8],
+    "frequency_indices": [2, 5, 7],
+    "patches_per_view": 6,
+    "iid_patch_size": 17,
+    "boundary_patch_size": 33,
+    "max_iid_systems": 24,
+    "max_boundary_systems": 30
+  },
+  "dictionary": {
+    "frequency_grid_size": 35,
+    "max_cycles_per_pixel": 0.46,
+    "train_fraction": 0.70,
+    "branch_counts": [1, 2, 4],
+    "nms_bins": 2,
+    "ridge": 0.0001,
+    "batch_size": 192
+  },
+  "primary_metric": "held-out-pixel local raw complex relative L2",
+  "oracle_gate": "K=4 must reduce system-paired local complex error by at least 15% versus K=1 on partial or closed boundary patches, with a positive paired bootstrap interval.",
+  "mechanism_gate": "The K=4 gain should increase with local spectral multimodality or be larger under reflective boundaries than open boundaries.",
+  "stop_rule": "If the oracle gate fails, do not train a learned branch router or enlarge the downstream encoder.",
+  "output": "artifacts/multibranch_phase_space_mps0"
+}

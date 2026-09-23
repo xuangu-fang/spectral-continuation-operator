@@ -777,3 +777,78 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.plot_wavebench_examples
 `*.pt` checkpoint 与 `*_records.csv` 逐系统文件不提交 Git；三 seed JSON、聚合 CSV/JSON 和 PNG/PDF
 保留。开发型 `amplitude_edge_connection` 与 `amplitude_transport_connection` 只用于冻结负结果，不计入
 正式三 seed 比较。
+
+## 18. 多分支相空间 MPS-0/1
+
+冻结配置为：
+
+```text
+configs/multibranch_phase_space_mps0_20260923.json
+configs/multibranch_phase_space_mps0b_20260923.json
+configs/multibranch_phase_space_mps1_20260923.json
+```
+
+受控混合、固定窗口和真实 patch oracle：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.audit_multibranch_phase_space \
+  --config configs/multibranch_phase_space_mps0_20260923.json --device cuda
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.audit_wavelength_scaled_phase_space \
+  --config configs/multibranch_phase_space_mps0b_20260923.json --device cuda
+```
+
+MPS-1 synthetic control 从同一个既有五通道 checkpoint 继续 800 steps；candidate 复制原五通道第一层权重，
+新增的 64 个输入通道权重置零。以下给出 seed 20260922 的 matched pair，另外两个 seed 只替换 `--seed`
+和 output 路径：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.probe_wave_set_encoder \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --encoder-checkpoint experiments/wave_set_m0_formal/amplitude_soft_phase_gradient_seed20260922/set_probe_amplitude_soft_phase_gradient_enc20260922_labels112_seed20260922_finetune.pt \
+  --output artifacts/multibranch_phase_space_mps1/synthetic_continuation_control_seed20260922 \
+  --train-systems 112 --finetune --residual-initialize \
+  --full-context-probability 0.5 --training-view-domain low \
+  --steps 800 --batch-size 16 --learning-rate 0.0002 --seed 20260922
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.probe_wave_set_encoder \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --encoder-checkpoint experiments/wave_set_m0_formal/amplitude_soft_phase_gradient_seed20260922/set_probe_amplitude_soft_phase_gradient_enc20260922_labels112_seed20260922_finetune.pt \
+  --output artifacts/multibranch_phase_space_mps1/synthetic_residual_multiscale_gram_seed20260922 \
+  --representation-override amplitude_phase_multiscale_packet_gram \
+  --train-systems 112 --finetune --residual-initialize \
+  --full-context-probability 0.5 --training-view-domain low \
+  --steps 800 --batch-size 16 --learning-rate 0.0002 --seed 20260922
+```
+
+对 128-grid boundary 数据分别运行 `evaluate_wave_set_probe`，checkpoint 使用上述 control/candidate 的
+`.pt` 文件，输出放入 `artifacts/multibranch_phase_space_mps1/boundary_eval/`。数据为：
+
+```text
+/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/
+operator_id_legacy_geometry_128_30.npz
+```
+
+WaveBench mechanism ablation 复用完整 3,000-step phase checkpoint，并 matched 追加 800 steps：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_wavebench_identifier \
+  --data-root /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/wavebench_full_remotezip_20260912 \
+  --output artifacts/multibranch_phase_space_mps1/residual_wave_packet_gram_seed20260923 \
+  --representation amplitude_phase_wave_packet_gram \
+  --initial-checkpoint artifacts/wavebench_representation_m1/development_seed20260923/amplitude_soft_phase_gradient_seed20260923.pt \
+  --train-systems 8000 --validation-systems 500 --test-systems 500 \
+  --steps 800 --evaluate-every 100 --batch-size 12 --eval-batch-size 32 \
+  --width 24 --dimension 128 --slots 4 --learning-rate 0.0002 \
+  --full-context-probability 0.5 --split-seed 42 --seed 20260923
+```
+
+最终三 seed 配对统计与正文图：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_multibranch_phase_space
+```
+
+冻结输出在 `artifacts/multibranch_phase_space_mps1/summary/`。汇总脚本先在每个 physical system 上平均
+三个 seed，再对 system 做 paired bootstrap；不得把 90 个 seed-system pairs 当作独立样本。checkpoint、
+prediction NPZ 与逐系统中间 CSV 不进 Git，最终 summary JSON/CSV 和 PNG/PDF 进入版本管理。

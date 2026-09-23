@@ -4,6 +4,11 @@
 
 当前 active artifact collections 为：
 
+- `multibranch_phase_space_mps1/summary/`：波长尺度 oracle、synthetic 三 seed、64→128 boundary paired
+  statistics、WaveBench mechanism ablation 及汇总图；对应
+  [`reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)；
+- `multibranch_phase_space_mps0/` 与 `multibranch_phase_space_mps0b/`：固定窗口失败、尺度诊断和 oracle
+  通过的机器可读证据；
 - `wavebench_representation_m1/summary/`：公开 WaveBench 三 seed budget scaling、paired bootstrap、固定
   test examples、CSV/JSON 与正文图；对应
   [`reports/WAVEBENCH_REPRESENTATION_M1_ZH.md`](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)；

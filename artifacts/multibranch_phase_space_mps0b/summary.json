@@ -1,0 +1,128 @@
+{
+  "config": {
+    "experiment": "multibranch_phase_space_mps0b_wavelength_scaled",
+    "date": "2026-09-23",
+    "parent": "configs/multibranch_phase_space_mps0_20260923.json",
+    "hypothesis": "Local wave-packet sparsity is wavelength scaled: a window spanning too many wavelengths mixes propagation changes, while a 1.5-wavelength window can expose several coherent local branches.",
+    "datasets": {
+      "iid": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+      "boundary": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_legacy_geometry_128_30.npz"
+    },
+    "sampling": {
+      "source_indices": [
+        0,
+        4,
+        8
+      ],
+      "frequency_indices": [
+        2,
+        5,
+        7
+      ],
+      "patches_per_view": 6,
+      "max_iid_systems": 24,
+      "max_boundary_systems": 30,
+      "patch_seeds": [
+        20260923,
+        20260924,
+        20260925
+      ]
+    },
+    "window": {
+      "reference_speed": 1.0,
+      "wavelengths": 1.5,
+      "minimum_pixels": 7,
+      "maximum_pixels": 17,
+      "fixed_boundary_sensitivity_pixels": [
+        9,
+        17,
+        25,
+        33
+      ]
+    },
+    "dictionary": {
+      "frequency_grid_size": 35,
+      "max_cycles_per_pixel": 0.46,
+      "train_fraction": 0.7,
+      "branch_counts": [
+        1,
+        2,
+        4
+      ],
+      "nms_bins": 2,
+      "ridge": 0.0001,
+      "batch_size": 256
+    },
+    "primary_metric": "held-out-pixel local raw complex relative L2 averaged per physical system",
+    "promotion_gate": "Across three patch seeds, K=4 improves K=1 by at least 15% on partial or closed boundaries with a positive system-bootstrap 95% interval.",
+    "interpretation_guard": "Passing proves local multi-component representation headroom, not that learned tokens or physically named reflection paths have been recovered.",
+    "output": "artifacts/multibranch_phase_space_mps0b"
+  },
+  "adaptive": {
+    "closed": {
+      "dataset": "boundary",
+      "systems": 10,
+      "patch_seeds": 3,
+      "mean_error_k1": 0.8864916582902271,
+      "mean_error_k2": 0.7967357754707336,
+      "mean_error_k4": 0.6585959626568687,
+      "paired_relative_improvement_k4_vs_k1": 0.25740064541469637,
+      "paired_improvement_95ci": [
+        0.2410697955079852,
+        0.27461994972415266
+      ],
+      "mean_multimodality": 0.5961354547076756
+    },
+    "open": {
+      "dataset": "boundary",
+      "systems": 10,
+      "patch_seeds": 3,
+      "mean_error_k1": 0.7020955546034706,
+      "mean_error_k2": 0.5979481514957217,
+      "mean_error_k4": 0.5060119930240844,
+      "paired_relative_improvement_k4_vs_k1": 0.28080740357069056,
+      "paired_improvement_95ci": [
+        0.2639165759055662,
+        0.2939445253384438
+      ],
+      "mean_multimodality": 0.371836613615354
+    },
+    "partial": {
+      "dataset": "boundary",
+      "systems": 10,
+      "patch_seeds": 3,
+      "mean_error_k1": 0.8470261328750187,
+      "mean_error_k2": 0.7519202914502885,
+      "mean_error_k4": 0.6251155220799977,
+      "paired_relative_improvement_k4_vs_k1": 0.2628605770707953,
+      "paired_improvement_95ci": [
+        0.23980332949788072,
+        0.28565820637068673
+      ],
+      "mean_multimodality": 0.539486108885871
+    },
+    "iid": {
+      "dataset": "iid",
+      "systems": 24,
+      "patch_seeds": 3,
+      "mean_error_k1": 0.8414663599321136,
+      "mean_error_k2": 0.7602641807386169,
+      "mean_error_k4": 0.7023247601809325,
+      "paired_relative_improvement_k4_vs_k1": 0.175516766692836,
+      "paired_improvement_95ci": [
+        0.13631584974697133,
+        0.2187013777520561
+      ],
+      "mean_multimodality": 0.5207472588453028
+    }
+  },
+  "promotion_gate": {
+    "passed": true,
+    "passing_labels": [
+      "partial",
+      "closed"
+    ],
+    "required": ">=15% K4-vs-K1 system-paired gain on partial or closed with positive 95% CI"
+  },
+  "claim_boundary": "Oracle headroom for wavelength-scaled local multi-component atoms; not evidence that learned or path-semantic tokens are solved."
+}

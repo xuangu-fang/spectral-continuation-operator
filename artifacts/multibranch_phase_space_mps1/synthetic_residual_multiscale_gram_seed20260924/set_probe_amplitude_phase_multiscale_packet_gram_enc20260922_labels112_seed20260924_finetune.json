@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "task": "finetuned_spatial_medium_probe",
+  "representation": "amplitude_phase_multiscale_packet_gram",
+  "encoder_seed": 20260922,
+  "probe_seed": 20260924,
+  "train_systems": 112,
+  "finetune": true,
+  "reset_encoder": false,
+  "residual_initialize": true,
+  "source_representation": "amplitude_soft_phase_gradient",
+  "full_context_probability": 0.5,
+  "training_view_domain": "low",
+  "steps": 800,
+  "encoder_parameters": 655316,
+  "aggregation": "slots",
+  "slots": 4,
+  "metadata_conditioning": "deep_add",
+  "basis_dimension": 4,
+  "trainable_parameters": 1018221,
+  "selected_threshold": 0.13999999999999999,
+  "primary_low_s6_f4": {
+    "contrast_rel_l2_mean": 0.04711798205971718,
+    "contrast_rel_l2_std": 0.01709011383354664,
+    "inclusion_iou_mean": 0.9968789894216457,
+    "pixel_correlation_mean": 0.9988378618617776
+  },
+  "low_group_budgets": {
+    "s1_f1": {
+      "views": 1,
+      "contrast_rel_l2_mean": 0.32793113589286804,
+      "contrast_rel_l2_std": 0.08126778900623322
+    },
+    "s1_f2": {
+      "views": 2,
+      "contrast_rel_l2_mean": 0.1859368532896042,
+      "contrast_rel_l2_std": 0.04454421252012253
+    },
+    "s1_f4": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.11350735276937485,
+      "contrast_rel_l2_std": 0.03246048837900162
+    },
+    "s2_f1": {
+      "views": 2,
+      "contrast_rel_l2_mean": 0.21557746827602386,
+      "contrast_rel_l2_std": 0.040227826684713364
+    },
+    "s2_f2": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.12246179580688477,
+      "contrast_rel_l2_std": 0.023304162546992302
+    },
+    "s2_f4": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.07784803956747055,
+      "contrast_rel_l2_std": 0.02388552390038967
+    },
+    "s4_f1": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.14999695122241974,
+      "contrast_rel_l2_std": 0.0377071276307106
+    },
+    "s4_f2": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.08734466880559921,
+      "contrast_rel_l2_std": 0.021991323679685593
+    },
+    "s4_f4": {
+      "views": 16,
+      "contrast_rel_l2_mean": 0.054343413561582565,
+      "contrast_rel_l2_std": 0.01823742873966694
+    },
+    "s6_f1": {
+      "views": 6,
+      "contrast_rel_l2_mean": 0.1293811798095703,
+      "contrast_rel_l2_std": 0.03780240938067436
+    },
+    "s6_f2": {
+      "views": 12,
+      "contrast_rel_l2_mean": 0.07770531624555588,
+      "contrast_rel_l2_std": 0.019606975838541985
+    },
+    "s6_f4": {
+      "views": 24,
+      "contrast_rel_l2_mean": 0.04711798205971718,
+      "contrast_rel_l2_std": 0.01709011383354664
+    }
+  },
+  "disjoint_high_group_budgets": {
+    "s1_f1": {
+      "views": 1,
+      "contrast_rel_l2_mean": 1.670412540435791,
+      "contrast_rel_l2_std": 1.211394190788269
+    },
+    "s1_f2": {
+      "views": 2,
+      "contrast_rel_l2_mean": 1.3209710121154785,
+      "contrast_rel_l2_std": 0.8353493213653564
+    },
+    "s1_f4": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.7344682812690735,
+      "contrast_rel_l2_std": 0.3551023304462433
+    },
+    "s2_f1": {
+      "views": 2,
+      "contrast_rel_l2_mean": 1.4709364175796509,
+      "contrast_rel_l2_std": 0.9918056726455688
+    },
+    "s2_f2": {
+      "views": 4,
+      "contrast_rel_l2_mean": 1.1593917608261108,
+      "contrast_rel_l2_std": 0.7058693766593933
+    },
+    "s2_f4": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.6347489356994629,
+      "contrast_rel_l2_std": 0.32481878995895386
+    },
+    "s3_f1": {
+      "views": 3,
+      "contrast_rel_l2_mean": 1.3795255422592163,
+      "contrast_rel_l2_std": 0.8853096961975098
+    },
+    "s3_f2": {
+      "views": 6,
+      "contrast_rel_l2_mean": 1.0712066888809204,
+      "contrast_rel_l2_std": 0.6038392186164856
+    },
+    "s3_f4": {
+      "views": 12,
+      "contrast_rel_l2_mean": 0.5685825347900391,
+      "contrast_rel_l2_std": 0.2562614381313324
+    }
+  },
+  "elapsed_seconds": 155.03389811515808,
+  "history": [
+    {
+      "step": 1,
+      "loss": 6.90781234879978e-05,
+      "validation_rel_l2": 0.17431806027889252,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.17431806027889252,
+      "views": 24
+    },
+    {
+      "step": 100,
+      "loss": 0.00017087961896322668,
+      "validation_rel_l2": 0.07009851187467575,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.07009851187467575,
+      "views": 24
+    },
+    {
+      "step": 200,
+      "loss": 0.0007769125513732433,
+      "validation_rel_l2": 0.10928504914045334,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.10928504914045334,
+      "views": 4
+    },
+    {
+      "step": 300,
+      "loss": 7.003232167335227e-05,
+      "validation_rel_l2": 0.053681135177612305,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.053681135177612305,
+      "views": 24
+    },
+    {
+      "step": 400,
+      "loss": 0.001027576974593103,
+      "validation_rel_l2": 0.051875125616788864,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.051875125616788864,
+      "views": 5
+    },
+    {
+      "step": 500,
+      "loss": 7.781079330015928e-05,
+      "validation_rel_l2": 0.04929205775260925,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04929205775260925,
+      "views": 24
+    },
+    {
+      "step": 600,
+      "loss": 0.00013022168423049152,
+      "validation_rel_l2": 0.046767931431531906,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.046767931431531906,
+      "views": 18
+    },
+    {
+      "step": 700,
+      "loss": 0.0005060313851572573,
+      "validation_rel_l2": 0.04816509410738945,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04816509410738945,
+      "views": 5
+    },
+    {
+      "step": 800,
+      "loss": 0.00012940875603817403,
+      "validation_rel_l2": 0.04649096727371216,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04649096727371216,
+      "views": 8
+    }
+  ],
+  "checkpoint": "artifacts/multibranch_phase_space_mps1/synthetic_residual_multiscale_gram_seed20260924/set_probe_amplitude_phase_multiscale_packet_gram_enc20260922_labels112_seed20260924_finetune.pt"
+}

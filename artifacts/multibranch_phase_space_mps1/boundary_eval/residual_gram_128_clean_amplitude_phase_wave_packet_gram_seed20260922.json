@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task": "wave_set_operator_shift_evaluation",
+  "label": "residual_gram_128",
+  "representation": "amplitude_phase_wave_packet_gram",
+  "seed": 20260922,
+  "snr_db": null,
+  "systems": 30,
+  "contrast_rel_l2_mean": 0.3687802255153656,
+  "contrast_rel_l2_std": 0.15782438218593597,
+  "inclusion_iou_mean": 0.8280726067505518,
+  "pixel_correlation_mean": 0.9136402329941684,
+  "groups": {
+    "closed": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.4051378667354584,
+      "inclusion_iou_mean": 0.7878479966664267
+    },
+    "open": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.3224335312843323,
+      "inclusion_iou_mean": 0.8855622522799349
+    },
+    "partial": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.37876930832862854,
+      "inclusion_iou_mean": 0.8108075713052939
+    }
+  }
+}

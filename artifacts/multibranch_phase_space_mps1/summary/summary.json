@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "oracle": {
+    "gate_passed": true,
+    "adaptive": {
+      "closed": {
+        "dataset": "boundary",
+        "systems": 10,
+        "patch_seeds": 3,
+        "mean_error_k1": 0.8864916582902271,
+        "mean_error_k2": 0.7967357754707336,
+        "mean_error_k4": 0.6585959626568687,
+        "paired_relative_improvement_k4_vs_k1": 0.25740064541469637,
+        "paired_improvement_95ci": [
+          0.2410697955079852,
+          0.27461994972415266
+        ],
+        "mean_multimodality": 0.5961354547076756
+      },
+      "open": {
+        "dataset": "boundary",
+        "systems": 10,
+        "patch_seeds": 3,
+        "mean_error_k1": 0.7020955546034706,
+        "mean_error_k2": 0.5979481514957217,
+        "mean_error_k4": 0.5060119930240844,
+        "paired_relative_improvement_k4_vs_k1": 0.28080740357069056,
+        "paired_improvement_95ci": [
+          0.2639165759055662,
+          0.2939445253384438
+        ],
+        "mean_multimodality": 0.371836613615354
+      },
+      "partial": {
+        "dataset": "boundary",
+        "systems": 10,
+        "patch_seeds": 3,
+        "mean_error_k1": 0.8470261328750187,
+        "mean_error_k2": 0.7519202914502885,
+        "mean_error_k4": 0.6251155220799977,
+        "paired_relative_improvement_k4_vs_k1": 0.2628605770707953,
+        "paired_improvement_95ci": [
+          0.23980332949788072,
+          0.28565820637068673
+        ],
+        "mean_multimodality": 0.539486108885871
+      },
+      "iid": {
+        "dataset": "iid",
+        "systems": 24,
+        "patch_seeds": 3,
+        "mean_error_k1": 0.8414663599321136,
+        "mean_error_k2": 0.7602641807386169,
+        "mean_error_k4": 0.7023247601809325,
+        "paired_relative_improvement_k4_vs_k1": 0.175516766692836,
+        "paired_improvement_95ci": [
+          0.13631584974697133,
+          0.2187013777520561
+        ],
+        "mean_multimodality": 0.5207472588453028
+      }
+    },
+    "interpretation": "multi-component local headroom, not semantic path recovery"
+  },
+  "synthetic_budget": [
+    {
+      "seed": 20260922,
+      "budget": "s1_f1",
+      "control_rel_l2": 0.34405970573425293,
+      "candidate_rel_l2": 0.3084719181060791,
+      "relative_improvement": 0.10343491851865198
+    },
+    {
+      "seed": 20260922,
+      "budget": "s2_f1",
+      "control_rel_l2": 0.22646452486515045,
+      "candidate_rel_l2": 0.20109255611896515,
+      "relative_improvement": 0.1120350693394172
+    },
+    {
+      "seed": 20260922,
+      "budget": "s4_f1",
+      "control_rel_l2": 0.1590251326560974,
+      "candidate_rel_l2": 0.13823486864566803,
+      "relative_improvement": 0.13073571241968232
+    },
+    {
+      "seed": 20260922,
+      "budget": "s6_f1",
+      "control_rel_l2": 0.13584522902965546,
+      "candidate_rel_l2": 0.11915323883295059,
+      "relative_improvement": 0.1228750565326144
+    },
+    {
+      "seed": 20260922,
+      "budget": "s6_f4",
+      "control_rel_l2": 0.04004211351275444,
+      "candidate_rel_l2": 0.04005207121372223,
+      "relative_improvement": -0.0002486807037449937
+    },
+    {
+      "seed": 20260923,
+      "budget": "s1_f1",
+      "control_rel_l2": 0.39114701747894287,
+      "candidate_rel_l2": 0.33812522888183594,
+      "relative_improvement": 0.13555462838205412
+    },
+    {
+      "seed": 20260923,
+      "budget": "s2_f1",
+      "control_rel_l2": 0.2734503746032715,
+      "candidate_rel_l2": 0.22784829139709473,
+      "relative_improvement": 0.16676548083847895
+    },
+    {
+      "seed": 20260923,
+      "budget": "s4_f1",
+      "control_rel_l2": 0.19322223961353302,
+      "candidate_rel_l2": 0.15386880934238434,
+      "relative_improvement": 0.20366925851734316
+    },
+    {
+      "seed": 20260923,
+      "budget": "s6_f1",
+      "control_rel_l2": 0.16317565739154816,
+      "candidate_rel_l2": 0.12998992204666138,
+      "relative_improvement": 0.20337430150660246
+    },
+    {
+      "seed": 20260923,
+      "budget": "s6_f4",
+      "control_rel_l2": 0.04779669642448425,
+      "candidate_rel_l2": 0.04606747627258301,
+      "relative_improvement": 0.036178654201202025
+    },
+    {
+      "seed": 20260924,
+      "budget": "s1_f1",
+      "control_rel_l2": 0.3742918074131012,
+      "candidate_rel_l2": 0.32793113589286804,
+      "relative_improvement": 0.12386237315920051
+    },
+    {
+      "seed": 20260924,
+      "budget": "s2_f1",
+      "control_rel_l2": 0.25562867522239685,
+      "candidate_rel_l2": 0.21557746827602386,
+      "relative_improvement": 0.15667728556480784
+    },
+    {
+      "seed": 20260924,
+      "budget": "s4_f1",
+      "control_rel_l2": 0.18650592863559723,
+      "candidate_rel_l2": 0.14999695122241974,
+      "relative_improvement": 0.19575236926923753
+    },
+    {
+      "seed": 20260924,
+      "budget": "s6_f1",
+      "control_rel_l2": 0.16025158762931824,
+      "candidate_rel_l2": 0.1293811798095703,
+      "relative_improvement": 0.19263714186192651
+    },
+    {
+      "seed": 20260924,
+      "budget": "s6_f4",
+      "control_rel_l2": 0.04819424822926521,
+      "candidate_rel_l2": 0.04711798205971718,
+      "relative_improvement": 0.02233183853035991
+    }
+  ],
+  "boundary_shift": [
+    {
+      "boundary": "open",
+      "systems": 10,
+      "control_rel_l2": 0.3163372288147609,
+      "candidate_rel_l2": 0.3003935441374779,
+      "ratio_of_means_improvement": 0.050400911511490926,
+      "paired_relative_improvement": 0.050783305720923044,
+      "paired_improvement_95ci": [
+        0.04322970037697905,
+        0.05737868015030208
+      ],
+      "fraction_systems_improved": 1.0
+    },
+    {
+      "boundary": "partial",
+      "systems": 10,
+      "control_rel_l2": 0.4187787935137749,
+      "candidate_rel_l2": 0.36726423899332683,
+      "ratio_of_means_improvement": 0.1230113733511045,
+      "paired_relative_improvement": 0.11143104753407358,
+      "paired_improvement_95ci": [
+        0.08917830597784561,
+        0.13246083003225326
+      ],
+      "fraction_systems_improved": 1.0
+    },
+    {
+      "boundary": "closed",
+      "systems": 10,
+      "control_rel_l2": 0.4438582892219225,
+      "candidate_rel_l2": 0.3863408550620079,
+      "ratio_of_means_improvement": 0.12958513011155404,
+      "paired_relative_improvement": 0.11725203333665199,
+      "paired_improvement_95ci": [
+        0.09500406978611366,
+        0.13894386153570842
+      ],
+      "fraction_systems_improved": 1.0
+    },
+    {
+      "boundary": "all",
+      "systems": 30,
+      "control_rel_l2": 0.3929914371834861,
+      "candidate_rel_l2": 0.3513328793976042,
+      "ratio_of_means_improvement": 0.10600372894748769,
+      "paired_relative_improvement": 0.09315546219721621,
+      "paired_improvement_95ci": [
+        0.07814338729855909,
+        0.10792184816410515
+      ],
+      "fraction_systems_improved": 1.0
+    }
+  ],
+  "wavebench": {
+    "status": "single-seed mechanism ablation; not a formal cross-seed result",
+    "budgets": {
+      "1": {
+        "control": 0.2695458233356476,
+        "independent_packet_phase": 0.26511383056640625,
+        "relative_phase_gram": 0.2617518901824951,
+        "gram_improvement_vs_control": 0.028915058140029856
+      },
+      "2": {
+        "control": 0.20874446630477905,
+        "independent_packet_phase": 0.20394417643547058,
+        "relative_phase_gram": 0.20107443630695343,
+        "gram_improvement_vs_control": 0.036743632698875636
+      },
+      "3": {
+        "control": 0.17856894433498383,
+        "independent_packet_phase": 0.17398615181446075,
+        "relative_phase_gram": 0.17170420289039612,
+        "gram_improvement_vs_control": 0.038443086899309295
+      },
+      "4": {
+        "control": 0.15765643119812012,
+        "independent_packet_phase": 0.15405642986297607,
+        "relative_phase_gram": 0.1520243138074875,
+        "gram_improvement_vs_control": 0.035723993926736725
+      }
+    },
+    "full_context_paired_relative_improvement": 0.035393037334701845,
+    "full_context_paired_improvement_95ci": [
+      0.033939154535763495,
+      0.03684617191465649
+    ],
+    "full_context_fraction_systems_improved": 0.984
+  },
+  "promotion_gate": {
+    "required_hard_condition_paired_gain": 0.15,
+    "method_gate_passed": false,
+    "iid_safety_passed": true,
+    "iid_full_context_relative_change": -0.019420604009272313,
+    "decision": "stop_front_end_enumeration"
+  },
+  "claim_boundary": "The oracle establishes missing local branch information. The fixed multiscale Gram representation improves frequency-poor and reflective settings, but does not pass the preregistered 15% three-seed method gate."
+}

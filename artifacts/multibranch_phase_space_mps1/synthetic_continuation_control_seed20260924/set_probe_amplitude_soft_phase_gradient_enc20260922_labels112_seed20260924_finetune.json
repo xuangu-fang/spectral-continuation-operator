@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "task": "finetuned_spatial_medium_probe",
+  "representation": "amplitude_soft_phase_gradient",
+  "encoder_seed": 20260922,
+  "probe_seed": 20260924,
+  "train_systems": 112,
+  "finetune": true,
+  "reset_encoder": false,
+  "residual_initialize": true,
+  "source_representation": "amplitude_soft_phase_gradient",
+  "full_context_probability": 0.5,
+  "training_view_domain": "low",
+  "steps": 800,
+  "encoder_parameters": 616916,
+  "aggregation": "slots",
+  "slots": 4,
+  "metadata_conditioning": "deep_add",
+  "basis_dimension": 4,
+  "trainable_parameters": 979821,
+  "selected_threshold": 0.14999999999999997,
+  "primary_low_s6_f4": {
+    "contrast_rel_l2_mean": 0.04819424822926521,
+    "contrast_rel_l2_std": 0.017626725137233734,
+    "inclusion_iou_mean": 0.997318842312013,
+    "pixel_correlation_mean": 0.998794941953744
+  },
+  "low_group_budgets": {
+    "s1_f1": {
+      "views": 1,
+      "contrast_rel_l2_mean": 0.3742918074131012,
+      "contrast_rel_l2_std": 0.11179876327514648
+    },
+    "s1_f2": {
+      "views": 2,
+      "contrast_rel_l2_mean": 0.20928585529327393,
+      "contrast_rel_l2_std": 0.06104950234293938
+    },
+    "s1_f4": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.12172079086303711,
+      "contrast_rel_l2_std": 0.04272552207112312
+    },
+    "s2_f1": {
+      "views": 2,
+      "contrast_rel_l2_mean": 0.25562867522239685,
+      "contrast_rel_l2_std": 0.06802789121866226
+    },
+    "s2_f2": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.1376439929008484,
+      "contrast_rel_l2_std": 0.029238415881991386
+    },
+    "s2_f4": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.08190920948982239,
+      "contrast_rel_l2_std": 0.027858704328536987
+    },
+    "s4_f1": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.18650592863559723,
+      "contrast_rel_l2_std": 0.06199962645769119
+    },
+    "s4_f2": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.09990564733743668,
+      "contrast_rel_l2_std": 0.029011743143200874
+    },
+    "s4_f4": {
+      "views": 16,
+      "contrast_rel_l2_mean": 0.05548601225018501,
+      "contrast_rel_l2_std": 0.018512165173888206
+    },
+    "s6_f1": {
+      "views": 6,
+      "contrast_rel_l2_mean": 0.16025158762931824,
+      "contrast_rel_l2_std": 0.0629948303103447
+    },
+    "s6_f2": {
+      "views": 12,
+      "contrast_rel_l2_mean": 0.08670143038034439,
+      "contrast_rel_l2_std": 0.025502732023596764
+    },
+    "s6_f4": {
+      "views": 24,
+      "contrast_rel_l2_mean": 0.04819424822926521,
+      "contrast_rel_l2_std": 0.017626725137233734
+    }
+  },
+  "disjoint_high_group_budgets": {
+    "s1_f1": {
+      "views": 1,
+      "contrast_rel_l2_mean": 1.9351636171340942,
+      "contrast_rel_l2_std": 1.425389289855957
+    },
+    "s1_f2": {
+      "views": 2,
+      "contrast_rel_l2_mean": 1.5395625829696655,
+      "contrast_rel_l2_std": 1.000300407409668
+    },
+    "s1_f4": {
+      "views": 4,
+      "contrast_rel_l2_mean": 0.8547088503837585,
+      "contrast_rel_l2_std": 0.4209400713443756
+    },
+    "s2_f1": {
+      "views": 2,
+      "contrast_rel_l2_mean": 1.7706174850463867,
+      "contrast_rel_l2_std": 1.2422480583190918
+    },
+    "s2_f2": {
+      "views": 4,
+      "contrast_rel_l2_mean": 1.368761658668518,
+      "contrast_rel_l2_std": 0.8587422966957092
+    },
+    "s2_f4": {
+      "views": 8,
+      "contrast_rel_l2_mean": 0.7341321110725403,
+      "contrast_rel_l2_std": 0.38431021571159363
+    },
+    "s3_f1": {
+      "views": 3,
+      "contrast_rel_l2_mean": 1.6802068948745728,
+      "contrast_rel_l2_std": 1.1218757629394531
+    },
+    "s3_f2": {
+      "views": 6,
+      "contrast_rel_l2_mean": 1.2719101905822754,
+      "contrast_rel_l2_std": 0.7345291376113892
+    },
+    "s3_f4": {
+      "views": 12,
+      "contrast_rel_l2_mean": 0.6637024283409119,
+      "contrast_rel_l2_std": 0.30955612659454346
+    }
+  },
+  "elapsed_seconds": 45.49742078781128,
+  "history": [
+    {
+      "step": 1,
+      "loss": 6.908123032189906e-05,
+      "validation_rel_l2": 0.10477137565612793,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.10477137565612793,
+      "views": 24
+    },
+    {
+      "step": 100,
+      "loss": 0.00013668726023752242,
+      "validation_rel_l2": 0.06527232378721237,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.06527232378721237,
+      "views": 24
+    },
+    {
+      "step": 200,
+      "loss": 0.0008446224965155125,
+      "validation_rel_l2": 0.05399016663432121,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.05399016663432121,
+      "views": 4
+    },
+    {
+      "step": 300,
+      "loss": 7.336412090808153e-05,
+      "validation_rel_l2": 0.04998689889907837,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04998689889907837,
+      "views": 24
+    },
+    {
+      "step": 400,
+      "loss": 0.000886118970811367,
+      "validation_rel_l2": 0.04964478686451912,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04964478686451912,
+      "views": 5
+    },
+    {
+      "step": 500,
+      "loss": 7.48955862945877e-05,
+      "validation_rel_l2": 0.04933376610279083,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04933376610279083,
+      "views": 24
+    },
+    {
+      "step": 600,
+      "loss": 0.0001445929956389591,
+      "validation_rel_l2": 0.04754886031150818,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04754886031150818,
+      "views": 18
+    },
+    {
+      "step": 700,
+      "loss": 0.00046988032408989966,
+      "validation_rel_l2": 0.04895779490470886,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.04895779490470886,
+      "views": 5
+    },
+    {
+      "step": 800,
+      "loss": 0.00013945510727353394,
+      "validation_rel_l2": 0.048001665621995926,
+      "high_validation_rel_l2": null,
+      "selection_rel_l2": 0.048001665621995926,
+      "views": 8
+    }
+  ],
+  "checkpoint": "artifacts/multibranch_phase_space_mps1/synthetic_continuation_control_seed20260924/set_probe_amplitude_soft_phase_gradient_enc20260922_labels112_seed20260924_finetune.pt"
+}

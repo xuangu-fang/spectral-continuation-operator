@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "task": "wavebench_variable_frequency_system_identification",
+  "dataset": "WaveBench isotropic acoustic time-harmonic",
+  "representation": "amplitude_phase_wave_packet_gram",
+  "seed": 20260923,
+  "split_seed": 42,
+  "frequencies_hz": [
+    10,
+    15,
+    20,
+    40
+  ],
+  "split": {
+    "train": 8000,
+    "validation": 500,
+    "test": 500,
+    "train_sha256": "0edfea141af6ddecb8810134d0034fb06ff2808d73b0f290d20c001a3de64692",
+    "validation_sha256": "3afd98b18b6b7b9d387448cc344fc176e28b60af87af2dc0c90c2d3ae07cb61f",
+    "test_sha256": "a6acce080129527137b9179758ac6f26867162571e35bc6eaa44e3fd0726ea5d"
+  },
+  "target_mean": 3.245037078857422,
+  "target_std": 0.5404880046844482,
+  "response_scales": [
+    0.018510451540350914,
+    0.030848953872919083,
+    0.03372907638549805,
+    0.028582584112882614
+  ],
+  "steps": 800,
+  "parameters": 994221,
+  "frequency_budget": {
+    "1": {
+      "frequency_subsets": 4,
+      "contrast_rel_l2_mean": 0.2617518901824951,
+      "contrast_rel_l2_system_std": 0.03761206939816475,
+      "physical_rel_l2_mean": 0.04318435490131378,
+      "subsets": {
+        "10": {
+          "contrast_rel_l2_mean": 0.3061722218990326,
+          "physical_rel_l2_mean": 0.05057365447282791
+        },
+        "15": {
+          "contrast_rel_l2_mean": 0.26314789056777954,
+          "physical_rel_l2_mean": 0.043422285467386246
+        },
+        "20": {
+          "contrast_rel_l2_mean": 0.25553324818611145,
+          "physical_rel_l2_mean": 0.04216054454445839
+        },
+        "40": {
+          "contrast_rel_l2_mean": 0.22215424478054047,
+          "physical_rel_l2_mean": 0.03658093139529228
+        }
+      }
+    },
+    "2": {
+      "frequency_subsets": 6,
+      "contrast_rel_l2_mean": 0.20107443630695343,
+      "contrast_rel_l2_system_std": 0.025362882763147354,
+      "physical_rel_l2_mean": 0.03315863758325577,
+      "subsets": {
+        "10+15": {
+          "contrast_rel_l2_mean": 0.23145902156829834,
+          "physical_rel_l2_mean": 0.038254301995038986
+        },
+        "10+20": {
+          "contrast_rel_l2_mean": 0.22157369554042816,
+          "physical_rel_l2_mean": 0.03658265620470047
+        },
+        "10+40": {
+          "contrast_rel_l2_mean": 0.1754768192768097,
+          "physical_rel_l2_mean": 0.02890743315219879
+        },
+        "15+20": {
+          "contrast_rel_l2_mean": 0.21837131679058075,
+          "physical_rel_l2_mean": 0.035982728004455566
+        },
+        "15+40": {
+          "contrast_rel_l2_mean": 0.175835520029068,
+          "physical_rel_l2_mean": 0.02896568737924099
+        },
+        "20+40": {
+          "contrast_rel_l2_mean": 0.18373022973537445,
+          "physical_rel_l2_mean": 0.030259020626544952
+        }
+      }
+    },
+    "3": {
+      "frequency_subsets": 4,
+      "contrast_rel_l2_mean": 0.17170420289039612,
+      "contrast_rel_l2_system_std": 0.01663484238088131,
+      "physical_rel_l2_mean": 0.02829446643590927,
+      "subsets": {
+        "10+15+20": {
+          "contrast_rel_l2_mean": 0.20633432269096375,
+          "physical_rel_l2_mean": 0.034061990678310394
+        },
+        "10+15+40": {
+          "contrast_rel_l2_mean": 0.15926559269428253,
+          "physical_rel_l2_mean": 0.026202086359262466
+        },
+        "10+20+40": {
+          "contrast_rel_l2_mean": 0.15871138870716095,
+          "physical_rel_l2_mean": 0.026142334565520287
+        },
+        "15+20+40": {
+          "contrast_rel_l2_mean": 0.16250549256801605,
+          "physical_rel_l2_mean": 0.02677145227789879
+        }
+      }
+    },
+    "4": {
+      "frequency_subsets": 1,
+      "contrast_rel_l2_mean": 0.1520243138074875,
+      "contrast_rel_l2_system_std": 0.013070980086922646,
+      "physical_rel_l2_mean": 0.025029944255948067,
+      "subsets": {
+        "10+15+20+40": {
+          "contrast_rel_l2_mean": 0.1520243138074875,
+          "physical_rel_l2_mean": 0.025029944255948067
+        }
+      }
+    }
+  },
+  "best_validation": 0.21458714082837105,
+  "elapsed_seconds": 66.74416136741638,
+  "history": [
+    {
+      "step": 1,
+      "train_normalized_mse": 0.05676093325018883,
+      "selection_contrast_rel_l2": 0.5898316353559494,
+      "validation_subsets": [
+        0.6453543901443481,
+        0.6022456288337708,
+        0.6013367772102356,
+        0.5103897452354431
+      ]
+    },
+    {
+      "step": 100,
+      "train_normalized_mse": 0.060258157551288605,
+      "selection_contrast_rel_l2": 0.3150729723274708,
+      "validation_subsets": [
+        0.5028700828552246,
+        0.2777516543865204,
+        0.2538295388221741,
+        0.22584061324596405
+      ]
+    },
+    {
+      "step": 200,
+      "train_normalized_mse": 0.05373048409819603,
+      "selection_contrast_rel_l2": 0.3636316955089569,
+      "validation_subsets": [
+        0.5044249892234802,
+        0.3366643190383911,
+        0.32994386553764343,
+        0.28349360823631287
+      ]
+    },
+    {
+      "step": 300,
+      "train_normalized_mse": 0.03583230823278427,
+      "selection_contrast_rel_l2": 0.2411562018096447,
+      "validation_subsets": [
+        0.38124534487724304,
+        0.23012356460094452,
+        0.1878780871629715,
+        0.16537781059741974
+      ]
+    },
+    {
+      "step": 400,
+      "train_normalized_mse": 0.029700864106416702,
+      "selection_contrast_rel_l2": 0.2430478259921074,
+      "validation_subsets": [
+        0.3855011463165283,
+        0.2312408685684204,
+        0.18823596835136414,
+        0.1672133207321167
+      ]
+    },
+    {
+      "step": 500,
+      "train_normalized_mse": 0.02588556706905365,
+      "selection_contrast_rel_l2": 0.23462746664881706,
+      "validation_subsets": [
+        0.36392009258270264,
+        0.22773531079292297,
+        0.18722039461135864,
+        0.159634068608284
+      ]
+    },
+    {
+      "step": 600,
+      "train_normalized_mse": 0.026249844580888748,
+      "selection_contrast_rel_l2": 0.22448401898145676,
+      "validation_subsets": [
+        0.32951658964157104,
+        0.22807638347148895,
+        0.18095850944519043,
+        0.1593845933675766
+      ]
+    },
+    {
+      "step": 700,
+      "train_normalized_mse": 0.03307167440652847,
+      "selection_contrast_rel_l2": 0.21677682176232338,
+      "validation_subsets": [
+        0.311498761177063,
+        0.22314749658107758,
+        0.17935867607593536,
+        0.1531023532152176
+      ]
+    },
+    {
+      "step": 800,
+      "train_normalized_mse": 0.022452671080827713,
+      "selection_contrast_rel_l2": 0.21458714082837105,
+      "validation_subsets": [
+        0.30814000964164734,
+        0.22233840823173523,
+        0.17533834278583527,
+        0.15253180265426636
+      ]
+    }
+  ],
+  "initialization": {
+    "checkpoint": "artifacts/wavebench_representation_m1/development_seed20260923/amplitude_soft_phase_gradient_seed20260923.pt",
+    "source_representation": "amplitude_soft_phase_gradient",
+    "source_best_validation": 0.2194162905216217,
+    "extra_input_weights_zero_initialized": true
+  }
+}

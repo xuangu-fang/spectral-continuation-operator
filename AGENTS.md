@@ -8,6 +8,7 @@
 4. 当前任务若涉及新模型，再读 `docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md`。
 5. 当前任务若涉及相空间、多路径或 wave token，再读
    `docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md`。
+6. 上述任务必须再读结果归档 `reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`，不能只按执行前 brief 重跑。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
@@ -28,15 +29,20 @@ gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手�
 
 这些结果支持 measurement-efficiency representation，不证明 unseen-query complex field generation 已解决。
 
+2026-09-23 的多分支相空间 POC 已完成。wavelength-scaled K=4 oracle 在 partial/closed 相对 K=1 改善
+26.3%/25.7%，证明局部多分量 headroom；fixed two-scale packet Gram 的三 seed 64→128 downstream 改善
+只有 11.1%/11.7%，未过 15% promotion gate。所有 30 个 boundary systems 同向，且 synthetic 单频预算
+改善 12%--18%，所以记为机制级正结果，不是主方法。不要用单 seed 或 ratio-of-means 改写 gate。
+
 ## 当前执行顺序
 
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
 1. 冻结二维 baseline：single-scale soft phase token + shared slot set operator；
-2. 多分支方向必须先过 branch-identifiability/oracle gate，再做 fixed wave-packet + soft top-K matched POC；
-   不得从大 Transformer 或完整生成器开始；
-3. 只推进 dimension-agnostic complex-connection graph/point operator，先在 synthetic 与 WaveBench matched
-   比较；至少一域改善、另一域不退化才进入下一步；
+2. 多分支 oracle 与 fixed POC 已完成；不再枚举固定方向、半径、bandwidth 或 Gram edge。只有新的
+   wavelength-constrained learnable analysis、显式 sparse branch routing 或直接 multipath query 才能重启；
+3. 若重启，先做 compact branch analysis 的 matched comparison，不得一步加入大 Transformer、完整
+   propagator 或生成器；困难条件必须达到三 seed 15%，另一域/IID 不退化超过 2%；
 4. 通过后才做 3D system-readout existence gate；
 5. 若继续 field generation，先过 continuous oracle-medium unseen-query decoder gate；
 6. encoder--decoder cascade 与真实部分观测。
@@ -56,6 +62,8 @@ gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手�
 - 在 dense oracle 没有先通过时训练昂贵的 sparse multi-fidelity calibrator；
 - 因使用 flow/diffusion 就声称任务多模态。必须先有同一条件对应多个真实可行 target 的证据；
 - 用 amplitude、phase coherence 或挑选近频区间替代 raw complex RelL2 来制造主要性能结论。
+- 在 MPS-1 上继续扫描 fixed packet radii、orientations、bandwidths、Gram edges 或从头训练 69-channel
+  前端；oracle 成功不等于该 fixed implementation 成功。
 
 上述路线只有在实验账本写明的“重启条件”满足时才能重新打开。
 

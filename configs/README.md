@@ -8,6 +8,12 @@
 - `wave_set_operator_m0_formal_20260922.json`：冻结后的三 seed variable-budget 正式协议与 claim 边界。
 - `wavebench_representation_m1_20260923.json`：公开 WaveBench 的系统级固定 split、三 seed matched
   representation comparison、15% promotion gate 与开发型 edge variants。
+- `multibranch_phase_space_mps0_20260923.json`：多分支相空间方向的 oracle-first 协议；先比较 K=1 与
+  top-K local wave packets 在 held-out pixels 上的 complex error，未过 15% gate 不训练 learned router。
+- `multibranch_phase_space_mps0b_20260923.json`：MPS-0 固定大窗口失败后的 wavelength-scaled 诊断；
+  窗口只由公开 frequency、grid spacing 和 reference speed 决定，并用三个 patch seeds 验证。
+- `multibranch_phase_space_mps1_20260923.json`：oracle 通过后的 matched downstream POC；冻结 two-scale
+  complex packet Gram、residual initialization、三 seed boundary gate 与 2% IID safety boundary。
 
 下一阶段的新实验必须使用新的日期化配置，不回写这些已产生结果的文件。
 

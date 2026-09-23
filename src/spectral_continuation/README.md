@@ -22,6 +22,15 @@
   matched experiment 与 fixed edge development variants；
 - `summarize_wavebench_representation.py`：WaveBench 三 seed、逐系统 paired bootstrap 与预算主图；
 - `plot_wavebench_examples.py`：固定测试系统的定性恢复与误差图。
+- `audit_multibranch_phase_space.py`：当前 MPS-0 oracle；在受控混合与真实 open/partial/closed patches 上
+  用 spatial holdout 比较 K=1 和 top-K 局部 complex wave branches。
+- `audit_wavelength_scaled_phase_space.py`：MPS-0b 尺度诊断；比较固定大窗口与 wavelength-scaled windows，
+  将重复 patch seeds 先按 physical system 聚合后再做 paired bootstrap。
+- `summarize_multibranch_phase_space.py`：MPS-0/1 oracle、synthetic 三 seed、boundary paired statistics 与
+  WaveBench mechanism ablation 的冻结汇总和主图。
+
+MPS-1 的 fixed multiscale packet Gram 已完成但未过 15% promotion gate；相关 representation 分支继续
+保留用于复现，不应在没有新机制假设时继续枚举固定通道。
 
 ## Supporting：共享基础设施
 

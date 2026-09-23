@@ -1,0 +1,42 @@
+{
+  "experiment": "multibranch_phase_space_mps1_matched_readout",
+  "date": "2026-09-23",
+  "parent_oracle": "configs/multibranch_phase_space_mps0b_20260923.json",
+  "hypothesis": "A wavelength-scaled complex wave-packet bank can expose multiple local propagation branches, while local Gram features preserve the relative phase between branches after quotienting one common global phase.",
+  "representations": {
+    "control": "amplitude_soft_phase_gradient",
+    "single_scale_ablation": "amplitude_phase_wave_packet_gram",
+    "candidate": "amplitude_phase_multiscale_packet_gram"
+  },
+  "candidate_analysis": {
+    "radial_scales": [0.75, 1.5],
+    "orientations": 8,
+    "channels": 69,
+    "features": [
+      "existing_5_channel_phase_token",
+      "normalized_packet_energy",
+      "within_scale_complex_gram_edges",
+      "cross_scale_complex_gram_edges"
+    ]
+  },
+  "matched_continuation": {
+    "initialization": "copy the existing 5-channel checkpoint and zero-initialize all new input weights",
+    "extra_steps_per_arm": 800,
+    "learning_rate": 0.0002,
+    "seeds": [20260922, 20260923, 20260924]
+  },
+  "datasets": {
+    "synthetic_iid": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+    "synthetic_boundary_shift": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_legacy_geometry_128_30.npz",
+    "wavebench": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/wavebench_full_remotezip_20260912"
+  },
+  "primary_gate": {
+    "metric": "physical-system-paired relative reduction in contrast RelL2, after averaging each physical system over three seeds",
+    "hard_conditions": ["partial", "closed"],
+    "required_improvement": 0.15,
+    "required_confidence": "system-bootstrap 95% interval strictly above zero",
+    "safety_condition": "IID full-context RelL2 must not degrade by more than 2%"
+  },
+  "claim_guard": "The packet bank is a representation POC, not a path-semantic decomposition. A failed 15% gate forbids promotion to the paper's main method even when individual seeds are positive.",
+  "output": "artifacts/multibranch_phase_space_mps1/summary"
+}

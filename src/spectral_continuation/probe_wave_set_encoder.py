@@ -113,7 +113,7 @@ def train(args: argparse.Namespace) -> dict:
     device = "cuda" if torch.cuda.is_available() else "cpu"
     checkpoint = torch.load(args.encoder_checkpoint, map_location="cpu", weights_only=False)
     encoder_summary = checkpoint["summary"]
-    representation = encoder_summary["representation"]
+    representation = args.representation_override or encoder_summary["representation"]
     data = np.load(args.dataset, allow_pickle=True)
     split = data["split"].astype(str)
     all_train = np.flatnonzero(split == "train")
@@ -123,8 +123,16 @@ def train(args: argparse.Namespace) -> dict:
         raise ValueError("train_systems exceeds available systems")
     training = np.sort(rng.choice(all_train, args.train_systems, replace=False))
     bank = WaveSetBank(data, representation, scale=np.asarray(checkpoint["field_scale"]))
-    width = int(encoder_summary["width"])
-    dimension = int(encoder_summary["dimension"])
+    width = int(
+        encoder_summary.get(
+            "width", checkpoint["encoder"]["backbone.first.0.weight"].shape[0]
+        )
+    )
+    dimension = int(
+        encoder_summary.get(
+            "dimension", checkpoint["encoder"]["project.2.weight"].shape[0]
+        )
+    )
     aggregation = str(encoder_summary.get("aggregation", "moments"))
     slots = int(encoder_summary.get("slots", 4))
     metadata_conditioning = str(
@@ -141,9 +149,31 @@ def train(args: argparse.Namespace) -> dict:
         basis_dimension,
     ).to(device)
     if not args.reset_encoder:
-        encoder.load_state_dict(checkpoint["encoder"])
+        source_state = checkpoint["encoder"]
+        target_state = encoder.state_dict()
+        for name, target in target_state.items():
+            source = source_state[name]
+            if source.shape == target.shape:
+                target.copy_(source)
+            elif name == "backbone.first.0.weight" and (
+                source.shape[0] == target.shape[0]
+                and source.shape[2:] == target.shape[2:]
+                and source.shape[1] < target.shape[1]
+            ):
+                target.zero_()
+                target[:, : source.shape[1]].copy_(source)
+            else:
+                raise ValueError(
+                    f"cannot transfer {name}: source {tuple(source.shape)} "
+                    f"target {tuple(target.shape)}"
+                )
+        encoder.load_state_dict(target_state)
     feature_width = int(encoder_summary.get("feature_width", width))
     decoder = FrozenMediumDecoder(feature_width).to(device)
+    if args.residual_initialize:
+        if "decoder" not in checkpoint:
+            raise ValueError("residual initialization requires a probe checkpoint")
+        decoder.load_state_dict(checkpoint["decoder"])
     if not args.finetune:
         encoder.requires_grad_(False)
     parameters = list(decoder.parameters())
@@ -311,11 +341,15 @@ def train(args: argparse.Namespace) -> dict:
             else "frozen_spatial_medium_probe"
         ),
         "representation": representation,
-        "encoder_seed": int(encoder_summary["seed"]),
+        "encoder_seed": int(
+            encoder_summary.get("seed", encoder_summary.get("encoder_seed", args.seed))
+        ),
         "probe_seed": args.seed,
         "train_systems": len(training),
         "finetune": args.finetune,
         "reset_encoder": args.reset_encoder,
+        "residual_initialize": args.residual_initialize,
+        "source_representation": encoder_summary["representation"],
         "full_context_probability": args.full_context_probability,
         "training_view_domain": args.training_view_domain,
         "steps": args.steps,
@@ -360,7 +394,9 @@ def train(args: argparse.Namespace) -> dict:
         "history": history,
     }
     args.output.mkdir(parents=True, exist_ok=True)
-    tag = f"{representation}_enc{encoder_summary['seed']}_labels{len(training)}_seed{args.seed}"
+    tag = (
+        f"{representation}_enc{summary['encoder_seed']}_labels{len(training)}_seed{args.seed}"
+    )
     if args.finetune:
         tag += "_finetune"
     checkpoint_path = args.output / f"set_probe_{tag}.pt"
@@ -402,6 +438,8 @@ def main() -> None:
     parser.add_argument("--train-systems", type=int, default=112)
     parser.add_argument("--finetune", action="store_true")
     parser.add_argument("--reset-encoder", action="store_true")
+    parser.add_argument("--residual-initialize", action="store_true")
+    parser.add_argument("--representation-override")
     parser.add_argument("--full-context-probability", type=float, default=0.5)
     parser.add_argument(
         "--training-view-domain", choices=("low", "mixed", "balanced"), default="low"

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-23",
+  "config": "configs/multibranch_phase_space_mps1_20260923.json",
+  "datasets": {
+    "synthetic_iid": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+      "sha256": "589980296257e2e3077312bc39e861aafb162bfec533e7ae0dd302e193e2f80c"
+    },
+    "synthetic_boundary_shift": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_legacy_geometry_128_30.npz",
+      "sha256": "485d6a595d4d154ff9db87e71e509744b1cd482ec4ec7e448138c8bb7ef7b860"
+    },
+    "wavebench": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/wavebench_full_remotezip_20260912",
+      "identity": "the frozen FFCV files and system split hashes are recorded in each WaveBench run JSON"
+    }
+  },
+  "source_checkpoints": {
+    "synthetic_seed20260922": "2e3664aa0459535c91f1c2554aa53e35186f8f402e47dc07dd86aced746875a2",
+    "synthetic_seed20260923": "1edcc5d0523b78991e93a6783c6f4e74a04fa74bc4c20583e7ba4dceb7eb6bdc",
+    "synthetic_seed20260924": "e4c8ce283a7a3045c363bd8ff1d6f60686f41d7ecb63f8bbe26ea063b166e25b",
+    "wavebench_seed20260923": "e2301b09ef0192ae3ee42fd3e43fbd723420357f7cd31d1058635859cc7a2068"
+  },
+  "summary_command": "PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_multibranch_phase_space",
+  "inferential_unit": "physical system after averaging three training seeds",
+  "large_local_only_files": [
+    "checkpoints (*.pt)",
+    "prediction arrays (*_predictions.npz)",
+    "intermediate per-run records (*_records.csv)"
+  ]
+}

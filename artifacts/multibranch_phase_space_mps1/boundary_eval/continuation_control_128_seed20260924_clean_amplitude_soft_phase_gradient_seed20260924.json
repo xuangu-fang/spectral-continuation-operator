@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task": "wave_set_operator_shift_evaluation",
+  "label": "continuation_control_128_seed20260924",
+  "representation": "amplitude_soft_phase_gradient",
+  "seed": 20260924,
+  "snr_db": null,
+  "systems": 30,
+  "contrast_rel_l2_mean": 0.3656931519508362,
+  "contrast_rel_l2_std": 0.1858293116092682,
+  "inclusion_iou_mean": 0.8357014663391266,
+  "pixel_correlation_mean": 0.91977737131269,
+  "groups": {
+    "closed": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.4073556959629059,
+      "inclusion_iou_mean": 0.7995703835649125
+    },
+    "open": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.30032655596733093,
+      "inclusion_iou_mean": 0.8944624311047635
+    },
+    "partial": {
+      "count": 10,
+      "contrast_rel_l2_mean": 0.38939714431762695,
+      "inclusion_iou_mean": 0.8130715843477038
+    }
+  }
+}
