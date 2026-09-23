@@ -87,10 +87,22 @@ offset 按固定物理距离而不是固定像素数定义。
   unseen-query field generation。
 - 因而当前不主张“通用波动基础模型”或“任意远频率恢复”。
 
+## 当前新问题：从单分支 phase advance 到多分支相空间 token
+
+现有 token 可以看成局部传播关系的一阶、单尺度、单分支近似。同一位置存在直达、反射和绕射分量时，
+一个相邻复共轭乘积会把多个传播方向压成单个统计量。下一阶段先验证：允许一个局部窗口产生多个带
+位置、波矢、尺度、复系数和置信度的 soft wave tokens，能否改善当前明确失败的 multipath 与 boundary
+regime。
+
+完整科学命题、传统理论与本项目新增证据的边界、相关论文以及 24 小时最小 POC 见
+[多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)。首轮先做 branch
+identifiability/oracle gate，不直接堆叠 Transformer、完整 Green operator 或 3D generator。
+
 ## 接下来只推进三个 gate
 
 1. **学习 complex connection operator**：把当前二维固定 channel token 改写为 node amplitude + complex
-   edge transport 的图/点算子；先在两个二维数据集 matched 比较，不再手工堆更多 phase channels。
+   edge transport 的图/点算子；多分支路线先通过局部分支可辨识性与 fixed wave-packet POC，不再手工堆
+   更多 phase channels。
 2. **3D existence gate**：只有 connection operator 在二维至少一域改善且另一域不退化，才进入 3D；要求
    相同 edge rule 和共享参数自然适用，而不是另写 voxel 专用方法。
 3. **Continuous oracle decoder**：借鉴 functional latent 的连续坐标解码，但 system latent 必须跨频共享；
@@ -102,16 +114,18 @@ offset 按固定物理距离而不是固定像素数定义。
 
 1. [当前状态：一页式结论与决策](docs/CURRENT_STATUS_ZH.md) — 五分钟了解现在做到哪里、相信什么、
    下一步为何这样做；
-2. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
+2. [多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md) — 当前 active 科学命题、
+   相关工作、应用任务与首轮 POC；
+3. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
    归因与 2D/3D/时空表示路线；
-3. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
+4. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
    仍未充分开发的正信号；
-4. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
+5. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
    stress tests 与声明边界；
-5. [下一阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 顺序、gates 和 stop rules；
-6. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
+6. [下一阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 顺序、gates 和 stop rules；
+7. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
    可预测性和可辨识性的通俗解释；
-7. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
+8. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
    关键正负结论与原始证据入口。
 
 具体命令、数据 hash 和旧实验参数统一放在[复现档案](docs/REPRODUCIBILITY_ZH.md)，不再占据主页。

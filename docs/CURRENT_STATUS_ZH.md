@@ -3,6 +3,17 @@
 > 更新日期：2026-09-23
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
+## 2026-09-23 新阶段：多分支相空间表示
+
+两数据集结果已经建立 local phase advance 的有效性，但 partial/closed boundary、128-grid 与复杂场生成
+仍失败。当前工作假设是：单个局部复相位增量把同一邻域内共存的直达、反射和绕射分量压成一个平均
+传播统计量。首轮 POC 将先比较 K=1 与 soft top-K complex wave-packet 表示的 oracle 信息上限，再做
+matched downstream system readout；未过 oracle gate 不训练大模型。
+
+问题定义、相关论文、长期应用与完整 stop rules 见
+[多分支相空间波表征](MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)。这是一项 active hypothesis，
+尚不是已有正结论。
+
 ## 2026-09-23 M1 更新：第二数据集成立，但强效应 gate 未过
 
 在公开 WaveBench time-harmonic acoustic 数据上，使用 8,000 / 500 / 500 个 system-held-out

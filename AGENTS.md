@@ -6,6 +6,8 @@
 2. `docs/CURRENT_STATUS_ZH.md`；
 3. `docs/EXPERIMENT_LEDGER_ZH.md`；
 4. 当前任务若涉及新模型，再读 `docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md`。
+5. 当前任务若涉及相空间、多路径或 wave token，再读
+   `docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md`。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
@@ -31,11 +33,13 @@ gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手�
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
 1. 冻结二维 baseline：single-scale soft phase token + shared slot set operator；
-2. 只推进 dimension-agnostic complex-connection graph/point operator，先在 synthetic 与 WaveBench matched
+2. 多分支方向必须先过 branch-identifiability/oracle gate，再做 fixed wave-packet + soft top-K matched POC；
+   不得从大 Transformer 或完整生成器开始；
+3. 只推进 dimension-agnostic complex-connection graph/point operator，先在 synthetic 与 WaveBench matched
    比较；至少一域改善、另一域不退化才进入下一步；
-3. 通过后才做 3D system-readout existence gate；
-4. 若继续 field generation，先过 continuous oracle-medium unseen-query decoder gate；
-5. encoder--decoder cascade 与真实部分观测。
+4. 通过后才做 3D system-readout existence gate；
+5. 若继续 field generation，先过 continuous oracle-medium unseen-query decoder gate；
+6. encoder--decoder cascade 与真实部分观测。
 
 `docs/EXPERIMENT_LEDGER_ZH.md` 中的 underexplored signals 是候选支线，不得全部并入第一阶段。
 

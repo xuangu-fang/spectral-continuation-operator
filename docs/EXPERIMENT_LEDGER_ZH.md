@@ -213,6 +213,21 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 
 以下按“与当前主线的连接强度 / 最小验证成本”排序。它们不是要求同时实现的组件清单。
 
+### P0：多分支相空间 wave tokens
+
+**为什么现在是第一优先级。** 当前 local phase advance 在两个数据集成立，但它本质上是单尺度、单分支
+统计量；而最明确的失败恰好集中于 partial/closed boundary、分辨率变化和强 multipath。固定 edge
+normalization 已经失败，下一步必须检验“分支数不足”这个不同的机制假设，而不是继续堆 channels。
+
+**最小 POC。** 先在受控 1--3 分支混合与真实困难 patches 上比较 K=1、windowed/steerable top-K oracle；
+oracle 相对 K=1 的 local complex error 未降低至少 15% 就停止。通过后才接当前 matched set operator，
+比较当前 phase token 与 K=2/K=4 soft wave tokens。
+
+**进入下一阶段的门槛。** 在一个预先指定困难条件相对当前 token 降低至少 15% paired system RelL2，
+另一二维域和 IID 不退化超过 2%。
+
+**完整协议。** [多分支相空间波表征](MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)。
+
 ### P1：统一 spatial 与 spectral phase advance
 
 **为什么现在值得做。** 当前最强 token 使用同频空间邻点的复相关；旧 Stage-1 最强机制结果来自同点
@@ -291,9 +306,9 @@ unit test：恢复阶数、跨分辨率与 phase equivariance。由于真实场�
 
 ### 立即推进
 
-1. shared set encoder，修复 source-budget comparison；
-2. multi-scale fixed-physical spatial advance 与 10 dB fallback；
-3. 在前两项稳定后，做 P1 spatial+spectral increment 的单组件 matched test；
+1. P0 multi-branch branch-identifiability/oracle gate；
+2. 只有 P0 oracle 通过后，做 fixed complex wave-packet + soft top-K matched set-operator POC；
+3. multi-scale fixed-physical spatial advance 与 10 dB fallback；
 4. oracle-medium decoder gate。
 
 ### 小成本并行诊断
