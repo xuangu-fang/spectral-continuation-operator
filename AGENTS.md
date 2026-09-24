@@ -9,14 +9,17 @@
 5. 当前任务若涉及相空间、多路径或 wave token，再读
    `docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md`。
 6. 上述任务必须再读结果归档 `reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`，不能只按执行前 brief 重跑。
+7. 当前任何新实验先读 `docs/IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md`；这是 2026-09-24 起的 active
+   roadmap，旧表征计划仅作证据档案。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
 
 ## 当前主线
 
-研究问题是：从少量 complex response views 中学习可变观测预算的 wave-system representation。当前 M0
-方法是 5-channel token 加 shared 4-slot set operator；所有预算共用约 0.98M 参数。
+研究问题已推进为 In-Context Wave Response Query：从未见 system 的少量 source--frequency complex
+responses，在不更新权重时回答 joint-held-out source--frequency query。首轮固定 receiver array，Q3 joint
+query 是主任务；medium recovery、retrieval 与 Q1 frequency interpolation 均不能替代 Q3。
 
 新的三 seed set-operator 结果：full-context RelL2 为 0.0533，raw 为 0.0593；每源只有 1--2 个频率时
 相对 raw 降低 24--30%，20 dB 为 0.112 vs raw 0.529。10 dB 仍失败；clean ellipse 与 128-grid boundary
@@ -38,14 +41,16 @@ gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手�
 
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
-1. 冻结二维 baseline：single-scale soft phase token + shared slot set operator；
-2. 多分支 oracle 与 fixed POC 已完成；不再枚举固定方向、半径、bandwidth 或 Gram edge。只有新的
-   wavelength-constrained learnable analysis、显式 sparse branch routing 或直接 multipath query 才能重启；
-3. 若重启，先做 compact branch analysis 的 matched comparison，不得一步加入大 Transformer、完整
-   propagator 或生成器；困难条件必须达到三 seed 15%，另一域/IID 不退化超过 2%；
-4. 通过后才做 3D system-readout existence gate；
-5. 若继续 field generation，先过 continuous oracle-medium unseen-query decoder gate；
-6. encoder--decoder cascade 与真实部分观测。
+1. 冻结 receiver array、episode manifest、Q1/Q2/Q3 与 budgets；
+2. 先做 conditional identifiability、interpolation/low-rank/retrieval baselines、decoder existence 和 active
+   oracle，不先训练大模型；
+3. 训练最小 DeepSets/CNP raw complex，再做 amplitude 与 wavelength-scaled receiver-edge phase ablation；
+4. 只有 global bottleneck 明确才进入小型 cross-attention；
+5. 三 seed、paired-system statistics、geometry/boundary stress test 后冻结 RQ-1；
+6. belief、flow、active policy、variable receiver、branch router、3D 按计划中的前置 gates 顺序进入。
+
+多分支 oracle 与 fixed POC 已完成；不再枚举固定方向、半径、bandwidth 或 Gram edge。它现在是 Response
+Query 的后置机制支线，不是当前第一阶段组件。
 
 `docs/EXPERIMENT_LEDGER_ZH.md` 中的 underexplored signals 是候选支线，不得全部并入第一阶段。
 

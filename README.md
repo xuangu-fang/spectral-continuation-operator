@@ -1,4 +1,4 @@
-# 从复波动响应中学习 Wave-System Representation
+# 从复波动响应中学习可查询的 Wave-System Representation
 
 > 仓库名 `spectral-continuation-operator` 是历史名称。当前研究主线已经从“直接做远频率延拓”推进到一个
 > 更基础的问题：**能否从少量复波动 response views 中识别可复用、可查询的隐藏波动系统表示？**
@@ -7,7 +7,27 @@
 全局相位基准快速变化，但**归一化幅值与局部复相位增量**可以把“局部能量”和“局部传播”分开表示，
 从而更稳定地识别产生这些响应的物理系统。
 
-## 最新进展：多分支相空间 POC
+## 当前主线：In-Context Wave Response Query
+
+当前不再把 frequency 只当作网络的 condition channel，也不以重建某一张 field 为最终目标。基本任务是：
+
+> 给定一个未见波动系统的少量 source--frequency probe responses，在不更新模型权重的条件下，回答新的
+> source--frequency response query。
+
+首轮固定 receiver array，将一个 probe 写成 $q=(s,\omega)$，response 是该 receiver array 上的复数向量。
+主实验严格区分 frequency-held-out、source-held-out 和二者同时未见的 joint query；使用现有
+160-system × 9-source × 8-frequency dense archive 生成可复现 episodes。先做 identifiability、强
+interpolation/low-rank/retrieval baselines 与 active-oracle audit，再训练最小 DeepSets/CNP query model。
+
+Generative belief、flow matching、active policy、RL、可变 receiver、3D 与 multibranch router 都有明确前置
+gate，不进入第一阶段。完整 formulation、24 小时执行顺序与 stop rules 见
+[In-Context Wave Response Query 计划](docs/IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)。
+
+```text
+Wave as Query → Wave as Prompt → Wave as Belief → Wave as Action
+```
+
+## 上一阶段：多分支相空间 POC
 
 新的 oracle 审计证明：复杂波场局部确实存在单个 phase advance 无法表达的多分支信息，但尺度必须按
 波长定义。约 1.5-wavelength 的局部窗口中，K=4 相对 K=1 在 partial/closed boundary 上将 held-out
@@ -118,11 +138,11 @@ filter、半径或手工 phase channels。
 
 ## 后续研究边界
 
-1. **停止 fixed front-end enumeration**：当前 69-channel Gram 是机制 POC，不再扫更多半径、方向和 edge。
-2. **只有引入新的可归因能力才重启多分支方法**：优先考虑受波长约束的 learnable analysis、显式 sparse
-   branch routing 或直接需要 multipath 的 query；必须复用本轮三 seed gate。
-3. **高维与生成仍需单独 existence gate**：二维方法未过门槛前不进入 3D；true-medium oracle decoder
-   未达可用精度前不接完整 unseen-frequency generator。
+1. **主攻 response query**：先证明少量 complex responses 能在 inference time 支持 joint source-frequency
+   query；不再以 medium recovery 或 dense field reconstruction 替代该任务。
+2. **停止 fixed front-end enumeration**：当前 69-channel Gram 是机制 POC，不再扫更多半径、方向和 edge；
+   多分支只在 Q3/Q4 multipath failure 明确后以 compact learnable tokens 重启。
+3. **Belief 和 Active 均后置**：只有条件多模态与 active oracle headroom 得到证据后，才进入 flow 或 policy。
 
 稀疏系数/场重构继续作为历史参考，不切换为当前主任务。
 
@@ -130,20 +150,22 @@ filter、半径或手工 phase channels。
 
 1. [当前状态：一页式结论与决策](docs/CURRENT_STATUS_ZH.md) — 五分钟了解现在做到哪里、相信什么、
    下一步为何这样做；
-2. [多分支相空间 MPS-1 报告](reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md) — 当前最新 oracle、方法、
+2. [In-Context Wave Response Query 计划](docs/IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md) — 当前 active
+   formulation、Q1/Q2/Q3、oracle audits、模型顺序和 gates；
+3. [多分支相空间 MPS-1 报告](reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md) — 最新已完成 oracle、方法、
    三 seed 正负结果与 gate；
-3. [多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md) — 冻结科学命题、相关工作与
+4. [多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md) — 冻结科学命题、相关工作与
    原始 POC 协议；
-4. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
+5. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
    归因与 2D/3D/时空表示路线；
-5. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
+6. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
    仍未充分开发的正信号；
-6. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
+7. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
    stress tests 与声明边界；
-7. [下一阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 顺序、gates 和 stop rules；
-8. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
+8. [旧表征阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 与旧 gates；
+9. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
    可预测性和可辨识性的通俗解释；
-9. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
+10. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
    关键正负结论与原始证据入口。
 
 具体命令、数据 hash 和旧实验参数统一放在[复现档案](docs/REPRODUCIBILITY_ZH.md)，不再占据主页。

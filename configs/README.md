@@ -2,6 +2,8 @@
 
 ## 当前主线
 
+- `in_context_response_query_rq0_20260924.json`：当前 active Response Query 协议；固定 receiver array，
+  Q1/Q2/Q3、1--16 context probes、information audits、最小 CNP 与 belief/active 的 stop rules。
 - `wave_operator_representation_poc_20260922.json`：160-system 主数据、split、episode 与最初 gates；
 - `wave_operator_ood_ellipses_20260922.json`：未见 ellipse geometry 的 OOD 数据。
 - `wave_system_set_encoder_m0_20260922.json`：M0 自监督 set encoder 的预注册探索协议。
@@ -15,7 +17,8 @@
 - `multibranch_phase_space_mps1_20260923.json`：oracle 通过后的 matched downstream POC；冻结 two-scale
   complex packet Gram、residual initialization、三 seed boundary gate 与 2% IID safety boundary。
 
-下一阶段的新实验必须使用新的日期化配置，不回写这些已产生结果的文件。
+`in_context_response_query_rq0_20260924.json` 在 test 未打开前只允许补充机器生成的 manifest 路径，不改变
+任务语义或 gate。后续新阶段使用新的日期化配置，不回写已经产生结果的文件。
 
 ## 历史冻结配置
 

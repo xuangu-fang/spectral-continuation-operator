@@ -1,7 +1,23 @@
 # 当前状态：Wave-System Representation
 
-> 更新日期：2026-09-23
+> 更新日期：2026-09-24
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
+
+## 2026-09-24 主线切换：In-Context Wave Response Query
+
+当前核心问题不再是改进 medium readout，也不是从低频直接生成整张高频场，而是：
+
+> 给定一个未见 system 的少量 source--frequency complex responses，能否在 inference time 识别其 response
+> operator，并回答 source 和 frequency 都未见的新 query？
+
+首轮固定 receiver array，定义 Q1 frequency-held-out、Q2 source-held-out、Q3 joint-held-out；Q3 为主任务。
+使用现有 160×9×8 dense archive 抽取 receiver vectors，先完成 conditional identifiability、强
+interpolation/low-rank/retrieval baselines、decoder existence 和 active-query oracle，再训练最小
+DeepSets/CNP。只有 global bottleneck 被证实才进入 cross-attention。
+
+Belief/flow 需要条件多模态证据，active policy 需要 oracle headroom 与 uncertainty calibration；RL、可变
+receiver、world model、3D 和 branch router 均后置。冻结协议见
+[In-Context Wave Response Query 计划](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)。
 
 ## 2026-09-23 最新阶段：多分支机制成立，fixed 实现未过方法 gate
 
@@ -131,35 +147,34 @@ context representation、multi-branch propagation 和 oscillatory decoding。
 - 不能声称在 10 dB、强混响边界或真实稀疏阵列上稳健。
 - 不能把经典 phase-gradient 理论本身写成新的理论贡献。
 
-## 后续三个决策 gate
+## 当前 response-query 决策 gate
 
-### Gate 1：learnable multibranch analysis，而不是更多固定通道
+### Gate 1：Q3 information 与 baseline gate
 
-若继续多分支路线，新增方法必须让 packet center、bandwidth 或 branch assignment 至少一项根据局部场
-自适应，同时保留波长定标与 global-gauge 约束。继续扫固定方向、半径或 Gram edge 不算新实验。仍使用
-本轮三 seed partial/closed ≥15%、另一域/IID 不退化超过 2% 的门槛。
+Q3 target 必须随 context budget 变得更可辨识；learned query model 必须相对最强 interpolation/retrieval
+baseline 改善至少 15%，不能只在 Q1 frequency interpolation 上成立。
 
-### Gate 2：3D existence，不先做完整生成
+### Gate 2：Belief gate
 
-优先用已有 3D Helmholtz 数据做 system readout。方法必须复用同一个 node/edge 定义和参数共享规则；若
-需要重新发明 3D 专用 token，就没有通过“维度无关”gate。
+只有 context-near systems 对 target 存在分离 modes，且 deterministic model 出现均值化，才训练 mixture、
+flow 或 diffusion。
 
-### Gate 3：连续 query decoder
+### Gate 3：Active gate
 
-借鉴 HarmoCore 的 continuous function bases，但不使用 per-frequency independent cores。先用真实
-coefficient/system latent 训练 oracle decoder；若 raw complex RelL2 不能低于 0.30，就不把 learned
-encoder 接上去。
+只有 complete-table best-next-query oracle 相对最佳 fixed schedule 的 error-AUC 改善至少 15%，且 learned
+uncertainty 可以校准，才训练 active acquisition；RL 最后进入。
 
 ## 当前判断
 
-两个数据集已经足以说明局部复传播坐标是值得继续投入的科学信号，MPS oracle 又说明多分支容量确实
-缺失；但 fixed Gram 没有达到“通用波动表征”的方法门槛。缺口不再是再加一个 dataset 数字，而是能否
-学习 compact、dimension-agnostic 的 branch analysis，而不退化成 69-channel image feature。若新方法
-不能在困难二维条件达到 gate，就应冻结该路线，不进入 3D 或完整生成。
+已有结果足以说明 complex response representation 能辨识 system，但尚未证明它能回答 counterfactual
+probe。Response Query 是区分“system fingerprint”与“可查询 operator latent”的关键任务。当前先用固定
+receiver 和 joint source-frequency query 建立最小正结果；不要用 foundation model、belief-space 或 active
+agent 的长期 framing 掩盖最基本的 query error。
 
 ## 入口
 
 - [完整方法与实验报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)
+- [当前 Response Query 主线与冻结协议](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)
 - [多分支相空间 MPS-1 报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)
 - [WaveBench 独立验证与高维路线](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)
 - [实验账本：正负结果、禁重复清单与未开发信号](EXPERIMENT_LEDGER_ZH.md)

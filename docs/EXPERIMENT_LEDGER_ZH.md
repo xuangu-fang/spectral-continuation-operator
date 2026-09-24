@@ -235,6 +235,27 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **证据**：[MPS-1 完整报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)；机器汇总
   `artifacts/multibranch_phase_space_mps1/summary/summary.json`。
 
+### E15：In-Context Wave Response Query（active protocol）
+
+- **核心问题**：从 unseen physical system 的少量 source--frequency complex receiver vectors 中，在不更新
+  权重时回答 joint-held-out source--frequency query。
+- **为什么现在推进**：hidden-medium recovery 已证明 responses 包含 system identity，但 dense missing-field
+  generation 约 0.93--0.97；固定 receiver response query 将 system inference 与 dense oscillatory image
+  decoding分开。
+- **首轮剪枝**：receiver array 固定；Q3 joint query 为主；不加入 flow、RL、variable receivers、3D 或
+  branch router。
+- **先验审计**：conditional ambiguity、nearest query、coordinate interpolation、low-rank completion、
+  context-conditioned retrieval、true-medium decoder、active oracle。
+- **最小模型**：DeepSets/CNP；只有 global bottleneck 明确才做 query-to-context cross-attention。
+- **主 gate**：Q3 相对最强非神经 baseline 改善至少 15%，K=1 到 K=8 稳定下降；所有统计以 physical
+  system 为推断单位。
+- **belief gate**：只有 context-near systems 对 target 出现分离 modes 且 deterministic mean 明显平均化，
+  才训练 mixture/flow。
+- **active gate**：best-next-query oracle 的 error-AUC 相对最佳 fixed schedule 至少改善 15%，且 uncertainty
+  校准成立，才训练 policy；RL 最后进入。
+- **协议**：[Response Query 主线](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)；配置
+  `configs/in_context_response_query_rq0_20260924.json`。
+
 ## 4. 值得从正反馈继续挖的方向
 
 以下按“与当前主线的连接强度 / 最小验证成本”排序。它们不是要求同时实现的组件清单。
@@ -330,10 +351,10 @@ unit test：恢复阶数、跨分辨率与 phase equivariance。由于真实场�
 
 ### 立即推进
 
-1. 先决定是否有足够简洁的新机制来做 learnable multibranch analysis；没有则冻结 P0；
-2. 若重启，第一阶段只做 compact branch analysis/routing，不同时加入 propagation Transformer 或生成器；
-3. oracle-medium decoder gate；
-4. multi-scale fixed-physical spatial advance 与 10 dB fallback 仅作为独立诊断，不并入 MPS 主模型。
+1. E15 RQ-0 episode/data protocol 与 information audits；
+2. strongest interpolation/low-rank/retrieval baselines；
+3. 最小 DeepSets/CNP query model 与 raw/amplitude/receiver-edge ablation；
+4. 只有明确通过 gate 后才做 cross-attention 和三 seed formal run。
 
 ### 小成本并行诊断
 
@@ -342,7 +363,8 @@ unit test：恢复阶数、跨分辨率与 phase equivariance。由于真实场�
 
 ### 等前置条件后再做
 
-- P3 system-latent-conditioned query decoder；
+- generative belief、active acquisition 与 variable receiver query；
+- compact multibranch tokens，仅在 Q3/Q4 multipath failure 明确后；
 - 第二 PDE / 外部数据域；
 - 部分边界阵列与真实 source phase/gain mismatch。
 

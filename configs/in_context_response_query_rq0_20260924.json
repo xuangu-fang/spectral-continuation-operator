@@ -1,0 +1,62 @@
+{
+  "experiment": "in_context_wave_response_query_rq0",
+  "date": "2026-09-24",
+  "hypothesis": "A small set of complex source-frequency responses identifies enough of an unseen wave system to answer a joint-held-out source-frequency query at a fixed receiver array more accurately than interpolation, low-rank completion, and nearest-system retrieval.",
+  "dataset": {
+    "iid": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+    "ellipse_ood": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_ood_ellipses_24.npz",
+    "boundary_ood": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_legacy_geometry_128_30.npz",
+    "split_source": "archive system split; 112 train / 24 validation / 24 test"
+  },
+  "receiver_arrays": {
+    "construction": "Cartesian 8x8 interior grid with rounded indices linspace(4, grid_size-5, 8)",
+    "development_counts": [32, 64],
+    "selection_rule": "choose once on validation; do not select on test",
+    "formal_count": null
+  },
+  "query_protocol": {
+    "q1": "target frequency absent from context; target source appears in context",
+    "q2": "target source absent from context; target frequency appears in context",
+    "q3": "target source and target frequency both absent from context",
+    "primary": "q3",
+    "context_budgets": [1, 2, 4, 8, 16],
+    "queries_per_system_per_regime": 8,
+    "episode_seed": 20260924
+  },
+  "audits": [
+    "nearest observed source-frequency query",
+    "coordinate interpolation",
+    "per-environment low-rank response-table completion",
+    "context-conditioned nearest training-system retrieval",
+    "conditional ambiguity and context collision",
+    "true-medium decoder existence",
+    "best-next-query oracle headroom"
+  ],
+  "candidate_models": [
+    "DeepSets conditional neural process",
+    "query-to-context cross-attention only after the DeepSets gate"
+  ],
+  "representations": [
+    "normalized_raw_complex",
+    "log_amplitude",
+    "amplitude_wavelength_receiver_edges",
+    "raw_plus_wavelength_receiver_edges"
+  ],
+  "seeds": [20260924, 20260925, 20260926],
+  "primary_metric": "raw complex relative L2 averaged first over frozen queries per physical system and then over systems",
+  "promotion_gate": {
+    "q3_relative_improvement_over_strongest_non_neural_baseline": 0.15,
+    "context_scaling": "Q3 error must decrease consistently from K=1 to K=8",
+    "safety": "Q1 or Q2 and IID must not degrade by more than 2 percent when adding a representation component",
+    "active_oracle_error_auc_improvement": 0.15
+  },
+  "deferred": [
+    "generative belief and flow matching",
+    "learned active policy and reinforcement learning",
+    "variable receiver configuration",
+    "environment interventions",
+    "learned multibranch routing",
+    "3D and cross-physics training"
+  ],
+  "output": "artifacts/in_context_response_query_rq0"
+}
