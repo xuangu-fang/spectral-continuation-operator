@@ -1,5 +1,8 @@
 # 报告导航
 
+- [`IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)：当前最新结果；多静态阵列
+  response query、reciprocity routing、三 seed test 与 ellipse geometry OOD。
+
 - [`MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：当前最新结果；波长尺度
   oracle、global-gauge complex Gram 方法、三 seed downstream 结果与未过 15% gate 的严格归因。
 - [`WAVEBENCH_REPRESENTATION_M1_ZH.md`](WAVEBENCH_REPRESENTATION_M1_ZH.md)：当前最新正式结果；公开

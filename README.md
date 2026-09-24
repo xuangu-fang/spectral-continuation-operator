@@ -9,6 +9,19 @@
 
 ## 当前主线：In-Context Wave Response Query
 
+### 2026-09-24 RQ-1 正结果
+
+首个通过 gate 的 setting 是 co-located 9-transducer multistatic array 上的 held-out source query。方法由
+gain-calibrated reciprocity routing 和一个 121,938 参数的 2-layer masked residual Transformer 组成。
+
+- IID system-held-out test，K=8：**0.498 ± 0.014** vs strong physics baseline **0.624**，相对提升
+  **20.1%**；
+- ellipse geometry OOD：**0.427 ± 0.002** vs **0.558**，相对提升 **23.5%**；
+- 三 seed、24 test systems、raw complex RelL2；Q3 joint source-frequency query 仍未解决。
+
+完整方法、负结果、图表和 claim boundary 见
+[RQ-1 正式报告](reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)。
+
 当前不再把 frequency 只当作网络的 condition channel，也不以重建某一张 field 为最终目标。基本任务是：
 
 > 给定一个未见波动系统的少量 source--frequency probe responses，在不更新模型权重的条件下，回答新的
@@ -18,6 +31,8 @@
 主实验严格区分 frequency-held-out、source-held-out 和二者同时未见的 joint query；使用现有
 160-system × 9-source × 8-frequency dense archive 生成可复现 episodes。先做 identifiability、强
 interpolation/low-rank/retrieval baselines 与 active-oracle audit，再训练最小 DeepSets/CNP query model。
+
+执行后，Q2 source query 已建立上述正结果；Q3 继续作为困难下一阶段，而不把 Q2 写成 joint-query 成功。
 
 Generative belief、flow matching、active policy、RL、可变 receiver、3D 与 multibranch router 都有明确前置
 gate，不进入第一阶段。完整 formulation、24 小时执行顺序与 stop rules 见
@@ -138,8 +153,8 @@ filter、半径或手工 phase channels。
 
 ## 后续研究边界
 
-1. **主攻 response query**：先证明少量 complex responses 能在 inference time 支持 joint source-frequency
-   query；不再以 medium recovery 或 dense field reconstruction 替代该任务。
+1. **RQ-1 已冻结，继续 response query**：先在第二个独立 multistatic 数据域验证 Q2，再以 reciprocity
+   routing + per-link spectral state 推进 Q3；不重跑普通 CNP。
 2. **停止 fixed front-end enumeration**：当前 69-channel Gram 是机制 POC，不再扫更多半径、方向和 edge；
    多分支只在 Q3/Q4 multipath failure 明确后以 compact learnable tokens 重启。
 3. **Belief 和 Active 均后置**：只有条件多模态与 active oracle headroom 得到证据后，才进入 flow 或 policy。
@@ -152,20 +167,22 @@ filter、半径或手工 phase channels。
    下一步为何这样做；
 2. [In-Context Wave Response Query 计划](docs/IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md) — 当前 active
    formulation、Q1/Q2/Q3、oracle audits、模型顺序和 gates；
-3. [多分支相空间 MPS-1 报告](reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md) — 最新已完成 oracle、方法、
+3. [RQ-1 正式报告](reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md) — reciprocity routing、轻量 query model、
+   三 seed test、geometry OOD 与负结果；
+4. [多分支相空间 MPS-1 报告](reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md) — 最新已完成 oracle、方法、
    三 seed 正负结果与 gate；
-4. [多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md) — 冻结科学命题、相关工作与
+5. [多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md) — 冻结科学命题、相关工作与
    原始 POC 协议；
-5. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
+6. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
    归因与 2D/3D/时空表示路线；
-6. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
+7. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
    仍未充分开发的正信号；
-7. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
+8. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
    stress tests 与声明边界；
-8. [旧表征阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 与旧 gates；
-9. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
+9. [旧表征阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 与旧 gates；
+10. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
    可预测性和可辨识性的通俗解释；
-10. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
+11. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
    关键正负结论与原始证据入口。
 
 具体命令、数据 hash 和旧实验参数统一放在[复现档案](docs/REPRODUCIBILITY_ZH.md)，不再占据主页。
@@ -175,6 +192,11 @@ filter、半径或手工 phase channels。
 
 ```text
 src/spectral_continuation/wave_operator_data.py
+src/spectral_continuation/response_query.py
+src/spectral_continuation/audit_response_query.py
+src/spectral_continuation/train_response_query.py
+src/spectral_continuation/evaluate_response_query_checkpoint.py
+src/spectral_continuation/summarize_response_query.py
 src/spectral_continuation/audit_wave_operator_representation.py
 src/spectral_continuation/train_wave_operator_identifier.py
 src/spectral_continuation/train_wave_operator_contrastive.py

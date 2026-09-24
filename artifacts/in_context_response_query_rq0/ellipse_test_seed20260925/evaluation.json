@@ -1,0 +1,103 @@
+{
+  "split": "test",
+  "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_ood_ellipses_24.npz",
+  "checkpoint": "artifacts/in_context_response_query_rq0/formal_seed20260925_stage2/best.pt",
+  "model": {
+    "q2": {
+      "1": {
+        "mean": 0.5531730335981896,
+        "median": 0.39633603394031525
+      },
+      "2": {
+        "mean": 0.5368402151701351,
+        "median": 0.36732015013694763
+      },
+      "4": {
+        "mean": 0.5048571171743484,
+        "median": 0.3309612572193146
+      },
+      "8": {
+        "mean": 0.42665332136675715,
+        "median": 0.19937336444854736
+      },
+      "16": {
+        "mean": 0.4269114534545224,
+        "median": 0.19846581667661667
+      }
+    }
+  },
+  "calibrated_reciprocity": {
+    "1": {
+      "mean": 0.6350506642678132,
+      "median": 0.4932628571987152
+    },
+    "2": {
+      "mean": 0.6234028694064667,
+      "median": 0.48304252326488495
+    },
+    "4": {
+      "mean": 0.5993956144181235,
+      "median": 0.45532239973545074
+    },
+    "8": {
+      "mean": 0.5578713202303334,
+      "median": 0.4040283113718033
+    },
+    "16": {
+      "mean": 0.5578713202303334,
+      "median": 0.4040283113718033
+    }
+  },
+  "paired_vs_calibrated_reciprocity": {
+    "1": {
+      "systems": 24,
+      "model_mean": 0.5531730335981896,
+      "baseline_mean": 0.6350506642678132,
+      "relative_improvement": 0.1289308637508868,
+      "bootstrap_95": [
+        0.08823893199634578,
+        0.17488867788248924
+      ]
+    },
+    "2": {
+      "systems": 24,
+      "model_mean": 0.5368402151701351,
+      "baseline_mean": 0.6234028694064667,
+      "relative_improvement": 0.13885507828789223,
+      "bootstrap_95": [
+        0.09586066255021869,
+        0.1896359389780334
+      ]
+    },
+    "4": {
+      "systems": 24,
+      "model_mean": 0.5048571171743484,
+      "baseline_mean": 0.5993956144181235,
+      "relative_improvement": 0.1577230379564094,
+      "bootstrap_95": [
+        0.11007589778127065,
+        0.21797124572045062
+      ]
+    },
+    "8": {
+      "systems": 24,
+      "model_mean": 0.42665332136675715,
+      "baseline_mean": 0.5578713202303334,
+      "relative_improvement": 0.23521194602618944,
+      "bootstrap_95": [
+        0.15363361508496434,
+        0.34617119260090307
+      ]
+    },
+    "16": {
+      "systems": 24,
+      "model_mean": 0.4269114534545224,
+      "baseline_mean": 0.5578713202303334,
+      "relative_improvement": 0.2347492370135471,
+      "bootstrap_95": [
+        0.15055784626662763,
+        0.3511930720285815
+      ]
+    }
+  }
+}

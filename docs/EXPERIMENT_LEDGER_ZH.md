@@ -235,7 +235,7 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **证据**：[MPS-1 完整报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)；机器汇总
   `artifacts/multibranch_phase_space_mps1/summary/summary.json`。
 
-### E15：In-Context Wave Response Query（active protocol）
+### E15：In-Context Wave Response Query（RQ-1 已完成）
 
 - **核心问题**：从 unseen physical system 的少量 source--frequency complex receiver vectors 中，在不更新
   权重时回答 joint-held-out source--frequency query。
@@ -255,6 +255,19 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
   校准成立，才训练 policy；RL 最后进入。
 - **协议**：[Response Query 主线](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)；配置
   `configs/in_context_response_query_rq0_20260924.json`。
+- **Cartesian-array 负结果**：Q3 K=8 的 train mean/PCA 约 0.939；DeepSets 0.936、cross-attention
+  0.927、spatial set operator 0.934、masked Transformer 最佳约 0.911。true-medium CNN/FNO decoder 最佳
+  约 0.908/0.851。该 setting 未过 gate，不再只换 backbone。
+- **任务修正**：采用 9 个 source/receiver co-located transducers，使 Green reciprocity 成为可用的信息路由；
+  Q2 target source 不见、target frequency 已见。
+- **最终方法**：log-gain-calibrated reciprocity routing + 2-layer、121,938 参数 masked residual
+  Transformer；标准化训练后用 physical raw RelL2 小步微调。
+- **IID 正结果**：三 seed test K=8 为 0.498 ± 0.014，calibrated reciprocity 为 0.624，相对提升
+  20.1%，system bootstrap 95% 区间 [12.7%, 28.7%]。
+- **geometry OOD**：ellipse K=8 为 0.427 ± 0.002 vs 0.558，相对提升 23.5%。
+- **边界**：只证明 Q2 和 co-located array；Q3 joint query、任意 receivers、第二 PDE/真实数据仍未证明。
+- **正式报告与配置**：[RQ-1 报告](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)；
+  `configs/in_context_response_query_rq1_formal_20260924.json`。
 
 ## 4. 值得从正反馈继续挖的方向
 
@@ -351,10 +364,10 @@ unit test：恢复阶数、跨分辨率与 phase equivariance。由于真实场�
 
 ### 立即推进
 
-1. E15 RQ-0 episode/data protocol 与 information audits；
-2. strongest interpolation/low-rank/retrieval baselines；
-3. 最小 DeepSets/CNP query model 与 raw/amplitude/receiver-edge ablation；
-4. 只有明确通过 gate 后才做 cross-attention 和三 seed formal run。
+1. 冻结 E15/RQ-1，不再按 test 调参；
+2. 第二个真正独立的 co-located multistatic 数据域；
+3. Q3 的 reciprocity routing + per-link spectral state 最小 POC；
+4. complete-table best-next-source oracle，未过 15% error-AUC 不训练 active policy。
 
 ### 小成本并行诊断
 

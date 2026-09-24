@@ -6,6 +6,10 @@
 >
 > 目标：从“编码或重建一张波场”转向“用少量复数响应识别一个未见波动系统，并回答新的实验 query”。
 
+> 执行结果更新：RQ-1 已在 co-located multistatic array 的 Q2 held-out-source query 通过 gate；三 seed IID
+> K=8 为 0.498 vs calibrated reciprocity 0.624。Q3 仍未通过。详见
+> [`../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)。
+
 ## 0. 一句话主线
 
 > **给定一个未知波动系统的少量 source--frequency probe responses，模型能否在不更新权重的条件下形成

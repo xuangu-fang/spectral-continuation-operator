@@ -23,6 +23,12 @@ artifacts/**/*_similarity.csv
 artifacts/wave_operator_representation/m2_contrastive/
 artifacts/wave_operator_representation/m2_contrastive_seed*/
 artifacts/wavebench_representation_m1/pilot*/
+artifacts/in_context_response_query_rq0/*screen/
+artifacts/in_context_response_query_rq0/formal_seed*_stage*/
+artifacts/in_context_response_query_rq0/**/*_rows.jsonl
+artifacts/in_context_response_query_rq0/**/validation_rows.jsonl
+artifacts/in_context_response_query_rq0/**/validation_episode_metrics.csv
+artifacts/in_context_response_query_rq0/**/conditional_collisions.csv
 experiments/runs/
 experiments/dense_evaluation/
 experiments/diagnostics/

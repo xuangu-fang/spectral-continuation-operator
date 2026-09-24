@@ -852,3 +852,50 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_multibranch_p
 冻结输出在 `artifacts/multibranch_phase_space_mps1/summary/`。汇总脚本先在每个 physical system 上平均
 三个 seed，再对 system 做 paired bootstrap；不得把 90 个 seed-system pairs 当作独立样本。checkpoint、
 prediction NPZ 与逐系统中间 CSV 不进 Git，最终 summary JSON/CSV 和 PNG/PDF 进入版本管理。
+
+## In-Context Response Query RQ-1（2026-09-24）
+
+冻结配置为 `configs/in_context_response_query_rq1_formal_20260924.json`。先运行非神经审计：
+
+```bash
+uv run python -m spectral_continuation.audit_response_query \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output artifacts/in_context_response_query_rq0/audit_source_array_structured \
+  --receivers 9 --receiver-mode source_array --episodes-per-system 8 --seed 20260924
+```
+
+正式模型每个 seed 先训练标准化 residual，再用最终 physical metric 微调；`SEED` 为 20260924、20260925、
+20260926：
+
+```bash
+uv run python -m spectral_continuation.train_response_query \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output artifacts/in_context_response_query_rq0/formal_seedSEED_stage1 \
+  --receivers 9 --receiver-mode source_array \
+  --reciprocity-residual --calibrated-reciprocity \
+  --model transformer --hidden 64 --transformer-layers 2 --transformer-heads 4 \
+  --steps 4000 --batch-size 256 --evaluate-every 500 --regimes q2 --seed SEED
+
+uv run python -m spectral_continuation.train_response_query \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output artifacts/in_context_response_query_rq0/formal_seedSEED_stage2 \
+  --receivers 9 --receiver-mode source_array \
+  --reciprocity-residual --calibrated-reciprocity \
+  --model transformer --hidden 64 --transformer-layers 2 --transformer-heads 4 \
+  --steps 2000 --batch-size 256 --evaluate-every 250 --regimes q2 --seed SEED \
+  --learning-rate 0.0001 --relative-loss-weight 0.5 \
+  --initial-checkpoint artifacts/in_context_response_query_rq0/formal_seedSEED_stage1/best.pt
+```
+
+test 只在结构和 loss 冻结后运行：
+
+```bash
+uv run python -m spectral_continuation.evaluate_response_query_checkpoint \
+  --checkpoint artifacts/in_context_response_query_rq0/formal_seedSEED_stage2/best.pt \
+  --dataset /mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz \
+  --output artifacts/in_context_response_query_rq0/formal_test_seedSEED \
+  --split test --episodes-per-system 8
+```
+
+三 seed 汇总使用 `spectral_continuation.summarize_response_query`。20260924 的 stage-2 目录保留了开发期名称
+`calibrated_reciprocity_transformer_small_q2_relft_seed20260924`；对应 checkpoint hash 已在 RQ-1 报告记录。

@@ -5,6 +5,15 @@
 
 ## Active：当前 wave-system representation
 
+- `response_query.py`：Q1/Q2/Q3 episode protocol、receiver arrays、normalization 与 CNP/Transformer models；
+- `audit_response_query.py`：PCA/retrieval/interpolation、reciprocity 与 calibrated reciprocity baselines；
+- `train_response_query.py`：物理 routing + residual Transformer 的两阶段训练；
+- `evaluate_response_query_checkpoint.py`：冻结 IID/OOD split、paired-system bootstrap；
+- `summarize_response_query.py`：三 seed 正式表格与预算曲线；
+- `plot_response_query_examples.py`：复响应 magnitude/phase 定性图；
+- `fourier_response_operator.py`、`train_response_query_fno_oracle.py`：true-medium decoder 负结果审计，
+  不是最终方法。
+
 - `wave_operator_data.py`：system-major 多源、多频数据生成；
 - `audit_wave_operator_representation.py`：RBF、reciprocity、Nyström 与 view-rank 审计；
 - `train_wave_operator_identifier.py`：missing-block 完整复场负对照；

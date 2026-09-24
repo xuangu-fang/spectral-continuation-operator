@@ -11,15 +11,18 @@
 6. 上述任务必须再读结果归档 `reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`，不能只按执行前 brief 重跑。
 7. 当前任何新实验先读 `docs/IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md`；这是 2026-09-24 起的 active
    roadmap，旧表征计划仅作证据档案。
+8. Response Query 相关任务必须读 `reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`，其中包含已通过的 Q2、
+   未通过的 Q3、三 seed 结果和禁止重复的 backbone screens。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
 
 ## 当前主线
 
-研究问题已推进为 In-Context Wave Response Query：从未见 system 的少量 source--frequency complex
-responses，在不更新权重时回答 joint-held-out source--frequency query。首轮固定 receiver array，Q3 joint
-query 是主任务；medium recovery、retrieval 与 Q1 frequency interpolation 均不能替代 Q3。
+研究问题已推进为 In-Context Wave Response Query。RQ-1 已证明 co-located multistatic array 上的 Q2
+held-out-source query：calibrated reciprocity routing + 121,938 参数 residual Transformer 在三 seed IID test
+K=8 得到 0.498 vs 0.624，ellipse OOD 得到 0.427 vs 0.558。Q3 joint source-frequency query 仍未通过，
+不能把 Q2 结果写成 joint-query 成功。
 
 新的三 seed set-operator 结果：full-context RelL2 为 0.0533，raw 为 0.0593；每源只有 1--2 个频率时
 相对 raw 降低 24--30%，20 dB 为 0.112 vs raw 0.529。10 dB 仍失败；clean ellipse 与 128-grid boundary
@@ -41,13 +44,11 @@ gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手�
 
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
-1. 冻结 receiver array、episode manifest、Q1/Q2/Q3 与 budgets；
-2. 先做 conditional identifiability、interpolation/low-rank/retrieval baselines、decoder existence 和 active
-   oracle，不先训练大模型；
-3. 训练最小 DeepSets/CNP raw complex，再做 amplitude 与 wavelength-scaled receiver-edge phase ablation；
-4. 只有 global bottleneck 明确才进入小型 cross-attention；
-5. 三 seed、paired-system statistics、geometry/boundary stress test 后冻结 RQ-1；
-6. belief、flow、active policy、variable receiver、branch router、3D 按计划中的前置 gates 顺序进入。
+1. 冻结 RQ-1 Q2 setting、两阶段 loss 与 test，不再按 test 调参；
+2. 优先寻找/生成第二个真正独立的 co-located multistatic 数据域；
+3. Q3 只尝试 reciprocity routing + per-link spectral state，不重跑普通 CNP/大 Transformer；
+4. active acquisition 先过 complete-table best-next-source oracle gate，再训练 policy；
+5. belief、flow、variable receiver、branch router、3D 继续按前置 gates 后置。
 
 多分支 oracle 与 fixed POC 已完成；不再枚举固定方向、半径、bandwidth 或 Gram edge。它现在是 Response
 Query 的后置机制支线，不是当前第一阶段组件。

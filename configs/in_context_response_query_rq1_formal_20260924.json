@@ -1,0 +1,49 @@
+{
+  "experiment": "in_context_response_query_rq1_formal",
+  "task": "held-out source query at an observed frequency on a co-located 9-transducer multistatic array",
+  "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+  "geometry_ood": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_ood_ellipses_24.npz",
+  "system_split": {
+    "train": 112,
+    "validation": 24,
+    "test": 24
+  },
+  "receiver_mode": "source_array",
+  "context_budgets": [1, 2, 4, 8, 16],
+  "episodes_per_system": 8,
+  "episode_seed": 20260924,
+  "context_order": "same-target-frequency sources first; target source is always absent",
+  "model": {
+    "physics_layer": "log-gain-calibrated reciprocity routing",
+    "residual_model": "2-layer masked response transformer",
+    "hidden": 64,
+    "heads": 4,
+    "parameters": 121938
+  },
+  "training": {
+    "stage1": {
+      "steps": 4000,
+      "batch_size": 256,
+      "learning_rate": 0.0003,
+      "loss": "normalized smooth L1"
+    },
+    "stage2": {
+      "steps": 2000,
+      "batch_size": 256,
+      "learning_rate": 0.0001,
+      "loss": "normalized smooth L1 + 0.5 physical raw relative L2"
+    },
+    "seeds": [20260924, 20260925, 20260926]
+  },
+  "selection": "validation Q2 K=8 only; test opened after architecture and loss were frozen",
+  "primary_metric": "system-equal raw complex relative L2 at K=8",
+  "strong_baseline": "gain-calibrated reciprocity with training-set mean for unfilled entries",
+  "gate": "at least 15 percent relative improvement over the strong baseline on held-out systems",
+  "deferred": [
+    "joint-held-out source-frequency Q3",
+    "learned active acquisition",
+    "variable receiver arrays",
+    "generative belief",
+    "3D"
+  ]
+}

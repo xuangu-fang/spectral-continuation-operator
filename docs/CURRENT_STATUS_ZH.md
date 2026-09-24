@@ -5,6 +5,18 @@
 
 ## 2026-09-24 主线切换：In-Context Wave Response Query
 
+### RQ-1 已完成：Q2 source query 通过
+
+在 co-located 9-transducer multistatic array 上，gain-calibrated reciprocity routing + 121,938 参数 masked
+residual Transformer 得到：
+
+- IID K=8：0.498 ± 0.014 vs 0.624，相对改善 20.1%；
+- ellipse geometry OOD：0.427 ± 0.002 vs 0.558，相对改善 23.5%；
+- IID paired-system bootstrap 95% improvement interval：[12.7%, 28.7%]。
+
+Q2 是同频率、target source 未见；Q3 的 source 与 frequency 同时未见仍失败。详细报告见
+[RQ-1](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)。
+
 当前核心问题不再是改进 medium readout，也不是从低频直接生成整张高频场，而是：
 
 > 给定一个未见 system 的少量 source--frequency complex responses，能否在 inference time 识别其 response
@@ -149,10 +161,10 @@ context representation、multi-branch propagation 和 oscillatory decoding。
 
 ## 当前 response-query 决策 gate
 
-### Gate 1：Q3 information 与 baseline gate
+### Gate 1：Q2 已通过；Q3 information 与 baseline gate 保留
 
-Q3 target 必须随 context budget 变得更可辨识；learned query model 必须相对最强 interpolation/retrieval
-baseline 改善至少 15%，不能只在 Q1 frequency interpolation 上成立。
+Q2 已相对 gain-calibrated reciprocity 改善 20.1%。Q3 target 仍必须随 context budget 变得更可辨识；未来
+joint-query model 必须相对最强 interpolation/retrieval baseline 改善至少 15%。
 
 ### Gate 2：Belief gate
 
@@ -166,14 +178,15 @@ uncertainty 可以校准，才训练 active acquisition；RL 最后进入。
 
 ## 当前判断
 
-已有结果足以说明 complex response representation 能辨识 system，但尚未证明它能回答 counterfactual
-probe。Response Query 是区分“system fingerprint”与“可查询 operator latent”的关键任务。当前先用固定
-receiver 和 joint source-frequency query 建立最小正结果；不要用 foundation model、belief-space 或 active
-agent 的长期 framing 掩盖最基本的 query error。
+RQ-1 已证明表示能回答受控但有实际意义的 held-out-source probe，而不仅是辨识 system fingerprint。正结果
+来自 observation operator 与模型共同设计：co-located array 暴露 reciprocity，网络只学习解析路由后的
+残差。下一阶段不是扩大 Transformer，而是第二 multistatic 数据域与 per-link spectral state；不要用
+foundation model、belief-space 或 active agent 的长期 framing 掩盖 Q3 尚未解决。
 
 ## 入口
 
 - [完整方法与实验报告](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)
+- [RQ-1 正式方法与结果](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)
 - [当前 Response Query 主线与冻结协议](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)
 - [多分支相空间 MPS-1 报告](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)
 - [WaveBench 独立验证与高维路线](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)
