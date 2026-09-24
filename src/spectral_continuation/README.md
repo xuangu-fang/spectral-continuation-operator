@@ -11,6 +11,7 @@
 - `evaluate_response_query_checkpoint.py`：冻结 IID/OOD split、paired-system bootstrap；
 - `summarize_response_query.py`：三 seed 正式表格与预算曲线；
 - `plot_response_query_examples.py`：复响应 magnitude/phase 定性图；
+- `audit_active_source_query.py`：complete-table best-next-source oracle；当前 6.0% headroom，active gate 未过；
 - `fourier_response_operator.py`、`train_response_query_fno_oracle.py`：true-medium decoder 负结果审计，
   不是最终方法。
 

@@ -50,6 +50,9 @@ gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手�
 4. active acquisition 先过 complete-table best-next-source oracle gate，再训练 policy；
 5. belief、flow、variable receiver、branch router、3D 继续按前置 gates 后置。
 
+Q2 的 best-next-source oracle 已审计：相对 nearest-first 的 error-AUC 只改善 6.0%，未过 15% gate。不要在
+当前 Q2 setting 上训练 active policy 或 RL；只有 frequency/receiver action 或 task utility 改变后才重启。
+
 多分支 oracle 与 fixed POC 已完成；不再枚举固定方向、半径、bandwidth 或 Gram edge。它现在是 Response
 Query 的后置机制支线，不是当前第一阶段组件。
 

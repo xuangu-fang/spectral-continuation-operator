@@ -219,6 +219,11 @@ PCA 和 masked Transformer baselines 有显著提升，才重新把 joint query 
 本轮 K=8 的突降说明 source coverage 有离散组合价值。下一步先用 complete table 计算 best-next-source oracle；
 只有 error-AUC headroom 超过 15% 才训练 acquisition policy，仍不从 RL 开始。
 
+该 oracle 审计已经完成：192 个 test episodes 上，random、nearest-first 与逐步使用真值选择的 greedy oracle
+error-AUC 分别为 0.645、0.642、0.603。oracle 相对最佳 fixed schedule 只改善 **6.0%**，未过 15% gate。
+因此当前 Q2 setting **不训练 active policy/RL**；active 方向只有在加入 frequency/receiver action 或新的任务
+utility 后才重启。
+
 ## 8. 复现与 provenance
 
 - 正式配置：`configs/in_context_response_query_rq1_formal_20260924.json`；

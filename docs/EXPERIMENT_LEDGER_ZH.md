@@ -265,6 +265,8 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **IID 正结果**：三 seed test K=8 为 0.498 ± 0.014，calibrated reciprocity 为 0.624，相对提升
   20.1%，system bootstrap 95% 区间 [12.7%, 28.7%]。
 - **geometry OOD**：ellipse K=8 为 0.427 ± 0.002 vs 0.558，相对提升 23.5%。
+- **active oracle 负结果**：192 个 test episodes 上 best-next-source greedy oracle 的 error-AUC 为 0.603，
+  nearest-first 为 0.642，只改善 6.0%，未过 15% gate；当前 Q2 不训练 policy/RL。
 - **边界**：只证明 Q2 和 co-located array；Q3 joint query、任意 receivers、第二 PDE/真实数据仍未证明。
 - **正式报告与配置**：[RQ-1 报告](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)；
   `configs/in_context_response_query_rq1_formal_20260924.json`。
@@ -367,7 +369,7 @@ unit test：恢复阶数、跨分辨率与 phase equivariance。由于真实场�
 1. 冻结 E15/RQ-1，不再按 test 调参；
 2. 第二个真正独立的 co-located multistatic 数据域；
 3. Q3 的 reciprocity routing + per-link spectral state 最小 POC；
-4. complete-table best-next-source oracle，未过 15% error-AUC 不训练 active policy。
+4. best-next-source oracle 已完成且未过 gate；active 只有扩展 action space 后才重启。
 
 ### 小成本并行诊断
 
