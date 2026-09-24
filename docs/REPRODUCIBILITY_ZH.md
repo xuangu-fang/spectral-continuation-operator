@@ -899,3 +899,51 @@ uv run python -m spectral_continuation.evaluate_response_query_checkpoint \
 
 三 seed 汇总使用 `spectral_continuation.summarize_response_query`。20260924 的 stage-2 目录保留了开发期名称
 `calibrated_reciprocity_transformer_small_q2_relft_seed20260924`；对应 checkpoint hash 已在 RQ-1 报告记录。
+
+## Cross-Domain Response Query（2026-09-24）
+
+冻结配置：`configs/cross_domain_response_query_20260924.json`。四个 adapter 命令与数据限制见
+[`CROSS_DOMAIN_DATA_PROVENANCE_ZH.md`](CROSS_DOMAIN_DATA_PROVENANCE_ZH.md)。正式 M0 审计：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.cross_domain_query_audit \
+  --dataset artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz \
+  --output artifacts/cross_domain_response_query/openfwi_m0 \
+  --domain openfwi_curvefault_a --budgets 1,2,4 --repeats 3
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.cross_domain_query_audit \
+  --dataset artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz \
+  --output artifacts/cross_domain_response_query/deepwave_m0 \
+  --domain deepwave_ring --budgets 1,2,4,8,15 --repeats 3
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.cross_domain_query_audit \
+  --dataset artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz \
+  --output artifacts/cross_domain_response_query/ocean_m0 \
+  --domain ocean_multistatic --budgets 1,2,4,8 --repeats 3
+```
+
+M1 每域运行三个 seed；以下为 20260924，其余只改 `--seed` 和 output：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_cross_domain_query \
+  --dataset artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz \
+  --output artifacts/cross_domain_response_query/openfwi_m1_seed20260924 \
+  --rank-by-budget 1:4,2:4,4:16 --selection-budget 2 \
+  --receiver-topology line --steps 2500 --batch-size 64 --seed 20260924
+
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.train_cross_domain_query \
+  --dataset artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz \
+  --output artifacts/cross_domain_response_query/deepwave_m1_seed20260924 \
+  --rank-by-budget 1:4,2:16,4:32,8:32,15:32 --selection-budget 8 \
+  --receiver-topology periodic --steps 2500 --batch-size 64 --seed 20260924
+```
+
+正文图由以下命令从冻结 summary 重建：
+
+```bash
+PYTHONPATH=src .venv/bin/python -m spectral_continuation.plot_cross_domain_query \
+  --artifact-root artifacts/cross_domain_response_query
+```
+
+NPZ、checkpoint 与逐 system CSV 不进 Git；archive manifest、每域 summary JSON、三 seed 汇总与正文 PNG 进入
+版本管理。

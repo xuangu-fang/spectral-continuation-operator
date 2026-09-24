@@ -1,0 +1,104 @@
+{
+  "path": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/the_well_staircase_v1.npz",
+  "sha256": "48a6b6b88ce59d0b04eaf52a0e3da18264e98a35626301afec3563d8f6618435",
+  "shape": [
+    1,
+    26,
+    16,
+    26
+  ],
+  "splits": {
+    "sanity": 1
+  },
+  "frequencies": [
+    0.009999755769968033,
+    0.039984557777643204,
+    0.069916270673275,
+    0.09975170344114304,
+    0.12944145500659943,
+    0.1589268147945404,
+    0.18813370168209076,
+    0.21696686744689941,
+    0.24529880285263062,
+    0.27295273542404175,
+    0.29968205094337463,
+    0.32512643933296204,
+    0.34876173734664917,
+    0.36982402205467224,
+    0.3872413635253906,
+    0.39965248107910156
+  ],
+  "provenance": {
+    "domain": "The Well helmholtz_staircase train split",
+    "operation": "sample each complex full field at the 26 inferred point-source coordinates",
+    "time_convention": "conjugated to exp(-i omega tau)",
+    "evidence_role": "fixed-system public sanity check; not system-held-out validation",
+    "source_coordinate_status": "unresolved: all low-frequency peak estimates collapse to one cell; HDF5 does not store source coordinates",
+    "input_files": [
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_006.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_02.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_04.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_06.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_08.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_09.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_11.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_13.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_15.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_17.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_18.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_20.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_21.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_23.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_24.hdf5",
+        "size_bytes": 2751463424
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train/helmholtz_staircase_omega_25.hdf5",
+        "size_bytes": 2751463424
+      }
+    ]
+  }
+}

@@ -271,6 +271,38 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **正式报告与配置**：[RQ-1 报告](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)；
   `configs/in_context_response_query_rq1_formal_20260924.json`。
 
+### E16：Cross-Domain Response Query（M0 通过，M1 已完成首轮）
+
+- **核心假设**：完整复响应表在跨环境方向存在低维结构；少量 source probes 可以在 inference time 识别
+  当前环境的 response-subspace coordinate，再回答 held-out source。
+- **统一接口**：`Y[system, source, frequency, receiver]`；同频 Q2；system-held-out split；raw complex RelL2；
+  context source 与 target 严格不重叠。
+- **数据域**：OpenFWI 1500 systems、Deepwave 1024 systems、Ocean 512 environments；The Well 只作 fixed
+  public semantic audit。
+- **M0 方法**：对每个频率在 train systems 上学习 complex SVD response basis；query time 用 context rows
+  做 ridge completion。rank/ridge 仅由 validation 选择。
+- **OpenFWI 正结果**：K=1/2/4 为 0.213/0.176/0.120；同预算 baseline 为 0.547；相对改善
+  61.3%/68.5%/78.7%，逐系统胜率 99.0%/99.6%/100%。
+- **Deepwave 正结果**：K=1/2/4/8/15 为 0.145/0.115/0.080/0.059/0.053；相对 baseline 改善
+  24.6%--72.6%。OOD K=8 为 0.094。
+- **Ocean 正结果**：互易误差为 0，但 anchor IDW 在 K=4/8 仍为 0.886/0.564；subspace 为
+  0.0043/0.00053。参数 OOD K=4/8 为 0.325/0.199。
+- **measurement efficiency**：half-budget 对 full-budget local baseline 的误差比，OpenFWI/Deepwave/Ocean
+  分别为 0.322/0.302/0.0076。三个域都通过预注册 gate。
+- **M1 方法**：M0 routed baseline + 1D receiver-local encoder + source-set attention + coordinate-aware、
+  zero-initialized residual decoder，约 293k 参数。
+- **M1 三 seed**：OpenFWI 相对 M0 再改善 2.4%--8.7%；Deepwave 只改善 0.04%--3.5%，且 K=15 的
+  paired interval 跨零。因此不把网络 residual 写成主贡献，不继续无条件增加 Transformer/loss。
+- **The Well 负发现**：HDF5 不含 source coordinates，场峰与离散 PDE residual 都把 26 trajectories 定位到
+  同一 cell。当前 `source_receiver_index=-1`，不能把伪互易矩阵当成物理证据。
+- **不要重复**：在同一 Q2 上继续堆大 backbone；只报告 Ocean IID 极小误差；把 reciprocal anchors 说成
+  完整答案；用 The Well trajectory index 假装 source geometry。
+- **下一步强对照**：参数匹配的 generic masked Transformer、context-conditioned system retrieval、direct
+  supervised ridge；只有排除 weak-baseline 解释后，才升级为论文主方法。
+- **证据**：[跨域 POC 报告](../reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)；
+  [数据 provenance](CROSS_DOMAIN_DATA_PROVENANCE_ZH.md)；机器汇总
+  `artifacts/cross_domain_response_query/*/audit_summary.json`。
+
 ## 4. 值得从正反馈继续挖的方向
 
 以下按“与当前主线的连接强度 / 最小验证成本”排序。它们不是要求同时实现的组件清单。

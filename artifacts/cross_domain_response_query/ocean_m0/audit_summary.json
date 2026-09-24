@@ -1,0 +1,122 @@
+{
+  "domain": "ocean_multistatic",
+  "archive": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+  "shape": [
+    512,
+    9,
+    4,
+    48
+  ],
+  "unique_source_coordinates": 9,
+  "reciprocity": {
+    "available": true,
+    "mean": 0.0,
+    "median": 0.0,
+    "max": 0.0
+  },
+  "status": "complete",
+  "repeats_per_target": 3,
+  "selection": {
+    "1": {
+      "baseline": "train_mean",
+      "learned": "response_subspace_r4_l0.0001"
+    },
+    "2": {
+      "baseline": "train_mean",
+      "learned": "response_subspace_r16_l0.0001"
+    },
+    "4": {
+      "baseline": "reciprocity_idw_p1",
+      "learned": "response_subspace_r16_l0.0001"
+    },
+    "8": {
+      "baseline": "reciprocity_idw_p2",
+      "learned": "response_subspace_r16_l0.0001"
+    }
+  },
+  "test": {
+    "1": {
+      "selected_on_validation": {
+        "baseline": "train_mean",
+        "learned": "response_subspace_r4_l0.0001"
+      },
+      "baseline_test_mean": 1.0006187427142221,
+      "learned_test_mean": 0.2329345425858736,
+      "paired": {
+        "mean_relative_improvement": 0.7673791425560637,
+        "bootstrap_95_low": 0.7481902838556054,
+        "bootstrap_95_high": 0.7852296245734285,
+        "positive_system_fraction": 1.0
+      }
+    },
+    "2": {
+      "selected_on_validation": {
+        "baseline": "train_mean",
+        "learned": "response_subspace_r16_l0.0001"
+      },
+      "baseline_test_mean": 1.0006187427142221,
+      "learned_test_mean": 0.034786378599068045,
+      "paired": {
+        "mean_relative_improvement": 0.9652302717916252,
+        "bootstrap_95_low": 0.9648821767633929,
+        "bootstrap_95_high": 0.9655816305996362,
+        "positive_system_fraction": 1.0
+      }
+    },
+    "4": {
+      "selected_on_validation": {
+        "baseline": "reciprocity_idw_p1",
+        "learned": "response_subspace_r16_l0.0001"
+      },
+      "baseline_test_mean": 0.8858820458990522,
+      "learned_test_mean": 0.004261035390293779,
+      "paired": {
+        "mean_relative_improvement": 0.9951770037995105,
+        "bootstrap_95_low": 0.9950150642002407,
+        "bootstrap_95_high": 0.9953279467482001,
+        "positive_system_fraction": 1.0
+      }
+    },
+    "8": {
+      "selected_on_validation": {
+        "baseline": "reciprocity_idw_p2",
+        "learned": "response_subspace_r16_l0.0001"
+      },
+      "baseline_test_mean": 0.564045751550347,
+      "learned_test_mean": 0.0005272596368389191,
+      "paired": {
+        "mean_relative_improvement": 0.9990462145029146,
+        "bootstrap_95_low": 0.998889151831404,
+        "bootstrap_95_high": 0.9991694646232976,
+        "positive_system_fraction": 1.0
+      }
+    }
+  },
+  "measurement_efficiency": {
+    "half_budget": 4,
+    "full_budget": 8,
+    "half_learned_method": "response_subspace_r16_l0.0001",
+    "full_baseline_method": "reciprocity_idw_p2",
+    "half_learned_mean": 0.004261035390293779,
+    "full_baseline_mean": 0.564045751550347,
+    "ratio": 0.0075544144753893015
+  },
+  "ood": {
+    "1": {
+      "baseline_mean": 1.0008580029114253,
+      "learned_mean": 0.6597317720448632
+    },
+    "2": {
+      "baseline_mean": 1.0008580029114253,
+      "learned_mean": 0.6498892248850333
+    },
+    "4": {
+      "baseline_mean": 0.9244995048200643,
+      "learned_mean": 0.3249574273387452
+    },
+    "8": {
+      "baseline_mean": 0.6485866168557011,
+      "learned_mean": 0.19879585624653162
+    }
+  }
+}

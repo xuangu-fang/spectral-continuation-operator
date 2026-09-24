@@ -1,0 +1,78 @@
+{
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+  "seed": 20260926,
+  "best_step": 2500,
+  "best_validation_rel_l2": 0.06011004388747097,
+  "elapsed_seconds": 188.34123587608337,
+  "parameter_count": 293250,
+  "test": {
+    "1": {
+      "model_mean": 0.13940848934956496,
+      "subspace_mean": 0.14530071032064976,
+      "model_vs_subspace_relative_improvement": 0.03523882243348689,
+      "positive_system_fraction": 0.875
+    },
+    "2": {
+      "model_mean": 0.11270324045514522,
+      "subspace_mean": 0.11502838483359785,
+      "model_vs_subspace_relative_improvement": 0.018685544886185974,
+      "positive_system_fraction": 0.9375
+    },
+    "4": {
+      "model_mean": 0.07878786783991623,
+      "subspace_mean": 0.07981683524082352,
+      "model_vs_subspace_relative_improvement": 0.0115303809670252,
+      "positive_system_fraction": 0.89453125
+    },
+    "8": {
+      "model_mean": 0.05835061153317535,
+      "subspace_mean": 0.05869196767792649,
+      "model_vs_subspace_relative_improvement": 0.0043625814877571315,
+      "positive_system_fraction": 0.7109375
+    },
+    "15": {
+      "model_mean": 0.05272811532061799,
+      "subspace_mean": 0.05284951960282645,
+      "model_vs_subspace_relative_improvement": 0.0006827857498732121,
+      "positive_system_fraction": 0.5859375
+    }
+  },
+  "history": [
+    {
+      "step": 0,
+      "train_loss": null,
+      "train_rel_l2": null,
+      "validation_rel_l2": 0.060527593535698546
+    },
+    {
+      "step": 500,
+      "train_loss": 0.03131744638085365,
+      "train_rel_l2": 0.04899592697620392,
+      "validation_rel_l2": 0.06045154714556702
+    },
+    {
+      "step": 1000,
+      "train_loss": 0.06659145653247833,
+      "train_rel_l2": 0.07496622949838638,
+      "validation_rel_l2": 0.06044285583793681
+    },
+    {
+      "step": 1500,
+      "train_loss": 0.03769385442137718,
+      "train_rel_l2": 0.054352499544620514,
+      "validation_rel_l2": 0.060213225725237865
+    },
+    {
+      "step": 2000,
+      "train_loss": 0.14583681523799896,
+      "train_rel_l2": 0.13704034686088562,
+      "validation_rel_l2": 0.060150325156973855
+    },
+    {
+      "step": 2500,
+      "train_loss": 0.10914959013462067,
+      "train_rel_l2": 0.11420726776123047,
+      "validation_rel_l2": 0.06011004388747097
+    }
+  ]
+}

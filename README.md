@@ -7,7 +7,35 @@
 全局相位基准快速变化，但**归一化幅值与局部复相位增量**可以把“局部能量”和“局部传播”分开表示，
 从而更稳定地识别产生这些响应的物理系统。
 
-## 当前主线：In-Context Wave Response Query
+## 当前主线：Cross-Domain Wave Response Query
+
+### 2026-09-24 最新结果
+
+统一 held-out-source query 已在三个多系统域通过预注册 gate。模型不读取隐藏介质，只接收同一未知系统的
+少量 source responses，在 inference time 识别 response operator，再回答未测 source。
+
+| 数据域 | half-budget K | 最强局部 baseline | response subspace | 相对改善 |
+|---|---:|---:|---:|---:|
+| OpenFWI CurveFault-A | 2 / 4 | 0.547 | **0.176** | **68.5%** |
+| Deepwave ring ultrasound | 8 / 15 | 0.195 | **0.059** | **69.6%** |
+| Ocean Pekeris multistatic | 4 / 8 | 0.886 | **0.0043** | **99.5%** |
+
+主指标均为逐 physical system 等权的 raw complex RelL2；OpenFWI、Deepwave、Ocean 分别使用
+500、256、128 个 test systems。Deepwave geometry/contrast OOD 的 K=8 仍为 0.094；Ocean 参数 OOD 的
+K=4 为 0.325。结果支持的机制是：**互易性只提供少量准确 anchors，跨系统学习到的复响应子空间负责全局
+干涉 completion。**
+
+![跨域预算曲线](artifacts/cross_domain_response_query/main_budget_curves.png)
+
+最小 receiver-preserving residual operator 的三 seed 结果在 OpenFWI 上进一步降低 2.4%--8.7%，但在
+Deepwave K=8/15 只增加 0.44%/0.04%；因此不把更大网络包装成核心贡献。The Well HDF5 缺失 source coordinate metadata，当前只保留
+public semantic audit，不伪造第四个成功域。
+
+当前首先阅读[跨域 POC 阶段报告](reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)与
+[数据 provenance](docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md)。冻结 gate 和执行顺序见
+[24 小时协议](docs/CROSS_DOMAIN_RESPONSE_QUERY_24H_PLAN_ZH.md)。
+
+## 上一阶段：In-Context Wave Response Query RQ-1
 
 ### 2026-09-24 RQ-1 正结果
 

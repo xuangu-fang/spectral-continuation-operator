@@ -1,0 +1,134 @@
+{
+  "openfwi": {
+    "1": {
+      "model_seed_means": [
+        0.1941345737968527,
+        0.1952760758123937,
+        0.19615263920600218
+      ],
+      "model_mean": 0.19518776293841622,
+      "model_seed_std": 0.0008262349833971921,
+      "subspace_mean": 0.21309531874479284,
+      "paired_after_seed_average": {
+        "mean_relative_improvement": 0.08668350625191494,
+        "bootstrap_95_low": 0.08307081389783769,
+        "bootstrap_95_high": 0.09037351928142116,
+        "positive_system_fraction": 0.996
+      }
+    },
+    "2": {
+      "model_seed_means": [
+        0.16449955493797147,
+        0.1649803827560906,
+        0.16537823364745294
+      ],
+      "model_mean": 0.164952723780505,
+      "model_seed_std": 0.0003592518455733966,
+      "subspace_mean": 0.17582303532660004,
+      "paired_after_seed_average": {
+        "mean_relative_improvement": 0.06332087781782196,
+        "bootstrap_95_low": 0.058516183670837656,
+        "bootstrap_95_high": 0.06845766823981277,
+        "positive_system_fraction": 0.992
+      }
+    },
+    "4": {
+      "model_seed_means": [
+        0.11618386176788204,
+        0.11655496955325916,
+        0.11684695098953587
+      ],
+      "model_mean": 0.11652859410355902,
+      "model_seed_std": 0.00027134673664094676,
+      "subspace_mean": 0.11996497067581154,
+      "paired_after_seed_average": {
+        "mean_relative_improvement": 0.02406686636621441,
+        "bootstrap_95_low": 0.02134831913035381,
+        "bootstrap_95_high": 0.02671199402465453,
+        "positive_system_fraction": 0.868
+      }
+    }
+  },
+  "deepwave": {
+    "1": {
+      "model_seed_means": [
+        0.13942097383990887,
+        0.13938207976325429,
+        0.13940848934956496
+      ],
+      "model_mean": 0.13940384765090938,
+      "model_seed_std": 1.621411575366978e-05,
+      "subspace_mean": 0.14530071032064976,
+      "paired_after_seed_average": {
+        "mean_relative_improvement": 0.03527307011506242,
+        "bootstrap_95_low": 0.030913153288880984,
+        "bootstrap_95_high": 0.03958206411180057,
+        "positive_system_fraction": 0.875
+      }
+    },
+    "2": {
+      "model_seed_means": [
+        0.11266154011215501,
+        0.11277119584553172,
+        0.11270324045514522
+      ],
+      "model_mean": 0.11271199213761064,
+      "model_seed_std": 4.519246932161457e-05,
+      "subspace_mean": 0.11502838483359785,
+      "paired_after_seed_average": {
+        "mean_relative_improvement": 0.018691702745960877,
+        "bootstrap_95_low": 0.017144007060993886,
+        "bootstrap_95_high": 0.020327035811005808,
+        "positive_system_fraction": 0.94921875
+      }
+    },
+    "4": {
+      "model_seed_means": [
+        0.07871457180781363,
+        0.07880132868829909,
+        0.07878786783991623
+      ],
+      "model_mean": 0.07876792277867632,
+      "model_seed_std": 3.8122986755935505e-05,
+      "subspace_mean": 0.07981683524082352,
+      "paired_after_seed_average": {
+        "mean_relative_improvement": 0.01190610182932145,
+        "bootstrap_95_low": 0.010714974775198057,
+        "bootstrap_95_high": 0.013111615424360297,
+        "positive_system_fraction": 0.921875
+      }
+    },
+    "8": {
+      "model_seed_means": [
+        0.0583414027850722,
+        0.05837065770124354,
+        0.05835061153317535
+      ],
+      "model_mean": 0.058354224006497035,
+      "model_seed_std": 1.2213380713325013e-05,
+      "subspace_mean": 0.05869196767792648,
+      "paired_after_seed_average": {
+        "mean_relative_improvement": 0.004373708243429265,
+        "bootstrap_95_low": 0.003308798227182376,
+        "bootstrap_95_high": 0.00539573689125341,
+        "positive_system_fraction": 0.71875
+      }
+    },
+    "15": {
+      "model_seed_means": [
+        0.0527482407962907,
+        0.05274699310583249,
+        0.05272811532061799
+      ],
+      "model_mean": 0.05274111640758039,
+      "model_seed_std": 9.207257265254142e-06,
+      "subspace_mean": 0.052849519602826446,
+      "paired_after_seed_average": {
+        "mean_relative_improvement": 0.00041724579876983766,
+        "bootstrap_95_low": -0.0006640528496698953,
+        "bootstrap_95_high": 0.001490310840968333,
+        "positive_system_fraction": 0.57421875
+      }
+    }
+  }
+}

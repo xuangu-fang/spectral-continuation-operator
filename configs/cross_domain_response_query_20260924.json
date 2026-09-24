@@ -1,0 +1,43 @@
+{
+  "experiment": "cross_domain_response_query_24h",
+  "date": "2026-09-24",
+  "primary_metric": "per-environment raw complex relative L2",
+  "seeds": [20260924, 20260925, 20260926],
+  "domains": {
+    "openfwi_curvefault_a": {
+      "raw_root": "/mnt/data/xuangu-fang/ai-physical-dynamics/datasets/openfwi_curvefault_a/raw",
+      "shards": {"train": 0, "validation": 1, "test": 2},
+      "dt_seconds": 0.001,
+      "frequencies_hz": [8, 10, 12, 15, 18, 20, 22],
+      "source_receiver_index": [0, 17, 34, 52, 69],
+      "budgets": [1, 2, 4]
+    },
+    "deepwave_ring": {
+      "grid": 96,
+      "spacing_m": 0.001,
+      "transducers": 16,
+      "frequencies_hz": [90000, 120000, 150000, 175000, 195000],
+      "peak_frequency_hz": 150000,
+      "systems": {"train": 512, "validation": 128, "test": 256, "ood": 128},
+      "budgets": [1, 2, 4, 8, 15]
+    },
+    "ocean_multistatic": {
+      "transducers": 9,
+      "frequencies_hz": [80, 90, 100, 110],
+      "receiver_depths_m": {"start": 8, "stop": 112, "count": 48},
+      "range_m": 4000,
+      "systems": {"train": 256, "validation": 64, "test": 128, "ood": 64},
+      "budgets": [1, 2, 4, 8]
+    },
+    "the_well_staircase": {
+      "root": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train",
+      "role": "fixed-system public sanity check"
+    }
+  },
+  "gates": {
+    "same_budget_relative_improvement": 0.20,
+    "positive_system_fraction": 0.75,
+    "half_to_full_baseline_ratio": 1.10,
+    "absolute_rel_l2": {"openfwi": 0.40, "deepwave": 0.35, "ocean": 0.45}
+  }
+}

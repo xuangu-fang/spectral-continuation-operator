@@ -5,6 +5,16 @@
 
 ## Active：当前 wave-system representation
 
+- `cross_domain_response_data.py`：OpenFWI、Deepwave、Ocean 与 The Well 的统一 complex response archive；
+- `cross_domain_query_audit.py`：互易性、local baselines、validation-selected complex response subspace；
+- `train_cross_domain_query.py`：receiver-preserving set attention residual operator；
+- `evaluate_cross_domain_query.py`：冻结 checkpoint 的 nested-budget system-level evaluation；
+- `diagnose_cross_domain_query.py`：amplitude 与 weighted phase 归因；
+- `summarize_cross_domain_query.py`：三 seed 逐系统 paired 汇总；
+- `plot_cross_domain_query.py`：跨域预算曲线与代表性复响应正文图；
+
+以下 `response_query*` 是上一轮单域 RQ-1，继续作为基线与历史证据：
+
 - `response_query.py`：Q1/Q2/Q3 episode protocol、receiver arrays、normalization 与 CNP/Transformer models；
 - `audit_response_query.py`：PCA/retrieval/interpolation、reciprocity 与 calibrated reciprocity baselines；
 - `train_response_query.py`：物理 routing + residual Transformer 的两阶段训练；

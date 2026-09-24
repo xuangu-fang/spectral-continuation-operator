@@ -4,6 +4,9 @@
 
 当前 active artifact collections 为：
 
+- `cross_domain_response_query/`：OpenFWI、Deepwave、Ocean 的 archive manifest、M0/M1 汇总 JSON、预算主图与
+  代表性 complex response 图；大型 NPZ、checkpoint 和逐 system CSV 本地保留、Git 排除；对应
+  [`reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](../reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)；
 - `multibranch_phase_space_mps1/summary/`：波长尺度 oracle、synthetic 三 seed、64→128 boundary paired
   statistics、WaveBench mechanism ablation 及汇总图；对应
   [`reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)；

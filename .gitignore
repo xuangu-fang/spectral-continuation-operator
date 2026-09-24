@@ -23,6 +23,9 @@ artifacts/**/*_similarity.csv
 artifacts/wave_operator_representation/m2_contrastive/
 artifacts/wave_operator_representation/m2_contrastive_seed*/
 artifacts/wavebench_representation_m1/pilot*/
+artifacts/cross_domain_response_query/**/*_system_metrics.csv
+artifacts/cross_domain_response_query/data/*_smoke_v1.manifest.json
+artifacts/cross_domain_response_query/smoke_m1/
 artifacts/in_context_response_query_rq0/*screen/
 artifacts/in_context_response_query_rq0/formal_seed*_stage*/
 artifacts/in_context_response_query_rq0/**/*_rows.jsonl

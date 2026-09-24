@@ -1,0 +1,72 @@
+{
+  "1": {
+    "baseline": {
+      "raw_complex_rel_l2": 0.19462926966152735,
+      "amplitude_rel_l2": 0.07147138716036353,
+      "weighted_phase_coherence": 0.9413280921799014,
+      "weighted_circular_phase_mae_rad": 0.21535320955590576
+    },
+    "response_subspace": {
+      "raw_complex_rel_l2": 0.1453007100815133,
+      "amplitude_rel_l2": 0.07170189353857193,
+      "weighted_phase_coherence": 0.9725086645853783,
+      "weighted_circular_phase_mae_rad": 0.1416247199984658
+    }
+  },
+  "2": {
+    "baseline": {
+      "raw_complex_rel_l2": 0.19462926966152735,
+      "amplitude_rel_l2": 0.07147138716036353,
+      "weighted_phase_coherence": 0.9413280921799014,
+      "weighted_circular_phase_mae_rad": 0.21535320955590576
+    },
+    "response_subspace": {
+      "raw_complex_rel_l2": 0.11502837922995847,
+      "amplitude_rel_l2": 0.06564293388978512,
+      "weighted_phase_coherence": 0.984330403264418,
+      "weighted_circular_phase_mae_rad": 0.10128681544574647
+    }
+  },
+  "4": {
+    "baseline": {
+      "raw_complex_rel_l2": 0.19462926966152735,
+      "amplitude_rel_l2": 0.07147138716036353,
+      "weighted_phase_coherence": 0.9413280921799014,
+      "weighted_circular_phase_mae_rad": 0.21535320955590576
+    },
+    "response_subspace": {
+      "raw_complex_rel_l2": 0.07981682728003155,
+      "amplitude_rel_l2": 0.05239115982132413,
+      "weighted_phase_coherence": 0.9935626560686311,
+      "weighted_circular_phase_mae_rad": 0.06200450909019917
+    }
+  },
+  "8": {
+    "baseline": {
+      "raw_complex_rel_l2": 0.19462926966152735,
+      "amplitude_rel_l2": 0.07147138716036353,
+      "weighted_phase_coherence": 0.9413280921799014,
+      "weighted_circular_phase_mae_rad": 0.21535320955590576
+    },
+    "response_subspace": {
+      "raw_complex_rel_l2": 0.05869196834601098,
+      "amplitude_rel_l2": 0.04141091595561951,
+      "weighted_phase_coherence": 0.997222507398692,
+      "weighted_circular_phase_mae_rad": 0.04336304371324787
+    }
+  },
+  "15": {
+    "baseline": {
+      "raw_complex_rel_l2": 0.19462926966152735,
+      "amplitude_rel_l2": 0.07147138716036353,
+      "weighted_phase_coherence": 0.9413280921799014,
+      "weighted_circular_phase_mae_rad": 0.21535320955590576
+    },
+    "response_subspace": {
+      "raw_complex_rel_l2": 0.0528495202479462,
+      "amplitude_rel_l2": 0.03751459807419905,
+      "weighted_phase_coherence": 0.9977996573550626,
+      "weighted_circular_phase_mae_rad": 0.0393075668256112
+    }
+  }
+}

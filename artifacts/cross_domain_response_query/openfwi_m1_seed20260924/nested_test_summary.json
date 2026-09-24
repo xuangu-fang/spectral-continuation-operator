@@ -1,0 +1,27 @@
+{
+  "checkpoint": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/openfwi_m1_seed20260924/best.pt",
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+  "seed": 20260924,
+  "checkpoint_step": 2500,
+  "episode_protocol": "three frozen nested context orders per target; system macro-average",
+  "test": {
+    "1": {
+      "model_mean": 0.1941345737968527,
+      "subspace_mean": 0.21309531874479284,
+      "model_vs_subspace_relative_improvement": 0.09291700904890442,
+      "positive_system_fraction": 0.998
+    },
+    "2": {
+      "model_mean": 0.16449955493797147,
+      "subspace_mean": 0.17582303532660007,
+      "model_vs_subspace_relative_improvement": 0.06687518390002534,
+      "positive_system_fraction": 0.992
+    },
+    "4": {
+      "model_mean": 0.11618386176788204,
+      "subspace_mean": 0.11996497067581155,
+      "model_vs_subspace_relative_improvement": 0.02713106746879887,
+      "positive_system_fraction": 0.902
+    }
+  }
+}

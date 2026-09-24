@@ -1,0 +1,44 @@
+{
+  "1": {
+    "baseline": {
+      "raw_complex_rel_l2": 0.5467083904572896,
+      "amplitude_rel_l2": 0.37540140211667333,
+      "weighted_phase_coherence": 0.5603390746786259,
+      "weighted_circular_phase_mae_rad": 0.806470764961626
+    },
+    "response_subspace": {
+      "raw_complex_rel_l2": 0.21309531700742387,
+      "amplitude_rel_l2": 0.14003288558364976,
+      "weighted_phase_coherence": 0.9350591514524162,
+      "weighted_circular_phase_mae_rad": 0.18606525701011223
+    }
+  },
+  "2": {
+    "baseline": {
+      "raw_complex_rel_l2": 0.5467083904572896,
+      "amplitude_rel_l2": 0.37540140211667333,
+      "weighted_phase_coherence": 0.5603390746786259,
+      "weighted_circular_phase_mae_rad": 0.806470764961626
+    },
+    "response_subspace": {
+      "raw_complex_rel_l2": 0.17582303469253793,
+      "amplitude_rel_l2": 0.1176440529832705,
+      "weighted_phase_coherence": 0.9611863274182947,
+      "weighted_circular_phase_mae_rad": 0.14209009829736535
+    }
+  },
+  "4": {
+    "baseline": {
+      "raw_complex_rel_l2": 0.5467083904572896,
+      "amplitude_rel_l2": 0.37540140211667333,
+      "weighted_phase_coherence": 0.5603390746786259,
+      "weighted_circular_phase_mae_rad": 0.806470764961626
+    },
+    "response_subspace": {
+      "raw_complex_rel_l2": 0.11996495587996961,
+      "amplitude_rel_l2": 0.08225885445334549,
+      "weighted_phase_coherence": 0.9845428994527886,
+      "weighted_circular_phase_mae_rad": 0.08929020026711126
+    }
+  }
+}

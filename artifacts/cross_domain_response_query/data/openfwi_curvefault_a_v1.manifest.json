@@ -1,0 +1,55 @@
+{
+  "path": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+  "sha256": "bda816beb03c23d9c7d6212b44ac636db1128664ce24896548675b42c89e8ca7",
+  "shape": [
+    1500,
+    5,
+    7,
+    70
+  ],
+  "splits": {
+    "test": 500,
+    "train": 500,
+    "validation": 500
+  },
+  "frequencies": [
+    8.0,
+    10.0,
+    12.0,
+    15.0,
+    18.0,
+    20.0,
+    22.0
+  ],
+  "provenance": {
+    "domain": "OpenFWI CurveFault-A",
+    "operation": "unwindowed real FFT along the 1000-sample time axis",
+    "dt_seconds": 0.001,
+    "source_receiver_alignment": [
+      0,
+      17,
+      34,
+      52,
+      69
+    ],
+    "alignment_policy": "official evenly spaced surface geometry; train-shard reciprocity audit",
+    "input_files": [
+      {
+        "path": "/mnt/data/xuangu-fang/ai-physical-dynamics/datasets/openfwi_curvefault_a/raw/seis2_1_0.npy",
+        "size_bytes": 700000128,
+        "sha256": "98a0f2792220b27638f53c430cacfd37f8607f217921b07e0b1b0f2fcef6b8b5"
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/ai-physical-dynamics/datasets/openfwi_curvefault_a/raw/seis2_1_1.npy",
+        "size_bytes": 700000128,
+        "sha256": "72a16568c2df2a32714ac16da12d5fd16fc2f78d8f8c9084765b3de9bccb1949"
+      },
+      {
+        "path": "/mnt/data/xuangu-fang/ai-physical-dynamics/datasets/openfwi_curvefault_a/raw/seis2_1_2.npy",
+        "size_bytes": 700000128,
+        "sha256": "993735c2e259062f74de5202e02e79b3ec62fa30c76ba6093e55081906c6e309"
+      }
+    ],
+    "test_status": "frozen replication shard; previously used by a different inverse task"
+  }
+}

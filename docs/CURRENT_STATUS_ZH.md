@@ -3,7 +3,30 @@
 > 更新日期：2026-09-24
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
-## 2026-09-24 主线切换：In-Context Wave Response Query
+## 2026-09-24 当前结论：跨域 Response Query POC 已通过
+
+统一 Q2 held-out-source query 已在 OpenFWI、Deepwave ring ultrasound、Ocean Pekeris 三个多系统域完成。
+方法先从 train systems 学复 source--receiver response subspace，再用新系统的 K 条完整 probe responses
+解一个小型复最小二乘问题，识别当前环境坐标并回答 target source。
+
+| 数据域 | half / full K | local baseline | subspace query | half/full error ratio |
+|---|---:|---:|---:|---:|
+| OpenFWI | 2 / 4 | 0.547 | 0.176 | 0.322 |
+| Deepwave | 8 / 15 | 0.195 | 0.059 | 0.302 |
+| Ocean | 4 / 8 | 0.886 | 0.0043 | 0.0076 |
+
+三个域都通过同预算 20%、bootstrap、75% 系统胜率、绝对误差与半预算 gate。OpenFWI/Deepwave 的互易
+离散误差约为 `6e-7`，Ocean 为 0；但稀疏 reciprocal anchors 本身仍不足以重建振荡响应。正结果来自
+**physics-routed observations + learned global response representation**。
+
+M1 的 293k 参数 receiver-preserving residual operator 在三 seed 上：OpenFWI 相对 M0 再改善
+2.4%--8.7%，Deepwave 只改善 0.04%--3.5%。因此当前核心结果是 response subspace 与任务 formulation，
+不是更大 backbone。The Well 的 source metadata 无法从本地 HDF5 恢复，只作 public data audit。
+
+完整结果见[跨域 POC 报告](../reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)，数据生成与限制见
+[跨域数据 provenance](CROSS_DOMAIN_DATA_PROVENANCE_ZH.md)。
+
+## 2026-09-24 上一阶段：In-Context Wave Response Query
 
 ### RQ-1 已完成：Q2 source query 通过
 

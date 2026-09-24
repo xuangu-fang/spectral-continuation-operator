@@ -1,0 +1,18 @@
+{
+  "domain": "the_well_staircase",
+  "archive": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/the_well_staircase_v1.npz",
+  "shape": [
+    1,
+    26,
+    16,
+    26
+  ],
+  "unique_source_coordinates": 1,
+  "reciprocity": {
+    "available": false,
+    "mean": null,
+    "median": null,
+    "max": null
+  },
+  "status": "semantic_sanity_only_no_train_systems"
+}

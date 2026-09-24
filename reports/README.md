@@ -1,6 +1,10 @@
 # 报告导航
 
-- [`IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)：当前最新结果；多静态阵列
+- [`CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)：当前最新结果；
+  OpenFWI、Deepwave、Ocean 的统一 response-query POC、response subspace、轻量 residual operator、
+  The Well 数据审计与 claim boundary。
+
+- [`IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)：上一阶段结果；多静态阵列
   response query、reciprocity routing、三 seed test 与 ellipse geometry OOD。
 
 - [`MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：当前最新结果；波长尺度

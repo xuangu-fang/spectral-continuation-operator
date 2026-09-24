@@ -2,6 +2,8 @@
 
 ## 当前主线
 
+- `cross_domain_response_query_20260924.json`：当前跨域 Q2 协议；OpenFWI/Deepwave/Ocean/The Well adapter、
+  system split、频带、source budget、三 seed 与 measurement-efficiency gates。
 - `in_context_response_query_rq0_20260924.json`：当前 active Response Query 协议；固定 receiver array，
   Q1/Q2/Q3、1--16 context probes、information audits、最小 CNP 与 belief/active 的 stop rules。
 - `in_context_response_query_rq1_formal_20260924.json`：首个通过 gate 的正式 setting；co-located multistatic

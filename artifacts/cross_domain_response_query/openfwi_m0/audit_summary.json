@@ -1,0 +1,85 @@
+{
+  "domain": "openfwi_curvefault_a",
+  "archive": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+  "shape": [
+    1500,
+    5,
+    7,
+    70
+  ],
+  "unique_source_coordinates": 5,
+  "reciprocity": {
+    "mean": 5.77523167066829e-07,
+    "median": 5.408854804045404e-07,
+    "max": 1.1517016673678881e-06
+  },
+  "status": "complete",
+  "repeats_per_target": 3,
+  "selection": {
+    "1": {
+      "baseline": "train_mean",
+      "learned": "response_subspace_r4_l0.01"
+    },
+    "2": {
+      "baseline": "train_mean",
+      "learned": "response_subspace_r4_l0.01"
+    },
+    "4": {
+      "baseline": "train_mean",
+      "learned": "response_subspace_r16_l0.01"
+    }
+  },
+  "test": {
+    "1": {
+      "selected_on_validation": {
+        "baseline": "train_mean",
+        "learned": "response_subspace_r4_l0.01"
+      },
+      "baseline_test_mean": 0.5467083904572896,
+      "learned_test_mean": 0.21309531700742387,
+      "paired": {
+        "mean_relative_improvement": 0.6134140985665572,
+        "bootstrap_95_low": 0.6000501063515328,
+        "bootstrap_95_high": 0.6262070986124595,
+        "positive_system_fraction": 0.99
+      }
+    },
+    "2": {
+      "selected_on_validation": {
+        "baseline": "train_mean",
+        "learned": "response_subspace_r4_l0.01"
+      },
+      "baseline_test_mean": 0.5467083904572896,
+      "learned_test_mean": 0.17582303469253793,
+      "paired": {
+        "mean_relative_improvement": 0.6851807039070443,
+        "bootstrap_95_low": 0.6725503735809326,
+        "bootstrap_95_high": 0.6971700231179475,
+        "positive_system_fraction": 0.996
+      }
+    },
+    "4": {
+      "selected_on_validation": {
+        "baseline": "train_mean",
+        "learned": "response_subspace_r16_l0.01"
+      },
+      "baseline_test_mean": 0.5467083904572896,
+      "learned_test_mean": 0.11996495587996961,
+      "paired": {
+        "mean_relative_improvement": 0.78663097344589,
+        "bootstrap_95_low": 0.776299750266731,
+        "bootstrap_95_high": 0.7963279580847423,
+        "positive_system_fraction": 1.0
+      }
+    }
+  },
+  "measurement_efficiency": {
+    "half_budget": 2,
+    "full_budget": 4,
+    "half_learned_method": "response_subspace_r4_l0.01",
+    "full_baseline_method": "train_mean",
+    "half_learned_mean": 0.17582303469253793,
+    "full_baseline_mean": 0.5467083904572896,
+    "ratio": 0.32160295645997355
+  }
+}

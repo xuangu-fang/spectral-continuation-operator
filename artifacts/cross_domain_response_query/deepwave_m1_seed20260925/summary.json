@@ -1,0 +1,78 @@
+{
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+  "seed": 20260925,
+  "best_step": 2500,
+  "best_validation_rel_l2": 0.0601594188654417,
+  "elapsed_seconds": 184.55959749221802,
+  "parameter_count": 293250,
+  "test": {
+    "1": {
+      "model_mean": 0.13938207976325429,
+      "subspace_mean": 0.14530071032064976,
+      "model_vs_subspace_relative_improvement": 0.03554839100113175,
+      "positive_system_fraction": 0.8828125
+    },
+    "2": {
+      "model_mean": 0.11277119584553172,
+      "subspace_mean": 0.11502838483359785,
+      "model_vs_subspace_relative_improvement": 0.018177413728152642,
+      "positive_system_fraction": 0.9453125
+    },
+    "4": {
+      "model_mean": 0.07880132868829909,
+      "subspace_mean": 0.07981683524082352,
+      "model_vs_subspace_relative_improvement": 0.011456769893499759,
+      "positive_system_fraction": 0.91015625
+    },
+    "8": {
+      "model_mean": 0.05837065770124354,
+      "subspace_mean": 0.05869196767792649,
+      "model_vs_subspace_relative_improvement": 0.00404160764882408,
+      "positive_system_fraction": 0.7109375
+    },
+    "15": {
+      "model_mean": 0.05274699310583249,
+      "subspace_mean": 0.05284951960282645,
+      "model_vs_subspace_relative_improvement": 0.0002760335353899719,
+      "positive_system_fraction": 0.57421875
+    }
+  },
+  "history": [
+    {
+      "step": 0,
+      "train_loss": null,
+      "train_rel_l2": null,
+      "validation_rel_l2": 0.060527593535698546
+    },
+    {
+      "step": 500,
+      "train_loss": 0.06449134647846222,
+      "train_rel_l2": 0.0782649889588356,
+      "validation_rel_l2": 0.060545727171847835
+    },
+    {
+      "step": 1000,
+      "train_loss": 0.029034368693828583,
+      "train_rel_l2": 0.04814870283007622,
+      "validation_rel_l2": 0.060445410782995174
+    },
+    {
+      "step": 1500,
+      "train_loss": 0.10483039915561676,
+      "train_rel_l2": 0.11007674038410187,
+      "validation_rel_l2": 0.060223434744693806
+    },
+    {
+      "step": 2000,
+      "train_loss": 0.12022758275270462,
+      "train_rel_l2": 0.1141672134399414,
+      "validation_rel_l2": 0.06021716602881497
+    },
+    {
+      "step": 2500,
+      "train_loss": 0.10124200582504272,
+      "train_rel_l2": 0.10565796494483948,
+      "validation_rel_l2": 0.0601594188654417
+    }
+  ]
+}

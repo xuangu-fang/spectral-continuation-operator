@@ -1,0 +1,66 @@
+{
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+  "seed": 20260926,
+  "best_step": 2000,
+  "best_validation_rel_l2": 0.15718517833655435,
+  "elapsed_seconds": 104.75971984863281,
+  "parameter_count": 293250,
+  "test": {
+    "1": {
+      "model_mean": 0.19615263920600218,
+      "subspace_mean": 0.21309531874479284,
+      "model_vs_subspace_relative_improvement": 0.08078867207826156,
+      "positive_system_fraction": 0.994
+    },
+    "2": {
+      "model_mean": 0.16537823364745294,
+      "subspace_mean": 0.17582303532660007,
+      "model_vs_subspace_relative_improvement": 0.05962713251085235,
+      "positive_system_fraction": 0.99
+    },
+    "4": {
+      "model_mean": 0.11684695098953587,
+      "subspace_mean": 0.11996497067581155,
+      "model_vs_subspace_relative_improvement": 0.021231442812532385,
+      "positive_system_fraction": 0.828
+    }
+  },
+  "history": [
+    {
+      "step": 0,
+      "train_loss": null,
+      "train_rel_l2": null,
+      "validation_rel_l2": 0.16452699564979412
+    },
+    {
+      "step": 500,
+      "train_loss": 0.06722883880138397,
+      "train_rel_l2": 0.16173264384269714,
+      "validation_rel_l2": 0.1618208601255901
+    },
+    {
+      "step": 1000,
+      "train_loss": 0.08716101944446564,
+      "train_rel_l2": 0.1797390580177307,
+      "validation_rel_l2": 0.1603837631971276
+    },
+    {
+      "step": 1500,
+      "train_loss": 0.03769729658961296,
+      "train_rel_l2": 0.10785944759845734,
+      "validation_rel_l2": 0.15859549811741872
+    },
+    {
+      "step": 2000,
+      "train_loss": 0.06260888278484344,
+      "train_rel_l2": 0.15812082588672638,
+      "validation_rel_l2": 0.15718517833655435
+    },
+    {
+      "step": 2500,
+      "train_loss": 0.07784400880336761,
+      "train_rel_l2": 0.16780081391334534,
+      "validation_rel_l2": 0.1572364601971848
+    }
+  ]
+}

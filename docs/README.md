@@ -2,12 +2,18 @@
 
 ## 当前必读
 
-1. [`CURRENT_STATUS_ZH.md`](CURRENT_STATUS_ZH.md)：一页式状态、核心结果、负结果与决策 gate；
-2. [`IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md`](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)：当前 active
+1. [`../reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](../reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)：
+   当前最新跨域结果、方法、三个数据域 gate、The Well 数据问题与 claim boundary；
+2. [`CURRENT_STATUS_ZH.md`](CURRENT_STATUS_ZH.md)：一页式状态、核心结果、负结果与决策 gate；
+3. [`CROSS_DOMAIN_DATA_PROVENANCE_ZH.md`](CROSS_DOMAIN_DATA_PROVENANCE_ZH.md)：OpenFWI、Deepwave、Ocean、
+   The Well 的生成/处理、split、hash 与复用限制；
+4. [`CROSS_DOMAIN_RESPONSE_QUERY_24H_PLAN_ZH.md`](CROSS_DOMAIN_RESPONSE_QUERY_24H_PLAN_ZH.md)：本轮预注册
+   gate、M0--M2 顺序与 stop rules；
+5. [`IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md`](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)：上一版 active
    主线；response query、Q1/Q2/Q3、oracle audit、24 小时执行顺序及 belief/active 的进入条件；
-3. [`../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)：
+6. [`../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)：
    当前最新正式结果；reciprocity routing、轻量 masked residual Transformer、三 seed 与 geometry OOD；
-4. [`../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：
+7. [`../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：
    当前最新实验；oracle、global-gauge Gram、三 seed 结果、负结果和最终 gate；
 5. [`MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md`](MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)：
    冻结科学命题、多分支相空间 token 与相关工作；

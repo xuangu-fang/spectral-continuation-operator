@@ -1,0 +1,73 @@
+{
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+  "seed": 20260924,
+  "best_step": 2500,
+  "best_validation_rel_l2": 0.060103425274792247,
+  "elapsed_seconds": 189.26094388961792,
+  "parameter_count": 293250,
+  "test": {
+    "1": {
+      "model_mean": 0.13942097383990887,
+      "subspace_mean": 0.14530071032064976,
+      "model_vs_subspace_relative_improvement": 0.035031996910568644,
+      "positive_system_fraction": 0.86328125
+    },
+    "2": {
+      "model_mean": 0.11266154011215501,
+      "subspace_mean": 0.11502838483359785,
+      "model_vs_subspace_relative_improvement": 0.01921214962354403,
+      "positive_system_fraction": 0.96484375
+    },
+    "4": {
+      "model_mean": 0.07871457180781363,
+      "subspace_mean": 0.07981683524082352,
+      "model_vs_subspace_relative_improvement": 0.012731154627439411,
+      "positive_system_fraction": 0.93359375
+    },
+    "8": {
+      "model_mean": 0.0583414027850722,
+      "subspace_mean": 0.05869196767792649,
+      "model_vs_subspace_relative_improvement": 0.004716935593706556,
+      "positive_system_fraction": 0.74609375
+    },
+    "15": {
+      "model_mean": 0.0527482407962907,
+      "subspace_mean": 0.05284951960282645,
+      "model_vs_subspace_relative_improvement": 0.0002929181110463426,
+      "positive_system_fraction": 0.5625
+    }
+  },
+  "history": [
+    {
+      "step": 500,
+      "train_loss": 0.17586350440979004,
+      "train_rel_l2": 0.1437925398349762,
+      "validation_rel_l2": 0.06045965325120051
+    },
+    {
+      "step": 1000,
+      "train_loss": 0.03288167715072632,
+      "train_rel_l2": 0.050924621522426605,
+      "validation_rel_l2": 0.06035046026008786
+    },
+    {
+      "step": 1500,
+      "train_loss": 0.03876430168747902,
+      "train_rel_l2": 0.05757305771112442,
+      "validation_rel_l2": 0.06019461452269752
+    },
+    {
+      "step": 2000,
+      "train_loss": 0.052702177315950394,
+      "train_rel_l2": 0.07372109591960907,
+      "validation_rel_l2": 0.06013689717383386
+    },
+    {
+      "step": 2500,
+      "train_loss": 0.028491221368312836,
+      "train_rel_l2": 0.04644712805747986,
+      "validation_rel_l2": 0.060103425274792247
+    }
+  ],
+  "final_evaluation_protocol": "three frozen nested context orders per target; system macro-average"
+}
