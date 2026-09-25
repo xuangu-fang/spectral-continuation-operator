@@ -16,6 +16,8 @@
 9. 跨数据集 Response Query 新实验必须读 `reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`、
    `docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md` 与 `docs/CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md`；当前
    response subspace 已是必须击败的 strong baseline，不能再只与 local interpolation 比较。
+10. 当前 active 方法计划是 `docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md`。任何 functional tensor、FNO、
+    DeepONet 或 flow 实验必须遵循其中 M0--M4 顺序；flow 未通过 latent ambiguity gate 前不得启动。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
@@ -48,11 +50,12 @@ gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手�
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
 1. 冻结三个跨域 system split、target/context episodes 和归一化预算轴，不再按 test 调参；
-2. 补齐 context-conditioned retrieval、direct complex ridge 和参数匹配 generic masked/set operator；
-3. 所有新方法必须同时击败当前 response subspace 与 validation 选出的最强同预算 baseline；
-4. 先量化 strong-baseline headroom；若不足 10%，保留“低维 response state”科学结论，不堆更大模型；
-5. Q3 仅在上述 Q2 评估冻结后尝试 reciprocity routing + per-link spectral state；
-6. active、belief、flow、variable receiver、branch router 与 3D 继续按前置 gates 后置。
+2. 先做 PFTO functional-rank existence audit，再做 episodic prompt inference，不一步到位堆模块；
+3. 补齐 context-conditioned retrieval、direct complex ridge、FNO/DeepONet 与参数匹配 generic set operator；
+4. 所有新方法必须同时击败当前 response subspace 与 validation 选出的最强同预算 baseline；
+5. 先量化 strong-baseline headroom；若不足 10%，保留“低维 response state”科学结论，不堆更大模型；
+6. conditional flow 只有 latent sample oracle 改善至少 10% 才允许训练；
+7. Q3、active、variable receiver、branch router 与 3D 继续按各自前置 gates 后置。
 
 Q2 的 best-next-source oracle 已审计：相对 nearest-first 的 error-AUC 只改善 6.0%，未过 15% gate。不要在
 当前 Q2 setting 上训练 active policy 或 RL；只有 frequency/receiver action 或 task utility 改变后才重启。

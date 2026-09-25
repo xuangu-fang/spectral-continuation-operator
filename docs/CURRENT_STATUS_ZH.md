@@ -30,6 +30,11 @@ M1 的 293k 参数 receiver-preserving residual operator 在三 seed 上：OpenF
 half-budget strong-baseline gain、reducible-gap closure、normalized budget-error AUC 与 equivalent probe
 saving；完整定义和建议 gate 见[跨数据集指标提案](CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md)。
 
+当前 active 方法目标是将 discrete response subspace 升级为 Prompted Functional Tensor Operator：连续
+complex response bases + prompt-conditioned system latent + reciprocity-by-construction。functional tensor 是
+主方法，FNO/DeepONet 是 matched operator baselines；latent flow 只有通过条件多模态 existence gate 才进入。
+分阶段计划与顶会 NO-GO 条件见 [Wave as Prompt 顶会计划](WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md)。
+
 ## 2026-09-24 上一阶段：In-Context Wave Response Query
 
 ### RQ-1 已完成：Q2 source query 通过

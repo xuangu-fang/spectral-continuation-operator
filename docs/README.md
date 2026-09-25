@@ -11,21 +11,23 @@
    gate、M0--M2 顺序与 stop rules；
 5. [`CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md`](CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md)：下一阶段跨数据集主指标、
    强基线池、预算归一化和 promotion gates；
-6. [`IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md`](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)：上一版 active
+6. [`WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md`](WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md)：当前 active
+   方法路线；Prompted Functional Tensor Operator、flow existence gate 与顶会硬指标；
+7. [`IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md`](IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md)：上一版 active
    主线；response query、Q1/Q2/Q3、oracle audit、24 小时执行顺序及 belief/active 的进入条件；
-7. [`../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)：
+8. [`../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](../reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)：
    当前最新正式结果；reciprocity routing、轻量 masked residual Transformer、三 seed 与 geometry OOD；
-8. [`../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：
+9. [`../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](../reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：
    当前最新实验；oracle、global-gauge Gram、三 seed 结果、负结果和最终 gate；
-9. [`MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md`](MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)：
+10. [`MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md`](MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md)：
    冻结科学命题、多分支相空间 token 与相关工作；
-10. [`../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md`](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)：
+11. [`../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md`](../reports/WAVEBENCH_REPRESENTATION_M1_ZH.md)：
    当前最新的第二数据集结果、HarmoCore 归因与高维表示设计；
-11. [`EXPERIMENT_LEDGER_ZH.md`](EXPERIMENT_LEDGER_ZH.md)：所有路线的证据账本、禁重复实验、重启条件和
+12. [`EXPERIMENT_LEDGER_ZH.md`](EXPERIMENT_LEDGER_ZH.md)：所有路线的证据账本、禁重复实验、重启条件和
    未充分开发的正信号；
-12. [`../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md`](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)：
+13. [`../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md`](../reports/WAVEFIELD_REPRESENTATION_POC_ZH.md)：
    当前 POC 的完整方法和实验；
-13. [`WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md`](WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)：历史阶段
+14. [`WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md`](WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md)：历史阶段
    冻结协议和 stop rules。
 
 ## 科学背景

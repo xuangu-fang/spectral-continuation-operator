@@ -34,7 +34,8 @@ public semantic audit，不伪造第四个成功域。
 当前首先阅读[跨域 POC 阶段报告](reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)与
 [数据 provenance](docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md)。冻结 gate 和执行顺序见
 [24 小时协议](docs/CROSS_DOMAIN_RESPONSE_QUERY_24H_PLAN_ZH.md)；下一阶段的强基线和跨域 promotion 标准见
-[跨数据集指标提案](docs/CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md)。
+[跨数据集指标提案](docs/CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md)。面向论文的方法升级、分阶段 gates 与
+NO-GO 条件见 [Wave as Prompt 顶会计划](docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md)。
 
 ## 上一阶段：In-Context Wave Response Query RQ-1
 

@@ -408,6 +408,10 @@ unit test：恢复阶数、跨分辨率与 phase equivariance。由于真实场�
 完整指标定义与 promotion gate 见
 [跨数据集指标提案](CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md)。
 
+当前方法升级冻结为 PFTO：先检查 functional tensor rank，再做 episodic differentiable latent fitting，最后才判断
+是否需要 amortized encoder 或 conditional latent flow。详细 M0--M4 与 NO-GO 条件见
+[Wave as Prompt 顶会计划](WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md)。
+
 ### 小成本并行诊断
 
 - P2 learned physical metric 的 downstream usefulness；
