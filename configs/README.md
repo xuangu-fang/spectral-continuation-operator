@@ -2,6 +2,12 @@
 
 ## 当前主线
 
+- `pbno_m0_joint_query_20260925.json` 与 `pbno_m1_semilinear_long_20260925.json`：strict Q3 的 global
+  Bayesian operator 与三 seed PBNO 主实验；
+- `pbno_m2_receiver_sparse_20260925.json`：完成 coordinate-RMS residual likelihood 后唯一一次冻结的
+  sparse-budget receiver residual stop experiment；K=1 未过 0.1138，不再沿此配置扫参；
+- `pbno_q2_efficiency_formal_20260925.json`：固定 OpenFWI rank 96 与 Deepwave rank 112 后的三 seed
+  Q2 efficiency 汇总入口；选择文件在 `artifacts/pbno_q2_efficiency_selection/`；
 - `wave_as_prompt_pfto_m0_20260925.json`：当前 active PFTO functional-rank existence audit；只读
   validation split，比较存储量、full-table reconstruction、half-budget query 与 reciprocity，不提前打开 test；
 - `wave_as_prompt_latent_prior_m0_20260925.json`：functional spatial rank 失败后冻结的 latent-spectrum prior

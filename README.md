@@ -17,6 +17,11 @@ transport 后，三 seed PBNO 在 OpenFWI K=1/2 相对 validation 选择的最�
 K=1/2 改善 7.1%/7.0%。高预算收益缩小，OpenFWI K=8 退化 3.0%，Ocean neural residual 无增益，因此尚未
 通过最终顶会 promotion gate。
 
+M2 已把 receiver residual 改为 train-only coordinate-RMS 单位，消除了 Deepwave 的数值不稳定；但偏向
+稀疏预算训练后 K=1 仍为 0.11665，未过 0.1138 gate，故停止该分支。Q2 则通过效率替代 gate：OpenFWI
+rank 96 在误差略降时减少 25% storage，Deepwave rank 112 只退化 1.03%，rank-cubic posterior solve
+减少 33%。详见 [PBNO M2 效率与边界报告](reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)。
+
 首先阅读 [PBNO M1 正式报告](reports/PBNO_JOINT_QUERY_M1_ZH.md)与
 [PBNO 长程计划](docs/PBNO_LONG_TERM_PLAN_ZH.md)。
 

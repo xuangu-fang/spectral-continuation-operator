@@ -1,0 +1,16 @@
+{
+  "experiment": "pbno_q2_efficiency_formal",
+  "date": "2026-09-25",
+  "seed": 20260925,
+  "test_repeats": 3,
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "budgets": [2]
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "budgets": [8]
+    }
+  }
+}

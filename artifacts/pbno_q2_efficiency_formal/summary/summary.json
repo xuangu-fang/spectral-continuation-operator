@@ -1,0 +1,108 @@
+{
+  "OpenFWI": {
+    "domain": "OpenFWI",
+    "selection_path": "/home/ubuntu/project/spectral-continuation-operator/artifacts/pbno_q2_efficiency_selection/OpenFWI/summary.json",
+    "selection_policy": "one frozen validation protocol; no retuning across test seeds",
+    "seeds": [
+      20260924,
+      20260925,
+      20260926
+    ],
+    "repeats_per_seed": 3,
+    "budgets": {
+      "2": {
+        "scalar_config": "scalar_ridge_r4_l0.01",
+        "spectrum_config": "spectrum_prior_r96_l0.1",
+        "test": {
+          "baseline_mean": 0.17450125119586787,
+          "candidate_mean": 0.12880044607073068,
+          "ratio_of_means_gain": 0.2618938535508871,
+          "bootstrap_95_low": 0.24235243399015935,
+          "bootstrap_95_high": 0.2793830910476934,
+          "system_win_rate": 0.99,
+          "baseline_seed_means": [
+            0.17582304202765225,
+            0.17285783278942107,
+            0.1748228787705302
+          ],
+          "candidate_seed_means": [
+            0.1286442477889359,
+            0.1278987171985209,
+            0.12985837322473526
+          ],
+          "baseline_seed_std": 0.0015085422364687975,
+          "candidate_seed_std": 0.0009891215105821442
+        }
+      }
+    },
+    "measurement_efficiency": {
+      "full_budget": 2,
+      "full_scalar_error": 0.17450125119586787,
+      "equivalent_spectrum_budget": 2,
+      "probe_saving": 0.0
+    }
+  },
+  "Deepwave": {
+    "domain": "Deepwave",
+    "selection_path": "/home/ubuntu/project/spectral-continuation-operator/artifacts/pbno_q2_efficiency_selection/Deepwave/summary.json",
+    "selection_policy": "one frozen validation protocol; no retuning across test seeds",
+    "seeds": [
+      20260924,
+      20260925,
+      20260926
+    ],
+    "repeats_per_seed": 3,
+    "budgets": {
+      "8": {
+        "scalar_config": "scalar_ridge_r64_l0.001",
+        "spectrum_config": "spectrum_prior_r112_l0.15",
+        "test": {
+          "baseline_mean": 0.05313493289819841,
+          "candidate_mean": 0.04393596201650023,
+          "ratio_of_means_gain": 0.1731247294378362,
+          "bootstrap_95_low": 0.16916267485983494,
+          "bootstrap_95_high": 0.17708300276075672,
+          "system_win_rate": 1.0,
+          "baseline_seed_means": [
+            0.053816458661458455,
+            0.05278096605616156,
+            0.052807373976975214
+          ],
+          "candidate_seed_means": [
+            0.04433626148966141,
+            0.04370918819040526,
+            0.043762436369434
+          ],
+          "baseline_seed_std": 0.0005903663007496411,
+          "candidate_seed_std": 0.0003476903698728409
+        },
+        "ood": {
+          "baseline_mean": 0.09003678252338432,
+          "candidate_mean": 0.0752701879197654,
+          "ratio_of_means_gain": 0.16400624488978977,
+          "bootstrap_95_low": 0.1589927022648274,
+          "bootstrap_95_high": 0.16887899338268078,
+          "system_win_rate": 1.0,
+          "baseline_seed_means": [
+            0.09085787984076887,
+            0.08966266762581654,
+            0.08958980010356754
+          ],
+          "candidate_seed_means": [
+            0.07565830151725095,
+            0.07504676099051721,
+            0.07510550125152804
+          ],
+          "baseline_seed_std": 0.0007120238917422383,
+          "candidate_seed_std": 0.00033739698869549066
+        }
+      }
+    },
+    "measurement_efficiency": {
+      "full_budget": 8,
+      "full_scalar_error": 0.05313493289819841,
+      "equivalent_spectrum_budget": 8,
+      "probe_saving": 0.0
+    }
+  }
+}

@@ -159,9 +159,10 @@ Ocean IID 的 nonlinear residual 没有超过线性初始化，validation early 
    0.1560/0.1516/0.1504/0.1519，相对强基线为 12.6%/10.6%/6.2%/-1.9%；但同一实现对 Deepwave 的
    raw response 动态范围数值不稳定，validation early stopping 只能回退到线性初始化。
 
-第三项说明 receiver-local correction 在 seismic line array 上有真实 headroom，但它不是跨域方法贡献。后续若
-重启，必须先建立与物理 response scale 一致的 complex likelihood/whitening，再做三 seed；不能直接把
-OpenFWI 单域开发数字加入主表。
+第三项说明 receiver-local correction 在 seismic line array 上有真实 headroom，但它不是跨域方法贡献。后续
+M2 已建立与物理 response scale 一致的 coordinate-RMS residual likelihood，消除了 Deepwave 的数值爆炸；
+但稀疏预算版本 K=1 仍为 0.11665，未达到 0.1138 stop line，故该分支已停止。Q2 efficiency 与其他
+M2 边界见 [M2 报告](PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)。
 
 ## 5. Q2 反向兼容与 hierarchical routing
 

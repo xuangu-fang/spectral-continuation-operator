@@ -1,0 +1,8 @@
+{
+  "selected": {
+    "8": {
+      "scalar": "scalar_ridge_r64_l0.001",
+      "spectrum": "spectrum_prior_r112_l0.15"
+    }
+  }
+}

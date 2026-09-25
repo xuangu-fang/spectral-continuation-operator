@@ -36,6 +36,10 @@ artifacts/in_context_response_query_rq0/**/conditional_collisions.csv
 # replaced by one frozen selection, and stride-4 did not change local spacing.
 artifacts/wave_as_prompt_pfto/m0_latent_prior_seed20260924/
 artifacts/wave_as_prompt_pfto/m0_continuous_query_dense_stride4/
+# PBNO development sweeps are summarized in the M2 report; keep only the
+# frozen cross-seed summary under version control.
+artifacts/pbno_q2_rank96_efficiency/
+artifacts/pbno_q2_efficiency_formal/*_seed*/
 experiments/runs/
 experiments/dense_evaluation/
 experiments/diagnostics/

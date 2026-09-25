@@ -19,8 +19,15 @@ latent energy 能检测灾难性 prior shift，但当前 abstention threshold �
 [PBNO M1 报告](../reports/PBNO_JOINT_QUERY_M1_ZH.md)。
 
 M1 后的普通 prompt-set updater 与 Deepwave coordinate-RMS 版本均无新增益。receiver-preserving residual
-只在 OpenFWI 单 seed 把 K=1/2 推到 12.6%/10.6%，但在 Deepwave 上数值不稳定，未 promotion。下一步的
-前置问题是跨域 complex likelihood/whitening，而不是继续扩大 encoder。
+的 coordinate-RMS likelihood 已修复 Deepwave 数值不稳定，但稀疏预算版本 K=1 仍为 0.11665，没有越过
+0.1138 gate，因此停止该分支。oracle 主坐标预测 PCA 尾模态也在两个域的 validation/test 退化，不能继续
+包装成 nonlinear manifold decoder。
+
+Q2 efficiency 替代 gate 已正式通过：OpenFWI rank 96 为 0.12880 vs rank 128 的 0.12922，同时减少
+25% storage；Deepwave rank 112 为 0.04394 vs 0.04349，只退化 1.03%，rank-cubic posterior solve
+减少 33%，OOD 还略有改善。三组 prompt-order seeds 固定配置评测。posterior-latent memory 在 OpenFWI
+Q3 K=1/2 达到 0.15290/0.14914，但在 Deepwave 无显著收益，当前只记为单域机制正结果。完整归因见
+[PBNO M2 报告](../reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)。
 
 ## 2026-09-25 上一结论：Wave as Prompt M0 通过核心 gate
 

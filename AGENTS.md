@@ -45,6 +45,14 @@ gate。两个更复杂的 fixed complex-edge token 都更差，不再枚举手�
 只有 11.1%/11.7%，未过 15% promotion gate。所有 30 个 boundary systems 同向，且 synthetic 单频预算
 改善 12%--18%，所以记为机制级正结果，不是主方法。不要用单 seed 或 ratio-of-means 改写 gate。
 
+2026-09-25 PBNO M2 已收口。coordinate-RMS residual likelihood 修复了 Deepwave 的数值爆炸，但稀疏预算
+receiver residual K=1 仍为 0.11665，未过 0.1138 stop line；不要继续扫 bound、卷积层或 set encoder。
+oracle rank-128 主坐标预测 PCA 尾模态在 OpenFWI/Deepwave validation/test 都退化，不启动 nonlinear-tail
+decoder。Q2 efficiency 替代 gate 已通过：OpenFWI rank 96 为 0.12880 vs rank 128 的 0.12922，Deepwave
+rank 112 为 0.04394 vs 0.04349；对应 rank-cubic solve 减少 57.8%/33.0%。posterior-latent memory 只在
+OpenFWI Q3 有正信号，Deepwave 无效，当前不是跨域主方法。先读
+`reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`。
+
 ## 当前执行顺序
 
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：

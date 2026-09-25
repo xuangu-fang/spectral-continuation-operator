@@ -1,0 +1,22 @@
+{
+  "device": "NVIDIA A100-SXM4-80GB",
+  "protocol": "30 warmed CUDA evaluations; SVD fitting excluded",
+  "OpenFWI": {
+    "baseline_rank": 128,
+    "efficient_rank": 96,
+    "latent_storage_reduction": 0.25,
+    "cubic_solve_flop_reduction": 0.578125,
+    "baseline_median_ms": 4.092729184776545,
+    "efficient_median_ms": 3.585569094866514,
+    "end_to_end_latency_reduction": 0.12392100132831896
+  },
+  "Deepwave": {
+    "baseline_rank": 128,
+    "efficient_rank": 112,
+    "latent_storage_reduction": 0.125,
+    "cubic_solve_flop_reduction": 0.330078125,
+    "baseline_median_ms": 10.503964964300394,
+    "efficient_median_ms": 9.24289831891656,
+    "end_to_end_latency_reduction": 0.12006005398723793
+  }
+}

@@ -32,6 +32,15 @@ def main() -> None:
     base = GlobalConfig(**payload["base_config"])
     archive = load_cross_domain_archive(args.dataset)
     subspace = fit_global_subspace(archive, base.rank, base.normalization, args.device)
+    train_flat = archive.responses[archive.split == "train"].reshape(
+        int(np.sum(archive.split == "train")), -1
+    )
+    residual_scale = np.sqrt(
+        np.mean(np.abs(train_flat - subspace.center[None]) ** 2, axis=0)
+    ).astype(np.float32)
+    positive = residual_scale[residual_scale > 0]
+    floor = 0.02 * float(np.median(positive)) if len(positive) else 1.0
+    residual_scale = np.maximum(residual_scale, max(floor, 1e-12))
     model = PromptedBayesianNeuralOperator(
         response_coordinates(archive),
         subspace.basis[:, : base.rank],
@@ -44,6 +53,8 @@ def main() -> None:
         bool(config.get("use_prompt_set", False)),
         bool(config.get("use_receiver_residual", False)),
         bool(config["domains"][payload["domain"]].get("periodic_receiver", False)),
+        residual_scale,
+        float(config.get("receiver_residual_bound", 0.05)),
     ).to(args.device)
     model.load_state_dict(payload["model"])
     center = torch.as_tensor(subspace.center, device=args.device)

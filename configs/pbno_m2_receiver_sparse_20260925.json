@@ -1,0 +1,29 @@
+{
+  "experiment": "pbno_m2_receiver_sparse",
+  "date": "2026-09-25",
+  "seed": 20260925,
+  "budgets": [1, 2, 4, 8],
+  "training_budgets": [1, 1, 1, 2, 2, 4, 8],
+  "validation_repeats": 2,
+  "test_repeats": 3,
+  "hidden": 256,
+  "use_posterior_variance": false,
+  "use_prompt_set": false,
+  "use_receiver_residual": true,
+  "receiver_residual_bound": 0.2,
+  "batch_size": 48,
+  "steps": 12000,
+  "evaluation_interval": 1000,
+  "learning_rate": 0.0002,
+  "weight_decay": 0.00001,
+  "domains": {
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "normalization": "raw",
+      "prior": "spectrum",
+      "rank": 128,
+      "strength": 0.1,
+      "periodic_receiver": true
+    }
+  }
+}

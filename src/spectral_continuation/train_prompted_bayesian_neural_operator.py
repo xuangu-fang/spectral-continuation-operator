@@ -107,6 +107,8 @@ class PromptedBayesianNeuralOperator(nn.Module):
         use_prompt_set: bool = False,
         use_receiver_residual: bool = False,
         periodic_receiver: bool = False,
+        residual_scale: np.ndarray | None = None,
+        receiver_residual_bound: float = 0.05,
     ) -> None:
         super().__init__()
         rank = base_basis.shape[1]
@@ -120,6 +122,7 @@ class PromptedBayesianNeuralOperator(nn.Module):
         self.use_prompt_set = use_prompt_set
         self.receiver_count = receiver_count
         self.use_receiver_residual = use_receiver_residual
+        self.receiver_residual_bound = receiver_residual_bound
         self.residual = nn.Sequential(
             nn.Linear(feature_count, hidden),
             nn.SiLU(),
@@ -152,10 +155,15 @@ class PromptedBayesianNeuralOperator(nn.Module):
         nn.init.zeros_(self.latent_residual[-1].weight)
         nn.init.zeros_(self.latent_residual[-1].bias)
         self.log_strength = nn.Parameter(torch.tensor(float(np.log(strength))))
-        self.residual_scale = 0.1 / np.sqrt(len(coordinates))
+        self.basis_residual_scale = 0.1 / np.sqrt(len(coordinates))
         if use_receiver_residual:
             if receiver_count is None:
                 raise ValueError("receiver_count is required for receiver residual")
+            if residual_scale is None:
+                raise ValueError("residual_scale is required for receiver residual")
+            self.register_buffer(
+                "residual_scale", torch.as_tensor(residual_scale, dtype=torch.float32)
+            )
             width = 64
             padding_mode = "circular" if periodic_receiver else "zeros"
             self.response_encoder = nn.Sequential(
@@ -196,7 +204,7 @@ class PromptedBayesianNeuralOperator(nn.Module):
         value = self.residual(fourier_features(coordinate))
         real, imaginary = value.split(self.rank, dim=-1)
         residual = torch.complex(real, imaginary)
-        return self.base_basis[indices] + self.residual_scale * residual
+        return self.base_basis[indices] + self.basis_residual_scale * residual
 
     def penalty(self) -> torch.Tensor:
         strength = torch.exp(self.log_strength).clamp(1e-8, 1e2)
@@ -255,6 +263,7 @@ class PromptedBayesianNeuralOperator(nn.Module):
         observed: torch.Tensor,
         target: torch.Tensor,
         baseline: torch.Tensor,
+        base_scale: torch.Tensor,
     ) -> torch.Tensor:
         """Receiver-preserving target-query residual around the Bayesian prediction."""
 
@@ -264,7 +273,10 @@ class PromptedBayesianNeuralOperator(nn.Module):
             raise ValueError("receiver_count is required")
         batch = len(context)
         prompt_count = context.shape[1] // self.receiver_count
-        response = context.reshape(batch, prompt_count, self.receiver_count)
+        scale_ratio = base_scale[observed] / self.residual_scale[observed]
+        response = (context * scale_ratio[None]).reshape(
+            batch, prompt_count, self.receiver_count
+        )
         response_channels = torch.stack((response.real, response.imag), dim=2)
         token = self.response_encoder(
             response_channels.reshape(batch * prompt_count, 2, self.receiver_count)
@@ -288,7 +300,12 @@ class PromptedBayesianNeuralOperator(nn.Module):
         ) / 8.0
         attention = torch.softmax(score, dim=1)
         attended = torch.einsum("bk,bkhr->bhr", attention, token)
-        baseline_channels = torch.stack((baseline.real, baseline.imag), dim=1)
+        baseline_in_residual_units = (
+            baseline * base_scale[target][None] / self.residual_scale[target][None]
+        )
+        baseline_channels = torch.stack(
+            (baseline_in_residual_units.real, baseline_in_residual_units.imag), dim=1
+        )
         baseline_feature = self.baseline_encoder(baseline_channels)
         receiver_coordinate = self.coordinates[target, 3:]
         receiver_feature = self.receiver_metadata(
@@ -300,8 +317,11 @@ class PromptedBayesianNeuralOperator(nn.Module):
                 (mean, deviation, attended, baseline_feature, conditioned), dim=1
             )
         )
-        bounded = 0.05 * torch.tanh(residual)
-        return baseline + torch.complex(bounded[:, 0], bounded[:, 1])
+        bounded = self.receiver_residual_bound * torch.tanh(residual)
+        corrected = baseline_in_residual_units + torch.complex(
+            bounded[:, 0], bounded[:, 1]
+        )
+        return corrected * self.residual_scale[target][None] / base_scale[target][None]
 
 
 def _indices(
@@ -343,7 +363,7 @@ def predict(
     )
     normalized = coefficient @ target_basis.T
     normalized = model.correct_response(
-        prompt_values, observed, target, normalized
+        prompt_values, observed, target, normalized, scale
     )
     return center[target][None] + scale[target][None] * normalized
 
@@ -413,6 +433,15 @@ def train_domain(
         archive, base.rank, base.normalization, device_name
     )
     source_count, frequency_count, receiver_count = archive.responses.shape[1:]
+    train_flat = archive.responses[archive.split == "train"].reshape(
+        int(np.sum(archive.split == "train")), -1
+    )
+    residual_scale = np.sqrt(
+        np.mean(np.abs(train_flat - subspace.center[None]) ** 2, axis=0)
+    ).astype(np.float32)
+    positive = residual_scale[residual_scale > 0]
+    residual_floor = 0.02 * float(np.median(positive)) if len(positive) else 1.0
+    residual_scale = np.maximum(residual_scale, max(residual_floor, 1e-12))
     model = PromptedBayesianNeuralOperator(
         response_coordinates(archive),
         subspace.basis[:, : base.rank],
@@ -425,6 +454,8 @@ def train_domain(
         bool(config.get("use_prompt_set", False)),
         bool(config.get("use_receiver_residual", False)),
         bool(setting.get("periodic_receiver", False)),
+        residual_scale,
+        float(config.get("receiver_residual_bound", 0.05)),
     ).to(device)
     center = torch.as_tensor(subspace.center, device=device)
     scale = torch.as_tensor(subspace.scale, device=device)
@@ -444,6 +475,9 @@ def train_domain(
         encoded_by_split[split] = (raw - center[None]) / scale[None]
 
     budgets = tuple(int(value) for value in config["budgets"])
+    training_budgets = tuple(
+        int(value) for value in config.get("training_budgets", budgets)
+    )
     initial = evaluate(
         model,
         encoded_by_split["validation"],
@@ -473,7 +507,7 @@ def train_domain(
     started = time.perf_counter()
     for step in range(1, int(config["steps"]) + 1):
         model.train()
-        budget = int(generator.choice(budgets))
+        budget = int(generator.choice(training_budgets))
         target_pair = np.asarray(
             [generator.integers(source_count), generator.integers(frequency_count)],
             dtype=np.int64,

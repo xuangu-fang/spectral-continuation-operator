@@ -370,6 +370,27 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **证据**：[PBNO M1 报告](../reports/PBNO_JOINT_QUERY_M1_ZH.md)；机器主表
   `artifacts/pbno_m1_summary/main_table.csv`。
 
+### E19：PBNO M2 efficiency 与 neural boundary
+
+- **尺度修复**：receiver residual 改为仅由 train systems 估计的 coordinate-RMS 单位；零初始化在任意
+  数据量纲下严格退化为 Bayesian baseline，Deepwave 数值爆炸已消失。
+- **最终 receiver 结果**：偏向 K=1/2 训练、residual bound 0.20 后，Deepwave K=1/2/4/8 为
+  0.11665/0.09079/0.06914/0.05433；K=1 未过预注册 0.1138，停止继续扫网络与 bound。
+- **nonlinear tail NO-GO**：即使输入来自完整目标 table 的 oracle rank-128 coefficients，MLP 预测
+  rank-129--256 tail 后，Deepwave/OpenFWI validation 与 test 都比 rank-128 reconstruction 更差；不启动
+  episodic principal-manifold decoder。
+- **latent memory 正信号**：在 posterior latent 空间做 context-only retrieval，OpenFWI Q3 K=1/2 为
+  0.15290/0.14914，优于原 PBNO；Deepwave 只改善约 2% 或无改善，因此是单域机制结果，不 promotion。
+- **Q2 efficiency A 级正结果**：固定配置、三 prompt-order seeds 下，OpenFWI rank 96 为 0.12880，
+  相对 rank 128 的 0.12922 略优，同时少 25% storage、少 57.8% rank-cubic solve；Deepwave rank 112
+  为 0.04394，相对 0.04349 退化 1.03%，rank-cubic solve 少 33.0%，OOD 0.07527 还略优于 0.07552。
+- **边界**：A100 端到端 batched latency 只降低约 12%，因为 gather、decode 与 metric reduction 不随 rank
+  立方下降；论文必须同时报告 FLOP proxy 与实测 latency。
+- **是否继续**：Q2 保底 gate 已通过；Q3 仍未达到两个域 10%。下一次方法升级只允许改变 latent belief
+  本身，并先通过 conditional branch / mixture evidence，不再堆 receiver encoder。
+- **证据**：[PBNO M2 报告](../reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)；机器结果
+  `artifacts/pbno_q2_efficiency_formal/summary/summary.json`。
+
 ## 4. 值得从正反馈继续挖的方向
 
 以下按“与当前主线的连接强度 / 最小验证成本”排序。它们不是要求同时实现的组件清单。

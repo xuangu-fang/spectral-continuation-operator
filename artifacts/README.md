@@ -4,6 +4,12 @@
 
 当前 active artifact collections 为：
 
+- `pbno_m1_summary/`：strict Q3 三 seed主表、方法图、budget curve 与 Ocean OOD safety；
+- `pbno_q2_efficiency_formal/summary/`：OpenFWI rank 96 与 Deepwave rank 112 的固定配置三 seed结果、
+  accuracy--compute 表、A100 latency 与汇总图；对应
+  [`reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`](../reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)；
+- `pbno_m2_receiver_residual/`：scale-consistent receiver residual 的本地 checkpoint 与机器 summary；该
+  分支未过 stop line，不属于正文主方法；
 - `cross_domain_response_query/`：OpenFWI、Deepwave、Ocean 的 archive manifest、M0/M1 汇总 JSON、预算主图与
   代表性 complex response 图；大型 NPZ、checkpoint 和逐 system CSV 本地保留、Git 排除；对应
   [`reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](../reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)；

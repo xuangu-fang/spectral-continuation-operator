@@ -62,3 +62,32 @@ def test_prompt_set_updater_is_permutation_invariant():
         observed.reshape(2, 2)[[1, 0]].reshape(4),
     )
     torch.testing.assert_close(first, second)
+
+
+def test_zero_receiver_residual_preserves_baseline_across_scales():
+    rng = np.random.default_rng(12)
+    coordinates = rng.normal(size=(12, 5)).astype(np.float32)
+    basis = (
+        rng.normal(size=(12, 3)) + 1j * rng.normal(size=(12, 3))
+    ).astype(np.complex64)
+    residual_scale = np.geomspace(0.01, 10.0, 12).astype(np.float32)
+    model = PromptedBayesianNeuralOperator(
+        coordinates,
+        basis,
+        np.ones(3),
+        0.1,
+        "spectrum",
+        hidden=8,
+        receiver_count=2,
+        use_receiver_residual=True,
+        residual_scale=residual_scale,
+    )
+    context = torch.randn(4, 4, dtype=torch.complex64)
+    observed = torch.tensor([0, 1, 4, 5])
+    target = torch.tensor([8, 9])
+    baseline = torch.randn(4, 2, dtype=torch.complex64)
+    base_scale = torch.from_numpy(np.geomspace(2.0, 0.2, 12).astype(np.float32))
+    corrected = model.correct_response(
+        context, observed, target, baseline, base_scale
+    )
+    torch.testing.assert_close(corrected, baseline)
