@@ -3,7 +3,30 @@
 > 更新日期：2026-09-25
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
-## 2026-09-25 最新结论：Wave as Prompt M0 通过核心 gate
+## 2026-09-25 最新结论：strict Q3 成立，PBNO M1 有稳定中等增益
+
+严格 joint source--frequency query 禁止目标 source 和目标 frequency 出现在任何 prompt 中。global complex
+Bayesian operator 在 OpenFWI/Deepwave/Ocean 的 K=1→8 分别从 0.194→0.149、0.126→0.055、
+0.792→0.401，证明跨 query 共享 system state 可被少量响应识别。
+
+343,809 参数 PBNO 保留解析 posterior，并学习 whitened nonlinear latent transport。三 seed 下，OpenFWI
+K=1/2 相对最强 validation-selected baseline 改善 11.7%/9.9%，Deepwave 为 7.1%/7.0%；K=4 约 5%，
+高预算趋于饱和，OpenFWI K=8 退化 3.0%。Ocean neural residual 没有收益。结论是：方法方向成立但未达到
+“两个域都超过 10%”的最终 promotion gate。
+
+Q2 通过 hierarchical routing 保留旧 frequency-local head；Q3 使用 global head。Ocean OOD 的 posterior
+latent energy 能检测灾难性 prior shift，但当前 abstention threshold 仍是开发期 POC。完整结果与负结果见
+[PBNO M1 报告](../reports/PBNO_JOINT_QUERY_M1_ZH.md)。
+
+M1 后的普通 prompt-set updater 与 Deepwave coordinate-RMS 版本均无新增益。receiver-preserving residual
+只在 OpenFWI 单 seed 把 K=1/2 推到 12.6%/10.6%，但在 Deepwave 上数值不稳定，未 promotion。下一步的
+前置问题是跨域 complex likelihood/whitening，而不是继续扩大 encoder。
+
+## 2026-09-25 上一结论：Wave as Prompt M0 通过核心 gate
+
+> 当前 active 方法升级已冻结为 PBNO：共享 system latent、query-conditioned complex functional basis 与
+> 解析 Bayesian prompt posterior。论文主战场从已成熟的 Q2 推进到 target source/frequency 均未出现的严格
+> Q3；阶段计划见 [PBNO 长程计划](PBNO_LONG_TERM_PLAN_ZH.md)。
 
 在强化到 rank 128、独立 validation 选参的 scalar-ridge response-subspace baseline 上，训练系统的 latent
 能谱先验仍在三域 half-budget 下稳定降低 raw complex RelL2：

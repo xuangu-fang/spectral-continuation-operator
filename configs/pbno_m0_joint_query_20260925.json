@@ -1,0 +1,17 @@
+{
+  "experiment": "pbno_m0_joint_query",
+  "date": "2026-09-25",
+  "seed": 20260925,
+  "validation_repeats": 2,
+  "test_repeats": 3,
+  "budgets": [1, 2, 4, 8],
+  "ranks": [4, 8, 16, 32, 64, 96, 128],
+  "scalar_strengths": [1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1],
+  "spectrum_strengths": [1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1.0],
+  "normalizations": ["raw", "coordinate_rms"],
+  "domains": {
+    "OpenFWI": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+    "Deepwave": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+    "Ocean": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz"
+  }
+}

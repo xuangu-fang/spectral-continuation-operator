@@ -9,7 +9,20 @@
 
 ## 当前主线：Wave as Prompt
 
-### 2026-09-25 最新结果
+### 2026-09-25 最新结果：严格 joint query 与 PBNO
+
+严格 Q3 要求目标 source 和目标 frequency 都不出现在 prompts 中。global complex Bayesian operator 已在
+OpenFWI、Deepwave、Ocean 三域形成随 K 单调下降的可用结果；在其上加入 whitened nonlinear latent
+transport 后，三 seed PBNO 在 OpenFWI K=1/2 相对 validation 选择的最强基线改善 11.7%/9.9%，Deepwave
+K=1/2 改善 7.1%/7.0%。高预算收益缩小，OpenFWI K=8 退化 3.0%，Ocean neural residual 无增益，因此尚未
+通过最终顶会 promotion gate。
+
+首先阅读 [PBNO M1 正式报告](reports/PBNO_JOINT_QUERY_M1_ZH.md)与
+[PBNO 长程计划](docs/PBNO_LONG_TERM_PLAN_ZH.md)。
+
+![PBNO strict-Q3 主结果](artifacts/pbno_m1_summary/pbno_q3_main.png)
+
+### 2026-09-25 上一结果：Q2 latent-spectrum prior
 
 新的最小方法把训练 response manifold 的 latent spectrum 作为复高斯先验，在 sparse prompts 下对未知
 系统做闭式 posterior/MAP identification。相对重新搜索到 rank 128 的 scalar-ridge 强基线，三 seed
@@ -31,6 +44,14 @@ universal OOD。functional-rank 审计还表明低秩主要存在于跨系统 re
 query；flow 需要先通过条件多模态 existence gate。
 
 ![Wave as Prompt 三域预算曲线](artifacts/wave_as_prompt_pfto/m0_latent_prior_multiseed/multidomain_budget_curve.png)
+
+### 当前 active 升级：PBNO
+
+下一阶段把上述解析结果升级为 **Prompted Bayesian Neural Operator**：从任意 source--frequency prompts
+识别共享 system latent，再用 query-conditioned complex response functions 回答新的 source、frequency 与
+receiver query。严格的论文主任务是 Q3：目标 source 和目标 frequency 都不曾出现在 prompts 中；现有
+PCA--MAP 是方法的线性特例和不可删除的强基线。完整公式、24 小时顺序与 promotion gates 见
+[PBNO 长程计划](docs/PBNO_LONG_TERM_PLAN_ZH.md)。
 
 ## 上一阶段：Cross-Domain Wave Response Query
 

@@ -1,0 +1,172 @@
+{
+  "OpenFWI": {
+    "1": {
+      "strong_baseline": "system_retrieval",
+      "strong_baseline_mean": 0.17841370036266743,
+      "global_operator_mean": 0.19449669613689186,
+      "pbno_mean": 0.15751244677106538,
+      "pbno_seed_std": 0.0009620293011898283,
+      "baseline_mean": 0.17841370036266743,
+      "candidate_mean": 0.15751244677106538,
+      "ratio_of_means_gain": 0.11715049656565268,
+      "bootstrap_95_low": 0.10584671567257303,
+      "bootstrap_95_high": 0.12811092093230209,
+      "system_win_rate": 0.892
+    },
+    "2": {
+      "strong_baseline": "system_retrieval",
+      "strong_baseline_mean": 0.16964078894257545,
+      "global_operator_mean": 0.17497160746902227,
+      "pbno_mean": 0.15291767896090946,
+      "pbno_seed_std": 0.00029375088988406207,
+      "baseline_mean": 0.16964078894257545,
+      "candidate_mean": 0.15291767896090946,
+      "ratio_of_means_gain": 0.09857953435554268,
+      "bootstrap_95_low": 0.08709876674134978,
+      "bootstrap_95_high": 0.10952589201676458,
+      "system_win_rate": 0.854
+    },
+    "4": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.16037515674903988,
+      "global_operator_mean": 0.16037515674903988,
+      "pbno_mean": 0.1518225256825487,
+      "pbno_seed_std": 0.000188311193479655,
+      "baseline_mean": 0.16037515674903988,
+      "candidate_mean": 0.1518225256825487,
+      "ratio_of_means_gain": 0.05332890230545251,
+      "bootstrap_95_low": 0.04833894625116471,
+      "bootstrap_95_high": 0.05856787775626469,
+      "system_win_rate": 0.946
+    },
+    "8": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.14909752482548355,
+      "global_operator_mean": 0.14909752482548355,
+      "pbno_mean": 0.15353707020605603,
+      "pbno_seed_std": 0.00035483977035373834,
+      "baseline_mean": 0.14909752482548355,
+      "candidate_mean": 0.15353707020605603,
+      "ratio_of_means_gain": -0.029776117247881206,
+      "bootstrap_95_low": -0.03978267605737641,
+      "bootstrap_95_high": -0.019522466396195995,
+      "system_win_rate": 0.406
+    }
+  },
+  "Deepwave": {
+    "1": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.1264243965561036,
+      "global_operator_mean": 0.1264243965561036,
+      "pbno_mean": 0.11747169360751286,
+      "pbno_seed_std": 0.0007043907638020984,
+      "baseline_mean": 0.1264243965561036,
+      "candidate_mean": 0.11747169360751286,
+      "ratio_of_means_gain": 0.07081467811964426,
+      "bootstrap_95_low": 0.0663242176979195,
+      "bootstrap_95_high": 0.07545274949805773,
+      "system_win_rate": 0.9921875,
+      "ood_fixed_operator": 0.18340746278408915,
+      "ood_safe_operator": 0.18340746278408915,
+      "ood_operator_use_rate": 1.0,
+      "pbno_ood_mean": 0.1769807854046424
+    },
+    "2": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.09758554861764424,
+      "global_operator_mean": 0.09758554861764424,
+      "pbno_mean": 0.09076580833546663,
+      "pbno_seed_std": 0.0008229558491538329,
+      "baseline_mean": 0.09758554861764424,
+      "candidate_mean": 0.09076580833546663,
+      "ratio_of_means_gain": 0.06988473579114096,
+      "bootstrap_95_low": 0.06578490537995796,
+      "bootstrap_95_high": 0.07405031983539466,
+      "system_win_rate": 0.9921875,
+      "ood_fixed_operator": 0.14813910928205587,
+      "ood_safe_operator": 0.14813910928205587,
+      "ood_operator_use_rate": 1.0,
+      "pbno_ood_mean": 0.14303667601780035
+    },
+    "4": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.07262087930575944,
+      "global_operator_mean": 0.07262087930575944,
+      "pbno_mean": 0.06892772397744314,
+      "pbno_seed_std": 0.00047783372204709734,
+      "baseline_mean": 0.07262087930575944,
+      "candidate_mean": 0.06892772397744314,
+      "ratio_of_means_gain": 0.05085528244248905,
+      "bootstrap_95_low": 0.046802674618155335,
+      "bootstrap_95_high": 0.0550275567596334,
+      "system_win_rate": 0.94140625,
+      "ood_fixed_operator": 0.11570538085652515,
+      "ood_safe_operator": 0.11570538085652515,
+      "ood_operator_use_rate": 1.0,
+      "pbno_ood_mean": 0.11400873016100377
+    },
+    "8": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.05492042133846553,
+      "global_operator_mean": 0.05492042133846553,
+      "pbno_mean": 0.05388605038751848,
+      "pbno_seed_std": 0.00015875997317229315,
+      "baseline_mean": 0.05492042133846553,
+      "candidate_mean": 0.05388605038751848,
+      "ratio_of_means_gain": 0.018833995183183183,
+      "bootstrap_95_low": 0.01456228507219065,
+      "bootstrap_95_high": 0.02289241378008896,
+      "system_win_rate": 0.6953125,
+      "ood_fixed_operator": 0.0967432341130916,
+      "ood_safe_operator": 0.0967432341130916,
+      "ood_operator_use_rate": 1.0,
+      "pbno_ood_mean": 0.09205016076157335
+    }
+  },
+  "Ocean": {
+    "1": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.7922811107710004,
+      "global_operator_mean": 0.7922811107710004,
+      "pbno_mean": 0.7922811107710004,
+      "pbno_seed_std": 0.0,
+      "ratio_of_means_gain": 0.0,
+      "ood_fixed_operator": 15.294052504003048,
+      "ood_safe_operator": 1.285781149752438,
+      "ood_operator_use_rate": 0.36125579476356506
+    },
+    "2": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.6616447470150888,
+      "global_operator_mean": 0.6616447470150888,
+      "pbno_mean": 0.6616447470150888,
+      "pbno_seed_std": 0.0,
+      "ratio_of_means_gain": 0.0,
+      "ood_fixed_operator": 13.999743863008916,
+      "ood_safe_operator": 1.1932342238724232,
+      "ood_operator_use_rate": 0.25882524251937866
+    },
+    "4": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.5069616640685126,
+      "global_operator_mean": 0.5069616640685126,
+      "pbno_mean": 0.5069616640685126,
+      "pbno_seed_std": 0.0,
+      "ratio_of_means_gain": 0.0,
+      "ood_fixed_operator": 13.815664447844028,
+      "ood_safe_operator": 1.0559274107217789,
+      "ood_operator_use_rate": 0.19343172013759613
+    },
+    "8": {
+      "strong_baseline": "global_operator",
+      "strong_baseline_mean": 0.40118967671878636,
+      "global_operator_mean": 0.40118967671878636,
+      "pbno_mean": 0.40118967671878636,
+      "pbno_seed_std": 0.0,
+      "ratio_of_means_gain": 0.0,
+      "ood_fixed_operator": 8.314053860493004,
+      "ood_safe_operator": 1.0300931325182319,
+      "ood_operator_use_rate": 0.1848958283662796
+    }
+  }
+}

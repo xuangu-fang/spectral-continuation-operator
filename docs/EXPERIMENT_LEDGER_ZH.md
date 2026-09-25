@@ -1,6 +1,6 @@
 # 实验账本：有效事实、失败边界与可重启条件
 
-> 更新日期：2026-09-23
+> 更新日期：2026-09-25
 > 目的：让新的研究者或 Agent 在十分钟内知道哪些问题已经做过、结果究竟否定了什么，以及哪些正信号
 > 仍未充分开发。本文是决策账本，不替代原始报告和机器可读 artifact。
 
@@ -38,6 +38,10 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 | F14 | instance-contrastive 预训练不改善 full-label 上限 | pretrained 0.0639；scratch 0.0491；frozen 约 0.31 | 冻结负结果 |
 | F15 | phase-coordinate 的观测效率在公开 WaveBench 上可复现，但效应为中等 | 1--4 frequencies 相对 raw 降 7.6%--12.7%；三 seed 全同向 | A 级正结果，15% gate 未过 |
 | F16 | 更复杂的 fixed complex-edge normalization 不自动带来更好表示 | symmetric/directed edge 在全部 budgets 弱于 soft phase token | development 负结果 |
+| F17 | strict joint source--frequency prompts 能识别跨 query 共享的 system state | 三域 global Bayesian operator 随 K 稳定下降 | A 级新事实 |
+| F18 | nonlinear latent transport 的收益集中在 sparse/mid budget | OpenFWI 最高 11.7%，Deepwave 最高 7.1%；高预算饱和 | A 级中等正结果 |
+| F19 | global 与 frequency-local state 是互补层级 | global PBNO 解 Q3；逐频率 head 在 Deepwave/Ocean Q2 更强 | 方法设计原则 |
+| F20 | posterior latent energy 可暴露灾难性 prior shift | Ocean OOD fixed 8--15，prompt-only gate 约 1.0 | C 级 safety POC |
 
 ## 3. 路线级复盘
 
@@ -336,6 +340,35 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
   重启 neural functional decoder。
 - **证据**：[M0 报告](../reports/WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)；机器汇总
   `artifacts/wave_as_prompt_pfto/m0_latent_prior_multiseed/summary.json`。
+
+### E18：PBNO strict joint source--frequency query
+
+- **新任务**：Q3 的 target source 与 target frequency 均不得出现在 prompts；排除同频 source completion
+  与同 source 频率插值两条捷径。
+- **M0 强正结果**：global complex Bayesian operator 在 OpenFWI/Deepwave/Ocean 的 K=1→8 分别从
+  0.194→0.149、0.126→0.055、0.792→0.401；三域均随 budget 改善。
+- **M1 方法**：global SVD response functions + analytic Bayesian prompt posterior + zero-initialized
+  query-functional residual + whitened nonlinear latent transport；343,809 参数，一个 checkpoint 支持
+  K=1/2/4/8。
+- **三 seed 正结果**：相对 validation-selected retrieval/global baseline，OpenFWI K=1/2/4 改善
+  11.7%/9.9%/5.3%，Deepwave 改善 7.1%/7.0%/5.1%；paired bootstrap 下界均为正。
+- **决定性边界**：OpenFWI K=8 退化 3.0%；Ocean neural residual 无增益；因此没有通过“两个域均超过
+  10%”方法 gate。
+- **层级发现**：global state 负责 Q3；frequency-local state 在 Deepwave/Ocean Q2 更强。后续应采用由
+  query mask 决定的 hierarchical router，不强迫一个 latent head 兼顾所有 regimes。
+- **不要重复**：加深 coordinate MLP、把 posterior covariance diagonal 直接拼进 latent MLP、在 Ocean
+  IID 上继续加容量。两者已经完成，均弱于简单 latent-mean transport或线性初始化。
+- **OOD**：Deepwave K=8 neural transport 改善 4.85%；Ocean fixed prior 会灾难性失效。prompt latent
+  energy 能检测 severe shift，但当前 abstention threshold 是开发期 POC，不作为正式 OOD claim。
+- **flow 决策**：仍无 conditional multimodality 证据；不得为了生成式标签启动 flow。
+- **M2 负结果**：普通 prompt-set updater 参数翻倍但没有新增益；Deepwave coordinate-RMS head 弱于 raw
+  head；receiver-preserving residual 仅在 OpenFWI 单 seed 达到 K=1/2 的 12.6%/10.6%，Deepwave 因
+  response-scale 失配不稳定并回退到初始化。
+- **唯一建议下一步**：先建立跨域一致的 complex likelihood/whitening，再重启 receiver-local residual；
+  在此之前不再堆 set encoder。OpenFWI K=2/4 与 Deepwave K=1/2 至少两域过 10%，且 OpenFWI K=8
+  不退化，才 promotion。
+- **证据**：[PBNO M1 报告](../reports/PBNO_JOINT_QUERY_M1_ZH.md)；机器主表
+  `artifacts/pbno_m1_summary/main_table.csv`。
 
 ## 4. 值得从正反馈继续挖的方向
 

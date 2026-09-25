@@ -1,5 +1,9 @@
 # 报告导航
 
+- [`PBNO_JOINT_QUERY_M1_ZH.md`](PBNO_JOINT_QUERY_M1_ZH.md)：**当前最新正式结果**；strict joint
+  source--frequency query、global Bayesian operator、三 seed neural latent transport、Q2/Q3 hierarchy、
+  OOD safety 与未通过的顶会 gate。
+
 - [`WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md`](WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)：**当前最新正式结果**；
   latent spectrum prior、三域三 seed 强基线比较、probe saving、OOD 边界与 functional-rank 负结果。
 
