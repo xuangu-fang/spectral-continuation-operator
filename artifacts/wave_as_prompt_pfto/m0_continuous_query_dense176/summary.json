@@ -1,0 +1,1296 @@
+{
+  "Deepwave-176": {
+    "domain": "Deepwave-176",
+    "budget": 8,
+    "receiver_count": 176,
+    "observed_receivers": 88,
+    "query_receivers": 88,
+    "holdout_stride": 2,
+    "coordinate_policy": "globally interleaved receiver holdout",
+    "selected": {
+      "scalar": {
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r64_l0.01"
+      },
+      "spectrum": {
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r128_l0.1"
+      }
+    },
+    "oracle_interpolation_rel_l2": {
+      "periodic_linear": 0.40745705366134644,
+      "periodic_cubic": 0.4071413576602936,
+      "periodic_fourier": 0.4415716528892517
+    },
+    "test": {
+      "baseline_mean": 0.4118263438188781,
+      "candidate_mean": 0.4103208661545068,
+      "ratio_of_means_gain": 0.0036556128255685882,
+      "bootstrap_95_low": 0.0033733818685437204,
+      "bootstrap_95_high": 0.003949704210573306,
+      "system_win_rate": 0.9921875
+    },
+    "validation_grid": [
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r4_l1e-08",
+        "error": 0.42975005065090954
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r4_l1e-06",
+        "error": 0.42975005065090954
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r4_l0.0001",
+        "error": 0.4297502941917628
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r4_l0.01",
+        "error": 0.42978962836787105
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r4_l0.1",
+        "error": 0.43104149703867733
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r8_l1e-08",
+        "error": 0.4220402834471315
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r8_l1e-06",
+        "error": 0.4220402860082686
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r8_l0.0001",
+        "error": 0.422040757490322
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r8_l0.01",
+        "error": 0.42210989631712437
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r8_l0.1",
+        "error": 0.4239461172837764
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r16_l1e-08",
+        "error": 0.416464147856459
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r16_l1e-06",
+        "error": 0.4164641532115638
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r16_l0.0001",
+        "error": 0.41646462958306074
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r16_l0.01",
+        "error": 0.4165490346495062
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r16_l0.1",
+        "error": 0.4190381879452616
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r32_l1e-08",
+        "error": 0.4129124542232603
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r32_l1e-06",
+        "error": 0.4129124528262764
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r32_l0.0001",
+        "error": 0.41291254898533225
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r32_l0.01",
+        "error": 0.4130269780289382
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r32_l0.1",
+        "error": 0.41699271835386753
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r64_l1e-08",
+        "error": 0.4119373334106058
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r64_l1e-06",
+        "error": 0.41193727613426745
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r64_l0.0001",
+        "error": 0.41193176503293216
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r64_l0.01",
+        "error": 0.41211945400573313
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r64_l0.1",
+        "error": 0.41906737349927425
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r96_l1e-08",
+        "error": 0.41236002440564334
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r96_l1e-06",
+        "error": 0.41235983232036233
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r96_l0.0001",
+        "error": 0.41234168014489114
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r96_l0.01",
+        "error": 0.4128095603082329
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r96_l0.1",
+        "error": 0.4218929319176823
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r128_l1e-08",
+        "error": 0.4132208169903606
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r128_l1e-06",
+        "error": 0.41322027845308185
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r128_l0.0001",
+        "error": 0.4131702836602926
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r128_l0.01",
+        "error": 0.41388733102940023
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_linear",
+        "config": "scalar_ridge_r128_l0.1",
+        "error": 0.4243071002420038
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r4_l1e-08",
+        "error": 0.4290592707693577
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r4_l1e-06",
+        "error": 0.42905925889499485
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r4_l0.0001",
+        "error": 0.4290581587702036
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r4_l0.01",
+        "error": 0.4289685748517513
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r4_l0.1",
+        "error": 0.4294223978649825
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r8_l1e-08",
+        "error": 0.4216514907311648
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r8_l1e-06",
+        "error": 0.4216514746658504
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r8_l0.0001",
+        "error": 0.42165010306052864
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r8_l0.01",
+        "error": 0.4215436936356127
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r8_l0.1",
+        "error": 0.4223353830166161
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r16_l1e-08",
+        "error": 0.4161307218018919
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r16_l1e-06",
+        "error": 0.4161306999158114
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r16_l0.0001",
+        "error": 0.41612877836450934
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r16_l0.01",
+        "error": 0.4159877351485193
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r16_l0.1",
+        "error": 0.41724346089176834
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r32_l1e-08",
+        "error": 0.4127454513218254
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r32_l1e-06",
+        "error": 0.412745415000245
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r32_l0.0001",
+        "error": 0.4127419786527753
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r32_l0.01",
+        "error": 0.41253854404203594
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r32_l0.1",
+        "error": 0.41507406951859593
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r64_l1e-08",
+        "error": 0.411948079476133
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r64_l1e-06",
+        "error": 0.4119479455985129
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r64_l0.0001",
+        "error": 0.41193518973886967
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r64_l0.01",
+        "error": 0.4115737157408148
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r64_l0.1",
+        "error": 0.4169841194525361
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r96_l1e-08",
+        "error": 0.41235575918108225
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r96_l1e-06",
+        "error": 0.4123554353136569
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r96_l0.0001",
+        "error": 0.41232476476579905
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r96_l0.01",
+        "error": 0.4120393160264939
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r96_l0.1",
+        "error": 0.41970236832275987
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r128_l1e-08",
+        "error": 0.41317140799947083
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r128_l1e-06",
+        "error": 0.41317069437354803
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r128_l0.0001",
+        "error": 0.4131033003795892
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r128_l0.01",
+        "error": 0.4129181813914329
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_cubic",
+        "config": "scalar_ridge_r128_l0.1",
+        "error": 0.4220533277839422
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r4_l1e-08",
+        "error": 0.4618374777492136
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r4_l1e-06",
+        "error": 0.46183746634051204
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r4_l0.0001",
+        "error": 0.4618363045156002
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r4_l0.01",
+        "error": 0.4617401964496821
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r4_l0.1",
+        "error": 0.4620853790547699
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r8_l1e-08",
+        "error": 0.45498748822137713
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r8_l1e-06",
+        "error": 0.4549874742515385
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r8_l0.0001",
+        "error": 0.454986009048298
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r8_l0.01",
+        "error": 0.4548687697388232
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r8_l0.1",
+        "error": 0.4554957505315542
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r16_l1e-08",
+        "error": 0.44985915697179735
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r16_l1e-06",
+        "error": 0.44985914090648293
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r16_l0.0001",
+        "error": 0.44985709968023
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r16_l0.01",
+        "error": 0.4497027019970119
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r16_l0.1",
+        "error": 0.45073872269131243
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r32_l1e-08",
+        "error": 0.44674581522122025
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r32_l1e-06",
+        "error": 0.44674577796831727
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r32_l0.0001",
+        "error": 0.4467422254383564
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r32_l0.01",
+        "error": 0.44652025937102735
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r32_l0.1",
+        "error": 0.44871678622439504
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r64_l1e-08",
+        "error": 0.4460393423214555
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r64_l1e-06",
+        "error": 0.44603920984081924
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r64_l0.0001",
+        "error": 0.44602660136297345
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r64_l0.01",
+        "error": 0.44563066214323044
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r64_l0.1",
+        "error": 0.45047983760014176
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r96_l1e-08",
+        "error": 0.4464262663386762
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r96_l1e-06",
+        "error": 0.44642594712786376
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r96_l0.0001",
+        "error": 0.446396027226001
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r96_l0.01",
+        "error": 0.4460477107204497
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r96_l0.1",
+        "error": 0.4530204359907657
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r128_l1e-08",
+        "error": 0.4471712193917483
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r128_l1e-06",
+        "error": 0.4471705344039947
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r128_l0.0001",
+        "error": 0.44710592180490494
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r128_l0.01",
+        "error": 0.4468441866338253
+      },
+      {
+        "family": "scalar",
+        "method": "periodic_fourier",
+        "config": "scalar_ridge_r128_l0.1",
+        "error": 0.4552157297730446
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r4_l1e-06",
+        "error": 0.4297500541433692
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r4_l0.0001",
+        "error": 0.4297502697445452
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r4_l0.01",
+        "error": 0.4297903298866004
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r4_l0.1",
+        "error": 0.4309996801894158
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r4_l1",
+        "error": 0.44373913016170263
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r8_l1e-06",
+        "error": 0.42204028577543795
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r8_l0.0001",
+        "error": 0.42204034235328436
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r8_l0.01",
+        "error": 0.42205532314255834
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r8_l0.1",
+        "error": 0.42269904143176973
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r8_l1",
+        "error": 0.4317053642589599
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r16_l1e-06",
+        "error": 0.4164641429670155
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r16_l0.0001",
+        "error": 0.41646368568763137
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r16_l0.01",
+        "error": 0.41643850947730243
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r16_l0.1",
+        "error": 0.4170863532926887
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r16_l1",
+        "error": 0.42533345171250403
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r32_l1e-06",
+        "error": 0.4129124372266233
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r32_l0.0001",
+        "error": 0.4129109198693186
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r32_l0.01",
+        "error": 0.4128040496725589
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r32_l0.1",
+        "error": 0.41315768426284194
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r32_l1",
+        "error": 0.4188301437534392
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r64_l1e-06",
+        "error": 0.41193726821802557
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r64_l0.0001",
+        "error": 0.41193129727616906
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r64_l0.01",
+        "error": 0.411522674607113
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r64_l0.1",
+        "error": 0.41121884784661233
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r64_l1",
+        "error": 0.4140181429684162
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r96_l1e-06",
+        "error": 0.41235990170389414
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r96_l0.0001",
+        "error": 0.4123477949760854
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r96_l0.01",
+        "error": 0.41156119015067816
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r96_l0.1",
+        "error": 0.4106852519325912
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r96_l1",
+        "error": 0.4123261284548789
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r128_l1e-06",
+        "error": 0.4132205282803625
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r128_l0.0001",
+        "error": 0.41319184424355626
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r128_l0.01",
+        "error": 0.41177993058227
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r128_l0.1",
+        "error": 0.4104985403828323
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_linear",
+        "config": "spectrum_prior_r128_l1",
+        "error": 0.4116097034420818
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r4_l1e-06",
+        "error": 0.42905925936065614
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r4_l0.0001",
+        "error": 0.4290580851957202
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r4_l0.01",
+        "error": 0.4289672162849456
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r4_l0.1",
+        "error": 0.4294323797803372
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r4_l1",
+        "error": 0.4414330350700766
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r8_l1e-06",
+        "error": 0.4216514811851084
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r8_l0.0001",
+        "error": 0.421650578500703
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r8_l0.01",
+        "error": 0.4215734221506864
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r8_l0.1",
+        "error": 0.421616644365713
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r8_l1",
+        "error": 0.4293569843284786
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r16_l1e-06",
+        "error": 0.4161307050380856
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r16_l0.0001",
+        "error": 0.4161292298231274
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r16_l0.01",
+        "error": 0.41600842331536114
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r16_l0.1",
+        "error": 0.4161056543234736
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r16_l1",
+        "error": 0.42315841279923916
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r32_l1e-06",
+        "error": 0.41274542338214815
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r32_l0.0001",
+        "error": 0.4127428764477372
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r32_l0.01",
+        "error": 0.4125433585140854
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r32_l0.1",
+        "error": 0.4124501484911889
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r32_l1",
+        "error": 0.4171523433178663
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r64_l1e-06",
+        "error": 0.4119480000808835
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r64_l0.0001",
+        "error": 0.41194073879159987
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r64_l0.01",
+        "error": 0.41142784082330763
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r64_l0.1",
+        "error": 0.41076747979968786
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r64_l1",
+        "error": 0.4129236286971718
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r96_l1e-06",
+        "error": 0.4123556243721396
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r96_l0.0001",
+        "error": 0.4123423155397177
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r96_l0.01",
+        "error": 0.4114619519095868
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r96_l0.1",
+        "error": 0.4103127848356962
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r96_l1",
+        "error": 0.41149253328330815
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r128_l1e-06",
+        "error": 0.4131711188238114
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r128_l0.0001",
+        "error": 0.41314239404164255
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r128_l0.01",
+        "error": 0.41167172510176897
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r128_l0.1",
+        "error": 0.41016349755227566
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_cubic",
+        "config": "spectrum_prior_r128_l1",
+        "error": 0.41090413043275476
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r4_l1e-06",
+        "error": 0.46183746471069753
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r4_l0.0001",
+        "error": 0.46183622628450394
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r4_l0.01",
+        "error": 0.4617380662821233
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r4_l0.1",
+        "error": 0.46209804713726044
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r4_l1",
+        "error": 0.4732402709778398
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r8_l1e-06",
+        "error": 0.4549874784424901
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r8_l0.0001",
+        "error": 0.45498653524555266
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r8_l0.01",
+        "error": 0.45490427291952074
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r8_l0.1",
+        "error": 0.4548776149749756
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r8_l1",
+        "error": 0.4619515456724912
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r16_l1e-06",
+        "error": 0.44985914416611195
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r16_l0.0001",
+        "error": 0.44985764962621033
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r16_l0.01",
+        "error": 0.44973410456441343
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r16_l0.1",
+        "error": 0.44976192037574947
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r16_l1",
+        "error": 0.45618965732865036
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r32_l1e-06",
+        "error": 0.44674579077400267
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r32_l0.0001",
+        "error": 0.44674330623820424
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r32_l0.01",
+        "error": 0.4465470714494586
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r32_l0.1",
+        "error": 0.44640622194856405
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r32_l1",
+        "error": 0.45065573672764003
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r64_l1e-06",
+        "error": 0.4460392748005688
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r64_l0.0001",
+        "error": 0.44603236578404903
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r64_l0.01",
+        "error": 0.4455424277111888
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r64_l0.1",
+        "error": 0.44488140288740396
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r64_l1",
+        "error": 0.4467979061882943
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r96_l1e-06",
+        "error": 0.44642613432370126
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r96_l0.0001",
+        "error": 0.4464136043097824
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r96_l0.01",
+        "error": 0.44558226969093084
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r96_l0.1",
+        "error": 0.44447490223683417
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r96_l1",
+        "error": 0.44550407212227583
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r128_l1e-06",
+        "error": 0.44717095140367746
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r128_l0.0001",
+        "error": 0.4471442250069231
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r128_l0.01",
+        "error": 0.44576953910291195
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r128_l0.1",
+        "error": 0.4443390613887459
+      },
+      {
+        "family": "spectrum",
+        "method": "periodic_fourier",
+        "config": "spectrum_prior_r128_l1",
+        "error": 0.4449751728679985
+      }
+    ]
+  }
+}

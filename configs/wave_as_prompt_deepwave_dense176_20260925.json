@@ -1,0 +1,15 @@
+{
+  "experiment": "wave_as_prompt_deepwave_dense176_receiver_grid",
+  "date": "2026-09-25",
+  "domains": {
+    "deepwave_ring": {
+      "grid": 96,
+      "spacing_m": 0.001,
+      "transducers": 16,
+      "receivers": 176,
+      "frequencies_hz": [90000, 120000, 150000, 175000, 195000],
+      "peak_frequency_hz": 150000,
+      "systems": {"train": 512, "validation": 128, "test": 256, "ood": 128}
+    }
+  }
+}

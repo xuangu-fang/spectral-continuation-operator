@@ -48,6 +48,15 @@ provenance_json         JSON scalar
 - split：512/128/256/128 个 train/validation/test/OOD systems；
 - 输出：`artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz`。
 
+为 continuous receiver query 另生成同一随机种子、同一 systems/sources/frequencies 的 128 与 176 receiver
+版本，SHA256 和 shape 分别记录在：
+
+- `artifacts/wave_as_prompt_pfto/data/deepwave_ring_128_v1.manifest.json`；
+- `artifacts/wave_as_prompt_pfto/data/deepwave_ring_176_v1.manifest.json`。
+
+大型 NPZ 只在本地保留。96-grid、半径 `0.32 * grid` 的离散圆在 256 nominal receivers 时只有 188 个唯一
+cell，adapter 现会在仿真前拒绝重复 receiver cells，不能用重复位置伪造更密采样。
+
 最初 220--340 kHz 的草案会低于每波长 6 个网格点，已在正式生成前废弃。正式频带在最低速度处满足离散精度警戒线。
 
 ## 4. Ocean multistatic acoustics

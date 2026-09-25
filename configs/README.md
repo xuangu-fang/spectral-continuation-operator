@@ -8,6 +8,10 @@
   审计；validation 选择 rank/strength，随后按原始逐 query complex RelL2 做 test/OOD；
 - `wave_as_prompt_continuous_query_m0_20260925.json`：Deepwave/Ocean 全局交错 receiver-coordinate holdout；
   scalar/spectrum family 各自在 validation 选择插值、rank 与 strength，三 seed test；
+- `wave_as_prompt_deepwave_dense_20260925.json` 与 `wave_as_prompt_deepwave_dense176_20260925.json`：保持
+  systems/sources/frequencies 不变的 128/176 receiver Deepwave sampling audit；
+- `wave_as_prompt_continuous_query_dense_m0_20260925.json` 与
+  `wave_as_prompt_continuous_query_dense176_m0_20260925.json`：对应的 interleaved coordinate-query 协议；
 - `cross_domain_response_query_20260924.json`：当前跨域 Q2 协议；OpenFWI/Deepwave/Ocean/The Well adapter、
   system split、频带、source budget、三 seed 与 measurement-efficiency gates。
 - `in_context_response_query_rq0_20260924.json`：当前 active Response Query 协议；固定 receiver array，

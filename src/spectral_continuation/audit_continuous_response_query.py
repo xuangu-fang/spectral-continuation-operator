@@ -24,11 +24,15 @@ class RestrictedSubspace:
     variance: np.ndarray
 
 
-def receiver_split(receiver_count: int, periodic: bool) -> tuple[np.ndarray, np.ndarray]:
-    observed = np.arange(0, receiver_count, 2)
-    if not periodic and observed[-1] != receiver_count - 1:
-        observed = np.append(observed, receiver_count - 1)
-    query = np.setdiff1d(np.arange(receiver_count), observed)
+def receiver_split(
+    receiver_count: int, periodic: bool, holdout_stride: int = 2
+) -> tuple[np.ndarray, np.ndarray]:
+    if holdout_stride < 2:
+        raise ValueError("holdout_stride must be at least 2")
+    query = np.arange(1, receiver_count, holdout_stride)
+    if not periodic:
+        query = query[query != receiver_count - 1]
+    observed = np.setdiff1d(np.arange(receiver_count), query)
     return observed, query
 
 
@@ -234,7 +238,10 @@ def run_domain(
     archive = load_cross_domain_archive(Path(payload["dataset"]))
     periodic = bool(payload["periodic"])
     budget = int(payload["budget"])
-    observed, query = receiver_split(archive.responses.shape[-1], periodic)
+    holdout_stride = int(payload.get("holdout_stride", 2))
+    observed, query = receiver_split(
+        archive.responses.shape[-1], periodic, holdout_stride
+    )
     subspaces = fit_restricted_subspaces(
         archive.responses, archive.split, observed, max(ranks)
     )
@@ -328,6 +335,7 @@ def run_domain(
         "receiver_count": int(archive.responses.shape[-1]),
         "observed_receivers": len(observed),
         "query_receivers": len(query),
+        "holdout_stride": holdout_stride,
         "coordinate_policy": "globally interleaved receiver holdout",
         "selected": {
             family: {

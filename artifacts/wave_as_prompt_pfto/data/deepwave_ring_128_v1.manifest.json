@@ -1,0 +1,52 @@
+{
+  "path": "/home/ubuntu/project/spectral-continuation-operator/artifacts/wave_as_prompt_pfto/data/deepwave_ring_128_v1.npz",
+  "sha256": "d26d6768869c2056ab8531751a9a2d863d7508a95e47111624d4945546566ba0",
+  "shape": [
+    1024,
+    16,
+    5,
+    128
+  ],
+  "splits": {
+    "ood": 128,
+    "test": 256,
+    "train": 512,
+    "validation": 128
+  },
+  "frequencies": [
+    92592.59375,
+    120370.3671875,
+    148148.140625,
+    175925.921875,
+    194444.4375
+  ],
+  "provenance": {
+    "domain": "Deepwave 2D ring ultrasound",
+    "deepwave_version": "0.0.26",
+    "solver": "constant-density scalar time-domain finite difference",
+    "grid": 96,
+    "spacing_m": 0.001,
+    "dt_seconds": 1.5e-07,
+    "time_steps": 720,
+    "peak_frequency_hz": 150000.0,
+    "requested_frequencies_hz": [
+      90000.0,
+      120000.0,
+      150000.0,
+      175000.0,
+      195000.0
+    ],
+    "actual_frequencies_hz": [
+      92592.59259259258,
+      120370.37037037036,
+      148148.14814814815,
+      175925.92592592593,
+      194444.44444444444
+    ],
+    "sources": 16,
+    "receivers": 128,
+    "test_policy": "IID held-out systems; no test use for selection",
+    "ood_shift": "five-lobed inclusions and wider contrast",
+    "smoke": false
+  }
+}

@@ -311,7 +311,7 @@ def prepare_deepwave(config: dict, output: Path, smoke: bool = False) -> dict:
     grid = int(domain["grid"])
     spacing = float(domain["spacing_m"])
     source_count = int(domain["transducers"])
-    receiver_count = 64
+    receiver_count = int(domain.get("receivers", 64))
     frequency = np.asarray(domain["frequencies_hz"], dtype=np.float64)
     counts = dict(domain["systems"])
     if smoke:
@@ -319,6 +319,12 @@ def prepare_deepwave(config: dict, output: Path, smoke: bool = False) -> dict:
     # Keep the physical array outside the absorbing PML; otherwise the direct
     # arrival is attenuated before it enters the modeled domain.
     receiver_rc = _ring_coordinates(grid, receiver_count, 0.32 * grid)
+    if len(np.unique(receiver_rc, axis=0)) != receiver_count:
+        raise ValueError(
+            f"{receiver_count} receivers collapse to duplicate cells on the {grid}-grid ring"
+        )
+    if receiver_count % source_count:
+        raise ValueError("receiver count must be divisible by source count for exact angular alignment")
     source_receiver_index = np.arange(0, receiver_count, receiver_count // source_count)
     source_rc = receiver_rc[source_receiver_index]
     receiver_xy = receiver_rc[:, ::-1].astype(np.float32) / float(grid - 1)

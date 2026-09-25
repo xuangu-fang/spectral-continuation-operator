@@ -163,6 +163,20 @@ Ocean 通过 10% gate，而且最终值接近给定真实 target-source observed
 response 的 Fourier、cubic、linear 插值误差分别为 1.84、1.59、1.39。此时更大 coordinate network
 无法从未采样信息中恢复相位。下一步必须先生成更密环阵或按波长设计采样，不能用模型容量掩盖不可辨识性。
 
+随后保持 1024 个 systems、16 sources、5 frequencies 完全相同，只把 Deepwave receiver grid 加密到
+128 和离散圆允许的 176 个唯一网格点。sampling curve 为：
+
+| functional-grid receivers | sampling oracle | scalar operator | spectrum operator |
+|---:|---:|---:|---:|
+| 32 | 1.387 | 1.388 | 1.387 |
+| 64 | 0.476 | 0.480 | 0.479 |
+| 88 | 0.407 | 0.412 | 0.410 |
+
+![Continuous-query sampling boundary](../artifacts/wave_as_prompt_pfto/m0_continuous_sampling_summary/continuous_sampling.png)
+
+误差随局部采样间距下降，但模型始终贴近 oracle，且在当前离散网格极限仍为 0.407。因此冻结 Deepwave
+continuous branch；重新打开它需要更细 PDE grid 或避开近源尖锐区域，而不是更多名义 receivers。
+
 ### 4.5 Prompt-only posterior calibration
 
 固定 IID prior 在 Ocean 远 OOD 上可能过度自信。对于 $K\geq2$，我们不读取 target query，而是在每个

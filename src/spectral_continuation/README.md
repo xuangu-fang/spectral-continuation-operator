@@ -17,6 +17,8 @@
   oracle 与 joint held-out-source/receiver query；
 - `audit_prompt_adaptive_prior.py`：不读取 target 的 leave-one-prompt-source-out prior selector，用于诊断与
   缓解 response-manifold OOD 时的 prior overconfidence；
+- `summarize_continuous_sampling.py`：汇总 Deepwave receiver-grid convergence 与 Ocean 可辨识 continuous
+  query，生成 sampling-boundary 图；
 - `cross_domain_response_data.py`：OpenFWI、Deepwave、Ocean 与 The Well 的统一 complex response archive；
 - `cross_domain_query_audit.py`：互易性、local baselines、validation-selected complex response subspace；
 - `train_cross_domain_query.py`：receiver-preserving set attention residual operator；

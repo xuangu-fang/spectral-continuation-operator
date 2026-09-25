@@ -31,6 +31,10 @@ prompt-only leave-one-source-out calibration 在不读 target/OOD 标签时，�
 1.032 降到 0.846（再改善 18.0%），代价是 IID 从 0.001018 轻微回退到 0.001072。它作为 robustness
 extension 保留；K=8 OOD 仍未完全修复，不能声称 universal calibration。
 
+Deepwave dense-grid sampling curve 已冻结：32/64/88 个 observed ring points 的 true-response interpolation
+oracle 为 1.387/0.476/0.407，operator error 为 1.387/0.479/0.410，始终贴近信息上限。96-grid 离散圆不能
+再无重复地扩展到 256 receivers；重启条件是更细 PDE grid 或排除近源奇异区域。
+
 ## 2026-09-24 当前结论：跨域 Response Query POC 已通过
 
 统一 Q2 held-out-source query 已在 OpenFWI、Deepwave ring ultrasound、Ocean Pekeris 三个多系统域完成。
