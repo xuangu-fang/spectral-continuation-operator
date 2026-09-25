@@ -7,7 +7,32 @@
 全局相位基准快速变化，但**归一化幅值与局部复相位增量**可以把“局部能量”和“局部传播”分开表示，
 从而更稳定地识别产生这些响应的物理系统。
 
-## 当前主线：Cross-Domain Wave Response Query
+## 当前主线：Wave as Prompt
+
+### 2026-09-25 最新结果
+
+新的最小方法把训练 response manifold 的 latent spectrum 作为复高斯先验，在 sparse prompts 下对未知
+系统做闭式 posterior/MAP identification。相对重新搜索到 rank 128 的 scalar-ridge 强基线，三 seed
+half-budget raw complex RelL2 为：
+
+| 数据域 | scalar ridge | latent spectrum prior | 相对改善 |
+|---|---:|---:|---:|
+| OpenFWI，K=2/4 | 0.1745 | **0.1292** | **25.9%** |
+| Deepwave，K=8/15 | 0.05313 | **0.04349** | **18.2%** |
+| Ocean，K=4/8 | 0.001678 | **0.001018** | **39.3%** |
+
+OpenFWI 与 Ocean 均达到 25% equivalent probe saving；Deepwave/Ocean half-budget OOD 相对 strong
+baseline 改善 16.1%/14.6%。但 Ocean OOD 绝对误差仍高，且极低/极高预算存在 prior 失配，当前不宣称
+universal OOD。functional-rank 审计还表明低秩主要存在于跨系统 response manifold，而不是 source/receiver
+空间轴。
+
+首先阅读 [M0 正式报告](reports/WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)与
+[当前状态](docs/CURRENT_STATUS_ZH.md)。下一步只推进 prompt-adaptive calibration 与 continuous receiver
+query；flow 需要先通过条件多模态 existence gate。
+
+![Wave as Prompt 三域预算曲线](artifacts/wave_as_prompt_pfto/m0_latent_prior_multiseed/multidomain_budget_curve.png)
+
+## 上一阶段：Cross-Domain Wave Response Query
 
 ### 2026-09-24 最新结果
 

@@ -1,0 +1,26 @@
+{
+  "experiment": "wave_as_prompt_latent_spectrum_prior_m0",
+  "date": "2026-09-25",
+  "seed": 20260925,
+  "validation_repeats": 2,
+  "test_repeats": 3,
+  "scalar_strengths": [1e-8, 1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1],
+  "spectrum_strengths": [1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1.0],
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "budgets": [1, 2, 3, 4],
+      "ranks": [4, 8, 16, 32, 64, 96, 128]
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "budgets": [1, 2, 4, 8, 11, 15],
+      "ranks": [4, 8, 16, 32, 48, 64, 96, 128]
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "budgets": [1, 2, 4, 6, 8],
+      "ranks": [4, 8, 16, 24, 32, 48, 64, 96, 128]
+    }
+  }
+}

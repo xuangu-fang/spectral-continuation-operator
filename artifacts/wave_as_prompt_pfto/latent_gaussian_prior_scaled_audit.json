@@ -1,0 +1,506 @@
+[
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "beta": 1e-05,
+    "error": 0.16786909133963082
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "beta": 0.0001,
+    "error": 0.1677972093964541
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "beta": 0.001,
+    "error": 0.16715843144080708
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "beta": 0.01,
+    "error": 0.16426511947604963
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "beta": 0.1,
+    "error": 0.17844509031906547
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "beta": 1.0,
+    "error": 0.29844120747580816
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "beta": 1e-05,
+    "error": 0.18841453136072597
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "beta": 0.0001,
+    "error": 0.18807816406946248
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "beta": 0.001,
+    "error": 0.18499817196032847
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "beta": 0.01,
+    "error": 0.16675547865213042
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "beta": 0.1,
+    "error": 0.14639021658044776
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "beta": 1.0,
+    "error": 0.19287072723414259
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "beta": 1e-05,
+    "error": 0.356332448285767
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "beta": 0.0001,
+    "error": 0.33655866381922633
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "beta": 0.001,
+    "error": 0.27084353585532406
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "beta": 0.01,
+    "error": 0.1811393261759768
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "beta": 0.1,
+    "error": 0.1352633206206152
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "beta": 1.0,
+    "error": 0.15339154708672303
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "beta": 1e-05,
+    "error": 0.4763902109887777
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "beta": 0.0001,
+    "error": 0.35843598462976617
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "beta": 0.001,
+    "error": 0.23137577766759948
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "beta": 0.01,
+    "error": 0.15245691042995646
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "beta": 0.1,
+    "error": 0.1285801368358724
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "beta": 1.0,
+    "error": 0.13715762415420307
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "beta": 1e-05,
+    "error": 1.022045560005102
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "beta": 0.0001,
+    "error": 0.14239974528619453
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "beta": 0.001,
+    "error": 0.12775518676160466
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "beta": 0.01,
+    "error": 0.1243925823348635
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "beta": 0.1,
+    "error": 0.12453670535853144
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "beta": 1.0,
+    "error": 0.1273887675184093
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "beta": 1e-05,
+    "error": 0.05845786345062659
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "beta": 0.0001,
+    "error": 0.05845151580982588
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "beta": 0.001,
+    "error": 0.05838968398339375
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "beta": 0.01,
+    "error": 0.05791462803408007
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "beta": 0.1,
+    "error": 0.05874701496343998
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "beta": 1.0,
+    "error": 0.08106526114245899
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "beta": 1e-05,
+    "error": 0.0533882420280841
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "beta": 0.0001,
+    "error": 0.05337526454026373
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "beta": 0.001,
+    "error": 0.05324946058107961
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "beta": 0.01,
+    "error": 0.05230755051130968
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "beta": 0.1,
+    "error": 0.051956500028141936
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "beta": 1.0,
+    "error": 0.06947157056177608
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "beta": 1e-05,
+    "error": 0.05213999353282954
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "beta": 0.0001,
+    "error": 0.05211854633467494
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "beta": 0.001,
+    "error": 0.05191110277053845
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "beta": 0.01,
+    "error": 0.05037151935462242
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "beta": 0.1,
+    "error": 0.048348785404350045
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "beta": 1.0,
+    "error": 0.06149247100673021
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "beta": 1e-05,
+    "error": 0.053187133826287813
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "beta": 0.0001,
+    "error": 0.053143791777396365
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "beta": 0.001,
+    "error": 0.05272701474214083
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "beta": 0.01,
+    "error": 0.04974998054266205
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "beta": 0.1,
+    "error": 0.0448186908170248
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "beta": 1.0,
+    "error": 0.053411915511483735
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "beta": 1e-05,
+    "error": 0.05627073590187633
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "beta": 0.0001,
+    "error": 0.05618660439072318
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "beta": 0.001,
+    "error": 0.05540432993939776
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "beta": 0.01,
+    "error": 0.05058908642421609
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "beta": 0.1,
+    "error": 0.04339087796683756
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "beta": 1.0,
+    "error": 0.049578356131319806
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "beta": 1e-05,
+    "error": 0.030992786534854835
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "beta": 0.0001,
+    "error": 0.030981688587327076
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "beta": 0.001,
+    "error": 0.03112420803784881
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "beta": 0.01,
+    "error": 0.039726948975705695
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "beta": 0.1,
+    "error": 0.10815882884168185
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "beta": 1.0,
+    "error": 0.3428629859852121
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "beta": 1e-05,
+    "error": 0.0010282176895151278
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "beta": 0.0001,
+    "error": 0.001397317052812881
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "beta": 0.001,
+    "error": 0.002791878105879531
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "beta": 0.01,
+    "error": 0.007078581733819559
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "beta": 0.1,
+    "error": 0.017708484840114103
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "beta": 1.0,
+    "error": 0.04547739226803413
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "beta": 1e-05,
+    "error": 0.0003900437348473487
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "beta": 0.0001,
+    "error": 0.0006219413207254891
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "beta": 0.001,
+    "error": 0.0009932985012290278
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "beta": 0.01,
+    "error": 0.0019097069028310466
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "beta": 0.1,
+    "error": 0.004587889831291049
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "beta": 1.0,
+    "error": 0.011734861561910394
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "beta": 1e-05,
+    "error": 0.005895257706038593
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "beta": 0.0001,
+    "error": 0.0008497154213512932
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "beta": 0.001,
+    "error": 0.00044377391623294233
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "beta": 0.01,
+    "error": 0.0006562683938920828
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "beta": 0.1,
+    "error": 0.0011015869855574953
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "beta": 1.0,
+    "error": 0.002214400947647626
+  }
+]

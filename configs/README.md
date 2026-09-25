@@ -2,6 +2,12 @@
 
 ## 当前主线
 
+- `wave_as_prompt_pfto_m0_20260925.json`：当前 active PFTO functional-rank existence audit；只读
+  validation split，比较存储量、full-table reconstruction、half-budget query 与 reciprocity，不提前打开 test；
+- `wave_as_prompt_latent_prior_m0_20260925.json`：functional spatial rank 失败后冻结的 latent-spectrum prior
+  审计；validation 选择 rank/strength，随后按原始逐 query complex RelL2 做 test/OOD；
+- `wave_as_prompt_continuous_query_m0_20260925.json`：Deepwave/Ocean 全局交错 receiver-coordinate holdout；
+  scalar/spectrum family 各自在 validation 选择插值、rank 与 strength，三 seed test；
 - `cross_domain_response_query_20260924.json`：当前跨域 Q2 协议；OpenFWI/Deepwave/Ocean/The Well adapter、
   system split、频带、source budget、三 seed 与 measurement-efficiency gates。
 - `in_context_response_query_rq0_20260924.json`：当前 active Response Query 协议；固定 receiver array，

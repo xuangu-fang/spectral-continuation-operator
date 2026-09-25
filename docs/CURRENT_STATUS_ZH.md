@@ -3,6 +3,30 @@
 > 更新日期：2026-09-25
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
+## 2026-09-25 最新结论：Wave as Prompt M0 通过核心 gate
+
+在强化到 rank 128、独立 validation 选参的 scalar-ridge response-subspace baseline 上，训练系统的 latent
+能谱先验仍在三域 half-budget 下稳定降低 raw complex RelL2：
+
+| 数据域 | scalar ridge | latent spectrum prior | 相对降低 |
+|---|---:|---:|---:|
+| OpenFWI，K=2/4 | 0.1745 | **0.1292** | **25.9%** |
+| Deepwave，K=8/15 | 0.05313 | **0.04349** | **18.2%** |
+| Ocean，K=4/8 | 0.001678 | **0.001018** | **39.3%** |
+
+这是固定一次 validation selection 后的三组 prompt-order seed、逐 physical-system paired 结果。OpenFWI 与
+Ocean 用少 25% probes 达到 full-budget scalar baseline；Deepwave/Ocean half-budget OOD 分别提升
+16.1%/14.6%。但 Ocean OOD 绝对误差仍为 1.032，且 K=1/8 会退化，说明 IID prior 仍会分布外过度自信。
+
+functional-rank 审计同时否定了“source 与 receiver 轴都应低秩”的过强假设：真正稳定的低秩主要发生在
+physical-system response manifold。下一步只推进 prompt-adaptive calibration 与 continuous receiver query；
+在条件多模态证据出现前不加入 flow。完整方法、表格和负结果见
+[M0 报告](../reports/WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)。
+
+continuous-query existence audit 已补齐：Ocean 交错 receiver holdout 为 0.007414 vs 0.008275，改善
+10.4%；Deepwave 几乎无改善，因为给定真实 target response 的插值 oracle 本身已为 1.387。后者是采样
+aliasing 的信息边界，不是继续增加网络容量的理由。
+
 ## 2026-09-24 当前结论：跨域 Response Query POC 已通过
 
 统一 Q2 held-out-source query 已在 OpenFWI、Deepwave ring ultrasound、Ocean Pekeris 三个多系统域完成。

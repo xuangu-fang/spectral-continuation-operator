@@ -303,6 +303,34 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
   [数据 provenance](CROSS_DOMAIN_DATA_PROVENANCE_ZH.md)；机器汇总
   `artifacts/cross_domain_response_query/*/audit_summary.json`。
 
+### E17：Wave as Prompt latent-spectrum prior（M0 正式通过）
+
+- **单一假设**：sparse prompt identification 的误差主要来自不同 system-latent directions 的可辨识性不均；
+  train-system response spectrum 可以提供比 scalar ridge 更正确的方向相关先验。
+- **方法**：保留同一 complex PCA response basis，把 $\lambda I$ 替换为由训练 latent variance 确定的
+  diagonal Gaussian precision；闭式 MAP 更新，无 target leakage、无额外网络 backbone。
+- **强基线修正**：baseline rank 搜索扩展到 128。Deepwave 原 rank-32 并非容量上限；rank-64 已把
+  validation error 从约 0.0583 降至 0.0519。
+- **三 seed half-budget**：OpenFWI 0.1292 vs 0.1745（25.9%）；Deepwave 0.04349 vs 0.05313
+  （18.2%）；Ocean 0.001018 vs 0.001678（39.3%）。固定一次 validation selection 后跨三组
+  prompt orders 评测，system win rate 为 98.8%/100%/100%。
+- **probe saving**：OpenFWI K=3 达到 K=4 scalar；Ocean K=6 达到 K=8 scalar，均节省 25%；Deepwave
+  没有达到该 gate。
+- **OOD**：half-budget Deepwave/Ocean 相对 scalar 改善 16.1%/14.6%，但 Ocean 绝对 RelL2 仍为 1.032；
+  Ocean K=1/K=8 分别明显退化，禁止 universal-OOD claim。
+- **functional-rank 负结果**：独立 source--receiver CP 在三域失败；低存储 shared Tucker 只在 Ocean
+  保真。receiver Fourier/DCT 即使 carrier demodulation 后也不能保留 OpenFWI/Deepwave query accuracy。
+  正确低秩轴是 physical systems，不是振荡 source/receiver coordinates。
+- **episodic basis 负结果**：Deepwave 无改善，OpenFWI 约 1.4%；不继续堆 dense basis loss。
+- **flow 决策**：没有条件多模态/K-sample oracle 证据，暂不训练 conditional flow。
+- **continuous query**：Ocean 全局 interleaved receiver holdout 为 0.007414 vs scalar+cubic 0.008275，
+  改善 10.4%；Deepwave 为 1.3874 vs 1.3878，且 true-response interpolation oracle 已达 1.3868，归因为
+  receiver undersampling/aliasing，不继续堆 coordinate MLP。
+- **继续条件**：prompt-only OOD calibration；Deepwave 只有在更密 receiver-grid sampling oracle 合格后才
+  重启 neural functional decoder。
+- **证据**：[M0 报告](../reports/WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)；机器汇总
+  `artifacts/wave_as_prompt_pfto/m0_latent_prior_multiseed/summary.json`。
+
 ## 4. 值得从正反馈继续挖的方向
 
 以下按“与当前主线的连接强度 / 最小验证成本”排序。它们不是要求同时实现的组件清单。

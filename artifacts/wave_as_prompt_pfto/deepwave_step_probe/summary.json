@@ -1,0 +1,50 @@
+{
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+  "split": "train optimization; validation selection; test unopened",
+  "seed": 20260925,
+  "rank": 32,
+  "ridge": 0.01,
+  "basis_learning_rate": 1e-07,
+  "mean_learning_rate": 1e-08,
+  "train_budgets": [
+    8
+  ],
+  "eval_budget": 8,
+  "parameter_count_real": 337920,
+  "initial_validation_rel_l2": 0.059954243465242384,
+  "best_validation_rel_l2": 0.059954243465242384,
+  "relative_improvement": 0.0,
+  "best_step": 0,
+  "elapsed_seconds": 3.1367578506469727,
+  "history": [
+    {
+      "step": 0,
+      "validation_rel_l2": 0.059954243465242384
+    },
+    {
+      "step": 1,
+      "train_rel_l2": 0.056757211685180664,
+      "validation_rel_l2": 0.061514037076388306
+    },
+    {
+      "step": 2,
+      "train_rel_l2": 0.05678406357765198,
+      "validation_rel_l2": 0.06295980074951851
+    },
+    {
+      "step": 3,
+      "train_rel_l2": 0.061781659722328186,
+      "validation_rel_l2": 0.06371596087680848
+    },
+    {
+      "step": 4,
+      "train_rel_l2": 0.061183862388134,
+      "validation_rel_l2": 0.06393530368235392
+    },
+    {
+      "step": 5,
+      "train_rel_l2": 0.06057993695139885,
+      "validation_rel_l2": 0.06387146758845158
+    }
+  ]
+}

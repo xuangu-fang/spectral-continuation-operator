@@ -5,6 +5,16 @@
 
 ## Active：当前 wave-system representation
 
+- `audit_functional_tensor_rank.py`：当前 Wave-as-Prompt M0；检验冻结 complex response bases 是否存在更低
+  存储的 source--receiver functional rank，并同时审计 sparse-prompt query error 与结构化 reciprocity；
+- `train_episodic_response_basis.py`：PFTO bridge；保持闭式 prompt latent solve，只把 PCA basis 改为针对
+  held-out-source episodes 学习，用于判断 task-optimized representation 是否存在可利用 headroom；
+- `probabilistic_response_operator.py`：由 train-system response spectrum 学各 latent direction prior variance，
+  对 sparse prompts 做闭式 MAP system identification；scalar ridge 是其严格 matched baseline；
+- `summarize_latent_prior_multiseed.py`：冻结一次 validation selection 后，在三组 prompt-order seed 上按
+  physical system 聚合并生成 paired statistics、预算曲线与 probe saving；
+- `audit_continuous_response_query.py`：全局交错 receiver-coordinate holdout、linear/cubic/Fourier sampling
+  oracle 与 joint held-out-source/receiver query；
 - `cross_domain_response_data.py`：OpenFWI、Deepwave、Ocean 与 The Well 的统一 complex response archive；
 - `cross_domain_query_audit.py`：互易性、local baselines、validation-selected complex response subspace；
 - `train_cross_domain_query.py`：receiver-preserving set attention residual operator；

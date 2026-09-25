@@ -1,5 +1,8 @@
 # 报告导航
 
+- [`WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md`](WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)：**当前最新正式结果**；
+  latent spectrum prior、三域三 seed 强基线比较、probe saving、OOD 边界与 functional-rank 负结果。
+
 - [`CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)：当前最新结果；
   OpenFWI、Deepwave、Ocean 的统一 response-query POC、response subspace、轻量 residual operator、
   The Well 数据审计与 claim boundary。

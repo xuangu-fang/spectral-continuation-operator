@@ -1,0 +1,842 @@
+[
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 1e-12,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 1e-11,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 1e-10,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 1e-09,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 1e-08,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 1e-07,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 1e-06,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 1e-05,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 0.0001,
+    "error": 0.1678771825450057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "alpha": 0.001,
+    "error": 0.1678771824717575
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 1e-12,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 1e-11,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 1e-10,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 1e-09,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 1e-08,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 1e-07,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 1e-06,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 1e-05,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 0.0001,
+    "error": 0.18845228469837974
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "alpha": 0.001,
+    "error": 0.18845226290880532
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 1e-12,
+    "error": 0.3591886840042837
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 1e-11,
+    "error": 0.3591886840042837
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 1e-10,
+    "error": 0.3591886840042837
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 1e-09,
+    "error": 0.3591886840042837
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 1e-08,
+    "error": 0.3591886840042837
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 1e-07,
+    "error": 0.3591886840042837
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 1e-06,
+    "error": 0.3591886840042837
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 1e-05,
+    "error": 0.3591886840042837
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 0.0001,
+    "error": 0.35918861833130883
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "alpha": 0.001,
+    "error": 0.35918141626638306
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 1e-12,
+    "error": 0.5864852207607644
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 1e-11,
+    "error": 0.5864852207607644
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 1e-10,
+    "error": 0.5864852207607644
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 1e-09,
+    "error": 0.5864852207607644
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 1e-08,
+    "error": 0.5864852207607644
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 1e-07,
+    "error": 0.5864852207607644
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 1e-06,
+    "error": 0.5864851555209634
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 1e-05,
+    "error": 0.5864644127051151
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 0.0001,
+    "error": 0.5857607394801013
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "alpha": 0.001,
+    "error": 0.5778784418682932
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 1e-12,
+    "error": 9.65676516134129
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 1e-11,
+    "error": 9.65676516134129
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 1e-10,
+    "error": 9.65676516134129
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 1e-09,
+    "error": 9.656765978535066
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 1e-08,
+    "error": 9.656957158492402
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 1e-07,
+    "error": 9.668514177061057
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 1e-06,
+    "error": 9.929192867637827
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 1e-05,
+    "error": 38.06014636756908
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 0.0001,
+    "error": 10.82861464291559
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "alpha": 0.001,
+    "error": 2.4966228625765257
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 1e-12,
+    "error": 0.09289994113300967
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 1e-11,
+    "error": 0.1505318734351822
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 1e-10,
+    "error": 0.18904792875933568
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 1e-09,
+    "error": 0.19604735753247368
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 1e-08,
+    "error": 0.19680867660110266
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 1e-07,
+    "error": 0.19688548236107378
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 1e-06,
+    "error": 0.1968931697638907
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 1e-05,
+    "error": 0.19689393888130785
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 0.0001,
+    "error": 0.19689401693503245
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 32,
+    "alpha": 0.001,
+    "error": 0.1968940238016346
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 1e-12,
+    "error": 0.09282083339682243
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 1e-11,
+    "error": 0.1505638035176793
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 1e-10,
+    "error": 0.18905253914730352
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 1e-09,
+    "error": 0.19604783120361763
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 1e-08,
+    "error": 0.19680872402380176
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 1e-07,
+    "error": 0.19688548720329924
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 1e-06,
+    "error": 0.19689317021501807
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 1e-05,
+    "error": 0.19689393894713336
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 0.0001,
+    "error": 0.19689401693685749
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 48,
+    "alpha": 0.001,
+    "error": 0.1968940238016346
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 1e-12,
+    "error": 0.09287463486131746
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 1e-11,
+    "error": 0.15058412791636733
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 1e-10,
+    "error": 0.1890552281771555
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 1e-09,
+    "error": 0.19604810816590057
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 1e-08,
+    "error": 0.19680875191214414
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 1e-07,
+    "error": 0.19688548997271244
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 1e-06,
+    "error": 0.1968931704879243
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 1e-05,
+    "error": 0.19689393895956653
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 0.0001,
+    "error": 0.19689401694186834
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 64,
+    "alpha": 0.001,
+    "error": 0.1968940238016346
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 1e-12,
+    "error": 0.09294523293856341
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 1e-11,
+    "error": 0.1506012573756215
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 1e-10,
+    "error": 0.18905733051793716
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 1e-09,
+    "error": 0.19604832219966134
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 1e-08,
+    "error": 0.19680877322894935
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 1e-07,
+    "error": 0.19688549210230827
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 1e-06,
+    "error": 0.1968931706778519
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 1e-05,
+    "error": 0.19689393899715352
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 0.0001,
+    "error": 0.19689401693984177
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 96,
+    "alpha": 0.001,
+    "error": 0.1968940238016346
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 1e-12,
+    "error": 0.09296870531911529
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 1e-11,
+    "error": 0.15060585678052993
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 1e-10,
+    "error": 0.18905787000735536
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 1e-09,
+    "error": 0.19604837680091466
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 1e-08,
+    "error": 0.19680877869824803
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 1e-07,
+    "error": 0.19688549271928424
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 1e-06,
+    "error": 0.19689317073873558
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 1e-05,
+    "error": 0.19689393899779717
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 0.0001,
+    "error": 0.19689401694162767
+  },
+  {
+    "domain": "Deepwave",
+    "rank": 128,
+    "alpha": 0.001,
+    "error": 0.1968940238016346
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 1e-12,
+    "error": 0.030994357394948463
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 1e-11,
+    "error": 0.030994329556547188
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 1e-10,
+    "error": 0.030994071369719323
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 1e-09,
+    "error": 0.030991569907687568
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 1e-08,
+    "error": 0.030977060908058712
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 1e-07,
+    "error": 0.031584611233277035
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 1e-06,
+    "error": 0.04828129596801672
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 1e-05,
+    "error": 0.14837664409747453
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 0.0001,
+    "error": 0.4428238710648254
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "alpha": 0.001,
+    "error": 0.8394302864614853
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 1e-12,
+    "error": 0.001233072661772981
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 1e-11,
+    "error": 0.0010322168973912935
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 1e-10,
+    "error": 0.0013985355119851964
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 1e-09,
+    "error": 0.0028179316697520256
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 1e-08,
+    "error": 0.007110427080376646
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 1e-07,
+    "error": 0.017994931538214014
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 1e-06,
+    "error": 0.04609543172392565
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 1e-05,
+    "error": 0.14836998692222728
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 0.0001,
+    "error": 0.4428463555145106
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "alpha": 0.001,
+    "error": 0.8394336063673522
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 1e-12,
+    "error": 0.0004873039114085466
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 1e-11,
+    "error": 0.0007562739434818599
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 1e-10,
+    "error": 0.00129497080594358
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 1e-09,
+    "error": 0.0028194351081184395
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 1e-08,
+    "error": 0.007112110207029723
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 1e-07,
+    "error": 0.017995193556588473
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 1e-06,
+    "error": 0.04609548379355775
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 1e-05,
+    "error": 0.14837000165443082
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 0.0001,
+    "error": 0.44284636175594505
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "alpha": 0.001,
+    "error": 0.8394336073761398
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 1e-12,
+    "error": 0.00048731407273121025
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 1e-11,
+    "error": 0.0007562754257939698
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 1e-10,
+    "error": 0.0012949706627095698
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 1e-09,
+    "error": 0.002819434671026317
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 1e-08,
+    "error": 0.007112110483074508
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 1e-07,
+    "error": 0.017995193638511542
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 1e-06,
+    "error": 0.04609548380402512
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 1e-05,
+    "error": 0.14837000165767533
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 0.0001,
+    "error": 0.44284636175594505
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "alpha": 0.001,
+    "error": 0.8394336073761398
+  }
+]

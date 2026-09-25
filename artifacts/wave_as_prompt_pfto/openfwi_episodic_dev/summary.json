@@ -1,0 +1,76 @@
+{
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+  "split": "train optimization; validation selection; test unopened",
+  "seed": 20260925,
+  "rank": 4,
+  "ridge": 0.01,
+  "basis_learning_rate": 1e-06,
+  "mean_learning_rate": 1e-07,
+  "train_budgets": [
+    1,
+    2
+  ],
+  "eval_budget": 2,
+  "parameter_count_real": 24500,
+  "initial_validation_rel_l2": 0.17207659898976366,
+  "best_validation_rel_l2": 0.17162376614777206,
+  "relative_improvement": 0.0026315771269894705,
+  "best_step": 1000,
+  "elapsed_seconds": 27.81169819831848,
+  "history": [
+    {
+      "step": 0,
+      "validation_rel_l2": 0.17207659898976366
+    },
+    {
+      "step": 100,
+      "train_rel_l2": 0.20465683937072754,
+      "validation_rel_l2": 0.17202208242093509
+    },
+    {
+      "step": 200,
+      "train_rel_l2": 0.16850601136684418,
+      "validation_rel_l2": 0.17196828450377089
+    },
+    {
+      "step": 300,
+      "train_rel_l2": 0.20556369423866272,
+      "validation_rel_l2": 0.1719191804001938
+    },
+    {
+      "step": 400,
+      "train_rel_l2": 0.18804673850536346,
+      "validation_rel_l2": 0.17187160346686473
+    },
+    {
+      "step": 500,
+      "train_rel_l2": 0.17511281371116638,
+      "validation_rel_l2": 0.17182665311936599
+    },
+    {
+      "step": 600,
+      "train_rel_l2": 0.20747041702270508,
+      "validation_rel_l2": 0.1717837987716742
+    },
+    {
+      "step": 700,
+      "train_rel_l2": 0.20845836400985718,
+      "validation_rel_l2": 0.17174207183555654
+    },
+    {
+      "step": 800,
+      "train_rel_l2": 0.16475817561149597,
+      "validation_rel_l2": 0.17170257223128013
+    },
+    {
+      "step": 900,
+      "train_rel_l2": 0.18171048164367676,
+      "validation_rel_l2": 0.1716624589218927
+    },
+    {
+      "step": 1000,
+      "train_rel_l2": 0.1812252700328827,
+      "validation_rel_l2": 0.17162376614777206
+    }
+  ]
+}

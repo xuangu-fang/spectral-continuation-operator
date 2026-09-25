@@ -1,0 +1,141 @@
+{
+  "domain": "Deepwave",
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+  "protocol": {
+    "selection": "validation only",
+    "validation_repeats": 2,
+    "test_repeats": 3,
+    "seed": 20260925,
+    "primary_metric": "per-query relative L2, macro-averaged within physical system"
+  },
+  "selected": {
+    "1": {
+      "scalar": "scalar_ridge_r4_l0.01",
+      "spectrum": "spectrum_prior_r64_l0.1"
+    },
+    "2": {
+      "scalar": "scalar_ridge_r16_l0.01",
+      "spectrum": "spectrum_prior_r96_l0.1"
+    },
+    "4": {
+      "scalar": "scalar_ridge_r32_l0.01",
+      "spectrum": "spectrum_prior_r128_l0.1"
+    },
+    "8": {
+      "scalar": "scalar_ridge_r64_l0.001",
+      "spectrum": "spectrum_prior_r128_l0.1"
+    },
+    "11": {
+      "scalar": "scalar_ridge_r128_l0.001",
+      "spectrum": "spectrum_prior_r128_l0.1"
+    },
+    "15": {
+      "scalar": "scalar_ridge_r128_l0.001",
+      "spectrum": "spectrum_prior_r128_l0.1"
+    }
+  },
+  "test": {
+    "1": {
+      "baseline_mean": 0.14436270130681805,
+      "candidate_mean": 0.12274509404960554,
+      "ratio_of_means_gain": 0.1497451007879661,
+      "bootstrap_95_low": 0.14088969797875875,
+      "bootstrap_95_high": 0.15860034056058941,
+      "system_win_rate": 0.98046875,
+      "ood": {
+        "baseline_mean": 0.20140891941264272,
+        "candidate_mean": 0.17649465787690133,
+        "ratio_of_means_gain": 0.12369989178432328,
+        "bootstrap_95_low": 0.11300192124615682,
+        "bootstrap_95_high": 0.13428690996300108,
+        "system_win_rate": 0.9765625
+      }
+    },
+    "2": {
+      "baseline_mean": 0.11889829341089353,
+      "candidate_mean": 0.09272668378253002,
+      "ratio_of_means_gain": 0.22011762219259623,
+      "bootstrap_95_low": 0.21055964284587847,
+      "bootstrap_95_high": 0.22968904278866317,
+      "system_win_rate": 1.0,
+      "ood": {
+        "baseline_mean": 0.16650870558805764,
+        "candidate_mean": 0.14050252220476978,
+        "ratio_of_means_gain": 0.15618512732677858,
+        "bootstrap_95_low": 0.1455881576379895,
+        "bootstrap_95_high": 0.1669646760637598,
+        "system_win_rate": 1.0
+      }
+    },
+    "4": {
+      "baseline_mean": 0.08038528518227395,
+      "candidate_mean": 0.06252995539398398,
+      "ratio_of_means_gain": 0.22212186904360587,
+      "bootstrap_95_low": 0.21517354571805192,
+      "bootstrap_95_high": 0.2291768274148314,
+      "system_win_rate": 1.0,
+      "ood": {
+        "baseline_mean": 0.12295627422281541,
+        "candidate_mean": 0.10222209265339188,
+        "ratio_of_means_gain": 0.16863052902733577,
+        "bootstrap_95_low": 0.16070824924958851,
+        "bootstrap_95_high": 0.17688342665783766,
+        "system_win_rate": 1.0
+      }
+    },
+    "8": {
+      "baseline_mean": 0.05278096605616156,
+      "candidate_mean": 0.04323622010269901,
+      "ratio_of_means_gain": 0.18083689380195256,
+      "bootstrap_95_low": 0.17654417351888305,
+      "bootstrap_95_high": 0.1850864030205861,
+      "system_win_rate": 1.0,
+      "ood": {
+        "baseline_mean": 0.08966266762581654,
+        "candidate_mean": 0.07524457770341542,
+        "ratio_of_means_gain": 0.16080371356528467,
+        "bootstrap_95_low": 0.15529048814716742,
+        "bootstrap_95_high": 0.1662817185909079,
+        "system_win_rate": 1.0
+      }
+    },
+    "11": {
+      "baseline_mean": 0.04122002534859348,
+      "candidate_mean": 0.03703522156865802,
+      "ratio_of_means_gain": 0.10152356153459419,
+      "bootstrap_95_low": 0.09949924581989723,
+      "bootstrap_95_high": 0.10356454584420356,
+      "system_win_rate": 1.0,
+      "ood": {
+        "baseline_mean": 0.07389085055910982,
+        "candidate_mean": 0.06540532580402214,
+        "ratio_of_means_gain": 0.11483863957283302,
+        "bootstrap_95_low": 0.11193529879004563,
+        "bootstrap_95_high": 0.11775272589601762,
+        "system_win_rate": 1.0
+      }
+    },
+    "15": {
+      "baseline_mean": 0.03307401393249165,
+      "candidate_mean": 0.03239882025081897,
+      "ratio_of_means_gain": 0.020414627721051293,
+      "bootstrap_95_low": 0.019614798334181206,
+      "bootstrap_95_high": 0.021206185069394312,
+      "system_win_rate": 0.9921875,
+      "ood": {
+        "baseline_mean": 0.05930246961361263,
+        "candidate_mean": 0.05779866926604882,
+        "ratio_of_means_gain": 0.02535814035000361,
+        "bootstrap_95_low": 0.024125178013559283,
+        "bootstrap_95_high": 0.02659987753890074,
+        "system_win_rate": 1.0
+      }
+    }
+  },
+  "measurement_efficiency": {
+    "full_budget": 15,
+    "full_scalar_error": 0.03307401393249165,
+    "equivalent_spectrum_budget": 15,
+    "probe_saving": 0.0
+  }
+}

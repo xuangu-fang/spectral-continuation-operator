@@ -1,0 +1,29 @@
+{
+  "experiment": "wave_as_prompt_pfto_m0",
+  "date": "2026-09-25",
+  "split": "validation",
+  "seed": 20260925,
+  "repeats": 2,
+  "functional_ranks": [1, 2, 4, 8, 12],
+  "tucker_receiver_ranks": [2, 4, 8, 12, 16, 24, 32, 48, 64],
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "budget": 2,
+      "latent_rank": 4,
+      "ridge": 0.01
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "budget": 8,
+      "latent_rank": 32,
+      "ridge": 0.01
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "budget": 4,
+      "latent_rank": 16,
+      "ridge": 0.0001
+    }
+  }
+}

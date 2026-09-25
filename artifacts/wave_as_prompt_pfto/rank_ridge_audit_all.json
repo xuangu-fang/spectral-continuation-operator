@@ -1,0 +1,452 @@
+[
+  {
+    "domain": "OpenFWI",
+    "rank": 2,
+    "ridge": 0.0001,
+    "mean": 0.23256357294875385
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 2,
+    "ridge": 0.001,
+    "mean": 0.23254035115114557
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 2,
+    "ridge": 0.01,
+    "mean": 0.23261190208608548
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 2,
+    "ridge": 0.1,
+    "mean": 0.25121576482978747
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 2,
+    "ridge": 1.0,
+    "mean": 0.4149147242197438
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "ridge": 0.0001,
+    "mean": 0.16785488139981258
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "ridge": 0.001,
+    "mean": 0.16766946494565374
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "ridge": 0.01,
+    "mean": 0.16706430804427067
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "ridge": 0.1,
+    "mean": 0.20147340136638503
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 4,
+    "ridge": 1.0,
+    "mean": 0.40457132537130686
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "ridge": 0.0001,
+    "mean": 0.18807569244763467
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "ridge": 0.001,
+    "mean": 0.18524700874020447
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "ridge": 0.01,
+    "mean": 0.18256665161390886
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "ridge": 0.1,
+    "mean": 0.2603199684272063
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 8,
+    "ridge": 1.0,
+    "mean": 0.43541277450976423
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "ridge": 0.0001,
+    "mean": 0.3342738364149576
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "ridge": 0.001,
+    "mean": 0.28259858973831214
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "ridge": 0.01,
+    "mean": 0.2596238771236356
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "ridge": 0.1,
+    "mean": 0.34217236921892313
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 16,
+    "ridge": 1.0,
+    "mean": 0.46381839071906666
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "ridge": 0.0001,
+    "mean": 0.4036548144242591
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "ridge": 0.001,
+    "mean": 0.3707903585303908
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "ridge": 0.01,
+    "mean": 0.3926057543239714
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "ridge": 0.1,
+    "mean": 0.43760893950282753
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 32,
+    "ridge": 1.0,
+    "mean": 0.4962050504314899
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "ridge": 0.0001,
+    "mean": 0.44352267442683024
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "ridge": 0.001,
+    "mean": 0.46570218211310555
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "ridge": 0.01,
+    "mean": 0.4828200527883692
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "ridge": 0.1,
+    "mean": 0.49755169014350453
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 64,
+    "ridge": 1.0,
+    "mean": 0.5193364647051799
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 96,
+    "ridge": 0.0001,
+    "mean": 0.49207404266757265
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 96,
+    "ridge": 0.001,
+    "mean": 0.5005153500722436
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 96,
+    "ridge": 0.01,
+    "mean": 0.5060965083420594
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 96,
+    "ridge": 0.1,
+    "mean": 0.5114419398049279
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 96,
+    "ridge": 1.0,
+    "mean": 0.5255820506133814
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 128,
+    "ridge": 0.0001,
+    "mean": 0.5045978051345473
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 128,
+    "ridge": 0.001,
+    "mean": 0.508451768768466
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 128,
+    "ridge": 0.01,
+    "mean": 0.5122517825597176
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 128,
+    "ridge": 0.1,
+    "mean": 0.5174350096381359
+  },
+  {
+    "domain": "OpenFWI",
+    "rank": 128,
+    "ridge": 1.0,
+    "mean": 0.5287429450194799
+  },
+  {
+    "domain": "Ocean",
+    "rank": 4,
+    "ridge": 1e-06,
+    "mean": 0.20470672689423608
+  },
+  {
+    "domain": "Ocean",
+    "rank": 4,
+    "ridge": 1e-05,
+    "mean": 0.2047064928756855
+  },
+  {
+    "domain": "Ocean",
+    "rank": 4,
+    "ridge": 0.0001,
+    "mean": 0.2047042809206901
+  },
+  {
+    "domain": "Ocean",
+    "rank": 4,
+    "ridge": 0.001,
+    "mean": 0.20469635514586557
+  },
+  {
+    "domain": "Ocean",
+    "rank": 4,
+    "ridge": 0.01,
+    "mean": 0.20595847717581617
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "ridge": 1e-06,
+    "mean": 0.030994346772050388
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "ridge": 1e-05,
+    "mean": 0.03099423901393287
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "ridge": 0.0001,
+    "mean": 0.03099440453105531
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "ridge": 0.001,
+    "mean": 0.031119816105781014
+  },
+  {
+    "domain": "Ocean",
+    "rank": 8,
+    "ridge": 0.01,
+    "mean": 0.04111439232169345
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "ridge": 1e-06,
+    "mean": 0.006026263325989998
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "ridge": 1e-05,
+    "mean": 0.00867388386938392
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "ridge": 0.0001,
+    "mean": 0.02439119851355063
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "ridge": 0.001,
+    "mean": 0.046894075357658986
+  },
+  {
+    "domain": "Ocean",
+    "rank": 16,
+    "ridge": 0.01,
+    "mean": 0.07731734124634498
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "ridge": 1e-06,
+    "mean": 0.057840904404907835
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "ridge": 1e-05,
+    "mean": 0.07666378283184624
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "ridge": 0.0001,
+    "mean": 0.09034883326855866
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "ridge": 0.001,
+    "mean": 0.11933399605180517
+  },
+  {
+    "domain": "Ocean",
+    "rank": 24,
+    "ridge": 0.01,
+    "mean": 0.1504395473485819
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "ridge": 1e-06,
+    "mean": 0.08197275462090428
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "ridge": 1e-05,
+    "mean": 0.10832931794844194
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "ridge": 0.0001,
+    "mean": 0.12197234631079387
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "ridge": 0.001,
+    "mean": 0.13707162459561778
+  },
+  {
+    "domain": "Ocean",
+    "rank": 32,
+    "ridge": 0.01,
+    "mean": 0.15446145537171901
+  },
+  {
+    "domain": "Ocean",
+    "rank": 48,
+    "ridge": 1e-06,
+    "mean": 0.08436903510939747
+  },
+  {
+    "domain": "Ocean",
+    "rank": 48,
+    "ridge": 1e-05,
+    "mean": 0.10919167654105587
+  },
+  {
+    "domain": "Ocean",
+    "rank": 48,
+    "ridge": 0.0001,
+    "mean": 0.12266493031232344
+  },
+  {
+    "domain": "Ocean",
+    "rank": 48,
+    "ridge": 0.001,
+    "mean": 0.13805305495797307
+  },
+  {
+    "domain": "Ocean",
+    "rank": 48,
+    "ridge": 0.01,
+    "mean": 0.15663101475026023
+  },
+  {
+    "domain": "Ocean",
+    "rank": 64,
+    "ridge": 1e-06,
+    "mean": 0.08639099839875
+  },
+  {
+    "domain": "Ocean",
+    "rank": 64,
+    "ridge": 1e-05,
+    "mean": 0.11005360717460061
+  },
+  {
+    "domain": "Ocean",
+    "rank": 64,
+    "ridge": 0.0001,
+    "mean": 0.12348498178741582
+  },
+  {
+    "domain": "Ocean",
+    "rank": 64,
+    "ridge": 0.001,
+    "mean": 0.13924409474060467
+  },
+  {
+    "domain": "Ocean",
+    "rank": 64,
+    "ridge": 0.01,
+    "mean": 0.15966914724245299
+  }
+]

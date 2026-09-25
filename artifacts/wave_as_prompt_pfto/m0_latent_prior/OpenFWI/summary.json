@@ -1,0 +1,69 @@
+{
+  "domain": "OpenFWI",
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+  "protocol": {
+    "selection": "validation only",
+    "validation_repeats": 2,
+    "test_repeats": 3,
+    "seed": 20260925,
+    "primary_metric": "per-query relative L2, macro-averaged within physical system"
+  },
+  "selected": {
+    "1": {
+      "scalar": "scalar_ridge_r4_l0.01",
+      "spectrum": "spectrum_prior_r64_l0.001"
+    },
+    "2": {
+      "scalar": "scalar_ridge_r4_l0.01",
+      "spectrum": "spectrum_prior_r128_l1"
+    },
+    "3": {
+      "scalar": "scalar_ridge_r8_l0.01",
+      "spectrum": "spectrum_prior_r96_l0.1"
+    },
+    "4": {
+      "scalar": "scalar_ridge_r16_l0.01",
+      "spectrum": "spectrum_prior_r128_l1"
+    }
+  },
+  "test": {
+    "1": {
+      "baseline_mean": 0.2029822233915329,
+      "candidate_mean": 0.16055044689774514,
+      "ratio_of_means_gain": 0.20904183521500308,
+      "bootstrap_95_low": 0.18744824923549966,
+      "bootstrap_95_high": 0.2271495651954485,
+      "system_win_rate": 0.978
+    },
+    "2": {
+      "baseline_mean": 0.17285783278942107,
+      "candidate_mean": 0.12829067527502774,
+      "ratio_of_means_gain": 0.2578255020047946,
+      "bootstrap_95_low": 0.23342167240737965,
+      "bootstrap_95_high": 0.2785618256227235,
+      "system_win_rate": 0.988
+    },
+    "3": {
+      "baseline_mean": 0.1459636345654726,
+      "candidate_mean": 0.10493850492872298,
+      "ratio_of_means_gain": 0.28106404556778575,
+      "bootstrap_95_low": 0.25878465271394935,
+      "bootstrap_95_high": 0.3015123233792408,
+      "system_win_rate": 0.986
+    },
+    "4": {
+      "baseline_mean": 0.11996496665850281,
+      "candidate_mean": 0.08574623810686172,
+      "ratio_of_means_gain": 0.28523934532528594,
+      "bootstrap_95_low": 0.2590601236669942,
+      "bootstrap_95_high": 0.30876407994992894,
+      "system_win_rate": 0.98
+    }
+  },
+  "measurement_efficiency": {
+    "full_budget": 4,
+    "full_scalar_error": 0.11996496665850281,
+    "equivalent_spectrum_budget": 3,
+    "probe_saving": 0.25
+  }
+}

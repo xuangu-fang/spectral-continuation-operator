@@ -1,0 +1,210 @@
+[
+  {
+    "domain": "OpenFWI",
+    "modes": 8,
+    "storage_ratio": 0.11428571428571428,
+    "full_ratio": 2.413785434658503,
+    "query_ratio": 2.146359472959261,
+    "query": 0.3585800682176927
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 12,
+    "storage_ratio": 0.17142857142857143,
+    "full_ratio": 1.9710971353813085,
+    "query_ratio": 1.7800307012874748,
+    "query": 0.2973796040871133
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 16,
+    "storage_ratio": 0.22857142857142856,
+    "full_ratio": 1.7142978455549696,
+    "query_ratio": 1.5697325945116911,
+    "query": 0.2622462956065243
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 24,
+    "storage_ratio": 0.34285714285714286,
+    "full_ratio": 1.4196696855621476,
+    "query_ratio": 1.3311501928282365,
+    "query": 0.2223876908625379
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 32,
+    "storage_ratio": 0.45714285714285713,
+    "full_ratio": 1.260685454264233,
+    "query_ratio": 1.2040147774178676,
+    "query": 0.20114790018205103
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 40,
+    "storage_ratio": 0.5714285714285714,
+    "full_ratio": 1.1664710734621708,
+    "query_ratio": 1.1294367482088983,
+    "query": 0.18868857305712033
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 48,
+    "storage_ratio": 0.6857142857142857,
+    "full_ratio": 1.1057526737279577,
+    "query_ratio": 1.081779138489173,
+    "query": 0.18072668728743146
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 56,
+    "storage_ratio": 0.8,
+    "full_ratio": 1.0624599015060667,
+    "query_ratio": 1.0480575193354074,
+    "query": 0.1750930081908462
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 64,
+    "storage_ratio": 0.9142857142857143,
+    "full_ratio": 1.0274326641879348,
+    "query_ratio": 1.0209914809241587,
+    "query": 0.1705712391106151
+  },
+  {
+    "domain": "OpenFWI",
+    "modes": 70,
+    "storage_ratio": 1.0,
+    "full_ratio": 0.9999999973494713,
+    "query_ratio": 0.9999999957196782,
+    "query": 0.1670643110813436
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 8,
+    "storage_ratio": 0.125,
+    "full_ratio": 13.791638776298795,
+    "query_ratio": 9.605466455237599,
+    "query": 0.4985819346601117
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 12,
+    "storage_ratio": 0.1875,
+    "full_ratio": 12.394693885135911,
+    "query_ratio": 8.460779279864456,
+    "query": 0.43916573148686944
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 16,
+    "storage_ratio": 0.25,
+    "full_ratio": 11.37303117143236,
+    "query_ratio": 7.73332247539195,
+    "query": 0.40140631369640956
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 24,
+    "storage_ratio": 0.375,
+    "full_ratio": 9.723057585186389,
+    "query_ratio": 6.626580999302053,
+    "query": 0.3439597223321134
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 32,
+    "storage_ratio": 0.5,
+    "full_ratio": 8.395882694629245,
+    "query_ratio": 5.729249424069064,
+    "query": 0.29738277420615145
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 40,
+    "storage_ratio": 0.625,
+    "full_ratio": 7.064127774589227,
+    "query_ratio": 4.842862773055377,
+    "query": 0.2513739339922204
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 48,
+    "storage_ratio": 0.75,
+    "full_ratio": 5.708678539219575,
+    "query_ratio": 3.9357161994059893,
+    "query": 0.2042875279526903
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 56,
+    "storage_ratio": 0.875,
+    "full_ratio": 4.031727437107402,
+    "query_ratio": 2.8378278818809415,
+    "query": 0.1473004691832645
+  },
+  {
+    "domain": "Deepwave",
+    "modes": 64,
+    "storage_ratio": 1.0,
+    "full_ratio": 0.9999999947002582,
+    "query_ratio": 0.9999999720556075,
+    "query": 0.051906060267971614
+  },
+  {
+    "domain": "Ocean",
+    "modes": 8,
+    "storage_ratio": 0.16666666666666666,
+    "full_ratio": 633.5269539878847,
+    "query_ratio": 83.20107749492377,
+    "query": 0.431528030241732
+  },
+  {
+    "domain": "Ocean",
+    "modes": 12,
+    "storage_ratio": 0.25,
+    "full_ratio": 101.67248500960419,
+    "query_ratio": 18.125850273734194,
+    "query": 0.09401095154757216
+  },
+  {
+    "domain": "Ocean",
+    "modes": 16,
+    "storage_ratio": 0.3333333333333333,
+    "full_ratio": 52.03577223106828,
+    "query_ratio": 9.208683294007288,
+    "query": 0.04776146033956541
+  },
+  {
+    "domain": "Ocean",
+    "modes": 24,
+    "storage_ratio": 0.5,
+    "full_ratio": 21.735158316114013,
+    "query_ratio": 4.789488608166668,
+    "query": 0.024841007438557217
+  },
+  {
+    "domain": "Ocean",
+    "modes": 32,
+    "storage_ratio": 0.6666666666666666,
+    "full_ratio": 9.69822521228164,
+    "query_ratio": 1.6884249339206492,
+    "query": 0.008757130410844229
+  },
+  {
+    "domain": "Ocean",
+    "modes": 40,
+    "storage_ratio": 0.8333333333333334,
+    "full_ratio": 3.3840626869302572,
+    "query_ratio": 1.0434123802591502,
+    "query": 0.005411729063371076
+  },
+  {
+    "domain": "Ocean",
+    "modes": 48,
+    "storage_ratio": 1.0,
+    "full_ratio": 1.0000002209288494,
+    "query_ratio": 1.0103401999641444,
+    "query": 0.005240197957666658
+  }
+]

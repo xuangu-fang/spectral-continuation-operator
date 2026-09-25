@@ -1,0 +1,121 @@
+{
+  "domain": "Ocean",
+  "dataset": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+  "protocol": {
+    "selection": "validation only",
+    "validation_repeats": 2,
+    "test_repeats": 3,
+    "seed": 20260925,
+    "primary_metric": "per-query relative L2, macro-averaged within physical system"
+  },
+  "selected": {
+    "1": {
+      "scalar": "scalar_ridge_r8_l0.0001",
+      "spectrum": "spectrum_prior_r16_l1e-05"
+    },
+    "2": {
+      "scalar": "scalar_ridge_r16_l1e-07",
+      "spectrum": "spectrum_prior_r24_l1e-05"
+    },
+    "4": {
+      "scalar": "scalar_ridge_r16_l1e-07",
+      "spectrum": "spectrum_prior_r32_l1e-05"
+    },
+    "6": {
+      "scalar": "scalar_ridge_r16_l1e-07",
+      "spectrum": "spectrum_prior_r24_l1e-06"
+    },
+    "8": {
+      "scalar": "scalar_ridge_r16_l1e-08",
+      "spectrum": "spectrum_prior_r32_l1e-05"
+    }
+  },
+  "test": {
+    "1": {
+      "baseline_mean": 0.08129688937333412,
+      "candidate_mean": 0.039586048100318294,
+      "ratio_of_means_gain": 0.5130681086882672,
+      "bootstrap_95_low": 0.4911537818569348,
+      "bootstrap_95_high": 0.5337934643928803,
+      "system_win_rate": 1.0,
+      "ood": {
+        "baseline_mean": 0.6051023732870817,
+        "candidate_mean": 3.410608950071037,
+        "ratio_of_means_gain": -4.6364164158598085,
+        "bootstrap_95_low": -5.653257701040547,
+        "bootstrap_95_high": -3.642680212859185,
+        "system_win_rate": 0.265625
+      }
+    },
+    "2": {
+      "baseline_mean": 0.009970267426979262,
+      "candidate_mean": 0.0007120537936771143,
+      "ratio_of_means_gain": 0.9285822773669724,
+      "bootstrap_95_low": 0.9188228795716757,
+      "bootstrap_95_high": 0.9365885638632138,
+      "system_win_rate": 1.0,
+      "ood": {
+        "baseline_mean": 4.459555911438656,
+        "candidate_mean": 1.1288135155864438,
+        "ratio_of_means_gain": 0.7468775954370112,
+        "bootstrap_95_low": 0.7344117249934762,
+        "bootstrap_95_high": 0.756174732097976,
+        "system_win_rate": 1.0
+      }
+    },
+    "4": {
+      "baseline_mean": 0.001626069575195288,
+      "candidate_mean": 0.0010972105019391165,
+      "ratio_of_means_gain": 0.32523766591762016,
+      "bootstrap_95_low": 0.27984710745348274,
+      "bootstrap_95_high": 0.37263021202194124,
+      "system_win_rate": 0.96875,
+      "ood": {
+        "baseline_mean": 1.025679331702122,
+        "candidate_mean": 0.9400873469021462,
+        "ratio_of_means_gain": 0.08344906848998823,
+        "bootstrap_95_low": 0.04090794130557053,
+        "bootstrap_95_high": 0.11606224345016486,
+        "system_win_rate": 0.75
+      }
+    },
+    "6": {
+      "baseline_mean": 0.0005384618930293072,
+      "candidate_mean": 4.8950023128213616e-05,
+      "ratio_of_means_gain": 0.9090928740512574,
+      "bootstrap_95_low": 0.9035532339197684,
+      "bootstrap_95_high": 0.9143841038150664,
+      "system_win_rate": 1.0,
+      "ood": {
+        "baseline_mean": 0.26576171415399585,
+        "candidate_mean": 0.3381900980576802,
+        "ratio_of_means_gain": -0.27253129418677524,
+        "bootstrap_95_low": -0.2961758504940449,
+        "bootstrap_95_high": -0.24676037189840516,
+        "system_win_rate": 0.296875
+      }
+    },
+    "8": {
+      "baseline_mean": 0.0004859840773860924,
+      "candidate_mean": 2.299189355881026e-05,
+      "ratio_of_means_gain": 0.9526900270427086,
+      "bootstrap_95_low": 0.9478584355970886,
+      "bootstrap_95_high": 0.9566964432667896,
+      "system_win_rate": 1.0,
+      "ood": {
+        "baseline_mean": 0.19880648816979374,
+        "candidate_mean": 0.24719992038976102,
+        "ratio_of_means_gain": -0.2434197830537408,
+        "bootstrap_95_low": -0.28834045816763787,
+        "bootstrap_95_high": -0.19991418949840858,
+        "system_win_rate": 0.296875
+      }
+    }
+  },
+  "measurement_efficiency": {
+    "full_budget": 8,
+    "full_scalar_error": 0.0004859840773860924,
+    "equivalent_spectrum_budget": 6,
+    "probe_saving": 0.25
+  }
+}

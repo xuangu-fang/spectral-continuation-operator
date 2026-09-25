@@ -6,6 +6,10 @@
 >
 > 论文目标：从少量复数 response prompts 中识别一个未见 wave system，并回答尚未执行的 excitation query。
 
+> 2026-09-25 执行更新：独立 CP functional rank 在三个域均失败；shared-coordinate Tucker 只在 Ocean
+> 通过。当前不再假设 raw complex response 在 source--receiver 轴上低秩，而把低秩限定在跨环境 latent
+> operator family。24 小时执行优先级已在第 9 节更新。
+
 ## 1. 一句话论文故事
 
 传统 neural operator 通常读取介质、几何或 PDE 参数，再预测波场。真实实验中，这些隐藏环境参数往往不可得，
@@ -305,3 +309,107 @@ medium reconstruction 或 inverse task。它们只有在对应 gate 揭示明确
 本阶段最重要的成功不是“用了多少现代模块”，而是建立一个简单统一的对象：
 
 > **a wave system is a latent functional response operator inferred from physical prompts.**
+
+## 9. 2026-09-25 起的 24 小时执行窗口
+
+### 已获得、必须继承的证据
+
+1. 对每个 discrete PCA response basis 单独做 source--receiver CP：三个域均未通过 50% storage / 1.10×
+   error gate；
+2. shared source/receiver Tucker：Ocean 用 44.9% storage 无损复现，OpenFWI 与 Deepwave 仍失败；
+3. receiver 轴 Fourier/cosine 截断，即使先去掉 reference direct-path carrier，也不能在 OpenFWI/Deepwave
+   保留 query accuracy；
+4. Deepwave 原 rank=32 baseline 不是容量上限；rank=64 的 validation error 从约 0.0583 降到 0.0519；
+5. 初步 learned latent-spectrum prior 在重新调强的 rank baseline 上仍显示两位数 headroom，必须用正式逐
+   query metric 复核。
+
+上述结果意味着 functional tensor 的合理轴分解是：
+
+```text
+environment latent rank × continuous query-to-response functions
+```
+
+而不是：
+
+```text
+small source rank × small receiver rank
+```
+
+receiver function 可以保留足够多的 oscillatory modes；论文贡献来自 prompt-conditioned system posterior、
+measurement efficiency 与 continuous evaluation，而不是强行声称 raw field spatial compression。
+
+### 0--4 小时：冻结 Probabilistic Response Operator
+
+- scalar ridge 与 spectrum prior 都允许 rank 至少搜索到 128；
+- validation 使用两组 frozen context orders；
+- test/OOD 使用三组 orders；
+- 主指标恢复为逐 query relative L2 后再做 physical-system macro average；
+- 输出逐系统 CSV、paired bootstrap、win rate、budget curve 和 equivalent probe saving。
+
+继续条件：half-budget 至少两个域相对重新调强的 scalar baseline 改善 10%，第三域不退化超过 3%。
+
+### 4--10 小时：PFTO 最小实现
+
+- 保留训练系统学习到的 response functions 与 latent spectrum prior；
+- 将 discrete receiver basis 改写为全频带 Fourier/cosine functional evaluation，不再截断 modes；
+- source/frequency coordinate 进入 query trunk；
+- 共址子阵 reciprocity 由 output projection 或 complex-symmetric block 保证；
+- 只比较 analytic MAP latent solve 与一个小型 amortized prompt encoder，不叠加二者。
+
+继续条件：至少一个非饱和域相对 Probabilistic Response Operator 再改善 5%，另一域不退化超过 3%；若没有，
+保留解析 operator 为主方法，不用更大网络制造复杂度。
+
+### 10--15 小时：continuous receiver query
+
+- Ocean 重新生成更密 receiver-depth grid；
+- Deepwave 生成同系统的 128-point ring response 子集；
+- 训练只使用原 48/64 receiver grid，测试 interleaved unseen coordinates；
+- 对照 linear/cubic interpolation、phase-aware interpolation、FNO/DeepONet trunk。
+
+进入正文条件：两个域至少一个相对最强插值降低 10%，另一个不退化超过 3%。若新仿真不能按时可靠匹配原
+系统，则只保留 validation existence audit，不用伪配对数据替代。
+
+### 15--18 小时：latent flow existence gate
+
+- 审计 context collision 与 target divergence；
+- 在相同 context 上比较 posterior mean、Gaussian samples 与 latent K-sample oracle；
+- 只有 K-sample oracle 改善 10% 才训练 conditional rectified flow；
+- flow 即使失败也不能阻止 deterministic PFTO 完成。
+
+### 18--24 小时：正式统计与论文 artifacts
+
+- 对通过 development gate 的模型运行三 seed；
+- 完成 IID/OOD、budget AUC、probe saving、bootstrap 和 compute Pareto；
+- 生成正文级主表、三 panel budget curve、方法示意图和 failure cases；
+- 更新 experiment ledger、当前状态、报告、复现命令与 checkpoint/hash；
+- 代码测试、Ruff、公式兼容检查、Git commit 与 push。
+
+### 24 小时 promotion gate
+
+1. half-budget：至少 `2/3` 域相对最强 scalar/subspace baseline 改善 10%，第三域不低于 -3%；
+2. raw error：OpenFWI K=2 不高于 0.150，Deepwave K=8 不高于 0.055；
+3. measurement efficiency：至少两个域达到 25% probe saving，或 half-budget 不高于 full-budget baseline
+   的 1.05 倍；
+4. OOD：Deepwave/Ocean 至少一个改善 5%，另一个不低于 -3%；
+5. continuous query：至少一个新 receiver-grid 域达到 10% matched gain，第二域必须诚实报告；
+6. 三 seed、逐 physical-system paired statistics；任何只在单个 context order 上出现的增益不 promotion；
+7. 若 flow gate 不通过，明确保留为负结果，不影响 deterministic paper story。
+
+## 2026-09-25 M0 执行结果
+
+Probabilistic Response Operator 已按上述严格协议完成，详细数字见
+[正式报告](../reports/WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)。当前 gate 状态：
+
+- half-budget strong-baseline gain：OpenFWI 25.9%、Deepwave 18.2%、Ocean 39.3%，通过；
+- raw error：OpenFWI 0.1292、Deepwave 0.04349，通过；
+- equivalent probe saving：OpenFWI 与 Ocean 均为 25%，通过；
+- half-budget OOD：Deepwave 16.1%、Ocean 14.6%，相对改善通过，但 Ocean 绝对误差 1.032；
+- 固定一次 validation selection、三组 prompt-order seed、system-level paired bootstrap，完成；
+- continuous receiver query：Ocean interleaved holdout 相对 matched scalar+cubic 改善 10.4%，达到最低
+  gate；Deepwave 的 true-response interpolation oracle 为 1.387，确认当前 1/2 环阵采样不可辨识；
+- functional tensor 的小 source/receiver rank 假设已被否定，后续不再强行压缩振荡空间轴；
+- episodic dense-basis learning 无显著增益，flow 尚无多模态 existence 证据，二者暂不 promotion。
+
+方法主线据此收敛为：`complex response representation + learned latent prior + in-context posterior update`。
+下一阶段先做 prompt-adaptive OOD calibration，再为 Deepwave 生成更密 receiver grid；只有 dense-grid
+sampling oracle 合格才升级到 neural functional decoder。

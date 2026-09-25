@@ -1,0 +1,24 @@
+{
+  "experiment": "wave_as_prompt_continuous_receiver_query_m0",
+  "validation_seed": 20260925,
+  "test_seeds": [20260924, 20260925, 20260926],
+  "validation_repeats": 2,
+  "test_repeats": 3,
+  "ranks": [4, 8, 16, 32, 64, 96, 128],
+  "scalar_strengths": [1e-8, 1e-6, 1e-4, 1e-2, 1e-1],
+  "spectrum_strengths": [1e-6, 1e-4, 1e-2, 1e-1, 1.0],
+  "domains": {
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "budget": 8,
+      "periodic": true,
+      "interpolation": ["periodic_linear", "periodic_cubic", "periodic_fourier"]
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "budget": 4,
+      "periodic": false,
+      "interpolation": ["linear", "natural_cubic"]
+    }
+  }
+}
