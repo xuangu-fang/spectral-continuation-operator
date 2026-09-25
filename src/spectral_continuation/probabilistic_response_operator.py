@@ -198,9 +198,20 @@ class BatchedQueryEvaluator:
             dtype=torch.float32,
             device=torch_device,
         )
+        self.receiver_count = receiver_count
+        self.budget = budget
 
     @torch.inference_mode()
-    def evaluate(self, config: LatentConfig) -> np.ndarray:
+    def predict(
+        self,
+        config: LatentConfig,
+        observed: torch.Tensor | None = None,
+        context: torch.Tensor | None = None,
+        target: torch.Tensor | None = None,
+    ) -> torch.Tensor:
+        observed = self.observed if observed is None else observed
+        context = self.context if context is None else context
+        target = self.target if target is None else target
         rank = config.rank
         basis = self.basis[self.frequency, :, :rank]
         mean = self.mean[self.frequency]
@@ -208,9 +219,9 @@ class BatchedQueryEvaluator:
         observed_basis = torch.gather(
             basis,
             1,
-            self.observed[:, :, None].expand(-1, -1, rank),
+            observed[:, :, None].expand(-1, -1, rank),
         )
-        observed_mean = torch.gather(mean, 1, self.observed)
+        observed_mean = torch.gather(mean, 1, observed)
         if config.prior == "isotropic":
             penalty = torch.full_like(variance, config.strength)
         elif config.prior == "spectrum":
@@ -222,20 +233,74 @@ class BatchedQueryEvaluator:
         gram = adjoint @ observed_basis + torch.diag_embed(penalty).to(torch.complex64)
         projector = torch.linalg.solve(gram, adjoint)
         coefficient = torch.einsum(
-            "eno,elo->enl", self.context - observed_mean[:, None], projector
+            "eno,elo->enl", context - observed_mean[:, None], projector
         )
         target_basis = torch.gather(
             basis,
             1,
-            self.target[:, :, None].expand(-1, -1, rank),
+            target[:, :, None].expand(-1, -1, rank),
         )
-        target_mean = torch.gather(mean, 1, self.target)
-        prediction = target_mean[:, None] + torch.einsum(
+        target_mean = torch.gather(mean, 1, target)
+        return target_mean[:, None] + torch.einsum(
             "enl,erl->enr", coefficient, target_basis
         )
+
+    @torch.inference_mode()
+    def evaluate(self, config: LatentConfig) -> np.ndarray:
+        prediction = self.predict(config)
         numerator = torch.linalg.vector_norm(prediction - self.truth, dim=-1)
         denominator = torch.linalg.vector_norm(self.truth, dim=-1).clamp_min(1e-12)
         return (numerator / denominator).mean(dim=0).cpu().numpy().astype(np.float64)
+
+    @torch.inference_mode()
+    def cross_validation_error(self, config: LatentConfig) -> torch.Tensor:
+        """Leave one prompt source out without reading the target query."""
+
+        if self.budget < 2:
+            raise ValueError("leave-one-prompt-out calibration requires budget >= 2")
+        event_count, system_count, _ = self.context.shape
+        observed = self.observed.reshape(event_count, self.budget, self.receiver_count)
+        context = self.context.reshape(
+            event_count, system_count, self.budget, self.receiver_count
+        )
+        total = torch.zeros(
+            (event_count, system_count), dtype=torch.float32, device=self.context.device
+        )
+        for held in range(self.budget):
+            keep = [index for index in range(self.budget) if index != held]
+            prediction = self.predict(
+                config,
+                observed[:, keep].reshape(event_count, -1),
+                context[:, :, keep].reshape(event_count, system_count, -1),
+                observed[:, held],
+            )
+            truth = context[:, :, held]
+            total += torch.linalg.vector_norm(prediction - truth, dim=-1) / torch.linalg.vector_norm(
+                truth, dim=-1
+            ).clamp_min(1e-12)
+        return total / self.budget
+
+    @torch.inference_mode()
+    def evaluate_adaptive(
+        self, baseline: LatentConfig, candidate: LatentConfig
+    ) -> tuple[np.ndarray, float]:
+        """Choose a prior per episode/system using prompt-only cross-validation."""
+
+        baseline_prediction = self.predict(baseline)
+        candidate_prediction = self.predict(candidate)
+        baseline_cv = self.cross_validation_error(baseline)
+        candidate_cv = self.cross_validation_error(candidate)
+        use_candidate = candidate_cv <= baseline_cv
+        prediction = torch.where(
+            use_candidate[:, :, None], candidate_prediction, baseline_prediction
+        )
+        error = torch.linalg.vector_norm(prediction - self.truth, dim=-1) / torch.linalg.vector_norm(
+            self.truth, dim=-1
+        ).clamp_min(1e-12)
+        return (
+            error.mean(dim=0).cpu().numpy().astype(np.float64),
+            float(use_candidate.float().mean().cpu()),
+        )
 
 
 def select_config(

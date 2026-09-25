@@ -27,6 +27,10 @@ continuous-query existence audit 已补齐：Ocean 交错 receiver holdout 为 0
 10.4%；Deepwave 几乎无改善，因为给定真实 target response 的插值 oracle 本身已为 1.387。后者是采样
 aliasing 的信息边界，不是继续增加网络容量的理由。
 
+prompt-only leave-one-source-out calibration 在不读 target/OOD 标签时，把 Ocean K=4 OOD 从 fixed prior 的
+1.032 降到 0.846（再改善 18.0%），代价是 IID 从 0.001018 轻微回退到 0.001072。它作为 robustness
+extension 保留；K=8 OOD 仍未完全修复，不能声称 universal calibration。
+
 ## 2026-09-24 当前结论：跨域 Response Query POC 已通过
 
 统一 Q2 held-out-source query 已在 OpenFWI、Deepwave ring ultrasound、Ocean Pekeris 三个多系统域完成。

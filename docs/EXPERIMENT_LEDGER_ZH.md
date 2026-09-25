@@ -326,6 +326,9 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **continuous query**：Ocean 全局 interleaved receiver holdout 为 0.007414 vs scalar+cubic 0.008275，
   改善 10.4%；Deepwave 为 1.3874 vs 1.3878，且 true-response interpolation oracle 已达 1.3868，归因为
   receiver undersampling/aliasing，不继续堆 coordinate MLP。
+- **prompt calibration**：leave-one-prompt-source-out 二选一不读取 target；Ocean K=4 OOD 从 fixed prior
+  1.032 降至 0.846，相对再改善 18.0%，IID 轻微回退 5.3%；K=8 OOD 仍退化 11.2%，只作 robustness
+  extension。
 - **继续条件**：prompt-only OOD calibration；Deepwave 只有在更密 receiver-grid sampling oracle 合格后才
   重启 neural functional decoder。
 - **证据**：[M0 报告](../reports/WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)；机器汇总

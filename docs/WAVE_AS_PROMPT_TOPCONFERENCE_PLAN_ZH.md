@@ -407,6 +407,8 @@ Probabilistic Response Operator 已按上述严格协议完成，详细数字见
 - 固定一次 validation selection、三组 prompt-order seed、system-level paired bootstrap，完成；
 - continuous receiver query：Ocean interleaved holdout 相对 matched scalar+cubic 改善 10.4%，达到最低
   gate；Deepwave 的 true-response interpolation oracle 为 1.387，确认当前 1/2 环阵采样不可辨识；
+- prompt-only calibration：Ocean K=4 OOD 从 fixed spectrum 的 1.032 降到 0.846，同时 IID 仍相对
+  scalar 改善 36.1%；K=8 OOD 尚未完全修复；
 - functional tensor 的小 source/receiver rank 假设已被否定，后续不再强行压缩振荡空间轴；
 - episodic dense-basis learning 无显著增益，flow 尚无多模态 existence 证据，二者暂不 promotion。
 

@@ -163,6 +163,27 @@ Ocean 通过 10% gate，而且最终值接近给定真实 target-source observed
 response 的 Fourier、cubic、linear 插值误差分别为 1.84、1.59、1.39。此时更大 coordinate network
 无法从未采样信息中恢复相位。下一步必须先生成更密环阵或按波长设计采样，不能用模型容量掩盖不可辨识性。
 
+### 4.5 Prompt-only posterior calibration
+
+固定 IID prior 在 Ocean 远 OOD 上可能过度自信。对于 $K\geq2$，我们不读取 target query，而是在每个
+episode 内轮流遮住一条 prompt source，用剩余 $K-1$ 条判断 scalar prior 与 spectrum prior 哪个更能解释
+当前系统，再用全部 prompts 执行最终 query。
+
+Ocean K=4 的三 seed 结果为：
+
+| split | scalar | fixed spectrum | prompt-adaptive | adaptive vs fixed |
+|---|---:|---:|---:|---:|
+| IID | 0.001678 | **0.001018** | 0.001072 | -5.3% |
+| parameter OOD | 1.208 | 1.032 | **0.846** | **+18.0%** |
+
+IID 中 adaptive 仍相对 scalar 改善 36.1%，OOD 则相对 scalar 改善 30.0%。Deepwave K=4/8 的 selector 在
+97.6%--99.8% episodes 选择 spectrum prior，结果与 fixed method 几乎相同。这说明 prompts 可以承担
+inference-time calibration，而不需要知道隐藏介质或 OOD 标签。
+
+边界同样明确：Ocean K=8 的 OOD regression 只从 -24.3% 缩小到 -11.2%，并未完全修复；K=2 的 IID
+极小误差也会因少数错误 fallback 受损。因此 adaptive calibration 是 half-budget robustness extension，
+不是新的 universal 主方法。
+
 ## 5. 机制审计与负结果
 
 ### 5.1 什么结构真的低秩
@@ -206,9 +227,9 @@ $$
 
 ## 7. 下一步只做两件核心事情
 
-1. **Prompt-adaptive calibrated response operator**：利用 prompt residual、posterior evidence 或
-   leave-one-prompt-out error 判断新系统是否离开训练 response manifold，在不看 target 的情况下调节 prior
-   strength/rank，优先修复 Ocean OOD 的过度自信。
+1. **Prompt-adaptive calibrated response operator**：首轮 leave-one-prompt-out 二选一已经把 Ocean K=4
+   OOD 从 1.032 降至 0.846；下一步研究连续 prior strength/rank calibration，而不是增加 heuristic
+   fallback 数量。
 2. **Dense-grid continuous response query**：Ocean 已通过 interleaved existence gate；Deepwave 先生成更密
    环阵并验证 sampling oracle，再决定是否训练 coordinate decoder。当前 fixed cubic 只是部署层，还不足以
    宣称 neural functional operator 是独立贡献。

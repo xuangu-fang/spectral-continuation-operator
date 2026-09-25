@@ -85,3 +85,40 @@ def test_batched_evaluator_matches_reference_query_loop():
         archive, subspaces, "test", 1, 2, 9, "cpu"
     ).evaluate(config)
     assert np.allclose(batched, reference, rtol=1e-5, atol=1e-6)
+
+
+def test_prompt_adaptive_path_matches_identical_candidates():
+    generator = np.random.default_rng(8)
+    response = (
+        generator.normal(size=(3, 3, 1, 3))
+        + 1j * generator.normal(size=(3, 3, 1, 3))
+    ).astype(np.complex64)
+    archive = CrossDomainResponseArchive(
+        responses=response,
+        sources=np.zeros((3, 2), dtype=np.float32),
+        receivers=np.zeros((3, 2), dtype=np.float32),
+        frequencies=np.asarray([1.0], dtype=np.float32),
+        source_receiver_index=np.arange(3),
+        split=np.asarray(["train", "test", "test"]),
+        system_ids=np.asarray(["train", "test_a", "test_b"]),
+        valid_response_mask=np.ones((3, 3), dtype=bool),
+        provenance={},
+    )
+    basis, _ = np.linalg.qr(
+        generator.normal(size=(9, 3)) + 1j * generator.normal(size=(9, 3))
+    )
+    subspaces = [
+        ProbabilisticSubspace(
+            mean=np.zeros(9, dtype=np.complex64),
+            basis=basis.astype(np.complex64),
+            variance=np.asarray([2.0, 1.0, 0.5]),
+        )
+    ]
+    config = LatentConfig(3, 0.1, "spectrum")
+    evaluator = BatchedQueryEvaluator(
+        archive, subspaces, "test", budget=2, repeats=2, seed=5, device="cpu"
+    )
+    fixed = evaluator.evaluate(config)
+    adaptive, selection_rate = evaluator.evaluate_adaptive(config, config)
+    assert np.allclose(adaptive, fixed)
+    assert selection_rate == 1.0
