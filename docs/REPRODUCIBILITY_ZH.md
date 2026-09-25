@@ -7,6 +7,29 @@
 所有命令从仓库根目录运行。旧阶段的研究判断与主要负结果已压缩到
 [历史探索索引](archive/INDEX_ZH.md)。
 
+## 0. 当前 PBNO M3
+
+```bash
+.venv/bin/python -m spectral_continuation.posterior_memory_response_operator \
+  --config configs/pbno_posterior_memory_formal_20260925.json \
+  --output artifacts/pbno_posterior_kernel_formal_v3 \
+  --device cuda
+
+.venv/bin/python -m spectral_continuation.summarize_pbno_m3 \
+  --kernel-root artifacts/pbno_posterior_kernel_formal_v3 \
+  --latent-root artifacts/pbno_m1_semilinear \
+  --output artifacts/pbno_m3_summary
+
+.venv/bin/python -m spectral_continuation.benchmark_posterior_kernel_operator \
+  --config configs/pbno_posterior_memory_formal_20260925.json \
+  --summary artifacts/pbno_posterior_kernel_formal_v3/summary.json \
+  --output artifacts/pbno_m3_summary/compute.json \
+  --device cuda
+```
+
+正式数字、CNP/belief checkpoint 命令、机器结果和 claim boundary 见
+[PBNO M3 报告](../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)。
+
 ## 1. 环境
 
 ```bash

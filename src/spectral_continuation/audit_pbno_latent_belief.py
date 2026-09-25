@@ -20,6 +20,7 @@ from .global_bayesian_response_operator import (
     GlobalConfig,
     GlobalQ3Evaluator,
     fit_global_subspace,
+    solve_complex_posterior,
 )
 
 
@@ -46,14 +47,12 @@ def evaluate_split(
     for event in range(event_count):
         observed = evaluator.observed[event]
         target = evaluator.target[event]
-        observed_basis = basis[observed]
-        adjoint = observed_basis.mH
-        projector = torch.linalg.solve(
-            adjoint @ observed_basis + torch.diag(penalty).to(torch.complex64),
-            adjoint,
+        query_latent, _ = solve_complex_posterior(
+            basis[observed], evaluator.context[event], penalty
         )
-        query_latent = evaluator.context[event] @ projector.T
-        bank_latent = evaluator.train_encoded[:, observed] @ projector.T
+        bank_latent, _ = solve_complex_posterior(
+            basis[observed], evaluator.train_encoded[:, observed], penalty
+        )
         query_metric = query_latent[:, :latent_dimensions] / scale
         bank_metric = bank_latent[:, :latent_dimensions] / scale
         distance = (

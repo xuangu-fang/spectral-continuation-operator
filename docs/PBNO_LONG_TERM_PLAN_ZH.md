@@ -1,7 +1,7 @@
 # PBNO 长程研究计划：从响应子空间到 Prompted Bayesian Neural Operator
 
 > 冻结日期：2026-09-25  
-> 状态：active；本文件是新一阶段唯一执行入口  
+> 状态：M0--M3 已执行；当前结果入口为 `reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`
 > 目标：在保留现有 Wave-as-Prompt 强结果的前提下，把解析 PCA--MAP 升级为可形成 AI 论文核心贡献的
 > query-conditioned neural operator。
 
@@ -205,3 +205,22 @@ response family；PBNO 学的是 **system latent × query-conditioned oscillator
 只在 OpenFWI 显示单域正信号，在 Deepwave 上因 response scale 失配而不稳定；Deepwave coordinate-RMS
 版本又降低精度。因此当前冻结 PBNO 为科学/任务论文候选，不再继续堆 encoder。重启神经 residual 的前置
 条件改为：先得到跨域一致的 complex likelihood/whitening，使 Deepwave 训练稳定且线性初始化不退化。
+
+## 10. 2026-09-25 M3 最终执行结果
+
+M3 没有继续堆 receiver encoder，而是把 posterior prior 升级为 prompt-matched posterior-kernel attention。
+稳定 complex128 latent solve 修复了 Ocean 的 batch-shape 数值问题；核注意力相对均匀 memory 在
+OpenFWI/Ocean K=2 又分别降低约 1.3%/3.9%。三组 prompt-order seeds 的正式结果：
+
+- OpenFWI K=2：0.14707 vs strongest 0.17015，改善 13.56%；
+- Ocean K=2：0.48723 vs 0.60843，改善 19.92%；
+- Deepwave 继续使用 neural latent transport：0.09077 vs 0.09744，改善 6.85%。
+
+因此 strict-Q3“两域至少 10%”主 gate 已通过。显式 posterior uncertainty 的 belief transport 在 Deepwave
+OOD K=8 三 seed 为 0.09079 vs 0.09664，改善 6.05%；Ocean gated kernel 不退化，OOD gate 也通过。
+Q2 efficiency 与 continuous receiver compatibility 分别由冻结 local head 和 functional head 精确保留。
+
+论文性边界仍需保留：两个 prior adapters 尚未统一；posterior-kernel 依赖 3.38--20 MiB response bank，
+vectorized latency约为线性 posterior 的 3--4 倍；Ocean OOD 绝对 error 仍接近 1。conditional best-of-8
+gap 未过 15%，所以 flow 继续禁止启动。完整数字、负结果与复现命令见
+[M3 正式报告](../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)。

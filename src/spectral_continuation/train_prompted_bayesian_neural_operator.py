@@ -22,6 +22,7 @@ from .global_bayesian_response_operator import (
     GlobalConfig,
     _q3_events,
     fit_global_subspace,
+    solve_complex_posterior,
 )
 
 
@@ -352,12 +353,12 @@ def predict(
 ) -> torch.Tensor:
     observed_basis = model.basis(observed)
     target_basis = model.basis(target)
-    adjoint = observed_basis.mH
-    gram = adjoint @ observed_basis + torch.diag(model.penalty()).to(torch.complex64)
-    projector = torch.linalg.solve(gram, adjoint)
     prompt_values = encoded[:, observed]
-    coefficient = prompt_values @ projector.T
-    posterior_variance = torch.linalg.inv(gram).diagonal().real
+    coefficient, posterior_variance = solve_complex_posterior(
+        observed_basis, prompt_values, model.penalty(), return_variance=True
+    )
+    if posterior_variance is None:
+        raise RuntimeError("posterior variance was requested but not returned")
     coefficient = model.transport_latent(
         coefficient, posterior_variance, prompt_values, observed
     )

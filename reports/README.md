@@ -1,10 +1,14 @@
 # 报告导航
 
-- [`PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`](PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)：**当前最新开发结论**；
+- [`PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：**当前最新正式结果**；
+  stable Bayesian tokenizer、neural latent transport、posterior-kernel operator、strict-Q3 三域三 seed、
+  OOD gate、matched CNP、continuous receiver 兼容性以及参数/存储/延迟。
+
+- [`PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`](PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)：上一轮开发结论；
   receiver residual 的尺度修复与停止线、principal-tail 负结果、posterior-latent memory 单域正信号，以及
   Q2 三 seed accuracy--compute Pareto。
 
-- [`PBNO_JOINT_QUERY_M1_ZH.md`](PBNO_JOINT_QUERY_M1_ZH.md)：**当前最新正式结果**；strict joint
+- [`PBNO_JOINT_QUERY_M1_ZH.md`](PBNO_JOINT_QUERY_M1_ZH.md)：上一轮正式结果；strict joint
   source--frequency query、global Bayesian operator、三 seed neural latent transport、Q2/Q3 hierarchy、
   OOD safety 与未通过的顶会 gate。
 

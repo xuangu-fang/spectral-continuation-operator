@@ -40,6 +40,12 @@ artifacts/wave_as_prompt_pfto/m0_continuous_query_dense_stride4/
 # frozen cross-seed summary under version control.
 artifacts/pbno_q2_rank96_efficiency/
 artifacts/pbno_q2_efficiency_formal/*_seed*/
+# Superseded PBNO M3 development grids; v3 is the frozen formal result.
+artifacts/pbno_posterior_memory_formal/
+artifacts/pbno_posterior_kernel_formal/
+artifacts/pbno_posterior_kernel_formal_v2/
+# Per-system stable-baseline rows are local; summaries and selection grids are versioned.
+artifacts/pbno_m0_joint_query_stable/**/system_metrics.csv
 experiments/runs/
 experiments/dense_evaluation/
 experiments/diagnostics/

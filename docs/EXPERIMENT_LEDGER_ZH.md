@@ -393,6 +393,33 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **证据**：[PBNO M2 报告](../reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)；机器结果
   `artifacts/pbno_q2_efficiency_formal/summary/summary.json`。
 
+### E20：PBNO M3 posterior-kernel operator 与 stable posterior
+
+- **单一假设**：单高斯 global prior 没有利用训练 response family 的局部 operator prototypes；用相同 prompt
+  mask 得到的 posterior tokens 做经验贝叶斯核注意力，可以在不读取 target truth 的情况下改进 strict Q3。
+- **协议**：OpenFWI/Deepwave/Ocean 原 system splits；$K=1,2,4,8$；所有 kernel dimension、neighbor count、
+  temperature 与 blend 只由 validation systems 选择；三组 test prompt-order seeds；主指标为逐 system 等权
+  raw complex RelL2。
+- **数值修复**：Ocean rank-128 latent system 在 complex64 下随 event batching 改变结果；统一改为
+  complex128 solve 并增加 batching-invariance test。旧 Ocean Q3 数字不得继续用于比较。
+- **主结果**：K=2 的 OpenFWI/Ocean 为 0.14707/0.48723，相对 strongest validation-selected baseline
+  0.17015/0.60843 改善 13.56%/19.92%，system win rate 93.6%/77.3%，bootstrap 下界均大于 10%。
+  Deepwave 由 neural latent transport 得到 0.09077 vs 0.09744，改善 6.85%。
+- **OOD**：belief transport 在 Deepwave K=8 三 seed 为 0.09079 vs 0.09664，改善 6.05%、128/128 systems
+  同向；Ocean gated kernel 各预算改善 1.3%--4.4%，没有退化。预注册 OOD gate 通过。
+- **强神经基线**：293,250 参数 generic CNP 在 OpenFWI 从 checkpoint 继续训练、累计约 20k steps 后 K=2
+  仍为 0.23247；Ocean 6k-step 为 0.9826。主分母仍使用更强的 global/retrieval baseline。
+- **效率**：vectorized A100 latency 为 11.85--25.53 ms/完整 test population，约为线性 head 的
+  3.13--3.96 倍；response bank 3.38--20 MiB。逐 event prototype 慢 48--91 倍，已淘汰。
+- **负结果**：用完整训练 table 预计算 full-latent keys 没有在任何域/预算被 validation 选中；prompt-mask
+  posterior shrinkage 不能忽略。Deepwave posterior kernel 只有约 0%--2.4%，仍需 neural transport。
+- **兼容性**：Q2 efficiency 由 local head 保留；Ocean continuous receiver query 由 query-mask router 精确
+  调用冻结 functional head，保持 0.007414，不能宣称 memory branch 原生连续插值。
+- **判断**：strict-Q3 两域 10% gate、Q2 efficiency gate、OOD gate 均已通过，成为论文候选；flow gate
+  仍失败。下一步只优先做 memory compression、统一 prior adapter 或真实测量域，不重启普通 encoder 堆叠。
+- **证据**：[PBNO M3 报告](../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)；机器结果
+  `artifacts/pbno_m3_summary/` 与 `artifacts/pbno_posterior_kernel_formal_v3/summary.json`。
+
 ## 4. 值得从正反馈继续挖的方向
 
 以下按“与当前主线的连接强度 / 最小验证成本”排序。它们不是要求同时实现的组件清单。

@@ -46,6 +46,37 @@ class GlobalConfig:
         )
 
 
+def solve_complex_posterior(
+    observed_basis: torch.Tensor,
+    values: torch.Tensor,
+    penalty: torch.Tensor,
+    *,
+    return_variance: bool = False,
+) -> tuple[torch.Tensor, torch.Tensor | None]:
+    """Solve the complex Gaussian posterior in stable double precision.
+
+    Ocean response bases can be numerically close to rank deficient.  Batched
+    complex64 solves then depend on the batch shape, which is unacceptable for
+    an analytic baseline.  The small latent system is cheap enough to solve in
+    complex128 before returning coefficients in the caller's precision.
+    """
+
+    output_dtype = observed_basis.dtype
+    basis = observed_basis.to(torch.complex128)
+    response = values.to(torch.complex128)
+    precision = penalty.to(torch.float64)
+    adjoint = basis.mH
+    gram = adjoint @ basis + torch.diag_embed(precision).to(torch.complex128)
+    projector = torch.linalg.solve(gram, adjoint)
+    coefficient = response @ projector.transpose(-2, -1)
+    posterior_variance = None
+    if return_variance:
+        posterior_variance = torch.linalg.solve(
+            gram, torch.eye(gram.shape[-1], dtype=gram.dtype, device=gram.device)
+        ).diagonal(dim1=-2, dim2=-1).real.to(torch.float32)
+    return coefficient.to(output_dtype), posterior_variance
+
+
 def fit_global_subspace(
     archive: CrossDomainResponseArchive,
     maximum_rank: int,
@@ -213,12 +244,11 @@ class GlobalQ3Evaluator:
             penalty = config.strength * reference / variance.clamp_min(1e-30)
         else:
             raise ValueError(f"unknown prior {config.prior!r}")
-        adjoint = observed_basis.mH
-        gram = adjoint @ observed_basis + torch.diag_embed(
-            penalty[None].expand(len(observed_basis), -1)
-        ).to(torch.complex64)
-        projector = torch.linalg.solve(gram, adjoint)
-        coefficient = torch.einsum("eno,elo->enl", context, projector)
+        coefficient, _ = solve_complex_posterior(
+            observed_basis,
+            context,
+            penalty[None].expand(len(observed_basis), -1),
+        )
         target_basis = basis[target]
         normalized = torch.einsum("enl,erl->enr", coefficient, target_basis)
         target_center = self.center[target]
@@ -240,12 +270,10 @@ class GlobalQ3Evaluator:
             variance = self.variance[:rank]
             reference = torch.quantile(variance, 0.5)
             penalty = config.strength * reference / variance.clamp_min(1e-30)
-        adjoint = observed_basis.mH
-        gram = adjoint @ observed_basis + torch.diag_embed(
-            penalty[None].expand(len(observed_basis), -1)
-        ).to(torch.complex64)
-        coefficient = torch.einsum(
-            "eno,elo->enl", self.context, torch.linalg.solve(gram, adjoint)
+        coefficient, _ = solve_complex_posterior(
+            observed_basis,
+            self.context,
+            penalty[None].expand(len(observed_basis), -1),
         )
         return (
             coefficient.abs().square() / self.variance[:rank].clamp_min(1e-30)[None, None]

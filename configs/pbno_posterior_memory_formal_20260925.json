@@ -1,0 +1,51 @@
+{
+  "experiment": "pbno_posterior_memory_formal",
+  "date": "2026-09-25",
+  "selection_seed": 20260925,
+  "test_seeds": [20260924, 20260925, 20260926],
+  "validation_repeats": 2,
+  "test_repeats": 3,
+  "budgets": [1, 2, 4, 8],
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "normalization": "coordinate_rms",
+      "rank": 128,
+      "strength": 0.1,
+      "latent_dimensions": [4, 8, 16, 32, 64],
+      "neighbors": [1, 4, 8, 16, 32],
+      "temperatures": [0.0, 0.1, 0.3, 1.0, 3.0],
+      "blends": [0.25, 0.5, 0.75, 1.0],
+      "bank_modes": ["posterior", "full"],
+      "use_latent_gate": false
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "normalization": "coordinate_rms",
+      "rank": 128,
+      "strength": 0.1,
+      "operator_by_budget": {
+        "4": {"normalization": "raw", "strength": 0.1},
+        "8": {"normalization": "raw", "strength": 0.01}
+      },
+      "latent_dimensions": [4, 8, 16, 32, 64],
+      "neighbors": [1, 4, 8, 16, 32],
+      "temperatures": [0.0, 0.1, 0.3, 1.0, 3.0],
+      "blends": [0.1, 0.25, 0.5, 0.75, 1.0],
+      "bank_modes": ["posterior", "full"],
+      "use_latent_gate": false
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "normalization": "raw",
+      "rank": 128,
+      "strength": 0.00001,
+      "latent_dimensions": [2, 4, 8, 16, 32, 64],
+      "neighbors": [1, 4, 8, 16, 32],
+      "temperatures": [0.0, 0.1, 0.3, 1.0, 3.0],
+      "blends": [0.25, 0.5, 0.75, 1.0],
+      "bank_modes": ["posterior", "full"],
+      "use_latent_gate": true
+    }
+  }
+}

@@ -9,6 +9,12 @@
   baseline 与 system-level evaluation；
 - `train_prompted_bayesian_neural_operator.py`：PBNO 的 zero-initialized query basis、nonlinear latent
   transport，以及已经冻结的 scale-consistent receiver residual development branch；
+- `posterior_memory_response_operator.py`：M3 posterior-kernel attention；用相同 prompt mask 的稳定
+  posterior tokens 定义 operator memory keys，包含核温度、validation shrinkage 与 vectorized deployment；
+- `train_matched_q3_cnp.py`：参数匹配 generic CNP 强神经基线，支持 variable K、resume 与严格 Q3；
+- `summarize_pbno_m3.py`：M3 三域主表、paired bootstrap、预算曲线、逐系统散点、OOD 与方法图；
+- `benchmark_posterior_kernel_operator.py`：posterior-kernel 参数、response-bank storage、complex-MAC proxy
+  与 A100 端到端延迟；
 - `evaluate_pbno_checkpoint.py`：同一 PBNO checkpoint 的 Q2/Q3 与 IID/OOD 评测；
 - `summarize_pbno_m1.py`：PBNO 三 seed 主表、预算曲线、方法图与 Ocean OOD safety 汇总；
 - `audit_pbno_latent_belief.py`：posterior-latent memory、best-of-N oracle、conditional target spread 与

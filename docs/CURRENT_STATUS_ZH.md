@@ -3,31 +3,38 @@
 > 更新日期：2026-09-25
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
-## 2026-09-25 最新结论：strict Q3 成立，PBNO M1 有稳定中等增益
+## 2026-09-25 最新结论：PBNO M3 已通过 strict-Q3 主 gate
 
-严格 joint source--frequency query 禁止目标 source 和目标 frequency 出现在任何 prompt 中。global complex
-Bayesian operator 在 OpenFWI/Deepwave/Ocean 的 K=1→8 分别从 0.194→0.149、0.126→0.055、
-0.792→0.401，证明跨 query 共享 system state 可被少量响应识别。
+严格 joint source--frequency query 禁止目标 source 和目标 frequency 出现在任何 prompt 中。M3 将稳定
+Bayesian posterior 作为 in-context system tokenizer，再由 neural latent transport 或 posterior-kernel
+attention 回答新 query；线性 PCA--MAP 是 identity transport、零 kernel blend 的严格特例。
 
-343,809 参数 PBNO 保留解析 posterior，并学习 whitened nonlinear latent transport。三 seed 下，OpenFWI
-K=1/2 相对最强 validation-selected baseline 改善 11.7%/9.9%，Deepwave 为 7.1%/7.0%；K=4 约 5%，
-高预算趋于饱和，OpenFWI K=8 退化 3.0%。Ocean neural residual 没有收益。结论是：方法方向成立但未达到
-“两个域都超过 10%”的最终 promotion gate。
+三组 prompt-order seeds、system-held-out test 的 $K=2$ 主结果为：
 
-Q2 通过 hierarchical routing 保留旧 frequency-local head；Q3 使用 global head。Ocean OOD 的 posterior
-latent energy 能检测灾难性 prior shift，但当前 abstention threshold 仍是开发期 POC。完整结果与负结果见
-[PBNO M1 报告](../reports/PBNO_JOINT_QUERY_M1_ZH.md)。
+| 数据域 | 最强 validation-selected baseline | PBNO | 相对降低 | 系统胜率 |
+|---|---:|---:|---:|---:|
+| OpenFWI | 0.17015 | **0.14707** | **13.56%** | 93.6% |
+| Deepwave | 0.09744 | **0.09077** | **6.85%** | 99.2% |
+| Ocean | 0.60843 | **0.48723** | **19.92%** | 77.3% |
 
-M1 后的普通 prompt-set updater 与 Deepwave coordinate-RMS 版本均无新增益。receiver-preserving residual
-的 coordinate-RMS likelihood 已修复 Deepwave 数值不稳定，但稀疏预算版本 K=1 仍为 0.11665，没有越过
-0.1138 gate，因此停止该分支。oracle 主坐标预测 PCA 尾模态也在两个域的 validation/test 退化，不能继续
-包装成 nonlinear manifold decoder。
+OpenFWI/Ocean 的 paired bootstrap 95% 改善下界分别为 12.76%/15.87%，因此“两域超过 10%”的主 gate
+通过。Deepwave 使用显式 posterior uncertainty 的 belief transport，在 geometry/contrast OOD、$K=8$
+从 0.09664 降到 **0.09079**，三 seed 改善 **6.05%**；Ocean gated kernel branch 在各预算均不退化，
+OOD gate 同时通过。
 
-Q2 efficiency 替代 gate 已正式通过：OpenFWI rank 96 为 0.12880 vs rank 128 的 0.12922，同时减少
-25% storage；Deepwave rank 112 为 0.04394 vs 0.04349，只退化 1.03%，rank-cubic posterior solve
-减少 33%，OOD 还略有改善。三组 prompt-order seeds 固定配置评测。posterior-latent memory 在 OpenFWI
-Q3 K=1/2 达到 0.15290/0.14914，但在 Deepwave 无显著收益，当前只记为单域机制正结果。完整归因见
-[PBNO M2 报告](../reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)。
+强 generic CNP 并非主分母：293,250 参数版本在 OpenFWI 从 checkpoint 继续训练、总计约 20k steps 后
+$K=2$ 仍为 0.23247，弱于 global/retrieval 强基线。posterior kernel 的 A100 vectorized 完整评测延迟为
+11.9--25.5 ms，约为线性 head 的 3.1--4.0 倍，response bank 为 3.38--20 MiB。预计算 full-latent memory
+keys 未被任何 validation setting 选择，是明确负结果。
+
+Q2 efficiency 替代 gate 仍由 rank 96/112 frequency-local heads 保留；Ocean continuous receiver 通过可观测
+query-mask router 精确保留 0.007414，退化 0%。conditional best-of-8 gap 仍低于 15%，flow 保持关闭。
+
+当前可以把工作定位为 **retrieval-augmented in-context operator identification** 的论文候选，但仍有三项风险：
+两个 prior adapters 尚未统一；memory 比线性 head 慢约 3--4 倍；Ocean OOD 绝对误差仍接近 1。完整公式、
+消融、图表和 claim boundary 见
+[PBNO M3 正式报告](../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)。M1/M2 报告保留为历史归因，
+不得再把其中“主 gate 未通过”当作当前状态。
 
 ## 2026-09-25 上一结论：Wave as Prompt M0 通过核心 gate
 

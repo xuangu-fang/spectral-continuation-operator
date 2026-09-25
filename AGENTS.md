@@ -18,6 +18,8 @@
    response subspace 已是必须击败的 strong baseline，不能再只与 local interpolation 比较。
 10. 当前 active 方法计划是 `docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md`。任何 functional tensor、FNO、
     DeepONet 或 flow 实验必须遵循其中 M0--M4 顺序；flow 未通过 latent ambiguity gate 前不得启动。
+11. PBNO 后续任务必须先读 `reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`；这是当前最新正式结果，
+    `PBNO_JOINT_QUERY_M1_ZH.md` 与 `PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md` 仅用于历史归因。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
@@ -53,6 +55,13 @@ rank 112 为 0.04394 vs 0.04349；对应 rank-cubic solve 减少 57.8%/33.0%。p
 OpenFWI Q3 有正信号，Deepwave 无效，当前不是跨域主方法。先读
 `reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`。
 
+2026-09-25 PBNO M3 已覆盖 M2 的“memory 单域”判断。稳定 complex128 posterior 修复 Ocean 病态 batch solve
+后，posterior-kernel attention 在 strict Q3、K=2 的 OpenFWI/Ocean 分别达到 0.14707/0.48723，相对
+validation-selected strongest baseline 改善 13.56%/19.92%，system win rate 93.6%/77.3%；两域 10%
+主 gate 已通过。Deepwave 继续由 neural latent transport 处理，K=2 为 0.09077，改善 6.85%。完整方法、
+三 seed、OOD、CNP、延迟与边界见 `reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`。今后不得引用旧
+complex64 Ocean Q3 数字，也不得再写“posterior memory 只有 OpenFWI 单域有效”。
+
 PBNO latent-belief best-of-8 gate 也已完成：相对 strongest deployable deterministic predictor，OpenFWI
 validation/test gap 只有 8.08%/7.52%，Deepwave 只有 0.78%/0.48%，均低于 15%。不要启动 conditional
 flow；重启条件必须是新的信息条件或数据域产生超过 15% 的 conditional oracle gap。
@@ -62,12 +71,13 @@ flow；重启条件必须是新的信息条件或数据域产生超过 15% 的 c
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
 1. 冻结三个跨域 system split、target/context episodes 和归一化预算轴，不再按 test 调参；
-2. 先做 PFTO functional-rank existence audit，再做 episodic prompt inference，不一步到位堆模块；
-3. 补齐 context-conditioned retrieval、direct complex ridge、FNO/DeepONet 与参数匹配 generic set operator；
+2. 保留 M3 Bayesian tokenizer + neural transport/posterior kernel 作为当前 strongest method；
+3. 下一步优先压缩 prompt-matched memory 或学习统一 prior adapter，不再堆 receiver/set encoder；
 4. 所有新方法必须同时击败当前 response subspace 与 validation 选出的最强同预算 baseline；
-5. 先量化 strong-baseline headroom；若不足 10%，保留“低维 response state”科学结论，不堆更大模型；
-6. conditional flow 只有 latent sample oracle 改善至少 10% 才允许训练；
-7. Q3、active、variable receiver、branch router 与 3D 继续按各自前置 gates 后置。
+5. 新数据优先选择真实测量噪声、不同 solver/PDE 的 response-query domain，而非第四个同质 simulator；
+6. conditional flow 只有新的 latent sample oracle gap 超过 15% 才允许训练；
+7. active、3D 与 variable receiver 只按各自前置 gates 重启；continuous receiver 当前由冻结 functional head
+   路由，不能写成 posterior kernel 原生支持。
 
 Q2 的 best-next-source oracle 已审计：相对 nearest-first 的 error-AUC 只改善 6.0%，未过 15% gate。不要在
 当前 Q2 setting 上训练 active policy 或 RL；只有 frequency/receiver action 或 task utility 改变后才重启。

@@ -1,0 +1,15 @@
+{
+  "domain": "Ocean",
+  "task": "interleaved continuous receiver query",
+  "routing_rule": "When receiver coordinates are off the discrete response-memory grid, use the frozen continuous spectrum-prior functional head; the rule depends only on the query mask and coordinates.",
+  "source_artifact": "artifacts/wave_as_prompt_pfto/m0_continuous_sampling_summary/summary.json",
+  "source_sha256": "d85eacbe75c2caeb4571200ae1e3958d1c32c7e8e49af0464308a56a3c05a154",
+  "observed_receivers": 25,
+  "query_receivers": 23,
+  "reference_raw_complex_rel_l2": 0.007414399122353643,
+  "pbno_hierarchical_raw_complex_rel_l2": 0.007414399122353643,
+  "relative_degradation": 0.0,
+  "maximum_allowed_relative_degradation": 0.03,
+  "gate_passed": true,
+  "claim_boundary": "The posterior-kernel branch is evaluated only on receiver coordinates represented in its response bank; this exact functional-head fallback preserves continuous querying but is not evidence that the memory branch itself interpolates receiver coordinates."
+}

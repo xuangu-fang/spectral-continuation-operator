@@ -1,0 +1,20 @@
+{
+  "experiment": "pbno_matched_q3_cnp_long",
+  "date": "2026-09-25",
+  "seed": 20260925,
+  "budgets": [1, 2, 4, 8],
+  "validation_repeats": 1,
+  "test_repeats": 3,
+  "width": 64,
+  "batch_size": 64,
+  "steps": 14000,
+  "evaluation_interval": 1000,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.00001,
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "periodic_receiver": false
+    }
+  }
+}

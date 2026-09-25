@@ -1,6 +1,18 @@
 import numpy as np
 import torch
 
+from spectral_continuation.cross_domain_response_data import CrossDomainResponseArchive
+from spectral_continuation.global_bayesian_response_operator import (
+    GlobalConfig,
+    GlobalQ3Evaluator,
+    fit_global_subspace,
+    solve_complex_posterior,
+)
+from spectral_continuation.posterior_memory_response_operator import (
+    MemoryConfig,
+    evaluate_memory_config_batched,
+    evaluate_memory_configs,
+)
 from spectral_continuation.train_prompted_bayesian_neural_operator import (
     PromptedBayesianNeuralOperator,
     _q2_events,
@@ -91,3 +103,51 @@ def test_zero_receiver_residual_preserves_baseline_across_scales():
         context, observed, target, baseline, base_scale
     )
     torch.testing.assert_close(corrected, baseline)
+
+
+def test_stable_posterior_is_invariant_to_event_batching():
+    generator = torch.Generator().manual_seed(18)
+    base = torch.randn(24, 8, generator=generator, dtype=torch.complex64)
+    # Nearly duplicate columns make complex64 batched solves shape-sensitive.
+    base[:, 7] = base[:, 6] + 1e-5 * base[:, 7]
+    observed_basis = torch.stack((base[:12], base[12:]))
+    values = torch.randn(2, 5, 12, generator=generator, dtype=torch.complex64)
+    penalty = torch.full((2, 8), 1e-8)
+    batched, _ = solve_complex_posterior(observed_basis, values, penalty)
+    separate = torch.cat(
+        [
+            solve_complex_posterior(
+                observed_basis[index : index + 1],
+                values[index : index + 1],
+                penalty[index : index + 1],
+            )[0]
+            for index in range(2)
+        ]
+    )
+    torch.testing.assert_close(batched, separate, rtol=1e-5, atol=1e-5)
+
+
+def test_vectorized_posterior_memory_matches_reference_event_loop():
+    rng = np.random.default_rng(23)
+    responses = (
+        rng.normal(size=(11, 3, 3, 4))
+        + 1j * rng.normal(size=(11, 3, 3, 4))
+    ).astype(np.complex64)
+    archive = CrossDomainResponseArchive(
+        responses=responses,
+        sources=np.linspace(0, 1, 3, dtype=np.float32)[:, None],
+        receivers=np.linspace(0, 1, 4, dtype=np.float32)[:, None],
+        frequencies=np.asarray([1.0, 2.0, 3.0], dtype=np.float32),
+        source_receiver_index=np.asarray([0, 1, 2]),
+        split=np.asarray(["train"] * 6 + ["validation"] * 2 + ["test"] * 3),
+        system_ids=np.asarray([f"system_{index}" for index in range(11)]),
+        valid_response_mask=np.ones((3, 4), dtype=bool),
+        provenance={},
+    )
+    operator = GlobalConfig(4, 0.1, "spectrum", "raw")
+    subspace = fit_global_subspace(archive, 4, "raw", "cpu")
+    evaluator = GlobalQ3Evaluator(archive, subspace, "test", 1, 2, 9, "cpu")
+    memory = MemoryConfig(3, 3, 0.3, 0.5)
+    reference = evaluate_memory_configs(evaluator, operator, (memory,))[memory.name]
+    vectorized = evaluate_memory_config_batched(evaluator, operator, memory)
+    np.testing.assert_allclose(vectorized, reference, rtol=1e-5, atol=1e-6)

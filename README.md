@@ -9,7 +9,31 @@
 
 ## 当前主线：Wave as Prompt
 
-### 2026-09-25 最新结果：严格 joint query 与 PBNO
+### 2026-09-25 最新结果：PBNO 后验核算子通过主 gate
+
+严格 Q3 把少量复响应当作 prompts，要求回答 source 与 frequency 都未出现过的新 query。最新 M3 使用稳定
+Bayesian posterior 作为 in-context system tokenizer，并在其上选择 neural latent transport 或
+posterior-kernel attention。线性 PCA--MAP 是 identity transport、零 kernel blend 时的严格特例。
+
+三组 prompt-order seeds、system-held-out test 的主预算 $K=2$：
+
+| 数据域 | validation-selected 强基线 | PBNO | 相对降低 | 系统胜率 |
+|---|---:|---:|---:|---:|
+| OpenFWI | 0.17015 | **0.14707** | **13.56%** | 93.6% |
+| Deepwave | 0.09744 | **0.09077** | **6.85%** | 99.2% |
+| Ocean | 0.60843 | **0.48723** | **19.92%** | 77.3% |
+
+OpenFWI 与 Ocean 的 paired bootstrap 下界均为正且改善超过 10%，因此 strict-Q3 主 gate 已通过。Deepwave
+belief transport 在 geometry/contrast OOD 的 $K=8$ 从 0.09664 降到 **0.09079**，改善 **6.05%**；Ocean
+gated kernel branch 不退化，OOD gate 也通过。参数匹配 CNP 长训练后的 OpenFWI $K=2$ 仍为 0.23247。
+
+后验核分支的 vectorized A100 latency 为 11.9--25.5 ms/完整 test population，约为线性 posterior 的
+3.1--4.0 倍；Ocean continuous receiver 通过冻结 functional head 路由精确保留 0.007414。完整公式、消融、
+边界和复现入口见 [PBNO M3 正式报告](reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)。
+
+![PBNO M3 strict-Q3 主结果](artifacts/pbno_m3_summary/pbno_m3_budget_curves.png)
+
+### 2026-09-25 上一结果：严格 joint query 与 PBNO M1
 
 严格 Q3 要求目标 source 和目标 frequency 都不出现在 prompts 中。global complex Bayesian operator 已在
 OpenFWI、Deepwave、Ocean 三域形成随 K 单调下降的可用结果；在其上加入 whitened nonlinear latent
@@ -50,13 +74,13 @@ query；flow 需要先通过条件多模态 existence gate。
 
 ![Wave as Prompt 三域预算曲线](artifacts/wave_as_prompt_pfto/m0_latent_prior_multiseed/multidomain_budget_curve.png)
 
-### 当前 active 升级：PBNO
+### 当前方法：PBNO
 
-下一阶段把上述解析结果升级为 **Prompted Bayesian Neural Operator**：从任意 source--frequency prompts
-识别共享 system latent，再用 query-conditioned complex response functions 回答新的 source、frequency 与
-receiver query。严格的论文主任务是 Q3：目标 source 和目标 frequency 都不曾出现在 prompts 中；现有
-PCA--MAP 是方法的线性特例和不可删除的强基线。完整公式、24 小时顺序与 promotion gates 见
-[PBNO 长程计划](docs/PBNO_LONG_TERM_PLAN_ZH.md)。
+上述解析结果现已升级为 **Prompted Bayesian Neural Operator**：从任意 source--frequency prompts 识别
+共享 system latent，再用 query-conditioned complex response functions 回答新的 source、frequency 与
+receiver query。严格论文主任务 Q3、线性特例、分阶段 gates 见
+[PBNO 长程计划](docs/PBNO_LONG_TERM_PLAN_ZH.md)；执行后的正式结论以
+[M3 报告](reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)为准。
 
 ## 上一阶段：Cross-Domain Wave Response Query
 
