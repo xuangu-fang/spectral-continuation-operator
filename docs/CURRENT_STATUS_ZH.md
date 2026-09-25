@@ -1,6 +1,6 @@
 # 当前状态：Wave-System Representation
 
-> 更新日期：2026-09-24
+> 更新日期：2026-09-25
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
 ## 2026-09-24 当前结论：跨域 Response Query POC 已通过
@@ -25,6 +25,10 @@ M1 的 293k 参数 receiver-preserving residual operator 在三 seed 上：OpenF
 
 完整结果见[跨域 POC 报告](../reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)，数据生成与限制见
 [跨域数据 provenance](CROSS_DOMAIN_DATA_PROVENANCE_ZH.md)。
+
+下一阶段不再沿用 local baseline 的 50%--99% 增益作为方法 promotion 标准。新的待确认指标是：
+half-budget strong-baseline gain、reducible-gap closure、normalized budget-error AUC 与 equivalent probe
+saving；完整定义和建议 gate 见[跨数据集指标提案](CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md)。
 
 ## 2026-09-24 上一阶段：In-Context Wave Response Query
 

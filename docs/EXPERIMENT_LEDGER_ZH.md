@@ -398,10 +398,15 @@ unit test：恢复阶数、跨分辨率与 phase equivariance。由于真实场�
 
 ### 立即推进
 
-1. 冻结 E15/RQ-1，不再按 test 调参；
-2. 第二个真正独立的 co-located multistatic 数据域；
-3. Q3 的 reciprocity routing + per-link spectral state 最小 POC；
-4. best-next-source oracle 已完成且未过 gate；active 只有扩展 action space 后才重启。
+1. 冻结 E16 的三个多系统域 split、episodes 与 test，不再按 test 调参；
+2. 补齐 retrieval、direct complex ridge 和参数匹配 generic query network，重新定义 strongest baseline；
+3. 在共同的归一化 probe 预算上报告 raw error、strong-baseline gain、gap closure 与 budget AUC；
+4. 只有至少两个域仍保留 10% 以上 strong-baseline headroom，才升级 query representation；
+5. Q3 的 reciprocity routing + per-link spectral state 放在 Q2 强基线审计之后；
+6. best-next-source oracle 已完成且未过 gate；active 只有扩展 action space 后才重启。
+
+完整指标定义与 promotion gate 见
+[跨数据集指标提案](CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md)。
 
 ### 小成本并行诊断
 
