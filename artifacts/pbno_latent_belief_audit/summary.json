@@ -1,0 +1,66 @@
+{
+  "OpenFWI": {
+    "task": "strict Q3 latent conditional-belief audit",
+    "budget": 1,
+    "latent_dimensions": 8,
+    "neighbor_count": 8,
+    "splits": {
+      "validation": {
+        "global_mean": 0.19924363493919373,
+        "nearest_memory": 0.18139474093914032,
+        "memory_mean": 0.15214671194553375,
+        "best_of_memory": 0.13984644412994385,
+        "strongest_deterministic": 0.15214671194553375,
+        "best_of_memory_relative_gap": 0.08084478237027704,
+        "flow_gate_threshold": 0.15,
+        "flow_gate_passed": false,
+        "nearest_context_vs_target_spread_correlation": 0.6161380243973548,
+        "mean_candidate_target_spread": 0.12251873314380646
+      },
+      "test": {
+        "global_mean": 0.19635507464408875,
+        "nearest_memory": 0.1847083568572998,
+        "memory_mean": 0.15290090441703796,
+        "best_of_memory": 0.1413969248533249,
+        "strongest_deterministic": 0.15290090441703796,
+        "best_of_memory_relative_gap": 0.07523813941829871,
+        "flow_gate_threshold": 0.15,
+        "flow_gate_passed": false,
+        "nearest_context_vs_target_spread_correlation": 0.6432360401670708,
+        "mean_candidate_target_spread": 0.12373809516429901
+      }
+    }
+  },
+  "Deepwave": {
+    "task": "strict Q3 latent conditional-belief audit",
+    "budget": 1,
+    "latent_dimensions": 32,
+    "neighbor_count": 8,
+    "splits": {
+      "validation": {
+        "global_mean": 0.12508246302604675,
+        "nearest_memory": 0.16428887844085693,
+        "memory_mean": 0.13203491270542145,
+        "best_of_memory": 0.1241062730550766,
+        "strongest_deterministic": 0.12508246302604675,
+        "best_of_memory_relative_gap": 0.007804371191242665,
+        "flow_gate_threshold": 0.15,
+        "flow_gate_passed": false,
+        "nearest_context_vs_target_spread_correlation": 0.22874525438177237,
+        "mean_candidate_target_spread": 0.12105248123407364
+      },
+      "test": {
+        "global_mean": 0.12660178542137146,
+        "nearest_memory": 0.1668512225151062,
+        "memory_mean": 0.13458317518234253,
+        "best_of_memory": 0.1259882003068924,
+        "strongest_deterministic": 0.12660178542137146,
+        "best_of_memory_relative_gap": 0.004846575523693053,
+        "flow_gate_threshold": 0.15,
+        "flow_gate_passed": false,
+        "nearest_context_vs_target_spread_correlation": 0.25744019892692993,
+        "mean_candidate_target_spread": 0.12147409468889236
+      }
+    }
+  }
+}

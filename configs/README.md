@@ -8,6 +8,8 @@
   sparse-budget receiver residual stop experiment；K=1 未过 0.1138，不再沿此配置扫参；
 - `pbno_q2_efficiency_formal_20260925.json`：固定 OpenFWI rank 96 与 Deepwave rank 112 后的三 seed
   Q2 efficiency 汇总入口；选择文件在 `artifacts/pbno_q2_efficiency_selection/`；
+- `pbno_latent_belief_audit_20260925.json`：K=1 posterior-latent top-8 memory 的 deployable mean、
+  target-reading oracle 与 15% flow existence gate；两域均未通过，flow 保持关闭；
 - `wave_as_prompt_pfto_m0_20260925.json`：当前 active PFTO functional-rank existence audit；只读
   validation split，比较存储量、full-table reconstruction、half-budget query 与 reciprocity，不提前打开 test；
 - `wave_as_prompt_latent_prior_m0_20260925.json`：functional spatial rank 失败后冻结的 latent-spectrum prior

@@ -53,6 +53,10 @@ rank 112 为 0.04394 vs 0.04349；对应 rank-cubic solve 减少 57.8%/33.0%。p
 OpenFWI Q3 有正信号，Deepwave 无效，当前不是跨域主方法。先读
 `reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`。
 
+PBNO latent-belief best-of-8 gate 也已完成：相对 strongest deployable deterministic predictor，OpenFWI
+validation/test gap 只有 8.08%/7.52%，Deepwave 只有 0.78%/0.48%，均低于 15%。不要启动 conditional
+flow；重启条件必须是新的信息条件或数据域产生超过 15% 的 conditional oracle gap。
+
 ## 当前执行顺序
 
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：

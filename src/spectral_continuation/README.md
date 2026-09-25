@@ -11,6 +11,8 @@
   transport，以及已经冻结的 scale-consistent receiver residual development branch；
 - `evaluate_pbno_checkpoint.py`：同一 PBNO checkpoint 的 Q2/Q3 与 IID/OOD 评测；
 - `summarize_pbno_m1.py`：PBNO 三 seed 主表、预算曲线、方法图与 Ocean OOD safety 汇总；
+- `audit_pbno_latent_belief.py`：posterior-latent memory、best-of-N oracle、conditional target spread 与
+  flow existence gate；
 - `audit_functional_tensor_rank.py`：当前 Wave-as-Prompt M0；检验冻结 complex response bases 是否存在更低
   存储的 source--receiver functional rank，并同时审计 sparse-prompt query error 与结构化 reciprocity；
 - `train_episodic_response_basis.py`：PFTO bridge；保持闭式 prompt latent solve，只把 PCA basis 改为针对

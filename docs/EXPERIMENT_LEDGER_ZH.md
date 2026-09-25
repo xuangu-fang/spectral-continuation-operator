@@ -387,7 +387,9 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **边界**：A100 端到端 batched latency 只降低约 12%，因为 gather、decode 与 metric reduction 不随 rank
   立方下降；论文必须同时报告 FLOP proxy 与实测 latency。
 - **是否继续**：Q2 保底 gate 已通过；Q3 仍未达到两个域 10%。下一次方法升级只允许改变 latent belief
-  本身，并先通过 conditional branch / mixture evidence，不再堆 receiver encoder。
+  本身，并先通过 conditional branch / mixture evidence，不再堆 receiver encoder。后续 best-of-8 审计已经
+  完成：OpenFWI 相对 strongest deterministic 的 gap 为 7.5%--8.1%，Deepwave 小于 1%，均未过 15%，
+  所以 conditional flow 保持关闭。
 - **证据**：[PBNO M2 报告](../reports/PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)；机器结果
   `artifacts/pbno_q2_efficiency_formal/summary/summary.json`。
 

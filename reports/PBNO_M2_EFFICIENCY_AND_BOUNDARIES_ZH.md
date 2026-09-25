@@ -112,7 +112,23 @@ OpenFWI 同时减少 25% basis storage；Deepwave storage 减少 12.5%，但 ran
 端到端延迟低于理论 solve 降幅，是因为 gather、response decode 与 metric reduction 不随 rank 立方缩放。这个
 结果通过 Q2 efficiency gate，但它是成熟解析 head 的部署证据，不替代 Q3 的方法创新 gate。
 
-## 6. 当前论文判断
+## 6. Conditional belief 与 flow gate
+
+我们把 posterior-latent memory 的前 8 个候选看成一个最宽松的离散 conditional belief，并允许 oracle 读取
+target truth 选择其中误差最小者。合法比较对象是同一组候选的可部署均值或 global posterior mean 中较强者：
+
+| 数据域，K=1 | 最强 deterministic | best-of-8 oracle | oracle gap |
+|---|---:|---:|---:|
+| OpenFWI validation | 0.15215 | 0.13985 | 8.08% |
+| OpenFWI test | 0.15290 | 0.14140 | 7.52% |
+| Deepwave validation | 0.12508 | 0.12411 | 0.78% |
+| Deepwave test | 0.12660 | 0.12599 | 0.48% |
+
+两域都低于预注册 15% gate；而 PBNO 在 Deepwave 还强于这里的 best-of-8。OpenFWI 的 latent distance 与
+候选 target spread 相关系数约为 0.62--0.64，说明局部原型距离具有 failure signal，但剩余分支收益不足以
+证明 conditional flow 的必要性。因此 flow 保持关闭，不用生成式标签增加方法复杂度。
+
+## 7. 当前论文判断
 
 现在最诚实也最完整的故事是：
 
@@ -125,7 +141,7 @@ OpenFWI 同时减少 25% basis storage；Deepwave storage 减少 12.5%，但 ran
 不应继续堆 decoder；更值得做的是让 posterior prior 本身从单高斯升级为 validation-gated 的结构化 latent
 belief，并先用 conditional-collision / mixture evidence 判断是否真的存在可利用的分支结构。
 
-## 7. 复现入口
+## 8. 复现入口
 
 Q2 正式汇总：
 
@@ -144,3 +160,4 @@ PYTHONPATH=src .venv/bin/python -m spectral_continuation.summarize_latent_prior_
 - `artifacts/pbno_q2_efficiency_formal/summary/main_table.csv`
 - `artifacts/pbno_q2_efficiency_formal/summary/compute.json`
 - `artifacts/pbno_m2_receiver_residual/deepwave_sparse_seed20260925/summary.json`
+- `artifacts/pbno_latent_belief_audit/summary.json`

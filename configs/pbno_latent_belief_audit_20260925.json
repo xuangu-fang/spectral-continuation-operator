@@ -1,0 +1,27 @@
+{
+  "experiment": "pbno_latent_belief_audit",
+  "date": "2026-09-25",
+  "seed": 20260925,
+  "validation_repeats": 2,
+  "test_repeats": 3,
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "normalization": "coordinate_rms",
+      "rank": 128,
+      "strength": 0.1,
+      "budget": 1,
+      "latent_dimensions": 8,
+      "neighbor_count": 8
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "normalization": "raw",
+      "rank": 128,
+      "strength": 0.1,
+      "budget": 1,
+      "latent_dimensions": 32,
+      "neighbor_count": 8
+    }
+  }
+}
