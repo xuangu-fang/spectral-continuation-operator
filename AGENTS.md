@@ -20,6 +20,9 @@
     DeepONet 或 flow 实验必须遵循其中 M0--M4 顺序；flow 未通过 latent ambiguity gate 前不得启动。
 11. PBNO 后续任务必须先读 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`；这是当前最新正式结果。M3/M2/M1
     报告只用于方法细节与历史归因。
+12. 第一次理解 PBNO 可先读 `docs/PBNO_STORY_PLAIN_LANGUAGE_ZH.md`。若任务涉及下一代统一架构，再读
+    `docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md`；该文档当前是待验证设计，未经用户确认不得把 M0--M3
+    全部直接实现或写成已有贡献。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。

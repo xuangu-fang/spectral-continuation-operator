@@ -3,9 +3,15 @@
 > 仓库名 `spectral-continuation-operator` 是历史名称。当前研究主线已经从“直接做远频率延拓”推进到一个
 > 更基础的问题：**能否从少量复波动 response views 中识别可复用、可查询的隐藏波动系统表示？**
 
-我们的核心发现很简单：完整复场不适合直接当作普通图片处理。绝对相位会随 source、frequency 和
-全局相位基准快速变化，但**归一化幅值与局部复相位增量**可以把“局部能量”和“局部传播”分开表示，
-从而更稳定地识别产生这些响应的物理系统。
+我们的核心发现很简单：频率变化后，幅值或能量结构通常较平稳，但相位会随传播、干涉和共振快速变化，
+因此完整复场既不适合直接当作普通图片，也不适合从一张低频 slice 生硬搬运到高频。更可靠的对象是产生
+这些响应的**隐藏 wave response operator**：把同一系统的少量 source--frequency 复响应当作 prompts，先
+识别系统，再回答新的 excitation query。
+
+第一次阅读本项目，建议先看不要求波动或信号处理背景的
+[大白话故事与实验说明](docs/PBNO_STORY_PLAIN_LANGUAGE_ZH.md)。对当前方法为何显得零碎、如何统一成现代
+in-context operator 的判断与分阶段方案，见
+[PBNO 方法统一升级备忘录](docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md)；后者是待验证设计，不是已有结果。
 
 ## 当前主线：Wave as Prompt
 
@@ -300,15 +306,18 @@ filter、半径或手工 phase channels。
 
 1. [当前状态：一页式结论与决策](docs/CURRENT_STATUS_ZH.md) — 五分钟了解现在做到哪里、相信什么、
    下一步为何这样做；
-2. [PBNO M4 正式报告](reports/PBNO_M4_RISK_RESOLUTION_ZH.md) — 当前最新方法、三 seed 结果、压缩、
+2. [PBNO 大白话故事](docs/PBNO_STORY_PLAIN_LANGUAGE_ZH.md) — 不要求波动背景的任务、方法和实验解释；
+3. [PBNO M4 正式报告](reports/PBNO_M4_RISK_RESOLUTION_ZH.md) — 当前最新方法、三 seed 结果、压缩、
    第四物理域、噪声、hard-router 负结果与连续 adapter；
-3. [PBNO M3 方法报告](reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md) — Bayesian tokenizer、neural
+4. [方法统一升级备忘录](docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md) — 从 component stack 到统一 latent
+   operator tokens、retrieval attention 与 continuous query decoder；
+5. [PBNO M3 方法报告](reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md) — Bayesian tokenizer、neural
    transport、posterior-kernel operator、OOD 与强基线；
-4. [Wave as Prompt 顶会计划](docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md) — 论文 framing、完整方法层次、
+6. [Wave as Prompt 顶会计划](docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md) — 论文 framing、完整方法层次、
    分阶段 gates 与 NO-GO 条件；
-5. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
+7. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
    仍未充分开发的正信号；
-6. [跨域数据 provenance](docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md) — 数据来源、处理、split、hash 与复用
+8. [跨域数据 provenance](docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md) — 数据来源、处理、split、hash 与复用
    限制。其余旧表征、MPS、RQ-1 与谱延拓材料从 [docs 导航](docs/README.md) 按需进入。
 
 具体命令、数据 hash 和旧实验参数统一放在[复现档案](docs/REPRODUCIBILITY_ZH.md)，不再占据主页。

@@ -25,6 +25,12 @@ composition + spectral dictionary compression**。统一 composition 已在三�
 写成对未知 PDE/domain 的 zero-shot universal router。第四域仍是 synthetic，真实测量数据依然是主要外部
 有效性风险。完整结果见 [PBNO M4 正式报告](../reports/PBNO_M4_RISK_RESOLUTION_ZH.md)。
 
+方法层面的下一候选不是继续堆 hard router 或辅助 loss，而是一个待验证的统一 latent operator：以解析
+posterior mean/uncertainty 初始化 operator tokens，让它们对 rank-16 spectral dictionary 做 retrieval
+cross-attention，再由 target source--frequency query 条件化更新和解码。global、neural transport、kernel 与
+当前 scalar adapter 应成为同一架构的退化情形。第一阶段只做低于 1M 参数的 latent composer，不同时加入
+neural field 或 flow；详细 gate 见 [方法统一升级备忘录](PBNO_METHOD_UNIFICATION_NEXT_ZH.md)。
+
 ## 2026-09-25 上一结论：PBNO M3 已通过 strict-Q3 主 gate
 
 严格 joint source--frequency query 禁止目标 source 和目标 frequency 出现在任何 prompt 中。M3 将稳定
