@@ -1,0 +1,19 @@
+{
+  "experiment": "structural_lattice_wave_q3",
+  "date": "2026-09-26",
+  "seed": 20260926,
+  "grid": 12,
+  "sources": 8,
+  "receivers": 32,
+  "angular_frequencies": [0.35, 0.55, 0.80, 1.10, 1.45, 1.80],
+  "damping_mass": 0.025,
+  "damping_stiffness": 0.012,
+  "boundary_anchor": 0.35,
+  "batch_size": 64,
+  "splits": {
+    "train": 512,
+    "validation": 128,
+    "test": 256,
+    "ood": 128
+  }
+}

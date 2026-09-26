@@ -18,8 +18,8 @@
    response subspace 已是必须击败的 strong baseline，不能再只与 local interpolation 比较。
 10. 当前 active 方法计划是 `docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md`。任何 functional tensor、FNO、
     DeepONet 或 flow 实验必须遵循其中 M0--M4 顺序；flow 未通过 latent ambiguity gate 前不得启动。
-11. PBNO 后续任务必须先读 `reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`；这是当前最新正式结果，
-    `PBNO_JOINT_QUERY_M1_ZH.md` 与 `PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md` 仅用于历史归因。
+11. PBNO 后续任务必须先读 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`；这是当前最新正式结果。M3/M2/M1
+    报告只用于方法细节与历史归因。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
@@ -66,15 +66,25 @@ PBNO latent-belief best-of-8 gate 也已完成：相对 strongest deployable det
 validation/test gap 只有 8.08%/7.52%，Deepwave 只有 0.78%/0.48%，均低于 15%。不要启动 conditional
 flow；重启条件必须是新的信息条件或数据域产生超过 15% 的 conditional oracle gap。
 
+2026-09-26 PBNO M4 已完成。rank-16 spectral operator dictionary 把 OpenFWI/Ocean 的完整 response value
+bank 压到原始 0.65%/0.93%，各预算 test 退化不超过 1.48%/1.19%；key 仍必须由实际 prompt mask 重算
+posterior，不能退回已失败的 unconditional full-latent key。新的 structural lattice strict-Q3 域在 K=1/2
+相对 global strong baseline 改善 10.31%/8.18%，成为第四域正证据。prompt-only hard LOO 与小型 shared
+risk head 均未稳定通过全域 2% gate；不要继续扫 router threshold。详见
+`reports/PBNO_M4_RISK_RESOLUTION_ZH.md`。
+
 ## 当前执行顺序
 
 除非用户明确改变方向，否则按以下顺序推进，不能把组件一次堆满：
 
 1. 冻结三个跨域 system split、target/context episodes 和归一化预算轴，不再按 test 调参；
 2. 保留 M3 Bayesian tokenizer + neural transport/posterior kernel 作为当前 strongest method；
-3. 下一步优先压缩 prompt-matched memory 或学习统一 prior adapter，不再堆 receiver/set encoder；
+3. memory value compression 已完成；下一步不要再删 prototype instances，而应保留 rank-16 spectral
+   dictionary。统一 prior adapter 当前为 NO-GO，只有跨 query calibration supervision 或共享 adapter 新机制
+   才重启；
 4. 所有新方法必须同时击败当前 response subspace 与 validation 选出的最强同预算 baseline；
-5. 新数据优先选择真实测量噪声、不同 solver/PDE 的 response-query domain，而非第四个同质 simulator；
+5. 第四个 structural-wave synthetic 域已通过；新数据的唯一高优先级是带可信 metadata 的真实/实验
+   multistatic response，不再增加第五个同质 synthetic simulator；
 6. conditional flow 只有新的 latent sample oracle gap 超过 15% 才允许训练；
 7. active、3D 与 variable receiver 只按各自前置 gates 重启；continuous receiver 当前由冻结 functional head
    路由，不能写成 posterior kernel 原生支持。

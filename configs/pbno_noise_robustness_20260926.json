@@ -1,0 +1,30 @@
+{
+  "experiment": "pbno_noise_robustness",
+  "date": "2026-09-26",
+  "budget": 2,
+  "snr_db": [20, 10],
+  "selection_seed": 20260925,
+  "test_seeds": [20260924, 20260925, 20260926],
+  "validation_repeats": 2,
+  "test_repeats": 3,
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "operator": {"rank": 128, "strength": 0.1, "prior": "spectrum", "normalization": "coordinate_rms"},
+      "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.3, "blend": 1.0},
+      "use_latent_gate": false
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "operator": {"rank": 128, "strength": 0.00001, "prior": "spectrum", "normalization": "raw"},
+      "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.1, "blend": 0.75},
+      "use_latent_gate": true
+    },
+    "StructuralLattice": {
+      "dataset": "artifacts/cross_domain_response_query/data/structural_lattice_v1.npz",
+      "operator": {"rank": 128, "strength": 0.1, "prior": "spectrum", "normalization": "coordinate_rms"},
+      "memory": {"latent_dimensions": 16, "neighbors": 16, "temperature": 0.3, "blend": 0.75},
+      "use_latent_gate": false
+    }
+  }
+}

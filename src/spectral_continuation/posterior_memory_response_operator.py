@@ -59,6 +59,10 @@ def evaluate_memory_configs(
     operator: GlobalConfig,
     configs: tuple[MemoryConfig, ...],
     latent_threshold: float | None = None,
+    memory_indices: np.ndarray | torch.Tensor | None = None,
+    memory_encoded: torch.Tensor | None = None,
+    memory_raw: torch.Tensor | None = None,
+    memory_weights: torch.Tensor | None = None,
 ) -> dict[str, np.ndarray]:
     """Return system-macro errors for many memory settings in one pass."""
 
@@ -74,7 +78,26 @@ def evaluate_memory_configs(
     total_global = torch.zeros(len(evaluator.raw), device=evaluator.raw.device)
     maximum_neighbors = max(config.neighbors for config in configs)
     event_count = len(evaluator.observed)
-    full_bank_latent = evaluator.train_encoded @ basis.conj()
+    if memory_encoded is not None or memory_raw is not None:
+        if memory_encoded is None or memory_raw is None:
+            raise ValueError("memory_encoded and memory_raw must be provided together")
+        memory_train_encoded = memory_encoded.to(evaluator.raw.device)
+        memory_train_raw = memory_raw.to(evaluator.raw.device)
+    elif memory_indices is None:
+        memory_indices_tensor = torch.arange(
+            len(evaluator.train_raw), device=evaluator.raw.device
+        )
+        memory_train_encoded = evaluator.train_encoded[memory_indices_tensor]
+        memory_train_raw = evaluator.train_raw[memory_indices_tensor]
+    else:
+        memory_indices_tensor = torch.as_tensor(
+            memory_indices, dtype=torch.long, device=evaluator.raw.device
+        )
+        memory_train_encoded = evaluator.train_encoded[memory_indices_tensor]
+        memory_train_raw = evaluator.train_raw[memory_indices_tensor]
+    if memory_weights is not None:
+        memory_weights = memory_weights.to(evaluator.raw.device).clamp_min(1e-12)
+    full_bank_latent = memory_train_encoded @ basis.conj()
     for event in range(event_count):
         observed = evaluator.observed[event]
         target = evaluator.target[event]
@@ -82,7 +105,7 @@ def evaluate_memory_configs(
             basis[observed], evaluator.context[event], penalty
         )
         bank_latent, _ = solve_complex_posterior(
-            basis[observed], evaluator.train_encoded[:, observed], penalty
+            basis[observed], memory_train_encoded[:, observed], penalty
         )
         truth = evaluator.truth[event]
         denominator = torch.linalg.vector_norm(truth, dim=-1).clamp_min(1e-12)
@@ -109,25 +132,33 @@ def evaluate_memory_configs(
                 - 2.0 * torch.real(query_metric @ bank_metric.conj().T)
             )
             values, order = torch.topk(distance, maximum_neighbors, largest=False)
+            selected_weights = None if memory_weights is None else memory_weights[order]
             neighbor_data[(dimension, bank_mode)] = (
                 values,
-                evaluator.train_raw[order][:, :, target],
+                memory_train_raw[order][:, :, target],
+                selected_weights,
             )
         ungated_base = global_prediction[event]
         for config in configs:
-            distance, candidates = neighbor_data[
+            distance, candidates, selected_weights = neighbor_data[
                 (config.latent_dimensions, config.bank_mode)
             ]
             distance = distance[:, : config.neighbors]
             candidates = candidates[:, : config.neighbors]
+            if selected_weights is not None:
+                selected_weights = selected_weights[:, : config.neighbors]
             if config.temperature <= 0.0 or config.neighbors == 1:
-                weights = torch.full_like(distance, 1.0 / config.neighbors)
+                if selected_weights is None:
+                    weights = torch.full_like(distance, 1.0 / config.neighbors)
+                else:
+                    weights = selected_weights / selected_weights.sum(dim=1, keepdim=True)
             else:
                 relative = (distance - distance[:, :1]).clamp_min(0.0)
                 local_scale = relative[:, -1:].clamp_min(1e-8)
-                weights = torch.softmax(
-                    -relative / (config.temperature * local_scale), dim=1
-                )
+                logits = -relative / (config.temperature * local_scale)
+                if selected_weights is not None:
+                    logits = logits + torch.log(selected_weights)
+                weights = torch.softmax(logits, dim=1)
             memory = (weights[:, :, None] * candidates).sum(dim=1)
             prediction = ungated_base + config.blend * (memory - ungated_base)
             if use_operator is not None:
@@ -146,30 +177,79 @@ def evaluate_memory_configs(
 
 
 @torch.inference_mode()
-def evaluate_memory_config_batched(
+def predict_memory_config_batched(
     evaluator: GlobalQ3Evaluator,
     operator: GlobalConfig,
     config: MemoryConfig,
     latent_threshold: float | None = None,
-) -> np.ndarray:
-    """Vectorized deployment path for one validation-selected memory operator."""
+    memory_indices: np.ndarray | torch.Tensor | None = None,
+    memory_encoded: torch.Tensor | None = None,
+    memory_raw: torch.Tensor | None = None,
+    memory_weights: torch.Tensor | None = None,
+    memory_coefficients: torch.Tensor | None = None,
+    observed: torch.Tensor | None = None,
+    context: torch.Tensor | None = None,
+    target: torch.Tensor | None = None,
+) -> torch.Tensor:
+    """Return vectorized predictions for one memory operator and prompt mask."""
 
     basis = evaluator.basis[:, : operator.rank]
     variance = evaluator.variance[: operator.rank]
     penalty = _penalty(evaluator, operator)
-    observed_basis = basis[evaluator.observed]
+    observed = evaluator.observed if observed is None else observed
+    context = evaluator.context if context is None else context
+    target = evaluator.target if target is None else target
+    observed_basis = basis[observed]
     query_latent, _ = solve_complex_posterior(
-        observed_basis, evaluator.context, penalty
+        observed_basis, context, penalty
     )
+    if memory_coefficients is not None:
+        if memory_encoded is not None or memory_raw is not None or memory_indices is not None:
+            raise ValueError("memory_coefficients cannot be combined with another bank")
+        coefficients = memory_coefficients.to(evaluator.raw.device)
+        coefficient_rank = coefficients.shape[-1]
+        memory_train_encoded = None
+        memory_train_raw = None
+    elif memory_encoded is not None or memory_raw is not None:
+        if memory_encoded is None or memory_raw is None:
+            raise ValueError("memory_encoded and memory_raw must be provided together")
+        memory_train_encoded = memory_encoded.to(evaluator.raw.device)
+        memory_train_raw = memory_raw.to(evaluator.raw.device)
+    elif memory_indices is None:
+        memory_indices_tensor = torch.arange(
+            len(evaluator.train_raw), device=evaluator.raw.device
+        )
+        memory_train_encoded = evaluator.train_encoded[memory_indices_tensor]
+        memory_train_raw = evaluator.train_raw[memory_indices_tensor]
+    else:
+        memory_indices_tensor = torch.as_tensor(
+            memory_indices, dtype=torch.long, device=evaluator.raw.device
+        )
+        memory_train_encoded = evaluator.train_encoded[memory_indices_tensor]
+        memory_train_raw = evaluator.train_raw[memory_indices_tensor]
+    if memory_weights is not None:
+        memory_weights = memory_weights.to(evaluator.raw.device).clamp_min(1e-12)
     if config.bank_mode == "posterior":
-        bank_context = evaluator.train_encoded[:, evaluator.observed].permute(1, 0, 2)
+        if memory_coefficients is None:
+            bank_context = memory_train_encoded[:, observed].permute(1, 0, 2)
+        else:
+            bank_context = torch.einsum(
+                "nl,eol->eno", coefficients, observed_basis[..., :coefficient_rank]
+            )
         bank_latent, _ = solve_complex_posterior(
             observed_basis, bank_context, penalty
         )
     else:
-        bank_latent = (evaluator.train_encoded @ basis.conj())[None].expand(
-            len(evaluator.observed), -1, -1
-        )
+        if memory_coefficients is None:
+            full_latent = memory_train_encoded @ basis.conj()
+        else:
+            full_latent = torch.zeros(
+                (len(coefficients), operator.rank),
+                dtype=coefficients.dtype,
+                device=coefficients.device,
+            )
+            full_latent[:, :coefficient_rank] = coefficients
+        bank_latent = full_latent[None].expand(len(observed), -1, -1)
 
     dimension = config.latent_dimensions
     scale = torch.sqrt(variance[:dimension]).clamp_min(1e-15)
@@ -185,29 +265,73 @@ def evaluate_memory_config_batched(
     distance, order = torch.topk(
         distance, config.neighbors, largest=False, dim=-1
     )
+    selected_weights = None
+    if memory_weights is not None:
+        selected_weights = memory_weights[order]
     if config.temperature <= 0.0 or config.neighbors == 1:
-        weights = torch.full_like(distance, 1.0 / config.neighbors)
+        if selected_weights is None:
+            weights = torch.full_like(distance, 1.0 / config.neighbors)
+        else:
+            weights = selected_weights / selected_weights.sum(dim=-1, keepdim=True)
     else:
         relative = (distance - distance[..., :1]).clamp_min(0.0)
         local_scale = relative[..., -1:].clamp_min(1e-8)
-        weights = torch.softmax(
-            -relative / (config.temperature * local_scale), dim=-1
+        logits = -relative / (config.temperature * local_scale)
+        if selected_weights is not None:
+            logits = logits + torch.log(selected_weights)
+        weights = torch.softmax(logits, dim=-1)
+    if memory_coefficients is None:
+        train_targets = memory_train_raw[:, target].permute(1, 0, 2)
+    else:
+        normalized_targets = torch.einsum(
+            "nl,erl->enr", coefficients, basis[target][..., :coefficient_rank]
         )
-    train_targets = evaluator.train_raw[:, evaluator.target].permute(1, 0, 2)
+        train_targets = (
+            evaluator.center[target][:, None]
+            + evaluator.scale[target][:, None] * normalized_targets
+        )
     event = torch.arange(len(order), device=order.device)[:, None, None]
     candidates = train_targets[event, order]
     memory = (weights[..., None] * candidates).sum(dim=2)
-    global_prediction = evaluator.predict(operator)
+    global_prediction = evaluator.predict(operator, observed, context, target)
     prediction = global_prediction + config.blend * (memory - global_prediction)
     if latent_threshold is not None:
         latent_energy = (
             query_latent.abs().square()
             / variance.clamp_min(1e-30)[None, None]
         ).mean(dim=-1)
-        mean = evaluator.center[evaluator.target][:, None]
+        mean = evaluator.center[target][:, None]
         prediction = torch.where(
             (latent_energy <= latent_threshold)[..., None], prediction, mean
         )
+    return prediction
+
+
+@torch.inference_mode()
+def evaluate_memory_config_batched(
+    evaluator: GlobalQ3Evaluator,
+    operator: GlobalConfig,
+    config: MemoryConfig,
+    latent_threshold: float | None = None,
+    memory_indices: np.ndarray | torch.Tensor | None = None,
+    memory_encoded: torch.Tensor | None = None,
+    memory_raw: torch.Tensor | None = None,
+    memory_weights: torch.Tensor | None = None,
+    memory_coefficients: torch.Tensor | None = None,
+) -> np.ndarray:
+    """Vectorized deployment path for one validation-selected memory operator."""
+
+    prediction = predict_memory_config_batched(
+        evaluator,
+        operator,
+        config,
+        latent_threshold,
+        memory_indices,
+        memory_encoded,
+        memory_raw,
+        memory_weights,
+        memory_coefficients,
+    )
     error = torch.linalg.vector_norm(
         prediction - evaluator.truth, dim=-1
     ) / torch.linalg.vector_norm(evaluator.truth, dim=-1).clamp_min(1e-12)

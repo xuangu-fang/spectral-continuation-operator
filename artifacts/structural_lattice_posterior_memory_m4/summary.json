@@ -1,0 +1,212 @@
+{
+  "StructuralLattice": {
+    "1": {
+      "operator": "global_coordinate_rms_spectrum_r128_l0.01",
+      "memory": "memory_d16_k16_t0.3_a0.75",
+      "validation_baseline": "global_operator",
+      "latent_gate_threshold": 1.3403985500335693,
+      "test": {
+        "baseline_mean": 0.5157727036857978,
+        "candidate_mean": 0.4626056021467472,
+        "ratio_of_means_gain": 0.10308242595839134,
+        "bootstrap_95_low": 0.09640070072815178,
+        "bootstrap_95_high": 0.10980196192304024,
+        "system_win_rate": 0.984375,
+        "candidate_seed_means": [
+          0.45964698772877455,
+          0.46244764560833573,
+          0.46572217310313135
+        ],
+        "baseline_seed_means": [
+          0.5120898307068273,
+          0.5155753957806155,
+          0.5196528845699504
+        ],
+        "global_seed_means": [
+          0.5120898307068273,
+          0.5155753957806155,
+          0.5196528845699504
+        ]
+      },
+      "ood": {
+        "baseline_mean": 1.2775090768312414,
+        "candidate_mean": 0.9324110516657432,
+        "ratio_of_means_gain": 0.270133521103025,
+        "bootstrap_95_low": 0.2559194062361325,
+        "bootstrap_95_high": 0.28423628463873135,
+        "system_win_rate": 1.0,
+        "candidate_seed_means": [
+          0.9333344884216785,
+          0.9315744284540415,
+          0.9323242381215096
+        ],
+        "baseline_seed_means": [
+          1.2906820778734982,
+          1.2664746129885316,
+          1.2753705396316946
+        ],
+        "global_seed_means": [
+          1.2906820778734982,
+          1.2664746129885316,
+          1.2753705396316946
+        ]
+      }
+    },
+    "2": {
+      "operator": "global_coordinate_rms_spectrum_r128_l0.1",
+      "memory": "memory_d16_k16_t0.3_a0.75",
+      "validation_baseline": "global_operator",
+      "latent_gate_threshold": 0.6509801149368286,
+      "test": {
+        "baseline_mean": 0.4829976457403973,
+        "candidate_mean": 0.44347862530654913,
+        "ratio_of_means_gain": 0.08182031689464775,
+        "bootstrap_95_low": 0.07509461650077363,
+        "bootstrap_95_high": 0.08872537192706358,
+        "system_win_rate": 0.95703125,
+        "candidate_seed_means": [
+          0.4429387034615502,
+          0.44325440167449415,
+          0.4442427707836032
+        ],
+        "baseline_seed_means": [
+          0.4826087383553386,
+          0.4833555828081444,
+          0.48302861605770886
+        ],
+        "global_seed_means": [
+          0.4826087383553386,
+          0.4833555828081444,
+          0.48302861605770886
+        ]
+      },
+      "ood": {
+        "baseline_mean": 1.1727145615344245,
+        "candidate_mean": 0.9059103646626075,
+        "ratio_of_means_gain": 0.22750992067730458,
+        "bootstrap_95_low": 0.20876075652987264,
+        "bootstrap_95_high": 0.24568820028677807,
+        "system_win_rate": 1.0,
+        "candidate_seed_means": [
+          0.9068505559116602,
+          0.9054166455753148,
+          0.9054638925008476
+        ],
+        "baseline_seed_means": [
+          1.2053562756627798,
+          1.1605539442971349,
+          1.1522334646433592
+        ],
+        "global_seed_means": [
+          1.2053562756627798,
+          1.1605539442971349,
+          1.1522334646433592
+        ]
+      }
+    },
+    "4": {
+      "operator": "global_coordinate_rms_spectrum_r128_l0.1",
+      "memory": "memory_d8_k16_t0.3_a0.5",
+      "validation_baseline": "global_operator",
+      "latent_gate_threshold": 0.9398505687713623,
+      "test": {
+        "baseline_mean": 0.44143136288039386,
+        "candidate_mean": 0.410810786493433,
+        "ratio_of_means_gain": 0.06936656287210274,
+        "bootstrap_95_low": 0.06463358821356076,
+        "bootstrap_95_high": 0.07412988681874462,
+        "system_win_rate": 0.97265625,
+        "candidate_seed_means": [
+          0.4111129225930199,
+          0.41018758504651487,
+          0.4111318518407643
+        ],
+        "baseline_seed_means": [
+          0.4413600431289524,
+          0.4404353635618463,
+          0.4424986819503829
+        ],
+        "global_seed_means": [
+          0.4413600431289524,
+          0.4404353635618463,
+          0.4424986819503829
+        ]
+      },
+      "ood": {
+        "baseline_mean": 1.2703788609554372,
+        "candidate_mean": 0.9823383529049654,
+        "ratio_of_means_gain": 0.2267359107611724,
+        "bootstrap_95_low": 0.21229042944602003,
+        "bootstrap_95_high": 0.2402173379579485,
+        "system_win_rate": 1.0,
+        "candidate_seed_means": [
+          0.9784749266691506,
+          0.9736161320470273,
+          0.9949239999987185
+        ],
+        "baseline_seed_means": [
+          1.2547537120990455,
+          1.2477071224711835,
+          1.308675748296082
+        ],
+        "global_seed_means": [
+          1.2547537120990455,
+          1.2477071224711835,
+          1.308675748296082
+        ]
+      }
+    },
+    "8": {
+      "operator": "global_raw_spectrum_r128_l0.1",
+      "memory": "memory_d8_k16_t0.3_a0.5_bfull",
+      "validation_baseline": "global_operator",
+      "latent_gate_threshold": 1.6570744514465332,
+      "test": {
+        "baseline_mean": 0.4110478710693618,
+        "candidate_mean": 0.39074129199919605,
+        "ratio_of_means_gain": 0.04940198088689074,
+        "bootstrap_95_low": 0.04404602264069928,
+        "bootstrap_95_high": 0.054743199787158796,
+        "system_win_rate": 0.8828125,
+        "candidate_seed_means": [
+          0.3913956560427323,
+          0.38972600689157844,
+          0.3911022130632773
+        ],
+        "baseline_seed_means": [
+          0.4119711401872337,
+          0.4096974643180147,
+          0.41147500870283693
+        ],
+        "global_seed_means": [
+          0.4119711401872337,
+          0.4096974643180147,
+          0.41147500870283693
+        ]
+      },
+      "ood": {
+        "baseline_mean": 0.998393573332578,
+        "candidate_mean": 0.8667385589020948,
+        "ratio_of_means_gain": 0.13186684885302957,
+        "bootstrap_95_low": 0.1264971218563394,
+        "bootstrap_95_high": 0.13729640075346844,
+        "system_win_rate": 1.0,
+        "candidate_seed_means": [
+          0.8672768082469702,
+          0.8651687153615057,
+          0.8677701530978084
+        ],
+        "baseline_seed_means": [
+          0.999392731115222,
+          0.9951931461691856,
+          1.0005948427133262
+        ],
+        "global_seed_means": [
+          0.999392731115222,
+          0.9951931461691856,
+          1.0005948427133262
+        ]
+      }
+    }
+  }
+}

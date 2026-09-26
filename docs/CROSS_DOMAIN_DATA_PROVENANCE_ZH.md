@@ -1,6 +1,6 @@
 # Cross-domain response-query 数据与复用说明
 
-> 冻结日期：2026-09-24
+> 冻结日期：2026-09-26
 >
 > 统一 schema：`cross-domain-response-v1`
 > 配置入口：`configs/cross_domain_response_query_20260924.json`
@@ -72,7 +72,23 @@ cell，adapter 现会在仿真前拒绝重复 receiver cells，不能用重复�
 
 这是受控 application replication，不冒充真实海试数据。它的作用是验证同一 query formulation 在模态波导中的可用性。
 
-## 5. The Well Helmholtz staircase
+## 5. Structural lattice waves
+
+- 方程：`(K - omega^2 M + i omega C) u = f`，其中 `C = alpha M + beta K`；
+- 求解器：仓库内 batched dense complex128 direct solve，不依赖前三域的 acoustic solver；
+- 网格：12×12 heterogeneous mass--spring lattice；8 个 perimeter sources，32 receivers，6 个 angular
+  frequencies；
+- system variation：平滑随机 mass/stiffness、局部软缺陷与各向异性；
+- OOD：更强软缺陷、更大 mass contrast 和训练区间外 anisotropy；
+- split：512/128/256/128 train/validation/test/OOD systems；
+- 输出：`artifacts/cross_domain_response_query/data/structural_lattice_v1.npz`；
+- SHA256：`5dbe1359ba6a8a2f53add0a581c16c8f6e3892298d296b16c83ae95222d50819`；
+- manifest：`artifacts/cross_domain_response_query/data/structural_lattice_v1.manifest.json`。
+
+它是跨 solver、跨 application 的受控 synthetic structural-wave benchmark，不冒充真实结构健康监测数据。
+生成配置为 `configs/structural_lattice_wave_q3_20260926.json`，物理矩阵的对称性和正定性有单元测试覆盖。
+
+## 6. The Well Helmholtz staircase
 
 - 原始路径：`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train`；
 - 16 个频率文件，每个文件约 2.75 GB，shape 为 `[26, 50, 1024, 256]`；
@@ -84,7 +100,7 @@ cell，adapter 现会在仿真前拒绝重复 receiver cells，不能用重复�
 
 不能把 The Well 当前结果计作跨系统成功，也不能把 25.8% 的伪“互易误差”解释为物理不互易。真正原因是缺少 source metadata。
 
-## 6. 复现命令
+## 7. 复现命令
 
 ```bash
 .venv/bin/python -m spectral_continuation.cross_domain_response_data \
@@ -106,6 +122,11 @@ cell，adapter 现会在仿真前拒绝重复 receiver cells，不能用重复�
   --config configs/cross_domain_response_query_20260924.json \
   --domain the_well \
   --output artifacts/cross_domain_response_query/data/the_well_staircase_v1.npz
+
+.venv/bin/python -m spectral_continuation.generate_structural_lattice_wave_data \
+  --config configs/structural_lattice_wave_q3_20260926.json \
+  --output artifacts/cross_domain_response_query/data/structural_lattice_v1.npz \
+  --device cuda
 ```
 
 每次生成都会运行 schema、shape、有限值、ID 唯一性与 source--receiver index 校验，并原子写入 NPZ。

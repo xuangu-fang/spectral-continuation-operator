@@ -10,7 +10,15 @@
 - `train_prompted_bayesian_neural_operator.py`：PBNO 的 zero-initialized query basis、nonlinear latent
   transport，以及已经冻结的 scale-consistent receiver residual development branch；
 - `posterior_memory_response_operator.py`：M3 posterior-kernel attention；用相同 prompt mask 的稳定
-  posterior tokens 定义 operator memory keys，包含核温度、validation shrinkage 与 vectorized deployment；
+  posterior tokens 定义 operator memory keys，包含核温度、validation shrinkage、vectorized deployment
+  与 M4 spectral coefficient value bank；
+- `audit_spectral_memory_compression.py`：M4 rank-16 operator value dictionary、validation storage--accuracy
+  selection 与三 seed test；
+- `generate_structural_lattice_wave_data.py`：独立阻尼 mass--spring structural-wave strict-Q3 数据生成器；
+- `audit_pbno_noise_robustness.py`：冻结 clean 配置后的 20/10 dB complex prompt-noise 审计；
+- `audit_prompt_only_router.py`、`train_prompt_risk_router.py`：统一 adapter routing 的 LOO 与 shared risk-head
+  NO-GO 证据；
+- `summarize_pbno_m4.py`：四域主表、storage Pareto、noise 图与 router 边界；
 - `train_matched_q3_cnp.py`：参数匹配 generic CNP 强神经基线，支持 variable K、resume 与严格 Q3；
 - `summarize_pbno_m3.py`：M3 三域主表、paired bootstrap、预算曲线、逐系统散点、OOD 与方法图；
 - `benchmark_posterior_kernel_operator.py`：posterior-kernel 参数、response-bank storage、complex-MAC proxy

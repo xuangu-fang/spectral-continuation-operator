@@ -1,0 +1,159 @@
+{
+  "path": "/home/ubuntu/project/spectral-continuation-operator/artifacts/cross_domain_response_query/data/structural_lattice_v1.npz",
+  "sha256": "5dbe1359ba6a8a2f53add0a581c16c8f6e3892298d296b16c83ae95222d50819",
+  "shape": [
+    1024,
+    8,
+    6,
+    32
+  ],
+  "splits": {
+    "ood": 128,
+    "test": 256,
+    "train": 512,
+    "validation": 128
+  },
+  "frequencies": [
+    0.3499999940395355,
+    0.550000011920929,
+    0.800000011920929,
+    1.100000023841858,
+    1.4500000476837158,
+    1.7999999523162842
+  ],
+  "provenance": {
+    "domain": "heterogeneous damped structural lattice waves",
+    "equation": "(K - omega^2 M + i omega (alpha M + beta K)) u = f",
+    "solver": "batched dense complex128 direct solve",
+    "grid": 12,
+    "source_nodes": [
+      0,
+      5,
+      11,
+      71,
+      143,
+      138,
+      132,
+      72
+    ],
+    "receiver_nodes": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      9,
+      11,
+      23,
+      35,
+      59,
+      71,
+      83,
+      107,
+      119,
+      143,
+      142,
+      141,
+      139,
+      138,
+      137,
+      135,
+      134,
+      132,
+      120,
+      108,
+      84,
+      72,
+      60,
+      36,
+      24
+    ],
+    "property_summary": {
+      "train": {
+        "density_range": [
+          0.81475032089119,
+          2.0218596810285177
+        ],
+        "stiffness_range": [
+          0.2496168978585288,
+          1.5697497061191494
+        ],
+        "anisotropy_range": [
+          0.8500172853794079,
+          1.1497427890795437
+        ]
+      },
+      "validation": {
+        "density_range": [
+          0.8148026065313037,
+          1.603775574732288
+        ],
+        "stiffness_range": [
+          0.21294230680088327,
+          1.5670079095492837
+        ],
+        "anisotropy_range": [
+          0.8509446897453727,
+          1.1495800564930194
+        ]
+      },
+      "test": {
+        "density_range": [
+          0.814878544827649,
+          1.8962849469558176
+        ],
+        "stiffness_range": [
+          0.3305345102136318,
+          1.5667988233148118
+        ],
+        "anisotropy_range": [
+          0.8514398958597528,
+          1.1492207414426092
+        ]
+      },
+      "ood": {
+        "density_range": [
+          0.8147402517544792,
+          4.445669838196875
+        ],
+        "stiffness_range": [
+          0.004642235740280338,
+          1.5667962833246618
+        ],
+        "anisotropy_range": [
+          0.555783730666809,
+          1.5483276018178338
+        ]
+      }
+    },
+    "config": {
+      "experiment": "structural_lattice_wave_q3",
+      "date": "2026-09-26",
+      "seed": 20260926,
+      "grid": 12,
+      "sources": 8,
+      "receivers": 32,
+      "angular_frequencies": [
+        0.35,
+        0.55,
+        0.8,
+        1.1,
+        1.45,
+        1.8
+      ],
+      "damping_mass": 0.025,
+      "damping_stiffness": 0.012,
+      "boundary_anchor": 0.35,
+      "batch_size": 64,
+      "splits": {
+        "train": 512,
+        "validation": 128,
+        "test": 256,
+        "ood": 128
+      }
+    },
+    "evidence_role": "independent structural-wave strict-Q3 validation domain"
+  }
+}

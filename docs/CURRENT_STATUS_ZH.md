@@ -1,9 +1,28 @@
 # 当前状态：Wave-System Representation
 
-> 更新日期：2026-09-25
+> 更新日期：2026-09-26
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
-## 2026-09-25 最新结论：PBNO M3 已通过 strict-Q3 主 gate
+## 2026-09-26 最新结论：M4 解决 storage、通过第四域，统一 router 未过
+
+M4 的三个风险得到了一正、一扩展、一负的清晰结论：
+
+- **storage 已解决**：rank-16 spectral value bank 将 OpenFWI/Ocean 完整 response-bank 压到
+  0.65%/0.93%，各预算 test 退化不超过 1.48%/1.19%；计入 shared basis 后总存储仍减少约 79%/66%。
+- **跨物理扩展通过**：独立 structural lattice solver 上，strict-Q3 K=1/2 相对 global strong baseline
+  改善 10.31%/8.18%，paired bootstrap 下界 9.64%/7.51%。
+- **统一路由 NO-GO**：hard leave-one-prompt-out 在 Ocean 明显误判；共享 risk head 仍不能让全部域稳定处于
+  最佳分支 2% 以内。不要继续扫 threshold。
+
+20/10 dB noisy prompts 下，OpenFWI 与 structural lattice 的 posterior kernel 相对 global 分别改善
+16%--21% 与 9%--17%。Ocean 的 frozen latent gate 能阻止数值爆炸，但回退误差约 1，仍需 noise-aware
+likelihood，不能写成 noisy Ocean 已解决。
+
+当前论文主张应是 **Bayesian posterior token + validation-selected learned/empirical operator prior + spectral
+dictionary compression**，而不是 universal router。第四域仍是 synthetic，真实测量数据依然是主要外部有效性
+风险。完整结果见 [PBNO M4 正式报告](../reports/PBNO_M4_RISK_RESOLUTION_ZH.md)。
+
+## 2026-09-25 上一结论：PBNO M3 已通过 strict-Q3 主 gate
 
 严格 joint source--frequency query 禁止目标 source 和目标 frequency 出现在任何 prompt 中。M3 将稳定
 Bayesian posterior 作为 in-context system tokenizer，再由 neural latent transport 或 posterior-kernel

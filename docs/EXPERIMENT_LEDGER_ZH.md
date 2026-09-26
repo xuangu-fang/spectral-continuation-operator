@@ -1,6 +1,6 @@
 # 实验账本：有效事实、失败边界与可重启条件
 
-> 更新日期：2026-09-25
+> 更新日期：2026-09-26
 > 目的：让新的研究者或 Agent 在十分钟内知道哪些问题已经做过、结果究竟否定了什么，以及哪些正信号
 > 仍未充分开发。本文是决策账本，不替代原始报告和机器可读 artifact。
 
@@ -42,6 +42,10 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 | F18 | nonlinear latent transport 的收益集中在 sparse/mid budget | OpenFWI 最高 11.7%，Deepwave 最高 7.1%；高预算饱和 | A 级中等正结果 |
 | F19 | global 与 frequency-local state 是互补层级 | global PBNO 解 Q3；逐频率 head 在 Deepwave/Ocean Q2 更强 | 方法设计原则 |
 | F20 | posterior latent energy 可暴露灾难性 prior shift | Ocean OOD fixed 8--15，prompt-only gate 约 1.0 | C 级 safety POC |
+| F21 | posterior memory 的实例身份重要，但完整 response value 可被 spectral dictionary 极强压缩 | rank-16 value bank 为原始 0.65%/0.93%，误差退化小于 1.5% | A 级效率正结果 |
+| F22 | prompt-conditioned empirical operator prior 跨到结构波方程仍有效 | structural lattice K=1/2 改善 10.31%/8.18%，bootstrap 下界为正 | A 级跨 solver 正结果 |
+| F23 | in-prompt reconstruction risk 不能可靠替代 unseen-query extrapolation risk | hard LOO 在 Ocean K=2 退化约 10%；shared risk head 仍未全域过 2% gate | 冻结路由负结果 |
+| F24 | posterior kernel 在 noisy prompts 下可比 global posterior 更稳，但 safety fallback 不等于精确预测 | OpenFWI/structural 10--20 dB 改善 9%--21%；Ocean 回退约 1.0 | A 级 robustness 边界 |
 
 ## 3. 路线级复盘
 
@@ -419,6 +423,30 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
   仍失败。下一步只优先做 memory compression、统一 prior adapter 或真实测量域，不重启普通 encoder 堆叠。
 - **证据**：[PBNO M3 报告](../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)；机器结果
   `artifacts/pbno_m3_summary/` 与 `artifacts/pbno_posterior_kernel_formal_v3/summary.json`。
+
+### E21：PBNO M4 memory compression、structural waves 与 router NO-GO
+
+- **压缩假设**：局部 empirical prior 需要保留训练实例密度，但不一定需要保存每个实例的完整 response
+  table。
+- **prototype 负结果**：random/FPS/k-means 直接减半 instances 时，OpenFWI 退化约 3%--4%，Ocean 约
+  5%--14%；不要继续只扫 prototype selection。
+- **spectral dictionary 正结果**：保留所有 instances，把每个 value 存为 shared response basis 上的前 16 个
+  complex coefficients；key 仍按实际 prompt mask 重算 posterior。OpenFWI/Ocean value-bank storage 为
+  原始 0.65%/0.93%，四预算 test 退化不超过 1.48%/1.19%。
+- **重要区分**：这不是 M3 已失败的 unconditional full-latent key。失败版本绕过 prompt shrinkage；成功
+  版本仅压缩 value，并保留 prompt-conditioned key。
+- **延迟边界**：K=2 A100 latency 与 full bank 基本相同；只通过 storage gate，不宣称 latency 改善。
+- **第四域**：1024-system heterogeneous damped structural lattice，独立 complex128 frequency-domain direct
+  solver。K=1/2 为 0.46261/0.44348 vs global 0.51577/0.48300，改善 10.31%/8.18%，bootstrap 下界
+  9.64%/7.51%。
+- **OOD 边界**：相对 global 改善 13%--27%，但绝对 error 仍约 0.87--0.98；不能写成强结构 OOD 已解决。
+- **router NO-GO**：hard LOO 在 Ocean 把 prompt reconstruction 与 Q3 extrapolation 混淆；1,443 参数共享
+  risk head 三 seed 后，Deepwave K=2 仍比最佳分支差约 2.1%--2.4%。停止扫 threshold；重启需跨 query
+  calibration supervision 或真正共享 adapter。
+- **噪声**：OpenFWI/structural 在 20/10 dB 下相对 global 改善 9%--21%；Ocean gate 安全回退约 1.0，
+  说明需要 noise-aware complex likelihood。
+- **证据**：[M4 正式报告](../reports/PBNO_M4_RISK_RESOLUTION_ZH.md)；正文图与主表
+  `artifacts/pbno_m4_summary/`。
 
 ## 4. 值得从正反馈继续挖的方向
 

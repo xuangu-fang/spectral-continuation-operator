@@ -1,0 +1,27 @@
+{
+  "experiment": "structural_lattice_posterior_memory",
+  "date": "2026-09-26",
+  "selection_seed": 20260925,
+  "test_seeds": [20260924, 20260925, 20260926],
+  "validation_repeats": 2,
+  "test_repeats": 3,
+  "budgets": [1, 2, 4, 8],
+  "domains": {
+    "StructuralLattice": {
+      "dataset": "artifacts/cross_domain_response_query/data/structural_lattice_v1.npz",
+      "normalization": "coordinate_rms",
+      "rank": 128,
+      "strength": 0.1,
+      "operator_by_budget": {
+        "1": {"strength": 0.01},
+        "8": {"normalization": "raw", "strength": 0.1}
+      },
+      "latent_dimensions": [4, 8, 16, 32, 64],
+      "neighbors": [1, 4, 8, 16, 32],
+      "temperatures": [0.0, 0.1, 0.3, 1.0, 3.0],
+      "blends": [0.1, 0.25, 0.5, 0.75, 1.0],
+      "bank_modes": ["posterior", "full"],
+      "use_latent_gate": false
+    }
+  }
+}

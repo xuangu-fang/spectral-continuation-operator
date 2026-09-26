@@ -48,9 +48,20 @@ def _timed(function, repetitions: int) -> tuple[float, float]:
     return float(np.median(values)), float(np.std(values))
 
 
-def run(config_path: Path, summary_path: Path, output: Path, device: str) -> dict:
+def run(
+    config_path: Path,
+    summary_path: Path,
+    output: Path,
+    device: str,
+    compression_summary_path: Path | None = None,
+) -> dict:
     config = json.loads(config_path.read_text(encoding="utf-8"))
     selected = json.loads(summary_path.read_text(encoding="utf-8"))
+    compression = (
+        json.loads(compression_summary_path.read_text(encoding="utf-8"))
+        if compression_summary_path is not None
+        else {}
+    )
     budget = 2
     result = {}
     for domain, setting in config["domains"].items():
@@ -120,7 +131,7 @@ def run(config_path: Path, summary_path: Path, output: Path, device: str) -> dic
         response_bytes = int(
             archive.responses[archive.split == "train"].nbytes
         )
-        result[domain] = {
+        domain_result = {
             "budget": budget,
             "test_systems": systems,
             "train_systems": train_systems,
@@ -139,6 +150,38 @@ def run(config_path: Path, summary_path: Path, output: Path, device: str) -> dic
             "trainable_parameters_pbno_transport": 343809,
             "trainable_parameters_matched_cnp": 293250,
         }
+        if domain in compression:
+            coefficient_rank = int(compression[domain][str(budget)]["coefficient_rank"])
+            coefficients = (evaluator.train_encoded @ evaluator.basis.conj())[
+                :, :coefficient_rank
+            ]
+            compressed_latency = _timed(
+                lambda evaluator=evaluator,
+                operator=operator,
+                memory=memory,
+                use_threshold=use_threshold,
+                coefficients=coefficients: evaluate_memory_config_batched(
+                    evaluator,
+                    operator,
+                    memory,
+                    use_threshold,
+                    memory_coefficients=coefficients,
+                ),
+                5,
+            )
+            coefficient_bytes = int(coefficients.numel() * coefficients.element_size())
+            domain_result.update(
+                {
+                    "compressed_coefficient_rank": coefficient_rank,
+                    "compressed_kernel_latency_ms_median": compressed_latency[0],
+                    "compressed_kernel_latency_ms_std": compressed_latency[1],
+                    "compressed_latency_vs_full": compressed_latency[0] / memory_latency[0],
+                    "compressed_value_bank_bytes": coefficient_bytes,
+                    "compressed_value_bank_mib": coefficient_bytes / 2**20,
+                    "value_bank_storage_fraction": coefficient_bytes / response_bytes,
+                }
+            )
+        result[domain] = domain_result
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     return result
@@ -149,11 +192,23 @@ def main() -> None:
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--summary", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--compression-summary", type=Path, default=None)
     parser.add_argument(
         "--device", default="cuda" if torch.cuda.is_available() else "cpu"
     )
     args = parser.parse_args()
-    print(json.dumps(run(args.config, args.summary, args.output, args.device), indent=2))
+    print(
+        json.dumps(
+            run(
+                args.config,
+                args.summary,
+                args.output,
+                args.device,
+                args.compression_summary,
+            ),
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

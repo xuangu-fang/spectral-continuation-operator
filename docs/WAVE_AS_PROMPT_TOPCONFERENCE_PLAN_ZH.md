@@ -10,6 +10,11 @@
 > 通过。当前不再假设 raw complex response 在 source--receiver 轴上低秩，而把低秩限定在跨环境 latent
 > operator family。24 小时执行优先级已在第 9 节更新。
 
+> 2026-09-26 M4 更新：posterior memory 已用 rank-16 spectral value dictionary 压缩，第四个 structural-wave
+> strict-Q3 域通过 8% gate；prompt-only universal router 未通过 2% gate。后续论文方法应保留
+> validation-selected adapter family，不再把 universal routing 列为短期必要贡献。完整结果见
+> `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`。
+
 ## 1. 一句话论文故事
 
 传统 neural operator 通常读取介质、几何或 PDE 参数，再预测波场。真实实验中，这些隐藏环境参数往往不可得，

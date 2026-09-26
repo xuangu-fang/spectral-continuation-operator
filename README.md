@@ -9,7 +9,30 @@
 
 ## 当前主线：Wave as Prompt
 
-### 2026-09-25 最新结果：PBNO 后验核算子通过主 gate
+### 2026-09-26 最新结果：PBNO M4 压缩与第四物理域
+
+M4 把 M3 的 posterior memory 改写为 spectral operator dictionary：保留全部 training-system identities，
+但将每个完整 response table 压成共享 basis 上的 16 个复系数。OpenFWI/Ocean 的 value-bank 存储降到原始
+bank 的 **0.65%/0.93%**，各预算 test error 退化不超过 **1.48%/1.19%**；计入 shared basis 后总 operator
+storage 仍减少约 79%/66%。实际延迟基本不变，因此这里只宣称 storage 成功。
+
+同时新增独立的 heterogeneous structural lattice frequency-domain solver。strict Q3 的 K=1/2 相对 global
+Bayesian strong baseline 改善 **10.31%/8.18%**，bootstrap 下界为 9.64%/7.51%。四域 K=2 主结果如下：
+
+| 数据域 | strong baseline | PBNO | 相对改善 |
+|---|---:|---:|---:|
+| OpenFWI | 0.17015 | **0.14707** | **13.56%** |
+| Deepwave | 0.09744 | **0.09077** | **6.85%** |
+| Ocean | 0.60843 | **0.48723** | **19.92%** |
+| Structural lattice | 0.48300 | **0.44348** | **8.18%** |
+
+统一 prompt-only router 没有通过：shared risk head 修复 Ocean 后，Deepwave K=2 仍比最佳分支差约
+2.1%--2.4%。当前方法仍是 validation-selected adapter family，不包装成 universal router。完整方法、噪声、
+OOD、失败归因和复现入口见 [PBNO M4 正式报告](reports/PBNO_M4_RISK_RESOLUTION_ZH.md)。
+
+![PBNO M4 四域主结果](artifacts/pbno_m4_summary/pbno_m4_four_domain_q3.png)
+
+### 2026-09-25 上一结果：PBNO 后验核算子通过主 gate
 
 严格 Q3 把少量复响应当作 prompts，要求回答 source 与 frequency 都未出现过的新 query。最新 M3 使用稳定
 Bayesian posterior 作为 in-context system tokenizer，并在其上选择 neural latent transport 或
