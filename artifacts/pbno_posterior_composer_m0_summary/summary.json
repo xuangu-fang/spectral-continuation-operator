@@ -1,0 +1,158 @@
+{
+  "decision": "M0 learned-correction gate failed; retain zero-update operator",
+  "parameters": 121603,
+  "formal_test_prompt_seeds": [
+    20260924,
+    20260925,
+    20260926
+  ],
+  "worst_test_gain_percent": -7.057109581736909,
+  "best_test_gain_percent": 0.05263638776611401,
+  "mean_test_gain_percent": -1.8189544806368831,
+  "rows": [
+    {
+      "setting": "Deepwave_k1",
+      "domain": "Deepwave",
+      "budget": 1,
+      "validation_gain_percent": 0.15230507189202702,
+      "test_baseline": 0.11732813681980286,
+      "test_learned": 0.11733152805148468,
+      "test_gain_percent": -0.002890382284870263,
+      "bootstrap_95_low_percent": -0.0895453970968535,
+      "bootstrap_95_high_percent": 0.08716019369749597,
+      "system_win_rate": 0.44140625
+    },
+    {
+      "setting": "Deepwave_k2",
+      "domain": "Deepwave",
+      "budget": 2,
+      "validation_gain_percent": 0.012489167965020627,
+      "test_baseline": 0.09219707904655176,
+      "test_learned": 0.09223451670550276,
+      "test_gain_percent": -0.04060612259970675,
+      "bootstrap_95_low_percent": -0.09831176977429466,
+      "bootstrap_95_high_percent": 0.01603030187288659,
+      "system_win_rate": 0.4453125
+    },
+    {
+      "setting": "Deepwave_k4",
+      "domain": "Deepwave",
+      "budget": 4,
+      "validation_gain_percent": 0.011414041667468067,
+      "test_baseline": 0.06888973723107483,
+      "test_learned": 0.06887880162442647,
+      "test_gain_percent": 0.015874072231802927,
+      "bootstrap_95_low_percent": -0.04026666021953729,
+      "bootstrap_95_high_percent": 0.07238001109820781,
+      "system_win_rate": 0.49609375
+    },
+    {
+      "setting": "Deepwave_k8",
+      "domain": "Deepwave",
+      "budget": 8,
+      "validation_gain_percent": 0.24292660893034101,
+      "test_baseline": 0.05303873779727534,
+      "test_learned": 0.053025125346418164,
+      "test_gain_percent": 0.025665110865202845,
+      "bootstrap_95_low_percent": -0.061902149179691716,
+      "bootstrap_95_high_percent": 0.11283984249173731,
+      "system_win_rate": 0.5390625
+    },
+    {
+      "setting": "Ocean_k1",
+      "domain": "Ocean",
+      "budget": 1,
+      "validation_gain_percent": 3.028250017471605,
+      "test_baseline": 0.6110728163039312,
+      "test_learned": 0.6336167932022364,
+      "test_gain_percent": -3.689245585274481,
+      "bootstrap_95_low_percent": -5.462537865835667,
+      "bootstrap_95_high_percent": -1.9891952105269486,
+      "system_win_rate": 0.3203125
+    },
+    {
+      "setting": "Ocean_k2",
+      "domain": "Ocean",
+      "budget": 2,
+      "validation_gain_percent": 8.196982570498983,
+      "test_baseline": 0.4811626570299268,
+      "test_learned": 0.5062705666059628,
+      "test_gain_percent": -5.218175020276861,
+      "bootstrap_95_low_percent": -7.462516693643861,
+      "bootstrap_95_high_percent": -3.020872256804878,
+      "system_win_rate": 0.3046875
+    },
+    {
+      "setting": "Ocean_k4",
+      "domain": "Ocean",
+      "budget": 4,
+      "validation_gain_percent": 8.756174900395544,
+      "test_baseline": 0.3727393619483337,
+      "test_learned": 0.39904398717529455,
+      "test_gain_percent": -7.057109581736909,
+      "bootstrap_95_low_percent": -10.1560049104145,
+      "bootstrap_95_high_percent": -4.1097351158662905,
+      "system_win_rate": 0.3671875
+    },
+    {
+      "setting": "Ocean_k8",
+      "domain": "Ocean",
+      "budget": 8,
+      "validation_gain_percent": 2.709339648580285,
+      "test_baseline": 0.32347925680611905,
+      "test_learned": 0.3413043386535719,
+      "test_gain_percent": -5.510425003275099,
+      "bootstrap_95_low_percent": -8.796465788146131,
+      "bootstrap_95_high_percent": -2.50362207318923,
+      "system_win_rate": 0.3828125
+    },
+    {
+      "setting": "OpenFWI_k1",
+      "domain": "OpenFWI",
+      "budget": 1,
+      "validation_gain_percent": -0.0711601065989491,
+      "test_baseline": 0.15080693026507894,
+      "test_learned": 0.15115100133419038,
+      "test_gain_percent": -0.2281533537660696,
+      "bootstrap_95_low_percent": -0.282475789019751,
+      "bootstrap_95_high_percent": -0.17459336172504508,
+      "system_win_rate": 0.304
+    },
+    {
+      "setting": "OpenFWI_k2",
+      "domain": "OpenFWI",
+      "budget": 2,
+      "validation_gain_percent": -0.021063847120837583,
+      "test_baseline": 0.1466800054622193,
+      "test_learned": 0.14684676417956752,
+      "test_gain_percent": -0.1136887858864899,
+      "bootstrap_95_low_percent": -0.17492327797079765,
+      "bootstrap_95_high_percent": -0.05191308403945107,
+      "system_win_rate": 0.314
+    },
+    {
+      "setting": "OpenFWI_k4",
+      "domain": "OpenFWI",
+      "budget": 4,
+      "validation_gain_percent": 0.10457131201222844,
+      "test_baseline": 0.14488581793320673,
+      "test_learned": 0.1448095552722613,
+      "test_gain_percent": 0.05263638776611401,
+      "bootstrap_95_low_percent": -0.009363432846198337,
+      "bootstrap_95_high_percent": 0.1095224603673367,
+      "system_win_rate": 0.568
+    },
+    {
+      "setting": "OpenFWI_k8",
+      "domain": "OpenFWI",
+      "budget": 8,
+      "validation_gain_percent": -0.03598331288144874,
+      "test_baseline": 0.1441142987416436,
+      "test_learned": 0.14420269197225571,
+      "test_gain_percent": -0.061335503405235414,
+      "bootstrap_95_low_percent": -0.16173867879974935,
+      "bootstrap_95_high_percent": 0.024102180550955546,
+      "system_win_rate": 0.516
+    }
+  ]
+}

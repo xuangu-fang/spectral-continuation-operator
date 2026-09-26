@@ -46,6 +46,7 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 | F22 | prompt-conditioned empirical operator prior 跨到结构波方程仍有效 | structural lattice K=1/2 改善 10.31%/8.18%，bootstrap 下界为正 | A 级跨 solver 正结果 |
 | F23 | in-prompt reconstruction risk 不能可靠替代 unseen-query extrapolation risk | hard LOO 在 Ocean K=2 退化约 10%；shared risk head 仍未全域过 2% gate | 冻结路由负结果 |
 | F24 | posterior kernel 在 noisy prompts 下可比 global posterior 更稳，但 safety fallback 不等于精确预测 | OpenFWI/structural 10--20 dB 改善 9%--21%；Ocean 回退约 1.0 | A 级 robustness 边界 |
+| F25 | 解析 posterior 与经验 priors 可统一成严格 fallback 的 latent operator，但小 calibration split 上的 token correction 不跨 system 泛化 | 121,603 参数统一算子复现强 adapter；learned correction 在 Ocean selection +8%，unseen test 却退化 3.7%--7.1% | 统一正结果 / refinement NO-GO |
 
 ## 3. 路线级复盘
 
@@ -450,6 +451,29 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
   说明需要 noise-aware complex likelihood。
 - **证据**：[M4 正式报告](../reports/PBNO_M4_RISK_RESOLUTION_ZH.md)；正文图与主表
   `artifacts/pbno_m4_summary/`。
+
+### E22：Posterior operator composer M0
+
+- **假设**：用解析 posterior 初始化 latent tokens，让它们读取 rank-16 operator dictionary，并由
+  source--frequency query 与 target-free risk features 条件化，可以把 M4 的多个分支统一，并进一步学习
+  mode-wise composition。
+- **严格特例**：learned gate/residual 零初始化；step 0 精确恢复现有连续 adapter，而非随机近似。
+- **规模与协议**：121,603 参数；OpenFWI/Deepwave/Ocean；K=1/2/4/8；calibration systems 按 75/25 拟合与
+  selection；正式 test 为完全未见 systems 和三组 prompt seeds。
+- **统一正结果**：共享模型不读 domain ID，正式 K=2 baseline 为 Deepwave 0.09220、OpenFWI 0.14668、
+  Ocean 0.48116；解析 prior、dictionary、neural proposal 与 risk adapter 已进入同一可执行计算图。
+- **关键负结果**：risk features 进入 query token 后，selection 上 Ocean K=2/K=4 改善 8.2%/8.8%，但
+  unseen test 退化 5.2%/7.1%；Ocean 全预算 bootstrap 区间均为负。OpenFWI/Deepwave 基本持平。
+- **效率负结果**：A100、OpenFWI K=2、500 systems 整批 latent update 为 6.383 ms，analytic kernel 为
+  0.607 ms，即 10.51 倍；1.5 倍 latency gate 未通过。
+- **归因**：小 calibration selection 允许模型记住 system residual pattern；现有 target-free 证据不足以判断
+  correction 在新 system 上的符号。三域平衡、analytic anchor 与 adapter initialization 都不能修复。
+- **决定**：冻结 zero-update composer；learned token correction 为 NO-GO；M1 continuous decoder 与 flow
+  不启动。不得再按 calibration selection 数字声称 Transformer 增益。
+- **重启条件**：更多独立 calibration systems、nested system cross-fitting、新真实 multistatic 域，或
+  mode-wise correction 的 target-free oracle headroom 超过 10%。
+- **证据**：[M0 报告](../reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md)；冻结机器结果与图在
+  `artifacts/pbno_posterior_composer_m0_summary/`。
 
 ## 4. 值得从正反馈继续挖的方向
 

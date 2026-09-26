@@ -20,6 +20,12 @@
   NO-GO 证据，并导出 target-free prompt/LOO features 与复 residual cross term；
 - `train_unified_prompt_prior_adapter.py`：不读 domain ID 的 1,665 参数连续 kernel--neural prior composition，
   统一 K=1/2/4/8；
+- `train_posterior_operator_composer.py`：M0 posterior-initialized latent composer；risk adapter 是严格零修正
+  fallback。learned correction 已在 unseen systems 失败，默认只作统一接口与复现；
+- `evaluate_posterior_operator_composer.py`：冻结 composer 在三组 prompt seeds、system-held-out test 上的
+  paired evaluation；
+- `benchmark_posterior_operator_composer.py`：composer 与 analytic posterior-kernel latent update 的 A100
+  matched latency；当前约 10.5 倍，效率 gate 未通过；
 - `train_prompt_prior_adapter.py`、`train_k1_prompt_prior_adapter.py`、`audit_k1_prior_blend.py`：形成统一模型前的
   分预算机制审计，只作消融，不作为最终部署入口；
 - `summarize_pbno_m4.py`：四域主表、storage Pareto、noise 图、hard-router 边界与 unified-adapter 三 seed 图；

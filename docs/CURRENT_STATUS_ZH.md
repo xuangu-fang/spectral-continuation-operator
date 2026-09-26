@@ -5,6 +5,17 @@
 
 ## 2026-09-26 最新结论：M4 解决 storage、通过第四域与统一连续 adapter
 
+### 后续 M0：统一架构成立，learned refinement 停止
+
+M4 的 posterior、spectral dictionary、neural proposal 与 risk adapter 已进入一个 121,603 参数的共享
+posterior operator composer。零修正时严格复现当前 adapter，三组 test prompt seeds 的 K=2 为 Deepwave
+0.09220、OpenFWI 0.14668、Ocean 0.48116；这是当前可保留的方法接口。
+
+learned mode-wise gate/residual 在 calibration selection 上产生 Ocean 8% 左右的开发增益，但在 unseen test
+systems 上退化 3.7%--7.1%，OpenFWI/Deepwave 无实质收益。因此 M0 的性能提升 gate 未通过，M1 与 flow
+均不启动。后续 Agent 不得按 selection 数字把 token correction 写成正结果，也不得继续扫 correction loss、
+宽度或深度。详见 [M0 正式报告](../reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md)。
+
 M4 的三个风险均得到可部署的正结果，同时保留一个明确的机制负结论：
 
 - **storage 已解决**：rank-16 spectral value bank 将 OpenFWI/Ocean 完整 response-bank 压到
@@ -25,11 +36,10 @@ composition + spectral dictionary compression**。统一 composition 已在三�
 写成对未知 PDE/domain 的 zero-shot universal router。第四域仍是 synthetic，真实测量数据依然是主要外部
 有效性风险。完整结果见 [PBNO M4 正式报告](../reports/PBNO_M4_RISK_RESOLUTION_ZH.md)。
 
-方法层面的下一候选不是继续堆 hard router 或辅助 loss，而是一个待验证的统一 latent operator：以解析
-posterior mean/uncertainty 初始化 operator tokens，让它们对 rank-16 spectral dictionary 做 retrieval
-cross-attention，再由 target source--frequency query 条件化更新和解码。global、neural transport、kernel 与
-当前 scalar adapter 应成为同一架构的退化情形。第一阶段只做低于 1M 参数的 latent composer，不同时加入
-neural field 或 flow；详细 gate 见 [方法统一升级备忘录](PBNO_METHOD_UNIFICATION_NEXT_ZH.md)。
+方法统一候选已经按最小 M0 执行：解析 posterior token、rank-16 dictionary cross-attention 与 risk-conditioned
+query composer 均已实现，当前 scalar adapter 也成为其严格退化情形；但 learned refinement 未过
+unseen-system gate。因此不再把该备忘录当作待执行清单，设计来源见
+[方法统一升级备忘录](PBNO_METHOD_UNIFICATION_NEXT_ZH.md)，执行结论以 M0 报告为准。
 
 ## 2026-09-25 上一结论：PBNO M3 已通过 strict-Q3 主 gate
 

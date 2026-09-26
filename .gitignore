@@ -44,6 +44,10 @@ artifacts/pbno_q2_efficiency_formal/*_seed*/
 artifacts/pbno_posterior_memory_formal/
 artifacts/pbno_posterior_kernel_formal/
 artifacts/pbno_posterior_kernel_formal_v2/
+# Posterior-composer exploratory checkpoints and per-system formal arrays stay local;
+# only the frozen summary table/figure is versioned.
+artifacts/pbno_posterior_composer_m0_dev*/
+artifacts/pbno_posterior_composer_m0_formal/
 # Per-system stable-baseline rows are local; summaries and selection grids are versioned.
 artifacts/pbno_m0_joint_query_stable/**/system_metrics.csv
 experiments/runs/

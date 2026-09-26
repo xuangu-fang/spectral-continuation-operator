@@ -21,8 +21,11 @@
 11. PBNO 后续任务必须先读 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`；这是当前最新正式结果。M3/M2/M1
     报告只用于方法细节与历史归因。
 12. 第一次理解 PBNO 可先读 `docs/PBNO_STORY_PLAIN_LANGUAGE_ZH.md`。若任务涉及下一代统一架构，再读
-    `docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md`；该文档当前是待验证设计，未经用户确认不得把 M0--M3
-    全部直接实现或写成已有贡献。
+    `docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md`；该文档现在只保留设计来源，不能把未通过的 M1--M3 写成
+    已有贡献或待自动执行清单。
+13. Posterior composer M0 已执行，必须读 `reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`。统一接口与严格
+    adapter fallback 成立，但 learned correction 在 calibration 为正、unseen systems 明确退化；不得继续
+    扫宽度、深度或辅助 loss，也不得启动 M1，除非报告中的重启条件满足。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
@@ -77,6 +80,11 @@ risk head 均未稳定通过全域 2% gate；但一个 1,665 参数连续 prior 
 K=1/2/4/8 的 12/12 设置中均优于最佳单分支，OpenFWI/Ocean K=2 相对 global 改善 17.25%/21.85%。
 不要继续扫 hard-router threshold；不要把三域共享写成 unseen-domain zero-shot。详见
 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`。
+
+2026-09-26 posterior composer M0 已完成。121,603 参数共享 latent operator 将 posterior、spectral
+dictionary、neural proposal 与 risk adapter 收进同一计算图，零修正严格复现当前强 adapter；但 learned
+mode-wise correction 在 unseen Ocean systems 退化 3.7%--7.1%，OpenFWI/Deepwave 无收益。M0 性能 gate
+失败，M1 与 flow 均保持关闭。只保留 zero-update composer 作为后续接口。
 
 ## 当前执行顺序
 

@@ -1,5 +1,9 @@
 # 报告导航
 
+- [`PBNO_POSTERIOR_COMPOSER_M0_ZH.md`](PBNO_POSTERIOR_COMPOSER_M0_ZH.md)：**当前最新方法边界**；
+  posterior-initialized latent composer、strict adapter fallback、九轮结构迭代，以及 learned correction 在
+  calibration 为正但 unseen systems 失败的正式三 seed 结论。
+
 - [`PBNO_M4_RISK_RESOLUTION_ZH.md`](PBNO_M4_RISK_RESOLUTION_ZH.md)：**当前最新正式结果**；rank-16
   spectral dictionary、第四个 structural-wave 域、现实 prompt noise、hard-router 负结果，以及三域
   K=1/2/4/8 共享连续 prior adapter。

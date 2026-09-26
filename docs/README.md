@@ -4,17 +4,19 @@
 
 1. [`PBNO_STORY_PLAIN_LANGUAGE_ZH.md`](PBNO_STORY_PLAIN_LANGUAGE_ZH.md)：不要求波动背景的大白话故事、方法与
    实验入口；
-2. [`../reports/PBNO_M4_RISK_RESOLUTION_ZH.md`](../reports/PBNO_M4_RISK_RESOLUTION_ZH.md)：当前最新结果；
+2. [`../reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`](../reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md)：当前最新
+   方法边界；统一 composer 成立，但 learned correction 未通过 unseen-system gate；
+3. [`../reports/PBNO_M4_RISK_RESOLUTION_ZH.md`](../reports/PBNO_M4_RISK_RESOLUTION_ZH.md)：当前最强正结果；
    spectral dictionary、第四物理域、noise、hard-router 边界与统一连续 prior adapter；
-3. [`CURRENT_STATUS_ZH.md`](CURRENT_STATUS_ZH.md)：一页式状态、核心结果、负结果与决策 gate；
-4. [`PBNO_METHOD_UNIFICATION_NEXT_ZH.md`](PBNO_METHOD_UNIFICATION_NEXT_ZH.md)：统一 latent operator、
-   retrieval attention 与 continuous decoder 的待验证升级方案；
-5. [`PBNO_M4_RISK_RESOLUTION_PLAN_ZH.md`](PBNO_M4_RISK_RESOLUTION_PLAN_ZH.md)：本轮预注册目标、执行顺序与
+4. [`CURRENT_STATUS_ZH.md`](CURRENT_STATUS_ZH.md)：一页式状态、核心结果、负结果与决策 gate；
+5. [`PBNO_METHOD_UNIFICATION_NEXT_ZH.md`](PBNO_METHOD_UNIFICATION_NEXT_ZH.md)：统一 latent operator 的
+   设计来源；M0 已执行，后续 M1--M3 因 gate 未通过而冻结；
+6. [`PBNO_M4_RISK_RESOLUTION_PLAN_ZH.md`](PBNO_M4_RISK_RESOLUTION_PLAN_ZH.md)：本轮预注册目标、执行顺序与
    实际 gate 结论；
-6. [`../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：
+7. [`../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：
    PBNO 方法主体；stable posterior tokenizer、neural transport、posterior-kernel operator、三域 strict-Q3、
    OOD、matched CNP、compute 与论文边界；
-7. [`PBNO_LONG_TERM_PLAN_ZH.md`](PBNO_LONG_TERM_PLAN_ZH.md)：PBNO 公式、阶段顺序、硬 gates 与停止规则；
+8. [`PBNO_LONG_TERM_PLAN_ZH.md`](PBNO_LONG_TERM_PLAN_ZH.md)：PBNO 公式、阶段顺序、硬 gates 与停止规则；
 
 ## 按需背景与历史证据
 

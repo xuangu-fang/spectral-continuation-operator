@@ -2,7 +2,8 @@
 
 > 更新日期：2026-09-26
 > 用途：给第一次接触项目的 AI 研究者、合作者和未来 Agent 阅读。公式与完整数字以
-> `reports/PBNO_M4_RISK_RESOLUTION_ZH.md` 为准。
+> `reports/PBNO_M4_RISK_RESOLUTION_ZH.md` 为准。统一 composer 的最新边界见
+> `reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`：统一和严格 fallback 成立，但 learned correction 未通过。
 
 ## 1. 一句话在做什么
 

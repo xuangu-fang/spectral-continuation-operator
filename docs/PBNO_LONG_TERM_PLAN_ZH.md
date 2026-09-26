@@ -1,7 +1,8 @@
 # PBNO 长程研究计划：从响应子空间到 Prompted Bayesian Neural Operator
 
 > 冻结日期：2026-09-25  
-> 状态：M0--M3 已执行；当前结果入口为 `reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`
+> 状态：原 M0--M4 已执行；当前强正结果入口为 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`，后续统一
+> composer 的边界见 `reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`
 > 目标：在保留现有 Wave-as-Prompt 强结果的前提下，把解析 PCA--MAP 升级为可形成 AI 论文核心贡献的
 > query-conditioned neural operator。
 

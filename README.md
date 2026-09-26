@@ -15,6 +15,21 @@ in-context operator 的判断与分阶段方案，见
 
 ## 当前主线：Wave as Prompt
 
+### 2026-09-26 最新边界：Posterior Operator Composer M0
+
+M4 的 Bayesian posterior、rank-16 spectral dictionary、neural proposal 与连续 risk adapter 已统一进一个
+121,603 参数、无 domain ID 的 latent operator。零修正时它**精确退化为当前强 adapter**；三个 unseen-test
+prompt seeds 下，K=2 raw complex RelL2 为 Deepwave 0.09220、OpenFWI 0.14668、Ocean 0.48116。这证明统一
+接口与 strict fallback 成立。
+
+但 learned token correction 没有通过：它在 calibration selection 上曾将 Ocean K=2/K=4 再降低
+8.2%/8.8%，在 unseen systems 上却稳定退化 5.2%/7.1%；OpenFWI、Deepwave 基本持平。因而冻结
+zero-update composer，不启动 continuous-decoder M1 或 flow，也不把 Transformer refinement 写成贡献。
+完整方法、九轮迭代、三 seed test 与重启条件见
+[Posterior Composer M0 报告](reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md)。
+
+![Posterior Composer M0](artifacts/pbno_posterior_composer_m0_summary/posterior_composer_m0.png)
+
 ### 2026-09-26 最新结果：PBNO M4 压缩、第四物理域与统一 adapter
 
 M4 把 M3 的 posterior memory 改写为 spectral operator dictionary：保留全部 training-system identities，

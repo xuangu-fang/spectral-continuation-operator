@@ -1,0 +1,10 @@
+{
+  "domain": "OpenFWI",
+  "budget": 2,
+  "test_systems": 500,
+  "repetitions": 100,
+  "device": "NVIDIA A100-SXM4-80GB",
+  "kernel_milliseconds": 0.6070942711085081,
+  "composer_milliseconds": 6.383361537009478,
+  "composer_over_kernel": 10.514613365324537
+}

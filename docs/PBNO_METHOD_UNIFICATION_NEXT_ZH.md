@@ -2,7 +2,8 @@
 
 > 日期：2026-09-26
 >
-> 状态：方法设计备忘录，不代表已经取得实验结果
+> 状态：M0 已执行；统一与严格 fallback 成立，learned correction 未通过。M1--M3 冻结，正式结论见
+> [M0 报告](../reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md)。下文保留为设计来源，不再是待逐项执行清单。
 > 目标：在不牺牲现有正结果和物理可解释性的前提下，把 Bayesian posterior、neural transport、operator
 > dictionary 与 query decoder 收进一个统一、现代、可扩展的学习架构。
 
