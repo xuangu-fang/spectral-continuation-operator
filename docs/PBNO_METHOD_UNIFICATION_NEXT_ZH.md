@@ -1,7 +1,8 @@
 # 从 PBNO 组件栈到统一的现代 In-Context Operator
 
-> 日期：2026-09-26  
-> 状态：方法设计备忘录，不代表已经取得实验结果  
+> 日期：2026-09-26
+>
+> 状态：方法设计备忘录，不代表已经取得实验结果
 > 目标：在不牺牲现有正结果和物理可解释性的前提下，把 Bayesian posterior、neural transport、operator
 > dictionary 与 query decoder 收进一个统一、现代、可扩展的学习架构。
 

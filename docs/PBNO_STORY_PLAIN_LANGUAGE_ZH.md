@@ -1,6 +1,6 @@
 # PBNO / Wave as Prompt：大白话故事与实验说明
 
-> 更新日期：2026-09-26  
+> 更新日期：2026-09-26
 > 用途：给第一次接触项目的 AI 研究者、合作者和未来 Agent 阅读。公式与完整数字以
 > `reports/PBNO_M4_RISK_RESOLUTION_ZH.md` 为准。
 
