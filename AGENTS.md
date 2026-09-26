@@ -26,6 +26,10 @@
 13. Posterior composer M0 已执行，必须读 `reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`。统一接口与严格
     adapter fallback 成立，但 learned correction 在 calibration 为正、unseen systems 明确退化；不得继续
     扫宽度、深度或辅助 loss，也不得启动 M1，除非报告中的重启条件满足。
+14. 固定 PCA chart 的 heterogeneous functional replacement 已执行，必须读
+    `reports/HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md`。compressed oracle 有 16%--49% 空间，但
+    functional evidence、reranking、listwise metric 与 nonlinear neural field 均未通过 unseen-system gate。
+    不得继续扫 encoder/decoder 容量；必须区分 representation capacity 与 sparse identifiability。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
@@ -85,6 +89,12 @@ K=1/2/4/8 的 12/12 设置中均优于最佳单分支，OpenFWI/Ocean K=2 相对
 dictionary、neural proposal 与 risk adapter 收进同一计算图，零修正严格复现当前强 adapter；但 learned
 mode-wise correction 在 unseen Ocean systems 退化 3.7%--7.1%，OpenFWI/Deepwave 无收益。M0 性能 gate
 失败，M1 与 flow 均保持关闭。只保留 zero-update composer 作为后续接口。
+
+2026-09-26 heterogeneous functional operator M0 已完成。每个 prompt 独立 receiver mask 的 strict-Q3
+headroom 在 10% receivers 下为 OpenFWI 16.2%、Deepwave 21.0%、Ocean 49.3%，但 functional evidence、
+reranking、listwise metric 最多只兑现约 0.6%--2.4%。Ocean nonlinear neural field 的 unseen full-response
+latent fit 为 0.368，sparse prompt encoder 仍约 1.035。不要把 target-truth candidate oracle 写成可约减
+误差；不要继续扫任意 nonlinear latent 容量。线性 posterior chart 当前作为可观测坐标保留。
 
 ## 当前执行顺序
 

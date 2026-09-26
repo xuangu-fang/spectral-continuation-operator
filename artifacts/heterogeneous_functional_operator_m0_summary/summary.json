@@ -1,0 +1,165 @@
+{
+  "status": "NO-GO for replacing the stable linear posterior chart",
+  "protocol": {
+    "task": "strict-Q3 K=2 with independent receiver masks",
+    "receiver_fractions": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "splits": "physical-system train/validation/test",
+    "primary_metric": "raw complex relative L2"
+  },
+  "headroom": [
+    {
+      "domain": "OpenFWI",
+      "receiver_fraction": 0.1,
+      "baseline_error": 0.1511382646225393,
+      "compressed_oracle_error": 0.12662657459452747,
+      "compressed_oracle_gain": 0.16218057081195558,
+      "functional_evidence_gain_validation": 0.0007319060249579845,
+      "residual_reranker_gain_validation": 0.00011361044455771019,
+      "listwise_metric_gain_test": 0.0062118992982699295,
+      "best_learned_development_gain": 0.0062118992982699295
+    },
+    {
+      "domain": "OpenFWI",
+      "receiver_fraction": 0.25,
+      "baseline_error": 0.14811615549772977,
+      "compressed_oracle_error": 0.12662657459452747,
+      "compressed_oracle_gain": 0.14508600247548065,
+      "functional_evidence_gain_validation": 0.0008881471342250258,
+      "residual_reranker_gain_validation": 0.0002411117959362219,
+      "listwise_metric_gain_test": 0.008567998964232881,
+      "best_learned_development_gain": 0.008567998964232881
+    },
+    {
+      "domain": "OpenFWI",
+      "receiver_fraction": 0.5,
+      "baseline_error": 0.14754773604869842,
+      "compressed_oracle_error": 0.12662657459452747,
+      "compressed_oracle_gain": 0.1417924938357975,
+      "functional_evidence_gain_validation": 0.0009364205999542463,
+      "residual_reranker_gain_validation": 0.0002334537734244302,
+      "listwise_metric_gain_test": 0.01098632476804906,
+      "best_learned_development_gain": 0.01098632476804906
+    },
+    {
+      "domain": "OpenFWI",
+      "receiver_fraction": 1.0,
+      "baseline_error": 0.14748188548907637,
+      "compressed_oracle_error": 0.12662657459452747,
+      "compressed_oracle_gain": 0.14140930477928826,
+      "functional_evidence_gain_validation": 0.0009804348785169559,
+      "residual_reranker_gain_validation": 0.0002378248885344103,
+      "listwise_metric_gain_test": 0.011677135431292562,
+      "best_learned_development_gain": 0.011677135431292562
+    },
+    {
+      "domain": "Deepwave",
+      "receiver_fraction": 0.1,
+      "baseline_error": 0.1312655086221639,
+      "compressed_oracle_error": 0.10371752631908748,
+      "compressed_oracle_gain": 0.20986459118039025,
+      "functional_evidence_gain_validation": 0.023654256298659138,
+      "residual_reranker_gain_validation": 0.01089357422343007,
+      "listwise_metric_gain_test": 0.0,
+      "best_learned_development_gain": 0.023654256298659138
+    },
+    {
+      "domain": "Deepwave",
+      "receiver_fraction": 0.25,
+      "baseline_error": 0.11153151327744126,
+      "compressed_oracle_error": 0.10371752631908748,
+      "compressed_oracle_gain": 0.07006079921928454,
+      "functional_evidence_gain_validation": 0.02100152691153334,
+      "residual_reranker_gain_validation": 0.01571612591176419,
+      "listwise_metric_gain_test": 0.0,
+      "best_learned_development_gain": 0.02100152691153334
+    },
+    {
+      "domain": "Deepwave",
+      "receiver_fraction": 0.5,
+      "baseline_error": 0.10255634873465169,
+      "compressed_oracle_error": 0.10371752631908748,
+      "compressed_oracle_gain": -0.011322337415113681,
+      "functional_evidence_gain_validation": 0.016948463456572305,
+      "residual_reranker_gain_validation": 0.013948458229626537,
+      "listwise_metric_gain_test": 0.0,
+      "best_learned_development_gain": 0.016948463456572305
+    },
+    {
+      "domain": "Deepwave",
+      "receiver_fraction": 1.0,
+      "baseline_error": 0.09819063670875039,
+      "compressed_oracle_error": 0.10371752631908748,
+      "compressed_oracle_gain": -0.05628733854461876,
+      "functional_evidence_gain_validation": 0.012383659979137263,
+      "residual_reranker_gain_validation": 0.008782888810142442,
+      "listwise_metric_gain_test": 0.0,
+      "best_learned_development_gain": 0.012383659979137263
+    },
+    {
+      "domain": "Ocean",
+      "receiver_fraction": 0.1,
+      "baseline_error": 0.6226305002346635,
+      "compressed_oracle_error": 0.3155374434427358,
+      "compressed_oracle_gain": 0.4932187817271837,
+      "functional_evidence_gain_validation": 0.0,
+      "residual_reranker_gain_validation": 0.01824703367421987,
+      "listwise_metric_gain_test": 0.004328573271830782,
+      "best_learned_development_gain": 0.01824703367421987
+    },
+    {
+      "domain": "Ocean",
+      "receiver_fraction": 0.25,
+      "baseline_error": 0.5185208661714569,
+      "compressed_oracle_error": 0.3155374434427358,
+      "compressed_oracle_gain": 0.39146625713920924,
+      "functional_evidence_gain_validation": 0.0,
+      "residual_reranker_gain_validation": 0.017097219162020116,
+      "listwise_metric_gain_test": 0.00031733901191033365,
+      "best_learned_development_gain": 0.017097219162020116
+    },
+    {
+      "domain": "Ocean",
+      "receiver_fraction": 0.5,
+      "baseline_error": 0.5034340724814683,
+      "compressed_oracle_error": 0.3155374434427358,
+      "compressed_oracle_gain": 0.3732298612856584,
+      "functional_evidence_gain_validation": 0.0,
+      "residual_reranker_gain_validation": 0.014078579076615805,
+      "listwise_metric_gain_test": -0.001051736532769798,
+      "best_learned_development_gain": 0.014078579076615805
+    },
+    {
+      "domain": "Ocean",
+      "receiver_fraction": 1.0,
+      "baseline_error": 0.5014952667988837,
+      "compressed_oracle_error": 0.3155374434427358,
+      "compressed_oracle_gain": 0.3708067367078923,
+      "functional_evidence_gain_validation": 0.0,
+      "residual_reranker_gain_validation": 0.014467604704013537,
+      "listwise_metric_gain_test": -0.0010750804651356027,
+      "best_learned_development_gain": 0.014467604704013537
+    }
+  ],
+  "neural_field": {
+    "parameters": 212354,
+    "train_full_response_reconstruction": 0.22905404306948185,
+    "unseen_full_response_latent_fit_validation": 0.38261669874191284,
+    "unseen_full_response_latent_fit_test": 0.3675784468650818,
+    "sparse_prompt_encoder_test": {
+      "r010": 1.035940040834248,
+      "r025": 1.0353214852511883,
+      "r050": 1.0351561540737748,
+      "r100": 1.0352029474452138
+    }
+  },
+  "decision": [
+    "Do not replace the observable linear posterior chart with an unconstrained nonlinear latent.",
+    "Keep coordinate-aware set encoders as optional evidence adapters, not the system state itself.",
+    "Reopen only with more informative prompts, a physics-identifiable latent, or a new real multistatic domain."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "experiment": "heterogeneous_functional_operator_m0",
+  "date": "2026-09-26",
+  "status": "frozen_no_go",
+  "inputs": {
+    "openfwi_curvefault_a_v1.npz": "bda816beb03c23d9c7d6212b44ac636db1128664ce24896548675b42c89e8ca7",
+    "deepwave_ring_v1.npz": "9190561ff1f1f74f34eb9e163fd56966f8ded012826af223f610b3b1c826081e",
+    "ocean_multistatic_v1.npz": "38e9ab89a1f018831eeb0056ce70de3cee42919b182c498ef541b924ec46c95d"
+  },
+  "outputs": {
+    "summary.json": "a91636a5f817c5185e7f14c76a293a19091f69d53f3ded4f59627ce59bbe7c26",
+    "heterogeneous_operator_results.csv": "288807b1d3d78d258783689b672844fd1fd0e4196be0ff464b6f90aa4d209dd2",
+    "heterogeneous_functional_operator_m0.png": "73a387cef536ef0b20d0defe330e69e79611c6342b0eff4c355e057d577c6ae9",
+    "heterogeneous_functional_operator_m0.pdf": "5a40d28a5299cbd7029a9e27653db5257c7e3e4662310042fe0564e17b8dd91f"
+  },
+  "development_artifacts": [
+    "heterogeneous_prompt_headroom_m0_dev3",
+    "functional_evidence_operator_m0_dev2",
+    "functional_prompt_reranker_m0_dev1",
+    "functional_response_metric_m1_multilayout_dev1",
+    "wave_neural_field_autodecoder_m0_ocean_dev1",
+    "wave_neural_field_prompt_encoder_m0_ocean_dev1"
+  ],
+  "note": "Checkpoints and per-system arrays remain local and gitignored."
+}

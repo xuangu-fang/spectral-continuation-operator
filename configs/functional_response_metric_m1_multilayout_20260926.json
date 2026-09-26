@@ -1,0 +1,46 @@
+{
+  "experiment": "functional_response_metric_m1_multilayout",
+  "date": "2026-09-26",
+  "seed": 20260926,
+  "selection_seed": 20260925,
+  "test_seed": 20260923,
+  "layout_seed": 20260924,
+  "validation_layout_seed": 20260928,
+  "test_layout_seed": 20260929,
+  "rank": 128,
+  "value_rank": 16,
+  "budget": 2,
+  "receiver_fractions": [0.1, 0.25, 0.5, 1.0],
+  "candidates": 64,
+  "embedding_dimensions": 32,
+  "width": 96,
+  "heads": 4,
+  "transformer_layers": 1,
+  "mix_bound": 1.0,
+  "label_temperature": 0.25,
+  "retrieval_temperatures": [0.1, 0.3, 1.0],
+  "retrieval_blends": [0.0, 0.1, 0.25, 0.5, 0.75, 1.0],
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 32,
+  "eval_batch_size": 256,
+  "steps": 6000,
+  "evaluation_interval": 1000,
+  "train_repeats": 16,
+  "validation_repeats": 4,
+  "test_repeats": 4,
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "budgets": {"2": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.3, "blend": 1.0}}}
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "budgets": {"2": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 32, "neighbors": 32, "temperature": 0.1, "blend": 0.1}}}
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "budgets": {"2": {"operator": {"strength": 0.00001, "normalization": "raw"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.1, "blend": 0.75}}}
+    }
+  }
+}

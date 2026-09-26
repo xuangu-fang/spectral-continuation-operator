@@ -48,6 +48,15 @@ artifacts/pbno_posterior_kernel_formal_v2/
 # only the frozen summary table/figure is versioned.
 artifacts/pbno_posterior_composer_m0_dev*/
 artifacts/pbno_posterior_composer_m0_formal/
+# Heterogeneous functional-operator development runs; only the frozen summary
+# directory is versioned.
+artifacts/heterogeneous_prompt_headroom_m0_dev*/
+artifacts/functional_evidence_operator_m0_dev*/
+artifacts/functional_prompt_reranker_m0_dev*/
+artifacts/functional_response_metric_m0_dev*/
+artifacts/functional_response_metric_m1_multilayout_dev*/
+artifacts/wave_neural_field_autodecoder_m0_ocean_dev*/
+artifacts/wave_neural_field_prompt_encoder_m0_ocean_dev*/
 # Per-system stable-baseline rows are local; summaries and selection grids are versioned.
 artifacts/pbno_m0_joint_query_stable/**/system_metrics.csv
 experiments/runs/

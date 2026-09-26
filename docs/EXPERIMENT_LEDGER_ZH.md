@@ -475,6 +475,34 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **证据**：[M0 报告](../reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md)；冻结机器结果与图在
   `artifacts/pbno_posterior_composer_m0_summary/`。
 
+### E23：Heterogeneous functional operator M0
+
+- **单一假设**：coordinate-aware complex set encoder 与 nonlinear neural field 可以替换固定 PCA chart，
+  同时保留 arbitrary receiver masks 下的 posterior evidence accumulation。
+- **数据与 split**：OpenFWI 500/500/500、Deepwave 512/128/256、Ocean 256/64/128；physical-system split；
+  strict-Q3 K=2；每个 prompt 独立 10%/25%/50%/100% receiver masks。
+- **matched baseline**：M4 rank-16 posterior memory / spectral dictionary；所有 residual 模型 zero-update
+  时回到该基线。
+- **oracle**：10% receivers 的 compressed full-dictionary headroom 为 OpenFWI 16.2%、Deepwave 21.0%、
+  Ocean 49.3%；Ocean 在 full receivers 仍为 37.1%。oracle 使用 target truth，只是 existence result。
+- **functional evidence**：64,226 参数；OpenFWI 约 +0.1%，Deepwave +1.2%--2.4%，Ocean 选择 step 0。
+- **reranking**：127,522 参数 end-to-end residual reranker 最多约 1%--2%；learned mix 为负。改成直接
+  listwise response-metric 且扩到 16 个 train layouts 后，OpenFWI test +0.6%--1.2%，Deepwave 回退，
+  Ocean 仅最稀疏 setting +0.43%。
+- **pairwise metric 负结果**：Ocean 10% receivers 的 analytic/raw-L2/coherence/amplitude candidate error 为
+  0.698/0.804/0.825/0.911，target oracle 为 0.360；普通 prompt similarity 无法预测 target-query similarity。
+- **neural-field 分解**：212,354 参数 nonlinear decoder 的 train full-table reconstruction 为 0.229；unseen
+  full-response latent fit 为 0.368，但 K=2 sparse optimization 为 1.09--1.27，328,736 参数 amortized encoder
+  test 约 1.035。capacity 成立不代表 sparse identifiability。
+- **结论作用域**：NO-GO 只针对当前三域、strict-Q3 K=2 和无约束 nonlinear latent；不否定有显式物理
+  observation model、更多信息 prompts 或真实新域下的 functional representation。
+- **决定**：不继续扫 width/depth/heads/loss/latent dimension；保留线性 posterior chart 作为可观测坐标，
+  learning 只放在 operator prior 与受控 chart transport。
+- **重启条件**：更强 conditional prompts、物理可辨识 latent、新真实 multistatic 域，或不读 target truth 的
+  target-free oracle 相对 M4 仍有至少 15% headroom。
+- **证据**：[正式报告](../reports/HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md)；冻结汇总与主图在
+  `artifacts/heterogeneous_functional_operator_m0_summary/`。
+
 ## 4. 值得从正反馈继续挖的方向
 
 以下按“与当前主线的连接强度 / 最小验证成本”排序。它们不是要求同时实现的组件清单。

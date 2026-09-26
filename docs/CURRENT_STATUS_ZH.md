@@ -5,6 +5,20 @@
 
 ## 2026-09-26 最新结论：M4 解决 storage、通过第四域与统一连续 adapter
 
+### 后续 M0：heterogeneous functional representation 的 oracle 通过，方法 NO-GO
+
+针对固定 PCA chart 的泛化性质疑，新增了每个 prompt 独立 receiver masks 的 strict-Q3 K=2 协议。
+10% receivers 下，rank-16 compressed full-dictionary oracle 相对当前 posterior memory 的空间为 OpenFWI
+16.2%、Deepwave 21.0%、Ocean 49.3%；因此 representation headroom gate 通过。
+
+但 coordinate-aware additive evidence operator、functional reranker、listwise response metric 和 nonlinear
+complex neural field 都未通过方法 gate。最好的 learned development 增益只有约 0.6%--2.4%；Ocean
+neural field 虽可将 unseen full-response latent fit 到 0.368，K=2 sparse prompt encoder 仍约 1.035。
+结论是 nonlinear manifold capacity 与 sparse conditional identifiability 必须分开；不要继续扫 encoder
+宽度、层数、heads 或 latent dimension。当前保留线性 posterior chart 作为可观测坐标，把 learning 限制在
+operator prior 与受控 chart transport。详见
+[Heterogeneous Functional Operator M0](../reports/HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md)。
+
 ### 后续 M0：统一架构成立，learned refinement 停止
 
 M4 的 posterior、spectral dictionary、neural proposal 与 risk adapter 已进入一个 121,603 参数的共享

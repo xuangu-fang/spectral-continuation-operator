@@ -1,5 +1,10 @@
 # 报告导航
 
+- [`HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md`](HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md)：**当前最新
+  表征升级边界**；不规则 receiver prompts、functional natural-parameter encoder、learned reranking、
+  nonlinear complex neural field，以及“representation capacity 不等于 sparse identifiability”的 NO-GO
+  结论。
+
 - [`PBNO_POSTERIOR_COMPOSER_M0_ZH.md`](PBNO_POSTERIOR_COMPOSER_M0_ZH.md)：**当前最新方法边界**；
   posterior-initialized latent composer、strict adapter fallback、九轮结构迭代，以及 learned correction 在
   calibration 为正但 unseen systems 失败的正式三 seed 结论。

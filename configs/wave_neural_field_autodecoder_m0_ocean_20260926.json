@@ -1,0 +1,33 @@
+{
+  "experiment": "wave_neural_field_autodecoder_m0_ocean",
+  "date": "2026-09-26",
+  "seed": 20260926,
+  "selection_seed": 20260925,
+  "test_seed": 20260923,
+  "validation_layout_seed": 20260928,
+  "test_layout_seed": 20260929,
+  "latent_dimensions": 32,
+  "width": 128,
+  "layers": 4,
+  "learning_rate": 0.001,
+  "weight_decay": 0.000001,
+  "training_prior_strength": 0.0001,
+  "batch_systems": 32,
+  "batch_coordinates": 256,
+  "steps": 10000,
+  "evaluation_interval": 1000,
+  "eval_batch_size": 32,
+  "coordinate_chunk": 512,
+  "receiver_fractions": [0.1, 0.25, 0.5, 1.0],
+  "evaluation_repeats": 1,
+  "inference_steps": 200,
+  "inference_learning_rate": 0.05,
+  "inference_prior_strength": 0.001,
+  "inference_batch_size": 64,
+  "domains": {
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "budget": 2
+    }
+  }
+}

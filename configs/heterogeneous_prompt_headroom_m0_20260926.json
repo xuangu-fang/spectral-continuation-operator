@@ -1,0 +1,41 @@
+{
+  "experiment": "heterogeneous_prompt_headroom_m0",
+  "date": "2026-09-26",
+  "rank": 128,
+  "value_rank": 16,
+  "budget": 2,
+  "receiver_fractions": [0.1, 0.25, 0.5, 1.0],
+  "ridge_strengths": [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0],
+  "layout_seed": 20260927,
+  "prompt_seed": 20260925,
+  "repeats": 1,
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "budgets": {
+        "2": {
+          "operator": {"strength": 0.1, "normalization": "coordinate_rms"},
+          "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.3, "blend": 1.0}
+        }
+      }
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "budgets": {
+        "2": {
+          "operator": {"strength": 0.1, "normalization": "coordinate_rms"},
+          "memory": {"latent_dimensions": 32, "neighbors": 32, "temperature": 0.1, "blend": 0.1}
+        }
+      }
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "budgets": {
+        "2": {
+          "operator": {"strength": 0.00001, "normalization": "raw"},
+          "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.1, "blend": 0.75}
+        }
+      }
+    }
+  }
+}

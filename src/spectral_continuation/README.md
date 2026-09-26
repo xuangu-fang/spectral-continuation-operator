@@ -5,6 +5,17 @@
 
 ## Active：当前 wave-system representation
 
+- `audit_heterogeneous_prompt_headroom.py`：strict-Q3 K=2、每个 prompt 独立 receiver masks 下的 compressed
+  dictionary、query-local ridge 与 subspace oracle；只作 identifiability/headroom 审计；
+- `train_functional_evidence_operator.py`：coordinate-aware complex natural-parameter encoder 与 additive
+  evidence posterior；zero decoder 严格回退 M4；当前跨域 gate 未过；
+- `train_functional_prompt_reranker.py`、`train_functional_response_metric.py`：functional candidate reranking
+  与 listwise target-response metric；当前只保留 NO-GO 和 top-1 regret 诊断；
+- `train_wave_neural_field_autodecoder.py`、`train_wave_neural_field_prompt_encoder.py`：nonlinear complex
+  neural-field capacity 与 sparse identifiability 分层审计；不得在当前协议继续扫容量；
+- `summarize_heterogeneous_functional_operator.py`：冻结 oracle、learned-method gap、neural-field capacity 与
+  identifiability 主图/表；
+
 - `global_bayesian_response_operator.py`：strict Q3 global complex response basis、解析 posterior、retrieval
   baseline 与 system-level evaluation；
 - `train_prompted_bayesian_neural_operator.py`：PBNO 的 zero-initialized query basis、nonlinear latent

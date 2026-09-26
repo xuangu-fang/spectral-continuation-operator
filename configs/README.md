@@ -2,6 +2,15 @@
 
 ## 当前主线
 
+- `heterogeneous_prompt_headroom_m0_20260926.json`：strict-Q3 K=2、独立 receiver masks 的 compressed
+  candidate/subspace headroom；
+- `functional_evidence_operator_m0_20260926.json`、`functional_prompt_reranker_m0_20260926.json` 与
+  `functional_response_metric_m1_multilayout_20260926.json`：additive evidence、functional reranking 与
+  多 query/layout listwise metric 的冻结 NO-GO 配置；
+- `wave_neural_field_autodecoder_m0_ocean_20260926.json` 与
+  `wave_neural_field_prompt_encoder_m0_ocean_20260926.json`：nonlinear complex neural field 的完整 response
+  capacity 与 K=2 sparse latent identifiability 分层审计；
+
 - `pbno_m0_joint_query_20260925.json` 与 `pbno_m1_semilinear_long_20260925.json`：strict Q3 的 global
   Bayesian operator 与三 seed PBNO 主实验；
 - `pbno_m2_receiver_sparse_20260925.json`：完成 coordinate-RMS residual likelihood 后唯一一次冻结的

@@ -15,6 +15,24 @@ in-context operator 的判断与分阶段方案，见
 
 ## 当前主线：Wave as Prompt
 
+### 2026-09-26 最新表征边界：heterogeneous functional operator 未替代 posterior chart
+
+针对“PCA--MAP 太简单、难以编码复杂非统一输入”的质疑，我们冻结 strict-Q3 K=2，并让每个 prompt 使用
+独立的 10%/25%/50%/100% receiver masks。rank-16 compressed candidate oracle 在 10% receivers 下为
+OpenFWI 16.2%、Deepwave 21.0%、Ocean 49.3%，证明候选集合存在空间；但三类 learning-based 升级均未兑现：
+
+- additive functional evidence encoder：Deepwave 最多 +2.4%，OpenFWI 约为零，Ocean 回退；
+- functional reranker / listwise response metric：test 最多约 1%，Ocean top-1 regret 仍为 0.24--0.35；
+- nonlinear complex neural field：完整 unseen response 可拟合到 0.368，但 K=2 sparse prompt encoder 约为
+  1.035。
+
+因此不继续扩大 encoder/decoder 容量。当前最重要的结论是：**nonlinear representation capacity 不等于
+sparse conditional identifiability**；线性 response chart 暂时作为可观测 posterior 坐标保留，learning 应
+发生在 posterior operator prior 和受控 chart transport 上。完整公式、主图、机器结果与重启条件见
+[Heterogeneous Functional Operator M0 报告](reports/HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md)。
+
+![Heterogeneous functional operator M0](artifacts/heterogeneous_functional_operator_m0_summary/heterogeneous_functional_operator_m0.png)
+
 ### 2026-09-26 最新边界：Posterior Operator Composer M0
 
 M4 的 Bayesian posterior、rank-16 spectral dictionary、neural proposal 与连续 risk adapter 已统一进一个
