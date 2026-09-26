@@ -117,49 +117,103 @@ def route_split(
         (global_prediction, kernel_prediction, neural_prediction), dim=0
     )
     branch_error = relative_error(branch_predictions, evaluator.truth[None])
+    kernel_residual = kernel_prediction - evaluator.truth
+    neural_residual = neural_prediction - evaluator.truth
+    truth_energy = evaluator.truth.abs().square().sum(dim=-1).clamp_min(1e-20)
+    kernel_neural_cross = (
+        torch.real((kernel_residual.conj() * neural_residual).sum(dim=-1))
+        / truth_energy
+    )
+    raw_prompt = (
+        evaluator.center[evaluator.observed][:, None]
+        + evaluator.scale[evaluator.observed][:, None] * evaluator.context
+    )
+    amplitude = raw_prompt.abs()
+    amplitude_mean = amplitude.mean(dim=-1).clamp_min(1e-12)
+    amplitude_cv = amplitude.std(dim=-1) / amplitude_mean
+    amplitude_peak = amplitude.amax(dim=-1) / amplitude_mean
+    unit_phase = raw_prompt / amplitude.clamp_min(1e-12)
+    phase_roughness = (unit_phase[..., 1:] - unit_phase[..., :-1]).abs().mean(dim=-1)
+
+    def disagreement(left: torch.Tensor, right: torch.Tensor) -> torch.Tensor:
+        numerator = torch.linalg.vector_norm(left - right, dim=-1)
+        denominator = 0.5 * (
+            torch.linalg.vector_norm(left, dim=-1)
+            + torch.linalg.vector_norm(right, dim=-1)
+        ).clamp_min(1e-12)
+        return numerator / denominator
+
+    prediction_scale = torch.linalg.vector_norm(global_prediction, dim=-1).clamp_min(1e-12)
+    prompt_scale = torch.linalg.vector_norm(raw_prompt, dim=-1).clamp_min(1e-12)
+    prompt_features = torch.stack(
+        (
+            torch.log1p(amplitude_cv),
+            torch.log1p(amplitude_peak),
+            phase_roughness,
+            torch.log1p(disagreement(global_prediction, kernel_prediction)),
+            torch.log1p(disagreement(global_prediction, neural_prediction)),
+            torch.log1p(disagreement(kernel_prediction, neural_prediction)),
+            torch.log1p(torch.linalg.vector_norm(kernel_prediction, dim=-1) / prediction_scale),
+            torch.log1p(prediction_scale / prompt_scale),
+        ),
+        dim=-1,
+    )
 
     budget = evaluator.observed.shape[1] // evaluator.receiver_count
     if budget < 2:
-        raise ValueError("leave-one-probe-out routing requires K >= 2")
-    observed_group = evaluator.observed.reshape(
-        len(evaluator.observed), budget, evaluator.receiver_count
-    )
-    context_group = evaluator.context.reshape(
-        len(evaluator.observed), len(evaluator.raw), budget, evaluator.receiver_count
-    )
-    held_positions = np.linspace(
-        0, budget - 1, min(holdout_count, budget), dtype=np.int64
-    )
-    self_error = torch.zeros(
-        (3, len(evaluator.observed), len(evaluator.raw)),
-        dtype=torch.float32,
-        device=evaluator.raw.device,
-    )
-    for held in held_positions:
-        keep = [position for position in range(budget) if position != held]
-        observed = observed_group[:, keep].reshape(len(evaluator.observed), -1)
-        context = context_group[:, :, keep].reshape(
-            len(evaluator.observed), len(evaluator.raw), -1
+        # No response-level leave-one-out signal exists for a single prompt.
+        # Keep a neutral placeholder so K=1 can still be used for the frozen
+        # validation-only convex-blend audit.
+        self_error = torch.ones(
+            (3, len(evaluator.observed), len(evaluator.raw)),
+            dtype=torch.float32,
+            device=evaluator.raw.device,
         )
-        target = observed_group[:, held]
-        truth = evaluator.raw[:, target].permute(1, 0, 2)
-        global_held = evaluator.predict(operator, observed, context, target)
-        kernel_held = predict_memory_config_batched(
-            evaluator,
-            operator,
-            memory,
-            observed=observed,
-            context=context,
-            target=target,
+        route = torch.ones(
+            (len(evaluator.observed), len(evaluator.raw)),
+            dtype=torch.long,
+            device=evaluator.raw.device,
         )
-        neural_held = neural_event_predictions(
-            model, encoded_neural, neural_center, neural_scale, observed, target
+    else:
+        observed_group = evaluator.observed.reshape(
+            len(evaluator.observed), budget, evaluator.receiver_count
         )
-        self_error += relative_error(
-            torch.stack((global_held, kernel_held, neural_held), dim=0), truth[None]
+        context_group = evaluator.context.reshape(
+            len(evaluator.observed), len(evaluator.raw), budget, evaluator.receiver_count
         )
-    self_error /= len(held_positions)
-    route = self_error.argmin(dim=0)
+        held_positions = np.linspace(
+            0, budget - 1, min(holdout_count, budget), dtype=np.int64
+        )
+        self_error = torch.zeros(
+            (3, len(evaluator.observed), len(evaluator.raw)),
+            dtype=torch.float32,
+            device=evaluator.raw.device,
+        )
+        for held in held_positions:
+            keep = [position for position in range(budget) if position != held]
+            observed = observed_group[:, keep].reshape(len(evaluator.observed), -1)
+            context = context_group[:, :, keep].reshape(
+                len(evaluator.observed), len(evaluator.raw), -1
+            )
+            target = observed_group[:, held]
+            truth = evaluator.raw[:, target].permute(1, 0, 2)
+            global_held = evaluator.predict(operator, observed, context, target)
+            kernel_held = predict_memory_config_batched(
+                evaluator,
+                operator,
+                memory,
+                observed=observed,
+                context=context,
+                target=target,
+            )
+            neural_held = neural_event_predictions(
+                model, encoded_neural, neural_center, neural_scale, observed, target
+            )
+            self_error += relative_error(
+                torch.stack((global_held, kernel_held, neural_held), dim=0), truth[None]
+            )
+        self_error /= len(held_positions)
+        route = self_error.argmin(dim=0)
     routed_prediction = torch.gather(
         branch_predictions.permute(1, 2, 0, 3),
         2,
@@ -180,11 +234,20 @@ def route_split(
         "route_oracle_agreement": float((route == oracle_route).float().mean().cpu()),
         "_self_error": self_error.permute(1, 2, 0).cpu().numpy(),
         "_branch_event_error": branch_error.permute(1, 2, 0).cpu().numpy(),
+        "_kernel_neural_cross": kernel_neural_cross.cpu().numpy(),
+        "_prompt_features": prompt_features.cpu().numpy(),
     }
 
 
-def run(config_path: Path, output: Path, device: str) -> dict:
+def run(
+    config_path: Path,
+    output: Path,
+    device: str,
+    test_seed: int | None = None,
+) -> dict:
     payload = json.loads(config_path.read_text(encoding="utf-8"))
+    if test_seed is not None:
+        payload["test_seed"] = test_seed
     output.mkdir(parents=True, exist_ok=True)
     result = {}
     for domain, setting in payload["domains"].items():
@@ -254,8 +317,18 @@ def main() -> None:
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--device", default="cuda")
+    parser.add_argument(
+        "--test-seed",
+        type=int,
+        help="Override the frozen test prompt seed without changing the dated config.",
+    )
     args = parser.parse_args()
-    print(json.dumps(run(args.config, args.output, args.device), indent=2))
+    print(
+        json.dumps(
+            run(args.config, args.output, args.device, test_seed=args.test_seed),
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

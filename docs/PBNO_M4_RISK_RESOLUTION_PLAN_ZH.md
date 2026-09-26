@@ -7,7 +7,9 @@
 
 - M4-A 通过：不是删除 instances，而是用 rank-16 spectral coefficients 压缩每个 operator value；
   value-bank storage 降低超过 99%，误差退化小于 1.5%。
-- M4-B 未通过：hard LOO 与 shared risk head 均不能让所有域稳定处于最佳 adapter 的 2% 内，记为 NO-GO。
+- M4-B 通过：hard LOO 与 shared risk head 未过，但 1,665 参数的连续 prior adapter 在三 prompt seeds、
+  三域、K=1/2/4/8 的 12/12 设置中均优于最佳单分支；OpenFWI/Ocean K=2 相对 global baseline 改善
+  17.25%/21.85%。NO-GO 只适用于 hard routing，不适用于连续 composition。
 - M4-C 通过：独立 structural lattice 域在 K=1/2 改善 10.31%/8.18%，bootstrap 下界为正。
 - conditional flow gate 没有新增超过 15% 的证据，保持关闭。
 

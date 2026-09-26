@@ -70,7 +70,9 @@ flow；重启条件必须是新的信息条件或数据域产生超过 15% 的 c
 bank 压到原始 0.65%/0.93%，各预算 test 退化不超过 1.48%/1.19%；key 仍必须由实际 prompt mask 重算
 posterior，不能退回已失败的 unconditional full-latent key。新的 structural lattice strict-Q3 域在 K=1/2
 相对 global strong baseline 改善 10.31%/8.18%，成为第四域正证据。prompt-only hard LOO 与小型 shared
-risk head 均未稳定通过全域 2% gate；不要继续扫 router threshold。详见
+risk head 均未稳定通过全域 2% gate；但一个 1,665 参数连续 prior adapter 在三组独立 prompt seeds、三个域、
+K=1/2/4/8 的 12/12 设置中均优于最佳单分支，OpenFWI/Ocean K=2 相对 global 改善 17.25%/21.85%。
+不要继续扫 hard-router threshold；不要把三域共享写成 unseen-domain zero-shot。详见
 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`。
 
 ## 当前执行顺序
@@ -80,8 +82,8 @@ risk head 均未稳定通过全域 2% gate；不要继续扫 router threshold。
 1. 冻结三个跨域 system split、target/context episodes 和归一化预算轴，不再按 test 调参；
 2. 保留 M3 Bayesian tokenizer + neural transport/posterior kernel 作为当前 strongest method；
 3. memory value compression 已完成；下一步不要再删 prototype instances，而应保留 rank-16 spectral
-   dictionary。统一 prior adapter 当前为 NO-GO，只有跨 query calibration supervision 或共享 adapter 新机制
-   才重启；
+   dictionary。统一 prior adapter 使用连续 kernel--neural residual composition；hard LOO/risk selection 是
+   NO-GO，不得把二者混淆或继续扫 threshold；
 4. 所有新方法必须同时击败当前 response subspace 与 validation 选出的最强同预算 baseline；
 5. 第四个 structural-wave synthetic 域已通过；新数据的唯一高优先级是带可信 metadata 的真实/实验
    multistatic response，不再增加第五个同质 synthetic simulator；

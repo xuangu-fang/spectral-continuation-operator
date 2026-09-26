@@ -1,7 +1,7 @@
-# PBNO M4：压缩、跨结构波验证与统一路由边界
+# PBNO M4：压缩、跨结构波验证与统一 prior adapter
 
 > 日期：2026-09-26
-> 状态：正式三 prompt-seed 结果已完成；统一 per-episode router 为 NO-GO
+> 状态：正式三 prompt-seed 结果已完成；统一连续 adapter 通过，hard router 为 NO-GO
 > 主指标：逐 physical system 等权的 raw complex relative L2
 
 ## 1. 一句话结论
@@ -14,9 +14,10 @@ M4 解决了 M3 的 memory storage 风险，并把 strict joint source--frequenc
    **0.16%--1.48%/0.16%--1.19%**；
 2. 新的 heterogeneous damped structural lattice 域在 K=1/2 相对 global Bayesian strong baseline 改善
    **10.31%/8.18%**，paired bootstrap 下界为 **9.64%/7.51%**；
-3. 仅用 prompts 做 leave-one-probe-out 的统一 adapter router 在 Deepwave 有效，但在 Ocean 把
-   in-prompt reconstruction 与 unseen-query extrapolation 混淆。小型共享 risk head 仍不能让所有域和预算
-   稳定处于最佳分支的 2% 以内，因此该项诚实记为 **NO-GO**。
+3. hard leave-one-probe-out router 会把 in-prompt reconstruction 与 unseen-query extrapolation 混淆；但
+   一个不读 domain ID 的 **1,665 参数连续 prior adapter** 在三组独立 prompt seeds、三个域和
+   K=1/2/4/8 的 12 个设置中全部优于最佳单分支。OpenFWI/Ocean 的 K=2 相对 global strong baseline
+   改善 **17.25%/21.85%**，通过统一部署 gate。
 
 ![四域 strict-Q3 预算曲线](../artifacts/pbno_m4_summary/pbno_m4_four_domain_q3.png)
 
@@ -137,11 +138,10 @@ latent-energy gate 在 20/10 dB 下全部回退到 train mean，error 均为约 
 
 ![噪声鲁棒性](../artifacts/pbno_m4_summary/pbno_m4_noise_robustness.png)
 
-## 5. 统一 prior router 为什么没有通过
+## 5. 从 hard router 的失败到统一连续 prior adapter
 
-目标是在不读取 domain label 或 target truth 时，从 global、posterior-kernel 和 neural latent transport 中选择
-一个分支。首版把已有 K 个 prompts 逐个留出，用剩余 prompts 预测被留出的 response，并选择 self-error
-最小的分支。
+目标是在部署时不读取 domain label 或 target truth，同时适配 posterior-kernel 与 neural latent transport。
+首版把已有 K 个 prompts 逐个留出，用剩余 prompts 预测被留出的 response，并选择 self-error 最小的分支。
 
 K=2 单 seed test：
 
@@ -153,15 +153,60 @@ K=2 单 seed test：
 
 hard LOO 在 Deepwave 能正确偏向 neural，却在 Ocean 误把 global 的 in-prompt fit 当作更好的 Q3 外推。随后用
 三域 validation episodes 训练一个共享 1,443 参数 risk head，只读取三个分支的 LOO errors，不读取域标签；
-三个训练 seed 结果一致。它修复 Ocean/OpenFWI，但 Deepwave K=2 仍比最佳分支差约 2.1%--2.4%，没有稳定
-通过冻结的 2% gate。继续调 threshold 只会在三个域之间搬运误差，因此停止。
+三个训练 seed 结果一致。它修复 Ocean/OpenFWI，但 Deepwave K=2 仍比最佳分支差约 2.1%--2.4%。因此，
+**hard selection 与只预测单分支风险的路线是 NO-GO**；继续扫 threshold 只会在三个域之间搬运误差。
 
 这个负结果揭示：
 
-> prompt reconstruction risk 不等于 unseen-query extrapolation risk。
+> prompt reconstruction risk 不等于 unseen-query extrapolation risk；但两个有偏 prior 的复残差仍可能互补。
 
-下一次只有在训练协议直接提供跨 query 的 calibration episodes，或一个共享 adapter 本身消除分支差异时，才
-应重启 routing；不再继续扫描 LOO threshold。
+### 5.1 成功的最小升级
+
+不再预测“选哪个分支”，而是让一个共享小网络输出连续 neural weight $g(D)$：
+
+$$
+\widehat u=(1-g(D))\widehat u_{kernel}+g(D)\widehat u_{neural}.
+$$
+
+$g$ 只读取 target-free 的 prompt 与预测统计：幅值离散度、峰度、局部相位粗糙度、三个分支之间的归一化
+disagreement、预测与 prompt 的能量比；K 大于 1 时再加入八个 LOO error summaries，K=1 时将它们置零并
+提供一个 availability bit。整个 adapter 是一个 17--32--32--1 的 MLP，共 1,665 参数。它不读取 domain ID、
+隐藏介质或测试 target；validation episode 的 query truth 仅用于一次性学习 mixture risk，测试时权重完全冻结。
+
+训练损失没有重新解码复场，而是用两个分支 residual 的平方范数与复内积，精确计算连续混合后的 relative
+L2。这一点允许 adapter 利用 residual cancellation，而不是只模仿 best-branch label。
+
+### 5.2 三 prompt-seed 正式结果
+
+下表中的 error 和 gain 均先在每个 prompt seed 内按 physical system 等权计算，再对 20260924/25/26 三组
+独立 test prompt episodes 取均值。为给 adapter 一个更严格的比较项，“最佳单分支”事后取该 seed 上三个
+冻结分支中 aggregate test error 最低者；这个 hindsight choice 只用于报告，adapter 的输入和权重从未读取
+test truth。
+
+| 数据域 | K | 最佳单分支 | 统一 adapter | 相对最佳分支改善 | 相对 global 改善 |
+|---|---:|---:|---:|---:|---:|
+| OpenFWI | 1 | 0.15024 | **0.14797** | 1.51% | 24.24% |
+| OpenFWI | 2 | 0.14707 | **0.14430** | 1.89% | 17.25% |
+| OpenFWI | 4 | 0.14283 | **0.14085** | 1.39% | 12.00% |
+| OpenFWI | 8 | 0.13960 | **0.13703** | 1.84% | 10.06% |
+| Deepwave | 1 | 0.11775 | **0.11728** | 0.40% | 6.62% |
+| Deepwave | 2 | 0.09170 | **0.09137** | 0.36% | 6.23% |
+| Deepwave | 4 | 0.06930 | **0.06865** | 0.93% | 5.06% |
+| Deepwave | 8 | 0.05398 | **0.05277** | 2.25% | 3.83% |
+| Ocean | 1 | 0.62415 | **0.62297** | 0.19% | 18.02% |
+| Ocean | 2 | 0.48662 | **0.47704** | 1.97% | 21.85% |
+| Ocean | 4 | 0.38888 | **0.37963** | 2.39% | 15.75% |
+| Ocean | 8 | 0.32890 | **0.32049** | 2.56% | 10.80% |
+
+12/12 设置均优于最佳单分支；跨 seed 的最弱改善是 Ocean K=1 的 0.08%，没有任何大于 2% 的退化。
+两个域的 K=2 相对 global baseline 超过 10%，所以冻结的 M4-B gate 通过。需要诚实区分：这是跨三个域共享
+的轻量 calibration operator，还不是对未参与训练的第五个物理域的 zero-shot universal router。
+
+![统一连续 prior adapter](../artifacts/pbno_m4_summary/pbno_m4_unified_adapter.png)
+
+下一步不再扫描 LOO threshold。若要强化 universal claim，应冻结该 adapter 后增加未参与 calibration 的
+物理域；若要强化方法贡献，应把连续 mixture 提升为 latent/operator-space residual composition，而不是堆更多
+hard-routing features。
 
 ## 6. 四域 K=2 主表与当前论文含义
 
@@ -178,11 +223,11 @@ hard LOO 在 Deepwave 能正确偏向 neural，却在 Ocean 误把 global 的 in
 2. linear Gaussian PCA--MAP 是严格特例；
 3. posterior-conditioned empirical operator prior 与 neural latent transport 是两种可验证的非线性升级；
 4. 经验 prior 的 value 可以被共享 spectral dictionary 极强压缩；
-5. 该机制跨 seismic、ultrasound、ocean acoustics 与 structural lattice waves 成立，但最优 adapter 仍依赖
-   training domain，prompt-only universal routing 尚未解决。
+5. 1,665 参数的连续 adapter 在不读取域标签时统一了三个已有域、所有预算的 prior composition；第四个
+   structural-wave 域验证了 posterior kernel 的跨物理有效性，但尚未加入 adapter calibration。
 
 它比 M3 更接近完整论文，但仍有两个诚实风险：第四域是可复现 synthetic structural benchmark，不是真实实验；
-方法仍是 validation-selected adapter family，而非单一 universal network。这两点不应被隐藏。
+统一 adapter 在三个训练域上共享，但尚未证明对全新物理域 zero-shot 泛化。这两点不应被隐藏。
 
 ## 7. 复现入口
 
@@ -191,9 +236,33 @@ hard LOO 在 Deepwave 能正确偏向 neural，却在 Ocean 误把 global 的 in
 - structural generator：`generate_structural_lattice_wave_data.py`；
 - posterior-kernel formal config：`configs/structural_lattice_posterior_memory_20260926.json`；
 - noise audit：`audit_pbno_noise_robustness.py`；
-- router audits：`audit_prompt_only_router.py` 与 `train_prompt_risk_router.py`；
+- router/adapter audits：`audit_prompt_only_router.py`、`train_prompt_risk_router.py` 与
+  `train_unified_prompt_prior_adapter.py`；
 - 机器主表与正文图：`artifacts/pbno_m4_summary/`；
 - structural archive SHA256：`5dbe1359ba6a8a2f53add0a581c16c8f6e3892298d296b16c83ae95222d50819`。
+
+统一 adapter 的正式配置是 `configs/pbno_unified_prior_adapter_20260926.json`。每个 seed 先生成冻结分支的
+prompt diagnostics，再只用 validation episodes 拟合共享 adapter：
+
+```bash
+for seed in 20260924 20260925 20260926; do
+  python -m spectral_continuation.audit_prompt_only_router \
+    --config configs/pbno_unified_prior_adapter_20260926.json \
+    --output artifacts/pbno_prompt_adapter_formal_promptseed${seed} \
+    --test-seed ${seed} --device cuda
+  python -m spectral_continuation.train_unified_prompt_prior_adapter \
+    --router-root artifacts/pbno_prompt_adapter_formal_promptseed${seed} \
+    --output artifacts/pbno_unified_adapter_formal_seed${seed} \
+    --seed ${seed} --steps 4000 --device cuda
+done
+
+python -m spectral_continuation.summarize_pbno_m4 \
+  --artifacts artifacts --output artifacts/pbno_m4_summary
+```
+
+正式逐 seed 数字位于 `m4_unified_adapter_by_seed.csv`，三 seed 聚合位于
+`m4_unified_adapter_summary.csv`。`m4_router_no_go.csv` 特意保留 hard routing 的负结果，不能把它误读为
+连续 adapter 的结果。
 
 大型 response archive、checkpoints 与逐样本 arrays 保持本地，不进入 Git；配置、manifest、聚合统计和正文图
 进入版本管理。

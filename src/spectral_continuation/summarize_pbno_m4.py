@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+import numpy as np
 
 BUDGETS = (1, 2, 4, 8)
 
@@ -29,6 +30,11 @@ def run(artifacts: Path, output: Path) -> dict:
     router_risk = json.loads(
         (artifacts / "pbno_prompt_risk_router_decision_seed20260927/summary.json").read_text()
     )
+    adapter_runs = {}
+    for seed in (20260924, 20260925, 20260926):
+        adapter_runs[seed] = json.loads(
+            (artifacts / f"pbno_unified_adapter_formal_seed{seed}/summary.json").read_text()
+        )
 
     all_results = {**m3, "StructuralLattice": {}}
     for budget in BUDGETS:
@@ -60,7 +66,7 @@ def run(artifacts: Path, output: Path) -> dict:
             }
         )
     with (output / "m4_main_table.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -144,9 +150,107 @@ def run(artifacts: Path, output: Path) -> dict:
             }
         )
     with (output / "m4_router_no_go.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(router_rows[0]))
+        writer = csv.DictWriter(
+            handle, fieldnames=list(router_rows[0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(router_rows)
+
+    adapter_rows = []
+    adapter_summary_rows = []
+    router_roots = {
+        seed: json.loads(
+            (
+                artifacts
+                / f"pbno_prompt_adapter_formal_promptseed{seed}"
+                / "summary.json"
+            ).read_text()
+        )
+        for seed in adapter_runs
+    }
+    for domain in ("OpenFWI", "Deepwave", "Ocean"):
+        for budget in BUDGETS:
+            per_seed = []
+            for seed, adapter in adapter_runs.items():
+                entry = adapter[f"{domain.lower()}_k{budget}"]
+                global_error = router_roots[seed][domain][str(budget)]["test"][
+                    "global_mean"
+                ]
+                row = {
+                    "domain": domain,
+                    "budget": budget,
+                    "prompt_seed": seed,
+                    "best_branch": entry["best_branch"],
+                    "global_error": global_error,
+                    "best_branch_error": entry["best_branch_mean"],
+                    "adapter_error": entry["adapter_mean"],
+                    "gain_vs_global": 1.0 - entry["adapter_mean"] / global_error,
+                    "gain_vs_best_branch": entry["ratio_of_means_gain"],
+                    "system_win_rate_vs_best": entry["system_win_rate"],
+                }
+                adapter_rows.append(row)
+                per_seed.append(row)
+            adapter_summary_rows.append(
+                {
+                    "domain": domain,
+                    "budget": budget,
+                    "global_error_mean": float(np.mean([row["global_error"] for row in per_seed])),
+                    "best_branch_error_mean": float(
+                        np.mean([row["best_branch_error"] for row in per_seed])
+                    ),
+                    "adapter_error_mean": float(
+                        np.mean([row["adapter_error"] for row in per_seed])
+                    ),
+                    "gain_vs_global_mean": float(
+                        np.mean([row["gain_vs_global"] for row in per_seed])
+                    ),
+                    "gain_vs_best_mean": float(
+                        np.mean([row["gain_vs_best_branch"] for row in per_seed])
+                    ),
+                    "gain_vs_best_min": float(
+                        np.min([row["gain_vs_best_branch"] for row in per_seed])
+                    ),
+                    "gain_vs_best_max": float(
+                        np.max([row["gain_vs_best_branch"] for row in per_seed])
+                    ),
+                }
+            )
+    for filename, table in (
+        ("m4_unified_adapter_by_seed.csv", adapter_rows),
+        ("m4_unified_adapter_summary.csv", adapter_summary_rows),
+    ):
+        with (output / filename).open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(
+                handle, fieldnames=list(table[0]), lineterminator="\n"
+            )
+            writer.writeheader()
+            writer.writerows(table)
+
+    figure, axes = plt.subplots(1, 3, figsize=(10.2, 3.35), sharey=True)
+    for axis, domain in zip(axes, ("OpenFWI", "Deepwave", "Ocean"), strict=True):
+        domain_rows = [row for row in adapter_summary_rows if row["domain"] == domain]
+        means = [-100.0 * row["gain_vs_best_mean"] for row in domain_rows]
+        lower = [
+            100.0 * (row["gain_vs_best_max"] - row["gain_vs_best_mean"])
+            for row in domain_rows
+        ]
+        upper = [
+            100.0 * (row["gain_vs_best_mean"] - row["gain_vs_best_min"])
+            for row in domain_rows
+        ]
+        axis.errorbar(BUDGETS, means, yerr=(lower, upper), fmt="o-", color="#1768AC")
+        axis.axhline(0.0, color="#333333", linewidth=1)
+        axis.axhline(2.0, color="#B33A3A", linestyle="--", linewidth=1)
+        axis.set_xscale("log", base=2)
+        axis.set_xticks(BUDGETS, [str(value) for value in BUDGETS])
+        axis.set_title(domain)
+        axis.set_xlabel("Prompt budget K")
+        axis.grid(alpha=0.25)
+    axes[0].set_ylabel("Error change vs best branch (%)\n(lower is better)")
+    figure.tight_layout()
+    figure.savefig(output / "pbno_m4_unified_adapter.png", dpi=260)
+    figure.savefig(output / "pbno_m4_unified_adapter.pdf")
+    plt.close(figure)
 
     summary = {
         "main_table": rows,
@@ -154,6 +258,7 @@ def run(artifacts: Path, output: Path) -> dict:
         "latency_storage": latency,
         "noise": noise,
         "router_no_go": router_rows,
+        "unified_adapter": adapter_summary_rows,
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     return summary

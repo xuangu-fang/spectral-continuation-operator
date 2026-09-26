@@ -11,8 +11,9 @@
 > operator family。24 小时执行优先级已在第 9 节更新。
 
 > 2026-09-26 M4 更新：posterior memory 已用 rank-16 spectral value dictionary 压缩，第四个 structural-wave
-> strict-Q3 域通过 8% gate；prompt-only universal router 未通过 2% gate。后续论文方法应保留
-> validation-selected adapter family，不再把 universal routing 列为短期必要贡献。完整结果见
+> strict-Q3 域通过 8% gate；hard prompt-only router 未通过，但共享 1,665 参数连续 prior adapter 在三域、
+> K=1/2/4/8 和三 prompt seeds 上全部优于最佳单分支。后续论文方法采用 prompt-conditioned continuous
+> composition；不把它夸大为对未知物理域的 zero-shot universal router。完整结果见
 > `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`。
 
 ## 1. 一句话论文故事

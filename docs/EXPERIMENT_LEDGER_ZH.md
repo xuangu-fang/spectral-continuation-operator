@@ -424,7 +424,7 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
 - **证据**：[PBNO M3 报告](../reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)；机器结果
   `artifacts/pbno_m3_summary/` 与 `artifacts/pbno_posterior_kernel_formal_v3/summary.json`。
 
-### E21：PBNO M4 memory compression、structural waves 与 router NO-GO
+### E21：PBNO M4 memory compression、structural waves 与统一 prior adapter
 
 - **压缩假设**：局部 empirical prior 需要保留训练实例密度，但不一定需要保存每个实例的完整 response
   table。
@@ -440,9 +440,12 @@ NO-GO；普通 U-Net decoder 的失败也不等于波动物理 decoder 不可能
   solver。K=1/2 为 0.46261/0.44348 vs global 0.51577/0.48300，改善 10.31%/8.18%，bootstrap 下界
   9.64%/7.51%。
 - **OOD 边界**：相对 global 改善 13%--27%，但绝对 error 仍约 0.87--0.98；不能写成强结构 OOD 已解决。
-- **router NO-GO**：hard LOO 在 Ocean 把 prompt reconstruction 与 Q3 extrapolation 混淆；1,443 参数共享
-  risk head 三 seed 后，Deepwave K=2 仍比最佳分支差约 2.1%--2.4%。停止扫 threshold；重启需跨 query
-  calibration supervision 或真正共享 adapter。
+- **hard router NO-GO**：hard LOO 在 Ocean 把 prompt reconstruction 与 Q3 extrapolation 混淆；1,443 参数
+  shared risk head 三 seed 后，Deepwave K=2 仍比最佳分支差约 2.1%--2.4%。不要继续扫 selection threshold。
+- **连续 adapter 正结果**：在 validation cross-query episodes 上学习两个复 residual 的连续混合，而不是预测
+  hard branch label。单个 1,665 参数网络不读 domain ID/test truth；三组独立 prompt seeds 下，三个域和
+  K=1/2/4/8 的 12/12 设置均优于最佳单分支。OpenFWI/Deepwave/Ocean K=2 相对 global baseline 改善
+  17.25%/6.23%/21.85%。这是已有 calibration domains 上的统一部署，不是 unseen-domain zero-shot 证据。
 - **噪声**：OpenFWI/structural 在 20/10 dB 下相对 global 改善 9%--21%；Ocean gate 安全回退约 1.0，
   说明需要 noise-aware complex likelihood。
 - **证据**：[M4 正式报告](../reports/PBNO_M4_RISK_RESOLUTION_ZH.md)；正文图与主表

@@ -550,5 +550,139 @@
       "hard_loo_error": 0.5372288227081299,
       "risk_head_error": 0.4911690056324005
     }
+  ],
+  "unified_adapter": [
+    {
+      "domain": "OpenFWI",
+      "budget": 1,
+      "global_error_mean": 0.19534999628861746,
+      "best_branch_error_mean": 0.15024087329705557,
+      "adapter_error_mean": 0.14796789983908334,
+      "gain_vs_global_mean": 0.24238117914526627,
+      "gain_vs_best_mean": 0.015129486719767252,
+      "gain_vs_best_min": 0.014927089214324951,
+      "gain_vs_best_max": 0.015273869037628174
+    },
+    {
+      "domain": "OpenFWI",
+      "budget": 2,
+      "global_error_mean": 0.17442350089550018,
+      "best_branch_error_mean": 0.14707125226656595,
+      "adapter_error_mean": 0.1442961444457372,
+      "gain_vs_global_mean": 0.17251289161889308,
+      "gain_vs_best_mean": 0.01886900266011556,
+      "gain_vs_best_min": 0.018674015998840332,
+      "gain_vs_best_max": 0.01923924684524536
+    },
+    {
+      "domain": "OpenFWI",
+      "budget": 4,
+      "global_error_mean": 0.1600630134344101,
+      "best_branch_error_mean": 0.14283242324988046,
+      "adapter_error_mean": 0.14085277915000916,
+      "gain_vs_global_mean": 0.12001223777936516,
+      "gain_vs_best_mean": 0.013859371344248453,
+      "gain_vs_best_min": 0.013277411460876465,
+      "gain_vs_best_max": 0.014751195907592773
+    },
+    {
+      "domain": "OpenFWI",
+      "budget": 8,
+      "global_error_mean": 0.15236377716064453,
+      "best_branch_error_mean": 0.13960427542527518,
+      "adapter_error_mean": 0.13703482349713644,
+      "gain_vs_global_mean": 0.10060552773705418,
+      "gain_vs_best_mean": 0.018405715624491375,
+      "gain_vs_best_min": 0.0180436372756958,
+      "gain_vs_best_max": 0.018900692462921143
+    },
+    {
+      "domain": "Deepwave",
+      "budget": 1,
+      "global_error_mean": 0.12559710443019867,
+      "best_branch_error_mean": 0.11775101472934087,
+      "adapter_error_mean": 0.11728037645419438,
+      "gain_vs_global_mean": 0.0662151074578438,
+      "gain_vs_best_mean": 0.003997921943664551,
+      "gain_vs_best_min": 0.003714442253112793,
+      "gain_vs_best_max": 0.004264771938323975
+    },
+    {
+      "domain": "Deepwave",
+      "budget": 2,
+      "global_error_mean": 0.09744025021791458,
+      "best_branch_error_mean": 0.09170212596654892,
+      "adapter_error_mean": 0.09137315551439922,
+      "gain_vs_global_mean": 0.062256595007517866,
+      "gain_vs_best_mean": 0.003589153289794922,
+      "gain_vs_best_min": 0.0033153295516967773,
+      "gain_vs_best_max": 0.003951668739318848
+    },
+    {
+      "domain": "Deepwave",
+      "budget": 4,
+      "global_error_mean": 0.0723097895582517,
+      "best_branch_error_mean": 0.06929752478996913,
+      "adapter_error_mean": 0.06865049401919048,
+      "gain_vs_global_mean": 0.05060414415552169,
+      "gain_vs_best_mean": 0.009338140487670898,
+      "gain_vs_best_min": 0.009080588817596436,
+      "gain_vs_best_max": 0.009732365608215332
+    },
+    {
+      "domain": "Deepwave",
+      "budget": 8,
+      "global_error_mean": 0.05486901725331942,
+      "best_branch_error_mean": 0.0539817288517952,
+      "adapter_error_mean": 0.05276936416824659,
+      "gain_vs_global_mean": 0.03826668382777391,
+      "gain_vs_best_mean": 0.02245885133743286,
+      "gain_vs_best_min": 0.02217322587966919,
+      "gain_vs_best_max": 0.02276986837387085
+    },
+    {
+      "domain": "Ocean",
+      "budget": 1,
+      "global_error_mean": 0.7599035302797953,
+      "best_branch_error_mean": 0.6241497198740641,
+      "adapter_error_mean": 0.6229703426361084,
+      "gain_vs_global_mean": 0.18024213251578747,
+      "gain_vs_best_mean": 0.0018770297368367512,
+      "gain_vs_best_min": 0.0008294582366943359,
+      "gain_vs_best_max": 0.002481997013092041
+    },
+    {
+      "domain": "Ocean",
+      "budget": 2,
+      "global_error_mean": 0.6103878219922384,
+      "best_branch_error_mean": 0.4866211215655009,
+      "adapter_error_mean": 0.477042297522227,
+      "gain_vs_global_mean": 0.21845463513986352,
+      "gain_vs_best_mean": 0.019683440526326496,
+      "gain_vs_best_min": 0.018535196781158447,
+      "gain_vs_best_max": 0.02098947763442993
+    },
+    {
+      "domain": "Ocean",
+      "budget": 4,
+      "global_error_mean": 0.4506658911705017,
+      "best_branch_error_mean": 0.3888835112253825,
+      "adapter_error_mean": 0.3796282112598419,
+      "gain_vs_global_mean": 0.1574535834921745,
+      "gain_vs_best_mean": 0.02385711669921875,
+      "gain_vs_best_min": 0.019557952880859375,
+      "gain_vs_best_max": 0.027040481567382812
+    },
+    {
+      "domain": "Ocean",
+      "budget": 8,
+      "global_error_mean": 0.35930044452349347,
+      "best_branch_error_mean": 0.3288966417312622,
+      "adapter_error_mean": 0.32049023111661273,
+      "gain_vs_global_mean": 0.10801819427491888,
+      "gain_vs_best_mean": 0.0255621075630188,
+      "gain_vs_best_min": 0.023108363151550293,
+      "gain_vs_best_max": 0.026942133903503418
+    }
   ]
 }

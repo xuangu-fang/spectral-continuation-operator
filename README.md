@@ -9,7 +9,7 @@
 
 ## 当前主线：Wave as Prompt
 
-### 2026-09-26 最新结果：PBNO M4 压缩与第四物理域
+### 2026-09-26 最新结果：PBNO M4 压缩、第四物理域与统一 adapter
 
 M4 把 M3 的 posterior memory 改写为 spectral operator dictionary：保留全部 training-system identities，
 但将每个完整 response table 压成共享 basis 上的 16 个复系数。OpenFWI/Ocean 的 value-bank 存储降到原始
@@ -26,11 +26,15 @@ Bayesian strong baseline 改善 **10.31%/8.18%**，bootstrap 下界为 9.64%/7.5
 | Ocean | 0.60843 | **0.48723** | **19.92%** |
 | Structural lattice | 0.48300 | **0.44348** | **8.18%** |
 
-统一 prompt-only router 没有通过：shared risk head 修复 Ocean 后，Deepwave K=2 仍比最佳分支差约
-2.1%--2.4%。当前方法仍是 validation-selected adapter family，不包装成 universal router。完整方法、噪声、
-OOD、失败归因和复现入口见 [PBNO M4 正式报告](reports/PBNO_M4_RISK_RESOLUTION_ZH.md)。
+hard prompt-only router 没有通过，但由 prompts 控制的连续 prior adapter 通过：同一个不读 domain ID 的
+1,665 参数网络，在三组独立 prompt seeds、OpenFWI/Deepwave/Ocean 和 K=1/2/4/8 的 **12/12** 个设置中
+均优于最佳单分支。K=2 相对 global strong baseline 的改善分别为 **17.25%/6.23%/21.85%**。这解决了已有
+三域的统一部署问题，但尚不声称对未参与 calibration 的新物理域 zero-shot 泛化。完整方法、噪声、OOD、
+失败归因和复现入口见 [PBNO M4 正式报告](reports/PBNO_M4_RISK_RESOLUTION_ZH.md)。
 
 ![PBNO M4 四域主结果](artifacts/pbno_m4_summary/pbno_m4_four_domain_q3.png)
+
+![PBNO M4 统一 prior adapter](artifacts/pbno_m4_summary/pbno_m4_unified_adapter.png)
 
 ### 2026-09-25 上一结果：PBNO 后验核算子通过主 gate
 
@@ -281,11 +285,14 @@ filter、半径或手工 phase channels。
 
 ## 后续研究边界
 
-1. **RQ-1 已冻结，继续 response query**：先在第二个独立 multistatic 数据域验证 Q2，再以 reciprocity
-   routing + per-link spectral state 推进 Q3；不重跑普通 CNP。
-2. **停止 fixed front-end enumeration**：当前 69-channel Gram 是机制 POC，不再扫更多半径、方向和 edge；
-   多分支只在 Q3/Q4 multipath failure 明确后以 compact learnable tokens 重启。
-3. **Belief 和 Active 均后置**：只有条件多模态与 active oracle headroom 得到证据后，才进入 flow 或 policy。
+1. **冻结 M4 主协议**：不再按 test 调 kernel/neural 分支、mixture features 或 spectral rank；hard-router
+   threshold 已是明确负路线。
+2. **下一优先级是外部有效性**：寻找具有可信 source/frequency/receiver metadata 的真实 multistatic 数据，
+   或把当前 adapter 完全冻结后测试未参与 calibration 的第五物理域。
+3. **方法升级只做 operator-space composition**：若需要增强 AI 方法贡献，优先把输出凸组合提升为
+   latent/operator residual composition；不堆更多手工 routing loss。
+4. **Belief、flow 与 active 均保持后置**：只有 conditional oracle gap 或 active utility headroom 重新超过
+   既定 gate 才启动。
 
 稀疏系数/场重构继续作为历史参考，不切换为当前主任务。
 
@@ -293,25 +300,16 @@ filter、半径或手工 phase channels。
 
 1. [当前状态：一页式结论与决策](docs/CURRENT_STATUS_ZH.md) — 五分钟了解现在做到哪里、相信什么、
    下一步为何这样做；
-2. [In-Context Wave Response Query 计划](docs/IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md) — 当前 active
-   formulation、Q1/Q2/Q3、oracle audits、模型顺序和 gates；
-3. [RQ-1 正式报告](reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md) — reciprocity routing、轻量 query model、
-   三 seed test、geometry OOD 与负结果；
-4. [多分支相空间 MPS-1 报告](reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md) — 最新已完成 oracle、方法、
-   三 seed 正负结果与 gate；
-5. [多分支相空间波表征](docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md) — 冻结科学命题、相关工作与
-   原始 POC 协议；
-6. [WaveBench M1 报告](reports/WAVEBENCH_REPRESENTATION_M1_ZH.md) — 第二数据集正式结果、HarmoCore
-   归因与 2D/3D/时空表示路线；
-7. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
+2. [PBNO M4 正式报告](reports/PBNO_M4_RISK_RESOLUTION_ZH.md) — 当前最新方法、三 seed 结果、压缩、
+   第四物理域、噪声、hard-router 负结果与连续 adapter；
+3. [PBNO M3 方法报告](reports/PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md) — Bayesian tokenizer、neural
+   transport、posterior-kernel operator、OOD 与强基线；
+4. [Wave as Prompt 顶会计划](docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md) — 论文 framing、完整方法层次、
+   分阶段 gates 与 NO-GO 条件；
+5. [实验账本](docs/EXPERIMENT_LEDGER_ZH.md) — 逐条路线的正负证据、不要重复的实验、重启条件，以及
    仍未充分开发的正信号；
-8. [波动场表征学习 POC 完整报告](reports/WAVEFIELD_REPRESENTATION_POC_ZH.md) — 方法、协议、全部消融、
-   stress tests 与声明边界；
-9. [旧表征阶段冻结协议](docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md) — M0--M4 与旧 gates；
-10. [科学备忘录](docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md) — 波动方程、信号处理、
-   可预测性和可辨识性的通俗解释；
-11. [历史探索归档索引](docs/archive/INDEX_ZH.md) — 旧的谱延拓、校准、horizon 和局部 token 路线，仅保留
-   关键正负结论与原始证据入口。
+6. [跨域数据 provenance](docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md) — 数据来源、处理、split、hash 与复用
+   限制。其余旧表征、MPS、RQ-1 与谱延拓材料从 [docs 导航](docs/README.md) 按需进入。
 
 具体命令、数据 hash 和旧实验参数统一放在[复现档案](docs/REPRODUCIBILITY_ZH.md)，不再占据主页。
 按目录浏览时可使用 [docs 导航](docs/README.md) 和 [reports 导航](reports/README.md)。

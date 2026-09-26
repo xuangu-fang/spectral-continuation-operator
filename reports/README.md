@@ -1,6 +1,10 @@
 # 报告导航
 
-- [`PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：**当前最新正式结果**；
+- [`PBNO_M4_RISK_RESOLUTION_ZH.md`](PBNO_M4_RISK_RESOLUTION_ZH.md)：**当前最新正式结果**；rank-16
+  spectral dictionary、第四个 structural-wave 域、现实 prompt noise、hard-router 负结果，以及三域
+  K=1/2/4/8 共享连续 prior adapter。
+
+- [`PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：上一轮方法主体；
   stable Bayesian tokenizer、neural latent transport、posterior-kernel operator、strict-Q3 三域三 seed、
   OOD gate、matched CNP、continuous receiver 兼容性以及参数/存储/延迟。
 
@@ -12,10 +16,10 @@
   source--frequency query、global Bayesian operator、三 seed neural latent transport、Q2/Q3 hierarchy、
   OOD safety 与未通过的顶会 gate。
 
-- [`WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md`](WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)：**当前最新正式结果**；
+- [`WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md`](WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)：早期解析基线结果；
   latent spectrum prior、三域三 seed 强基线比较、probe saving、OOD 边界与 functional-rank 负结果。
 
-- [`CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)：当前最新结果；
+- [`CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)：早期跨域结果；
   OpenFWI、Deepwave、Ocean 的统一 response-query POC、response subspace、轻量 residual operator、
   The Well 数据审计与 claim boundary。
 

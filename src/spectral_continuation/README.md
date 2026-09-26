@@ -16,9 +16,13 @@
   selection 与三 seed test；
 - `generate_structural_lattice_wave_data.py`：独立阻尼 mass--spring structural-wave strict-Q3 数据生成器；
 - `audit_pbno_noise_robustness.py`：冻结 clean 配置后的 20/10 dB complex prompt-noise 审计；
-- `audit_prompt_only_router.py`、`train_prompt_risk_router.py`：统一 adapter routing 的 LOO 与 shared risk-head
-  NO-GO 证据；
-- `summarize_pbno_m4.py`：四域主表、storage Pareto、noise 图与 router 边界；
+- `audit_prompt_only_router.py`、`train_prompt_risk_router.py`：hard LOO 与 shared risk-head selection 的
+  NO-GO 证据，并导出 target-free prompt/LOO features 与复 residual cross term；
+- `train_unified_prompt_prior_adapter.py`：不读 domain ID 的 1,665 参数连续 kernel--neural prior composition，
+  统一 K=1/2/4/8；
+- `train_prompt_prior_adapter.py`、`train_k1_prompt_prior_adapter.py`、`audit_k1_prior_blend.py`：形成统一模型前的
+  分预算机制审计，只作消融，不作为最终部署入口；
+- `summarize_pbno_m4.py`：四域主表、storage Pareto、noise 图、hard-router 边界与 unified-adapter 三 seed 图；
 - `train_matched_q3_cnp.py`：参数匹配 generic CNP 强神经基线，支持 variable K、resume 与严格 Q3；
 - `summarize_pbno_m3.py`：M3 三域主表、paired bootstrap、预算曲线、逐系统散点、OOD 与方法图；
 - `benchmark_posterior_kernel_operator.py`：posterior-kernel 参数、response-bank storage、complex-MAC proxy
