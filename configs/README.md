@@ -2,6 +2,10 @@
 
 ## 当前主线
 
+- `pbno_uncertainty_proximal_prior_m0_20260927.json`：strict-Q3 K=2 的 uncertainty-conditioned complex
+  operator prior、解析 proximal projection、精确 fallback、receiver-mask 与 denoising/strength 消融；正式
+  结论为最佳 2.93%、5% gate 未过，不作为继续扫参模板；
+
 - `heterogeneous_prompt_headroom_m0_20260926.json`：strict-Q3 K=2、独立 receiver masks 的 compressed
   candidate/subspace headroom；
 - `functional_evidence_operator_m0_20260926.json`、`functional_prompt_reranker_m0_20260926.json` 与

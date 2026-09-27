@@ -15,6 +15,21 @@ in-context operator 的判断与分阶段方案，见
 
 ## 当前主线：Wave as Prompt
 
+### 2026-09-27 最新方法审计：learned proximal operator prior 未过 5% gate
+
+我们把 learning 从 target-query residual 中移出，只让一个 29,761 参数、global-phase-equivariant 的复网络
+学习 operator-latent prior；每次更新都经过 posterior precision 的闭式 proximal projection，并严格保留 M4
+fallback。strict-Q3 K=2、三个 test prompt seeds、独立 10%/25%/50%/100% receiver masks 的最佳结果是
+Deepwave 25% receivers：0.11035 降到 0.10712，相对改善 **2.93%**，bootstrap 95% 区间为
+[2.63%, 3.23%]。OpenFWI 各档约 0.14%，Ocean 最高 0.55%，完整 receivers 下三域均低于 0.2%。
+
+方向稳定且 prompt consistency 成立，但没有任何域通过预注册 5% gate；denoising pretraining、单域模型与
+proximal strength 0.1--10 均未改变结论。因此 M1 query decomposition 不启动，也不继续扫网络容量。完整
+公式、12 个正式点、迭代归因与重启条件见
+[Uncertainty-Conditioned Proximal Prior M0 报告](reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)。
+
+![Uncertainty-conditioned proximal prior M0](artifacts/pbno_uncertainty_proximal_prior_m0_summary/uncertainty_proximal_prior_m0.png)
+
 ### 2026-09-26 最新表征边界：heterogeneous functional operator 未替代 posterior chart
 
 针对“PCA--MAP 太简单、难以编码复杂非统一输入”的质疑，我们冻结 strict-Q3 K=2，并让每个 prompt 使用

@@ -30,11 +30,21 @@
     `reports/HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md`。compressed oracle 有 16%--49% 空间，但
     functional evidence、reranking、listwise metric 与 nonlinear neural field 均未通过 unseen-system gate。
     不得继续扫 encoder/decoder 容量；必须区分 representation capacity 与 sparse identifiability。
+15. uncertainty-conditioned proximal operator prior 已执行，必须读
+    `reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`。它在 Deepwave 25% receiver masks 的正式增益为
+    2.93%，OpenFWI/Ocean 均低于 0.6%，没有任何域通过 5% gate。不得继续扫 width、depth、denoising
+    noise、steps 或 proximal strength，也不得从该 checkpoint 启动 query-decomposition M1。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
 
 ## 当前主线
+
+2026-09-27 的 learned proximal prior M0 已关闭：复数相位等变 prior、解析 posterior precision projection 与
+prompt safeguard 可以稳定产生小增益，但 3 域 × 4 receiver fractions 的最好结果只有 Deepwave 2.93%。
+这说明 learning 放在 operator prior 上比任意 target correction 更安全，但当前 residual 的可辨识 effect size
+不足。M4 仍是部署方法；新的 learning 分支只有在新信息条件、跨域对齐 chart 或 target-free 10% correction
+oracle 出现后才可重启。
 
 研究问题已推进为 In-Context Wave Response Query。RQ-1 已证明 co-located multistatic array 上的 Q2
 held-out-source query：calibrated reciprocity routing + 121,938 参数 residual Transformer 在三 seed IID test

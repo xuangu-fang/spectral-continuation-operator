@@ -57,6 +57,12 @@ artifacts/functional_response_metric_m0_dev*/
 artifacts/functional_response_metric_m1_multilayout_dev*/
 artifacts/wave_neural_field_autodecoder_m0_ocean_dev*/
 artifacts/wave_neural_field_prompt_encoder_m0_ocean_dev*/
+# Uncertainty-proximal-prior checkpoints and per-system arrays stay local;
+# only pbno_uncertainty_proximal_prior_m0_summary is versioned.
+artifacts/pbno_uncertainty_proximal_prior_m0_dev*/
+artifacts/pbno_uncertainty_proximal_prior_m0_openfwi*/
+artifacts/pbno_uncertainty_proximal_prior_m0_deepwave*/
+artifacts/pbno_uncertainty_proximal_prior_m0_ocean*/
 # Per-system stable-baseline rows are local; summaries and selection grids are versioned.
 artifacts/pbno_m0_joint_query_stable/**/system_metrics.csv
 experiments/runs/

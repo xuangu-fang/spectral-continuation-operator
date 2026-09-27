@@ -1,0 +1,175 @@
+{
+  "status": "NO-GO: M0 promotion gate failed; M1 remains closed",
+  "method_parameters": 29761,
+  "best_formal_result": {
+    "domain": "Deepwave",
+    "receiver_percent": 25,
+    "baseline_error": 0.11034589494617345,
+    "proximal_error": 0.10711578288464807,
+    "relative_gain_percent": 2.9272607405114837,
+    "bootstrap_low_percent": 2.6262374158871307,
+    "bootstrap_high_percent": 3.225608926947298,
+    "system_win_rate_percent": 89.453125,
+    "selected_blend": 0.75,
+    "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_deepwave_r25"
+  },
+  "promotion_gate_percent": 5.0,
+  "domains_passing_gate": [],
+  "main_rows": [
+    {
+      "domain": "OpenFWI",
+      "receiver_percent": 10,
+      "baseline_error": 0.14960938622802497,
+      "proximal_error": 0.14938953812172012,
+      "relative_gain_percent": 0.1469480704705095,
+      "bootstrap_low_percent": 0.10569186238815031,
+      "bootstrap_high_percent": 0.19337762995137056,
+      "system_win_rate_percent": 63.800000000000004,
+      "selected_blend": 0.75,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_openfwi_r10_dev"
+    },
+    {
+      "domain": "OpenFWI",
+      "receiver_percent": 25,
+      "baseline_error": 0.14757112463439506,
+      "proximal_error": 0.1473647365582486,
+      "relative_gain_percent": 0.1398566804026058,
+      "bootstrap_low_percent": 0.09551481086169766,
+      "bootstrap_high_percent": 0.18762523405239204,
+      "system_win_rate_percent": 58.8,
+      "selected_blend": 0.75,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_openfwi_r25"
+    },
+    {
+      "domain": "OpenFWI",
+      "receiver_percent": 50,
+      "baseline_error": 0.14744651381298898,
+      "proximal_error": 0.14723887025068205,
+      "relative_gain_percent": 0.14082636268382132,
+      "bootstrap_low_percent": 0.10679517884322615,
+      "bootstrap_high_percent": 0.17930784117963114,
+      "system_win_rate_percent": 66.2,
+      "selected_blend": 0.5,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_openfwi_r50"
+    },
+    {
+      "domain": "OpenFWI",
+      "receiver_percent": 100,
+      "baseline_error": 0.14668000709265472,
+      "proximal_error": 0.14663809365779162,
+      "relative_gain_percent": 0.02857474286637185,
+      "bootstrap_low_percent": 0.01354760518107262,
+      "bootstrap_high_percent": 0.04405812138654623,
+      "system_win_rate_percent": 49.0,
+      "selected_blend": 0.5,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_openfwi_dev"
+    },
+    {
+      "domain": "Deepwave",
+      "receiver_percent": 10,
+      "baseline_error": 0.13009546577814035,
+      "proximal_error": 0.12691171536183293,
+      "relative_gain_percent": 2.4472416446372214,
+      "bootstrap_low_percent": 2.0274783593794825,
+      "bootstrap_high_percent": 2.8689442173936976,
+      "system_win_rate_percent": 76.953125,
+      "selected_blend": 1.0,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_deepwave_r10_dev"
+    },
+    {
+      "domain": "Deepwave",
+      "receiver_percent": 25,
+      "baseline_error": 0.11034589494617345,
+      "proximal_error": 0.10711578288464807,
+      "relative_gain_percent": 2.9272607405114837,
+      "bootstrap_low_percent": 2.6262374158871307,
+      "bootstrap_high_percent": 3.225608926947298,
+      "system_win_rate_percent": 89.453125,
+      "selected_blend": 0.75,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_deepwave_r25"
+    },
+    {
+      "domain": "Deepwave",
+      "receiver_percent": 50,
+      "baseline_error": 0.10196450665049876,
+      "proximal_error": 0.09982847768211892,
+      "relative_gain_percent": 2.094875009498609,
+      "bootstrap_low_percent": 1.7902080766180262,
+      "bootstrap_high_percent": 2.394889522606037,
+      "system_win_rate_percent": 80.078125,
+      "selected_blend": 0.75,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_deepwave_r50"
+    },
+    {
+      "domain": "Deepwave",
+      "receiver_percent": 100,
+      "baseline_error": 0.09219707902229857,
+      "proximal_error": 0.09215545909440456,
+      "relative_gain_percent": 0.045142349774374146,
+      "bootstrap_low_percent": 0.02457799313919567,
+      "bootstrap_high_percent": 0.06566572547209988,
+      "system_win_rate_percent": 60.15625,
+      "selected_blend": 0.5,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_deepwave_dev"
+    },
+    {
+      "domain": "Ocean",
+      "receiver_percent": 10,
+      "baseline_error": 0.6276151382286722,
+      "proximal_error": 0.6241739778391395,
+      "relative_gain_percent": 0.5482914894699209,
+      "bootstrap_low_percent": 0.17295128039924307,
+      "bootstrap_high_percent": 0.9641519267469691,
+      "system_win_rate_percent": 55.46875,
+      "selected_blend": 1.0,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_ocean_r10_dev"
+    },
+    {
+      "domain": "Ocean",
+      "receiver_percent": 25,
+      "baseline_error": 0.5075388148737451,
+      "proximal_error": 0.5059519525772581,
+      "relative_gain_percent": 0.31265831301625635,
+      "bootstrap_low_percent": 0.0182084355880649,
+      "bootstrap_high_percent": 0.5970643044801193,
+      "system_win_rate_percent": 61.71875,
+      "selected_blend": 0.5,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_ocean_r25"
+    },
+    {
+      "domain": "Ocean",
+      "receiver_percent": 50,
+      "baseline_error": 0.4939836036258688,
+      "proximal_error": 0.4927424707760414,
+      "relative_gain_percent": 0.25124980681897613,
+      "bootstrap_low_percent": -0.003388610244207666,
+      "bootstrap_high_percent": 0.49553979764133116,
+      "system_win_rate_percent": 62.5,
+      "selected_blend": 0.5,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_ocean_r50"
+    },
+    {
+      "domain": "Ocean",
+      "receiver_percent": 100,
+      "baseline_error": 0.4811589015104497,
+      "proximal_error": 0.48029814330705756,
+      "relative_gain_percent": 0.17889271105451243,
+      "bootstrap_low_percent": 0.03456899719998602,
+      "bootstrap_high_percent": 0.33584651901359497,
+      "system_win_rate_percent": 53.90625,
+      "selected_blend": 0.5,
+      "artifact": "artifacts/pbno_uncertainty_proximal_prior_m0_ocean_dev"
+    }
+  ],
+  "ablation_findings": {
+    "shared_cross_domain_full_receiver": "exact fallback selected; no material gain",
+    "domain_specific_full_receiver": "0.03%--0.18% gain",
+    "denoising_pretraining": "did not improve the best masked result",
+    "proximal_strength_0.1_to_10": "did not change the conclusion"
+  },
+  "decision": [
+    "Keep analytic posterior and M4 prior composition as the deployed method.",
+    "Do not launch query-decomposition M1 from this checkpoint.",
+    "Reopen only with aligned cross-domain charts, new informative prompts, or a target-free correction-sign oracle above 10%."
+  ]
+}

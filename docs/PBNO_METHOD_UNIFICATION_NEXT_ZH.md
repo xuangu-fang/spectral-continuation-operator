@@ -2,8 +2,11 @@
 
 > 日期：2026-09-26
 >
-> 状态：M0 已执行；统一与严格 fallback 成立，learned correction 未通过。M1--M3 冻结，正式结论见
-> [M0 报告](../reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md)。下文保留为设计来源，不再是待逐项执行清单。
+> 状态：两轮 M0 已执行。统一 composer 的任意 target correction 未通过；随后把 learning 限制为
+> uncertainty-conditioned operator prior，并加入解析 proximal consistency，最佳仍只有 Deepwave masked
+> 2.93%，未过 5% gate。M1--M3 冻结，正式结论见
+> [Proximal Prior M0 报告](../reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)与
+> [Composer M0 报告](../reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md)。下文只保留为设计来源。
 > 目标：在不牺牲现有正结果和物理可解释性的前提下，把 Bayesian posterior、neural transport、operator
 > dictionary 与 query decoder 收进一个统一、现代、可扩展的学习架构。
 

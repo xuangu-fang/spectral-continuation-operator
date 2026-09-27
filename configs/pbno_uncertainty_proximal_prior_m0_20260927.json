@@ -1,0 +1,53 @@
+{
+  "experiment": "pbno_uncertainty_proximal_prior_m0",
+  "date": "2026-09-27",
+  "seed": 20260927,
+  "train_prompt_seed": 20260923,
+  "validation_prompt_seed": 20260924,
+  "adapter_checkpoint": "artifacts/pbno_unified_adapter_formal_seed20260925/adapter.pt",
+  "rank": 128,
+  "value_rank": 16,
+  "width": 48,
+  "depth": 2,
+  "proposal_bound": 3.0,
+  "proximal_multiplier": 1.0,
+  "update_mode": "correction",
+  "prompt_safeguard": true,
+  "receiver_fraction": 1.0,
+  "layout_seed": 20260927,
+  "denoising_pretrain_steps": 0,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 64,
+  "eval_batch_size": 256,
+  "steps": 2000,
+  "evaluation_interval": 200,
+  "train_repeats": 1,
+  "validation_repeats": 1,
+  "blend_grid": [0.0, 0.125, 0.25, 0.5, 0.75, 1.0],
+  "formal_test_seeds": [20260924, 20260925, 20260926],
+  "formal_test_repeats": 1,
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "neural_checkpoint": "artifacts/pbno_m1_semilinear/openfwi_long/best.pt",
+      "budgets": {
+        "2": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.3, "blend": 1.0}}
+      }
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "neural_checkpoint": "artifacts/pbno_m1_semilinear/deepwave_long/best.pt",
+      "budgets": {
+        "2": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 32, "neighbors": 32, "temperature": 0.1, "blend": 0.1}}
+      }
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "neural_checkpoint": "artifacts/pbno_m1_semilinear/ocean_latent/best.pt",
+      "budgets": {
+        "2": {"operator": {"strength": 0.00001, "normalization": "raw"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.1, "blend": 0.75}}
+      }
+    }
+  }
+}

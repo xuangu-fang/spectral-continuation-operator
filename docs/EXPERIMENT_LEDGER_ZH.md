@@ -652,3 +652,36 @@ summary / figure / checkpoint hash:
 ```
 
 没有填写“结论作用域”和“重启条件”的实验，不视为完成归档。
+
+## E20 / 2026-09-27 / Uncertainty-Conditioned Proximal Operator Prior M0
+
+**单一假设。** 保留可观测 Bayesian posterior chart，让小型复数网络只学习 operator prior，并将 correction
+经过 posterior precision 闭式投影，能否在不破坏 prompt consistency 的前提下相对 M4 再改善至少 5%。
+
+**数据与协议。** OpenFWI、Deepwave、Ocean；完整 system split；strict-Q3 K=2；每个 prompt 独立
+10%/25%/50%/100% receiver masks；三个 formal prompt seeds；主指标为逐系统 raw complex RelL2。
+
+**方法与 matched baseline。** 29,761 参数 bias-free complex network + radial activation + uncertainty gate；
+解析 precision projection与闭式 prompt safeguard；zero correction / zero blend 精确回退完整 receivers 下的 M4
+adapter 或 masked setting 下的 rank-16 posterior memory。
+
+**主结果。** 最佳为 Deepwave 25% receivers：0.11035 到 0.10712，改善 2.93%，bootstrap 95% 区间
+[2.63%, 3.23%]，系统胜率 89.5%。OpenFWI 约 0.14%，Ocean 最高 0.55%；完整 receivers 下三域低于
+0.2%。12 个正式点没有退化，但没有一个达到 5%。
+
+**负对照。** 独立 learned prior predictor 三域均差于 M4；single-domain chart 不能把增益提高到 5%；latent
+denoising pretraining 把 Deepwave 10% 从 2.45% 降到 2.13%；proximal multiplier 0.1/1/10 不改变结论。
+
+**归因。** 数据一致性可闭式保证，但 unseen-query residual 的主要部分在稀疏 prompts 下仍不可辨识；Ocean
+49% target-truth candidate oracle 不是一个平滑、target-free operator-prior gap。Deepwave 中等 receiver
+budget 的稳定 2%--3% 是机制级正信号，不是主方法贡献。
+
+**决策。** M0 NO-GO；M1 query decomposition 不启动。禁止继续扫网络容量、denoising noise、steps 或
+proximal strength。
+
+**重启条件。** 新信息条件改变 conditional identifiability；target-free correction-sign oracle 在 held-out
+systems 超过 10%；真实跨设备数据证明 fixed chart 失效；或出现可跨域对齐的 operator coordinates。
+
+**Artifacts。** `reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`；
+`artifacts/pbno_uncertainty_proximal_prior_m0_summary/summary.json`、`m0_mask_results.csv`、主图 PNG/PDF；
+配置 `configs/pbno_uncertainty_proximal_prior_m0_20260927.json`。

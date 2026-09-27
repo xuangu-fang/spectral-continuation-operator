@@ -1,5 +1,9 @@
 # 报告导航
 
+- [`PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`](PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)：**当前最新方法
+  审计**；global-phase-equivariant complex operator prior、posterior-precision proximal projection、独立
+  receiver masks 的 12 个三 seed 正式点，以及最佳 2.93% 仍未过 5% gate 的 NO-GO 结论。
+
 - [`HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md`](HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md)：**当前最新
   表征升级边界**；不规则 receiver prompts、functional natural-parameter encoder、learned reranking、
   nonlinear complex neural field，以及“representation capacity 不等于 sparse identifiability”的 NO-GO

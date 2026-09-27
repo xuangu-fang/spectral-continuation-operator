@@ -5,6 +5,12 @@
 
 ## Active：当前 wave-system representation
 
+- `train_uncertainty_proximal_prior.py`：29,761 参数 complex equivariant operator prior、posterior-precision
+  projection、prompt safeguard、完整/异构 receiver-mask 训练与三 seed formal evaluation；M0 最佳 2.93%，
+  当前 NO-GO，不启动 query-decomposition M1；
+- `summarize_uncertainty_proximal_prior.py`：冻结 3 域 × 4 receiver fractions 的 raw-error、bootstrap、系统
+  胜率、主图、CSV 与 gate decision；
+
 - `audit_heterogeneous_prompt_headroom.py`：strict-Q3 K=2、每个 prompt 独立 receiver masks 下的 compressed
   dictionary、query-local ridge 与 subspace oracle；只作 identifiability/headroom 审计；
 - `train_functional_evidence_operator.py`：coordinate-aware complex natural-parameter encoder 与 additive

@@ -1,9 +1,22 @@
 # 当前状态：Wave-System Representation
 
-> 更新日期：2026-09-26
+> 更新日期：2026-09-27
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
-## 2026-09-26 最新结论：M4 解决 storage、通过第四域与统一连续 adapter
+## 2026-09-27 最新边界：uncertainty-conditioned proximal prior 未通过
+
+新的 29,761 参数 complex operator prior 只预测 latent correction，不直接读写 target response；correction
+经 posterior precision 闭式投影，且有 prompt-consistency safeguard 与精确 M4 fallback。在 strict-Q3 K=2、
+三个 test prompt seeds 和独立 10%/25%/50%/100% receiver masks 下，最佳正式结果为 Deepwave 25%：
+0.11035 到 0.10712，改善 2.93%，bootstrap 区间 [2.63%, 3.23%]，系统胜率 89.5%。OpenFWI 各档约
+0.14%，Ocean 最高 0.55%，完整 receivers 下均低于 0.2%。
+
+shared 与 single-domain、latent denoising pretraining、proximal strength 0.1/1/10 均未产生 5% 结果。因此
+M0 为 NO-GO，M1 query decomposition 保持关闭；不要继续扫 width、depth、noise scale、steps 或 proximal
+strength。完整结果见
+[Uncertainty-Conditioned Proximal Prior M0](../reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)。
+
+## 2026-09-26 上一结论：M4 解决 storage、通过第四域与统一连续 adapter
 
 ### 后续 M0：heterogeneous functional representation 的 oracle 通过，方法 NO-GO
 

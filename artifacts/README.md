@@ -4,6 +4,11 @@
 
 当前 active artifact collections 为：
 
+- `pbno_uncertainty_proximal_prior_m0_summary/`：3 域 × 10%/25%/50%/100% receiver masks 的冻结 raw-error、
+  paired bootstrap、系统胜率、CSV/JSON 和正文图；最佳 2.93%，5% M0 gate 未过。训练 checkpoint 与逐系统
+  NPZ 本地保留、Git 排除；对应
+  [`reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`](../reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)；
+
 - `pbno_m1_summary/`：strict Q3 三 seed主表、方法图、budget curve 与 Ocean OOD safety；
 - `pbno_q2_efficiency_formal/summary/`：OpenFWI rank 96 与 Deepwave rank 112 的固定配置三 seed结果、
   accuracy--compute 表、A100 latency 与汇总图；对应

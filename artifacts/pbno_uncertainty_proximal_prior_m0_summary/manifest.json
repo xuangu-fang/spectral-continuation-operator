@@ -1,0 +1,23 @@
+{
+  "config": "configs/pbno_uncertainty_proximal_prior_m0_20260927.json",
+  "runs": {
+    "OpenFWI_r10": "pbno_uncertainty_proximal_prior_m0_openfwi_r10_dev",
+    "OpenFWI_r25": "pbno_uncertainty_proximal_prior_m0_openfwi_r25",
+    "OpenFWI_r50": "pbno_uncertainty_proximal_prior_m0_openfwi_r50",
+    "OpenFWI_r100": "pbno_uncertainty_proximal_prior_m0_openfwi_dev",
+    "Deepwave_r10": "pbno_uncertainty_proximal_prior_m0_deepwave_r10_dev",
+    "Deepwave_r25": "pbno_uncertainty_proximal_prior_m0_deepwave_r25",
+    "Deepwave_r50": "pbno_uncertainty_proximal_prior_m0_deepwave_r50",
+    "Deepwave_r100": "pbno_uncertainty_proximal_prior_m0_deepwave_dev",
+    "Ocean_r10": "pbno_uncertainty_proximal_prior_m0_ocean_r10_dev",
+    "Ocean_r25": "pbno_uncertainty_proximal_prior_m0_ocean_r25",
+    "Ocean_r50": "pbno_uncertainty_proximal_prior_m0_ocean_r50",
+    "Ocean_r100": "pbno_uncertainty_proximal_prior_m0_ocean_dev"
+  },
+  "files": [
+    "summary.json",
+    "m0_mask_results.csv",
+    "uncertainty_proximal_prior_m0.png",
+    "uncertainty_proximal_prior_m0.pdf"
+  ]
+}
