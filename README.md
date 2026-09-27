@@ -13,6 +13,31 @@
 in-context operator 的判断与分阶段方案，见
 [PBNO 方法统一升级备忘录](docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md)；后者是待验证设计，不是已有结果。
 
+## 2026-09-27 最新主线：Target-Aware Wave Interrogation
+
+当前最强的新结果不是继续给固定 prompts 下的 decoder 堆容量，而是让 learned wave-system belief 决定
+下一次应该测哪个 source--frequency。给定目标 response、相同测量预算和相同 PBNO downstream，顺序选择
+probe 在 strict-Q3 上得到：
+
+| 数据域 | K=2 随机 probes | K=2 target-aware probes | 相对降低 |
+|---|---:|---:|---:|
+| Deepwave | 0.09220 | **0.06715** | **27.17%** |
+| Ocean | 0.48116 | **0.38365** | **20.27%** |
+| OpenFWI | 0.14668 | **0.14289** | 2.58% |
+
+K=1/2/4/8 的 error--budget AUC 分别改善 21.14%、12.35% 和 3.52%。这是一个可作为顶会论文核心部分的
+POC：learning 负责形成可查询的 complex response operator belief，解析 posterior risk 负责 target-aware
+experimental design。它目前**不是 response-adaptive agent**：training-population fixed schedule 几乎追平
+解析 planner，learned policy 在 Deepwave 回退、Ocean 只比解析 planner 多改善 0.37%。
+
+优先阅读：
+
+- [Target-Aware Wave Interrogation M0 正式报告](reports/ACTIVE_WAVE_INTERROGATION_M0_ZH.md)；
+- [下一阶段论文计划与硬 gate](docs/ACTIVE_WAVE_INTERROGATION_NEXT_PLAN_ZH.md)；
+- [机器汇总](artifacts/active_wave_interrogation_m0_summary/summary.json)。
+
+![Sequential target-aware interrogation](artifacts/sequential_active_wave_query_m0_summary/sequential_active_query.png)
+
 ## 当前主线：Wave as Prompt
 
 ### 2026-09-27 最新方法审计：learned proximal operator prior 未过 5% gate

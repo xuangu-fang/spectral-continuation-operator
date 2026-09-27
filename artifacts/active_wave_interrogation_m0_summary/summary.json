@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-27",
+  "status": "top-conference POC; target-aware design positive, response-adaptive policy not established",
+  "sequential_summary": "../sequential_active_wave_query_m0_summary/summary.json",
+  "k2_full_pbno": {
+    "Deepwave": {"random": 0.09219708, "target_aware": 0.06714765, "gain": 0.27169434},
+    "Ocean": {"random": 0.48115891, "target_aware": 0.38364866, "gain": 0.20265706},
+    "OpenFWI": {"random": 0.14668007, "target_aware": 0.14288884, "gain": 0.02584696}
+  },
+  "log2_budget_auc_gain": {
+    "Deepwave": 0.21138939,
+    "Ocean": 0.12351105,
+    "OpenFWI": 0.03515515
+  },
+  "structural_lattice_k2_development": {
+    "random": 0.44304633,
+    "target_aware": 0.40938080,
+    "gain": 0.07598651,
+    "system_win_rate": 0.99609375
+  },
+  "learned_metric_development_gain": {
+    "OpenFWI": 0.01343112,
+    "Deepwave": 0.00121645,
+    "Ocean": 0.02552998
+  },
+  "learned_policy_decision": {
+    "Deepwave": "fallback_to_analytic",
+    "Ocean_gain_over_analytic": 0.00366851,
+    "promotion": false
+  },
+  "claim_boundary": "The evidence supports target-aware experimental design with a learned operator belief, not response-adaptive active reasoning."
+}

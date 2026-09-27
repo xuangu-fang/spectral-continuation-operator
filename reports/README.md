@@ -1,5 +1,10 @@
 # 报告导航
 
+- [`ACTIVE_WAVE_INTERROGATION_M0_ZH.md`](ACTIVE_WAVE_INTERROGATION_M0_ZH.md)：**当前主报告**；将 PBNO
+  learned operator belief 用于 target-aware source--frequency experimental design，包含三域 K=1/2/4/8
+  顺序结果、固定 schedule 强边界、learned metric/policy/evidence 的正负审计，以及可投稿 POC 与尚未完成
+  证据的明确区分。
+
 - [`PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`](PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)：**当前最新方法
   审计**；global-phase-equivariant complex operator prior、posterior-precision proximal projection、独立
   receiver masks 的 12 个三 seed 正式点，以及最佳 2.93% 仍未过 5% gate 的 NO-GO 结论。

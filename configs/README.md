@@ -2,6 +2,13 @@
 
 ## 当前主线
 
+- `sequential_active_wave_query_m0_20260927.json`：当前正式 target-aware source--frequency interrogation；
+  strict-Q3、相同第一条随机 probe、nested K=1/2/4/8、三个 prompt seeds 与完整 PBNO downstream；
+- `pbno_query_conditioned_metric_m0_20260927.json`：query-conditioned positive posterior metric 的
+  leave-one-system-out learning 审计；最高 2.55%，不继续扫参；
+- `active_wave_query_policy_m0_20260927.json`：解析 acquisition 加有界 neural residual 的 policy 审计；
+  system-conditioned adaptivity gate 未过，不作为部署配置；
+
 - `pbno_uncertainty_proximal_prior_m0_20260927.json`：strict-Q3 K=2 的 uncertainty-conditioned complex
   operator prior、解析 proximal projection、精确 fallback、receiver-mask 与 denoising/strength 消融；正式
   结论为最佳 2.93%、5% gate 未过，不作为继续扫参模板；

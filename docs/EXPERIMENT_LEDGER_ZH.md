@@ -685,3 +685,45 @@ systems 超过 10%；真实跨设备数据证明 fixed chart 失效；或出现�
 **Artifacts。** `reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`；
 `artifacts/pbno_uncertainty_proximal_prior_m0_summary/summary.json`、`m0_mask_results.csv`、主图 PNG/PDF；
 配置 `configs/pbno_uncertainty_proximal_prior_m0_20260927.json`。
+
+## E21 / 2026-09-27 / Target-Aware Wave Interrogation M0
+
+**单一假设。** 固定 sparse prompts 下的主要瓶颈已经是 conditional identifiability；把 source 与 frequency
+作为 inference-time actions，并用 learned wave-system operator belief 选择对指定 target response 最有信息的
+probe，能否在不增加测量预算的情况下显著降低 strict-Q3 error。
+
+**数据与协议。** OpenFWI、Deepwave、Ocean；原 system split；strict-Q3；相同第一条随机 probe；后续
+source--frequency action 不得包含 target source 或 target frequency；nested K=1/2/4/8；三个 prompt seeds；
+逐 physical system 等权 raw complex RelL2、paired bootstrap、win rate 与 log2-budget AUC。
+
+**方法与 matched baseline。** PBNO complex response basis、Bayesian posterior、rank-16 dictionary、neural
+transport 和 continuous adapter 均冻结。planner 最小化 target rows 的 posterior predictive variance；random
+schedule 使用相同 K 和同一第一条 probe。另审计 train-population fixed schedule、target-truth per-system oracle、
+query-conditioned positive posterior metric、bounded-residual neural policy 与 noisy likelihood calibration。
+
+**主结果。** K=2 random 到 target-aware：Deepwave 0.09220 到 0.06715，改善 27.17%，95% 区间
+[26.64%, 27.70%]；Ocean 0.48116 到 0.38365，改善 20.27%，区间 [18.77%, 21.74%]；OpenFWI
+0.14668 到 0.14289，改善 2.58%，区间 [2.21%, 3.01%]。三域系统胜率为 100%/100%/85.2%。
+K=1/2/4/8 AUC 分别改善 21.14%/12.35%/3.52%。Structural Lattice K=2 改善 7.60%，只作跨物理机制证据。
+
+**最强负对照。** train-population fixed schedule 比解析 planner 仅好 0.06%/0.24%/0.56%；其与
+per-system target-truth oracle 的剩余差距为 9.3%/14.1%/10.7%，均未过 15% adaptivity gate。learned policy
+在 Deepwave 回退，Ocean 比解析 planner 只额外改善 0.37%；learned metric 最高改善 2.55%。
+
+**归因与结论作用域。** 强结果来自 target-conditioned experiment design，而非 response-conditioned active
+reasoning。learning 的可靠角色是形成可查询的 complex operator belief；解析 uncertainty 把 representation
+与 physical action 接成闭环。当前可 claim target-aware sequential design，不能 claim adaptive agent、RL
+优势或 classical variance criterion 本身的新颖性。
+
+**决策。** POC 通过，成为当前主线。停止扩大 metric/policy；M1 必须先做 untouched systems、uniform/
+nearest/D-opt/population acquisition baselines 和真实成本轴。唯一优先 learning 升级为参数少于 500k 的
+continuous acquisition utility operator。
+
+**重启 response-adaptive policy 的条件。** 新设定下 population schedule 与 per-system oracle 的差距至少
+15%，且 action utility 确实随已观测 response 改变；例如 nonlinear/multimodal belief、未知 sensor noise、
+partial failures 或 task-level inverse ambiguity。
+
+**Artifacts。** `reports/ACTIVE_WAVE_INTERROGATION_M0_ZH.md`；
+`artifacts/sequential_active_wave_query_m0_summary/summary.json`、`sequential_results.csv`、主图 PNG/PDF；
+配置 `configs/sequential_active_wave_query_m0_20260927.json`；下一阶段冻结计划
+`docs/ACTIVE_WAVE_INTERROGATION_NEXT_PLAN_ZH.md`。

@@ -5,6 +5,13 @@
 
 ## Active：当前 wave-system representation
 
+- `evaluate_sequential_active_wave_query.py`：当前主线；在 strict-Q3 中固定同一第一条随机 probe，使用 PBNO
+  posterior predictive risk 顺序选择 source--frequency，并以嵌套 K=1/2/4/8 评估完整 PBNO downstream；
+- `train_query_conditioned_posterior_metric.py`：学习 query-conditioned positive Mahalanobis retrieval metric；
+  三域均为小正结果但最高 2.55%，只作 query-decomposition 消融；
+- `train_active_wave_query_policy.py`：以解析 acquisition 为精确 fallback 的小型 belief-conditioned residual
+  policy；Deepwave 回退、Ocean 只多改善 0.37%，当前 NO-GO；
+
 - `train_uncertainty_proximal_prior.py`：29,761 参数 complex equivariant operator prior、posterior-precision
   projection、prompt safeguard、完整/异构 receiver-mask 训练与三 seed formal evaluation；M0 最佳 2.93%，
   当前 NO-GO，不启动 query-decomposition M1；

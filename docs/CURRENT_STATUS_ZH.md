@@ -3,6 +3,32 @@
 > 更新日期：2026-09-27
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
 
+## 2026-09-27 当前主线：从 Wave as Prompt 到 Target-Aware Interrogation
+
+固定 prompts 下继续学习 target residual、posterior metric 或更大 decoder 的收益已经饱和；新的强 POC
+将 frequency 与 source 从 condition 改为可选择的 experiment query。PBNO 先从少量复响应形成隐藏系统的
+learned operator belief，再以目标 response 的 posterior predictive variance 选择下一条 source--frequency
+probe。
+
+在相同 K、相同第一条随机 probe、相同 downstream 和 strict-Q3 约束下，K=2 raw complex RelL2 为：
+
+| 数据域 | random | target-aware | 相对降低 | paired 95% 区间 |
+|---|---:|---:|---:|---:|
+| Deepwave | 0.09220 | **0.06715** | **27.17%** | [26.64%, 27.70%] |
+| Ocean | 0.48116 | **0.38365** | **20.27%** | [18.77%, 21.74%] |
+| OpenFWI | 0.14668 | **0.14289** | 2.58% | [2.21%, 3.01%] |
+
+K=1/2/4/8 的 log2-budget AUC 改善为 21.14%/12.35%/3.52%。Deepwave/Ocean 是强效应，OpenFWI 是稳定
+弱效应；Structural Lattice K=2 的 7.60% 只作跨物理机制审计。
+
+**声明边界：** 当前证据支持 `learned operator belief + target-aware experimental design`，不支持
+response-adaptive agent。population-optimal fixed schedule 与解析 planner 只差 0.06%--0.56%；learned
+policy 在 Deepwave 回退，Ocean 仅额外改善 0.37%。下一步先做 untouched split、完整 acquisition 强基线、
+真实成本轴和 continuous utility operator，不继续扩大 policy 或 posterior metric。
+
+完整证据见 [M0 报告](../reports/ACTIVE_WAVE_INTERROGATION_M0_ZH.md)，冻结计划见
+[下一阶段计划](ACTIVE_WAVE_INTERROGATION_NEXT_PLAN_ZH.md)。
+
 ## 2026-09-27 最新边界：uncertainty-conditioned proximal prior 未通过
 
 新的 29,761 参数 complex operator prior 只预测 latent correction，不直接读写 target response；correction

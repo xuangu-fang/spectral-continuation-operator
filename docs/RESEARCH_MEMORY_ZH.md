@@ -4,6 +4,11 @@
 > 不再是当前方向入口。当前结论请从[一页式状态](CURRENT_STATUS_ZH.md)开始；各历史路线的压缩结论见
 > [归档索引](archive/INDEX_ZH.md)。下文保留原样，用于追踪当时的任务定义和研究决策。
 
+> **当前主线补记（2026-09-27）：** 固定 prompts 下的 prediction 已推进为 target-aware source--frequency
+> interrogation。核心 POC、负边界和下一阶段 gate 分别见
+> [正式报告](../reports/ACTIVE_WAVE_INTERROGATION_M0_ZH.md)与
+> [计划](ACTIVE_WAVE_INTERROGATION_NEXT_PLAN_ZH.md)。当前不宣称 response-adaptive agent。
+
 更新日期：2026-09-16
 
 本文是当前项目的统一研究记忆。历史预注册协议和实验报告保持原样，用于追踪证据；若历史文档的

@@ -34,11 +34,28 @@
     `reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`。它在 Deepwave 25% receiver masks 的正式增益为
     2.93%，OpenFWI/Ocean 均低于 0.6%，没有任何域通过 5% gate。不得继续扫 width、depth、denoising
     noise、steps 或 proximal strength，也不得从该 checkpoint 启动 query-decomposition M1。
+16. 当前主线已推进到 target-aware wave interrogation。任何 active/query-selection 任务必须先读
+    `reports/ACTIVE_WAVE_INTERROGATION_M0_ZH.md` 与
+    `docs/ACTIVE_WAVE_INTERROGATION_NEXT_PLAN_ZH.md`。Deepwave/Ocean 的 K=2 强结果成立，但
+    population-optimal fixed schedule 几乎追平解析 planner；不得把当前方法写成 response-adaptive agent。
+17. query-conditioned posterior metric 最高仅 2.55%，learned acquisition policy 在 Deepwave 回退、Ocean
+    只比解析 planner 多改善 0.37%。禁止继续扫 policy/metric 容量；下一次 learning 升级只允许按计划验证
+    continuous acquisition utility operator，且必须保留解析 fallback 与 held-out-action regret gate。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
 
 ## 当前主线
+
+2026-09-27 主线已从固定 prompts 下继续降低 decoder error 推进为 **Target-Aware Wave Interrogation**。
+PBNO learned operator belief 的 posterior predictive risk 用于顺序选择 source--frequency actions；在相同预算、
+相同第一条随机 probe 和完整 PBNO downstream 下，K=2 相对随机 schedule 改善 Deepwave 27.17%、Ocean
+20.27%、OpenFWI 2.58%。K=1/2/4/8 AUC 改善 21.14%/12.35%/3.52%。这是当前优先复现和扩展的 POC。
+
+该结果只支持 target-aware experimental design。training-population fixed schedule 与解析 planner 的差异
+不足 0.6%，当前 response-conditioned action oracle gap 也低于 15%；没有新的 nonlinear/multimodal belief 或
+action-dependent observation 条件时，不得启动 RL、Transformer policy 或宣称 active reasoning。下一步依次是
+untouched systems、完整 acquisition baselines/成本轴、continuous utility operator 与外部 multistatic 数据。
 
 2026-09-27 的 learned proximal prior M0 已关闭：复数相位等变 prior、解析 posterior precision projection 与
 prompt safeguard 可以稳定产生小增益，但 3 域 × 4 receiver fractions 的最好结果只有 Deepwave 2.93%。

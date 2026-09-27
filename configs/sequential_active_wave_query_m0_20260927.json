@@ -1,0 +1,42 @@
+{
+  "experiment": "sequential_active_wave_query_m0",
+  "date": "2026-09-27",
+  "adapter_checkpoint": "artifacts/pbno_unified_adapter_formal_seed20260925/adapter.pt",
+  "rank": 128,
+  "value_rank": 16,
+  "selection_budget": 2,
+  "active_budgets": [1, 2, 4, 8],
+  "formal_test_seeds": [20260924, 20260925, 20260926],
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "neural_checkpoint": "artifacts/pbno_m1_semilinear/openfwi_long/best.pt",
+      "budgets": {
+        "1": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.3, "blend": 1.0}},
+        "2": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.3, "blend": 1.0}},
+        "4": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 16, "neighbors": 16, "temperature": 0.3, "blend": 0.75}},
+        "8": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 16, "neighbors": 16, "temperature": 0.3, "blend": 0.75}}
+      }
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "neural_checkpoint": "artifacts/pbno_m1_semilinear/deepwave_long/best.pt",
+      "budgets": {
+        "1": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 32, "neighbors": 8, "temperature": 0.3, "blend": 0.25}},
+        "2": {"operator": {"strength": 0.1, "normalization": "coordinate_rms"}, "memory": {"latent_dimensions": 32, "neighbors": 32, "temperature": 0.1, "blend": 0.1}},
+        "4": {"operator": {"strength": 0.1, "normalization": "raw"}, "memory": {"latent_dimensions": 16, "neighbors": 8, "temperature": 0.3, "blend": 0.1}},
+        "8": {"operator": {"strength": 0.01, "normalization": "raw"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.3, "blend": 0.1}}
+      }
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "neural_checkpoint": "artifacts/pbno_m1_semilinear/ocean_latent/best.pt",
+      "budgets": {
+        "1": {"operator": {"strength": 0.00001, "normalization": "raw"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.1, "blend": 0.75}},
+        "2": {"operator": {"strength": 0.00001, "normalization": "raw"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.1, "blend": 0.75}},
+        "4": {"operator": {"strength": 0.00001, "normalization": "raw"}, "memory": {"latent_dimensions": 8, "neighbors": 16, "temperature": 0.1, "blend": 0.5}},
+        "8": {"operator": {"strength": 0.00001, "normalization": "raw"}, "memory": {"latent_dimensions": 16, "neighbors": 32, "temperature": 0.1, "blend": 0.25}}
+      }
+    }
+  }
+}

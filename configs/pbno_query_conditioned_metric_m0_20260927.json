@@ -1,0 +1,56 @@
+{
+  "experiment": "pbno_query_conditioned_metric_m0",
+  "date": "2026-09-27",
+  "seed": 20260927,
+  "rank": 128,
+  "value_rank": 16,
+  "budget": 2,
+  "train_repeats": 1,
+  "validation_repeats": 1,
+  "test_repeats": 1,
+  "train_prompt_seed": 20260923,
+  "validation_prompt_seed": 20260924,
+  "test_prompt_seeds": [20260924, 20260925, 20260926],
+  "width": 64,
+  "mode_width": 24,
+  "tail_log_weight": -10.0,
+  "residual_bound": 4.0,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 64,
+  "eval_batch_size": 256,
+  "steps": 2000,
+  "evaluation_interval": 200,
+  "domains": {
+    "OpenFWI": {
+      "dataset": "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+      "normalization": "coordinate_rms",
+      "strength": 0.1,
+      "latent_dimensions": 8,
+      "metric_dimensions": 16,
+      "neighbors": 16,
+      "temperature": 0.3,
+      "blend": 1.0
+    },
+    "Deepwave": {
+      "dataset": "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+      "normalization": "coordinate_rms",
+      "strength": 0.1,
+      "latent_dimensions": 32,
+      "metric_dimensions": 32,
+      "neighbors": 32,
+      "temperature": 0.1,
+      "blend": 0.1
+    },
+    "Ocean": {
+      "dataset": "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz",
+      "normalization": "raw",
+      "strength": 0.00001,
+      "latent_dimensions": 8,
+      "metric_dimensions": 16,
+      "neighbors": 16,
+      "temperature": 0.1,
+      "blend": 0.75
+    }
+  }
+}
