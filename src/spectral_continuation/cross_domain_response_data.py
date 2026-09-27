@@ -314,6 +314,8 @@ def prepare_deepwave(config: dict, output: Path, smoke: bool = False) -> dict:
     receiver_count = int(domain.get("receivers", 64))
     frequency = np.asarray(domain["frequencies_hz"], dtype=np.float64)
     counts = dict(domain["systems"])
+    seed_base = int(domain.get("seed_base", 20260924))
+    id_prefix = str(domain.get("id_prefix", "deepwave"))
     if smoke:
         counts = {"train": 8, "validation": 4, "test": 4, "ood": 4}
     # Keep the physical array outside the absorbing PML; otherwise the direct
@@ -343,7 +345,7 @@ def prepare_deepwave(config: dict, output: Path, smoke: bool = False) -> dict:
     batch_systems = 2 if device.type == "cuda" else 1
     for split_index, (split, count) in enumerate(counts.items()):
         velocity = _random_velocity_models(
-            int(count), grid, 20260924 + split_index, ood=split == "ood"
+            int(count), grid, seed_base + split_index, ood=split == "ood"
         )
         split_responses = []
         for start in range(0, len(velocity), batch_systems):
@@ -381,7 +383,7 @@ def prepare_deepwave(config: dict, output: Path, smoke: bool = False) -> dict:
             split_responses.append(transformed)
         all_response.append(np.concatenate(split_responses, axis=0))
         all_split.extend([split] * int(count))
-        all_ids.extend([f"deepwave_{split}_{index:05d}" for index in range(int(count))])
+        all_ids.extend([f"{id_prefix}_{split}_{index:05d}" for index in range(int(count))])
     archive = CrossDomainResponseArchive(
         responses=np.concatenate(all_response, axis=0),
         sources=source_xy,
@@ -404,6 +406,8 @@ def prepare_deepwave(config: dict, output: Path, smoke: bool = False) -> dict:
             "actual_frequencies_hz": actual_frequency.tolist(),
             "sources": source_count,
             "receivers": receiver_count,
+            "seed_base": seed_base,
+            "id_prefix": id_prefix,
             "test_policy": "IID held-out systems; no test use for selection",
             "ood_shift": "five-lobed inclusions and wider contrast",
             "smoke": smoke,
@@ -416,12 +420,16 @@ def prepare_deepwave(config: dict, output: Path, smoke: bool = False) -> dict:
     return manifest
 
 
-def _ocean_parameter_table(counts: dict[str, int]) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+def _ocean_parameter_table(
+    counts: dict[str, int],
+    seed_base: int = 20260924,
+    id_prefix: str = "ocean",
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     rows = []
     splits = []
     ids = []
     for split_index, (split, count) in enumerate(counts.items()):
-        generator = np.random.default_rng(20260924 + split_index)
+        generator = np.random.default_rng(seed_base + split_index)
         for index in range(int(count)):
             if split == "ood":
                 water_speed = generator.uniform(1440.0, 1560.0)
@@ -433,7 +441,7 @@ def _ocean_parameter_table(counts: dict[str, int]) -> tuple[np.ndarray, np.ndarr
                 density = generator.uniform(1750.0, 2200.0)
             rows.append((water_speed, seabed_speed, density))
             splits.append(split)
-            ids.append(f"ocean_{split}_{index:05d}")
+            ids.append(f"{id_prefix}_{split}_{index:05d}")
     return np.asarray(rows, dtype=np.float64), np.asarray(splits), np.asarray(ids)
 
 
@@ -444,9 +452,13 @@ def prepare_ocean(config: dict, output: Path, smoke: bool = False) -> dict:
 
     domain = config["domains"]["ocean_multistatic"]
     counts = dict(domain["systems"])
+    seed_base = int(domain.get("seed_base", 20260924))
+    id_prefix = str(domain.get("id_prefix", "ocean"))
     if smoke:
         counts = {"train": 4, "validation": 2, "test": 2, "ood": 2}
-    parameters, split, system_ids = _ocean_parameter_table(counts)
+    parameters, split, system_ids = _ocean_parameter_table(
+        counts, seed_base=seed_base, id_prefix=id_prefix
+    )
     depth_config = domain["receiver_depths_m"]
     receiver_depth = np.linspace(
         float(depth_config["start"]),
@@ -528,6 +540,8 @@ def prepare_ocean(config: dict, output: Path, smoke: bool = False) -> dict:
                 "seabed_density_kgm3",
             ],
             "environment_parameter_values": parameters.tolist(),
+            "seed_base": seed_base,
+            "id_prefix": id_prefix,
             "test_policy": "IID held-out environments; no test use for selection",
             "ood_shift": "wider water-speed range and faster, denser seabed",
             "elapsed_seconds": elapsed,

@@ -2,6 +2,17 @@
 
 ## 当前主线
 
+- `active_wave_interrogation_untouched_20260927.json`：全新 Deepwave/Ocean IID/OOD systems 的 seed、数量与
+  数据生成协议；不得用于重新选择方法；
+- `sequential_active_wave_query_m1_untouched_20260927.json`：冻结 PBNO/acquisition 后的 untouched
+  K=1/2/4/8 评测；
+- `acquisition_baselines_m1_untouched_20260928.json`：random、nearest、farthest、D-opt、exact、population、
+  learned utility 与 K=2 truth oracle 的正式全表；
+- `continuous_acquisition_utility_m1_20260928.json`：160,801 参数 pair-action holdout utility；top-4 hybrid
+  AUC gate 通过；
+- `continuous_acquisition_utility_m2_coordinate_holdout_20260928.json`：整块 source/frequency coordinate
+  holdout；regret 10.23%/18.43%，正式 NO-GO。
+
 - `sequential_active_wave_query_m0_20260927.json`：当前正式 target-aware source--frequency interrogation；
   strict-Q3、相同第一条随机 probe、nested K=1/2/4/8、三个 prompt seeds 与完整 PBNO downstream；
 - `pbno_query_conditioned_metric_m0_20260927.json`：query-conditioned positive posterior metric 的

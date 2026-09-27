@@ -1,0 +1,32 @@
+{
+  "experiment": "active_wave_interrogation_untouched_systems",
+  "date": "2026-09-27",
+  "policy": "Generated after all M0 model and acquisition choices were frozen; never use these systems for hyperparameter selection.",
+  "domains": {
+    "deepwave_ring": {
+      "grid": 96,
+      "spacing_m": 0.001,
+      "transducers": 16,
+      "receivers": 64,
+      "frequencies_hz": [90000, 120000, 150000, 175000, 195000],
+      "peak_frequency_hz": 150000,
+      "systems": {"test": 256, "ood": 128},
+      "seed_base": 20261027,
+      "id_prefix": "deepwave_untouched_20260927"
+    },
+    "ocean_multistatic": {
+      "transducers": 9,
+      "frequencies_hz": [80, 90, 100, 110],
+      "receiver_depths_m": {"start": 8, "stop": 112, "count": 48},
+      "range_m": 4000,
+      "systems": {"test": 256, "ood": 128},
+      "seed_base": 20261027,
+      "id_prefix": "ocean_untouched_20260927"
+    }
+  },
+  "untouched_gate": {
+    "k2_primary_domain_gain": 0.20,
+    "k2_secondary_domain_gain": 0.15,
+    "failure_floor": 0.10
+  }
+}

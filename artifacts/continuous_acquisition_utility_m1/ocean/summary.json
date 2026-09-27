@@ -1,0 +1,17 @@
+{
+  "domain": "Ocean",
+  "parameters": 160801,
+  "train_events": 2352,
+  "validation_events": 784,
+  "best_step": 3400,
+  "heldout_action_mean_regret": 0.011235992063064965,
+  "heldout_action_median_regret": 0.0,
+  "heldout_action_p90_regret": 0.028454995155334492,
+  "all_action_mean_regret": 0.00974274609161883,
+  "all_action_median_regret": 0.0,
+  "exact_action_rate": 0.5943877551020408,
+  "selection_regret": 0.020978738154683797,
+  "analytic_planner_ms": 4.792260006070137,
+  "utility_operator_ms": 1.7057026270776987,
+  "speedup": 2.8095518702931788
+}

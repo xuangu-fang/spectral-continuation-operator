@@ -100,7 +100,17 @@ cell，adapter 现会在仿真前拒绝重复 receiver cells，不能用重复�
 
 不能把 The Well 当前结果计作跨系统成功，也不能把 25.8% 的伪“互易误差”解释为物理不互易。真正原因是缺少 source metadata。
 
-## 7. 复现命令
+## 7. Untouched active-interrogation replication
+
+- 配置：`configs/active_wave_interrogation_untouched_20260927.json`；
+- 两域 seed base 均为 20261027，在 M0 方法和 acquisition 冻结后生成；
+- Deepwave/Ocean 均为 256 IID test + 128 OOD systems；
+- Deepwave SHA256：`046ea62d0bbca0a77d4a89f80da7fa209a39a218a41e2cff8d9b5137ceb51b34`；
+- Ocean SHA256：`b8ad8df58bd225d0a9ebf79f0b46301914425ad983b7eb391f05bb7262d21671`；
+- NPZ 保持本地，manifest 进入版本管理。冻结 PBNO 只编码新 response，不在这些 systems 上重拟合 basis、
+  normalization、memory、neural model 或 adapter。
+
+## 8. 复现命令
 
 ```bash
 .venv/bin/python -m spectral_continuation.cross_domain_response_data \

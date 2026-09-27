@@ -8,6 +8,8 @@ from spectral_continuation.cross_domain_query_audit import (
 )
 from spectral_continuation.cross_domain_response_data import (
     CrossDomainResponseArchive,
+    _ocean_parameter_table,
+    _random_velocity_models,
     validate_archive,
 )
 
@@ -64,3 +66,21 @@ def test_response_subspace_completes_low_rank_table() -> None:
         ridge=1e-7,
     )
     np.testing.assert_allclose(prediction, table[:, 3], rtol=1e-4, atol=1e-4)
+
+
+def test_explicit_seed_base_produces_disjoint_untouched_systems() -> None:
+    counts = {"test": 3, "ood": 2}
+    first, split, ids = _ocean_parameter_table(counts, 10, "sealed")
+    repeated, _, repeated_ids = _ocean_parameter_table(counts, 10, "sealed")
+    untouched, _, untouched_ids = _ocean_parameter_table(counts, 20, "untouched")
+    np.testing.assert_array_equal(first, repeated)
+    np.testing.assert_array_equal(ids, repeated_ids)
+    assert set(split) == {"test", "ood"}
+    assert set(ids).isdisjoint(set(untouched_ids))
+    assert not np.allclose(first, untouched)
+
+    original = _random_velocity_models(2, 16, 10, ood=False)
+    repeated_velocity = _random_velocity_models(2, 16, 10, ood=False)
+    untouched_velocity = _random_velocity_models(2, 16, 20, ood=False)
+    np.testing.assert_array_equal(original, repeated_velocity)
+    assert not np.allclose(original, untouched_velocity)

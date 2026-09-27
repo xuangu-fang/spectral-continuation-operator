@@ -41,11 +41,20 @@
 17. query-conditioned posterior metric 最高仅 2.55%，learned acquisition policy 在 Deepwave 回退、Ocean
     只比解析 planner 多改善 0.37%。禁止继续扫 policy/metric 容量；下一次 learning 升级只允许按计划验证
     continuous acquisition utility operator，且必须保留解析 fallback 与 held-out-action regret gate。
+18. 上述 M1 已执行，必须读 `reports/ACTIVE_WAVE_INTERROGATION_M1_ZH.md`。Untouched IID 与 pair-action
+    utility 通过；top-4 hybrid AUC gap 为 0.29%/0.16%。但 strict source/frequency-coordinate holdout regret
+    为 10.23%/18.43%，5× speed 和 Ocean OOD 均失败。不得写成任意连续 action 泛化，也不得继续扫 utility
+    width/depth；重启需要更密连续 physics teacher 或新外部 acquisition data。
 
 不要通过从文件名猜测进度来选择实验。`docs/`、`reports/` 和 `src/` 中有大量已结束阶段，完整技术路径
 保留是为了复现，不表示它们仍是 active roadmap。
 
 ## 当前主线
+
+2026-09-28 M1 已覆盖 M0：全新 untouched IID systems 上 K=2 改善 Deepwave 27.27%、Ocean 20.36%；
+七类强基线、K=1/2/4/8、成本轴和 truth oracle 已齐。当前方法接口冻结为 learned PBNO belief、continuous
+query proposal 与 analytic top-4 certification。未见 action pairs 的 regret 小于 1.2%，但全新坐标外推失败。
+后续不得按 pair holdout 结果宣称 arbitrary continuous source/frequency generalization。
 
 2026-09-27 主线已从固定 prompts 下继续降低 decoder error 推进为 **Target-Aware Wave Interrogation**。
 PBNO learned operator belief 的 posterior predictive risk 用于顺序选择 source--frequency actions；在相同预算、

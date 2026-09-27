@@ -1,0 +1,17 @@
+{
+  "domain": "Deepwave",
+  "parameters": 160801,
+  "train_events": 3360,
+  "validation_events": 1344,
+  "best_step": 3900,
+  "heldout_action_mean_regret": 0.10233089638253053,
+  "heldout_action_median_regret": 0.028962910175323486,
+  "heldout_action_p90_regret": 0.29639621973037733,
+  "all_action_mean_regret": 0.09111606959430944,
+  "all_action_median_regret": 0.03670758008956909,
+  "exact_action_rate": 0.2648809523809524,
+  "selection_regret": 0.19344696597683997,
+  "analytic_planner_ms": 6.362339481711388,
+  "utility_operator_ms": 1.708919806405902,
+  "speedup": 3.723018164961339
+}

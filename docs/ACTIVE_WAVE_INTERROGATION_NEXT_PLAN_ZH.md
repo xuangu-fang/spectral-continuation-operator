@@ -4,6 +4,10 @@
 > 前置结果：先读 `reports/ACTIVE_WAVE_INTERROGATION_M0_ZH.md`
 > 目标：把强 POC 变成经得住“只是固定 schedule / classical design / test reuse”质疑的论文证据。
 
+> **执行状态（2026-09-28）：** M1 untouched systems、完整 acquisition baselines 与 continuous utility
+> operator 均已执行。通过/失败门槛与下一步冻结决策见
+> `reports/ACTIVE_WAVE_INTERROGATION_M1_ZH.md`；本文以下内容保留为预注册计划，不再是待自动执行清单。
+
 ## 1. 冻结主线
 
 一句话故事：

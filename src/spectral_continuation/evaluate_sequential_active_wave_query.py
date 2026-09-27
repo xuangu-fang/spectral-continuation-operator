@@ -11,6 +11,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 
+from .cross_domain_response_data import (
+    CrossDomainResponseArchive,
+    load_cross_domain_archive,
+)
 from .probabilistic_response_operator import paired_summary
 from .train_posterior_operator_composer import (
     DomainState,
@@ -18,6 +22,82 @@ from .train_posterior_operator_composer import (
     _build_state,
     _episode_branches,
 )
+
+
+def attach_evaluation_archive(
+    state: DomainState,
+    archive: CrossDomainResponseArchive,
+    source_split: str,
+    destination_split: str = "test",
+) -> None:
+    """Attach unseen systems without refitting any learned operator component."""
+
+    reference = state.archive
+    if archive.responses.shape[1:] != reference.responses.shape[1:]:
+        raise ValueError("evaluation response geometry differs from the frozen archive")
+    for name in ("sources", "receivers", "frequencies"):
+        if not np.allclose(getattr(archive, name), getattr(reference, name)):
+            raise ValueError(f"evaluation {name} differ from the frozen archive")
+    if not np.array_equal(
+        archive.source_receiver_index, reference.source_receiver_index
+    ):
+        raise ValueError("evaluation source-receiver alignment differs")
+    selected = archive.split == source_split
+    if not np.any(selected):
+        raise ValueError(f"evaluation archive has no {source_split!r} systems")
+    raw = torch.as_tensor(
+        archive.responses[selected].reshape(int(selected.sum()), -1),
+        dtype=torch.complex64,
+        device=state.basis.device,
+    )
+    state.split_raw[destination_split] = raw
+    state.split_encoded[destination_split] = (
+        raw - state.center[None]
+    ) / state.scale[None]
+    state.neural_encoded[destination_split] = (
+        raw - state.neural_center[None]
+    ) / state.neural_scale[None]
+
+
+def candidate_target_risks(
+    state: DomainState,
+    target_pair: np.ndarray,
+    context: np.ndarray,
+    candidates: np.ndarray,
+) -> np.ndarray:
+    """Evaluate posterior target risk for candidate query extensions."""
+
+    receiver = torch.arange(state.receiver_count, device=state.basis.device)
+    target_query = int(target_pair[0] * state.frequency_count + target_pair[1])
+    target = target_query * state.receiver_count + receiver
+    target_basis = state.basis[target].to(torch.complex128)
+    target_basis = target_basis * state.scale[target, None].double()
+    target_gram = target_basis.mH @ target_basis
+    context_query = torch.as_tensor(
+        context[:, 0] * state.frequency_count + context[:, 1],
+        dtype=torch.long,
+        device=state.basis.device,
+    )
+    context_observed = (
+        context_query[:, None] * state.receiver_count + receiver[None]
+    ).reshape(-1)
+    context_basis = state.basis[context_observed].to(torch.complex128)
+    base_precision = context_basis.mH @ context_basis + torch.diag(
+        state.penalty.double()
+    ).to(torch.complex128)
+    candidate_query = torch.as_tensor(
+        candidates[:, 0] * state.frequency_count + candidates[:, 1],
+        dtype=torch.long,
+        device=state.basis.device,
+    )
+    candidate_observed = (
+        candidate_query[:, None] * state.receiver_count + receiver[None]
+    )
+    candidate_basis = state.basis[candidate_observed].to(torch.complex128)
+    precision = base_precision[None] + candidate_basis.mH @ candidate_basis
+    solved = torch.linalg.solve(precision, target_gram[None].expand(len(candidates), -1, -1))
+    risks = torch.diagonal(solved, dim1=-2, dim2=-1).sum(dim=-1).real
+    return risks.cpu().numpy().astype(np.float64)
 
 
 def greedy_variance_schedule(
@@ -30,29 +110,10 @@ def greedy_variance_schedule(
 
     selected = [ordered_candidates[0]]
     remaining = [value for value in ordered_candidates[1:]]
-    receiver = torch.arange(state.receiver_count, device=state.basis.device)
-    target_query = int(target_pair[0] * state.frequency_count + target_pair[1])
-    target = target_query * state.receiver_count + receiver
-    target_basis = state.basis[target].to(torch.complex128)
-    target_basis = target_basis * state.scale[target, None].double()
-    target_gram = target_basis.mH @ target_basis
     while len(selected) < maximum_budget:
-        risks = []
-        for candidate in remaining:
-            context = np.stack((*selected, candidate))
-            query = torch.as_tensor(
-                context[:, 0] * state.frequency_count + context[:, 1],
-                dtype=torch.long,
-                device=state.basis.device,
-            )
-            observed = (query[:, None] * state.receiver_count + receiver[None]).reshape(-1)
-            observed_basis = state.basis[observed].to(torch.complex128)
-            precision = observed_basis.mH @ observed_basis + torch.diag(
-                state.penalty.double()
-            ).to(torch.complex128)
-            risks.append(
-                float(torch.real(torch.trace(torch.linalg.solve(precision, target_gram))).cpu())
-            )
+        risks = candidate_target_risks(
+            state, target_pair, np.stack(selected), np.stack(remaining)
+        )
         best = int(np.argmin(risks))
         selected.append(remaining.pop(best))
     return np.stack(selected)
@@ -75,14 +136,19 @@ def adapter_error(
 
 
 @torch.inference_mode()
-def run(config_path: Path, output: Path, device_name: str) -> dict:
+def run(
+    config_path: Path,
+    output: Path,
+    device_name: str,
+    evaluation_source_split: str | None = None,
+) -> dict:
     config = json.loads(config_path.read_text(encoding="utf-8"))
     device = torch.device(device_name)
     budgets = tuple(int(value) for value in config.get("active_budgets", (1, 2, 4, 8)))
     states: dict[tuple[str, int], DomainState] = {}
     for domain, setting in config["domains"].items():
         for budget in budgets:
-            states[(domain, budget)] = _build_state(
+            state = _build_state(
                 domain,
                 budget,
                 setting,
@@ -92,6 +158,16 @@ def run(config_path: Path, output: Path, device_name: str) -> dict:
                 Path(config["adapter_checkpoint"]),
                 device,
             )
+            if "evaluation_dataset" in setting:
+                attach_evaluation_archive(
+                    state,
+                    load_cross_domain_archive(Path(setting["evaluation_dataset"])),
+                    str(
+                        evaluation_source_split
+                        or setting.get("evaluation_source_split", "test")
+                    ),
+                )
+            states[(domain, budget)] = state
     arrays: dict[tuple[str, int], list[tuple[np.ndarray, np.ndarray]]] = {}
     for prompt_seed in config["formal_test_seeds"]:
         for domain, setting in config["domains"].items():
@@ -153,7 +229,15 @@ def run(config_path: Path, output: Path, device_name: str) -> dict:
                 )
     output.mkdir(parents=True, exist_ok=True)
     rows = []
-    summary = {"method": "PBNO with greedy target-posterior acquisition", "domains": {}}
+    summary = {
+        "method": "PBNO with greedy target-posterior acquisition",
+        "evaluation_datasets": {
+            domain: setting.get("evaluation_dataset", setting["dataset"])
+            for domain, setting in config["domains"].items()
+        },
+        "evaluation_source_split": evaluation_source_split or "config/default",
+        "domains": {},
+    }
     for offset, ((domain, budget), values) in enumerate(sorted(arrays.items())):
         random_error = np.mean([value[0] for value in values], axis=0)
         active_error = np.mean([value[1] for value in values], axis=0)
@@ -207,8 +291,19 @@ def main() -> None:
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--device", default="cuda")
+    parser.add_argument("--evaluation-source-split")
     args = parser.parse_args()
-    print(json.dumps(run(args.config, args.output, args.device), indent=2))
+    print(
+        json.dumps(
+            run(
+                args.config,
+                args.output,
+                args.device,
+                args.evaluation_source_split,
+            ),
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

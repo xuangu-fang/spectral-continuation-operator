@@ -67,6 +67,12 @@ artifacts/pbno_uncertainty_proximal_prior_m0_ocean*/
 # frozen cross-seed sequential summary is versioned separately.
 artifacts/pbno_query_conditioned_metric_m0_*/
 artifacts/active_wave_query_policy_m0_*/
+# Learned utility checkpoints remain local; summaries and frozen schedules are versioned.
+artifacts/continuous_acquisition_utility_m*/**/best.pt
+# Development-only utility iterations; final M1/M2 summaries are kept separately.
+artifacts/continuous_acquisition_utility_m0/
+artifacts/acquisition_baselines_m1_utility_dev/
+artifacts/continuous_acquisition_utility_m2_coordinate_holdout/schedules.json
 # Per-system stable-baseline rows are local; summaries and selection grids are versioned.
 artifacts/pbno_m0_joint_query_stable/**/system_metrics.csv
 experiments/runs/

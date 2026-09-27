@@ -1,0 +1,117 @@
+{
+  "method": "PBNO with greedy target-posterior acquisition",
+  "evaluation_datasets": {
+    "Deepwave": "artifacts/active_wave_interrogation_m1_data/deepwave_untouched_v1.npz",
+    "Ocean": "artifacts/active_wave_interrogation_m1_data/ocean_untouched_v1.npz"
+  },
+  "domains": {
+    "Deepwave": {
+      "1": {
+        "domain": "Deepwave",
+        "budget": 1,
+        "random_mean": 0.11880736134480685,
+        "active_mean": 0.11880736134480685,
+        "relative_improvement": 0.0,
+        "baseline_mean": 0.11880736134480685,
+        "candidate_mean": 0.11880736134480685,
+        "ratio_of_means_gain": 0.0,
+        "bootstrap_95_low": 0.0,
+        "bootstrap_95_high": 0.0,
+        "system_win_rate": 0.0
+      },
+      "2": {
+        "domain": "Deepwave",
+        "budget": 2,
+        "random_mean": 0.09353427428383534,
+        "active_mean": 0.06802451000839937,
+        "relative_improvement": 0.27273172824354275,
+        "baseline_mean": 0.09353427428383534,
+        "candidate_mean": 0.06802451000839937,
+        "ratio_of_means_gain": 0.27273172824354275,
+        "bootstrap_95_low": 0.2671313976560833,
+        "bootstrap_95_high": 0.2783242266094377,
+        "system_win_rate": 1.0
+      },
+      "4": {
+        "domain": "Deepwave",
+        "budget": 4,
+        "random_mean": 0.06985725364453779,
+        "active_mean": 0.04919023521748992,
+        "relative_improvement": 0.29584642036187236,
+        "baseline_mean": 0.06985725364453779,
+        "candidate_mean": 0.04919023521748992,
+        "ratio_of_means_gain": 0.29584642036187236,
+        "bootstrap_95_low": 0.2905934593500418,
+        "bootstrap_95_high": 0.30118521038791624,
+        "system_win_rate": 1.0
+      },
+      "8": {
+        "domain": "Deepwave",
+        "budget": 8,
+        "random_mean": 0.053770682570757344,
+        "active_mean": 0.04050516817248232,
+        "relative_improvement": 0.24670533763113034,
+        "baseline_mean": 0.053770682570757344,
+        "candidate_mean": 0.04050516817248232,
+        "ratio_of_means_gain": 0.24670533763113034,
+        "bootstrap_95_low": 0.24160550468689243,
+        "bootstrap_95_high": 0.25201251792592816,
+        "system_win_rate": 1.0
+      }
+    },
+    "Ocean": {
+      "1": {
+        "domain": "Ocean",
+        "budget": 1,
+        "random_mean": 0.6386000061174855,
+        "active_mean": 0.6386000061174855,
+        "relative_improvement": 0.0,
+        "baseline_mean": 0.6386000061174855,
+        "candidate_mean": 0.6386000061174855,
+        "ratio_of_means_gain": 0.0,
+        "bootstrap_95_low": 0.0,
+        "bootstrap_95_high": 0.0,
+        "system_win_rate": 0.0
+      },
+      "2": {
+        "domain": "Ocean",
+        "budget": 2,
+        "random_mean": 0.5066200244861345,
+        "active_mean": 0.4034572316838118,
+        "relative_improvement": 0.20362952077735363,
+        "baseline_mean": 0.5066200244861345,
+        "candidate_mean": 0.4034572316838118,
+        "ratio_of_means_gain": 0.20362952077735363,
+        "bootstrap_95_low": 0.19228680493870284,
+        "bootstrap_95_high": 0.21431164711330883,
+        "system_win_rate": 0.99609375
+      },
+      "4": {
+        "domain": "Ocean",
+        "budget": 4,
+        "random_mean": 0.39216427316811553,
+        "active_mean": 0.3331021977161678,
+        "relative_improvement": 0.15060544647479557,
+        "baseline_mean": 0.39216427316811553,
+        "candidate_mean": 0.3331021977161678,
+        "ratio_of_means_gain": 0.15060544647479557,
+        "bootstrap_95_low": 0.1404980490742479,
+        "bootstrap_95_high": 0.16054841368987083,
+        "system_win_rate": 0.9921875
+      },
+      "8": {
+        "domain": "Ocean",
+        "budget": 8,
+        "random_mean": 0.3423867815484603,
+        "active_mean": 0.3202256471849978,
+        "relative_improvement": 0.06472543788997265,
+        "baseline_mean": 0.3423867815484603,
+        "candidate_mean": 0.3202256471849978,
+        "ratio_of_means_gain": 0.06472543788997265,
+        "bootstrap_95_low": 0.056156814299418524,
+        "bootstrap_95_high": 0.07272015395605458,
+        "system_win_rate": 0.9453125
+      }
+    }
+  }
+}

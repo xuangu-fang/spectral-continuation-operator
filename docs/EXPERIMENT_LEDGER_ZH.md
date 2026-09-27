@@ -727,3 +727,37 @@ partial failures 或 task-level inverse ambiguity。
 `artifacts/sequential_active_wave_query_m0_summary/summary.json`、`sequential_results.csv`、主图 PNG/PDF；
 配置 `configs/sequential_active_wave_query_m0_20260927.json`；下一阶段冻结计划
 `docs/ACTIVE_WAVE_INTERROGATION_NEXT_PLAN_ZH.md`。
+
+## E22 / 2026-09-28 / Untouched Interrogation + Continuous Utility M1
+
+**单一假设。** M0 target-aware effect 能否在完全新 systems 上保持；一个小型 learning-based set utility
+能否学习 posterior query geometry，并在不读取 test truth 的条件下近似 exhaustive acquisition。
+
+**数据与协议。** 新生成 Deepwave/Ocean 各 256 IID + 128 OOD systems，seed base 20261027；冻结 M0
+PBNO、adapter、query rule 后一次性打开。相同首 probe、strict-Q3、nested K=1/2/4/8、三 seeds。强基线为
+random、nearest、farthest、D-opt、exact target risk、validation-only population schedule 和 K=2 truth oracle。
+
+**主结果。** Untouched IID K=2 exact 相对 random：Deepwave 0.09353→0.06802（27.27%），Ocean
+0.50662→0.40346（20.36%）；AUC 改善 21.15%/12.47%。Nearest 是 Deepwave 强 heuristic；exact 相对
+最强 geometry heuristic 的 AUC 只再改善 3.28%/4.84%。Population 与 exact 基本等价。
+
+**Learning 结果。** 160,801 参数 continuous set utility 在未见 source--frequency pairs 上 held-out regret
+0.71%/1.12%。纯 utility AUC gap 2.006%/0.271%，Deepwave 擦线失败；top-4 learned proposal + analytic
+certification 将 gap 降至 0.29%/0.16%，两域通过 2%。
+
+**关键负结果。** 整块留出 source locations 与 frequency coordinates 后 regret 为 10.23%/18.43%；5×
+speed 未过，hybrid 也不比 batched exact 快。Ocean OOD absolute error 数百至数千，K=2 改善区间跨零。
+Deepwave OOD 仍改善 23%--28%。Population-to-truth-oracle gap 为 12.48%/15.10%，没有跨域 policy gate。
+
+**归因与结论作用域。** learned utility 能组合泛化未见 action pairs，并能为解析 belief 提供近无损 proposal；
+它尚未学出任意连续 source/frequency geometry。Acquisition 改善 belief 内的信息效率，不能修复 OOD belief
+失配。
+
+**决策。** M1 POC 通过，接口冻结为 learned PBNO belief + continuous proposal + analytic top-4
+certification。停止 width/depth/shortlist sweeps。下一次重启只允许更密连续 physics teacher、真实 multistatic
+data，或 Ocean nonlinear-belief oracle-first 设定。
+
+**Artifacts。** `reports/ACTIVE_WAVE_INTERROGATION_M1_ZH.md`；
+`artifacts/active_wave_interrogation_m1_summary/summary.json`、`paper_table.csv`、主图 PNG/PDF；配置
+`configs/acquisition_baselines_m1_untouched_20260928.json` 与
+`configs/continuous_acquisition_utility_m2_coordinate_holdout_20260928.json`。

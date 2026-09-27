@@ -1,0 +1,47 @@
+{
+  "experiment": "continuous_acquisition_utility_m0",
+  "date": "2026-09-28",
+  "base_config": "configs/sequential_active_wave_query_m1_untouched_20260927.json",
+  "maximum_budget": 8,
+  "formal_schedule_seeds": [20260924, 20260925, 20260926],
+  "domains": {
+    "Deepwave": {
+      "train_seeds": [31001, 31002, 31003],
+      "validation_seeds": [41001],
+      "maximum_budget": 8,
+      "heldout_action_fraction": 5,
+      "heldout_action_offset": 0,
+      "include_analytic_path": true,
+      "width": 64,
+      "fourier_frequencies": 4,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "steps": 2500,
+      "batch_size": 32,
+      "evaluation_interval": 100,
+      "seed": 20260928
+    },
+    "Ocean": {
+      "train_seeds": [31001, 31002, 31003, 31004],
+      "validation_seeds": [41001],
+      "maximum_budget": 8,
+      "heldout_action_fraction": 5,
+      "heldout_action_offset": 0,
+      "include_analytic_path": true,
+      "width": 64,
+      "fourier_frequencies": 4,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "steps": 2500,
+      "batch_size": 32,
+      "evaluation_interval": 100,
+      "seed": 20260929
+    }
+  },
+  "gates": {
+    "maximum_parameters": 500000,
+    "heldout_action_mean_regret": 0.05,
+    "minimum_speedup": 5.0,
+    "maximum_auc_degradation": 0.02
+  }
+}

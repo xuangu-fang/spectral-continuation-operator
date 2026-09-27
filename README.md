@@ -13,7 +13,26 @@
 in-context operator 的判断与分阶段方案，见
 [PBNO 方法统一升级备忘录](docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md)；后者是待验证设计，不是已有结果。
 
-## 2026-09-27 最新主线：Target-Aware Wave Interrogation
+## 2026-09-28 最新结果：Untouched Wave Interrogation + Learned Query Utility
+
+M0 的强效应已在全新、从未参与方法选择的 256 Deepwave + 256 Ocean IID systems 上一次性复现。相同首个
+probe、相同 K 和完整 PBNO downstream 下，K=2 error 相对 random 降低 **27.27%/20.36%**；完整
+K=1/2/4/8 AUC 降低 **21.15%/12.47%**。
+
+新方法用一个 160,801 参数、prompt-permutation-invariant 的 continuous utility operator 学习 query
+proposal，再用 analytic posterior risk 在 top-4 内认证。对未见 source--frequency 配对，held-out action
+regret 为 0.71%/1.12%；hybrid downstream AUC 相对 exhaustive planner 只退化 **0.29%/0.16%**。
+
+严格边界同样重要：完全留出 source locations/frequency coordinates 后 regret 为 10.23%/18.43%；5×速度
+gate 未过；Ocean OOD belief 失效。因此只 claim unseen action-pair interpolation，不 claim arbitrary
+continuous extrapolation 或 universal wave agent。
+
+- [M1 正式中文报告](reports/ACTIVE_WAVE_INTERROGATION_M1_ZH.md)
+- [M1 机器汇总](artifacts/active_wave_interrogation_m1_summary/summary.json)
+
+![M1 main result](artifacts/active_wave_interrogation_m1_summary/active_wave_interrogation_m1.png)
+
+## 2026-09-27 上一阶段：Target-Aware Wave Interrogation M0
 
 当前最强的新结果不是继续给固定 prompts 下的 decoder 堆容量，而是让 learned wave-system belief 决定
 下一次应该测哪个 source--frequency。给定目标 response、相同测量预算和相同 PBNO downstream，顺序选择

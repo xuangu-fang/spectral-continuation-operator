@@ -1,7 +1,23 @@
 # 当前状态：Wave-System Representation
 
-> 更新日期：2026-09-27
+> 更新日期：2026-09-28
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
+
+## 2026-09-28 当前结论：M1 三项任务完成
+
+Untouched IID 一次性复验通过：Deepwave/Ocean K=2 raw complex RelL2 为 0.09353→0.06802
+（27.27%）和 0.50662→0.40346（20.36%）；AUC 改善 21.15%/12.47%。Nearest-target 是 Deepwave
+强 heuristic，population validation search 与 exact planner 几乎等价，因此主张是 learned belief 恢复
+target-aware design，而不是 error 超过所有 supervised schedule。
+
+160,801 参数 continuous set utility 在未见 action pairs 上 regret 0.71%/1.12%；top-4 proposal + analytic
+certification 的 AUC gap 为 0.29%/0.16%，通过 2% gate。完全留出 source/frequency coordinates 时 regret
+10.23%/18.43%，严格连续泛化失败；5× latency gate 也未过。Deepwave OOD 保持 23%--28%改善，Ocean OOD
+absolute error 数百至数千，失败。
+
+当前 active 方法冻结为：`learned PBNO belief + continuous query proposal + analytic top-4 certification`。
+不再扫网络容量。完整结果与声明边界见
+[M1 正式报告](../reports/ACTIVE_WAVE_INTERROGATION_M1_ZH.md)。
 
 ## 2026-09-27 当前主线：从 Wave as Prompt 到 Target-Aware Interrogation
 

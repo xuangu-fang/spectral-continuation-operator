@@ -1,0 +1,10 @@
+{
+  "experiment": "acquisition_baselines_m1_untouched",
+  "date": "2026-09-28",
+  "base_config": "configs/sequential_active_wave_query_m1_untouched_20260927.json",
+  "schedule_files": {
+    "population": "artifacts/active_wave_interrogation_m1_population/schedules.json",
+    "continuous_utility": "artifacts/continuous_acquisition_utility_m1/schedules.json"
+  },
+  "evaluate_k2_truth_oracle": true
+}

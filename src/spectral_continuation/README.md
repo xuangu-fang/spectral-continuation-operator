@@ -5,6 +5,14 @@
 
 ## Active：当前 wave-system representation
 
+- `evaluate_acquisition_baselines.py`：untouched systems 上的 matched acquisition benchmark、nested budgets、
+  物理成本、system bootstrap 与 K=2 truth oracle；
+- `train_continuous_acquisition_utility.py`：permutation-invariant continuous query utility、严格 action
+  holdout、proposal schedule 与 regret gate；
+- `export_hybrid_acquisition_schedules.py`：learned top-k query proposal + analytic posterior-risk certification；
+- `build_population_acquisition_schedule.py`：只读旧 validation truth 的昂贵 population schedule 强基线；
+- `summarize_active_wave_interrogation_m1.py`：M1 正文主表、四面板 PNG/PDF 与冻结 gate decisions；
+
 - `evaluate_sequential_active_wave_query.py`：当前主线；在 strict-Q3 中固定同一第一条随机 probe，使用 PBNO
   posterior predictive risk 顺序选择 source--frequency，并以嵌套 K=1/2/4/8 评估完整 PBNO downstream；
 - `train_query_conditioned_posterior_metric.py`：学习 query-conditioned positive Mahalanobis retrieval metric；
