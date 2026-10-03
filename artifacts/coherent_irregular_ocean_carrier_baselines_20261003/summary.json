@@ -1,0 +1,57 @@
+[
+  {
+    "method": "raw_gaussian_e1",
+    "macro_rel_l2": 3.1189122245624468,
+    "seconds": 0.6228635087609291
+  },
+  {
+    "method": "carrier_gaussian_e1",
+    "macro_rel_l2": 0.009513359013635356,
+    "seconds": 0.7326851906254888
+  },
+  {
+    "method": "carrier_spreading_e1",
+    "macro_rel_l2": 0.009332246386158498,
+    "seconds": 0.7708667041733861
+  },
+  {
+    "method": "carrier_spreading_x025_y075",
+    "macro_rel_l2": 0.04790148422087137,
+    "seconds": 0.771739749237895
+  },
+  {
+    "method": "carrier_spreading_x025_y1",
+    "macro_rel_l2": 0.023682948109788063,
+    "seconds": 0.7653629211708903
+  },
+  {
+    "method": "carrier_spreading_x025_y15",
+    "macro_rel_l2": 0.012493613989055529,
+    "seconds": 0.7682262985035777
+  },
+  {
+    "method": "carrier_spreading_x05_y075",
+    "macro_rel_l2": 0.03241738636740201,
+    "seconds": 0.7702056402340531
+  },
+  {
+    "method": "carrier_spreading_x05_y1",
+    "macro_rel_l2": 0.008539485962090558,
+    "seconds": 0.7584636276587844
+  },
+  {
+    "method": "carrier_spreading_x05_y15",
+    "macro_rel_l2": 0.0029459811356361103,
+    "seconds": 0.763595363125205
+  },
+  {
+    "method": "carrier_spreading_x1_y075",
+    "macro_rel_l2": 0.040520448624185454,
+    "seconds": 0.7637636000290513
+  },
+  {
+    "method": "carrier_spreading_x1_y15",
+    "macro_rel_l2": 0.005426894869428293,
+    "seconds": 0.7697349423542619
+  }
+]

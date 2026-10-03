@@ -1,0 +1,322 @@
+[
+  {
+    "system": 128,
+    "frequency": 95.0,
+    "complex_rel_l2": 0.0023014611234037927,
+    "amplitude_rel_l2": 0.001409910769420006,
+    "energy_weighted_phase_rmse_rad": 0.001780865477962415,
+    "energy_weighted_phase_cos": 0.999998419636632,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999973567962449
+  },
+  {
+    "system": 128,
+    "frequency": 105.0,
+    "complex_rel_l2": 0.001620400161531799,
+    "amplitude_rel_l2": 0.0011886473493174351,
+    "energy_weighted_phase_rmse_rad": 0.0011011128792192447,
+    "energy_weighted_phase_cos": 0.9999993938161889,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999986913906993
+  },
+  {
+    "system": 128,
+    "frequency": 115.0,
+    "complex_rel_l2": 0.0024543491618636433,
+    "amplitude_rel_l2": 0.0017655497626889542,
+    "energy_weighted_phase_rmse_rad": 0.0016744145746064537,
+    "energy_weighted_phase_cos": 0.9999985984256661,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999969923886503
+  },
+  {
+    "system": 128,
+    "frequency": 125.0,
+    "complex_rel_l2": 0.001342701214212776,
+    "amplitude_rel_l2": 0.001031865053348031,
+    "energy_weighted_phase_rmse_rad": 0.000860651119818619,
+    "energy_weighted_phase_cos": 0.9999996296505155,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999991021925357
+  },
+  {
+    "system": 129,
+    "frequency": 95.0,
+    "complex_rel_l2": 0.002646337349535035,
+    "amplitude_rel_l2": 0.0020796746958856843,
+    "energy_weighted_phase_rmse_rad": 0.0016322983093778152,
+    "energy_weighted_phase_cos": 0.9999986680446922,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999965009612215
+  },
+  {
+    "system": 129,
+    "frequency": 105.0,
+    "complex_rel_l2": 0.002303636679687903,
+    "amplitude_rel_l2": 0.0016545472061155185,
+    "energy_weighted_phase_rmse_rad": 0.0015993015269975385,
+    "energy_weighted_phase_cos": 0.999998721474056,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999973563721327
+  },
+  {
+    "system": 129,
+    "frequency": 115.0,
+    "complex_rel_l2": 0.004103314417624693,
+    "amplitude_rel_l2": 0.002378396776154143,
+    "energy_weighted_phase_rmse_rad": 0.0033442113930861562,
+    "energy_weighted_phase_cos": 0.9999944098470425,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.999991592152766
+  },
+  {
+    "system": 129,
+    "frequency": 125.0,
+    "complex_rel_l2": 0.0033977046056790066,
+    "amplitude_rel_l2": 0.002295450126014514,
+    "energy_weighted_phase_rmse_rad": 0.002456291092716256,
+    "energy_weighted_phase_cos": 0.9999969841582043,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999942379207287
+  },
+  {
+    "system": 130,
+    "frequency": 95.0,
+    "complex_rel_l2": 0.0031329648900013975,
+    "amplitude_rel_l2": 0.0022956669765239316,
+    "energy_weighted_phase_rmse_rad": 0.0021272984095884453,
+    "energy_weighted_phase_cos": 0.9999977398532103,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999951146377348
+  },
+  {
+    "system": 130,
+    "frequency": 105.0,
+    "complex_rel_l2": 0.0036855816616447132,
+    "amplitude_rel_l2": 0.0022496669036330226,
+    "energy_weighted_phase_rmse_rad": 0.0030405503273083605,
+    "energy_weighted_phase_cos": 0.9999953956703556,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999932146006915
+  },
+  {
+    "system": 130,
+    "frequency": 115.0,
+    "complex_rel_l2": 0.0029387594348946177,
+    "amplitude_rel_l2": 0.0016954465531397805,
+    "energy_weighted_phase_rmse_rad": 0.0023846951699014033,
+    "energy_weighted_phase_cos": 0.9999971585264845,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999956872492255
+  },
+  {
+    "system": 130,
+    "frequency": 125.0,
+    "complex_rel_l2": 0.001411874718320345,
+    "amplitude_rel_l2": 0.001165280022223587,
+    "energy_weighted_phase_rmse_rad": 0.0007960058379478,
+    "energy_weighted_phase_cos": 0.9999996831913122,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999990073769716
+  },
+  {
+    "system": 131,
+    "frequency": 95.0,
+    "complex_rel_l2": 0.005315661128932066,
+    "amplitude_rel_l2": 0.0021510558993195063,
+    "energy_weighted_phase_rmse_rad": 0.004899587354456803,
+    "energy_weighted_phase_cos": 0.999988009685522,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.999985896724223
+  },
+  {
+    "system": 131,
+    "frequency": 105.0,
+    "complex_rel_l2": 0.0021508438454306915,
+    "amplitude_rel_l2": 0.001396558701545086,
+    "energy_weighted_phase_rmse_rad": 0.0016464243195683204,
+    "energy_weighted_phase_cos": 0.9999986448571115,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999976893013037
+  },
+  {
+    "system": 131,
+    "frequency": 115.0,
+    "complex_rel_l2": 0.002942933767917852,
+    "amplitude_rel_l2": 0.0017832873008234973,
+    "energy_weighted_phase_rmse_rad": 0.0023432039119853313,
+    "energy_weighted_phase_cos": 0.9999972590469572,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999956932231132
+  },
+  {
+    "system": 131,
+    "frequency": 125.0,
+    "complex_rel_l2": 0.0022534904027672596,
+    "amplitude_rel_l2": 0.0017388860495048657,
+    "energy_weighted_phase_rmse_rad": 0.0014251891272338264,
+    "energy_weighted_phase_cos": 0.9999989844952407,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999974690273838
+  },
+  {
+    "system": 132,
+    "frequency": 95.0,
+    "complex_rel_l2": 0.0016157807570551515,
+    "amplitude_rel_l2": 0.0010590323483712883,
+    "energy_weighted_phase_rmse_rad": 0.001219006854039081,
+    "energy_weighted_phase_cos": 0.9999992570321452,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999987046824419
+  },
+  {
+    "system": 132,
+    "frequency": 105.0,
+    "complex_rel_l2": 0.002073645659542676,
+    "amplitude_rel_l2": 0.0013860564066925597,
+    "energy_weighted_phase_rmse_rad": 0.0015337123018993788,
+    "energy_weighted_phase_cos": 0.9999988240167209,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.999997862957118
+  },
+  {
+    "system": 132,
+    "frequency": 115.0,
+    "complex_rel_l2": 0.0014340699968330558,
+    "amplitude_rel_l2": 0.0009581505551772383,
+    "energy_weighted_phase_rmse_rad": 0.0010610254623675882,
+    "energy_weighted_phase_cos": 0.9999994380453978,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999989735022317
+  },
+  {
+    "system": 132,
+    "frequency": 125.0,
+    "complex_rel_l2": 0.0028069940756502956,
+    "amplitude_rel_l2": 0.0019173182590589198,
+    "energy_weighted_phase_rmse_rad": 0.0020390883116770428,
+    "energy_weighted_phase_cos": 0.9999979212355626,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999960734106862
+  },
+  {
+    "system": 133,
+    "frequency": 95.0,
+    "complex_rel_l2": 0.0019798495431181586,
+    "amplitude_rel_l2": 0.001600897321142902,
+    "energy_weighted_phase_rmse_rad": 0.0011617765734450779,
+    "energy_weighted_phase_cos": 0.9999993251602443,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999980570171954
+  },
+  {
+    "system": 133,
+    "frequency": 105.0,
+    "complex_rel_l2": 0.0021669075690232773,
+    "amplitude_rel_l2": 0.001582311317631648,
+    "energy_weighted_phase_rmse_rad": 0.0014730238983831096,
+    "energy_weighted_phase_cos": 0.9999989152444764,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999976622337995
+  },
+  {
+    "system": 133,
+    "frequency": 115.0,
+    "complex_rel_l2": 0.0022141831909246214,
+    "amplitude_rel_l2": 0.001319870461281482,
+    "energy_weighted_phase_rmse_rad": 0.0017723439268768112,
+    "energy_weighted_phase_cos": 0.999998429701026,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999975540818069
+  },
+  {
+    "system": 133,
+    "frequency": 125.0,
+    "complex_rel_l2": 0.0025176183450577373,
+    "amplitude_rel_l2": 0.001577233150156946,
+    "energy_weighted_phase_rmse_rad": 0.001950319148431315,
+    "energy_weighted_phase_cos": 0.9999980983958899,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999968392733366
+  },
+  {
+    "system": 134,
+    "frequency": 95.0,
+    "complex_rel_l2": 0.0033228656742052515,
+    "amplitude_rel_l2": 0.0024851240027529515,
+    "energy_weighted_phase_rmse_rad": 0.002232845966329331,
+    "energy_weighted_phase_cos": 0.9999975106898756,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999944976455323
+  },
+  {
+    "system": 134,
+    "frequency": 105.0,
+    "complex_rel_l2": 0.003051095197827547,
+    "amplitude_rel_l2": 0.0021622484913208346,
+    "energy_weighted_phase_rmse_rad": 0.002135319233606488,
+    "energy_weighted_phase_cos": 0.9999977203860495,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999953518862634
+  },
+  {
+    "system": 134,
+    "frequency": 115.0,
+    "complex_rel_l2": 0.0025322368102026135,
+    "amplitude_rel_l2": 0.0016313005223536222,
+    "energy_weighted_phase_rmse_rad": 0.0019326733048505233,
+    "energy_weighted_phase_cos": 0.9999981324898777,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999967948934457
+  },
+  {
+    "system": 134,
+    "frequency": 125.0,
+    "complex_rel_l2": 0.0029680203928008617,
+    "amplitude_rel_l2": 0.0017956186575767076,
+    "energy_weighted_phase_rmse_rad": 0.0023597597976797455,
+    "energy_weighted_phase_cos": 0.9999972164904893,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999956094005269
+  },
+  {
+    "system": 135,
+    "frequency": 95.0,
+    "complex_rel_l2": 0.0022596754959435133,
+    "amplitude_rel_l2": 0.0017191138920377793,
+    "energy_weighted_phase_rmse_rad": 0.0014610140643363315,
+    "energy_weighted_phase_cos": 0.9999989328337774,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999974635476544
+  },
+  {
+    "system": 135,
+    "frequency": 105.0,
+    "complex_rel_l2": 0.002100166603563771,
+    "amplitude_rel_l2": 0.0016081885180066677,
+    "energy_weighted_phase_rmse_rad": 0.001348504857652071,
+    "energy_weighted_phase_cos": 0.9999990908372558,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999977968673807
+  },
+  {
+    "system": 135,
+    "frequency": 115.0,
+    "complex_rel_l2": 0.002377318413169807,
+    "amplitude_rel_l2": 0.0019994853475651907,
+    "energy_weighted_phase_rmse_rad": 0.0012927610535044204,
+    "energy_weighted_phase_cos": 0.9999991644996422,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999971862844245
+  },
+  {
+    "system": 135,
+    "frequency": 125.0,
+    "complex_rel_l2": 0.002870491254486882,
+    "amplitude_rel_l2": 0.0020382175605721748,
+    "energy_weighted_phase_rmse_rad": 0.001999314095964003,
+    "energy_weighted_phase_cos": 0.9999980016437852,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999958836194818
+  }
+]

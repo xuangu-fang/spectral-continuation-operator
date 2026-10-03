@@ -1,0 +1,22 @@
+{
+  "seed": 42,
+  "data": {
+    "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+    "train_ids": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+    "validation_ids": [128, 129, 130, 131, 132, 133, 134, 135],
+    "train_frequencies": [90, 100, 110],
+    "validation_frequencies": [95, 105, 115, 125],
+    "fit_count": 64,
+    "query_count": 64,
+    "extent": 1.5,
+    "train_patches_per_system": 256,
+    "validation_patches_per_system": 256
+  },
+  "model": {"branches": 16, "degree": 1, "width": 128, "ridge": 0.00001, "learned": true},
+  "batch_size": 128,
+  "steps": 4000,
+  "eval_every": 250,
+  "learning_rate": 0.0003,
+  "reason_for_iteration": "Eight-branch amortization reduces .689 to .083 but loses to fixed16-affine .024. Is residual due to inadequate initialized coverage or encoder optimization? Change branch count only; reuse identical samples and baseline.",
+  "gate": "local development error <=0.01925, corresponding to 20% below fixed16-affine baseline; not full-field/formal R2"
+}

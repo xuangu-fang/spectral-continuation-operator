@@ -1,0 +1,7 @@
+{
+  "seeds": [20261003, 20261004],
+  "grids": [129, 257],
+  "frequencies": [6.0, 10.0, 14.0],
+  "purpose": "Independent heterogeneous complex field teacher: direct-solve residual and grid-convergence audit before dataset expansion",
+  "gate": "129-to-257 interior complex RelL2 below 0.02; otherwise refine teacher or lower continuum claims, not replace learning metric"
+}

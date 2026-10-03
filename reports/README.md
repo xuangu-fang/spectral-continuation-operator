@@ -4,9 +4,14 @@
 > [`docs/CURRENT_STORY_AND_ROADMAP_ZH.md`](../docs/CURRENT_STORY_AND_ROADMAP_ZH.md)。本目录是证据档案，
 > “保留”不等于“仍应继续优化”。
 
-## 只读这三份
+## 当前报告
 
-1. [`ACTIVE_WAVE_INTERROGATION_M1_ZH.md`](ACTIVE_WAVE_INTERROGATION_M1_ZH.md)：**当前主报告**。包含
+[连续复波场表征：进度、方法、图与正负结论](COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)。
+目标执行中，所有新结果仍是development；旧active query暂停。
+
+## 历史Wave Interrogation阶段的三份报告
+
+1. [`ACTIVE_WAVE_INTERROGATION_M1_ZH.md`](ACTIVE_WAVE_INTERROGATION_M1_ZH.md)：该历史阶段主报告。包含
    untouched IID/OOD systems、七类 acquisition baseline、成本轴、continuous learned utility、top-4
    analytic certification，以及 strict coordinate holdout、速度和 Ocean OOD 的失败边界。
 2. [`ACTIVE_WAVE_INTERROGATION_M0_ZH.md`](ACTIVE_WAVE_INTERROGATION_M0_ZH.md)：主任务如何从固定 prompts
@@ -14,7 +19,7 @@
 3. [`PBNO_M4_RISK_RESOLUTION_ZH.md`](PBNO_M4_RISK_RESOLUTION_ZH.md)：当前 operator belief 的来历、
    spectral dictionary、第四物理域和统一 adapter。
 
-## 与当前方法直接相关的报告
+## 与历史PBNO方法直接相关的报告
 
 - [`PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：Bayesian tokenizer、
   neural latent transport 与 posterior-kernel operator。

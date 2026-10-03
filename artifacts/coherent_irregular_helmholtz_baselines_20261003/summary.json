@@ -1,0 +1,67 @@
+[
+  {
+    "method": "thin_plate",
+    "macro_rel_l2": 0.17371790826607952,
+    "seconds": 0.6987897492945194
+  },
+  {
+    "method": "cubic_rbf",
+    "macro_rel_l2": 0.13590536959354851,
+    "seconds": 0.5036738598719239
+  },
+  {
+    "method": "quintic_rbf",
+    "macro_rel_l2": 0.10344361810620231,
+    "seconds": 0.5611941553652287
+  },
+  {
+    "method": "gaussian_e1_r8",
+    "macro_rel_l2": 0.02445577116137177,
+    "seconds": 0.5837820218876004
+  },
+  {
+    "method": "gaussian_e2_r8",
+    "macro_rel_l2": 0.0545743353282222,
+    "seconds": 0.5821430888026953
+  },
+  {
+    "method": "gaussian_e3_r8",
+    "macro_rel_l2": 0.1407306099591632,
+    "seconds": 0.5696985423564911
+  },
+  {
+    "method": "gaussian_e4_r8",
+    "macro_rel_l2": 0.24358414583585994,
+    "seconds": 0.5655179191380739
+  },
+  {
+    "method": "gaussian_e1_r5",
+    "macro_rel_l2": 0.05655320830271269,
+    "seconds": 0.6373024042695761
+  },
+  {
+    "method": "gaussian_e2_r5",
+    "macro_rel_l2": 0.05787391996052962,
+    "seconds": 0.5965738454833627
+  },
+  {
+    "method": "gaussian_e3_r5",
+    "macro_rel_l2": 0.14094340379430856,
+    "seconds": 0.5903607932850718
+  },
+  {
+    "method": "wave_shell_r6",
+    "macro_rel_l2": 0.5642522266892818,
+    "seconds": 1.2194913988932967
+  },
+  {
+    "method": "wave_band_r6",
+    "macro_rel_l2": 0.2518921946869061,
+    "seconds": 4.603406277485192
+  },
+  {
+    "method": "wave_band_r3",
+    "macro_rel_l2": 0.2783528184923854,
+    "seconds": 4.618744095787406
+  }
+]

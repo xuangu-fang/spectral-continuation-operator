@@ -1,0 +1,22 @@
+{
+  "hypothesis": "Dense same-frequency supervision separates local carrier capacity from amortized encoder failure; curved phases and smaller charts tested independently.",
+  "gate": "R0 held-coordinate complex RelL2 <= 0.05; no claim of shared prediction",
+  "seed": 42,
+  "device": "cuda",
+  "spatial_stride": 2,
+  "data": {
+    "helmholtz": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+      "grid": 257, "roi": [0.18, 0.82],
+      "system_indices": [20261132, 20261133], "frequencies": [7, 11, 14]
+    }
+  },
+  "charts": [
+    {"name": "fixed_pw16_affine_large", "branches": 16, "wavelength_spacing": 1.5, "degree": 1},
+    {"name": "fixed_pw16_affine_small", "branches": 16, "wavelength_spacing": 0.75, "degree": 1},
+    {"name": "learned_pw16_affine_large", "branches": 16, "wavelength_spacing": 1.5, "degree": 1, "learnable": true, "steps": 600},
+    {"name": "learned_pw16_affine_small", "branches": 16, "wavelength_spacing": 0.75, "degree": 1, "learnable": true, "steps": 600},
+    {"name": "learned_pw16_curved_large", "branches": 16, "wavelength_spacing": 1.5, "degree": 1, "learnable": true, "curvature": true, "steps": 600}
+  ],
+  "inrs": []
+}

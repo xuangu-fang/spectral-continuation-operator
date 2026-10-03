@@ -1,0 +1,37 @@
+{
+  "protocol": "R0 per-field fit; not operator generalization",
+  "seed": 42,
+  "fit_coordinate_rule": "regular stride with domain endpoints",
+  "data": {
+    "ocean": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+      "system_indices": [
+        0,
+        1,
+        2
+      ],
+      "frequencies": [
+        90,
+        110,
+        125
+      ]
+    },
+    "heterogeneous_fdtd": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+      "system_indices": [
+        0,
+        1,
+        2
+      ],
+      "frequency_indices": [
+        0,
+        3,
+        7
+      ],
+      "source_index": 0
+    }
+  },
+  "normalization": "RMS of fitted points only",
+  "selection": "chart train loss only; fixed INR training budget; never query loss",
+  "code_sha256": "396fc87a151c0dfef7f84b8aaa7d1b65b2ce6618737f6d465a5ce6f16563d3c8"
+}

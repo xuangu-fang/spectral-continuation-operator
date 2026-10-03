@@ -1,0 +1,9 @@
+{
+  "source_archive": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "system_indices": [128, 129],
+  "frequencies": [95, 110, 125, 150, 200],
+  "spatial_grid": [95, 767],
+  "purpose": "Direct solver evaluation at independently queried coordinates and higher frequencies; development systems only",
+  "guard": "Reproduce archived 110Hz coarse field to raw RelL2 <1e-5 before generating new values",
+  "reserved_test_policy": "Original strict systems remain unopened and ungenerated"
+}

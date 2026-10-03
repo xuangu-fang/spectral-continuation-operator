@@ -1,0 +1,18 @@
+{
+  "ocean_path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "system_indices": [
+    0,
+    1,
+    2,
+    128,
+    129,
+    130
+  ],
+  "frequency_spacings": [
+    2,
+    5,
+    10
+  ],
+  "information": "known source/range and water speed for all physical baselines; same-system frequency interpolation only",
+  "status": "development diagnostic, not cross-system neural prediction"
+}

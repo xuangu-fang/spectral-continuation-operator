@@ -1,0 +1,108 @@
+{
+  "pool": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/development_query_pool.npz",
+  "protocol": "All hyperparameters are development controls; identical observed and query points as shared learned small chart",
+  "methods": [
+    {
+      "name": "thin_plate",
+      "kind": "rbf",
+      "kernel": "thin_plate_spline",
+      "degree": 1
+    },
+    {
+      "name": "cubic_rbf",
+      "kind": "rbf",
+      "kernel": "cubic",
+      "degree": 1
+    },
+    {
+      "name": "quintic_rbf",
+      "kind": "rbf",
+      "kernel": "quintic",
+      "degree": 2
+    },
+    {
+      "name": "gaussian_e1_r8",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08
+    },
+    {
+      "name": "gaussian_e2_r8",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 2,
+      "ridge": 1e-08
+    },
+    {
+      "name": "gaussian_e3_r8",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 3,
+      "ridge": 1e-08
+    },
+    {
+      "name": "gaussian_e4_r8",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 4,
+      "ridge": 1e-08
+    },
+    {
+      "name": "gaussian_e1_r5",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-05
+    },
+    {
+      "name": "gaussian_e2_r5",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 2,
+      "ridge": 1e-05
+    },
+    {
+      "name": "gaussian_e3_r5",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 3,
+      "ridge": 1e-05
+    },
+    {
+      "name": "wave_shell_r6",
+      "kind": "wave_kernel",
+      "radii": [
+        1
+      ],
+      "extent": 0.75,
+      "ridge": 1e-06
+    },
+    {
+      "name": "wave_band_r6",
+      "kind": "wave_kernel",
+      "radii": [
+        1,
+        1.2,
+        1.4,
+        1.6,
+        1.8
+      ],
+      "extent": 0.75,
+      "ridge": 1e-06
+    },
+    {
+      "name": "wave_band_r3",
+      "kind": "wave_kernel",
+      "radii": [
+        1,
+        1.2,
+        1.4,
+        1.6,
+        1.8
+      ],
+      "extent": 0.75,
+      "ridge": 0.001
+    }
+  ]
+}

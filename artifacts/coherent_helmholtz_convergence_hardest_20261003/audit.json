@@ -1,0 +1,31 @@
+[
+  {
+    "seed": 20261115,
+    "grid": 257,
+    "residual_max": 4.4115747262874064e-14,
+    "solve_seconds": 2.997307042591274,
+    "minimum_speed": 0.5856413404122777,
+    "min_points_per_wavelength": 10.708870224681649
+  },
+  {
+    "seed": 20261115,
+    "grid": 513,
+    "residual_max": 1.683743045778132e-13,
+    "solve_seconds": 27.319872819818556,
+    "minimum_speed": 0.5855408440937326,
+    "min_points_per_wavelength": 21.414065155427938
+  },
+  {
+    "seed": 20261115,
+    "coarse": 257,
+    "fine": 513,
+    "frequency": 14.0,
+    "scope": "interior convergence; not a learning result",
+    "complex_rel_l2": 0.002334997486453433,
+    "amplitude_rel_l2": 0.0004011032911959222,
+    "energy_weighted_phase_rmse_rad": 0.0023002483106292393,
+    "energy_weighted_phase_cos": 0.9999973544604662,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999979167067773
+  }
+]

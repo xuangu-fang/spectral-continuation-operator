@@ -1,0 +1,52 @@
+[
+  {
+    "method": "gaussian_e05_r8",
+    "macro_rel_l2": 0.2709918861126819,
+    "seconds": 1.0902035143226385
+  },
+  {
+    "method": "gaussian_e075_r8",
+    "macro_rel_l2": 0.08174829987815756,
+    "seconds": 1.0582511806860566
+  },
+  {
+    "method": "gaussian_e125_r8",
+    "macro_rel_l2": 0.019158198365968417,
+    "seconds": 1.0399843519553542
+  },
+  {
+    "method": "gaussian_e15_r8",
+    "macro_rel_l2": 0.02473735415893486,
+    "seconds": 1.1061559719964862
+  },
+  {
+    "method": "gaussian_e075_r10",
+    "macro_rel_l2": 0.05803371404440161,
+    "seconds": 1.1090788142755628
+  },
+  {
+    "method": "gaussian_e1_r10",
+    "macro_rel_l2": 0.020870370770164633,
+    "seconds": 0.8138318294659257
+  },
+  {
+    "method": "gaussian_e125_r10",
+    "macro_rel_l2": 0.017686273143927976,
+    "seconds": 0.8425118895247579
+  },
+  {
+    "method": "gaussian_e075_r6",
+    "macro_rel_l2": 0.1331499088710995,
+    "seconds": 1.1392042953521013
+  },
+  {
+    "method": "gaussian_e1_r6",
+    "macro_rel_l2": 0.039414560722914806,
+    "seconds": 1.103756606578827
+  },
+  {
+    "method": "gaussian_e125_r6",
+    "macro_rel_l2": 0.025761419945518206,
+    "seconds": 1.1155573586001992
+  }
+]

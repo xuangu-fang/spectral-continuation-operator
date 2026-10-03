@@ -1,0 +1,8 @@
+{
+  "ocean_path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "system_indices": [128, 129, 130, 131],
+  "frequency_spacings": [5, 10], "rank_tolerance": 0.0000001, "spatial_delays": 16,
+  "hypothesis": "Spatial delay lifting and retaining weaker singular directions resolve missed coherent modes; same observed data, no target-frequency access.",
+  "protocol": "Classical mechanism diagnostic on development systems, not a new learned method",
+  "gate": "20% lower macro raw error vs carrier cubic, without suppressing any failed systems"
+}

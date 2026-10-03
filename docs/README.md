@@ -1,6 +1,16 @@
 # 文档导航
 
+> 当前执行：[高精度复波场连续表征 24 小时计划](COHERENT_CONTINUOUS_REPRESENTATION_24H_ZH.md)。
+> 主动查询/PBNO 后续暂缓；以下旧材料用于复现，不是当前执行清单。
+
 ## 当前必读
+
+1. [当前主线与路线图](CURRENT_STORY_AND_ROADMAP_ZH.md)；
+2. [连续复场表征进度与图](../reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)；
+3. [24小时探索协议](COHERENT_CONTINUOUS_REPRESENTATION_24H_ZH.md)；
+4. [当前状态](CURRENT_STATUS_ZH.md)与[数据来源](COHERENT_DATA_PROVENANCE_ZH.md)。
+
+## 历史PBNO阶段的阅读顺序（非当前执行计划）
 
 1. [`PBNO_STORY_PLAIN_LANGUAGE_ZH.md`](PBNO_STORY_PLAIN_LANGUAGE_ZH.md)：不要求波动背景的大白话故事、方法与
    实验入口；

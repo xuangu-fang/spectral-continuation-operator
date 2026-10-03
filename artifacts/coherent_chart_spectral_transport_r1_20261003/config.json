@@ -1,0 +1,16 @@
+{
+  "conditional_checkpoint": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/best.pt",
+  "global_checkpoint": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/best.pt",
+  "ocean_path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "system_indices": [
+    128,
+    129
+  ],
+  "frequency_spacings": [
+    5,
+    10
+  ],
+  "hypothesis": "A spatially accurate learned chart may not define a stable coordinate system across frequency. Compare independent chart interpolation, shared context frames, fixed physical frames, and carrier-field cubic.",
+  "information": "Complete fields at observed frequencies only. No target-frequency spatial calibration and no query-truth latent fitting.",
+  "gate": "Unobserved frequency complex error <=0.10 AND >=20% improvement over carrier-field cubic; development only"
+}

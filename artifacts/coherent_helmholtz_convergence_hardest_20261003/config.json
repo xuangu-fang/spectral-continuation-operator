@@ -1,0 +1,14 @@
+{
+  "seeds": [
+    20261115
+  ],
+  "grids": [
+    257,
+    513
+  ],
+  "frequencies": [
+    14.0
+  ],
+  "purpose": "Audit minimum-speed case in generated development systems, independently of downstream prediction scores",
+  "gate": "257-to-513 interior complex RelL2 below 0.005"
+}

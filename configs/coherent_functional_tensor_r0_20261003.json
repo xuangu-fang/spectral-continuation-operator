@@ -1,0 +1,16 @@
+{
+  "seed": 42, "device": "cuda", "spatial_stride": 2,
+  "data": {
+    "ocean": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+      "system_indices": [128, 129], "frequencies": [95, 110, 125]
+    },
+    "helmholtz": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+      "grid": 257, "roi": [0.18, 0.82],
+      "system_indices": [20261132, 20261133], "frequencies": [7, 11, 14]
+    }
+  },
+  "charts": [], "inrs": [], "tensor_ranks": [2, 4, 8, 16, 32],
+  "protocol": "R0 observed-grid complex SVD with cubic-interpolated one-dimensional factors; no query values used for factor fitting; no shared operator claim"
+}

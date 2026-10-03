@@ -1,0 +1,90 @@
+{
+  "seed": 43,
+  "data": {
+    "domain": "helmholtz",
+    "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+    "grid": 257,
+    "roi": [
+      0.18,
+      0.82
+    ],
+    "train_ids": [
+      20261100,
+      20261101,
+      20261102,
+      20261103,
+      20261104,
+      20261105,
+      20261106,
+      20261107,
+      20261108,
+      20261109,
+      20261110,
+      20261111,
+      20261112,
+      20261113,
+      20261114,
+      20261115,
+      20261116,
+      20261117,
+      20261118,
+      20261119,
+      20261120,
+      20261121,
+      20261122,
+      20261123,
+      20261124,
+      20261125,
+      20261126,
+      20261127,
+      20261128,
+      20261129,
+      20261130,
+      20261131
+    ],
+    "validation_ids": [
+      20261132,
+      20261133,
+      20261134,
+      20261135,
+      20261136,
+      20261137,
+      20261138,
+      20261139
+    ],
+    "train_frequencies": [
+      6,
+      8,
+      10,
+      12
+    ],
+    "validation_frequencies": [
+      7,
+      9,
+      11,
+      13,
+      14
+    ],
+    "fit_count": 64,
+    "query_count": 64,
+    "extent": 0.75,
+    "train_patches_per_system": 256,
+    "validation_patches_per_system": 256
+  },
+  "model": {
+    "family": "kernel",
+    "width": 128,
+    "ridge": 1e-08,
+    "learned": true,
+    "carrier": true,
+    "metric": true,
+    "curvature": true
+  },
+  "batch_size": 128,
+  "steps": 4000,
+  "eval_every": 250,
+  "learning_rate": 0.0003,
+  "hypothesis": "A learned continuous carrier and envelope metric may avoid finite-dictionary truncation while preserving complex observations.",
+  "gate": "20% gain vs validation-tuned Gaussian RBF (0.02446 pilot), global-kernel, and matched carrier/metric ablations; raw error remains primary",
+  "curvature_hypothesis": "R0 quadratic phase improved heterogeneous capacity; add only three curvature coordinates to the kernel, retaining the same data and objective"
+}

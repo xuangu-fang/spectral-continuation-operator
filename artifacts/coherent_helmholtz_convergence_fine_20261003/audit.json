@@ -1,0 +1,60 @@
+[
+  {
+    "seed": 20261003,
+    "grid": 257,
+    "residual_max": 4.224853410282813e-14,
+    "solve_seconds": 3.3693882254883647,
+    "minimum_speed": 0.7319223131527702,
+    "min_points_per_wavelength": 13.383722297650655
+  },
+  {
+    "seed": 20261003,
+    "grid": 513,
+    "residual_max": 1.8749843877405518e-13,
+    "solve_seconds": 24.631983301602304,
+    "minimum_speed": 0.7318990333830314,
+    "min_points_per_wavelength": 26.76659322086515
+  },
+  {
+    "seed": 20261003,
+    "coarse": 257,
+    "fine": 513,
+    "frequency": 14.0,
+    "scope": "interior convergence; not a learning result",
+    "complex_rel_l2": 0.0017807827846046385,
+    "amplitude_rel_l2": 0.00020220321417586864,
+    "energy_weighted_phase_rmse_rad": 0.001769273576797408,
+    "energy_weighted_phase_cos": 0.9999984348377331,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999989109066403
+  },
+  {
+    "seed": 20261004,
+    "grid": 257,
+    "residual_max": 4.0563405563518476e-14,
+    "solve_seconds": 3.1703318655490875,
+    "minimum_speed": 0.7806464136508581,
+    "min_points_per_wavelength": 14.274677278187118
+  },
+  {
+    "seed": 20261004,
+    "grid": 513,
+    "residual_max": 1.245054335073526e-13,
+    "solve_seconds": 28.122129815630615,
+    "minimum_speed": 0.7806234524637193,
+    "min_points_per_wavelength": 28.54851483295888
+  },
+  {
+    "seed": 20261004,
+    "coarse": 257,
+    "fine": 513,
+    "frequency": 14.0,
+    "scope": "interior convergence; not a learning result",
+    "complex_rel_l2": 0.0012335025661595704,
+    "amplitude_rel_l2": 0.00012920753511181415,
+    "energy_weighted_phase_rmse_rad": 0.0012267906570906063,
+    "energy_weighted_phase_cos": 0.9999992474929702,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999994599142362
+  }
+]

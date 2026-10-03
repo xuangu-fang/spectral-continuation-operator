@@ -1,0 +1,9 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "fine_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_fine_queries_20261003",
+  "systems": [20261132, 20261133], "frequencies": [7, 11, 14], "roi": [0.18, 0.82],
+  "strides": [2, 4, 6], "extent": 0.75,
+  "checkpoints": {"learned_curved_kernel": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/best.pt"},
+  "gaussian_baselines": [[1.25, 1e-10]],
+  "protocol": "Independent 513-grid direct PDE truth vs 257-grid observations. Report numerical grid difference, do not use interpolated truth. Existing development systems."
+}

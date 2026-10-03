@@ -1,0 +1,31 @@
+{
+  "seed": 42,
+  "device": "cuda",
+  "spatial_stride": 2,
+  "data": {
+    "ocean": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+      "system_indices": [0, 1, 2],
+      "frequencies": [90, 110, 125]
+    },
+    "heterogeneous_fdtd": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz",
+      "system_indices": [0, 1, 2],
+      "frequency_indices": [0, 3, 7],
+      "source_index": 0
+    }
+  },
+  "charts": [
+    {"name": "fixed_pw8", "branches": 8, "wavelength_spacing": 1.5},
+    {"name": "fixed_pw16", "branches": 16, "wavelength_spacing": 1.5},
+    {"name": "fixed_pw32", "branches": 32, "wavelength_spacing": 1.5},
+    {"name": "fixed_pw8_affine", "branches": 8, "wavelength_spacing": 1.5, "degree": 1},
+    {"name": "learned_pw8", "branches": 8, "wavelength_spacing": 1.5, "learnable": true, "steps": 400},
+    {"name": "learned_pw8_affine", "branches": 8, "wavelength_spacing": 1.5, "degree": 1, "learnable": true, "steps": 400}
+  ],
+  "inrs": [
+    {"name": "siren128_w30", "kind": "siren", "width": 128, "bandwidth": 30, "steps": 3000},
+    {"name": "siren128_w100", "kind": "siren", "width": 128, "bandwidth": 100, "steps": 3000},
+    {"name": "fourier128_w80", "kind": "fourier", "width": 128, "bandwidth": 80, "steps": 3000}
+  ]
+}

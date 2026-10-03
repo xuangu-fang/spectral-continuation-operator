@@ -1,0 +1,11 @@
+{
+  "pool": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/development_query_pool.npz",
+  "ridge": 1e-08,
+  "initial_epsilon": 1.25,
+  "steps": 200,
+  "learning_rate": 0.03,
+  "objective": "marginal_likelihood",
+  "batch": 128,
+  "hypothesis": "Shared learned geometry must be compared with fitting the same carrier, curvature and metric on the available observations, without any target labels.",
+  "protocol": "Development control; 8 real parameters per patch; best checkpoint chosen only by context LOO or marginal likelihood, not query error"
+}

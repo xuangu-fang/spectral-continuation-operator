@@ -1,0 +1,5 @@
+{
+  "seeds": [20261132, 20261133], "grids": [257, 513], "frequencies": [7.0, 11.0, 14.0],
+  "purpose": "Direct finer-grid complex truth for spatial continuous-query development. Existing development environments, not formal test.",
+  "gate": "Report both same-grid representation error and independent finer-grid error, retaining solver-grid discrepancy"
+}

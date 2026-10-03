@@ -1,0 +1,8 @@
+{
+  "ocean_path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "system_indices": [128, 129, 130, 131],
+  "frequency_spacings": [5, 10], "rank_tolerance": 0.00001,
+  "hypothesis": "Dispersive modal coordinates, unlike mere local spatial recoding, may improve withheld-frequency interpolation.",
+  "protocol": "Classical development mechanism audit; full observed frequencies, zero labels at target frequency; not an AI novelty claim",
+  "gate": "20% lower macro raw complex error than range-carrier cubic, with observed reconstruction reported independently"
+}

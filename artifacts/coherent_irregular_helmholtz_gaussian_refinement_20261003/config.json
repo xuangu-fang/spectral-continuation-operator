@@ -1,0 +1,76 @@
+{
+  "pool": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/development_query_pool.npz",
+  "protocol": "Refine strongest Gaussian control before any learned-method promotion; validation tuning only",
+  "methods": [
+    {
+      "name": "gaussian_e05_r8",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 0.5,
+      "ridge": 1e-08
+    },
+    {
+      "name": "gaussian_e075_r8",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 0.75,
+      "ridge": 1e-08
+    },
+    {
+      "name": "gaussian_e125_r8",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1.25,
+      "ridge": 1e-08
+    },
+    {
+      "name": "gaussian_e15_r8",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1.5,
+      "ridge": 1e-08
+    },
+    {
+      "name": "gaussian_e075_r10",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 0.75,
+      "ridge": 1e-10
+    },
+    {
+      "name": "gaussian_e1_r10",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-10
+    },
+    {
+      "name": "gaussian_e125_r10",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1.25,
+      "ridge": 1e-10
+    },
+    {
+      "name": "gaussian_e075_r6",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 0.75,
+      "ridge": 1e-06
+    },
+    {
+      "name": "gaussian_e1_r6",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-06
+    },
+    {
+      "name": "gaussian_e125_r6",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1.25,
+      "ridge": 1e-06
+    }
+  ]
+}

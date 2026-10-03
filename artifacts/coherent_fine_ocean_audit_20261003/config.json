@@ -1,0 +1,18 @@
+{
+  "conditional_checkpoint": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/best.pt",
+  "global_checkpoint": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/best.pt",
+  "dataset": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_ocean_fine_queries_20261003",
+  "system_indices": [
+    128,
+    129
+  ],
+  "hypothesis": "Wavelength-normalized shared charts retain complex fidelity at independently evaluated coordinates and higher carrier frequencies when observation sampling remains adequate.",
+  "controls": [
+    "learned conditional",
+    "optimized global learned dictionary",
+    "fixed forward cone",
+    "geometric spreading",
+    "cubic spline"
+  ],
+  "limitation": "same-frequency observations, development systems; NOT spectral synthesis with no target-frequency evidence"
+}

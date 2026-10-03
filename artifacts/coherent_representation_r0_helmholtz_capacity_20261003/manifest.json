@@ -1,0 +1,27 @@
+{
+  "protocol": "R0 per-field fit; not operator generalization",
+  "seed": 42,
+  "fit_coordinate_rule": "regular stride with domain endpoints",
+  "data": {
+    "helmholtz": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+      "grid": 257,
+      "roi": [
+        0.18,
+        0.82
+      ],
+      "system_indices": [
+        20261132,
+        20261133
+      ],
+      "frequencies": [
+        7,
+        11,
+        14
+      ]
+    }
+  },
+  "normalization": "RMS of fitted points only",
+  "selection": "chart train loss only; fixed INR training budget; never query loss",
+  "code_sha256": "c31716bc522afbbe393b7796b3f8c9d51fb1d3f7fa34be1a608401d784593989"
+}

@@ -1,0 +1,11 @@
+{
+  "seed_start": 20261100,
+  "system_count": 40,
+  "development_train_seed_range": [20261100, 20261131],
+  "development_validation_seed_range": [20261132, 20261139],
+  "grids": [257],
+  "frequencies": [6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0],
+  "purpose": "Continuous-medium independent Helmholtz teacher; 32 train + 8 development validation systems. No formal test generated.",
+  "accuracy_note": "129 grid failed 0.02 convergence gate at 14Hz for one audit system (0.0278). Use 257 for all learning labels, audit 257 vs513 before continuum claims.",
+  "phase_convention": "exp(-i omega t), complex pressure with calibrated real Gaussian source"
+}

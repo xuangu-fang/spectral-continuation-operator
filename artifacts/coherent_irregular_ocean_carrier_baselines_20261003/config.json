@@ -1,0 +1,164 @@
+{
+  "pool_config": "configs/learned_wave_chart_r2_ocean_kernel_20261003.json",
+  "protocol": "Matched Ocean random 64-sample patches. Known water speed and outgoing radial direction used by carrier controls; no target labels used to fit coefficients. Development hyperparameter audit.",
+  "methods": [
+    {
+      "name": "raw_gaussian_e1",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08
+    },
+    {
+      "name": "carrier_gaussian_e1",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ]
+    },
+    {
+      "name": "carrier_spreading_e1",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true
+    },
+    {
+      "name": "carrier_spreading_x025_y075",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true,
+      "metric": [
+        0.25,
+        0.75
+      ]
+    },
+    {
+      "name": "carrier_spreading_x025_y1",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true,
+      "metric": [
+        0.25,
+        1
+      ]
+    },
+    {
+      "name": "carrier_spreading_x025_y15",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true,
+      "metric": [
+        0.25,
+        1.5
+      ]
+    },
+    {
+      "name": "carrier_spreading_x05_y075",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true,
+      "metric": [
+        0.5,
+        0.75
+      ]
+    },
+    {
+      "name": "carrier_spreading_x05_y1",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true,
+      "metric": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "name": "carrier_spreading_x05_y15",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true,
+      "metric": [
+        0.5,
+        1.5
+      ]
+    },
+    {
+      "name": "carrier_spreading_x1_y075",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true,
+      "metric": [
+        1,
+        0.75
+      ]
+    },
+    {
+      "name": "carrier_spreading_x1_y15",
+      "kind": "rbf",
+      "kernel": "gaussian",
+      "epsilon": 1,
+      "ridge": 1e-08,
+      "carrier": [
+        9.42477796076938,
+        0
+      ],
+      "spreading": true,
+      "metric": [
+        1,
+        1.5
+      ]
+    }
+  ]
+}

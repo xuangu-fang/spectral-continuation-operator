@@ -1,0 +1,7 @@
+{
+  "seeds": [20261003, 20261004],
+  "grids": [257, 513],
+  "frequencies": [14.0],
+  "purpose": "Resolve failed coarse-grid gate at highest frequency without changing physical frequency range",
+  "gate": "257-to-513 interior complex RelL2 below 0.005"
+}

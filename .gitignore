@@ -83,3 +83,8 @@ experiments/sparse_calibration/
 experiments/sparse_calibration_pilot/
 experiments/*.log
 experiments/wave_set*/
+# Continuous coherent representation: local raw arrays/checkpoints, versioned summaries later.
+artifacts/coherent_*_20261003/*.npz
+artifacts/coherent_*_20261003/*.pt
+artifacts/learned_wave_chart_*_20261003/*.npz
+artifacts/learned_wave_chart_*_20261003/*.pt

@@ -1,0 +1,9 @@
+{
+  "checkpoint": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/best.pt",
+  "ocean_path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "system_indices": [128, 129, 130, 131, 132, 133, 134, 135],
+  "frequencies": [95, 105, 115, 125],
+  "stride": 2,
+  "scope": "Full-field spatial decoding with same-frequency samples; held-out systems/frequencies relative to encoder training. This is NOT synthesizing an entirely unobserved frequency.",
+  "status": "development only; checkpoint selected using different random local coordinates of the same validation systems"
+}

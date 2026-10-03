@@ -1,0 +1,44 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135,
+    20261136,
+    20261137,
+    20261138,
+    20261139
+  ],
+  "frequencies": [
+    7,
+    11,
+    14
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "strides": [
+    2,
+    4,
+    6
+  ],
+  "extent": 0.75,
+  "checkpoints": {
+    "learned_plane_wave": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/best.pt",
+    "learned_kernel": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003/best.pt",
+    "learned_curved_kernel": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/best.pt"
+  },
+  "gaussian_baselines": [
+    [
+      1,
+      1e-08
+    ],
+    [
+      1.25,
+      1e-10
+    ]
+  ],
+  "protocol": "Development only. Shared globally fixed spatial observations; all methods see the same values. Full ROI primary, source diagnostics separate; no selective spatial masking. Cubic baseline also sees all observations."
+}

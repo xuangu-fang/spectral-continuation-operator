@@ -1,0 +1,39 @@
+{
+  "protocol": "R0 per-field fit; not operator generalization",
+  "seed": 42,
+  "fit_coordinate_rule": "regular stride with domain endpoints",
+  "data": {
+    "ocean": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+      "system_indices": [
+        128,
+        129
+      ],
+      "frequencies": [
+        95,
+        110,
+        125
+      ]
+    },
+    "helmholtz": {
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+      "grid": 257,
+      "roi": [
+        0.18,
+        0.82
+      ],
+      "system_indices": [
+        20261132,
+        20261133
+      ],
+      "frequencies": [
+        7,
+        11,
+        14
+      ]
+    }
+  },
+  "normalization": "RMS of fitted points only",
+  "selection": "chart train loss only; fixed INR training budget; never query loss",
+  "code_sha256": "33e793a523c7d2997e69f028c52b55b5535a452c8c70227579f504727724e8fa"
+}

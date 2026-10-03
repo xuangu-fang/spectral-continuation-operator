@@ -1,0 +1,7 @@
+{
+  "best_validation_macro_rel_l2": 0.012310726619449121,
+  "parameters": 32,
+  "seconds": 65.35190337151289,
+  "scope": "system-held-out local reconstruction development; not full-field or spectral query",
+  "checkpoint_selection": "development validation only; no formal test has been generated"
+}

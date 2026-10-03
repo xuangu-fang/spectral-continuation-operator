@@ -1,0 +1,14 @@
+{
+  "pool": "artifacts/coherent_irregular_ocean_carrier_baselines_20261003/development_query_pool.npz",
+  "protocol": "Matched full-circle/forward-wave controls with known cylindrical spreading, chosen on development systems only",
+  "methods": [
+    {"name": "pw16a_c45_r7_spreading", "kind": "plane_wave", "branches": 16, "degree": 1, "cone": 45, "extent": 1.5, "ridge": 1e-7, "spreading": true},
+    {"name": "pw16a_c45_r5_spreading", "kind": "plane_wave", "branches": 16, "degree": 1, "cone": 45, "extent": 1.5, "ridge": 1e-5, "spreading": true},
+    {"name": "pw16a_c45_r3_spreading", "kind": "plane_wave", "branches": 16, "degree": 1, "cone": 45, "extent": 1.5, "ridge": 1e-3, "spreading": true},
+    {"name": "pw16a_c60_r7_spreading", "kind": "plane_wave", "branches": 16, "degree": 1, "cone": 60, "extent": 1.5, "ridge": 1e-7, "spreading": true},
+    {"name": "pw16a_c60_r5_spreading", "kind": "plane_wave", "branches": 16, "degree": 1, "cone": 60, "extent": 1.5, "ridge": 1e-5, "spreading": true},
+    {"name": "pw16a_c60_r3_spreading", "kind": "plane_wave", "branches": 16, "degree": 1, "cone": 60, "extent": 1.5, "ridge": 1e-3, "spreading": true},
+    {"name": "pw32_c45_r7_spreading", "kind": "plane_wave", "branches": 32, "degree": 0, "cone": 45, "extent": 1.5, "ridge": 1e-7, "spreading": true},
+    {"name": "pw32_c45_r5_spreading", "kind": "plane_wave", "branches": 32, "degree": 0, "cone": 45, "extent": 1.5, "ridge": 1e-5, "spreading": true}
+  ]
+}

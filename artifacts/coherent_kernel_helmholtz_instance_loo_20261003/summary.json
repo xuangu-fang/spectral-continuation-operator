@@ -1,0 +1,6 @@
+{
+  "macro_error": 0.008772209363323421,
+  "seconds": 35.87732572108507,
+  "patches": 2048,
+  "selection": "context-only objective per patch; zero query label access"
+}
