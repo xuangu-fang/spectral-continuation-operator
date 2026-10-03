@@ -1,0 +1,11 @@
+{
+  "base_config": "artifacts/coherent_waveguide_learned_generator_20261003/config.json",
+  "systems": [20261332,20261333,20261334,20261335,20261336,20261337,20261338,20261339],
+  "derivative_orders": [3,5], "range_penalties": [0,1],
+  "ridge": 1e-6, "damping": 0.5, "max_coefficient_step": 0.01,
+  "checkpoints": [0,5,20],
+  "hypothesis": "neural correction may be learning the term omitted by the approximate second-order identifier; directly identify the exact one-way square-root action from first derivatives before claiming need for learning",
+  "controls": "unchanged65profile context, same1024real representation/decoder; initialquinticregularized secondorder inverse;4bounded derivative/prior options; no query truth in iterations",
+  "stop_rule": "20fixed local GaussNewton steps, no rank/width/sampling expansion; retain regression and cutoff failures",
+  "scope": "classical structural audit, not a novel neural method; first derivative interpolation remains approximate"
+}

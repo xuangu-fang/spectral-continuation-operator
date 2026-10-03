@@ -12,6 +12,7 @@ import argparse
 import itertools
 import json
 import time
+from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
@@ -60,8 +61,17 @@ def depth_basis(depths, depth, modes):
     return np.sqrt(2 / depth) * np.sin(np.asarray(depths)[:, None] * kz[None])
 
 
-def quadrature(spec, modes, nodes=128):
+@lru_cache(maxsize=8)
+def gauss_legendre(nodes):
+    """Geometry-independent rule; shared equally by classical/neural pipelines."""
     abscissa, weights = np.polynomial.legendre.leggauss(nodes)
+    abscissa.setflags(write=False)
+    weights.setflags(write=False)
+    return abscissa, weights
+
+
+def quadrature(spec, modes, nodes=128):
+    abscissa, weights = gauss_legendre(nodes)
     z = (abscissa + 1) * spec["depth_m"] / 2
     weights = weights * spec["depth_m"] / 2
     basis = depth_basis(z, spec["depth_m"], modes)

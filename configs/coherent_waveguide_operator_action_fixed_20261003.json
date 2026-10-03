@@ -1,0 +1,11 @@
+{
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "initialization": "coefficient_pretrained",
+  "steps": 3000, "eval_every": 200, "batch_size": 8, "learning_rate": 0.0001, "seed": 42,
+  "target_kind": "projected_generator", "source_sampling": "original",
+  "hypothesis": "matched teacher control for random-source operator-action training; projected true64-cell generator rather than original256-cell field teacher",
+  "supervision": "training-only real generator labels already available; same64-cell differentiable teacher, sameoriginalsource, original70/80/90/110/120/130Hz",
+  "selection": "only original8 development environments/6 original-source query frequencies select checkpoint; never400Hz or narrow-source test requests",
+  "stop_rule": "one3000step control; do not sweep width/loss/steps if random-source variant fails",
+  "scope": "development, extra medium supervision explicit, single raw complex response loss"
+}

@@ -39,3 +39,13 @@ def test_local_real_identification_and_positive_decoder():
     latent, clip = latent_from_coefficients(estimate, np.ones(32), geometry)
     assert clip == 0
     assert np.linalg.eigvalsh(latent["mass"]).min() > 0
+
+
+def test_quadrature_cache_is_readonly_and_does_not_change_values():
+    from spectral_continuation.coherent_waveguide_data import gauss_legendre
+
+    abscissa, weights = gauss_legendre(32)
+    expected = np.polynomial.legendre.leggauss(32)
+    np.testing.assert_array_equal(abscissa, expected[0])
+    np.testing.assert_array_equal(weights, expected[1])
+    assert not abscissa.flags.writeable and not weights.flags.writeable

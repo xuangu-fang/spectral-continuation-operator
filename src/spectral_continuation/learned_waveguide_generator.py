@@ -296,8 +296,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--seed", type=int)
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
+    if args.seed is not None:
+        config["seed"] = args.seed
     config["train_systems"] = list(range(20261300, 20261332)) + list(range(20261500, 20261980))
     run(config, args.output)
 

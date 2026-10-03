@@ -1,0 +1,38 @@
+[
+  {
+    "step": 0,
+    "query_macro_error": 0.011362171051127324,
+    "context_objective": null,
+    "forward_backward_calls": 0,
+    "optimization_seconds": 0.0,
+    "setup_seconds": 1.4640822308138013,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  },
+  {
+    "step": 100,
+    "query_macro_error": 0.0035031334307883224,
+    "context_objective": 3.803939767095027e-07,
+    "forward_backward_calls": 205,
+    "optimization_seconds": 19.22306056972593,
+    "setup_seconds": 1.4640822308138013,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  },
+  {
+    "step": 500,
+    "query_macro_error": 0.0016685644758226606,
+    "context_objective": 8.664395166159822e-08,
+    "forward_backward_calls": 1064,
+    "optimization_seconds": 93.85609415266663,
+    "setup_seconds": 1.4640822308138013,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  },
+  {
+    "step": 2000,
+    "query_macro_error": 0.0016341950443572882,
+    "context_objective": 8.424046016653527e-08,
+    "forward_backward_calls": 3153,
+    "optimization_seconds": 279.4847453078255,
+    "setup_seconds": 1.4640822308138013,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  }
+]

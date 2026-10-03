@@ -1,0 +1,31 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_narrow_source_modes_truth_20261003",
+  "additional_data": [
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_narrow_source_modes_expansion_20261003"
+  ],
+  "frozen_coefficients": "artifacts/coherent_waveguide_generator_query_transfer_20261003/frozen_coefficients.npz",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "source_variant": "narrow",
+  "decoder_modes": [
+    64
+  ],
+  "methods": [
+    "coefficient_neural",
+    "field_neural",
+    "true_medium_oracle"
+  ],
+  "extra_neural_runs": {
+    "projected_teacher_fixed_source": "artifacts/coherent_waveguide_operator_action_fixed_20261003",
+    "projected_teacher_random_source": "artifacts/coherent_waveguide_operator_action_random_20261003"
+  },
+  "scope": "single mechanism control; checkpoints selected ONLY on original-source in-band query development before reading new query scores; report original-query degradation and strongest previous controls"
+}

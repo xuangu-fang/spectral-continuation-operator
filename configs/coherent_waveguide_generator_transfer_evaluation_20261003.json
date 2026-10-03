@@ -1,0 +1,8 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_generator_query_transfer_20261003",
+  "source_variants": ["original","shifted"],
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "field_run": "artifacts/coherent_waveguide_generator_field_finetune_20261003",
+  "context_fit_run": "artifacts/coherent_waveguide_generator_context_fit_20261003",
+  "scope": "frozen paired development query audit; no new target samples or model refitting; medium oracle labelled; not new formal systems or a second domain"
+}

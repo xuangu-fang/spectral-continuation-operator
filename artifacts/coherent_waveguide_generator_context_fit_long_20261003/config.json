@@ -1,0 +1,42 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "observed_frequencies": [
+    60,
+    100,
+    140
+  ],
+  "query_frequencies": [
+    70,
+    80,
+    90,
+    110,
+    120,
+    130
+  ],
+  "cells": 64,
+  "depth_terms": 16,
+  "interpolation_order": 5,
+  "ridge": 1e-06,
+  "range_penalty": 1,
+  "roi_min_range_m": 50,
+  "checkpoints": [
+    0,
+    100,
+    500,
+    2000
+  ],
+  "hypothesis": "narrow-source errors of a100-step context inverse could reflect incomplete optimization rather than genuine unobservability; extend fixed iteration budgets before any identifiability claim",
+  "information": "unchanged original3 broad-source observed fields at65 profiles, same1024 real unknowns, no new source/frequency truth in fitting",
+  "objective": "single raw complex observed-field relative squared error; fixed2000-step ceiling, no target-based stopping or hyperparameter selection",
+  "scope": "bounded optimization diagnostic, not a comparable low-latency competitor; all checkpoints and regressions retained"
+}

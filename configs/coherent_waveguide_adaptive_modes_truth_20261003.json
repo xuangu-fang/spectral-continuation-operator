@@ -1,0 +1,11 @@
+{
+  "systems": [20261332,20261333],
+  "frequencies": [100,140,200,300,400],
+  "source_variants": ["original"],"source_depth_shift_m": 15.0,"source_depth_bounds_m": [10,90],
+  "range_points": 2049,"depth_points": 385,"cells": 1024,"modes": 64,"quadrature_nodes": 256,
+  "audit_systems": [20262001,20262002],"audit_frequencies": [300,400],
+  "reference_cells": 2048,"reference_modes": 96,"convergence_gate": 0.001,
+  "scope": "two fixed development environments, same medium/source; frequency/resolution mechanism stress only, not formal extrapolation success",
+  "hypothesis": "frequency-independent real generator code may be reused while decoder mode count increases; test frozen 16-depth-term/64-cell latent with 32 vs 64 modal readouts against independently converged high-frequency truth",
+  "limitations": "fixed latent accuracy need not suffice at arbitrarily high frequency; do not claim output computation or required physical mode count is frequency-independent"
+}

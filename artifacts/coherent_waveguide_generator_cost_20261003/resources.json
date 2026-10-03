@@ -1,0 +1,11 @@
+{
+  "torch": "2.8.0+cu128",
+  "platform": "Linux-6.14.0-1011-gcp-x86_64-with-glibc2.39",
+  "cpu_threads": 2,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_processes_at_start": "2073986, VLLM::EngineCore, 72142 MiB\n2079639, .venv/bin/python, 416 MiB\n",
+  "scope": "shared-machine warm latency pilot, not certified exclusive throughput; disk IO/offline fitting excluded for all",
+  "kernel_inference_array_bytes": 52690944,
+  "neural_parameter_bytes": 961216,
+  "latent_real_entries": 1024
+}

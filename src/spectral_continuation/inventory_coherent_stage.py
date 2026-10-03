@@ -41,6 +41,10 @@ def run(root, output):
         ("coherent_waveguide_spectral_pilot_20261003", 2),
         ("coherent_waveguide_development_20261003", 40),
         ("coherent_waveguide_training_cache_20261003", 512),
+        ("coherent_waveguide_generator_query_transfer_20261003", 16),
+        ("coherent_waveguide_adaptive_modes_truth_20261003", 2),
+        ("coherent_waveguide_narrow_source_modes_truth_20261003", 2),
+        ("coherent_waveguide_narrow_source_modes_expansion_20261003", 6),
     ]:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -86,6 +90,7 @@ def run(root, output):
         "*source_cache*.py",
         "*source_space*.py",
         "*waveguide*.py",
+        "*helmholtz*.py",
         "*separable*.py",
     ]:
         sources.update((root / "src/spectral_continuation").glob(pattern))
@@ -96,6 +101,7 @@ def run(root, output):
         "test_*contrast_source*.py",
         "test_*source_space*.py",
         "test_*waveguide*.py",
+        "test_*helmholtz*.py",
         "test_*separable*.py",
     ]:
         sources.update((root / "tests").glob(pattern))

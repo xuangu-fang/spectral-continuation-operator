@@ -1,0 +1,122 @@
+[
+  {
+    "rank": 16,
+    "prior_precision": 1e-09,
+    "macro_error": 0.11470807485961904,
+    "conditional_inference_seconds_all_systems": 0.0054472582414746284
+  },
+  {
+    "rank": 16,
+    "prior_precision": 1e-07,
+    "macro_error": 0.11474995073840955,
+    "conditional_inference_seconds_all_systems": 0.00573048647493124
+  },
+  {
+    "rank": 16,
+    "prior_precision": 1e-05,
+    "macro_error": 0.12079722780844436,
+    "conditional_inference_seconds_all_systems": 0.005312301218509674
+  },
+  {
+    "rank": 16,
+    "prior_precision": 0.001,
+    "macro_error": 0.5938011935938117,
+    "conditional_inference_seconds_all_systems": 0.005716996267437935
+  },
+  {
+    "rank": 16,
+    "prior_precision": 0.1,
+    "macro_error": 1.2555274034681958,
+    "conditional_inference_seconds_all_systems": 0.005835190415382385
+  },
+  {
+    "rank": 32,
+    "prior_precision": 1e-09,
+    "macro_error": 0.02727319157717666,
+    "conditional_inference_seconds_all_systems": 0.008859961293637753
+  },
+  {
+    "rank": 32,
+    "prior_precision": 1e-07,
+    "macro_error": 0.027659259637828167,
+    "conditional_inference_seconds_all_systems": 0.007764796726405621
+  },
+  {
+    "rank": 32,
+    "prior_precision": 1e-05,
+    "macro_error": 0.07211229094653453,
+    "conditional_inference_seconds_all_systems": 0.009283668361604214
+  },
+  {
+    "rank": 32,
+    "prior_precision": 0.001,
+    "macro_error": 0.5933284813035886,
+    "conditional_inference_seconds_all_systems": 0.008234499022364616
+  },
+  {
+    "rank": 32,
+    "prior_precision": 0.1,
+    "macro_error": 1.25552425818481,
+    "conditional_inference_seconds_all_systems": 0.008199933916330338
+  },
+  {
+    "rank": 64,
+    "prior_precision": 1e-09,
+    "macro_error": 0.010304332431944733,
+    "conditional_inference_seconds_all_systems": 0.013812794350087643
+  },
+  {
+    "rank": 64,
+    "prior_precision": 1e-07,
+    "macro_error": 0.011321006349517567,
+    "conditional_inference_seconds_all_systems": 0.01628205645829439
+  },
+  {
+    "rank": 64,
+    "prior_precision": 1e-05,
+    "macro_error": 0.0708386347425257,
+    "conditional_inference_seconds_all_systems": 0.010834919288754463
+  },
+  {
+    "rank": 64,
+    "prior_precision": 0.001,
+    "macro_error": 0.593314196362747,
+    "conditional_inference_seconds_all_systems": 0.013009395450353622
+  },
+  {
+    "rank": 64,
+    "prior_precision": 0.1,
+    "macro_error": 1.2555240506156335,
+    "conditional_inference_seconds_all_systems": 0.015119168907403946
+  },
+  {
+    "rank": 128,
+    "prior_precision": 1e-09,
+    "macro_error": 0.009871560789415925,
+    "conditional_inference_seconds_all_systems": 0.02396400924772024
+  },
+  {
+    "rank": 128,
+    "prior_precision": 1e-07,
+    "macro_error": 0.010994287133552242,
+    "conditional_inference_seconds_all_systems": 0.023622635751962662
+  },
+  {
+    "rank": 128,
+    "prior_precision": 1e-05,
+    "macro_error": 0.07083281989021491,
+    "conditional_inference_seconds_all_systems": 0.027982795611023903
+  },
+  {
+    "rank": 128,
+    "prior_precision": 0.001,
+    "macro_error": 0.593314101087825,
+    "conditional_inference_seconds_all_systems": 0.029208294115960598
+  },
+  {
+    "rank": 128,
+    "prior_precision": 0.1,
+    "macro_error": 1.2555240487637775,
+    "conditional_inference_seconds_all_systems": 0.0300442511215806
+  }
+]

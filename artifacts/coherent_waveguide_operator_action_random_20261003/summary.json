@@ -1,0 +1,10 @@
+{
+  "best_macro_error": 0.007659777184126924,
+  "initialization": "coefficient_pretrained",
+  "medium_label_supervision": true,
+  "target_kind": "projected_generator",
+  "source_sampling": "random_gaussian",
+  "single_loss": "raw complex modal relative squared error; no added losses",
+  "scope": "single-seed development; same 65-profile information and 64-cell decoder",
+  "seconds": 350.6265803016722
+}

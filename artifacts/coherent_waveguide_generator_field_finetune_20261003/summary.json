@@ -1,0 +1,8 @@
+{
+  "best_macro_error": 0.0069538734378423285,
+  "initialization": "coefficient_pretrained",
+  "medium_label_supervision": true,
+  "single_loss": "raw complex modal relative squared error; no added losses",
+  "scope": "single-seed development; same 65-profile information and 64-cell decoder",
+  "seconds": 290.10252653062344
+}

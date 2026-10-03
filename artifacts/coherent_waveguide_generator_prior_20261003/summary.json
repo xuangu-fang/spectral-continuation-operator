@@ -1,0 +1,6 @@
+{
+  "best_development_error": 0.009871560789415925,
+  "training_prior_fit_seconds": 0.26111705880612135,
+  "selection": "bounded development query-error selection, not formal test",
+  "inference_information": "context normal equations + training medium prior"
+}

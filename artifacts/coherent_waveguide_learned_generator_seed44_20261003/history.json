@@ -1,0 +1,149 @@
+[
+  {
+    "step": 0,
+    "macro_error": 0.016010404042442358,
+    "train_coefficient_rmse": 0.000342468497915598,
+    "validation_coefficient_rmse": 0.000337862380547449,
+    "elapsed": 109.54546509683132
+  },
+  {
+    "step": 400,
+    "macro_error": 0.01332347125264489,
+    "train_coefficient_rmse": 0.0001547124640546262,
+    "validation_coefficient_rmse": 0.00013236410450190306,
+    "elapsed": 118.42357523459941
+  },
+  {
+    "step": 800,
+    "macro_error": 0.012302022942450185,
+    "train_coefficient_rmse": 0.00013517826457485582,
+    "validation_coefficient_rmse": 0.00011271008406765759,
+    "elapsed": 127.32857286836952
+  },
+  {
+    "step": 1200,
+    "macro_error": 0.012470671015042097,
+    "train_coefficient_rmse": 0.0001253413114860066,
+    "validation_coefficient_rmse": 0.0001083025272237137,
+    "elapsed": 135.6783533859998
+  },
+  {
+    "step": 1600,
+    "macro_error": 0.01147564901968603,
+    "train_coefficient_rmse": 0.00011683151359492525,
+    "validation_coefficient_rmse": 0.00010418230522191152,
+    "elapsed": 144.28251578751951
+  },
+  {
+    "step": 2000,
+    "macro_error": 0.010945850500468266,
+    "train_coefficient_rmse": 0.000106856836691466,
+    "validation_coefficient_rmse": 0.00010068299161503091,
+    "elapsed": 153.18073305580765
+  },
+  {
+    "step": 2400,
+    "macro_error": 0.010313170302036864,
+    "train_coefficient_rmse": 9.818091964900102e-05,
+    "validation_coefficient_rmse": 9.577968739904463e-05,
+    "elapsed": 162.0508384630084
+  },
+  {
+    "step": 2800,
+    "macro_error": 0.009937827083465415,
+    "train_coefficient_rmse": 9.177617389322844e-05,
+    "validation_coefficient_rmse": 9.229071292793378e-05,
+    "elapsed": 171.27165855839849
+  },
+  {
+    "step": 3200,
+    "macro_error": 0.009793007631024354,
+    "train_coefficient_rmse": 8.626303931731881e-05,
+    "validation_coefficient_rmse": 8.903693378670141e-05,
+    "elapsed": 179.54562205262482
+  },
+  {
+    "step": 3600,
+    "macro_error": 0.009381455459593756,
+    "train_coefficient_rmse": 8.15559505841796e-05,
+    "validation_coefficient_rmse": 8.611932571511716e-05,
+    "elapsed": 187.99854130018502
+  },
+  {
+    "step": 4000,
+    "macro_error": 0.009163929514401079,
+    "train_coefficient_rmse": 7.74917236887613e-05,
+    "validation_coefficient_rmse": 8.431392052443698e-05,
+    "elapsed": 196.749214601703
+  },
+  {
+    "step": 4400,
+    "macro_error": 0.008924018069584094,
+    "train_coefficient_rmse": 7.401512961708951e-05,
+    "validation_coefficient_rmse": 8.229148807004094e-05,
+    "elapsed": 205.23225157987326
+  },
+  {
+    "step": 4800,
+    "macro_error": 0.008746692235525724,
+    "train_coefficient_rmse": 7.093212338630228e-05,
+    "validation_coefficient_rmse": 8.138627163134515e-05,
+    "elapsed": 214.54037970490754
+  },
+  {
+    "step": 5200,
+    "macro_error": 0.008603508088845932,
+    "train_coefficient_rmse": 6.86982741378679e-05,
+    "validation_coefficient_rmse": 7.947967242216691e-05,
+    "elapsed": 223.67886727303267
+  },
+  {
+    "step": 5600,
+    "macro_error": 0.008509348262500493,
+    "train_coefficient_rmse": 6.706915766833575e-05,
+    "validation_coefficient_rmse": 7.89676996646449e-05,
+    "elapsed": 232.50047035422176
+  },
+  {
+    "step": 6000,
+    "macro_error": 0.008365115873847551,
+    "train_coefficient_rmse": 6.58951178563602e-05,
+    "validation_coefficient_rmse": 7.83030191087164e-05,
+    "elapsed": 241.68992603104562
+  },
+  {
+    "step": 6400,
+    "macro_error": 0.008321908160756366,
+    "train_coefficient_rmse": 6.506966316643043e-05,
+    "validation_coefficient_rmse": 7.762960740365088e-05,
+    "elapsed": 249.99344957899302
+  },
+  {
+    "step": 6800,
+    "macro_error": 0.008325670785908209,
+    "train_coefficient_rmse": 6.45444867238279e-05,
+    "validation_coefficient_rmse": 7.730771176284179e-05,
+    "elapsed": 258.16138561815023
+  },
+  {
+    "step": 7200,
+    "macro_error": 0.008227745598691188,
+    "train_coefficient_rmse": 6.424827496993685e-05,
+    "validation_coefficient_rmse": 7.700159767409787e-05,
+    "elapsed": 267.0084548899904
+  },
+  {
+    "step": 7600,
+    "macro_error": 0.008271866963752135,
+    "train_coefficient_rmse": 6.413125018877973e-05,
+    "validation_coefficient_rmse": 7.705479947617278e-05,
+    "elapsed": 275.45956454239786
+  },
+  {
+    "step": 8000,
+    "macro_error": 0.008263067781313633,
+    "train_coefficient_rmse": 6.411236172119182e-05,
+    "validation_coefficient_rmse": 7.708766497671604e-05,
+    "elapsed": 283.74171882122755
+  }
+]

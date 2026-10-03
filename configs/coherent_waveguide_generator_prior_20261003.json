@@ -1,0 +1,9 @@
+{
+  "training_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "ranks": [16, 32, 64, 128],
+  "prior_precisions": [1e-9, 1e-7, 1e-5, 1e-3, 1e-1],
+  "hypothesis": "a training-medium Gaussian prior constrained by context PDE normal equations may explain some apparent neural advantage; same real generator and analytic query decoder",
+  "controls": "compare existing FNO, supervised RBF and target-free nonlinear context inverse; no weakened classical baseline",
+  "stop_rule": "one bounded 20-option development audit; no PCA-tail expansion or new main-story claim; retain all options",
+  "scope": "new physical generator coordinates, not a restart of legacy PCA reconstruction of complex fields"
+}

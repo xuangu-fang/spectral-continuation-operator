@@ -1,0 +1,38 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "query_frequencies": [
+    70,
+    80,
+    90,
+    110,
+    120,
+    130
+  ],
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "field_run": "artifacts/coherent_waveguide_generator_field_finetune_20261003",
+  "repeats": 3,
+  "nonlinear_steps": [
+    1,
+    5,
+    10,
+    20
+  ],
+  "refine_initializations": [
+    "field_neural",
+    "kernel_generator"
+  ],
+  "hypothesis": "learned generator may amortize a physically consistent inverse rather than replace it; compare NEURAL and KERNEL warm starts under exactly the same context objective and iterations",
+  "timing": "all fresh encoding, CPU/GPU transfer, optimizer+line search, latent construction and6densequeries; offline training/loading and common diskIO excluded; shared-machine warm pilot",
+  "stop_rule": "one bounded latency frontier; no optimizer setting tuning by query errors; count kernel as equally valid warm initialization",
+  "scope": "single neural seed development, not a new trained architecture or exclusive speed claim"
+}

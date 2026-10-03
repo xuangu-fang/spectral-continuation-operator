@@ -1,0 +1,226 @@
+[
+  {
+    "method": "local_inverse",
+    "source_variant": "original",
+    "frequency_scope": "in_band",
+    "raw": 0.016996698681865773,
+    "phase_rmse_rad": 0.01229563255455409
+  },
+  {
+    "method": "local_inverse",
+    "source_variant": "original",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.02871318930498208,
+    "phase_rmse_rad": 0.020716347419954276
+  },
+  {
+    "method": "local_inverse",
+    "source_variant": "shifted",
+    "frequency_scope": "in_band",
+    "raw": 0.027831513182309454,
+    "phase_rmse_rad": 0.02017883170174567
+  },
+  {
+    "method": "local_inverse",
+    "source_variant": "shifted",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.040019859684350435,
+    "phase_rmse_rad": 0.029533444229409702
+  },
+  {
+    "method": "true_medium_oracle",
+    "source_variant": "original",
+    "frequency_scope": "in_band",
+    "raw": 0.0008377138975406678,
+    "phase_rmse_rad": 0.000690923446982149
+  },
+  {
+    "method": "true_medium_oracle",
+    "source_variant": "original",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.0013157405330749793,
+    "phase_rmse_rad": 0.0011286052665957882
+  },
+  {
+    "method": "true_medium_oracle",
+    "source_variant": "shifted",
+    "frequency_scope": "in_band",
+    "raw": 0.0008374634329153706,
+    "phase_rmse_rad": 0.0006974436489316637
+  },
+  {
+    "method": "true_medium_oracle",
+    "source_variant": "shifted",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.001169565901710068,
+    "phase_rmse_rad": 0.001009649376290446
+  },
+  {
+    "method": "regularized_inverse",
+    "source_variant": "original",
+    "frequency_scope": "in_band",
+    "raw": 0.011868929763519723,
+    "phase_rmse_rad": 0.008674836166227788
+  },
+  {
+    "method": "regularized_inverse",
+    "source_variant": "original",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.02092601836339504,
+    "phase_rmse_rad": 0.015291571226743697
+  },
+  {
+    "method": "regularized_inverse",
+    "source_variant": "shifted",
+    "frequency_scope": "in_band",
+    "raw": 0.01345193402178545,
+    "phase_rmse_rad": 0.00989716211970961
+  },
+  {
+    "method": "regularized_inverse",
+    "source_variant": "shifted",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.023304994413974434,
+    "phase_rmse_rad": 0.017426871303209454
+  },
+  {
+    "method": "kernel_generator",
+    "source_variant": "original",
+    "frequency_scope": "in_band",
+    "raw": 0.00935403767969917,
+    "phase_rmse_rad": 0.007011527173291498
+  },
+  {
+    "method": "kernel_generator",
+    "source_variant": "original",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.016751445865986855,
+    "phase_rmse_rad": 0.012555817482710181
+  },
+  {
+    "method": "kernel_generator",
+    "source_variant": "shifted",
+    "frequency_scope": "in_band",
+    "raw": 0.012120958836277928,
+    "phase_rmse_rad": 0.009266267274230498
+  },
+  {
+    "method": "kernel_generator",
+    "source_variant": "shifted",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.019374051624853818,
+    "phase_rmse_rad": 0.014949062882109366
+  },
+  {
+    "method": "coefficient_neural",
+    "source_variant": "original",
+    "frequency_scope": "in_band",
+    "raw": 0.008492376820584329,
+    "phase_rmse_rad": 0.006511207577450298
+  },
+  {
+    "method": "coefficient_neural",
+    "source_variant": "original",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.015726699217122504,
+    "phase_rmse_rad": 0.012170683062257616
+  },
+  {
+    "method": "coefficient_neural",
+    "source_variant": "shifted",
+    "frequency_scope": "in_band",
+    "raw": 0.008253202405021084,
+    "phase_rmse_rad": 0.006153902807621345
+  },
+  {
+    "method": "coefficient_neural",
+    "source_variant": "shifted",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.01401551882190776,
+    "phase_rmse_rad": 0.010745660442944859
+  },
+  {
+    "method": "field_neural",
+    "source_variant": "original",
+    "frequency_scope": "in_band",
+    "raw": 0.007225525929373334,
+    "phase_rmse_rad": 0.005402468743316749
+  },
+  {
+    "method": "field_neural",
+    "source_variant": "original",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.013613399748713074,
+    "phase_rmse_rad": 0.01028582053326235
+  },
+  {
+    "method": "field_neural",
+    "source_variant": "shifted",
+    "frequency_scope": "in_band",
+    "raw": 0.007749712135914938,
+    "phase_rmse_rad": 0.005755467559721624
+  },
+  {
+    "method": "field_neural",
+    "source_variant": "shifted",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.013346501768440627,
+    "phase_rmse_rad": 0.010153578907516865
+  },
+  {
+    "method": "nonlinear_context_10",
+    "source_variant": "original",
+    "frequency_scope": "in_band",
+    "raw": 0.0063382959076943276,
+    "phase_rmse_rad": 0.004666422825724925
+  },
+  {
+    "method": "nonlinear_context_10",
+    "source_variant": "original",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.01423804077516653,
+    "phase_rmse_rad": 0.010369225982321286
+  },
+  {
+    "method": "nonlinear_context_10",
+    "source_variant": "shifted",
+    "frequency_scope": "in_band",
+    "raw": 0.010502891141420747,
+    "phase_rmse_rad": 0.00772505085388579
+  },
+  {
+    "method": "nonlinear_context_10",
+    "source_variant": "shifted",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.01806514681727368,
+    "phase_rmse_rad": 0.013236111579178006
+  },
+  {
+    "method": "nonlinear_context_100",
+    "source_variant": "original",
+    "frequency_scope": "in_band",
+    "raw": 0.003292976835288907,
+    "phase_rmse_rad": 0.002414214997783362
+  },
+  {
+    "method": "nonlinear_context_100",
+    "source_variant": "original",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.006020416439256719,
+    "phase_rmse_rad": 0.004384613002043621
+  },
+  {
+    "method": "nonlinear_context_100",
+    "source_variant": "shifted",
+    "frequency_scope": "in_band",
+    "raw": 0.004474697781047125,
+    "phase_rmse_rad": 0.003350267877941219
+  },
+  {
+    "method": "nonlinear_context_100",
+    "source_variant": "shifted",
+    "frequency_scope": "extrapolation_stress",
+    "raw": 0.006578549437539547,
+    "phase_rmse_rad": 0.004935931223367025
+  }
+]

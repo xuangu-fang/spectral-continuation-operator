@@ -1,0 +1,56 @@
+[
+  {
+    "step": 0,
+    "query_macro_error": 0.011362171051127324,
+    "context_objective": null,
+    "forward_backward_calls": 0,
+    "optimization_seconds": 0.0,
+    "setup_seconds": 1.5620336849242449,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  },
+  {
+    "step": 5,
+    "query_macro_error": 0.007526700536052402,
+    "context_objective": 2.2297503627971585e-05,
+    "forward_backward_calls": 11,
+    "optimization_seconds": 1.4048570385202765,
+    "setup_seconds": 1.5620336849242449,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  },
+  {
+    "step": 10,
+    "query_macro_error": 0.006668316248018727,
+    "context_objective": 1.0404189494608074e-05,
+    "forward_backward_calls": 22,
+    "optimization_seconds": 2.2442926028743386,
+    "setup_seconds": 1.5620336849242449,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  },
+  {
+    "step": 20,
+    "query_macro_error": 0.005983277525137697,
+    "context_objective": 4.129245575096253e-06,
+    "forward_backward_calls": 42,
+    "optimization_seconds": 3.845083236694336,
+    "setup_seconds": 1.5620336849242449,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  },
+  {
+    "step": 50,
+    "query_macro_error": 0.004680436875029875,
+    "context_objective": 1.0372441242630463e-06,
+    "forward_backward_calls": 103,
+    "optimization_seconds": 8.963429097086191,
+    "setup_seconds": 1.5620336849242449,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  },
+  {
+    "step": 100,
+    "query_macro_error": 0.0035031334307883224,
+    "context_objective": 3.803939767095027e-07,
+    "forward_backward_calls": 205,
+    "optimization_seconds": 17.269778665155172,
+    "setup_seconds": 1.5620336849242449,
+    "scope": "batched classical inverse; fixed steps, no target-based stopping"
+  }
+]

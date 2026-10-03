@@ -1,0 +1,35 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "observed_frequencies": [
+    6,
+    10,
+    14
+  ],
+  "query_frequencies": [
+    7,
+    11,
+    13
+  ],
+  "context_grids": [
+    65,
+    129
+  ],
+  "derivatives": [
+    "fourth_order",
+    "sine_spectral"
+  ],
+  "smoothing": [
+    0,
+    1
+  ],
+  "information": "complete observed fields sampled on specified context grid, known finite source/background/sponge; no true heterogeneous speed",
+  "hypothesis": "shared real generator inference should be checked beyond one-way waveguides; derivative discretization may dominate and must be challenged by a strong spectral control",
+  "stop_rule": "do not train neural correction if classical inference is already near representation oracle; first attribute errors to sampling, differential approximation, or operator representation",
+  "scope": "four previously used development systems, classical mechanism audit; no claim of neural or formal two-domain success"
+}

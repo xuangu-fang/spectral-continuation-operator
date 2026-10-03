@@ -1,0 +1,7 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_narrow_source_modes_truth_20261003",
+  "frozen_coefficients": "artifacts/coherent_waveguide_generator_query_transfer_20261003/frozen_coefficients.npz",
+  "systems": [20261332,20261333],"source_variant": "narrow","decoder_modes": [32,64],
+  "methods": ["regularized_inverse","kernel_generator","field_neural","nonlinear_context_100","true_medium_oracle"],
+  "scope": "same frozen code, new known narrow source, two-system mechanism test; classical decoders receive same adaptive resolution"
+}

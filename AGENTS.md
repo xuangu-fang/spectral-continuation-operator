@@ -104,6 +104,47 @@ This first generator learner completed: .008142 vs same-medium-supervised RBF .0
 Real DOF240304. Now testing ONLY loss alignment via the same differentiable generator and raw complex field
 loss, comparing coefficient-pretrained vs classical initialization. The latter reads no training medium labels.
 Numerical decoder matches independent NumPy to1e-10; gradients pass finite differences. Still no formal result.
+Field-loss finetune completes at .006954, direct classical-init3000steps .012349 (unequal total optimization;
+do not infer medium-label necessity). Strong target-free nonlinear context fitting now gives .007527/.006668/
+.005983/.004680/.003503 at5/10/20/50/100 L-BFGS steps. Neural is NOT accuracy-best. New restart hypothesis is
+amortized error/cost/storage; full encoding+query timing is required, not neural-forward-only comparisons.
+Frozen new-frequency/source/coordinate teacher is being generated for8 already-used dev systems, not formaltest.
+That16-file teacher is now COMPLETE; max convergence difference7.254e-6. Frozen learned field model yields
+.007226/.007750 for new in-band frequencies at original/shifted sources, and .01361/.01335 at150–200Hz.
+Classical100steps remains better. Warm cost with uniformly cached quadrature: neural .006954 at .1710s total
+encoding+6queries; kernel .008874/.2008s; independent5/10/20step context fits .007346/.006230/.005130 at
+.8266/1.5311/3.0294s. Shared GPU with unrelated VLLM, no exclusive-speed certification. Current follow-ups are
+3seed robustness, equal-update-count no-medium-label control, two-system adaptive32→64mode readout at400Hz,
+and a classical2D Helmholtz inverse audit. Its first cases show sine spectral differentiation ~1e-4, much stronger
+than4th-order ~.02: do not train a neural correction against a deliberately weak derivative baseline.
+
+Superseding robustness: field-finetune seeds42/43/44 .006954/.007153/.007894, mean .007333 (~17.4% over
+kernel), so seed42's21.6% is NOT a robust20% gate. No-medium-label classical-init11k matchedupdates .010589,
+still worse but do not infer label necessity. Gaussian physical-generator prior conditioned on PDE statistics,
+20 predeclared rank/precision options, best .009872; no more PCA capacity scans. 2D Helmholtz full-field inverse
+audit now complete:65/129-grid sine spectral .00009886/.00007696 against same257 discrete teacher. No neural
+necessity in that noiseless dense protocol. This does not certify continuous PDE error below teacher convergence.
+Higher-frequency broad-source32→64mode decoding is a NULL effect (400Hz neural .044). Narrow2m query source
+on two same systems changes it:400Hz .132→.0456; oracle .122→.00675. Fixed1024 real generator coefficients,
+no encoder retraining, known query source, but classic decoders share the capability. Expanding to original8 dev
+systems and3 seeds; do not cherry-pick the first2 or call it formal/general-purpose high-frequency proof.
+Full8-system narrow400Hz now complete: neural3seeds64mode .03616/.03754/.03695 vs32mode~.123; kernel .04296,
+classic100 .04058. CRITICAL superseding optimization: classic500/2000 oldquery .001669/.001634, narrow400Hz
+.02180/.02114, now beats neural. Do not claim old-source unobservability from earlier100-step failures; optimization
+was a substantial confound. Coefficient-only neural narrow400Hz .03831/.03620/.03791, close to field-finetuned.
+Current bounded restart tests one loss mechanism: same projected64-cell teacher with fixed vs randomGaussian
+training source requests, lowband only, single complex field loss, inference context unchanged. Extra training
+medium supervision explicit. Original8dev old-source queries select checkpoint, never400Hz/narrow truth. See
+`docs/GENERATOR_OPERATOR_ACTION_POC_ZH.md`; no width/loss stacking or automatic3seed expansion on failure.
+That mechanism test is now COMPLETE and failed: sameprojectedteacher fixedsource oldquery .006926, randomsource
+.007660; narrow400Hz .03585/.03791. Stop source-distribution scans/3seed expansion, do not reselect checkpoints
+using newquery truth. Checkpoint selection remained original-source inband. Teacher projection is not the mainissue.
+Warm-start control shows a new bounded positive: samephysical context optimizer, neural(seed42)/kernel/classic
+20steps .003444/.004642/.005130, total~3.03/3.08/3.04s;5steps .005045/.006568/.007346. Full3warmrepeats8dev,
+not forward-only timing. Now require3trainingseeds and Gaussian-generator-prior warmstart (not just RBF).
+Exact first-order local square-root inverse (avoids omitted iK' term)4bounded derivative/rangepenalty options
+best~.01069, modest vs.01136; no further localGN/derivative sweeps. Frechet derivative tests cover propagating
+and evanescent modes. Do not attribute all neural correction to the omitted second-order term.
 
 `coherent_representation.py`, `learned_wave_chart.py`, `learned_coherent_kernel.py`,
 `coherent_helmholtz_data.py`, `generate_coherent_ocean.py`, their `audit_*`/`evaluate_coherent_*` drivers,

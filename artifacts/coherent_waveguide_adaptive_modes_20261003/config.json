@@ -1,0 +1,20 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_adaptive_modes_truth_20261003",
+  "frozen_coefficients": "artifacts/coherent_waveguide_generator_query_transfer_20261003/frozen_coefficients.npz",
+  "systems": [
+    20261332,
+    20261333
+  ],
+  "decoder_modes": [
+    32,
+    64
+  ],
+  "methods": [
+    "regularized_inverse",
+    "kernel_generator",
+    "field_neural",
+    "nonlinear_context_100",
+    "true_medium_oracle"
+  ],
+  "scope": "frozen two-system mechanism audit; no high-frequency observations; analytic decoder basis adapts while real code stays fixed; classical methods share identical adaptation"
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "step": 0,
+    "macro_error": 0.008142287059556582,
+    "train_batch_raw_error": null,
+    "seconds": 20.31938484776765
+  },
+  {
+    "step": 200,
+    "macro_error": 0.008095334008215318,
+    "train_batch_raw_error": 0.007226321677371687,
+    "seconds": 40.62691400758922
+  },
+  {
+    "step": 400,
+    "macro_error": 0.00767457791311587,
+    "train_batch_raw_error": 0.006654078027011437,
+    "seconds": 58.21686080284417
+  },
+  {
+    "step": 600,
+    "macro_error": 0.007420658211955776,
+    "train_batch_raw_error": 0.00674479069999298,
+    "seconds": 76.64338782429695
+  },
+  {
+    "step": 800,
+    "macro_error": 0.007918336811411861,
+    "train_batch_raw_error": 0.00624171418060512,
+    "seconds": 94.68154517747462
+  },
+  {
+    "step": 1000,
+    "macro_error": 0.007237484931364659,
+    "train_batch_raw_error": 0.006342934732903287,
+    "seconds": 112.64211702439934
+  },
+  {
+    "step": 1200,
+    "macro_error": 0.007013743024975489,
+    "train_batch_raw_error": 0.0059623956525570905,
+    "seconds": 130.76934519596398
+  },
+  {
+    "step": 1400,
+    "macro_error": 0.007241010492697879,
+    "train_batch_raw_error": 0.005851027301225975,
+    "seconds": 148.46857222821563
+  },
+  {
+    "step": 1600,
+    "macro_error": 0.007128374568308598,
+    "train_batch_raw_error": 0.005681889412698041,
+    "seconds": 166.5361311081797
+  },
+  {
+    "step": 1800,
+    "macro_error": 0.006982980462244583,
+    "train_batch_raw_error": 0.005680330824943284,
+    "seconds": 183.550792648457
+  },
+  {
+    "step": 2000,
+    "macro_error": 0.006985659381244873,
+    "train_batch_raw_error": 0.005616979742308789,
+    "seconds": 201.31478556245565
+  },
+  {
+    "step": 2200,
+    "macro_error": 0.00696261816630597,
+    "train_batch_raw_error": 0.0054241483853438785,
+    "seconds": 218.94712766539305
+  },
+  {
+    "step": 2400,
+    "macro_error": 0.006999063470552493,
+    "train_batch_raw_error": 0.005465085309524609,
+    "seconds": 237.2587014110759
+  },
+  {
+    "step": 2600,
+    "macro_error": 0.006960383865429746,
+    "train_batch_raw_error": 0.0054207937430611345,
+    "seconds": 255.2805171897635
+  },
+  {
+    "step": 2800,
+    "macro_error": 0.0069538734378423285,
+    "train_batch_raw_error": 0.005405280041109701,
+    "seconds": 272.47591412533075
+  },
+  {
+    "step": 3000,
+    "macro_error": 0.006966835998250165,
+    "train_batch_raw_error": 0.005305772576823584,
+    "seconds": 290.0972793120891
+  }
+]

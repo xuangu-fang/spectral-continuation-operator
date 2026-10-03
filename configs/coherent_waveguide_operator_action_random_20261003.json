@@ -1,0 +1,14 @@
+{
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "initialization": "coefficient_pretrained",
+  "steps": 3000, "eval_every": 200, "batch_size": 8, "learning_rate": 0.0001, "seed": 42,
+  "target_kind": "projected_generator", "source_sampling": "random_gaussian",
+  "source_depth_bounds_m": [10,90], "source_width_bounds_m": [2,10],
+  "hypothesis": "learning the response to varied sources may identify a more query-reusable generator than fitting a single excitation; encoder information unchanged",
+  "supervision": "training-only real generator labels used to synthesize randomsource responses with same64-cell differentiable teacher; NO frequencies above140Hz or dev-medium targets in training",
+  "selection": "only original8 development environments/6 original-source query frequencies select checkpoint; never400Hz or narrow-source test requests",
+  "control": "same projected teacher and fixedsource training; coefficient pretraining and previousactualfield finetune; kernel and context inverse retained",
+  "gate": "newrequest error at least20percent better than strongest matched reference with originalquery degradation<=10percent; otherwise no3seed expansion",
+  "stop_rule": "one3000step structural test; no layer/width/loss stacking or selecting by narrow400Hz score",
+  "scope": "development: source diversity in TRAINING targets is additional supervision use, even when generator labels alreadyavailable"
+}

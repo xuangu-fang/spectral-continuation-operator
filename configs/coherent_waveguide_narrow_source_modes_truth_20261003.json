@@ -1,0 +1,9 @@
+{
+  "systems": [20261332,20261333],"frequencies": [140,200,300,400],
+  "source_variants": ["narrow"],"narrow_source_width_m": 2.0,
+  "range_points": 2049,"depth_points": 385,"cells": 1024,"modes": 64,"quadrature_nodes": 256,
+  "audit_systems": [20262001,20262002],"audit_frequencies": [200,400],
+  "reference_cells": 2048,"reference_modes": 96,"convergence_gate": 0.001,
+  "hypothesis": "previous broad source did not excite enough high vertical modes to test decoder resolution; a predeclared 2m-width source query should separate fixed32 vs64-mode decoding while the inferred environment code remains identical",
+  "scope": "paired two-system new-source aperture stress, not a new training task or formal test; preserve earlier null effect of increasing decoder modes under broad sources"
+}

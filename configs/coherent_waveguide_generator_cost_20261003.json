@@ -1,0 +1,11 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [20261332,20261333,20261334,20261335,20261336,20261337,20261338,20261339],
+  "query_frequencies": [70,80,90,110,120,130],
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "field_run": "artifacts/coherent_waveguide_generator_field_finetune_20261003",
+  "repeats": 3,"nonlinear_steps": [5,10,20],
+  "hypothesis": "learned real generator inference may provide an error/cost/storage Pareto advantage, not highest absolute precision",
+  "timing": "include fresh context projection, background geometry, identification, neural/kernel/iterative correction, transfers, latent construction, six full field queries; exclude common disk IO, metrics and offline training/model load; three warmed repeated independent-instance fits",
+  "caveats": "shared A100 with unrelated workloads; no exclusive-hardware acceleration certification; report entire frontier rather than a chosen favorable operating point"
+}

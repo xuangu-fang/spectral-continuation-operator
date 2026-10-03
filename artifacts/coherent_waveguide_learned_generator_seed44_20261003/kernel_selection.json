@@ -1,0 +1,47 @@
+[
+  {
+    "bandwidth": 0.5,
+    "ridge": 0.0001,
+    "macro_error": 0.014081675881255147
+  },
+  {
+    "bandwidth": 0.5,
+    "ridge": 0.01,
+    "macro_error": 0.014092245178512784
+  },
+  {
+    "bandwidth": 0.5,
+    "ridge": 0.1,
+    "macro_error": 0.01418318705499671
+  },
+  {
+    "bandwidth": 1,
+    "ridge": 0.0001,
+    "macro_error": 0.009841928064881883
+  },
+  {
+    "bandwidth": 1,
+    "ridge": 0.01,
+    "macro_error": 0.009860729108848507
+  },
+  {
+    "bandwidth": 1,
+    "ridge": 0.1,
+    "macro_error": 0.010048707964253743
+  },
+  {
+    "bandwidth": 2,
+    "ridge": 0.0001,
+    "macro_error": 0.008897212241922307
+  },
+  {
+    "bandwidth": 2,
+    "ridge": 0.01,
+    "macro_error": 0.008873798935508374
+  },
+  {
+    "bandwidth": 2,
+    "ridge": 0.1,
+    "macro_error": 0.009365837886998329
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "best_macro_error": 0.008227745598691188,
+  "baseline": 0.016010404042442358,
+  "oracle": 0.0007822821933596075,
+  "kernel": 0.008873798935508374,
+  "real_parameter_count": 240304,
+  "scope": "single-seed development supervised generator inference; real medium used only as training labels and labelled oracle",
+  "seconds": 283.7497500749305
+}
