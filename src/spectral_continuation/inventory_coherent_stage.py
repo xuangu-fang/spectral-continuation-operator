@@ -36,6 +36,10 @@ def run(root, output):
         ("coherent_structural_narrow_source_20261003", 4),
         ("coherent_structural_high_contrast_20261003", 4),
         ("coherent_structural_narrow_high_contrast_20261003", 4),
+        ("coherent_structural_reference_20261003", 2),
+        ("coherent_waveguide_convergence_20261003", 12),
+        ("coherent_waveguide_spectral_pilot_20261003", 2),
+        ("coherent_waveguide_development_20261003", 40),
     ]:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -71,11 +75,23 @@ def run(root, output):
         "*fundamental_solution*.py",
         "*rom_grid*.py",
         "*continuous_phase*.py",
+        "*contrast_source*.py",
+        "*source_cache*.py",
+        "*source_space*.py",
+        "*waveguide*.py",
+        "*separable*.py",
     ]:
         sources.update((root / "src/spectral_continuation").glob(pattern))
     sources.update((root / "tests").glob("test_*coherent*.py"))
     sources.update((root / "tests").glob("test_*phase*rom*.py"))
     sources.update((root / "tests").glob("test_*fundamental_solution*.py"))
+    for pattern in [
+        "test_*contrast_source*.py",
+        "test_*source_space*.py",
+        "test_*waveguide*.py",
+        "test_*separable*.py",
+    ]:
+        sources.update((root / "tests").glob(pattern))
     artifacts = []
     dirs = sorted(
         set((root / "artifacts").glob("coherent_*_20261003"))

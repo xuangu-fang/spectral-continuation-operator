@@ -1,0 +1,8 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_pilot_20261003",
+  "systems": [20261200, 20261201], "observed_frequencies": [60, 100, 140], "roi_min_range_m": 50,
+  "gauge": "boundary_derivative", "carriers": ["background_modal_phase", "diagonal_medium_phase"],
+  "hypothesis": "the remaining long-range phase error may come from ignoring known range-dependent modal wavenumber shifts, not inadequate decoder capacity",
+  "stop_rule": "preserve all classical controls; report full-medium information explicitly; only then diagnose off-diagonal mode coupling",
+  "evidence": "development classical diagonal-phase control; no target phase alignment or query observations"
+}

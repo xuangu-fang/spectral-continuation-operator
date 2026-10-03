@@ -1,0 +1,16 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_pilot_20261003",
+  "systems": [
+    20261200,
+    20261201
+  ],
+  "observed_frequencies": [
+    60,
+    100,
+    140
+  ],
+  "roi_min_range_m": 50,
+  "hypothesis": "a background modal operator carrier separates branch-dependent phase dispersion better than a scalar carrier",
+  "stop_rule": "classical audit only; no novelty claim; do not train before locating remaining amplitude/coupling errors",
+  "evidence": "development pilot; known background medium; not blind spectral extrapolation"
+}

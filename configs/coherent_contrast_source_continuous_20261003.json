@@ -1,0 +1,13 @@
+{
+  "context_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "query_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_fractional_queries_20261003",
+  "systems": [20261132, 20261133],
+  "observed_frequencies": [6, 10, 14],
+  "query_frequencies": [7.5, 11.5, 13.5],
+  "query_grids": [257, 513],
+  "roi": [0.18, 0.82],
+  "hypothesis": "propagated contrast-source trial spaces retain the coarse-grid benefit on independent finer coordinates",
+  "control": "same regularized phase/source-aware carriers and six columns; also one background-inverse defect correction",
+  "stop_rule": "no learned source-space launch until accuracy, cost and grid stability are separately established",
+  "evidence": "development; no target observations; classical background solves explicitly charged"
+}

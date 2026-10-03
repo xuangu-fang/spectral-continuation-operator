@@ -1,0 +1,30 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "observed_frequencies": [
+    6,
+    10,
+    14
+  ],
+  "query_frequencies": [
+    7,
+    8,
+    9,
+    11,
+    12,
+    13
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "hypothesis": "propagating a small contrast-source space may improve the physical compatibility of global phase envelopes; classical audit, not neural novelty",
+  "control": "same context and six trial columns, direct field PDE projection; exact same sponge background; first Born and target-truth capacity oracle separated",
+  "stop_rule": "do not train a source representation unless the classical change improves accuracy or exposes a useful capacity gap; report background solve costs",
+  "evidence": "development only; known medium/source/PDE and zero target-frequency observations"
+}

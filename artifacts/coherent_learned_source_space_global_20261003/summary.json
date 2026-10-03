@@ -1,0 +1,13 @@
+{
+  "best_step": 200,
+  "parameters": 108,
+  "validation_macro_error": 0.014465214583053651,
+  "training_macro_error": 0.014612228954146106,
+  "validation_baselines": {
+    "base6": 0.014546679089023693,
+    "source_pod6": 0.08733579620286046,
+    "full60": 0.00818448493497393
+  },
+  "training_seconds_excludes_explicitly_recorded_cache_preparation": 29.234763137996197,
+  "evidence": "single-seed development; six source columns; physics coefficients; quadratic training loss exactly equals full-grid complex loss"
+}

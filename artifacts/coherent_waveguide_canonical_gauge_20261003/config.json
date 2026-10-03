@@ -1,0 +1,17 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_pilot_20261003",
+  "systems": [
+    20261200,
+    20261201
+  ],
+  "observed_frequencies": [
+    60,
+    100,
+    140
+  ],
+  "roi_min_range_m": 50,
+  "gauge": "boundary_derivative",
+  "hypothesis": "largest fixed-basis coefficient may change sign identity across frequency; a positive surface derivative gives a physical eigenfunction orientation",
+  "stop_rule": "retain paired old-gauge results; never attribute a sign bug to intrinsic spectral unpredictability",
+  "evidence": "development classical gauge control; no target phase alignment"
+}

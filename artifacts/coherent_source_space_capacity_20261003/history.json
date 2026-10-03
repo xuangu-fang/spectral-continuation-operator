@@ -1,0 +1,122 @@
+[
+  {
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "step": 0,
+    "raw_complex_error": 0.014546679089028115
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "step": 500,
+    "raw_complex_error": 0.008061059688698257
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "step": 1000,
+    "raw_complex_error": 0.007496215319850692
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "step": 1500,
+    "raw_complex_error": 0.007196728556014721
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "step": 2000,
+    "raw_complex_error": 0.006996948591206616
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "step": 0,
+    "raw_complex_error": 0.014546679089028115
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "step": 500,
+    "raw_complex_error": 0.007976388737439694
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "step": 1000,
+    "raw_complex_error": 0.007433442749849453
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "step": 1500,
+    "raw_complex_error": 0.007099266992709486
+  },
+  {
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "step": 2000,
+    "raw_complex_error": 0.006926938843975092
+  },
+  {
+    "objective": "physics_only",
+    "bounded": true,
+    "step": 0,
+    "raw_complex_error": 0.014546679089028115
+  },
+  {
+    "objective": "physics_only",
+    "bounded": true,
+    "step": 500,
+    "raw_complex_error": 0.010287573590840114
+  },
+  {
+    "objective": "physics_only",
+    "bounded": true,
+    "step": 1000,
+    "raw_complex_error": 0.009745824598229147
+  },
+  {
+    "objective": "physics_only",
+    "bounded": true,
+    "step": 1500,
+    "raw_complex_error": 0.009495091543031301
+  },
+  {
+    "objective": "physics_only",
+    "bounded": true,
+    "step": 2000,
+    "raw_complex_error": 0.009330728746429165
+  },
+  {
+    "objective": "physics_only",
+    "bounded": false,
+    "step": 0,
+    "raw_complex_error": 0.014546679089028115
+  },
+  {
+    "objective": "physics_only",
+    "bounded": false,
+    "step": 500,
+    "raw_complex_error": 0.010111383505271288
+  },
+  {
+    "objective": "physics_only",
+    "bounded": false,
+    "step": 1000,
+    "raw_complex_error": 0.009558556650341284
+  },
+  {
+    "objective": "physics_only",
+    "bounded": false,
+    "step": 1500,
+    "raw_complex_error": 0.009378182226939927
+  },
+  {
+    "objective": "physics_only",
+    "bounded": false,
+    "step": 2000,
+    "raw_complex_error": 0.009231007301083675
+  }
+]

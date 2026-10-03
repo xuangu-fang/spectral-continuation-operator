@@ -1,0 +1,1538 @@
+[
+  {
+    "system": 20261132,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.014987943120529382,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.010562384569790577,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.005196014239564732,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0034376875596722092,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.002807686386373138,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0015034784259960485,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.01647716082412259,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.010943859368820093,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0077646605595579656,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.005169753522245592,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.003579959974511891,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.002127151424737643,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.010000609979236736,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0066657811875210915,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.00403583023369193,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0022922553401527332,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0020327838521503184,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0014244160853426324,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.015297300941568307,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.008974930255818282,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.006253607593724265,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0038711422830972225,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0027350628383257095,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.001668048706629341,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.020030378116683133,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.01224701294739166,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.007669036361750641,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.005837985840543385,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.005489308326865412,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.004057050761261224,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.021263225603553846,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.013037311529273203,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.007320518497413973,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.004155663820762784,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0031079428229253032,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.001825384879874951,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.008328278589264833,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.006296344452314615,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0037090109588549403,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0030993639092961635,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.002747244884211628,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0016996866516743906,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.016266090284214062,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.011897391415943839,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.008176779014524124,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.004957736323930119,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.00280033395450702,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": true,
+    "complex_rel_l2": 0.0016959292457587052,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.014522752193505439,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.010000103069700924,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0050912193954764425,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0033829948297784043,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0027653906555391147,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0014736957655517315,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.015477278819281935,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.010989948050385197,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.007832660688632968,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.005040013724021414,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0034794152765621296,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261133,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.002105103139854423,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.009969936012795527,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0066106295144594245,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.003985533090797618,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0022643202635896924,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0020384709488039197,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261134,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0014234937562083592,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.015308533177315417,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.008948225901515127,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.006212549533550038,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0037839331994785432,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.002641350984805237,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261135,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0016895388735951578,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.019457162277317634,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.01174726509922389,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.007466065536209844,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.005817296103599844,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0051897370198475965,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261136,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.003922988144533643,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.020942270382776206,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.012818034551953789,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.007290065222684488,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.003996973419804975,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.00303422022413501,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261137,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0018017685993168343,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.007944950657533803,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.006245730445793564,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.003562290875310088,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0029794563315945106,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.002657144379495179,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261138,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0016665254598466589,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 7,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.01574029950450855,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 8,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.011439367070369763,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 9,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.00810956941235697,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 11,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.004756147656710044,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 12,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0027718630315048368,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261139,
+    "frequency": 13,
+    "objective": "query_truth_oracle",
+    "bounded": false,
+    "complex_rel_l2": 0.0016972044834775606,
+    "scope": "target truth used to fit representation"
+  },
+  {
+    "system": 20261132,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.01964774512163894,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.013336490654723891,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.00667210343929605,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.004741715536247871,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0038354130118446518,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.002156469886129156,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.022855132569751902,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.017195593902292017,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.010167564440941372,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.006228124073707395,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.004468540277384097,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0025261512818729125,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.013703904563005333,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.008149461640189093,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.004899858021015528,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.003187850379526606,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.002321548166234473,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.001604876138091294,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.02111895093953104,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.012110849208689604,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.00775650560501772,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.004661987100789042,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0033121252347632466,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0018727946506873966,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.026776904977133715,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.01581820174880062,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.010420831924564593,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.008570405590228647,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.008969183476489081,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.008204100230106853,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.028379922259002262,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.018560503469901422,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.00934704000353452,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.005052783535175162,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0038385219758037483,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0021543053668691063,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.012697545708157808,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.009032070990197504,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0052477405355416725,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0040898486491050875,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.003604664547153587,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0021270601510378954,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.023713722746337693,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.01574890088321627,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.011389815383589656,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0057058843971752845,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.0035731422442157176,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": true,
+    "complex_rel_l2": 0.001803425417952662,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.01949014216227826,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.013152796211367623,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0066560044054672024,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.004603874849661691,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.003730143259890956,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261132,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.002043750029757142,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.022636708223135318,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.017058995819855326,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.010049909438667131,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.006077819941259354,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0043010564956985796,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261133,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0024353638894512616,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.013599823511312477,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.008148122045809263,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.00483867123687731,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0031335229574378115,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0022741429188079306,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261134,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.001613180220211383,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.021107883068026297,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.012086287754518444,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.007662649427022588,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.004461890606240793,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0032626367038174147,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261135,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0018653773331757692,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.026628853887134967,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.01530788909797348,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.010018813768626829,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.008427021114685242,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.008174541235503463,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261136,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.007759695968372533,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.028259103507052193,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0182311602394172,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0092981927466514,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.004804284454053364,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.003798430964271801,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261137,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0021341651354597193,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.012189202780002847,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.008614130198477874,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.005007772215978262,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0038082650675511586,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.003379334997042397,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261138,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0020263531329441577,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 7,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.02362093604511236,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 8,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.015608699530022668,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 9,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.01120259914103686,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 11,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.005453363383364268,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 12,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.00355293763414498,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  },
+  {
+    "system": 20261139,
+    "frequency": 13,
+    "objective": "physics_only",
+    "bounded": false,
+    "complex_rel_l2": 0.0017845788833937485,
+    "scope": "target-free per-instance fit; requires 60 background solves/cache, not six-solve deployment cost"
+  }
+]

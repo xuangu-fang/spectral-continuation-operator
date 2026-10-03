@@ -1,0 +1,28 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "observed_frequencies": [
+    6,
+    10,
+    14
+  ],
+  "query_frequencies": [
+    7,
+    9,
+    11,
+    13
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "device": "cuda",
+  "hypothesis": "classical tensor-product background inverse can preserve source-space accuracy while exposing a GPU-differentiable readout",
+  "stop_rule": "background residual below 1e-8 and source-space accuracy not worse by more than 10%; retain all corner-absorption contrast",
+  "evidence": "development classical accuracy/cost check; no learned gain; no direct CPU/GPU speedup claim"
+}

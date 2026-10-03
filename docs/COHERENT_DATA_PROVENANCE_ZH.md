@@ -91,11 +91,24 @@ contrast按预先声明的最低声速0.45统一缩放，最低值在513审计�
 
 阶段三清单已经记录上述8组共66个NPZ及当前代码/模型快照：
 `artifacts/coherent_stage3_inventory_20261003/inventory.json`。这是捕获时的post-run快照，不证明之后
-新增/运行中的artifact状态不变。原设置8/12 Hz的513-grid配对控制正在另建
+新增/运行中的artifact状态不变。原设置8/12 Hz的513-grid配对控制已经完成
 `coherent_structural_reference_20261003/`，不在66文件清单中。
+
+后续新增的距离相关一向波导、数值审计与谱查询pilot，见
+[独立数据说明](RANGE_DEPENDENT_WAVEGUIDE_DATA_ZH.md)。它们尚未纳入阶段三清单；完成后另建快照，
+不覆盖旧inventory。不要把该近似模型称为完整Helmholtz或可穿透海底Ocean数据。
+
+`artifacts/coherent_source_space_*_cache_20261003/`中的NPZ是模型训练加速的二次型统计量，不是新场真值。
+H/g/Q由已知物理与候选基得到；只有t/e/target_norm2依赖监督目标，不能作为编码器或物理系数求解的
+输入。pilot旧metadata把Q也写为target-dependent，是过宽的文字标注，公式/代码实际不依赖目标；完整
+cache已更正文案。全部预计算成本保存在summary.json，不能只报告之后的小矩阵GPU训练用时。
 
 审计 artifacts：`artifacts/coherent_helmholtz_convergence_20261003/` 与
 `artifacts/coherent_helmholtz_convergence_fine_20261003/`。
+
+阶段四快照已生成：`artifacts/coherent_stage4_inventory_20261003/inventory.json`，12组共122个NPZ，
+含完整40环境新波导、两组pilot/收敛及原设置配对细网格。仍为捕获时post-run快照；其后源空间容量
+审计等新增artifact不在该时间点快照中，不能修改旧文件伪装成当时已有。
 
 ## 旧 FDTD 数据的失败如何使用
 

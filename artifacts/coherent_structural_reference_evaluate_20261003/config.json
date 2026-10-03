@@ -1,0 +1,32 @@
+{
+  "context_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "query_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_structural_reference_20261003",
+  "checkpoint": "artifacts/coherent_learned_envelope_neural_20261003/best.pt",
+  "systems": [
+    20261132,
+    20261133
+  ],
+  "observed_frequencies": [
+    6,
+    10,
+    14
+  ],
+  "query_frequencies": [
+    8,
+    12
+  ],
+  "query_grids": [
+    513
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "methods": [
+    "phase_regularized",
+    "source_aware_regularized",
+    "phase_radial_regularized",
+    "phase_learned_envelope_regularized"
+  ],
+  "evidence": "unmodified reference cell of the matched 2x2 structural DEVELOPMENT control; independently solved fine-grid truth"
+}

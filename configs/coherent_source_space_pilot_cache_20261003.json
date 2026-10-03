@@ -1,0 +1,11 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [20261132, 20261133, 20261134, 20261135],
+  "observed_frequencies": [6, 10, 14],
+  "query_frequencies": [7, 9, 11, 13],
+  "roi": [0.18, 0.82],
+  "window_width": 0.2,
+  "evidence": "classical development capacity gate only; no network training on development systems",
+  "hypothesis": "localized contrast-source factors create useful capacity beyond six propagated global envelopes",
+  "stop_rule": "only prepare full training cache if complete source space offers materially better raw field accuracy"
+}

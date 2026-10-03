@@ -1,0 +1,17 @@
+{
+  "best_step": 1,
+  "parameters": 4,
+  "elapsed_seconds_including_data_and_baselines": 45.41672014351934,
+  "max_cuda_memory_allocated_bytes": 1593262592,
+  "validation_macro_by_method": {
+    "eikonal_phase_radial": 0.023923590280756125,
+    "learned_envelope_complex_global": 0.023705213502792772,
+    "raw_radial": 0.6009067567311956,
+    "reference_phase_radial": 0.03204249195703082,
+    "source_regularized_phase_radial": 0.023711063502406,
+    "straight_ray_medium_phase_radial": 0.023792631416146487
+  },
+  "training_macro_rel_l2": 0.02597886809500609,
+  "last_training_macro_rel_l2": 0.0260061550810686,
+  "evidence": "development; known PDE; learned phase OR envelope representation, physics coefficients; not formal test"
+}

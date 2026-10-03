@@ -40,6 +40,18 @@ Current user direction is high-precision complex wavefield/phase representation 
 
 ## Current method/data modules
 
+Latest: smoothing all neural inputs/factors restores fine-grid stability but only ~4% learning gain. Source-aware
+carrier plus real neural envelopes gains ~1%; complex neural envelopes gain ~5%. Matched 2x2 source-width/contrast
+controls show 6-column classical reference beats 18-column neural under stronger contrast. Stop pointwise-MLP
+capacity sweeps. A classical contrast-source/background-propagation audit is now running; background inverses
+are real PDE solves whose costs must be counted, not a free learned decoder. This now reaches ~0.0128 on four
+systems and ~0.01179 on independent fine coordinates. Shared source-space encoder only improves 0.01455 to
+0.01446 on eight systems. Same-family per-instance target oracle reaches ~0.00682; PDE-only optimization ~0.00924
+but requires the full 60-column cache. Thus there is headroom, not yet a successful shared encoder. New one-way
+range-dependent waveguide data are complete (40 development systems); they omit backscatter/penetrable seabed.
+Modal eigenvector sign gauge was a real spectral-query pitfall; use the boundary-derivative convention, not target
+phase alignment. Read source-space POC, waveguide data docs and report section 9 before more architecture work.
+
 `coherent_representation.py`, `learned_wave_chart.py`, `learned_coherent_kernel.py`,
 `coherent_helmholtz_data.py`, `generate_coherent_ocean.py`, their `audit_*`/`evaluate_coherent_*` drivers,
 dated `configs/*coherent*20261003.json` and `configs/learned_wave_chart*20261003.json`.

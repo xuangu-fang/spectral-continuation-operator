@@ -1,0 +1,11 @@
+{
+  "seeds": [20261200, 20261201],
+  "frequencies": [60, 100, 140],
+  "mode_counts": [24, 32, 48],
+  "range_counts": [513, 1025],
+  "depth_points": 129,
+  "quadrature_nodes": 160,
+  "roi_min_range_m": 50,
+  "evidence": "new development audit only, one-way range-dependent idealized acoustic waveguide; no claim to full ocean/Helmholtz accuracy",
+  "gate": "relative complex convergence within one-way model below 0.005 before learning or full dataset generation"
+}

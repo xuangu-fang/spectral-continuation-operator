@@ -1,0 +1,226 @@
+[
+  {
+    "system": 20261132,
+    "frequency": 7,
+    "scores": {
+      "base6": 0.027419583219581916,
+      "source_pod6": 0.13186890169306245,
+      "full60": 0.01660525046750472
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 2.993961298838258,
+    "background_inverse_seconds": 1.7085931384935975,
+    "preparation_seconds": 2.676400368101895,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261133,
+    "frequency": 7,
+    "scores": {
+      "base6": 0.038940244669937035,
+      "source_pod6": 0.06627139638390835,
+      "full60": 0.021135447355716295
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 2.993961298838258,
+    "background_inverse_seconds": 1.7242909641936421,
+    "preparation_seconds": 2.723028264939785,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261134,
+    "frequency": 7,
+    "scores": {
+      "base6": 0.021804721572512845,
+      "source_pod6": 0.046916588657699335,
+      "full60": 0.011555659564564714
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 2.993961298838258,
+    "background_inverse_seconds": 1.7125444496050477,
+    "preparation_seconds": 2.692394516430795,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261135,
+    "frequency": 7,
+    "scores": {
+      "base6": 0.0356107015569512,
+      "source_pod6": 0.048192698432612514,
+      "full60": 0.019495714440812446
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 2.993961298838258,
+    "background_inverse_seconds": 1.757965768687427,
+    "preparation_seconds": 2.761706793680787,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261132,
+    "frequency": 9,
+    "scores": {
+      "base6": 0.010915189438380223,
+      "source_pod6": 0.1818612378511687,
+      "full60": 0.006184971700858202
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 2.991661388427019,
+    "background_inverse_seconds": 1.7077628448605537,
+    "preparation_seconds": 2.6487721260637045,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261133,
+    "frequency": 9,
+    "scores": {
+      "base6": 0.013825344491541365,
+      "source_pod6": 0.056415688542199,
+      "full60": 0.00903027590750164
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 2.991661388427019,
+    "background_inverse_seconds": 1.7528042132034898,
+    "preparation_seconds": 2.755270831286907,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261134,
+    "frequency": 9,
+    "scores": {
+      "base6": 0.008361788140067803,
+      "source_pod6": 0.03920554349198758,
+      "full60": 0.0040136051150987135
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 2.991661388427019,
+    "background_inverse_seconds": 2.5948996962979436,
+    "preparation_seconds": 3.650133578106761,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261135,
+    "frequency": 9,
+    "scores": {
+      "base6": 0.01110727641880615,
+      "source_pod6": 0.045874222818511244,
+      "full60": 0.006723684006189752
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 2.991661388427019,
+    "background_inverse_seconds": 3.9469988457858562,
+    "preparation_seconds": 6.378519235178828,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261132,
+    "frequency": 11,
+    "scores": {
+      "base6": 0.006871408067351017,
+      "source_pod6": 0.23291357844748156,
+      "full60": 0.0038323921499309656
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 12.104855169542134,
+    "background_inverse_seconds": 5.009082518517971,
+    "preparation_seconds": 6.519304324872792,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261133,
+    "frequency": 11,
+    "scores": {
+      "base6": 0.008325438159851926,
+      "source_pod6": 0.05973681149659474,
+      "full60": 0.005192772811164992
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 12.104855169542134,
+    "background_inverse_seconds": 2.294068032875657,
+    "preparation_seconds": 3.408290862105787,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261134,
+    "frequency": 11,
+    "scores": {
+      "base6": 0.004999693877321468,
+      "source_pod6": 0.04551565423673264,
+      "full60": 0.002750315948180892
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 12.104855169542134,
+    "background_inverse_seconds": 2.628730154596269,
+    "preparation_seconds": 4.331991128623486,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261135,
+    "frequency": 11,
+    "scores": {
+      "base6": 0.006946383126732049,
+      "source_pod6": 0.0492220428160688,
+      "full60": 0.004018632806458916
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 12.104855169542134,
+    "background_inverse_seconds": 4.885159328579903,
+    "preparation_seconds": 7.132089126855135,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261132,
+    "frequency": 13,
+    "scores": {
+      "base6": 0.00382956673858658,
+      "source_pod6": 0.26137945155635117,
+      "full60": 0.001535694108818201
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 6.466815342195332,
+    "background_inverse_seconds": 4.812300237827003,
+    "preparation_seconds": 6.8888936173170805,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261133,
+    "frequency": 13,
+    "scores": {
+      "base6": 0.0032093203301206347,
+      "source_pod6": 0.060806992195154945,
+      "full60": 0.0020292876884156117
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 6.466815342195332,
+    "background_inverse_seconds": 3.8932976201176643,
+    "preparation_seconds": 5.936458636075258,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261134,
+    "frequency": 13,
+    "scores": {
+      "base6": 0.0018653561753054575,
+      "source_pod6": 0.048136983287920924,
+      "full60": 0.0014464020664422938
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 6.466815342195332,
+    "background_inverse_seconds": 2.8082836978137493,
+    "preparation_seconds": 4.246124368160963,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  },
+  {
+    "system": 20261135,
+    "frequency": 13,
+    "scores": {
+      "base6": 0.0024540086448946972,
+      "source_pod6": 0.05259853276802366,
+      "full60": 0.0016080481329353406
+    },
+    "columns": 60,
+    "background_factor_seconds_shared": 6.466815342195332,
+    "background_inverse_seconds": 2.4813237227499485,
+    "preparation_seconds": 3.6290681976825,
+    "evidence": "development sufficient statistics; target-dependent Q/t/e used only in supervised loss; never encoder or PDE coefficient solve"
+  }
+]

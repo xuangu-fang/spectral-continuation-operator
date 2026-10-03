@@ -1,0 +1,29 @@
+{
+  "cache": "artifacts/coherent_source_space_full_cache_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135,
+    20261136,
+    20261137,
+    20261138,
+    20261139
+  ],
+  "query_frequencies": [
+    7,
+    8,
+    9,
+    11,
+    12,
+    13
+  ],
+  "steps": 2500,
+  "learning_rate": 0.01,
+  "ridge": 1e-12,
+  "device": "cuda",
+  "hypothesis": "sub-1% shared learning gains may be constrained modulation capacity rather than a missing global encoder",
+  "control": "per-instance target-field oracle versus physics-only objective, each with bounded versus unbounded modulation",
+  "stop_rule": "do not expand shared encoder unless same-family target oracle shows headroom; never report oracle as deployable",
+  "evidence": "development attribution; both instances use full cached 60-column operators and costs must not be conflated with six-application inference"
+}

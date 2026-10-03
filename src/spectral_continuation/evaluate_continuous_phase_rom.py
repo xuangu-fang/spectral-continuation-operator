@@ -116,6 +116,7 @@ def run(config, output):
                 ),
                 "coordinates": {k: torch.tensor(v) for k, v in coordinates.items()},
                 "source_width": spec["source_width"],
+                "observed_f": torch.tensor(observed_f.astype(float)),
                 "source_regularized": checkpoint["config"].get("source_regularized", False),
             }
             with torch.no_grad():
@@ -123,6 +124,8 @@ def run(config, output):
                     "phase_radial": model.fixed_factors(item).numpy(),
                     "phase_learned_envelope": model.factors(item).numpy(),
                 }
+                factors["source_aware_radial"] = factors["phase_radial"]
+                factors["source_aware_learned_envelope"] = factors["phase_learned_envelope"]
             roi1 = (axis[1:-1] >= config["roi"][0]) & (axis[1:-1] <= config["roi"][1])
             roi = np.outer(roi1, roi1).ravel()
             saved = {}
@@ -135,7 +138,11 @@ def run(config, output):
                     basis = envelopes * carrier[:, qi, None]
                     basis = np.column_stack((basis, basis.conj()))
                     if base_method in factors:
-                        basis = (basis[:, :, None] * factors[base_method][:, None]).reshape(
+                        current_factors = factors[base_method]
+                        if "learned_envelope" in base_method and "complex" in model.kind:
+                            with torch.no_grad():
+                                current_factors = model.factors(item, float(frequency)).numpy()
+                        basis = (basis[:, :, None] * current_factors[:, None]).reshape(
                             len(target), -1
                         )
                     basis /= np.linalg.norm(basis, axis=0, keepdims=True).clip(1e-30)

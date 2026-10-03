@@ -16,6 +16,7 @@ import numpy as np
 import torch
 from torch import nn
 
+from .audit_fundamental_solution_rom import gaussian_reference
 from .audit_phase_reduced_operator import discrete_operator, travel_coordinates
 from .coherent_representation import complex_metrics
 
@@ -90,15 +91,15 @@ class EnvelopeCoordinate(nn.Module):
     def __init__(self, kind="envelope_neural", width=32):
         super().__init__()
         self.kind = kind
-        if kind == "envelope_scalar":
-            self.raw = nn.Parameter(torch.zeros(2))
-        elif kind == "envelope_neural":
+        if kind in ("envelope_scalar", "envelope_complex_global"):
+            self.raw = nn.Parameter(torch.zeros(4 if kind == "envelope_complex_global" else 2))
+        elif kind in ("envelope_neural", "envelope_complex_neural"):
             self.network = nn.Sequential(
                 nn.Linear(9, width),
                 nn.Tanh(),
                 nn.Linear(width, width),
                 nn.Tanh(),
-                nn.Linear(width, 2),
+                nn.Linear(width, 4 if kind == "envelope_complex_neural" else 2),
             )
             nn.init.zeros_(self.network[-1].weight)
             nn.init.zeros_(self.network[-1].bias)
@@ -122,14 +123,24 @@ class EnvelopeCoordinate(nn.Module):
             dim=1,
         )
 
-    def factors(self, item):
+    def factors(self, item, frequency=None):
         fixed = self.fixed_factors(item)
-        if self.kind == "envelope_scalar":
-            powers = 1 + 0.5 * torch.tanh(self.raw)
+        if self.kind in ("envelope_scalar", "envelope_complex_global"):
+            powers = 1 + 0.5 * torch.tanh(self.raw[:2])
             tail = fixed[:, 1:].clamp_min(1e-12) ** powers[None]
+            if self.kind == "envelope_complex_global":
+                phase = fixed[:, 1, None] * np.pi * torch.tanh(self.raw[2:])[None]
         else:
-            modulation = torch.exp(0.75 * torch.tanh(self.network(item["features"])))
+            raw = self.network(item["features"])
+            modulation = torch.exp(0.75 * torch.tanh(raw[:, :2]))
             tail = fixed[:, 1:] * modulation
+            if self.kind == "envelope_complex_neural":
+                phase = np.pi * torch.tanh(raw[:, 2:])
+        if "complex" in self.kind:
+            reference_frequency = item["observed_f"].mean()
+            ratio = 1.0 if frequency is None else frequency / reference_frequency
+            tail = tail * torch.exp(1j * ratio * phase)
+            return torch.cat((fixed[:, :1].to(tail.dtype), tail), dim=1)
         return torch.cat((fixed[:, :1], tail), dim=1)
 
 
@@ -151,10 +162,19 @@ def torch_projection(lap, mass, rhs, basis, frequency, ridge=1e-12):
     return basis @ coefficients
 
 
-def predict(item, tau, frequency, config, factors=None):
-    basis = item["snapshots"] * torch.exp(
-        2j * np.pi * tau[:, None] * (frequency - item["observed_f"][None])
-    )
+def predict(item, tau, frequency, config, factors=None, carrier_family="phase"):
+    if carrier_family == "phase":
+        basis = item["snapshots"] * torch.exp(
+            2j * np.pi * tau[:, None] * (frequency - item["observed_f"][None])
+        )
+    elif carrier_family == "source_aware":
+        basis = (
+            item["snapshots"]
+            * item["reference_carriers"][float(frequency)][:, None]
+            / item["observed_reference_carriers"]
+        )
+    else:
+        raise ValueError(carrier_family)
     if config.get("conjugate_enrichment", True):
         basis = torch.cat((basis, basis.conj()), dim=1)
     if factors is not None:
@@ -190,7 +210,7 @@ def load_system(config, system, device):
             / np.sqrt(radius**2 + spec["source_width"] ** 2)
         )
     roi1 = (axis[1:-1] >= config["roi"][0]) & (axis[1:-1] <= config["roi"][1])
-    return {
+    item = {
         "system": system,
         "features": torch.tensor(
             phase_features(spec, axis, coords, config.get("source_regularized", False)),
@@ -213,6 +233,25 @@ def load_system(config, system, device):
         "query_f": all_f[query].astype(float).tolist(),
         "roi": torch.tensor(np.outer(roi1, roi1).ravel(), device=device),
     }
+    if config.get("carrier_family", "phase") == "source_aware":
+        if not config["kind"].startswith("envelope_"):
+            raise ValueError("source-aware branch currently learns envelope only")
+        radius = coords["reference_phase"]
+        excess = coords["straight_ray_medium_phase"] - radius
+        if config.get("source_regularized", False):
+            excess = excess * radius / np.sqrt(radius**2 + spec["source_width"] ** 2)
+        item["reference_carriers"] = {
+            float(f): torch.tensor(
+                gaussian_reference(radius, f, spec["source_width"], loss=spec["background_loss"])
+                * np.exp(2j * np.pi * f * excess),
+                device=device,
+            )
+            for f in all_f
+        }
+        item["observed_reference_carriers"] = torch.stack(
+            [item["reference_carriers"][float(f)] for f in all_f[observed]], dim=1
+        )
+    return item
 
 
 def learned_tau(model, item):
@@ -240,24 +279,38 @@ def evaluate(model, dataset, config, include_baselines=False):
             f"learned_{model.kind}": (
                 learned_tau(model, item),
                 model.factors(item) if envelope else None,
+                config.get("carrier_family", "phase"),
             )
         }
         if include_baselines:
             suffix = "_radial" if envelope else ""
             coordinates.update(
                 {
-                    k + suffix: (v, model.fixed_factors(item) if envelope else None)
+                    k + suffix: (v, model.fixed_factors(item) if envelope else None, "phase")
                     for k, v in item["coordinates"].items()
                 }
             )
-        for name, (tau, factors) in coordinates.items():
+            if config.get("carrier_family", "phase") == "source_aware":
+                coordinates["source_aware_fixed_radial"] = (
+                    learned_tau(model, item),
+                    model.fixed_factors(item),
+                    "source_aware",
+                )
+                coordinates["source_aware_base6"] = (learned_tau(model, item), None, "source_aware")
+        for name, (tau, factors, carrier_family) in coordinates.items():
             for qi, frequency in enumerate(item["query_f"]):
-                prediction = predict(item, tau, frequency, config, factors)
+                if name.startswith("learned_") and envelope:
+                    factors = model.factors(item, frequency)
+                prediction = predict(item, tau, frequency, config, factors, carrier_family)
                 row = {
                     "system": item["system"],
                     "query_frequency": frequency,
                     "method": name,
                     "target_frequency_observations": 0,
+                    "carrier_family": carrier_family,
+                    "basis_columns": len(item["observed_f"])
+                    * (2 if config.get("conjugate_enrichment", True) else 1)
+                    * (factors.shape[-1] if factors is not None else 1),
                     **complex_metrics(
                         prediction[item["roi"]].cpu().numpy(),
                         item["targets"][qi, item["roi"]].cpu().numpy(),
@@ -295,8 +348,14 @@ def run(config, output):
         item = train[int(rng.integers(len(train)))]
         qi = int(rng.integers(len(item["query_f"])))
         tau = learned_tau(model, item)
-        factors = model.factors(item) if isinstance(model, EnvelopeCoordinate) else None
-        prediction = predict(item, tau, item["query_f"][qi], config, factors)
+        factors = (
+            model.factors(item, item["query_f"][qi])
+            if isinstance(model, EnvelopeCoordinate)
+            else None
+        )
+        prediction = predict(
+            item, tau, item["query_f"][qi], config, factors, config.get("carrier_family", "phase")
+        )
         error = prediction[item["roi"]] - item["targets"][qi, item["roi"]]
         loss = error.abs().square().sum() / item["targets"][qi, item["roi"]].abs().square().sum()
         if not torch.isfinite(loss):
