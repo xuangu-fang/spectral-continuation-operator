@@ -11,8 +11,10 @@ import argparse
 import hashlib
 import json
 import platform
+import shutil
 import subprocess
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
@@ -89,9 +91,70 @@ def fit_context(beta, geometry, coefficients, checkpoints):
             start = time.perf_counter() - elapsed
 
 
-def run(config, output):
+def completed_systems(rows, systems, pairs):
+    completed = set()
+    if not {r["system"] for r in rows}.issubset(set(systems)):
+        raise ValueError("saved rows contain an unregistered system")
+    for system in systems:
+        subset = [r for r in rows if r["system"] == system]
+        if subset:
+            observed = {(r["method"], r["repeat"]) for r in subset}
+            if observed != pairs or len(subset) != len(pairs):
+                raise ValueError("partial/duplicate saved system rows require explicit recovery")
+            completed.add(system)
+    return completed
+
+
+def run(config, output, resume=False, max_new_systems=None):
+    if max_new_systems is not None and max_new_systems < 1:
+        raise ValueError("positive execution chunk size required")
+    if (output / "config.json").exists():
+        if json.loads((output / "config.json").read_text()) != config:
+            raise ValueError("cannot resume with changed evaluation settings")
+        if (output / "results.json").exists() and not resume:
+            raise FileExistsError("existing results require explicit --resume")
     output.mkdir(parents=True, exist_ok=True)
+    if resume:
+        metadata_stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        for name in ["resources.json", "pre_evaluation_manifest.json"]:
+            if (output / name).exists():
+                shutil.copy2(output / name, output / f"pre_resume_{metadata_stamp}_{name}")
     (output / "config.json").write_text(json.dumps(config, indent=2))
+    if config.get("freeze_manifest"):
+        frozen = json.loads(Path(config["freeze_manifest"]).read_text())
+        if config["systems"] != frozen["systems"]:
+            raise ValueError("must evaluate the complete frozen system cohort")
+        for name, digest in frozen["frozen_files_sha256"].items():
+            if hashlib.sha256(Path(name).read_bytes()).hexdigest() != digest:
+                raise ValueError(f"changed frozen candidate: {name}")
+        checkpoint_name = str(Path(config["field_run"]) / "best.pt")
+        if checkpoint_name not in frozen["frozen_files_sha256"]:
+            raise ValueError("unregistered candidate checkpoint")
+        generated = json.loads(
+            (Path(config["freeze_manifest"]).parent / "generation.json").read_text()
+        )
+        identities = {(r["system"], r["variant"]) for r in generated}
+        required = {(s, v) for s in config["systems"] for v in ["original", "narrow"]}
+        if identities != required or len(generated) != len(required):
+            raise ValueError("complete frozen data cohort required before any model evaluation")
+        # Supplemental pre-evaluation hashes: kernel/prior training arrays are shared.
+        shared = [
+            Path(config["coefficient_run"]) / "training_statistics.npz",
+            Path(config["coefficient_run"]) / "config.json",
+            Path(__file__),
+        ]
+        (output / "pre_evaluation_manifest.json").write_text(
+            json.dumps(
+                {
+                    "freeze_manifest": config["freeze_manifest"],
+                    "supplemental_sha256": {
+                        str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in shared
+                    },
+                    "meaning": "candidate hashes verified; supplemental arrays/code captured before evaluation, not claimed before data generation",
+                },
+                indent=2,
+            )
+        )
     torch.set_num_threads(2)
     checkpoint = torch.load(
         Path(config["field_run"]) / "best.pt", map_location="cpu", weights_only=False
@@ -154,8 +217,41 @@ def run(config, output):
         "quadrature_caching": "geometry-independent Gauss-Legendre rule shared by ALL pipelines; no system or frequency solution cached",
     }
     (output / "resources.json").write_text(json.dumps(resource, indent=2))
-    rows = []
+    rows = (
+        json.loads((output / "results.json").read_text())
+        if resume and (output / "results.json").exists()
+        else []
+    )
+    expected_methods = {"regularized_inverse", "kernel_generator", "field_neural"}
+    if prior is not None:
+        expected_methods.add("gaussian_generator")
+    expected_methods.update(
+        f"{method}_refine_{step}"
+        for method in config.get("refine_initializations", [])
+        for step in config["nonlinear_steps"]
+    )
+    expected_methods.update(f"nonlinear_{step}" for step in config["nonlinear_steps"])
+    pairs = {(m, r) for m in expected_methods for r in range(config["repeats"])}
+    completed = completed_systems(rows, config["systems"], pairs)
+    if resume:
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        if rows:
+            shutil.copy2(output / "results.json", output / f"pre_resume_{stamp}.json")
+        (output / f"resume_{stamp}.json").write_text(
+            json.dumps(
+                {
+                    "completed_systems": sorted(completed),
+                    "preserved_rows": len(rows),
+                    "code_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                    "reason": "explicit resume after a completed chunk or interrupted process; same frozen settings and independent per-system optimizer",
+                },
+                indent=2,
+            )
+        )
+    new_systems = 0
     for system in config["systems"]:
+        if system in completed:
+            continue
         with np.load(Path(config["data"]) / f"system{system}_m32_r2049.npz") as z:
             spec = json.loads(str(z["spec"]))
             fields, depths, ranges, frequencies = (
@@ -210,6 +306,16 @@ def run(config, output):
                     **(extra or {}),
                 }
             )
+            if config.get("save_coefficients") and repeat == 0:
+                directory = output / "coefficients"
+                directory.mkdir(exist_ok=True)
+                np.savez_compressed(
+                    directory / f"system{system}_{method}.npz",
+                    beta=beta,
+                    system=system,
+                    method=method,
+                    scope="frozen independent evaluation; no target-based optimization",
+                )
 
         # Warm network libraries with actual context before recorded repetitions.
         b, g, _, h, t = encode(spec, observed, depths, ranges[take], 3, 0)
@@ -282,8 +388,33 @@ def run(config, output):
                     repeat,
                     {"forward_backward_calls": calls},
                 )
-        (output / "results.json").write_text(json.dumps(rows, indent=2))
+        temporary = output / "results.json.tmp"
+        temporary.write_text(json.dumps(rows, indent=2))
+        temporary.replace(output / "results.json")
         print(json.dumps({"system": system, "complete": True}), flush=True)
+        completed.add(system)
+        new_systems += 1
+        if max_new_systems is not None and new_systems >= max_new_systems:
+            break
+    if completed != set(config["systems"]):
+        progress = {
+            "completed_systems": sorted(completed),
+            "total_systems": len(config["systems"]),
+            "status": "incomplete execution chunk; run --resume; no final summary created",
+        }
+        (output / "execution_progress.json").write_text(json.dumps(progress, indent=2))
+        print(json.dumps(progress), flush=True)
+        return
+    (output / "execution_progress.json").write_text(
+        json.dumps(
+            {
+                "completed_systems": sorted(completed),
+                "total_systems": len(config["systems"]),
+                "status": "complete",
+            },
+            indent=2,
+        )
+    )
     summary = []
     for method in sorted({r["method"] for r in rows}):
         grouped = []
@@ -317,13 +448,15 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--field-run", type=Path)
     parser.add_argument("--repeats", type=int)
+    parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--max-new-systems", type=int)
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
     if args.field_run is not None:
         config["field_run"] = str(args.field_run)
     if args.repeats is not None:
         config["repeats"] = args.repeats
-    run(config, args.output)
+    run(config, args.output, resume=args.resume, max_new_systems=args.max_new_systems)
 
 
 if __name__ == "__main__":

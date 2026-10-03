@@ -1,0 +1,38 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "query_frequencies": [
+    70,
+    80,
+    90,
+    110,
+    120,
+    130
+  ],
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "field_run": "artifacts/coherent_waveguide_generator_field_seed44_20261003",
+  "gaussian_prior_run": "artifacts/coherent_waveguide_generator_prior_20261003",
+  "repeats": 1,
+  "nonlinear_steps": [
+    5,
+    20
+  ],
+  "refine_initializations": [
+    "field_neural",
+    "kernel_generator",
+    "gaussian_generator"
+  ],
+  "hypothesis": "audit the learned warm-start signal across all3trainingseeds and a training-medium Gaussian prior warmstart; identical observed-field objective and optimizer for ALL initializers",
+  "timing": "includes fresh encoding, model/covariance projection, transfers, line searches, latent and6queries; one-repeat robustness run is NOT a latency certification; prior SVD offline and storage declared",
+  "stop_rule": "retain all3seeds and prior; no source/query-based selection; only if advantage survives should a frozen independent-system evaluation be prepared",
+  "scope": "development robustness/control, not new architecture; defaultsseed42 with explicit CLIfield_run overrides for43/44"
+}

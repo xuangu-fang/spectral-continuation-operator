@@ -1,0 +1,22 @@
+{
+  "system_seed_start": 20262300, "systems_count": 64,
+  "audit_systems": [20262400,20262401,20262402],
+  "original_frequencies": [60,70,80,90,100,110,120,130,140],
+  "narrow_frequencies": [140,200,300,400],
+  "narrow_source_width_m": 2.0,
+  "teacher_cells": 1024, "reference_cells": 2048,
+  "original_modes": 32, "original_reference_modes": 48,
+  "narrow_modes": 64, "narrow_reference_modes": 96,
+  "quadrature_nodes": 256,"convergence_gate": 0.001,
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "frozen_neural_runs": [
+    "artifacts/coherent_waveguide_generator_field_finetune_20261003",
+    "artifacts/coherent_waveguide_generator_field_seed43_20261003",
+    "artifacts/coherent_waveguide_generator_field_seed44_20261003"
+  ],
+  "frozen_hyperparameter_files": [
+    "artifacts/coherent_waveguide_learned_generator_20261003/best_kernel.json",
+    "artifacts/coherent_waveguide_generator_prior_20261003/best_results.json"
+  ],
+  "scope": "frozen candidate independent IID audit; not an already-passed method gate or second domain; NEVER use new systems for model selection"
+}

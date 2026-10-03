@@ -1,0 +1,9 @@
+{
+  "training_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "rank":128,"initial_prior_precision":1e-9,
+  "prior_strengths":[0,1e-8,1e-6],"checkpoints":[0,5,20,100],
+  "hypothesis":"Gaussian warmstart followed by unconstrained fitting may lose the training prior; keep every nonlinear iterate in the same128dimensional generator subspace before deciding a nonlinear learned manifold is needed",
+  "controls":"same512medium training labels,3observed frequencies65profiles, decoder and single contextdata term; fixed optional Gaussian penalty; true-medium projection is ORACLE ONLY and neverinitializes fitting",
+  "scope":"supplemental classical control on original8DEVELOPMENT systems; not selected on or addedretroactively to primary64frozen cohort comparisons",
+  "stop_rule":"one rank previously selected bydevelopment and3preset penalties/100steps; no rank sweep, no replacing oldnegative outcomes, no target-query stopping"
+}

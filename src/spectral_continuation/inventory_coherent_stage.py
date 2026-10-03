@@ -45,6 +45,8 @@ def run(root, output):
         ("coherent_waveguide_adaptive_modes_truth_20261003", 2),
         ("coherent_waveguide_narrow_source_modes_truth_20261003", 2),
         ("coherent_waveguide_narrow_source_modes_expansion_20261003", 6),
+        ("coherent_waveguide_frozen_system_audit_20261003/original", 64),
+        ("coherent_waveguide_frozen_system_audit_20261003/narrow", 64),
     ]:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -68,12 +70,19 @@ def run(root, output):
                         "frequencies": z[frequency_key].tolist(),
                     }
                 )
+        independent = name.startswith("coherent_waveguide_frozen_system_audit_20261003/")
+        metadata_paths = set((base / name).glob("*.json"))
+        if independent:
+            metadata_paths.update((base / name).parent.glob("*.json"))
         datasets[name] = {
-            "evidence": "development only; all system identities already used for development",
+            "evidence": (
+                "independent64IID environments20262300–363; candidates frozen before generation; original/narrow are paired queries NOT128independent systems; no current-model tuning"
+                if independent
+                else "development/training only; not independent test evidence"
+            ),
             "files": records,
             "metadata": [
-                {"path": str(path), "sha256": digest(path)}
-                for path in sorted((base / name).glob("*.json"))
+                {"path": str(path), "sha256": digest(path)} for path in sorted(metadata_paths)
             ],
         }
     sources = set()
@@ -90,6 +99,7 @@ def run(root, output):
         "*source_cache*.py",
         "*source_space*.py",
         "*waveguide*.py",
+        "*frozen_generator*.py",
         "*helmholtz*.py",
         "*separable*.py",
     ]:
@@ -101,6 +111,7 @@ def run(root, output):
         "test_*contrast_source*.py",
         "test_*source_space*.py",
         "test_*waveguide*.py",
+        "test_*frozen_generator*.py",
         "test_*helmholtz*.py",
         "test_*separable*.py",
     ]:

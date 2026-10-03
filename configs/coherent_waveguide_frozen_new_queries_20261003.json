@@ -1,0 +1,14 @@
+{
+  "freeze_manifest": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frozen_system_audit_20261003/freeze_manifest.json",
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frozen_system_audit_20261003/narrow",
+  "query_frequencies": [140.0, 200.0, 300.0, 400.0],
+  "inference_runs": {
+    "42": "artifacts/coherent_waveguide_frozen_system_seed42_20261003",
+    "43": "artifacts/coherent_waveguide_frozen_system_seed43_20261003",
+    "44": "artifacts/coherent_waveguide_frozen_system_seed44_20261003"
+  },
+  "shared_methods": ["regularized_inverse","kernel_generator","gaussian_generator","kernel_generator_refine_5","kernel_generator_refine_20","gaussian_generator_refine_5","gaussian_generator_refine_20","nonlinear_5","nonlinear_20"],
+  "neural_methods": ["field_neural","field_neural_refine_5","field_neural_refine_20"],
+  "scope": "use frozen encoded coefficients only;64independent environments; no newsource/frequency observations or checkpoint choice; allmethods64mode decoder; realmediumprojection explicitly oracle",
+  "selection": "NONE: report all4frequencies and all3neural seeds"
+}

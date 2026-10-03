@@ -18,7 +18,7 @@ Current user direction is high-precision complex wavefield/phase representation 
 - R1 has zero target-frequency samples; never merge its scores with spatial reconstruction.
 - Main metric: system-macro raw complex relative L2. No global phase alignment. Amplitude and energy-weighted circular phase metrics explain, never replace it.
 - Keep low-amplitude/source/boundary diagnostics separate without removing them from primary ROI.
-- All current coherent-branch datasets/results are development. Historical strict Ocean systems remain sealed.
+- Most coherent-branch datasets/results are development. NEW64 IID systems20262300–363 are a frozen independent audit; do not tune current candidates on them. Historical strict Ocean systems remain sealed.
 - Formal candidates require frozen configs, unseen systems, at least three training seeds, strongest matched baselines, source/phase conventions, physical solver truth at new coordinates, and fair error-cost curves.
 - Gates are exploration targets, not reasons to alter a metric or hide failed systems.
 
@@ -145,6 +145,22 @@ not forward-only timing. Now require3trainingseeds and Gaussian-generator-prior 
 Exact first-order local square-root inverse (avoids omitted iK' term)4bounded derivative/rangepenalty options
 best~.01069, modest vs.01136; no further localGN/derivative sweeps. Frechet derivative tests cover propagating
 and evanescent modes. Do not attribute all neural correction to the omitted second-order term.
+Strong warm-start audit now complete: neural seeds42/43/44 20step .003444/.003436/.003637(mean.003506),
+Gaussian-prior warmstart .004153, better than RBF .004642. Neural increment only15.6% vsbestmatched prior,
+not robust20%;5step mean.005156 vsGaussian.005933. All3runs saved; one-repeat newer timing not certified.
+Current new action:64independent IID systems20262300–363, candidates+hyperparameters frozen BEFOREdata
+generation in dataset freeze_manifest.json. See `docs/GENERATOR_FROZEN_SYSTEM_AUDIT_ZH.md`. This audits generality
+despite methodgate notyetpassed; do not claim it as second domain or reuse these systems to tune current models.
+Generation complete:128NPZ,maxnumericaldifference1.004e-5. Seed42original64query complete: neural.008498,
+kernel.010215;neural20.004127,Gaussian20.004702. Otherseeds pending; no gate claim. Originaldata filenames compatible with benchmark; narrow400Hz
+truth uses64modes and newcoordinates. New evaluation code only adds hashes/logging/savedcoefficients, not model
+changes; supplemental shared-training-array hashes are explicitly pre-evaluation, not falsely pre-generation.
+Initial64evaluation interrupted bySIGTERM(unconfirmedcause); preserved20complete systems/resumedstrictly.
+Firstresumeoverwrote runtime metadata beforebackup logicadded; do not claim perfect firstsegmenttiming provenance.
+Proper nonlinearGaussian-priorcontrol staysin128trainingPCAcoordinates,20step.007668/100step~.00585;
+capacityoracle.000810 vsfulltrueprojection.000782. No evidence for adding nonlinearlearnedlatentmanifold.
+Localactual15physicalparameter sensitivity2olddevcases:110Hz amplification1.56–1.86,400Hz8.33–12.25.
+Actualperturbationssmall/bound-limited, NOTglobalnonidentifiability or learnednoiseoptimality. See stabilityauditdoc.
 
 `coherent_representation.py`, `learned_wave_chart.py`, `learned_coherent_kernel.py`,
 `coherent_helmholtz_data.py`, `generate_coherent_ocean.py`, their `audit_*`/`evaluate_coherent_*` drivers,

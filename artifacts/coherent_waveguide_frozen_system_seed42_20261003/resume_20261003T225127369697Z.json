@@ -1,0 +1,27 @@
+{
+  "completed_systems": [
+    20262300,
+    20262301,
+    20262302,
+    20262303,
+    20262304,
+    20262305,
+    20262306,
+    20262307,
+    20262308,
+    20262309,
+    20262310,
+    20262311,
+    20262312,
+    20262313,
+    20262314,
+    20262315,
+    20262316,
+    20262317,
+    20262318,
+    20262319
+  ],
+  "preserved_rows": 240,
+  "code_sha256": "ff150cf1584eb76aca235e813c5fdcc4979d3077a7cc346686b7205147213fc3",
+  "reason": "prior process ended with SIGTERM/exit143, external cause unconfirmed; same frozen settings and independent per-system optimizer restarted"
+}

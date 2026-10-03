@@ -1,0 +1,9 @@
+{
+  "freeze_manifest": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frozen_system_audit_20261003/freeze_manifest.json",
+  "supplemental_sha256": {
+    "artifacts/coherent_waveguide_learned_generator_20261003/training_statistics.npz": "fe8183fafa6a5b3e6e58271fec1bd2124d206360997eab916246b9d873858300",
+    "artifacts/coherent_waveguide_learned_generator_20261003/config.json": "7046faffa9beefd96d726ba9b7d088e01b57678336400cd504320c5bff895055",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/benchmark_waveguide_generator.py": "ff150cf1584eb76aca235e813c5fdcc4979d3077a7cc346686b7205147213fc3"
+  },
+  "meaning": "candidate hashes verified; supplemental arrays/code captured before evaluation, not claimed before data generation"
+}

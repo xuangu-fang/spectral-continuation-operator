@@ -1,0 +1,24 @@
+{
+  "systems": [
+    20261332,
+    20261333
+  ],
+  "cells": 512,
+  "modes": 64,
+  "finite_difference_steps": [
+    0.0001,
+    5e-05
+  ],
+  "derivative_consistency_gate": 0.01,
+  "gram_floor_relative": 1e-09,
+  "context_perturbations": [
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "max_endpoint_parameter_fraction": 0.02,
+  "hypothesis": "quantify whether small changes of the ACTUAL15parameter medium family can be weak in original context but amplified at newfrequency/source; distinguish instability from optimizationfailure and exactnonidentifiability",
+  "information": "oracle diagnostic at2already-used development environments; no formal audit systems or model training touched",
+  "scope": "local finite-difference generalized sensitivity plus actual nonlinear paired environments; not a predictor or leaderboard; contexts are3frequencies65profiles, outputs use modalParseval continuous-depth norm",
+  "stop_rule": "two fixed FDsteps and consistency gate; positive or negative stability result retained; no searching across environments/frequencies for dramatic ambiguity"
+}

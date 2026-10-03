@@ -1,0 +1,15 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frozen_system_audit_20261003/original",
+  "freeze_manifest": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frozen_system_audit_20261003/freeze_manifest.json",
+  "systems": [20262300,20262301,20262302,20262303,20262304,20262305,20262306,20262307,20262308,20262309,20262310,20262311,20262312,20262313,20262314,20262315,20262316,20262317,20262318,20262319,20262320,20262321,20262322,20262323,20262324,20262325,20262326,20262327,20262328,20262329,20262330,20262331,20262332,20262333,20262334,20262335,20262336,20262337,20262338,20262339,20262340,20262341,20262342,20262343,20262344,20262345,20262346,20262347,20262348,20262349,20262350,20262351,20262352,20262353,20262354,20262355,20262356,20262357,20262358,20262359,20262360,20262361,20262362,20262363],
+  "query_frequencies": [70,80,90,110,120,130],
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "field_run": "artifacts/coherent_waveguide_generator_field_finetune_20261003",
+  "gaussian_prior_run": "artifacts/coherent_waveguide_generator_prior_20261003",
+  "repeats": 1, "nonlinear_steps": [5,20],
+  "refine_initializations": ["field_neural","kernel_generator","gaussian_generator"],
+  "save_coefficients": true,
+  "scope": "independent64IID system audit of frozen candidates; not a passed20percent or second-domaingate; no test-based model selection or target-based stopping",
+  "aggregation": "systemmacro raw complex L2 primary; average3trainingseeds within system then pairedbootstrap bysystem; preserve eachseed and newsource/frequency curves",
+  "timing": "one-repeat shared-machine pilot; do not claim exclusivehardware or precise speedconfidence; offline prior/kernel fitting and training excluded and separately declared"
+}

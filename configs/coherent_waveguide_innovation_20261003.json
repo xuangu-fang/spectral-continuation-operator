@@ -1,0 +1,13 @@
+{
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "field_run": "artifacts/coherent_waveguide_generator_field_finetune_20261003",
+  "feature_mode": "coherent_innovation",
+  "steps": 3000,
+  "eval_every": 200,
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "seed": 42,
+  "scope": "original512train/8dev only; independent64 audit untouched; extra physical encoding work recorded",
+  "hypothesis": "local normal statistics lose trajectory information; provide full complex observation-minus-classical-prediction residual in a stable background frame",
+  "stop_rule": "at least15percent relative improvement vs matched zero-feature continuation and strongest kernel to expand; no width/inputvariant sweep on failure"
+}
