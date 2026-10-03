@@ -1,0 +1,11 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [20261332,20261333,20261334,20261335,20261336,20261337,20261338,20261339],
+  "observed_frequencies": [60,100,140], "roi_min_range_m": 50,
+  "variants": [{"branches":0,"envelope_count":64},{"branches":4,"envelope_count":16},{"branches":8,"envelope_count":8},{"branches":16,"envelope_count":4}],
+  "ridges": [0.000001,0.0001], "basis_kind": "local_unitary",
+  "hypothesis": "global decaying carriers caused huge, frequency-dependent coefficient gauges; use bounded local relative phases and always include each output's own phase before deciding whether multi-carrier encoding is useful",
+  "control": "64 coefficients per output, identical background/context; target projection remains an explicit oracle; no inverse evanescent amplification",
+  "stop_rule": "if stable local carriers still do not outperform the diagonal spline representation by 20%, stop shared-encoder work on this coefficient family; do not interpret the old unstable global parameterization as a physical impossibility",
+  "evidence": "development classical conditioning and representation audit, not neural success"
+}

@@ -110,6 +110,27 @@ cache已更正文案。全部预计算成本保存在summary.json，不能只报
 含完整40环境新波导、两组pilot/收敛及原设置配对细网格。仍为捕获时post-run快照；其后源空间容量
 审计等新增artifact不在该时间点快照中，不能修改旧文件伪装成当时已有。
 
+## 训练规模控制（20:22 UTC启动，512环境已生成）
+
+新增路径`coherent_waveguide_training_cache_20261003/`位于同一datasets根目录。它不是新的完整
+Helmholtz数据，也不是把图像插值成标签；是上述单向Galerkin模型用256个传播单元直接求出的
+`[9,129,32]`复模态轨迹。生成前在3个固定seed、70/110/140 Hz用2049×129直接读出坐标比较256/512
+单元，须通过0.001收敛gate。配置`configs/coherent_waveguide_training_cache_20261003.json`。
+
+已生成512训练环境：原32训练seed20261300–331与480个新seed20261500–20261979。明确排除原8个
+开发环境20261332–339；没有新增formal test。模型验证仍使用原2049距离的独立细teacher，而非新
+129坐标缓存。缓存主要节省标签存储；原始完整环境spec与相位约定全部保留，但范围相关SSP不作为
+observation-only模型输入。
+
+目前512个文件已全部生成，数值审计最大差为0.00004214，低于0.001门槛；完成清单见目录的
+`generation.json`。旧阶段四122文件inventory不含它们，不可据此宣称新数据已有hash证明。
+启动条件是FiLM模型在原32系统的末步train已到0.02666，
+不是为了掩盖先前0.105的容量失败而直接扩数据。
+
+阶段五快照`artifacts/coherent_stage5_inventory_20261003/inventory.json`已记录13组、634个原始/训练
+缓存NPZ的SHA256，并记录数据目录JSON元信息和当时108个artifact目录。它是post-run快照；随后
+生成器识别/学习实验不在该捕获时点，后续需另存快照，不能覆盖旧文件。
+
 ## 旧 FDTD 数据的失败如何使用
 
 `wave_operator/operator_id_64_160.npz` 的粗网格 R0 留点拟合失败被完整保留。

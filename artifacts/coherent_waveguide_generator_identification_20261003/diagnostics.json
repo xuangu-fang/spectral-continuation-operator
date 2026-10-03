@@ -1,0 +1,506 @@
+[
+  {
+    "system": 20261332,
+    "context_range_samples": 65,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 0.0003318233332580108,
+    "oracle_second_order_residual": 0.045037666027347295
+  },
+  {
+    "system": 20261332,
+    "context_range_samples": 65,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.00028355388630640097,
+    "oracle_second_order_residual": 0.045037666027347295
+  },
+  {
+    "system": 20261332,
+    "context_range_samples": 65,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0005901481472616474,
+    "oracle_second_order_residual": 0.045037666027347295
+  },
+  {
+    "system": 20261332,
+    "context_range_samples": 257,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 3.4666083256000154e-05,
+    "oracle_second_order_residual": 0.005279756302681468
+  },
+  {
+    "system": 20261332,
+    "context_range_samples": 257,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.00010919255250303386,
+    "oracle_second_order_residual": 0.005279756302681468
+  },
+  {
+    "system": 20261332,
+    "context_range_samples": 257,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0005744007346013239,
+    "oracle_second_order_residual": 0.005279756302681468
+  },
+  {
+    "system": 20261332,
+    "context_range_samples": 2049,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 3.1308837480544887e-05,
+    "oracle_second_order_residual": 0.0019292934959823105
+  },
+  {
+    "system": 20261332,
+    "context_range_samples": 2049,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.00011896380555287024,
+    "oracle_second_order_residual": 0.0019292934959823105
+  },
+  {
+    "system": 20261332,
+    "context_range_samples": 2049,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0005757342601035732,
+    "oracle_second_order_residual": 0.0019292934959823105
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 65,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 0.0003561669776133578,
+    "oracle_second_order_residual": 0.14009568004086406
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 65,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.0002672165453425453,
+    "oracle_second_order_residual": 0.14009568004086406
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 65,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0004234198157587262,
+    "oracle_second_order_residual": 0.14009568004086406
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 257,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 4.406653636177879e-05,
+    "oracle_second_order_residual": 0.01481448680317993
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 257,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 6.049810449895984e-05,
+    "oracle_second_order_residual": 0.01481448680317993
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 257,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0004084064610731105,
+    "oracle_second_order_residual": 0.01481448680317993
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 2049,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 6.885643420734201e-06,
+    "oracle_second_order_residual": 0.002759637417673649
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 2049,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 5.719198020717762e-05,
+    "oracle_second_order_residual": 0.002759637417673649
+  },
+  {
+    "system": 20261333,
+    "context_range_samples": 2049,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.00040927733432871287,
+    "oracle_second_order_residual": 0.002759637417673649
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 65,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 0.00026181968555994475,
+    "oracle_second_order_residual": 0.02508032858425782
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 65,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.00013836748190534478,
+    "oracle_second_order_residual": 0.02508032858425782
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 65,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0003108268818618799,
+    "oracle_second_order_residual": 0.02508032858425782
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 257,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 3.62390246917471e-05,
+    "oracle_second_order_residual": 0.003124103221225214
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 257,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 4.1592638824017425e-05,
+    "oracle_second_order_residual": 0.003124103221225214
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 257,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0003053247715454967,
+    "oracle_second_order_residual": 0.003124103221225214
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 2049,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 1.1179507116264235e-05,
+    "oracle_second_order_residual": 0.0015248518612737336
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 2049,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 4.298465934418109e-05,
+    "oracle_second_order_residual": 0.0015248518612737336
+  },
+  {
+    "system": 20261334,
+    "context_range_samples": 2049,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.00030566206017944146,
+    "oracle_second_order_residual": 0.0015248518612737336
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 65,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 0.0002922008899765715,
+    "oracle_second_order_residual": 0.07094847384383
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 65,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.0002375521509317092,
+    "oracle_second_order_residual": 0.07094847384383
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 65,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0005853835193388906,
+    "oracle_second_order_residual": 0.07094847384383
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 257,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 3.541233283920966e-05,
+    "oracle_second_order_residual": 0.007332748839555947
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 257,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 5.094218010420904e-05,
+    "oracle_second_order_residual": 0.007332748839555947
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 257,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0005584469688998654,
+    "oracle_second_order_residual": 0.007332748839555947
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 2049,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 1.2308697541143527e-05,
+    "oracle_second_order_residual": 0.0012408245228140552
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 2049,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 4.71578778906309e-05,
+    "oracle_second_order_residual": 0.0012408245228140552
+  },
+  {
+    "system": 20261335,
+    "context_range_samples": 2049,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0005599848412715875,
+    "oracle_second_order_residual": 0.0012408245228140552
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 65,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 0.00044454782188572896,
+    "oracle_second_order_residual": 0.08622957284176393
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 65,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.0003382156043535836,
+    "oracle_second_order_residual": 0.08622957284176393
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 65,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0004885626279416124,
+    "oracle_second_order_residual": 0.08622957284176393
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 257,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 5.1460569453166864e-05,
+    "oracle_second_order_residual": 0.009418868116707559
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 257,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 4.293482869940329e-05,
+    "oracle_second_order_residual": 0.009418868116707559
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 257,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0004749220562128615,
+    "oracle_second_order_residual": 0.009418868116707559
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 2049,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 2.1173445846639455e-06,
+    "oracle_second_order_residual": 0.0007497973768235866
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 2049,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 3.1532478853988683e-05,
+    "oracle_second_order_residual": 0.0007497973768235866
+  },
+  {
+    "system": 20261336,
+    "context_range_samples": 2049,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.00047556245483913365,
+    "oracle_second_order_residual": 0.0007497973768235866
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 65,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 0.0004694377798028214,
+    "oracle_second_order_residual": 0.07066184600839602
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 65,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.00040749524416457,
+    "oracle_second_order_residual": 0.07066184600839602
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 65,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0005452844925545498,
+    "oracle_second_order_residual": 0.07066184600839602
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 257,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 6.0468836842230384e-05,
+    "oracle_second_order_residual": 0.007259719346255588
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 257,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 6.390359437735856e-05,
+    "oracle_second_order_residual": 0.007259719346255588
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 257,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.000525883221459291,
+    "oracle_second_order_residual": 0.007259719346255588
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 2049,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 1.1453504793918647e-05,
+    "oracle_second_order_residual": 0.0008686623317827052
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 2049,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 3.938514058033639e-05,
+    "oracle_second_order_residual": 0.0008686623317827052
+  },
+  {
+    "system": 20261337,
+    "context_range_samples": 2049,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0005268246355804591,
+    "oracle_second_order_residual": 0.0008686623317827052
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 65,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 0.00018541847338307367,
+    "oracle_second_order_residual": 0.057841412393912904
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 65,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.0001549094936058687,
+    "oracle_second_order_residual": 0.057841412393912904
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 65,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0003497877735688412,
+    "oracle_second_order_residual": 0.057841412393912904
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 257,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 2.3503892382486528e-05,
+    "oracle_second_order_residual": 0.006450254772847201
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 257,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 2.933205795175596e-05,
+    "oracle_second_order_residual": 0.006450254772847201
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 257,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.00033825418411796666,
+    "oracle_second_order_residual": 0.006450254772847201
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 2049,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 5.31627981629457e-06,
+    "oracle_second_order_residual": 0.0018858472100224675
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 2049,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 2.5395672187232884e-05,
+    "oracle_second_order_residual": 0.0018858472100224675
+  },
+  {
+    "system": 20261338,
+    "context_range_samples": 2049,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.00033913360760871744,
+    "oracle_second_order_residual": 0.0018858472100224675
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 65,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 0.0002644631528289282,
+    "oracle_second_order_residual": 0.020674674332287524
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 65,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.00018482385092971236,
+    "oracle_second_order_residual": 0.020674674332287524
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 65,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0008268058145843784,
+    "oracle_second_order_residual": 0.020674674332287524
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 257,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 3.8344151382281565e-05,
+    "oracle_second_order_residual": 0.003140015755510963
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 257,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.00010814967590724863,
+    "oracle_second_order_residual": 0.003140015755510963
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 257,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0008155646208921487,
+    "oracle_second_order_residual": 0.003140015755510963
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 2049,
+    "ridge": 1e-06,
+    "normalized_slowness_coefficient_rmse": 2.9030495269411388e-05,
+    "oracle_second_order_residual": 0.0016786361965608603
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 2049,
+    "ridge": 0.0001,
+    "normalized_slowness_coefficient_rmse": 0.00011444006566351591,
+    "oracle_second_order_residual": 0.0016786361965608603
+  },
+  {
+    "system": 20261339,
+    "context_range_samples": 2049,
+    "ridge": 0.01,
+    "normalized_slowness_coefficient_rmse": 0.0008165021918846348,
+    "oracle_second_order_residual": 0.0016786361965608603
+  }
+]

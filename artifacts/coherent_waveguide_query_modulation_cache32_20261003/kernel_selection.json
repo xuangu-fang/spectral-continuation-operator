@@ -1,0 +1,62 @@
+[
+  {
+    "bandwidth": 0.5,
+    "ridge": 1e-06,
+    "macro_error": 0.21193953665966284
+  },
+  {
+    "bandwidth": 0.5,
+    "ridge": 0.0001,
+    "macro_error": 0.21193968899481255
+  },
+  {
+    "bandwidth": 0.5,
+    "ridge": 0.01,
+    "macro_error": 0.21196147970275234
+  },
+  {
+    "bandwidth": 0.5,
+    "ridge": 0.1,
+    "macro_error": 0.21202923771282797
+  },
+  {
+    "bandwidth": 1.0,
+    "ridge": 1e-06,
+    "macro_error": 0.22161267627569656
+  },
+  {
+    "bandwidth": 1.0,
+    "ridge": 0.0001,
+    "macro_error": 0.2212953050512323
+  },
+  {
+    "bandwidth": 1.0,
+    "ridge": 0.01,
+    "macro_error": 0.21837362532226456
+  },
+  {
+    "bandwidth": 1.0,
+    "ridge": 0.1,
+    "macro_error": 0.2159812752857102
+  },
+  {
+    "bandwidth": 2.0,
+    "ridge": 1e-06,
+    "macro_error": 0.2504483593403515
+  },
+  {
+    "bandwidth": 2.0,
+    "ridge": 0.0001,
+    "macro_error": 0.2457953200453374
+  },
+  {
+    "bandwidth": 2.0,
+    "ridge": 0.01,
+    "macro_error": 0.23214536746267958
+  },
+  {
+    "bandwidth": 2.0,
+    "ridge": 0.1,
+    "macro_error": 0.22494032880004178
+  }
+]

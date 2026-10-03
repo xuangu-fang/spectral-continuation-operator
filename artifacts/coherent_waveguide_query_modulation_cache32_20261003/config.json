@@ -1,0 +1,93 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "train_systems": [
+    20261300,
+    20261301,
+    20261302,
+    20261303,
+    20261304,
+    20261305,
+    20261306,
+    20261307,
+    20261308,
+    20261309,
+    20261310,
+    20261311,
+    20261312,
+    20261313,
+    20261314,
+    20261315,
+    20261316,
+    20261317,
+    20261318,
+    20261319,
+    20261320,
+    20261321,
+    20261322,
+    20261323,
+    20261324,
+    20261325,
+    20261326,
+    20261327,
+    20261328,
+    20261329,
+    20261330,
+    20261331
+  ],
+  "validation_systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "observed_frequencies": [
+    60,
+    100,
+    140
+  ],
+  "query_frequencies": [
+    70,
+    80,
+    90,
+    110,
+    120,
+    130
+  ],
+  "range_samples": 65,
+  "roi_min_range_m": 50,
+  "model": {
+    "width": 64,
+    "modes": 16,
+    "layers": 4,
+    "conditioning": "film"
+  },
+  "seed": 42,
+  "steps": 12000,
+  "batch_size": 32,
+  "eval_every": 400,
+  "learning_rate": 0.0003,
+  "kernel_control": {
+    "bandwidths": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "ridges": [
+      1e-06,
+      0.0001,
+      0.01,
+      0.1
+    ]
+  },
+  "information": "3 complete context fields and stationary background; no full SSP or target-frequency samples",
+  "hypothesis": "concatenating frequency as a constant input may be insufficient conditioning: modulate each shared spectral block by the query frequency and known background dispersion, without changing decoder, loss, samples, or network width",
+  "control": "same base FNO and cubic initial output; additional query-modulator parameters explicitly counted; this is a conditioning diagnostic, not yet a parameter-matched novelty claim",
+  "stop_rule": "same .05 training-capacity gate and .10 development/20%-gain gates; do not start prepared data expansion if training remains inaccurate",
+  "scope": "single-seed development; FiLM/FNO are prior art; not formal results or evidence of zero-shot high-frequency extrapolation",
+  "optimization_audit": "same architecture, data, loss and learning rate; extend only the optimization horizon before deciding whether data expansion is justified",
+  "training_modal_cache": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003"
+}

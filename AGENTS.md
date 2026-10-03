@@ -76,9 +76,34 @@ No shared mixture training or more branch-count sweeps under unchanged informati
 Observation-only spectral codec FNO pilot now failed: only stationary background + 3 context fields, no full SSP.
 Cubic .212574, tuned same-input RBF residual regressor .211940; final FNO dev .310725, best remains step 0.
 Exact same-seed rerun with last-state diagnostics reproduces the trajectory; last train .105016 (> .05 gate).
-Do NOT launch the prepared 512-system modal training cache merely because its config exists. It is ungenerated.
-First test whether one carrier per output mode hides multiple propagation phases under coupling, or other
-capacity/conditioning diagnostics. New data require a passed training-capacity gate or a genuinely new hypothesis.
+Data expansion was initially withheld until training capacity passed. That prerequisite has now been satisfied;
+see the completed controlled scaling below. Do not interpret the first FNO failure as impossibility.
+
+Superseding update at 20:22 UTC: query-conditioned FiLM (same base width/decode/loss) lowers train to .05229
+at 4k steps; extending ONLY its optimization to 12k gives last train .026657, so the .05 capacity gate is now
+passed. Dev still .302861, best step 0 .212574. Only then was the 512-system modal training cache generated.
+All 512 files are now complete; maximum 256/512-cell numerical difference .00004214. Matched cache32,
+cache128, cache512 FiLM runs (12k steps) give best dev .212574/.201853/.175268; strongest same-input
+RBF residual regression gives .211940/.200983/.161893. Final train .02670/.05013/.09123. Data diversity helps,
+but neural still fails .10 and 20%-over-best-baseline gates. No further width/step/data-only sweep is justified.
+Global coupled-carrier coefficients were unstable; local unitary stabilization fixes blow-up but matched-budget
+4/8 branches .230/.240 are worse than single .213. Stop this basis family. Unwrapped amplitude/phase best
+.2062 is only a small gain; no more unwrap heuristics under unchanged protocol.
+Dense full-SSP solver and this background+context
+protocol must remain separate. Native parameter count 372032 includes complex scalars; real DOF is 634176.
+
+NEW strongest observation-only control: classical shared generator identification from the same 3 frequencies
+and 65 profiles (background only) reaches .016010; quintic derivatives plus range regularization .011362.
+257/2049 profiles give .001801/.000789; true-medium projection oracle .000782. This is inverse-physics structure,
+not neural novelty, and rules out attributing the .175 FNO result to intrinsic identifiability without qualification.
+See report section 12 and `docs/SHARED_PROPAGATION_GENERATOR_POC_ZH.md`. A learned real-generator correction
+pilot is running with TRAINING-ONLY medium coefficient labels; compare stronger classical and same-supervision
+kernel controls. Its normal-equation features are phase/scale invariant; query decoder retains complex source.
+Never leak true development range-dependent SSP into its input, and never hide extra training-label information.
+This first generator learner completed: .008142 vs same-medium-supervised RBF .008874 (~8.2% extra, not20%).
+Real DOF240304. Now testing ONLY loss alignment via the same differentiable generator and raw complex field
+loss, comparing coefficient-pretrained vs classical initialization. The latter reads no training medium labels.
+Numerical decoder matches independent NumPy to1e-10; gradients pass finite differences. Still no formal result.
 
 `coherent_representation.py`, `learned_wave_chart.py`, `learned_coherent_kernel.py`,
 `coherent_helmholtz_data.py`, `generate_coherent_ocean.py`, their `audit_*`/`evaluate_coherent_*` drivers,

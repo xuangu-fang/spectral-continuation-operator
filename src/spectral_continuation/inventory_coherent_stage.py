@@ -40,6 +40,7 @@ def run(root, output):
         ("coherent_waveguide_convergence_20261003", 12),
         ("coherent_waveguide_spectral_pilot_20261003", 2),
         ("coherent_waveguide_development_20261003", 40),
+        ("coherent_waveguide_training_cache_20261003", 512),
     ]:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -47,7 +48,8 @@ def run(root, output):
         records = []
         for path in paths:
             with np.load(path, allow_pickle=False) as z:
-                field = z["field"]
+                value_key = "field" if "field" in z else "modal_coefficients"
+                field = z[value_key]
                 frequency_key = "frequencies" if "frequencies" in z else "frequencies_hz"
                 if not np.iscomplexobj(field) or not np.isfinite(field).all():
                     raise ValueError(f"invalid complex data: {path}")
@@ -58,12 +60,17 @@ def run(root, output):
                         "sha256": digest(path),
                         "shape": list(field.shape),
                         "dtype": str(field.dtype),
+                        "value_key": value_key,
                         "frequencies": z[frequency_key].tolist(),
                     }
                 )
         datasets[name] = {
             "evidence": "development only; all system identities already used for development",
             "files": records,
+            "metadata": [
+                {"path": str(path), "sha256": digest(path)}
+                for path in sorted((base / name).glob("*.json"))
+            ],
         }
     sources = set()
     for pattern in [

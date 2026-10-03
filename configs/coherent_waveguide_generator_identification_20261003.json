@@ -1,0 +1,15 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [20261332,20261333,20261334,20261335,20261336,20261337,20261338,20261339],
+  "observed_frequencies": [60,100,140],
+  "query_frequencies": [70,80,90,110,120,130],
+  "cells": 64, "depth_terms": 16,
+  "context_range_samples": [65,257,2049],
+  "ridges": [0.000001,0.0001,0.01],
+  "roi_min_range_m": 50,
+  "information": "3 complete observed fields + stationary background; no full range-dependent SSP in identifier; true medium projection labelled oracle",
+  "hypothesis": "shared frequency-affine real generator coordinates may be recoverable from observed modal differential structure even when interpolating envelopes fails",
+  "approximations": "second-order identification neglects i K'(r)a in exact one-way dynamics; derivatives use carrier-demodulated cubic splines; total dimensionless slowness squared clipped to [0.65,1.5] and clipping rate reported",
+  "stop_rule": "first quantify oracle capacity, derivative sampling sensitivity and deployment accuracy; do not claim AI novelty for classical inversion or train solely because oracle is accurate",
+  "scope": "classical development mechanism audit, not a learned method or formal two-domain result"
+}

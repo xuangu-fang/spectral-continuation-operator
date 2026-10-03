@@ -1,0 +1,46 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "observed_frequencies": [
+    60,
+    100,
+    140
+  ],
+  "roi_min_range_m": 50,
+  "variants": [
+    {
+      "branches": 0,
+      "envelope_count": 64
+    },
+    {
+      "branches": 4,
+      "envelope_count": 16
+    },
+    {
+      "branches": 8,
+      "envelope_count": 8
+    },
+    {
+      "branches": 16,
+      "envelope_count": 4
+    }
+  ],
+  "ridges": [
+    1e-06,
+    0.0001
+  ],
+  "hypothesis": "under mode coupling, each output mode contains several known background propagation phases; separate those carriers before interpolating slow coupling coefficients across frequency",
+  "control": "64 complex coefficients per output mode for every variant, identical full context and stationary-background information; separate target-truth coefficient capacity oracle; source phase unchanged",
+  "stop_rule": "if multi-carrier spectral prediction does not improve the matched diagonal spline representation by 20% or is ill-conditioned despite the declared ridge controls, do not train a large encoder for these coefficients",
+  "novelty": "classical multicarrier/Galerkin mechanism audit, not an AI or new modal-analysis claim",
+  "evidence": "development only; no full range-dependent medium in prediction; no distant-frequency extrapolation"
+}

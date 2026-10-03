@@ -39,11 +39,20 @@ class SpectralConv1d(nn.Module):
 
 
 class EnvelopeOperator(nn.Module):
-    def __init__(self, channels, outputs=64, width=64, modes=16, layers=4):
+    def __init__(self, channels, outputs=64, width=64, modes=16, layers=4, conditioning="none"):
         super().__init__()
         self.lift = nn.Conv1d(channels, width, 1)
         self.spectral = nn.ModuleList([SpectralConv1d(width, modes) for _ in range(layers)])
         self.local = nn.ModuleList([nn.Conv1d(width, width, 1) for _ in range(layers)])
+        self.conditioning, self.width, self.layers = conditioning, width, layers
+        if conditioning == "film":
+            self.query_modulator = nn.Sequential(
+                nn.Linear(33, 128), nn.GELU(), nn.Linear(128, 2 * layers * width)
+            )
+            nn.init.zeros_(self.query_modulator[-1].weight)
+            nn.init.zeros_(self.query_modulator[-1].bias)
+        elif conditioning != "none":
+            raise ValueError(conditioning)
         self.readout = nn.Sequential(
             nn.Conv1d(width, width, 1), nn.GELU(), nn.Conv1d(width, outputs, 1)
         )
@@ -53,8 +62,18 @@ class EnvelopeOperator(nn.Module):
     def forward(self, features, baseline):
         count = features.shape[-1]
         hidden = nn.functional.pad(self.lift(features), (0, 16))
-        for spectral, local in zip(self.spectral, self.local, strict=True):
-            hidden = nn.functional.gelu(spectral(hidden) + local(hidden))
+        modulation = None
+        if self.conditioning == "film":
+            # Last channels are query f and known background wavenumbers only.
+            modulation = self.query_modulator(features[:, -33:, 0]).reshape(
+                len(features), self.layers, 2, self.width
+            )
+        for j, (spectral, local) in enumerate(zip(self.spectral, self.local, strict=True)):
+            update = spectral(hidden) + local(hidden)
+            if modulation is not None:
+                gamma, beta = modulation[:, j].unbind(1)
+                update = (1 + gamma[..., None]) * update + beta[..., None]
+            hidden = nn.functional.gelu(update)
         correction = self.readout(hidden[..., :count]).transpose(1, 2)
         return baseline + torch.complex(correction[..., :32], correction[..., 32:])
 
@@ -62,15 +81,22 @@ class EnvelopeOperator(nn.Module):
 def prepare(config, systems):
     features, baselines, labels, meta, evaluation = [], [], [], [], []
     for system in systems:
-        path = Path(config["data"]) / f"system{system}_m32_r2049.npz"
+        cache_training = config.get("training_modal_cache") and system in config["train_systems"]
+        path = (
+            (Path(config["training_modal_cache"]) / f"system{system}_modal.npz")
+            if cache_training
+            else Path(config["data"]) / f"system{system}_m32_r2049.npz"
+        )
         with np.load(path) as z:
-            fields, frequencies, ranges, depths = (
-                z["field"],
-                z["frequencies_hz"],
-                z["ranges_m"],
-                z["depths_m"],
-            )
             spec = json.loads(str(z["spec"]))
+            frequencies, ranges = z["frequencies_hz"], z["ranges_m"]
+            if cache_training:
+                depths = np.linspace(0, spec["depth_m"], 129)
+                fields = np.einsum(
+                    "zm,frm->fzr", depth_basis(depths, spec["depth_m"], 32), z["modal_coefficients"]
+                )
+            else:
+                fields, depths = z["field"], z["depths_m"]
         observed = np.flatnonzero(np.isin(frequencies, config["observed_frequencies"]))
         take = np.linspace(0, len(ranges) - 1, config["range_samples"], dtype=int)
         coarse_ranges = ranges[take]
@@ -291,9 +317,17 @@ def run(config, output):
         "last_training_macro_error": float(np.mean([r["complex_rel_l2"] for r in last_train_rows])),
         "kernel_macro_error": best_kernel,
         "parameters": sum(p.numel() for p in model.parameters()),
+        "real_parameter_count": sum(
+            p.numel() * (2 if p.is_complex() else 1) for p in model.parameters()
+        ),
+        "parameter_count_note": "parameters counts a complex scalar once; real_parameter_count counts its two real degrees of freedom",
         "seconds": time.perf_counter() - start,
         "information": "3 complete observed fields + stationary background; range-dependent SSP is NOT an input",
         "scope": "development shared spectral codec; not a known-full-PDE solver, formal test, or distant-frequency extrapolator",
+        "training_grid": "compressed 129-range solver trajectories"
+        if config.get("training_modal_cache")
+        else "original 2049-range development fields",
+        "validation_grid": "independent original 2049-range development fields, unchanged",
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2))
     print(json.dumps(summary), flush=True)
@@ -303,8 +337,29 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--steps", type=int)
+    parser.add_argument("--training-modal-cache")
+    parser.add_argument("--add-training-range", type=int, nargs=2, metavar=("FIRST_SEED", "COUNT"))
     args = parser.parse_args()
-    run(json.loads(args.config.read_text()), args.output)
+    config = json.loads(args.config.read_text())
+    if args.steps is not None:
+        config["steps"] = args.steps
+        config["optimization_audit"] = (
+            "same architecture, data, loss and learning rate; extend only the optimization horizon before deciding whether data expansion is justified"
+        )
+    if args.training_modal_cache:
+        config["training_modal_cache"] = args.training_modal_cache
+    if args.add_training_range:
+        first, count = args.add_training_range
+        if count < 0:
+            raise ValueError("negative system count")
+        config["train_systems"] = config["train_systems"] + list(range(first, first + count))
+        if len(config["train_systems"]) != len(set(config["train_systems"])):
+            raise ValueError("duplicate training systems")
+        config["data_scale_audit"] = (
+            "nested extra training systems; architecture, observed/query frequencies, validation systems, loss and metrics unchanged; compressed teacher numerically audited separately"
+        )
+    run(config, args.output)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,9 @@
+{
+  "coefficient_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "initialization": "coefficient_pretrained",
+  "steps": 3000, "eval_every": 200, "batch_size": 8, "learning_rate": 0.0001, "seed": 42,
+  "hypothesis": "small medium-coordinate MSE need not minimize accumulated complex phase error; replace it with a single field loss through the same physical decoder, without adding components or changing inputs",
+  "control": "matched classical-zero initialization has no true-medium training labels; compare strongest .011362 inverse, .008874 same-supervision RBF, and .008142 coefficient-trained neural model",
+  "stop_rule": "need at least 20 percent over strongest matched control, stable numerical gradients, raw and circular phase accuracy; no width/step sweep on failure",
+  "scope": "development only; differentiable physics inverse model is not itself a novelty claim"
+}

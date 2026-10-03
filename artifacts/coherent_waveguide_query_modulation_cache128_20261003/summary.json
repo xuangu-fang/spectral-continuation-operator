@@ -1,0 +1,14 @@
+{
+  "macro_error": 0.20185295443998275,
+  "training_macro_error": 0.20797588181887264,
+  "last_training_macro_error": 0.05013402061534331,
+  "kernel_macro_error": 0.20098327150472625,
+  "parameters": 372032,
+  "real_parameter_count": 634176,
+  "parameter_count_note": "parameters counts a complex scalar once; real_parameter_count counts its two real degrees of freedom",
+  "seconds": 264.58819852303714,
+  "information": "3 complete observed fields + stationary background; range-dependent SSP is NOT an input",
+  "scope": "development shared spectral codec; not a known-full-PDE solver, formal test, or distant-frequency extrapolator",
+  "training_grid": "compressed 129-range solver trajectories",
+  "validation_grid": "independent original 2049-range development fields, unchanged"
+}

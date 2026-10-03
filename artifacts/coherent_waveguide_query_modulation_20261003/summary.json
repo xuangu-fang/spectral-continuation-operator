@@ -1,0 +1,10 @@
+{
+  "macro_error": 0.2125740013264118,
+  "training_macro_error": 0.25855837106629004,
+  "last_training_macro_error": 0.05229186049968552,
+  "kernel_macro_error": 0.2119395671671734,
+  "parameters": 372032,
+  "seconds": 131.7081537162885,
+  "information": "3 complete observed fields + stationary background; range-dependent SSP is NOT an input",
+  "scope": "development shared spectral codec; not a known-full-PDE solver, formal test, or distant-frequency extrapolator"
+}

@@ -1,0 +1,11 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [20261332,20261333,20261334,20261335,20261336,20261337,20261338,20261339],
+  "observed_frequencies": [60,100,140], "query_frequencies": [70,80,90,110,120,130],
+  "cells": 64, "depth_terms": 16, "context_range_samples": 65,
+  "ridge": 0.000001, "orders": [3,5], "range_penalties": [0,0.01,0.1,1,10],
+  "roi_min_range_m": 50,
+  "hypothesis": "generator identification residual may be ordinary numerical differentiation/smoothing bias; test higher-order demodulated interpolation and range regularity before crediting learning",
+  "information": "same 3 frequencies and 65 depth profiles as envelope FNO, known stationary background only",
+  "scope": "strong classical development controls; hyperparameter selection on same 8 development systems, no formal test"
+}

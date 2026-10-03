@@ -1,0 +1,10 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [20261332,20261333,20261334,20261335,20261336,20261337,20261338,20261339],
+  "observed_frequencies": [60,100,140], "roi_min_range_m": 50,
+  "source_phase_fallback_thresholds": [0,0.02],
+  "hypothesis": "Cartesian envelope interpolation may mix residual spatial phase winding into amplitude error; use densely observed spatial progression to unwrap each modal phase relative to the common initial source before interpolating frequency",
+  "control": "frequency-only unwrap versus spatial unwrap, absolute versus log magnitude, linear versus cubic; source profile comes from context r=0 and is checked frequency independent; no query phase alignment or full SSP",
+  "stop_rule": "if phase zeros/mode birth prevent stable transfer, report failures without calling wrapping ambiguity fundamental nonidentifiability; do not drop weak-amplitude target pixels or change raw primary metric",
+  "evidence": "classical development mechanism control; unwrapping is signal-processing prior art, not neural novelty"
+}
