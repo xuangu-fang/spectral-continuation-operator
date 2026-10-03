@@ -1,0 +1,7 @@
+{
+  "seeds": [20261132, 20261133],
+  "grids": [257, 513],
+  "frequencies": [6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5],
+  "evidence": "independent fractional frequency and fine-coordinate direct PDE truth for two ALREADY USED development environments; not formal test",
+  "purpose": "Validate continuous-frequency query without target-frequency observations and separate numerical-grid effects from representation effects"
+}

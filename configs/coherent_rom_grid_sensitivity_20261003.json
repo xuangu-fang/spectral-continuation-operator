@@ -1,0 +1,8 @@
+{
+  "context_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "query_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_fractional_queries_20261003",
+  "systems": [20261132, 20261133], "observed_frequencies": [6, 10, 14],
+  "query_frequencies": [7.5, 11.5, 13.5], "roi": [0.18, 0.82],
+  "hypothesis": "The 257-to-513 PDE-refit failure is differential instability near the finite source, not inadequate value approximation. Compare frozen coarse coefficients, fine PDE refit, value oracle, and one smooth source-scale carrier correction at the SAME six-column rank.",
+  "evidence": "development mechanism diagnostic; target truth is used ONLY in explicitly named capacity oracle"
+}

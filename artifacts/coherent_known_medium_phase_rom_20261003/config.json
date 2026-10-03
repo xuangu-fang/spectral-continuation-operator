@@ -1,0 +1,31 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "observed_frequencies": [
+    [
+      6,
+      10,
+      14
+    ],
+    [
+      6,
+      8,
+      10,
+      12,
+      14
+    ]
+  ],
+  "hypothesis": "Before learning a frequency-dependent trial representation, test whether phase-corrected snapshot bases plus known wave physics can support target-free frequency queries in heterogeneous media.",
+  "information_change": "Known medium, source and discretized PDE are explicitly available to all methods; this is NOT the old unknown-system sparse-prompt protocol.",
+  "prior_art": "Inspired by phase-preconditioned model reduction (Druskin et al. 2018); minimal straight-ray control, not a faithful implementation of full PPRKS or a new method claim.",
+  "gate": "Development raw complex error <=0.05 preferred; retain residual/error discrepancies and failures; target solutions only used for evaluation"
+}

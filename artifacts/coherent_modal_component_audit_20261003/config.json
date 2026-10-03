@@ -1,0 +1,17 @@
+{
+  "ocean_path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "systems": [
+    128,
+    129,
+    130,
+    131
+  ],
+  "frequency_spacings": [
+    5,
+    10
+  ],
+  "rank_tolerance": 1e-07,
+  "spatial_delays": 16,
+  "hypothesis": "Determine whether remaining spectral-query error is modal phase, amplitude/shape, or newly born support before selecting any learning module.",
+  "warning": "Named oracle variants use target-frequency truth; diagnostic only, never deployable results. All systems development."
+}

@@ -220,4 +220,3 @@ Query 的后置机制支线，不是当前第一阶段组件。
 - 大 checkpoint 和逐样本数组不提交 Git；提交配置、hash、summary JSON/CSV 和正文图；
 - 不移动历史模块或 artifact 路径，旧 manifest 与报告依赖这些路径；
 - 不把新的 exploratory run 混入 `artifacts/wave_operator_representation/summary/`；只有冻结汇总才能进入。
-

@@ -1,0 +1,33 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "observed_frequencies": [
+    [
+      6,
+      10,
+      14
+    ],
+    [
+      6,
+      8,
+      10,
+      12,
+      14
+    ]
+  ],
+  "include_eikonal": true,
+  "capacity_oracle": true,
+  "conjugate_enrichment": true,
+  "hypothesis": "First-arrival phase may outperform straight-ray demodulation; query-truth projection separates trial-space capacity from PDE projection error.",
+  "stop_rule": "If eikonal is competitive, use it as a classical baseline; do not advertise straight-ray preconditioning as a novel learned method.",
+  "evidence": "development only; known medium/source/PDE, zero target-frequency field observations"
+}

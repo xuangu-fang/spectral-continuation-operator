@@ -1,0 +1,10 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [20261132, 20261133, 20261134, 20261135],
+  "observed_frequencies": [6, 10, 14],
+  "query_frequencies": [7, 8, 9, 11, 12, 13],
+  "roi": [0.18, 0.82],
+  "hypothesis": "The saturated phase learner suggests an envelope/source capacity bottleneck. Compare source jets and smooth polynomial/radial envelope enrichment before learning them.",
+  "stop_rule": "Do not add a large neural decoder without a capacity/identifiability diagnosis. Oracle fits use target truth and must remain separate.",
+  "evidence": "development only; same known-medium PDE protocol; source stays in primary ROI"
+}

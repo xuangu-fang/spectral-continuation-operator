@@ -8,7 +8,6 @@ from pathlib import Path
 
 import numpy as np
 
-from .coherent_representation import complex_metrics
 from .ocean_multifidelity_solver import EnvironmentCase, GridSpec, JuliaPekerisRunner, SolverSpec
 
 
@@ -38,10 +37,11 @@ def run(config, output):
             verify = runner.solve(solver, case, 110, coarse)
             old = raw[idx, int(np.flatnonzero(z["frequencies_hz"] == 110)[0])]
             old = old[..., 0] + 1j * old[..., 1]
-            error = complex_metrics(verify.field, old)["complex_rel_l2"]
+            error = float(np.linalg.norm(verify.field - old) / np.linalg.norm(old))
             if error > 1e-5:
                 raise RuntimeError(f"solver lineage mismatch: {error}")
-            fine = GridSpec(50, 750, 767, 1, 95, depth_end_m=78)
+            nz, nr = config["spatial_grid"]
+            fine = GridSpec(50, 750, nr, 1, nz, depth_end_m=78)
             fields = []
             for f in config["frequencies"]:
                 result = runner.solve(solver, case, f, fine)
@@ -59,8 +59,8 @@ def run(config, output):
             np.savez_compressed(
                 output / f"system{idx}_fine.npz",
                 field=np.stack(fields),
-                x=np.linspace(50, 750, 767),
-                y=np.linspace(1, 78, 95),
+                x=np.linspace(50, 750, nr),
+                y=np.linspace(1, 78, nz),
                 frequencies=config["frequencies"],
                 environment=json.dumps(p),
                 system_id=case.case_id,

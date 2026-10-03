@@ -1,0 +1,6 @@
+{
+  "seeds": [20261132, 20261133], "grids": [257, 513], "frequencies": [6, 8, 10, 12, 14],
+  "environment_modifications": {"source_width": 0.0125, "contrast_scale": 2.0, "minimum_speed": 0.45},
+  "hypothesis": "Combined cell of the paired source-width by medium-contrast diagnostic, evaluated together with separate controls rather than cherry-picked for learning gains.",
+  "evidence": "structural development audit, not formal test; report both cases, all frequencies and grid convergence"
+}

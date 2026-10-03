@@ -1,0 +1,9 @@
+{
+  "source_archive": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "system_indices": [128, 129, 130, 131],
+  "frequencies": [92.5, 97.5, 102.5, 107.5, 112.5, 117.5, 122.5],
+  "spatial_grid": [95, 767],
+  "purpose": "Independent off-lattice frequency and coordinate teacher for modal spectral-query development; no target-frequency observations permitted",
+  "guard": "Reproduce archived110Hz coarse field before direct query generation",
+  "reserved_test_policy": "Same four development environments; original strict systems unopened"
+}

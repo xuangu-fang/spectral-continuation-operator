@@ -1,0 +1,15 @@
+{
+  "best_step": 600,
+  "parameters": 1,
+  "elapsed_seconds_including_data_and_baselines": 55.1003314582631,
+  "max_cuda_memory_allocated_bytes": 1395040768,
+  "validation_macro_by_method": {
+    "eikonal_phase": 0.033424804251841515,
+    "learned_scalar": 0.033351413310846366,
+    "raw": 0.9482854374069047,
+    "reference_phase": 0.06753810884992413,
+    "straight_ray_medium_phase": 0.033351973648274545
+  },
+  "training_macro_rel_l2": 0.03504363884479998,
+  "evidence": "development; known PDE; learned phase only, physics coefficients; not formal test"
+}

@@ -31,6 +31,13 @@
 复现：`python -m spectral_continuation.generate_coherent_ocean --config
 configs/coherent_ocean_fine_queries_20261003.json --output <dataset-directory>`。
 
+新增非整数频率直接真值位于同一datasets根目录的
+`coherent_ocean_fractional_queries_20261003/`：开发系统128–131，每个文件为
+`[7,95,767]`，频率92.5/97.5/102.5/107.5/112.5/117.5/122.5 Hz。配置
+`configs/coherent_ocean_fractional_queries_20261003.json`，仍由Pekeris直接求解，并通过旧110 Hz
+复算身份检查。该数据是在阶段一inventory之后生成的，不包含于旧46文件清单；不能把旧清单当作
+本轮新增数据的哈希证明。它用于零目标频率观测的谱查询，不用于空间context抽样。
+
 ## 独立二维异质 Helmholtz teacher
 
 目录：`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/`。
@@ -65,6 +72,27 @@ configs/coherent_ocean_fine_queries_20261003.json --output <dataset-directory>`�
 20261132/20261133，257和513两套网格，7/11/14频率。最高频网格差0.00128/0.00146。
 空间连续查询评估以257-grid样本为输入、513-grid直接PDE解为目标，不用插值造真值；因此误差包含
 求解器网格差，低于这一量级时不应夸大物理精度。
+
+第二批非整数频率数据：`coherent_helmholtz_fractional_queries_20261003/`，仍为开发系统132/133
+（完整seed为20261132/20261133），每个系统257与513两份文件，频率6.5/7.5/.../13.5。
+对应配置`configs/coherent_helmholtz_fractional_queries_20261003.json`；两环境最高网格差
+0.001131/0.001274。细网格真值不是插值；模型只允许插值其已知频率包络。
+
+三组配对结构控制，均已生成两个相同geometry seed的257/513双网格，频率6/8/10/12/14：
+
+- `coherent_structural_narrow_source_20261003/`：源宽度0.025→0.0125，介质不变；
+- `coherent_structural_high_contrast_20261003/`：源不变，低速体contrast乘2；
+- `coherent_structural_narrow_high_contrast_20261003/`：两因素同时改变。
+
+contrast按预先声明的最低声速0.45统一缩放，最低值在513审计网格上检查；不按模型误差筛选环境。
+最终contrast/source参数与有效缩放保存在每个NPZ的spec中。用冻结旧模型做配对敏感性分析，不能
+宣称它们是独立随机抽样的正式OOD test。生成、收敛、评价配置均为`configs/coherent_structural_*`。
+阶段一/二旧inventory不含全部新增文件；后续阶段三清单将记录这批数据，不覆盖旧时间点的快照。
+
+阶段三清单已经记录上述8组共66个NPZ及当前代码/模型快照：
+`artifacts/coherent_stage3_inventory_20261003/inventory.json`。这是捕获时的post-run快照，不证明之后
+新增/运行中的artifact状态不变。原设置8/12 Hz的513-grid配对控制正在另建
+`coherent_structural_reference_20261003/`，不在66文件清单中。
 
 审计 artifacts：`artifacts/coherent_helmholtz_convergence_20261003/` 与
 `artifacts/coherent_helmholtz_convergence_fine_20261003/`。

@@ -1,0 +1,2504 @@
+[
+  {
+    "system": 128,
+    "spacing": 5,
+    "observed_shape_fit": [
+      {
+        "frequency": 90.0,
+        "shape_error": 3.5678003609271356e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 95.0,
+        "shape_error": 4.362443537738731e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 100.0,
+        "shape_error": 5.480060474383828e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 105.0,
+        "shape_error": 7.268739438576031e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 110.0,
+        "shape_error": 9.130088261278925e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 115.0,
+        "shape_error": 0.00011881459833630802,
+        "modes": 9
+      },
+      {
+        "frequency": 120.0,
+        "shape_error": 0.00014902438926424238,
+        "modes": 10
+      },
+      {
+        "frequency": 125.0,
+        "shape_error": 0.00017707847306687653,
+        "modes": 10
+      }
+    ]
+  },
+  {
+    "system": 128,
+    "spacing": 5,
+    "rule": "zero_anchor",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 10,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 128,
+    "spacing": 5,
+    "rule": "cutoff_linear",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 92.5,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 107.5,
+        "single_observation": false
+      },
+      {
+        "mode": 10,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 117.5,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 128,
+    "spacing": 10,
+    "observed_shape_fit": [
+      {
+        "frequency": 90.0,
+        "shape_error": 3.5678003609271356e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 100.0,
+        "shape_error": 5.480060474383828e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 110.0,
+        "shape_error": 9.130088261278925e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 120.0,
+        "shape_error": 0.00014902438926424238,
+        "modes": 10
+      },
+      {
+        "frequency": 125.0,
+        "shape_error": 0.00017707847306687653,
+        "modes": 10
+      }
+    ]
+  },
+  {
+    "system": 128,
+    "spacing": 10,
+    "rule": "zero_anchor",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 10,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 128,
+    "spacing": 10,
+    "rule": "cutoff_linear",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 95.0,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 105.0,
+        "single_observation": false
+      },
+      {
+        "mode": 10,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 115.0,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 129,
+    "spacing": 5,
+    "observed_shape_fit": [
+      {
+        "frequency": 90.0,
+        "shape_error": 1.8942493089128853e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 95.0,
+        "shape_error": 2.367135022003258e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 100.0,
+        "shape_error": 2.9358782802649642e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 105.0,
+        "shape_error": 3.5480098847455116e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 110.0,
+        "shape_error": 4.2546936251756755e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 115.0,
+        "shape_error": 4.484881724910489e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 120.0,
+        "shape_error": 5.1650506171653015e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 125.0,
+        "shape_error": 5.895523494378419e-05,
+        "modes": 9
+      }
+    ]
+  },
+  {
+    "system": 129,
+    "spacing": 5,
+    "rule": "zero_anchor",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 129,
+    "spacing": 5,
+    "rule": "cutoff_linear",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 102.5,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 112.5,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 129,
+    "spacing": 10,
+    "observed_shape_fit": [
+      {
+        "frequency": 90.0,
+        "shape_error": 1.8942493089128853e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 100.0,
+        "shape_error": 2.9358782802649642e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 110.0,
+        "shape_error": 4.2546936251756755e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 120.0,
+        "shape_error": 5.1650506171653015e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 125.0,
+        "shape_error": 5.895523494378419e-05,
+        "modes": 9
+      }
+    ]
+  },
+  {
+    "system": 129,
+    "spacing": 10,
+    "rule": "zero_anchor",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 129,
+    "spacing": 10,
+    "rule": "cutoff_linear",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 105.0,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 115.0,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 130,
+    "spacing": 5,
+    "observed_shape_fit": [
+      {
+        "frequency": 90.0,
+        "shape_error": 2.5039578732470887e-05,
+        "modes": 6
+      },
+      {
+        "frequency": 95.0,
+        "shape_error": 3.054279230578016e-05,
+        "modes": 6
+      },
+      {
+        "frequency": 100.0,
+        "shape_error": 3.6425804970640205e-05,
+        "modes": 6
+      },
+      {
+        "frequency": 105.0,
+        "shape_error": 4.3305020202905544e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 110.0,
+        "shape_error": 5.028705120272659e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 115.0,
+        "shape_error": 5.768559498214006e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 120.0,
+        "shape_error": 6.585158223851968e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 125.0,
+        "shape_error": 7.726227833749123e-05,
+        "modes": 8
+      }
+    ]
+  },
+  {
+    "system": 130,
+    "spacing": 5,
+    "rule": "zero_anchor",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 130,
+    "spacing": 5,
+    "rule": "cutoff_linear",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 102.5,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 115.0,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 130,
+    "spacing": 10,
+    "observed_shape_fit": [
+      {
+        "frequency": 90.0,
+        "shape_error": 2.5039578732470887e-05,
+        "modes": 6
+      },
+      {
+        "frequency": 100.0,
+        "shape_error": 3.6425804970640205e-05,
+        "modes": 6
+      },
+      {
+        "frequency": 110.0,
+        "shape_error": 5.028705120272659e-05,
+        "modes": 7
+      },
+      {
+        "frequency": 120.0,
+        "shape_error": 6.585158223851968e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 125.0,
+        "shape_error": 7.726227833749123e-05,
+        "modes": 8
+      }
+    ]
+  },
+  {
+    "system": 130,
+    "spacing": 10,
+    "rule": "zero_anchor",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 130,
+    "spacing": 10,
+    "rule": "cutoff_linear",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 105.0,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 110.0,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 131,
+    "spacing": 5,
+    "observed_shape_fit": [
+      {
+        "frequency": 90.0,
+        "shape_error": 3.0303243306697334e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 95.0,
+        "shape_error": 3.596992175333442e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 100.0,
+        "shape_error": 4.887107702281201e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 105.0,
+        "shape_error": 6.54572062736346e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 110.0,
+        "shape_error": 6.906559883114837e-05,
+        "modes": 10
+      },
+      {
+        "frequency": 115.0,
+        "shape_error": 8.999947636173093e-05,
+        "modes": 10
+      },
+      {
+        "frequency": 120.0,
+        "shape_error": 0.00012048587509196124,
+        "modes": 11
+      },
+      {
+        "frequency": 125.0,
+        "shape_error": 0.00013445542115189159,
+        "modes": 11
+      }
+    ]
+  },
+  {
+    "system": 131,
+    "spacing": 5,
+    "rule": "zero_anchor",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 10,
+        "observed_frequencies": [
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 11,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 131,
+    "spacing": 5,
+    "rule": "cutoff_linear",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 92.5,
+        "single_observation": false
+      },
+      {
+        "mode": 10,
+        "observed_frequencies": [
+          110.0,
+          115.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 107.5,
+        "single_observation": false
+      },
+      {
+        "mode": 11,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 115.0,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 131,
+    "spacing": 10,
+    "observed_shape_fit": [
+      {
+        "frequency": 90.0,
+        "shape_error": 3.0303243306697334e-05,
+        "modes": 8
+      },
+      {
+        "frequency": 100.0,
+        "shape_error": 4.887107702281201e-05,
+        "modes": 9
+      },
+      {
+        "frequency": 110.0,
+        "shape_error": 6.906559883114837e-05,
+        "modes": 10
+      },
+      {
+        "frequency": 120.0,
+        "shape_error": 0.00012048587509196124,
+        "modes": 11
+      },
+      {
+        "frequency": 125.0,
+        "shape_error": 0.00013445542115189159,
+        "modes": 11
+      }
+    ]
+  },
+  {
+    "system": 131,
+    "spacing": 10,
+    "rule": "zero_anchor",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 10,
+        "observed_frequencies": [
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 11,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": null,
+        "single_observation": false
+      }
+    ]
+  },
+  {
+    "system": 131,
+    "spacing": 10,
+    "rule": "cutoff_linear",
+    "tracks": [
+      {
+        "mode": 1,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 2,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 3,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 4,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 5,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 6,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 7,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 8,
+        "observed_frequencies": [
+          90.0,
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": false,
+        "estimated_cutoff": null,
+        "single_observation": false
+      },
+      {
+        "mode": 9,
+        "observed_frequencies": [
+          100.0,
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 95.0,
+        "single_observation": false
+      },
+      {
+        "mode": 10,
+        "observed_frequencies": [
+          110.0,
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 105.0,
+        "single_observation": false
+      },
+      {
+        "mode": 11,
+        "observed_frequencies": [
+          120.0,
+          125.0
+        ],
+        "born_in_band": true,
+        "estimated_cutoff": 110.0,
+        "single_observation": false
+      }
+    ]
+  }
+]

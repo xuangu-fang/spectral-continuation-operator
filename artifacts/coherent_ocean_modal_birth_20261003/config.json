@@ -1,0 +1,19 @@
+{
+  "ocean_path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz",
+  "query_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_ocean_fractional_queries_20261003",
+  "systems": [
+    128,
+    129,
+    130,
+    131
+  ],
+  "frequency_spacings": [
+    5,
+    10
+  ],
+  "rank_tolerance": 1e-07,
+  "spatial_delays": 16,
+  "hypothesis": "An oracle traced nearly all residual error to missing modal births. Test zero anchors and bracketed onset estimation before claiming a learning need.",
+  "physics": "Known homogeneous water speed, free-surface sinusoidal depth modes and outgoing cylindrical waves; coefficients inferred only from observed fields. No seabed parameters or target fields in fitting.",
+  "gate": "Retain all four development systems and both budgets on independent noninteger-frequency/spatial truth. Classical control, not an AI novelty claim."
+}

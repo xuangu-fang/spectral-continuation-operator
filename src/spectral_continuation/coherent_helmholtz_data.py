@@ -52,6 +52,33 @@ def sample_environment(spec: dict, axis: np.ndarray):
     return speed, loss, src
 
 
+def apply_environment_modifications(spec: dict, changes: dict):
+    """Explicit paired structural controls; no selection by model performance."""
+    if not changes:
+        return spec
+    spec = json.loads(json.dumps(spec))
+    if "source_width" in changes:
+        spec["source_width"] = float(changes["source_width"])
+    scale = float(changes.get("contrast_scale", 1.0))
+    trial_contrasts = np.asarray(spec["contrasts"]) * scale
+    # Compute the continuous bump sum on a fixed audit grid before the solver's
+    # safety check. A uniform rescaling enforces a declared c_min, not easy cases.
+    axis = np.linspace(0, 1, 513)
+    xx, yy = np.meshgrid(axis, axis)
+    deficit = np.zeros_like(xx)
+    for center, width, contrast in zip(
+        spec["centers"], spec["widths"], trial_contrasts, strict=True
+    ):
+        deficit += contrast * np.exp(
+            -((xx - center[0]) ** 2 + (yy - center[1]) ** 2) / (2 * width**2)
+        )
+    floor = float(changes.get("minimum_speed", 0.45))
+    correction = min(1.0, (1 - floor) / max(float(deficit.max()), 1e-30))
+    spec["contrasts"] = (trial_contrasts * correction).tolist()
+    spec["generation_modifications"] = {**changes, "effective_contrast_scale": scale * correction}
+    return spec
+
+
 def solve(spec: dict, grid: int, frequencies: list[float]):
     axis = np.linspace(0, 1, grid)
     speed, loss, source = sample_environment(spec, axis)
@@ -85,7 +112,9 @@ def run(config: dict, output: Path):
     if seeds is None:
         seeds = list(range(config["seed_start"], config["seed_start"] + config["system_count"]))
     for seed in seeds:
-        spec = environment(seed)
+        spec = apply_environment_modifications(
+            environment(seed), config.get("environment_modifications", {})
+        )
         nested = {}
         for grid in config["grids"]:
             fields, speed, residuals, seconds = solve(spec, grid, config["frequencies"])

@@ -1,0 +1,3696 @@
+{
+  "captured_utc": "2026-10-03T17:25:41.795490+00:00",
+  "capture_type": "post-run working-tree snapshot; not an at-launch source attestation",
+  "git_base": "24537ff3e10bde687992cacb4d858e0676d2088b",
+  "large_files": "NPZ and PT intentionally local-only; regenerate via stored config or resolve these local paths",
+  "datasets": {
+    "coherent_helmholtz_development_20261003": {
+      "evidence": "development only; all system identities already used for development",
+      "files": [
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261100_grid257.npz",
+          "bytes": 4819177,
+          "sha256": "a4b5d591f2cbdc33afe411492d342858ce333aa9f97de856cdcf76c1767dcf76",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261101_grid257.npz",
+          "bytes": 4804685,
+          "sha256": "9a649005f13b3103549dc797e164826640862ac8db828132c270d3fa73a5c489",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261102_grid257.npz",
+          "bytes": 4816241,
+          "sha256": "8ade9f41647e8510454626e83b44fefb9207b87ebec33e0e6c9e1a07fd2ce3f4",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261103_grid257.npz",
+          "bytes": 4786082,
+          "sha256": "aaf94b3037e9a07eb66da7ef30c7b678530f43e0eb1bf522eb27ce99cc1f7aae",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261104_grid257.npz",
+          "bytes": 4819598,
+          "sha256": "4e29713c62226396942ee36a37dd1b548c3a7746b667e1e6d067c145fb343c29",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261105_grid257.npz",
+          "bytes": 4823643,
+          "sha256": "39ac0cb8c769824bdcc6fcc7f8778dfb69f4165fc32c38ea5fa9e2188b8d5012",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261106_grid257.npz",
+          "bytes": 4782198,
+          "sha256": "e6d3ef05660c859c4d9e8d57a57f7b4803352c5fb89db04698bd1d5612b05fdb",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261107_grid257.npz",
+          "bytes": 4830267,
+          "sha256": "b403c86335a131a64f912a0b592a4cb142e4675a15785264aac3f9437e12276b",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261108_grid257.npz",
+          "bytes": 4770532,
+          "sha256": "e1a6fafaaa6811c4f442b33b7f4ff831d4376db0452288792b4448a445a4471f",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261109_grid257.npz",
+          "bytes": 4773360,
+          "sha256": "29c5ff7c932acada038838ce2dbd5662ab2a2fb783eeb066b45095817d338dfb",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261110_grid257.npz",
+          "bytes": 4764722,
+          "sha256": "2448f4849c96430742300194474edb45603f678d3a9c9b6b48a4300dc6c607e5",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261111_grid257.npz",
+          "bytes": 4808043,
+          "sha256": "1806c4bbec33053ca3f9c10d0f6c18ac456cbeaa28c56ceadf2939cc9fcae4a5",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261112_grid257.npz",
+          "bytes": 4777110,
+          "sha256": "37b44245ffee1eab35d2a84943bec6ebd20b491b7d5c8e108c8ae9308dafeeac",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261113_grid257.npz",
+          "bytes": 4809247,
+          "sha256": "925c0caf488200b1c69b2e558a97be36345ce15170bdb9d185430039ebdfe057",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261114_grid257.npz",
+          "bytes": 4791574,
+          "sha256": "5c6a12cbded1382ffda3a3c8153b33584191d31c86fb95a5df8c3689bac1c80e",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261115_grid257.npz",
+          "bytes": 4815376,
+          "sha256": "914143e45691f858ae41963a49e5dc4fe89c02ba9c208593a5b24ff2942a4641",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261116_grid257.npz",
+          "bytes": 4740457,
+          "sha256": "ece72c9b3c97266d87abb0b0e87db60055b30b44f0b6a94488e5dcd48298c40f",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261117_grid257.npz",
+          "bytes": 4808954,
+          "sha256": "9823ea6ce58be161da8a687e0d239256b9bb463198a8b4aa49b598f30880c2de",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261118_grid257.npz",
+          "bytes": 4823871,
+          "sha256": "9365856051bf664c6c3e376fb366bcd501e26dbd640ce18c7896802c583362df",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261119_grid257.npz",
+          "bytes": 4808382,
+          "sha256": "3bed6f350f7c2359ec96d2e47c47927fcd83a4fa018f5bc996ebe2a80f437397",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261120_grid257.npz",
+          "bytes": 4739435,
+          "sha256": "ff7d64bcc537d2e5d5a2bee47cc1705ab058cfe34f9ed48e52f6aa8f8b8b4b5d",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261121_grid257.npz",
+          "bytes": 4796135,
+          "sha256": "b88951bc3caee849eba6d05538d7634c21371dbb46803eeb2fdc44c606e754ab",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261122_grid257.npz",
+          "bytes": 4799772,
+          "sha256": "a64ae9c6402c0a999b945c40f4306410cf16d1ca0e4fcfd555522744a4a9c636",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261123_grid257.npz",
+          "bytes": 4827424,
+          "sha256": "631ce68fa2635b4fe52f0ef9580f41f46348ceb08932aa22e57402a2194e593e",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261124_grid257.npz",
+          "bytes": 4822756,
+          "sha256": "7c1cca8b13fcd0d5ad45364453f72d145e40f99043a5ea46bdbf2e645d03adb7",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261125_grid257.npz",
+          "bytes": 4815268,
+          "sha256": "7ce9da80d5c24f81c98d5badbd0473a9a02518c497e69c0675e5605283c11ceb",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261126_grid257.npz",
+          "bytes": 4829105,
+          "sha256": "fac5b65039080994a09ff82cf65967f29e6d37537683aa19ec12440098887a47",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261127_grid257.npz",
+          "bytes": 4783430,
+          "sha256": "0d228795a57009e8960c974f105c64ee8fc5a60d241d4b45c8294ac4fdf3beb4",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261128_grid257.npz",
+          "bytes": 4818066,
+          "sha256": "4273ac2218cab4881088f1943d59f5ba499e990b16836476acb1569ae98f2854",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261129_grid257.npz",
+          "bytes": 4807148,
+          "sha256": "07f9910d9d077ca3f9736e40c0723984719a47421880e0def219ca1ce5297624",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261130_grid257.npz",
+          "bytes": 4824846,
+          "sha256": "92c8b3a25edb2b873a6294c890880442888160c6263bd60240fc302e0f5b8073",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261131_grid257.npz",
+          "bytes": 4826661,
+          "sha256": "0d2eb655effd9abe8c914f34ef2cc5b18daea1665ea4385f5dcabbb5564d809e",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261132_grid257.npz",
+          "bytes": 4811253,
+          "sha256": "b2e12cec2bfa14593c05e3450c1af722577e7a504a574ce5dfdba84b72840068",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261133_grid257.npz",
+          "bytes": 4813394,
+          "sha256": "8cd40361fd63b948b22a959091f4a8ae99eb4ba449d6ce859f0fa929ef329d08",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261134_grid257.npz",
+          "bytes": 4808434,
+          "sha256": "805afabd8abf96e6380b68d06ef1b64b26cc90e0fc766aad01b00a6e4705eed3",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261135_grid257.npz",
+          "bytes": 4811444,
+          "sha256": "c3551f353c6a69efbbdb9faa417662bdfe4123aee39a577fed7e2851f885f8d4",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261136_grid257.npz",
+          "bytes": 4814634,
+          "sha256": "998f1f203dd421b1523d78619c4df9db8090e813a8a6b3111e6b01bd47a5b2bd",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261137_grid257.npz",
+          "bytes": 4823719,
+          "sha256": "c94a646f52200af2c08c05fdf73c84822b19af4ae62bcd1a9f0a37d49e8777b4",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261138_grid257.npz",
+          "bytes": 4821017,
+          "sha256": "bd4c77d59dd8a719e99f09121fe92fb3f13e9ef2c91846aaf3cbe346c90e246d",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003/system_20261139_grid257.npz",
+          "bytes": 4820381,
+          "sha256": "d344a3c04510c8f19038a4fab5d4ea60efef8c072757c57eda8e6c78cab93d2d",
+          "shape": [
+            9,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            6.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0
+          ]
+        }
+      ]
+    },
+    "coherent_helmholtz_fine_queries_20261003": {
+      "evidence": "development only; all system identities already used for development",
+      "files": [
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_fine_queries_20261003/system_20261132_grid257.npz",
+          "bytes": 1899876,
+          "sha256": "2c095d34d9954956a80b9b824093b3b08494e6a101b6e4cf5ba713cc096b43b8",
+          "shape": [
+            3,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            7.0,
+            11.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_fine_queries_20261003/system_20261132_grid513.npz",
+          "bytes": 7581401,
+          "sha256": "6398af5069522b58eceadf8d53c930fdffeff32a4805bbf68b502cd3ef6912fe",
+          "shape": [
+            3,
+            513,
+            513
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            7.0,
+            11.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_fine_queries_20261003/system_20261133_grid257.npz",
+          "bytes": 1905491,
+          "sha256": "59b1eb19e149b4a7f611ef26b97773b99590770d04dcf030c742e6952c6185be",
+          "shape": [
+            3,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            7.0,
+            11.0,
+            14.0
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_fine_queries_20261003/system_20261133_grid513.npz",
+          "bytes": 7603905,
+          "sha256": "e7a81cb3969d51166c176dcbbd513429321dc45d9d8eb9df7849819527ee3f01",
+          "shape": [
+            3,
+            513,
+            513
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            7.0,
+            11.0,
+            14.0
+          ]
+        }
+      ]
+    },
+    "coherent_ocean_fine_queries_20261003": {
+      "evidence": "development only; all system identities already used for development",
+      "files": [
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_ocean_fine_queries_20261003/system128_fine.npz",
+          "bytes": 2712615,
+          "sha256": "6706071b27105667580b9cd86ce81ebec934261f11c3c2853b99c463164ae29c",
+          "shape": [
+            5,
+            95,
+            767
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            95,
+            110,
+            125,
+            150,
+            200
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_ocean_fine_queries_20261003/system129_fine.npz",
+          "bytes": 2714421,
+          "sha256": "83f3822cdf01b94e59c852228d72d1c893d91aa87bd662b5a14729387cfdd4be",
+          "shape": [
+            5,
+            95,
+            767
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            95,
+            110,
+            125,
+            150,
+            200
+          ]
+        }
+      ]
+    },
+    "coherent_ocean_fractional_queries_20261003": {
+      "evidence": "development only; all system identities already used for development",
+      "files": [
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_ocean_fractional_queries_20261003/system128_fine.npz",
+          "bytes": 3794723,
+          "sha256": "d47cbe5e628579d4602c97c8ec28b656f6a57510eb714b06743b94b470626525",
+          "shape": [
+            7,
+            95,
+            767
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            92.5,
+            97.5,
+            102.5,
+            107.5,
+            112.5,
+            117.5,
+            122.5
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_ocean_fractional_queries_20261003/system129_fine.npz",
+          "bytes": 3796975,
+          "sha256": "58215e76d3381575201f3bcdbb170b6ee029fcd7ca1cb9296eafb6d89ecf6664",
+          "shape": [
+            7,
+            95,
+            767
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            92.5,
+            97.5,
+            102.5,
+            107.5,
+            112.5,
+            117.5,
+            122.5
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_ocean_fractional_queries_20261003/system130_fine.npz",
+          "bytes": 3795427,
+          "sha256": "40e846f7d7f6a8a76a575cbf7dc45e3e782fbddd19a3c8a1422e8e6ad89c2605",
+          "shape": [
+            7,
+            95,
+            767
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            92.5,
+            97.5,
+            102.5,
+            107.5,
+            112.5,
+            117.5,
+            122.5
+          ]
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_ocean_fractional_queries_20261003/system131_fine.npz",
+          "bytes": 3798575,
+          "sha256": "657450761f25e54aaebe476b7267e74183b936e0a5bae6f564bc0f5d5db7fd97",
+          "shape": [
+            7,
+            95,
+            767
+          ],
+          "dtype": "complex64",
+          "frequencies": [
+            92.5,
+            97.5,
+            102.5,
+            107.5,
+            112.5,
+            117.5,
+            122.5
+          ]
+        }
+      ]
+    }
+  },
+  "source_snapshot_sha256": {
+    "src/spectral_continuation/audit_coherent_kernel_instance_fit.py": "586e269375c3bf4d51e11d808a3d70fda30cb3e4cfb8e870cbb5e4788f20a0bc",
+    "src/spectral_continuation/audit_coherent_representation.py": "086fd1e9344ea1b4a416ab958beb1e1382436f3e0affda6c2837e29f3e74ca37",
+    "src/spectral_continuation/audit_coherent_spectrum.py": "4429dfb9cf4e048833bcbfb8de9d9f98c0776d319cfadd5950311cc88f8e12f5",
+    "src/spectral_continuation/audit_fundamental_solution_rom.py": "eef3f8dd59e82aa4cee5b2b73423a4a83c581d5cc9e0f9004f8d99c4b10b73a3",
+    "src/spectral_continuation/audit_learned_wave_chart.py": "0383b812c8a957b2d6812d88576cfc8f95101e4024e35133acc1ce92d4549405",
+    "src/spectral_continuation/audit_modal_query_components.py": "e3cf1c95958895fb8a85e374285f3a2e5e618f5f40a26e318f94762a783598f4",
+    "src/spectral_continuation/audit_modal_spectral_transport.py": "87fd1ba958e5588722386b28676b790023c075df06abd3e69c0da7e6a580d119",
+    "src/spectral_continuation/audit_ocean_modal_birth.py": "57d777ca2a31a1e58a2641e2ff1dac12ba44f0f55f0b571466ce45cf0dc4e3f9",
+    "src/spectral_continuation/audit_phase_reduced_operator.py": "3086dfba6c374e60cc2eeaaa79afc96c2849ade2be5a263c74b5aa17ffc96707",
+    "src/spectral_continuation/audit_phase_rom_envelopes.py": "f00aeb7d8d32ff493c3894871e11081b016c4b70b7671dadf473e554e776ef3e",
+    "src/spectral_continuation/coherent_helmholtz_data.py": "eb0e43269ab5b662c7589c76b337c95c849e0f60a4001f6cb0cdbcd734d6a6af",
+    "src/spectral_continuation/coherent_representation.py": "cfb64668f7605c764b64ecdea567075529a9d0bcbcb64f3681603d72eefc84f5",
+    "src/spectral_continuation/coherent_set_encoder.py": "8e1a3f0688543b4acb19f33a9d53da97fdd343e8a1df1ff4f926cd53442c776b",
+    "src/spectral_continuation/evaluate_coherent_chart_fields.py": "b316bdd7efc30936eb27923335a1f2581e2295d2c62021e06f8c696561516228",
+    "src/spectral_continuation/evaluate_coherent_fine_ocean.py": "f14da961fbb335a6db5ded48e8044c2e17fbfa1eeb11c11e8bbc97bee567bda2",
+    "src/spectral_continuation/evaluate_coherent_helmholtz_fields.py": "1c07f9e19e5f0b3a51d3761e6713e88f53d98cce1602013303563e8fe67ff50c",
+    "src/spectral_continuation/evaluate_continuous_phase_rom.py": "e57c7e2a8ff14bea0d7ece3dbd80ff7628540e6a2873ee2c91e3d5c498a85911",
+    "src/spectral_continuation/generate_coherent_ocean.py": "302f003bd1424efbd33684bf573833d11834d317b1120c12e62012b47a1f773d",
+    "src/spectral_continuation/inventory_coherent_stage.py": "0c670c259a1a1285146e76813262c9d03b19c9dda1ed5974faf0c0b9ca470e3b",
+    "src/spectral_continuation/learned_coherent_kernel.py": "f210bbe0d23e965434d69f0b0f9f7726085fb59cca2a7d61837aef6b3d7d6676",
+    "src/spectral_continuation/learned_phase_rom.py": "30c3363e2f31a1cf465c8c445f03c1a54e1fade0a847fce0b40a5afeb31c4d4a",
+    "src/spectral_continuation/learned_wave_chart.py": "343e9af68f53648275f7371e253e3785d8ccdb34855628115406dcfdf3b6fabd",
+    "src/spectral_continuation/plot_coherent_progress.py": "4303cf1210d17a880905a2ea017576b75c5bff9b0e088fb0bdf6ecc8e8f7c47c",
+    "src/spectral_continuation/plot_phase_rom_progress.py": "a061e94db7d0561279676b1cbf0adaa90ae8a0d2f5802259f70ed01365ec5675",
+    "src/spectral_continuation/unrolled_coherent_kernel.py": "ec1256a63d227e099e0f64c14e4fb5990cb0b4e200467cfd58c8dfeeab026662",
+    "tests/test_coherent_representation.py": "cb3977d950368a6779f13ec2b63924af6e02d58283e1649efc34f4350662886c",
+    "tests/test_coherent_set_encoder.py": "12d442dd3596ab000659f326b20299a4e83770cdd04cb6606da210b132683be8",
+    "tests/test_learned_coherent_kernel.py": "7b94b3e1069fc78a7dc9bff9d0debed106ce78962864ae9f157f66b9ed57792f",
+    "tests/test_unrolled_coherent_kernel.py": "e0830a4a4d1a7bb9e9a43c76f2c88b4c4dafaef61f81cfc17c0e393f4201280a"
+  },
+  "artifacts": [
+    {
+      "directory": "artifacts/coherent_chart_fullfield_ocean_dev_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_chart_fullfield_ocean_dev_20261003/config.json",
+          "bytes": 729,
+          "sha256": "53dae52dafeaecc6223c2291d287c5ce124bcb564e7e3b856721f0eba1c2d82f"
+        },
+        {
+          "path": "artifacts/coherent_chart_fullfield_ocean_dev_20261003/results.json",
+          "bytes": 63848,
+          "sha256": "ed85211f44052fc55aca7ca525d5cb3be888d9482c7a119d3ddcd57b71d92e43"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_chart_spectral_transport_r1_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_chart_spectral_transport_r1_20261003/config.json",
+          "bytes": 929,
+          "sha256": "0fded627293c42c10b971b1b7ae496153e96df32dcc43128f67dea6e0dddf406"
+        },
+        {
+          "path": "artifacts/coherent_chart_spectral_transport_r1_20261003/results.json",
+          "bytes": 244849,
+          "sha256": "ab659016a0cf8cc0af81963fd4b069e0794787c1eea916de7ea78f26c8e62ee1"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_fine_ocean_audit_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_fine_ocean_audit_20261003/config.json",
+          "bytes": 837,
+          "sha256": "679170af0c469a101c9563d470fc6ca3f0b1d48459d029f1b63e5c66cb434d74"
+        },
+        {
+          "path": "artifacts/coherent_fine_ocean_audit_20261003/results.json",
+          "bytes": 76614,
+          "sha256": "5ab40e4eadcd8b9eefe39b8ec72f7e0342d4dcd926bc5240e5803bc56e804645"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_functional_tensor_r0_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_functional_tensor_r0_20261003/config.json",
+          "bytes": 986,
+          "sha256": "43385fe0c388ab1c314d8ad8a691e38c8a930709865d1e548ec7002a4b865dca"
+        },
+        {
+          "path": "artifacts/coherent_functional_tensor_r0_20261003/manifest.json",
+          "bytes": 1037,
+          "sha256": "fbbbfce2ba65f372ba49a12c22e44fbd5074d2770fadaffc8ce543143db6f578"
+        },
+        {
+          "path": "artifacts/coherent_functional_tensor_r0_20261003/results.json",
+          "bytes": 48445,
+          "sha256": "09c17c9d35ac7b949da49efabcc809ef354a4ba548e75415451483f902492c96"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_fundamental_solution_rom_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_fundamental_solution_rom_20261003/config.json",
+          "bytes": 914,
+          "sha256": "d90a522900fd54f25cfcf2dc775a5dc42c5f0361ff0d29265db8b3a77fc3da3e"
+        },
+        {
+          "path": "artifacts/coherent_fundamental_solution_rom_20261003/results.json",
+          "bytes": 87065,
+          "sha256": "5e698d7dcb3d62f40e4b22c256e57a9bf1e78b9ad812aa21aec5ebc4e15dc199"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_convergence_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_convergence_20261003/audit.json",
+          "bytes": 3553,
+          "sha256": "5ae3f93edbac46d2a9dbadb627eeb28fb0ecdbc777666fd1a7e2f51a7ab52fa4"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_convergence_20261003/config.json",
+          "bytes": 412,
+          "sha256": "4f6b19f71c8c11611340342dff6f4c3a0a694b8e94deb7c452bd3420dac168d1"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_convergence_fine_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_convergence_fine_20261003/audit.json",
+          "bytes": 1791,
+          "sha256": "79b237456f5f23a276079672707c304955c64072193f47c26f605bb95e2e7906"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_convergence_fine_20261003/config.json",
+          "bytes": 285,
+          "sha256": "9c3aaf6e5271facdc1d3983deeb888e079d35e1b699a1b4e5d0eed1bf21fbc28"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_convergence_hardest_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_convergence_hardest_20261003/audit.json",
+          "bytes": 895,
+          "sha256": "1ddb0f0a8de69e69e6aeb78f353c33b5743a28de00846e8afd650aed0368f0f9"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_convergence_hardest_20261003/config.json",
+          "bytes": 281,
+          "sha256": "27488eb6f5ba4708204f6e923dcb21fcac296eee7ab5c50cb9326e2ec405ffe3"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_fine_field_audit_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_fine_field_audit_20261003/config.json",
+          "bytes": 799,
+          "sha256": "418fbc71fe43e5913666fafd10572f50c22ba1afa8f98d552642cfe898a30592"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_fine_field_audit_20261003/results.json",
+          "bytes": 95627,
+          "sha256": "cbf9ec2afe8a3d41776e88ce176b012f20f20ca56b474744cd5bb52fcaebb397"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_fullfield_budget_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_fullfield_budget_20261003/config.json",
+          "bytes": 1040,
+          "sha256": "16d9de06996efb615a7ac096d0c588adf43cad97d7b0f9bceb05d788344190c3"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_fullfield_budget_20261003/results.json",
+          "bytes": 794961,
+          "sha256": "ac275269a8836f0002525b806ca649dabf43f94c1c1e83b8883193ac0e76467d"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_irregular_helmholtz_baselines_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_irregular_helmholtz_baselines_20261003/config.json",
+          "bytes": 2084,
+          "sha256": "7d97f679911b289ec988f6d5c642247e0cbb15216cd316b7e1d58ef0cac083d8"
+        },
+        {
+          "path": "artifacts/coherent_irregular_helmholtz_baselines_20261003/results.json",
+          "bytes": 194362,
+          "sha256": "d244ca070748dd9d5c7a025dcf4da382af06ada6e0e2781d83b1ace175a0d59f"
+        },
+        {
+          "path": "artifacts/coherent_irregular_helmholtz_baselines_20261003/summary.json",
+          "bytes": 1486,
+          "sha256": "faa918af1255ea1d15c4908815ca1efbb5222a6897946b2986b436513e8d864a"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_irregular_helmholtz_gaussian_refinement_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_irregular_helmholtz_gaussian_refinement_20261003/config.json",
+          "bytes": 1623,
+          "sha256": "e425debdd7f0caa8dbd999c15a9129d5d6f6a095c46deaf569f2e7560da9069a"
+        },
+        {
+          "path": "artifacts/coherent_irregular_helmholtz_gaussian_refinement_20261003/results.json",
+          "bytes": 151292,
+          "sha256": "4269216a850d8b0bd2c1ddfe9a8f03ecada3121d181d1f95d3caf62cd5b3064e"
+        },
+        {
+          "path": "artifacts/coherent_irregular_helmholtz_gaussian_refinement_20261003/summary.json",
+          "bytes": 1181,
+          "sha256": "10ff046920c622064a5c6658f36b1c0c366efc632c3fa6b031b5a7d7f904827f"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_irregular_ocean_carrier_baselines_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_irregular_ocean_carrier_baselines_20261003/config.json",
+          "bytes": 3172,
+          "sha256": "0662247d450cf372da968426095de602f475dbcecfc3a39357427f07bf338315"
+        },
+        {
+          "path": "artifacts/coherent_irregular_ocean_carrier_baselines_20261003/results.json",
+          "bytes": 135007,
+          "sha256": "101d2b4020efb937792dfeb2d62deab6ed369cec6b9809bba12a09ffc7224e82"
+        },
+        {
+          "path": "artifacts/coherent_irregular_ocean_carrier_baselines_20261003/summary.json",
+          "bytes": 1386,
+          "sha256": "18eae1497737de5cf9476b7c69603c50e2a27b7eacebc302b06cfdb5de9760a0"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_irregular_ocean_spreading_wave_baselines_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_irregular_ocean_spreading_wave_baselines_20261003/config.json",
+          "bytes": 1905,
+          "sha256": "b1a6c2ada08e6c81672d08f5cf74be65b751d7908c06cdf8855ef5d84613a804"
+        },
+        {
+          "path": "artifacts/coherent_irregular_ocean_spreading_wave_baselines_20261003/results.json",
+          "bytes": 98538,
+          "sha256": "186f93fb0092444903de0f6fb0fe4160b8c083ec8582f243cb4c6644e0554a80"
+        },
+        {
+          "path": "artifacts/coherent_irregular_ocean_spreading_wave_baselines_20261003/summary.json",
+          "bytes": 1006,
+          "sha256": "a1a2ec5a23a7d4257a44280add30b49b60eb769244d1a75413b6cdea4db8a829"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_cold_steps0_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps0_20261003/config.json",
+          "bytes": 562,
+          "sha256": "f4eff6638e5b0c6bf52fc0d1b82c3dc8e565617fb1360612541eb65d579ade51"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps0_20261003/results.json",
+          "bytes": 13824,
+          "sha256": "b3ee9d10fd7771f548c2a6f45ecbcbeff9198bd679971eff534e49331ff616ec"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps0_20261003/summary.json",
+          "bytes": 168,
+          "sha256": "afaa01f9d27a7d3f437eb1e5bc8906ac74b141d0011e38ed5be4f9f43a899d1c"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_cold_steps20_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps20_20261003/config.json",
+          "bytes": 563,
+          "sha256": "9ec54c0f5ff669d084b7c1ddf799610cb2e51201a072a3d6abc24d591e5a0bc8"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps20_20261003/results.json",
+          "bytes": 13885,
+          "sha256": "1c5575eb2b4eba3e51cd75e2820e7e1a4a2e688bb7eae6420510bad8aaf9ccd8"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps20_20261003/summary.json",
+          "bytes": 168,
+          "sha256": "08da4b6897b30f280b3d168ee8af9eeaae04e800346502e51e6c285156f9b42e"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_cold_steps50_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps50_20261003/config.json",
+          "bytes": 563,
+          "sha256": "d5b54d52abcd62a56bffae49eeb719abbdad44eef182c8a06120ef498bbe08c2"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps50_20261003/results.json",
+          "bytes": 13875,
+          "sha256": "79b53f6fab559e241792b6f53e6878fe947dc10a7c47dbb169e9a1fda61d7e6e"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps50_20261003/summary.json",
+          "bytes": 168,
+          "sha256": "4c04005abe8a7205e1f025e8a0a56a0ec2d2cf84527e5e8cad9b73185058261c"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_cold_steps5_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps5_20261003/config.json",
+          "bytes": 562,
+          "sha256": "c480fbb19a31d73e03f803854333c115ea03d40a4ea91a9da690d84e155e89ea"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps5_20261003/results.json",
+          "bytes": 13879,
+          "sha256": "e6a67abb6285ec0bb466588791c4256331e6a99e353767da72efac86c6c50281"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_cold_steps5_20261003/summary.json",
+          "bytes": 168,
+          "sha256": "8ce7f1ce2cf12565655f1bd2f662e15b6f5e0ce3c98aa69403f524d88556c395"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_instance_loo_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_instance_loo_20261003/config.json",
+          "bytes": 548,
+          "sha256": "62c9139cb4e5a9a9a840b9b13f43097e825e91e54913c9c4ad4d10ff5d423d40"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_instance_loo_20261003/results.json",
+          "bytes": 13892,
+          "sha256": "2869528584cc5a200ec86be966a9284e6aae66b42e1b6fb3bd84d04a09683eab"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_instance_loo_20261003/summary.json",
+          "bytes": 168,
+          "sha256": "cb8518a3b49a5c0ad3b976fa38937f4417c460c49beaaeda0cd77b8d4ce688a4"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_instance_marginal_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_instance_marginal_20261003/config.json",
+          "bytes": 564,
+          "sha256": "ea130094817a2d12c3f3c157f0ea2fd2fd1fa5cc54c4c660fd06f0b6babd1319"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_instance_marginal_20261003/results.json",
+          "bytes": 13899,
+          "sha256": "fb75a5892d163e7164f066d41c84a480c09a2cef4d70e34d0b62968d0bcde68f"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_instance_marginal_20261003/summary.json",
+          "bytes": 169,
+          "sha256": "0840ec6f50eb1f1bd02644ba3f70a24215415391a1d08aed83337eb844859b35"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_query_oracle_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_query_oracle_20261003/config.json",
+          "bytes": 649,
+          "sha256": "59606e33fe428d6ad29ae930b2740174a93eabed4317675f7af2a8314368911b"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_query_oracle_20261003/results.json",
+          "bytes": 13978,
+          "sha256": "4efc13226f2f9ecaf3ffa4e5ff7f7ab1a6385c5ab2185fdd5e1a55429da7e2fc"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_query_oracle_20261003/summary.json",
+          "bytes": 164,
+          "sha256": "541832ec53faf17750ed3ded2ace7ca46b834303c6f11c3b4de8e820465d6bdc"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_warm_steps0_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps0_20261003/config.json",
+          "bytes": 654,
+          "sha256": "2dbfbef5f269b87e156fd446b5d7da279b1d59f5b93fa956031c53525bb2623c"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps0_20261003/results.json",
+          "bytes": 13853,
+          "sha256": "c2415049b33ed42efe6e5640c5a4cf17445c672ea420b8893326703ab38e9806"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps0_20261003/summary.json",
+          "bytes": 169,
+          "sha256": "35a0a4b1f6a1424a0018fe77739b216aed8e9e84ebccfd5c32cbf7cd268134d8"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_warm_steps20_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps20_20261003/config.json",
+          "bytes": 655,
+          "sha256": "9b2319829ade61671028949148a983dadfc1db3cadac8cfba2e8373019fbe13a"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps20_20261003/results.json",
+          "bytes": 13896,
+          "sha256": "ec14b4d9c89859f66a7591bc85e449363562c3a2727078330c498fabb33d232e"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps20_20261003/summary.json",
+          "bytes": 169,
+          "sha256": "bbfe71a5ffa1db920106ac7a7c7a8e8434d1fc637132fc776157fd7687449c5a"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_warm_steps50_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps50_20261003/config.json",
+          "bytes": 655,
+          "sha256": "81268dba2402232e12f0e6273d4248f22275b31e44777b41cd2a128f61ae6cdb"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps50_20261003/results.json",
+          "bytes": 13894,
+          "sha256": "aa10516cca75be61bbfed7b58015d8eaa84309904eadb8ad0387c21df04bd01a"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps50_20261003/summary.json",
+          "bytes": 168,
+          "sha256": "dfde59199944f3f5ff80873c927e7d9f9085652d57a6136ba4d7408939f6950b"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_kernel_helmholtz_warm_steps5_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps5_20261003/config.json",
+          "bytes": 654,
+          "sha256": "7ccbe643cc24758cbaa57924cdd032e94150009b77d17315889330cbbe87b6c6"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps5_20261003/results.json",
+          "bytes": 13898,
+          "sha256": "49ff29dc0bc542147d446d8d6033d6cf38513911f77857a0ad330ebab12ad227"
+        },
+        {
+          "path": "artifacts/coherent_kernel_helmholtz_warm_steps5_20261003/summary.json",
+          "bytes": 169,
+          "sha256": "84094921107dcdeb5584bc14bc1c4fa84f69ff38a22fb45bacbe1c82f547d15e"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_known_medium_eikonal_rom_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_known_medium_eikonal_rom_20261003/config.json",
+          "bytes": 861,
+          "sha256": "4a5a9f5dea3d41fa3560d0a2ec7519fb4da8113783a495c980a060b107cc26f2"
+        },
+        {
+          "path": "artifacts/coherent_known_medium_eikonal_rom_20261003/results.json",
+          "bytes": 384889,
+          "sha256": "6698cb7bb607f79042634bed9127ef846ebcb8060bcdd1c715709a3dc9b79a48"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_known_medium_phase_rom_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_known_medium_phase_rom_20261003/config.json",
+          "bytes": 1083,
+          "sha256": "120a2ef0dd9aa4e9bc2954aa2016d22649b96ae09bb24dc84e6adbe770428f63"
+        },
+        {
+          "path": "artifacts/coherent_known_medium_phase_rom_20261003/results.json",
+          "bytes": 222672,
+          "sha256": "06695ec482ac03236b513460da7ecbec87c8fab42985605e3d252e98300329a6"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_learned_envelope_neural_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_learned_envelope_neural_20261003/best.pt",
+          "bytes": 15665,
+          "sha256": "349a252b140326439bb566db4497d7253f38bc28e9a12bfadb74312dd415c92f"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_neural_20261003/config.json",
+          "bytes": 1667,
+          "sha256": "63f13a0f787366b8ac86ee2dcf1b7558888d8bec8dc14dc73eb540068953475b"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_neural_20261003/history.json",
+          "bytes": 2666,
+          "sha256": "e34a0b05fed8c4770b1011b2b2f9c370266bab34662a95b9e3c944064fc8819d"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_neural_20261003/initial_validation.json",
+          "bytes": 103144,
+          "sha256": "5bc121135bc502b4a76703e6d76d0fbcaec1855a4ba419f9e23f069ed0fed389"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_neural_20261003/summary.json",
+          "bytes": 626,
+          "sha256": "482bfe1c8965fe599b6fd2934acad16d6b2a34d73c42351e5093f61e0da14a61"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_neural_20261003/training.json",
+          "bytes": 83022,
+          "sha256": "61194c0b5b847e0445d21bd143ae66e3d9aec35a0ac03b7f90d979c01ccc1e83"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_neural_20261003/validation.json",
+          "bytes": 103138,
+          "sha256": "36f38e7097ee762296ac252be033f8a14072d70cff520c350f557dd54aa2f20e"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_learned_envelope_scalar_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_learned_envelope_scalar_20261003/best.pt",
+          "bytes": 2708,
+          "sha256": "c7b01514c8515780e5a222f23eb71083d88c6e7c15e760dc3e029341a6de15c2"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_scalar_20261003/config.json",
+          "bytes": 1400,
+          "sha256": "62c4d5fbec6cdac9fa2e6ee27d044289b065224b3ad285b29f77d7406c4b25b0"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_scalar_20261003/history.json",
+          "bytes": 1427,
+          "sha256": "ad1ffe42361df4d45651a670f29fc5c519f3935778bf21baa9685be786038dea"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_scalar_20261003/initial_validation.json",
+          "bytes": 103138,
+          "sha256": "fd1c868b5c6e6d2789aa86fb0161b517dbede9a6f352cf0ba804131f73e65a21"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_scalar_20261003/summary.json",
+          "bytes": 619,
+          "sha256": "49a37a9c81ab707364021b4a11b41ebe3e3b652a4a7843cac41f8ae971e2c147"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_scalar_20261003/training.json",
+          "bytes": 83016,
+          "sha256": "1d914f988fae7216ba504b80462fde7a615a8af30323ab097590285492fb7b85"
+        },
+        {
+          "path": "artifacts/coherent_learned_envelope_scalar_20261003/validation.json",
+          "bytes": 103143,
+          "sha256": "5171500cb2e562cda3a0af9ad6f2cb152a8d1f0a7e4ccce2bd7656d69c9311ce"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_learned_phase_double_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/best.pt",
+          "bytes": 15217,
+          "sha256": "938c9c03974e3284aefb13f63b8e7632e2a133fb30ff000152fa038ffe2fb99c"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/config.json",
+          "bytes": 1483,
+          "sha256": "8f52bc2d6aec0f898abb642fcfeed92ae9820d38a4d66804c8346938c29503fb"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/history.json",
+          "bytes": 2661,
+          "sha256": "6e4d65fc5e7ce9926aa55ea2f43d2ba2d11cf5bd99a515b4ac11dfdd38f552ed"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/initial_validation.json",
+          "bytes": 101253,
+          "sha256": "ce993ca1c11e4c9b43d31f9bed9c3136fe643d3317b3bb3277fc846bc02ea378"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/last.pt",
+          "bytes": 15217,
+          "sha256": "f24745309bfa1f6f344f966c3e52d6f3c9fa72afb09ee513b37b4f958b2c858c"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/last_training.json",
+          "bytes": 81156,
+          "sha256": "ae42500f47098d7ddd6b5372a6eeaf4e2cab1af8ca7ea15cc24b181c3e2b83c3"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/summary.json",
+          "bytes": 638,
+          "sha256": "3dc0eb3cccedb367eac133c4ed60e1fda134e03276d6abe7f5b137235db004e0"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/training.json",
+          "bytes": 81164,
+          "sha256": "c1d964054f18ad5e59f69f8e253c018bbb2cbd9c104345956664c1c86ede2802"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_double_20261003/validation.json",
+          "bytes": 101253,
+          "sha256": "ce993ca1c11e4c9b43d31f9bed9c3136fe643d3317b3bb3277fc846bc02ea378"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_learned_phase_neural_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_learned_phase_neural_20261003/best.pt",
+          "bytes": 9713,
+          "sha256": "498e1b5e10b400e70941154c72d0b99667afe970833c4fbc687aea7fe5ee0cf8"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_neural_20261003/config.json",
+          "bytes": 1600,
+          "sha256": "e388d1752c4236c32d88ef4062f2da999633d078c820aca6b7c06985356f1ef8"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_neural_20261003/history.json",
+          "bytes": 2665,
+          "sha256": "184469180969e3e299b0ca3fc6e03ee752781c1f426983eea873728f42b2c128"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_neural_20261003/initial_validation.json",
+          "bytes": 101253,
+          "sha256": "ce993ca1c11e4c9b43d31f9bed9c3136fe643d3317b3bb3277fc846bc02ea378"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_neural_20261003/summary.json",
+          "bytes": 562,
+          "sha256": "8cec67fd7aa35ca045d540b94392cca4111a42a84d57e9ed30271a5697a79d2f"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_neural_20261003/training.json",
+          "bytes": 81164,
+          "sha256": "c1d964054f18ad5e59f69f8e253c018bbb2cbd9c104345956664c1c86ede2802"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_neural_20261003/validation.json",
+          "bytes": 101253,
+          "sha256": "ce993ca1c11e4c9b43d31f9bed9c3136fe643d3317b3bb3277fc846bc02ea378"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_learned_phase_scalar_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_learned_phase_scalar_20261003/best.pt",
+          "bytes": 2580,
+          "sha256": "6f2fe77426b48fb210d5af408a5fbca0a8b210b50d8ba8a18ccc2540b7238ae3"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_scalar_20261003/config.json",
+          "bytes": 1316,
+          "sha256": "2b4d8215f49189da89c296699d696712eb9aa727e450948e8cde72172f6a6a1e"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_scalar_20261003/history.json",
+          "bytes": 1424,
+          "sha256": "d0ddd973250369642544ce18cf1d842a19fcf5287a44c0ad3f53a81dee8f9b96"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_scalar_20261003/initial_validation.json",
+          "bytes": 101253,
+          "sha256": "385042d2ab957f065070fe794467d7c2fdd6e0e7776660a566dcf582b2508d91"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_scalar_20261003/summary.json",
+          "bytes": 560,
+          "sha256": "5e3f0f44fd7ac316c887029cd9654e9f1287b81eede99a18adb31e1cfb362484"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_scalar_20261003/training.json",
+          "bytes": 81178,
+          "sha256": "c1bc6a06d2efc4331e864946d46c7a7de2513b56a0a5e88a43c3cb7fa9403ba3"
+        },
+        {
+          "path": "artifacts/coherent_learned_phase_scalar_20261003/validation.json",
+          "bytes": 101253,
+          "sha256": "16264d88ffb8237835a31da2b4c0a90336fffe9d4eff26bd6b6ae80184929fab"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_modal_component_audit_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_modal_component_audit_20261003/config.json",
+          "bytes": 607,
+          "sha256": "3dc38b4c8a7729c7a0cb0644ac6eb41cd50d0dc7ff6af1539203cb975f26a284"
+        },
+        {
+          "path": "artifacts/coherent_modal_component_audit_20261003/results.json",
+          "bytes": 628779,
+          "sha256": "8e5c5b2d36d19731d99e04512672fed27f17f69b1c1626883de575d58a754f6c"
+        },
+        {
+          "path": "artifacts/coherent_modal_component_audit_20261003/target_modal_fit.json",
+          "bytes": 1593408,
+          "sha256": "3864e56cbe60a181979a0177bd7125b7dbb801c5c733d8d276c74d45c14c0fe3"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_modal_spectral_hankel_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_modal_spectral_hankel_20261003/config.json",
+          "bytes": 673,
+          "sha256": "d153ffc9446d3acf3dbd4ed282c14cc839bd76642fc4c036631068d4a2aba915"
+        },
+        {
+          "path": "artifacts/coherent_modal_spectral_hankel_20261003/observed_fit.json",
+          "bytes": 585659,
+          "sha256": "a3291854a1f858d9816b09bd0d6a310ca1d5c1f64f6be9c674f05d5f925e9dc3"
+        },
+        {
+          "path": "artifacts/coherent_modal_spectral_hankel_20261003/results.json",
+          "bytes": 309801,
+          "sha256": "f96347b24d3c4c5394c99135d29d062bd8075db00cf6fc6ffc9b09d6f9e66d45"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_modal_spectral_transport_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_modal_spectral_transport_20261003/config.json",
+          "bytes": 691,
+          "sha256": "29f5f5d5ffa128b5112d01b847e083b87118c84c98647a078990676d60983cb6"
+        },
+        {
+          "path": "artifacts/coherent_modal_spectral_transport_20261003/observed_fit.json",
+          "bytes": 93014,
+          "sha256": "b05438cace197dd332109ca27a5aff5b7b89ffd1076136eeaf051eeeaf88f2eb"
+        },
+        {
+          "path": "artifacts/coherent_modal_spectral_transport_20261003/results.json",
+          "bytes": 309224,
+          "sha256": "96c485ef72e3b38cefbdc7df58c06d81ce06e041f3a5a4be94fda2957fdeb105"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_ocean_modal_birth_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_ocean_modal_birth_20261003/config.json",
+          "bytes": 982,
+          "sha256": "8ca24082dc5a7c9f63c8302772d571575c5461c9525c3620551963e9adc498da"
+        },
+        {
+          "path": "artifacts/coherent_ocean_modal_birth_20261003/diagnostics.json",
+          "bytes": 49961,
+          "sha256": "17f86188c8d4283a015ced261c73986efd79b0251cea9219b024d4e246bbae9b"
+        },
+        {
+          "path": "artifacts/coherent_ocean_modal_birth_20261003/results.json",
+          "bytes": 111271,
+          "sha256": "d5eb742ecbe6e5377ce47d8d59688891644d016dad4bb753ec722f78d8ebfb26"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_phase_rom_envelopes_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_phase_rom_envelopes_20261003/config.json",
+          "bytes": 793,
+          "sha256": "33fe87d2d99ae363894f77ed70f315d250fdc124562714890b753e4ebb54302f"
+        },
+        {
+          "path": "artifacts/coherent_phase_rom_envelopes_20261003/results.json",
+          "bytes": 634599,
+          "sha256": "d04308a0905c3b2f42b6550dc7abad817e48cb8698ff994a5b7ea984fede4052"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/config.json",
+          "bytes": 1519,
+          "sha256": "c2f35c6079682b782aa6070b728fdfcaf4e38c7a02ca4c65263725c6885e47b8"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_11.000_fixed_pw16_affine_large.pt",
+          "bytes": 54759,
+          "sha256": "dff6b4064209f328cb0d4972603b1852563b151b5637f490e4c28aa7f2146865"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_11.000_fixed_pw16_affine_small.pt",
+          "bytes": 175783,
+          "sha256": "0e54bcdd1dedfac17bdc60ac6f11e017eb0da6d0a90962e88dbbcbe06538967e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_11.000_learned_pw16_affine_large.pt",
+          "bytes": 55357,
+          "sha256": "c353c0465599f6724f4e2306356fc36813b0ced1c31dc5e18a330bc57a0ce406"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_11.000_learned_pw16_affine_small.pt",
+          "bytes": 176381,
+          "sha256": "39f49e61a845dd65ddafa735f86bde63a836253a496f1e30774c96d4d268d795"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_11.000_learned_pw16_curved_large.pt",
+          "bytes": 55357,
+          "sha256": "a78b4b5cfdbd4a8534fccacbb922a0669f55505d0e567db24a44ba719d541bf8"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_14.000_fixed_pw16_affine_large.pt",
+          "bytes": 73255,
+          "sha256": "5d8f0f0f5146433eb7f919582183da1b2331cd8e25910577270890bfd6b37f8c"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_14.000_fixed_pw16_affine_small.pt",
+          "bytes": 244135,
+          "sha256": "355ec11e0ba8b4b21e783d7860024122c85e115d14b3fd6d98fcb563c9ef259d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_14.000_learned_pw16_affine_large.pt",
+          "bytes": 73853,
+          "sha256": "aa602f072c7f74864c3dc1846109d50b547d2113677342a4d93e3b951142a81e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_14.000_learned_pw16_affine_small.pt",
+          "bytes": 244733,
+          "sha256": "b3867bd19fa80f273daa3cd75265b9cbef60b167eb5705ba6337533ee50b017f"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_14.000_learned_pw16_curved_large.pt",
+          "bytes": 73853,
+          "sha256": "52084059b7863ce2fae6a5f35961c435ad4e68e17fb4d53322c1dc9b45a8838d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_7.000_fixed_pw16_affine_large.pt",
+          "bytes": 26268,
+          "sha256": "c2508892b239be68d2743a28d2a68ad1fb54e807a6522dd65883969f1ee4db00"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_7.000_fixed_pw16_affine_small.pt",
+          "bytes": 73244,
+          "sha256": "f7b4010adfd86cd423658f78e1538bbb4f2c32947287a1deb50272c5247cde36"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_7.000_learned_pw16_affine_large.pt",
+          "bytes": 26866,
+          "sha256": "7840018be2d696ca744ebc36093e878ff2d5969dfb2acc86d4e68251fa5826c1"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_7.000_learned_pw16_affine_small.pt",
+          "bytes": 73842,
+          "sha256": "65dee706c272a8f72408c9de58d376c5f92e12912779899ebe87474d99431ea3"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261132_7.000_learned_pw16_curved_large.pt",
+          "bytes": 26866,
+          "sha256": "382d43104bcee9feb6536f4c1067c0d5e4581c3c02f486a68912bb2d0b6dfbb2"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_11.000_fixed_pw16_affine_large.pt",
+          "bytes": 54759,
+          "sha256": "8054ee0ffba7ed0d1fa2341127930dc4bc38d89709d0533c62f2bd90d057f094"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_11.000_fixed_pw16_affine_small.pt",
+          "bytes": 175783,
+          "sha256": "099e865296a96305bd49715d89c2c0c008bdbf34414499f80ebfaab75e99a77c"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_11.000_learned_pw16_affine_large.pt",
+          "bytes": 55357,
+          "sha256": "bee08338f0825ad83b9cd4f615c5d0e04387d2ea8af70d1e6faec84c06b0b6db"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_11.000_learned_pw16_affine_small.pt",
+          "bytes": 176381,
+          "sha256": "bcd2d740bd28293f9e3d71d4072df76d3c0bd3ed572cb2f97d2ecba80fe2098e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_11.000_learned_pw16_curved_large.pt",
+          "bytes": 55357,
+          "sha256": "f4a3bf57a65c23be1b061fd53be1f7bcf215a45ee4f25d61adaa5968e44a049e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_14.000_fixed_pw16_affine_large.pt",
+          "bytes": 73255,
+          "sha256": "1f59126fb7bd4498b06e3b9621e5266826f50dfe9f708d878de7adf57e7795bf"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_14.000_fixed_pw16_affine_small.pt",
+          "bytes": 244135,
+          "sha256": "969e0440f4acf23800e9329486a69330bc1a683b1a6938d60fe6f63121974340"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_14.000_learned_pw16_affine_large.pt",
+          "bytes": 73853,
+          "sha256": "5de77fce7f9a5e24218f1e19655b83349e0e36e0db3ebd266a2277b25e07ac58"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_14.000_learned_pw16_affine_small.pt",
+          "bytes": 244733,
+          "sha256": "f0642995ed4271dfe25cf99cd9fa0b38242479042695356c32bdb6eaf1ced0f3"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_14.000_learned_pw16_curved_large.pt",
+          "bytes": 73853,
+          "sha256": "1a16c8bdc854dc531cea5b066b5abd3471086ae0b96141755f6595ac2b046225"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_7.000_fixed_pw16_affine_large.pt",
+          "bytes": 26268,
+          "sha256": "193f874378c5460d38bc1c55f041a6991379fc70e727eab2b5a1c6adec2445c9"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_7.000_fixed_pw16_affine_small.pt",
+          "bytes": 73244,
+          "sha256": "d237942242d89273fb493d5d2dce6f34926c51c5d41b0d2d4798de521e3afd77"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_7.000_learned_pw16_affine_large.pt",
+          "bytes": 26866,
+          "sha256": "1e60f328d15ce255aa3cdb8872c94f13833d8230cfb7996d14d6f17203b86385"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_7.000_learned_pw16_affine_small.pt",
+          "bytes": 73842,
+          "sha256": "998e0193c768665c754b4fe43a73016c1b5a1c55dd8b940bece92d6820f96857"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/helmholtz_20261133_7.000_learned_pw16_curved_large.pt",
+          "bytes": 26866,
+          "sha256": "e4ff0ab6f4f4e3522662a29d339005edb0111438d074ed35f6fe1f3b8ac0ebba"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/manifest.json",
+          "bytes": 730,
+          "sha256": "da1c5ac3704a4680067c1227ddbc759e5445618f1aab2e409e41bc8313a44dd5"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_helmholtz_capacity_20261003/results.json",
+          "bytes": 25331,
+          "sha256": "d3210daa7ffb5f1cb207764b140c6106f56259e93d7ba17d8ecbd18e2c390077"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_representation_r0_smoke_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/config.json",
+          "bytes": 1263,
+          "sha256": "2326fda6e917915c018263fbd9aba6f7a95bb5dd23f4f2e1f9b1f19253cbb7bd"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/manifest.json",
+          "bytes": 645,
+          "sha256": "7c18a973d65ce0dfe64a0bf69232e0ed53cfdc15736472028eb5c9f3b90f7c5d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_fixed_pw16.pt",
+          "bytes": 163241,
+          "sha256": "b8e583ab1cb08f9ecd23b056aa0c49be987d1bcb81e80f692dfc7400c2a99227"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_fixed_pw8.pt",
+          "bytes": 84830,
+          "sha256": "83fdee877a3ef7d32a51ddd42c293be34849068e7d277ceedadcbe4079b26c71"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_fourier128_w80.pt",
+          "bytes": 204693,
+          "sha256": "89a0ee7f3b947bb21b8c98e27c38842df506af2d1cad72c115130a88e6636dca"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_learned_pw8.pt",
+          "bytes": 85172,
+          "sha256": "7f15fce07f1e7ce48b2505d59771b4086bfb0f986882144a216db44a176563ef"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_learned_pw8_affine.pt",
+          "bytes": 130113,
+          "sha256": "e2103750cf8edab6b85ef798a2fd1cdb41ce6fccc3be2396149ac36aca487e21"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_siren128_w100.pt",
+          "bytes": 139287,
+          "sha256": "53594869ebc485baffe3b8c99bfd38bc29a3a2c26b25ba4f3320e098eec47672"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_siren128_w30.pt",
+          "bytes": 139273,
+          "sha256": "3ecc747419d9304d866414628861cf9bebee789dd11ed567a922aecea0858e9b"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_smoke_20261003/results.json",
+          "bytes": 5388,
+          "sha256": "dde1c2eac00b1567719ea294889059d315034c98e7e44abb8628e95434e87699"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_representation_r0_two_domain_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/config.json",
+          "bytes": 1838,
+          "sha256": "d48f38802e4b92fe7b08e23bbb7b4e69f4a6c660674545263b1314b37cb07e35"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_fixed_pw16.pt",
+          "bytes": 77230,
+          "sha256": "058538afcb1794426776e2870aa0bfa83fbd45e11bd7edd9cbb96545e7f41ecc"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_fixed_pw32.pt",
+          "bytes": 149806,
+          "sha256": "0ea6575aac5cd0648ef1264f253ba1295c774d94d095355b880e7fe243b09de4"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_fixed_pw8.pt",
+          "bytes": 40931,
+          "sha256": "cde85f91f8f9ba5c6783d0b3104c2b017360e6558048a46fd2dce223fa5888fd"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_fixed_pw8_affine.pt",
+          "bytes": 61744,
+          "sha256": "e451392a6f688cddace76b1393e944da7d26febbd1fe7259cc46db3d7ff0856f"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_fourier128_w80.pt",
+          "bytes": 204246,
+          "sha256": "c624bb907b1c40c8a3488c72ccf1fe21e948633a7fd7ae02dada6e4146b05e08"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_learned_pw8.pt",
+          "bytes": 41273,
+          "sha256": "583ba40e82969cec9cbae2f3634db66d3bb82d27952855684ef63bd90ec73ed9"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_learned_pw8_affine.pt",
+          "bytes": 62150,
+          "sha256": "5c06f8bab4259c3aea2bb8073a862d8678f2fded04f1c151b2678f2f8ad7c55b"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_siren128_w100.pt",
+          "bytes": 138985,
+          "sha256": "8568acbd09d5289ea73812bb53110106e37fe09b7c9a459dd4c5fa507f844635"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_11.837_siren128_w30.pt",
+          "bytes": 138971,
+          "sha256": "67b79f8ba1ff782b04dfe340fa5073e3d4e96a9fa08ecee8b456b81cb5708f05"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_fixed_pw16.pt",
+          "bytes": 208558,
+          "sha256": "7b75e557c82a1d8f4599aab94dc984b8d2b43ae19735f8d7c464d0fecb4e5ac0"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_fixed_pw32.pt",
+          "bytes": 410158,
+          "sha256": "6c3e95f9052876da3c63f59e3423ca277acc8345aba26529c613edb02aaaf644"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_fixed_pw8.pt",
+          "bytes": 107747,
+          "sha256": "f053f3efb13dae27bf8194cfd00fea5fac4d52e9939bbbeaef66e646a4659ed3"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_fixed_pw8_affine.pt",
+          "bytes": 165424,
+          "sha256": "b55ef91efacd2e0efa8467b00b69c9d6b55a69abf2a84d41f0dfd26c21b4b070"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_fourier128_w80.pt",
+          "bytes": 204246,
+          "sha256": "af3c1c87d24bc5185552343c044f94bce4c07b95e38a572f44e77738a523cc5e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_learned_pw8.pt",
+          "bytes": 108153,
+          "sha256": "0f5285570c6e80c1aa8623b21f9a03309c6d702c6a1bf20e832d9d606495a66c"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_learned_pw8_affine.pt",
+          "bytes": 165830,
+          "sha256": "49628dc8649da9be3afead4672bab11d777acb0353eaa5129f8cd4503238c3e1"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_siren128_w100.pt",
+          "bytes": 138985,
+          "sha256": "440abb2d8fd91285e9b94ad1ec88e5f4fd8f2a5f3bbda897f1f4a0767b7693c5"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_19.688_siren128_w30.pt",
+          "bytes": 138971,
+          "sha256": "c0aed3b741d35ea924723ff5e580ddaf888e4a6f8091c3331f17b3fed049a4d6"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_fixed_pw16.pt",
+          "bytes": 36195,
+          "sha256": "6d53cd94605a570ea9c80ef66645289da364db2938bee56eecefe88f9e3aa61e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_fixed_pw32.pt",
+          "bytes": 68451,
+          "sha256": "220bf0a23fb3637a4d6377a3718e84058c48e1a980d60d3bacdbc408d68173e4"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_fixed_pw8.pt",
+          "bytes": 20056,
+          "sha256": "a3bec6997bb16216ba917f24a8211305d03bd3006eebb54c5ea86eed0e855a5d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_fixed_pw8_affine.pt",
+          "bytes": 29349,
+          "sha256": "6c0c9f499874163d140e0b86c672741c885f6ab0fc101fe07baba9af99c9a59d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_fourier128_w80.pt",
+          "bytes": 204231,
+          "sha256": "e8843d8a4cf5837823d97d4e85d4b5d8baf6d30e048c647373339576ffdc025a"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_learned_pw8.pt",
+          "bytes": 20398,
+          "sha256": "9a536d5cc7a0cb2d0f75324e165af3300152f17a6c7396a0d9163f3e500c3942"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_learned_pw8_affine.pt",
+          "bytes": 29755,
+          "sha256": "92bc71ceecc83ac7b263e50c9c5f3d7c5bb6ad8cf81f07ed51e86e5d94b3bd1d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_siren128_w100.pt",
+          "bytes": 138971,
+          "sha256": "9d8a79bb7f314386a3bf1cf962d41deee6ce31e7c95e837e4449aeae23a90568"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_0_6.106_siren128_w30.pt",
+          "bytes": 138957,
+          "sha256": "bb84ba941aa7a926ca457f669d40ab4d0eac3f871a8eb04873477a0660a66b30"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_fixed_pw16.pt",
+          "bytes": 77230,
+          "sha256": "f78c7f3b9fc54c7356ae599e3a0ab4db90f7fbed979e45f40a5a9a91c59038c7"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_fixed_pw32.pt",
+          "bytes": 149806,
+          "sha256": "cdf1a94f46dbaa40ea700a4c6ea1ea5b8ee3a6d9307fa0c2e3132000b2ab546f"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_fixed_pw8.pt",
+          "bytes": 40931,
+          "sha256": "b952d7bbc5e4bb13e1dc548719d413cc8e46eae9a8e4af60c8c780ef5f42145f"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_fixed_pw8_affine.pt",
+          "bytes": 61744,
+          "sha256": "1b6a8ab808ba5bf4404ff488cdc462370d5beb1a6b3945b0f8e74b496dd99cce"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_fourier128_w80.pt",
+          "bytes": 204246,
+          "sha256": "9e249c2633d5f2fb3d5d220a5ff1f9326566f6f54d394e40416a667589afb981"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_learned_pw8.pt",
+          "bytes": 41273,
+          "sha256": "2c20212cf1eec24426da552b76f4cf3c01d817d05f989f26d4cbde960bb46866"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_learned_pw8_affine.pt",
+          "bytes": 62150,
+          "sha256": "292f5df17e12636e73a3c927acb1c9ab088b9e2924dc177be619e6ca82155cd6"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_siren128_w100.pt",
+          "bytes": 138985,
+          "sha256": "2317aee4aefafcaf222e7cde306693d7a90a7b5425831e791c56291caf2573a2"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_11.837_siren128_w30.pt",
+          "bytes": 138971,
+          "sha256": "a2c7e8b50d03bc53bf6d7e5292aadc827bbfe614d040cae86cf79dc95aed066a"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_fixed_pw16.pt",
+          "bytes": 208558,
+          "sha256": "6946cf79a0aebd9d8342acc8b3554605019eafb3277d42b72ef0e79bc6ea05c6"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_fixed_pw32.pt",
+          "bytes": 410158,
+          "sha256": "cf0d8a29c7f596625d5d5532f5dcdadaa0b25486d42a6b4e2c57eb7ef90bdd83"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_fixed_pw8.pt",
+          "bytes": 107747,
+          "sha256": "9df10f35582f2aa14a0d773388a60fb86ca6cdee9d0cd28d6ba768052b73c1d1"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_fixed_pw8_affine.pt",
+          "bytes": 165424,
+          "sha256": "2de7a577f3f266d17f52b3110b592322d26df2037712093c0bba2fd7effa0857"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_fourier128_w80.pt",
+          "bytes": 204246,
+          "sha256": "267ec8d158399c6031b4613c41e97f0b70750089d6f836da9b0ee5b320463c06"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_learned_pw8.pt",
+          "bytes": 108153,
+          "sha256": "4713f08994d71ef091920c56a1612241829629d0b5398cdd99a767f20d6f45b9"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_learned_pw8_affine.pt",
+          "bytes": 165830,
+          "sha256": "c7dc9071395367025522eb808a6f9e0056332ce5d387a47eeb8267db885f93b8"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_siren128_w100.pt",
+          "bytes": 138985,
+          "sha256": "40950710b6d99795c12d683b14e3cbfa0f7bf6d0816336c29393752fc35d3d8a"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_19.688_siren128_w30.pt",
+          "bytes": 138971,
+          "sha256": "b3d1f5e7e8d600b7fcc496744ef5a0ffc6ce42083278d32c4badd2e91de6623a"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_fixed_pw16.pt",
+          "bytes": 36195,
+          "sha256": "1a27054e9c26a1315d1dd1f06ab4f633df635293b1ac57a67732750dc9686abd"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_fixed_pw32.pt",
+          "bytes": 68451,
+          "sha256": "31d41978c12a3b18e283c42c2d1533a1c4aeadd79937cb89df001f249320c2ce"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_fixed_pw8.pt",
+          "bytes": 20056,
+          "sha256": "e16ff03645811b7ce106c66c7b262fd96808be1a412d1ce68687aefb576668d5"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_fixed_pw8_affine.pt",
+          "bytes": 29349,
+          "sha256": "c613cfb3ea0cc73d7078fdeb6b87528a2915a58f45a3d3061a43434aaecb32ff"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_fourier128_w80.pt",
+          "bytes": 204231,
+          "sha256": "8d3931163009a2d1334f5dc08d0e0b01b0ce2c9fbebb56e5f26b208c63b75934"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_learned_pw8.pt",
+          "bytes": 20398,
+          "sha256": "a099a30dfd71eed1742ed0bc8ce43fd4ce62c82aa5c428f54f717e92f6044cbb"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_learned_pw8_affine.pt",
+          "bytes": 29755,
+          "sha256": "b4dd39b43ca8b897e57c834a37f8722252dd8d7152542a20b45295980ac46e7f"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_siren128_w100.pt",
+          "bytes": 138971,
+          "sha256": "4aad0d9b63e54ada3764a8a86cf194ea4f1074f4ddffb87cacf6b0255a3c9ef4"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_1_6.106_siren128_w30.pt",
+          "bytes": 138957,
+          "sha256": "f3f4c43831a0a01ff40a0a4ca42fb76ab3c8825fed15ff30e19580e67b264d6f"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_fixed_pw16.pt",
+          "bytes": 77230,
+          "sha256": "b19c085356fb796d018983ed045a3c013727681f0ea78360101bdcc082d1468c"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_fixed_pw32.pt",
+          "bytes": 149806,
+          "sha256": "11c31ae062a01e6fb0a61b15c9e7c1da7ac09fea266ed80e034867c8ed3caabf"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_fixed_pw8.pt",
+          "bytes": 40931,
+          "sha256": "5f7afbd69326d30f91e8619c5fc5d225a24f76fa0479a48b5ac58947bd634dc0"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_fixed_pw8_affine.pt",
+          "bytes": 61744,
+          "sha256": "3ec61aecda176b344db48ec21b8c90b6f0f8d0398e580c68b914b34acd703f84"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_fourier128_w80.pt",
+          "bytes": 204246,
+          "sha256": "ed69ef0f6ad2e6d1f23c3b2eab75e80946e01f66f54c2b3bbae10de7c93b86ce"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_learned_pw8.pt",
+          "bytes": 41273,
+          "sha256": "99eb4f4c171c6c48c483c94c7435fdc8573c8ec3b87a93712ac584bb92e53d14"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_learned_pw8_affine.pt",
+          "bytes": 62150,
+          "sha256": "a32f1cd94feccfa3b87f64494071ef57b561ade4e54aae04a7e2a24d72c1195b"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_siren128_w100.pt",
+          "bytes": 138985,
+          "sha256": "277ba29debcdfa4fe38dec1496f5f25b61d24286753765477d4797a02e41296c"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_11.837_siren128_w30.pt",
+          "bytes": 138971,
+          "sha256": "dbc691319314639b3bf7efd0f9f9d4a3350b6ac2ceaef05029f9649da3794f1d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_fixed_pw16.pt",
+          "bytes": 208558,
+          "sha256": "1d7d241fd91cc0351faebb2b107cbf7b46789bd43d5eb026f1a40e314ade1396"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_fixed_pw32.pt",
+          "bytes": 410158,
+          "sha256": "91f68cc7e08633b69dda276016b2b2e26c21a27ed23204a440d4ec85b7316e61"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_fixed_pw8.pt",
+          "bytes": 107747,
+          "sha256": "b8bba3625ed8ac58e6bf2f9b8d7679d1ef91af220a374b3005971f3dab2b2e50"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_fixed_pw8_affine.pt",
+          "bytes": 165424,
+          "sha256": "73b231e25df112ef1789fd1bcb49f0bf5c5f20b56e98474ceb9abaf7269a9fb6"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_fourier128_w80.pt",
+          "bytes": 204246,
+          "sha256": "98130d2c0cf482c54ca5f3bb4a52f84834eaea1ee65cd670d736aabc74f9a8ec"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_learned_pw8.pt",
+          "bytes": 108153,
+          "sha256": "531242b1542003b1d814ad42efb4efcc79db4cb132992355776ee25b2f1b8546"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_learned_pw8_affine.pt",
+          "bytes": 165830,
+          "sha256": "05b473c1487e6244a3de89a8e8f001467d79ee2f730cdf890b3e470e6288bb31"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_siren128_w100.pt",
+          "bytes": 138985,
+          "sha256": "3aef007ed7d6fc11627bb0d9cbebb0ff0a2fc57a9e7c93cc698f166118b7683b"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_19.688_siren128_w30.pt",
+          "bytes": 138971,
+          "sha256": "68c504d816c7efae8a464d4cd87b40ee20ebb951d8fb970b01e6a1f694ba8647"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_fixed_pw16.pt",
+          "bytes": 36195,
+          "sha256": "22fb67edc0f0e19ee1664e01360fd46e2f737b9633f72e36ae688817c5d25f7a"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_fixed_pw32.pt",
+          "bytes": 68451,
+          "sha256": "e065ec88af5e9bc334251918910773d275ad797f21fad66f7c8b734a442b71b4"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_fixed_pw8.pt",
+          "bytes": 20056,
+          "sha256": "9ff5846688c2fc0a82d314ef8e14046db2bd1784d423540d58b1723ec5cb5847"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_fixed_pw8_affine.pt",
+          "bytes": 29349,
+          "sha256": "53692302c0d6b06b6c473a69c2edd24ea889dfa7e5eca7772cec682972c3969d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_fourier128_w80.pt",
+          "bytes": 204231,
+          "sha256": "b377f5c215f77540f911ae94aa0af60a2378a5a7f5c83090da39e20a816932e1"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_learned_pw8.pt",
+          "bytes": 20398,
+          "sha256": "d1a8a75737b8b9830e25357c1227be0866d36fb4849633c3d20b5843061b2ff1"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_learned_pw8_affine.pt",
+          "bytes": 29755,
+          "sha256": "1cbb9aa2c3d7b0ca0888c41b8a2a706f2a788d5221c47afc422d4bd79cbc30fc"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_siren128_w100.pt",
+          "bytes": 138971,
+          "sha256": "7a881734dae318c8b69ee22e36b12b5a0c8b72c10c96a3ed6834acbcbc9427ee"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/heterogeneous_fdtd_2_6.106_siren128_w30.pt",
+          "bytes": 138957,
+          "sha256": "eec050b2f610752c867c1db07ae13d2c3535ccb26ff00372973c12999497e5b6"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/manifest.json",
+          "bytes": 1006,
+          "sha256": "355d615116ff9ea30cb0083bf9fd22102ef2e45c8585a6adf637ea46843360c0"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_fixed_pw16.pt",
+          "bytes": 163241,
+          "sha256": "b8e583ab1cb08f9ecd23b056aa0c49be987d1bcb81e80f692dfc7400c2a99227"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_fixed_pw32.pt",
+          "bytes": 320041,
+          "sha256": "62dd0e4f2259ae9429498897615b274df5669971327945e23366153a2e60acef"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_fixed_pw8.pt",
+          "bytes": 84830,
+          "sha256": "83fdee877a3ef7d32a51ddd42c293be34849068e7d277ceedadcbe4079b26c71"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_fixed_pw8_affine.pt",
+          "bytes": 129899,
+          "sha256": "4eb42a15e2c7996b85d85325747b01fc6bc058f7007b29245a259151a2648471"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_fourier128_w80.pt",
+          "bytes": 204693,
+          "sha256": "89a0ee7f3b947bb21b8c98e27c38842df506af2d1cad72c115130a88e6636dca"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_learned_pw8.pt",
+          "bytes": 85300,
+          "sha256": "4a676dc1c8afda6c5b21f3f5b761411a3270454995e127c2858573c26599fce7"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_learned_pw8_affine.pt",
+          "bytes": 130241,
+          "sha256": "c9a96c9f15ac8d9ee9a201255cedaa6518ed07b15554814ad8ef0392a149f0f6"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_siren128_w100.pt",
+          "bytes": 139287,
+          "sha256": "53594869ebc485baffe3b8c99bfd38bc29a3a2c26b25ba4f3320e098eec47672"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_110.000_siren128_w30.pt",
+          "bytes": 139273,
+          "sha256": "3ecc747419d9304d866414628861cf9bebee789dd11ed567a922aecea0858e9b"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_fixed_pw16.pt",
+          "bytes": 222505,
+          "sha256": "91487350f3643acf38535d2ccd1c2714e0eb73b69831d302884cb5ccc78e64f3"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_fixed_pw32.pt",
+          "bytes": 437545,
+          "sha256": "c71abedfebe1b73a292f049544096ac3c5048503c8841850377ae6368eaac802"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_fixed_pw8.pt",
+          "bytes": 114974,
+          "sha256": "9ee3f20d7fb210f061aabe6ec71203d16bfdc235092cd6c38041d010d53e3e23"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_fixed_pw8_affine.pt",
+          "bytes": 176683,
+          "sha256": "5f5e930990fa014e3ee62d9625fa62d5f1cb49e8998b76800e8fbd23b80293af"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_fourier128_w80.pt",
+          "bytes": 204693,
+          "sha256": "bd4a9494da3935fb910e30a092006cf9b4872e8121a2ad058c1a25688a1c7f72"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_learned_pw8.pt",
+          "bytes": 115444,
+          "sha256": "5aaaee2addccabca92bd80cfd7102f22ab909b9b5bdfe75bd26d80cd70bf0afd"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_learned_pw8_affine.pt",
+          "bytes": 177025,
+          "sha256": "e0fbee2d310b3b148487528a521b13dc5d0a7918a512f222e5d79e5a79756f24"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_siren128_w100.pt",
+          "bytes": 139287,
+          "sha256": "d3574f694fa515fa9fb15c7373560bd380538e1a43564ea6e0df4eaa4a3da8f0"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_125.000_siren128_w30.pt",
+          "bytes": 139273,
+          "sha256": "2e43824c9f93e533ae0c6d497d62b557a1570559f5abafb825589d9fb254661e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_fixed_pw16.pt",
+          "bytes": 135838,
+          "sha256": "447cbf398fde9bb5b638c0861b4b5349359c634b8c258392860b307fb219bad8"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_fixed_pw32.pt",
+          "bytes": 265758,
+          "sha256": "1cb8c3108674691f556c999f3800da009b3c67358a69f4493c10e596b4b04696"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_fixed_pw8.pt",
+          "bytes": 70803,
+          "sha256": "c5f18b8c571294326fca005fa39626b57c814aee1205632d945ade3c9f487408"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_fixed_pw8_affine.pt",
+          "bytes": 108320,
+          "sha256": "f788863e15febf6f7c7f3cc1e3f66af2d4af2d3201d046ab34bf561b3422e89b"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_fourier128_w80.pt",
+          "bytes": 204614,
+          "sha256": "97fc7e74d7131ca880051ef9d7104de35bd9f25f693656e08704b7e6ce7ce2b9"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_learned_pw8.pt",
+          "bytes": 71273,
+          "sha256": "709a5a197dd8cdd4be7f8920ff391afde5fd07a7948cc31a838e803c12d2eaa5"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_learned_pw8_affine.pt",
+          "bytes": 108662,
+          "sha256": "7f6cdc9d8f66de000c45ca6711b723fdda758c52cf330c1a87e36e172b3329af"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_siren128_w100.pt",
+          "bytes": 139273,
+          "sha256": "0282aea78ecda5fe30f35c18c7fe9fa0f5fe8a1f6dbccce58acc3c6929cedfe4"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00000_75a38a92a0be_90.000_siren128_w30.pt",
+          "bytes": 139259,
+          "sha256": "d8a2a38e9b41f028ddc22a58712624339b91aea4e63ade0948ce10997d864acf"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_fixed_pw16.pt",
+          "bytes": 167785,
+          "sha256": "9f55900ebd101e41d96cbb19493816b6f1c59158c3f6fbeee92224b4baf63cb7"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_fixed_pw32.pt",
+          "bytes": 329065,
+          "sha256": "efcebaf8da5469475e79ba591b750798aba5b2e94ab0963861407e365c8fa364"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_fixed_pw8.pt",
+          "bytes": 87134,
+          "sha256": "d35a9f91f4c49165ca1d3329c5d708c3b2a4ddfb33d4e8e835c4197141ac135a"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_fixed_pw8_affine.pt",
+          "bytes": 133483,
+          "sha256": "6704efa82656e524680143f6b2abcdf3402ee08f49d9055b5e2e20c8b034ef00"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_fourier128_w80.pt",
+          "bytes": 204693,
+          "sha256": "21a093f86044c14c0d237e2582a8a1276ba0b9895d324f9cbb8b34258a2638ca"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_learned_pw8.pt",
+          "bytes": 87604,
+          "sha256": "8c3d13b2433116f4726c2311f2b6db8c1633b4e932d2902db3bf0e9324881d01"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_learned_pw8_affine.pt",
+          "bytes": 133825,
+          "sha256": "6e00943d25e2a998c247cc8b7850450bae9d91778683e65d407b834564306993"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_siren128_w100.pt",
+          "bytes": 139287,
+          "sha256": "65dd38a535554aed4a093870db6019a5c352101c294240f17fe47323bc79a528"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_110.000_siren128_w30.pt",
+          "bytes": 139273,
+          "sha256": "e818d0de96bfe029591776694cc31815d04f98c4465449b0a0dd8ad2e9d10aff"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_fixed_pw16.pt",
+          "bytes": 228009,
+          "sha256": "242026da46a50ddf051e6e19cc55888943fcb0a83a0cd4f68d37f3ff0799fe45"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_fixed_pw32.pt",
+          "bytes": 448425,
+          "sha256": "cb6eda6160124b45b7eee2a6a920c8adf471b455d339c37872b4a785fac77078"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_fixed_pw8.pt",
+          "bytes": 117790,
+          "sha256": "063c54d98ea8519cd9608a6a0d46b0cf61f2502e9a03f3004113d830fc4634ce"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_fixed_pw8_affine.pt",
+          "bytes": 181035,
+          "sha256": "24d943e909ce846c4c02720f122284594e82bb16d4825efdb5b766c4bc036421"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_fourier128_w80.pt",
+          "bytes": 204693,
+          "sha256": "5b824da907d7cdd9dda74e6ef9aa6f37861d120afb744812c2495780f1f8098d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_learned_pw8.pt",
+          "bytes": 118260,
+          "sha256": "ca099945b73942fde16bb8219800324c22d7a8b031e4e296a06d28ee9a69b5be"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_learned_pw8_affine.pt",
+          "bytes": 181377,
+          "sha256": "4da69c54476c12164bdbfca6e9f10627c5c50f5b0774cbb39bc77e630449cf8f"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_siren128_w100.pt",
+          "bytes": 139287,
+          "sha256": "1f0aed333339a1e91b354f94142717836509566f8c800c2b3834f945165d7345"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_125.000_siren128_w30.pt",
+          "bytes": 139273,
+          "sha256": "3f805f1bac1dc6a4402801443f7aa6456240afe05ab36fa49d2aa5b803917457"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_fixed_pw16.pt",
+          "bytes": 140446,
+          "sha256": "61c1b2fc27bdd1fdaed9c9d3982e2e99a41ff6682869ae75701509d7d2d628ba"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_fixed_pw32.pt",
+          "bytes": 274846,
+          "sha256": "eb084af8d3a089eb7cdeebecae00bf68e3e5054fd15290c696624e168dacc471"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_fixed_pw8.pt",
+          "bytes": 73171,
+          "sha256": "63342bfbcbf74ae7a12c9a7c517128e26eacf0b24810d337a1d1dda1e5bd93e7"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_fixed_pw8_affine.pt",
+          "bytes": 111904,
+          "sha256": "e3ea86d6481dbcadd8c1932c52a56b3108f1315d4fbfac1801019fde8f9dd4b1"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_fourier128_w80.pt",
+          "bytes": 204614,
+          "sha256": "0ef33ad5f25cebadfe3ce870ea192b5fd3e1861921fe1a613c18c84af275cd3d"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_learned_pw8.pt",
+          "bytes": 73641,
+          "sha256": "ed3f12ce4c5e8156f55cf3fbc08cc8a09d4574d485b7f2d6340c5b894e4b7185"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_learned_pw8_affine.pt",
+          "bytes": 112246,
+          "sha256": "6b0e24c5ff306009aa43c8e665eaec7482c0c91549896caee423ba974e94ce3e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_siren128_w100.pt",
+          "bytes": 139273,
+          "sha256": "ca780c46b4b48717c48faad4417ad96aa50cea069f307a0749bb9a0e28e63a2a"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00001_5256c8b9d542_90.000_siren128_w30.pt",
+          "bytes": 139259,
+          "sha256": "36d17182d28f28a280d3b21e2f5e001352ef75c79930f7144222636836abbfbf"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_fixed_pw16.pt",
+          "bytes": 167785,
+          "sha256": "1916e9196418d32f64ff6adfbd04c0fcab54798ed71c1666b6754643abb70e20"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_fixed_pw32.pt",
+          "bytes": 329065,
+          "sha256": "98a4930243d99298377ea3462634fcfd724ea6f02c461dbe0faedbbcc23861d0"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_fixed_pw8.pt",
+          "bytes": 87134,
+          "sha256": "f19504353d2af0e60dce3f6c9bc5a4c2e85cf46fc40186e290667f868a5aea02"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_fixed_pw8_affine.pt",
+          "bytes": 133483,
+          "sha256": "4c6b920bd5df0e226f009c14b602f4e14e93511d909f07805d78df18fad080d7"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_fourier128_w80.pt",
+          "bytes": 204693,
+          "sha256": "ced521970284eb643aa85d1458252f6fc9bba3cd3026e3ab3fbdf4a72e2ee0d5"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_learned_pw8.pt",
+          "bytes": 87604,
+          "sha256": "9436505b76d5ba08a77ed2bd7fa2e6f6315c26ac501d03fea3315c5e1006173a"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_learned_pw8_affine.pt",
+          "bytes": 133825,
+          "sha256": "55e9df6f6089efe34789ae7e6c404596fc67439c2dd30e3e3a9b85709d36e104"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_siren128_w100.pt",
+          "bytes": 139287,
+          "sha256": "685e6d4b97f40275fbba8838b6d65d9da435269d48acc693c9708f01a413cf45"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_110.000_siren128_w30.pt",
+          "bytes": 139273,
+          "sha256": "65b541f4aaebb635f654dc9a7beccf73c69605db9074d01ba5f79ee9211981e4"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_fixed_pw16.pt",
+          "bytes": 228009,
+          "sha256": "c5acbedff30cf50d08278f1474e60cd3ad9eccae4f164b6b28563d138c7ad086"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_fixed_pw32.pt",
+          "bytes": 448425,
+          "sha256": "f910464d946378d35ec5c654ce89808d2da3727802f584c383c3aaf2f692fe13"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_fixed_pw8.pt",
+          "bytes": 117790,
+          "sha256": "ba1bff1daa0d428c9e5b41124f0fc5967968ea1c453691da3cfe452430a9b543"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_fixed_pw8_affine.pt",
+          "bytes": 181035,
+          "sha256": "f1dc68a1129231b44f20697048b17b7ae8992133c5c53baa0de2ea4fbb5ecf90"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_fourier128_w80.pt",
+          "bytes": 204693,
+          "sha256": "a1b5dac68fc1c23cafb8e5003991dbd4ec84a14aebfd638a7f3bff14f62e5a8e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_learned_pw8.pt",
+          "bytes": 118260,
+          "sha256": "5e5d18734a690ae22407e28a696c74dadefaf41bdf41fbac24557ea81b437c81"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_learned_pw8_affine.pt",
+          "bytes": 181377,
+          "sha256": "ba5562272d49a5b741665c5b47714424959ac26a23eb2bed4c6d9aaea15e217e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_siren128_w100.pt",
+          "bytes": 139287,
+          "sha256": "9fbf47adf73d8f62d0381cac8e746449d4516a7f05d37d70c1c04f3154969452"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_125.000_siren128_w30.pt",
+          "bytes": 139273,
+          "sha256": "c8266c0308c1801f199bf74eb2b3b4602295c220367b1c8f843b3cedf15ad2ff"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_fixed_pw16.pt",
+          "bytes": 140446,
+          "sha256": "a489447d923690e0a6e942888cd9bb2fb066a89a83b74b044c4ac2cd248d64be"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_fixed_pw32.pt",
+          "bytes": 274846,
+          "sha256": "4a8a0b23d7f66d847b66b73391179d94b4ba05c2c380b3f4f2309a97a41f7d54"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_fixed_pw8.pt",
+          "bytes": 73171,
+          "sha256": "4b287080b14db50b437ca3c79c572326c7e6987baa352833c78e7652c4f34407"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_fixed_pw8_affine.pt",
+          "bytes": 111904,
+          "sha256": "68f1d8bda68b214ae1e649a44ec37a18461250e5eba3a5f674ba2e7653f5e06e"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_fourier128_w80.pt",
+          "bytes": 204614,
+          "sha256": "1e214de170e6092d5c5f83bf94fc424c2ba20295dd81ab39819b58b68b6c4e74"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_learned_pw8.pt",
+          "bytes": 73641,
+          "sha256": "d4efa2ddbe9f706cc4411848f2b4331b33dce89461e3e16ebfe2e3d1dd1edff7"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_learned_pw8_affine.pt",
+          "bytes": 112246,
+          "sha256": "d815c6f7545095a40d79e7f3be6af1e670612c37d2da95a4248f53c7127062e4"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_siren128_w100.pt",
+          "bytes": 139273,
+          "sha256": "0e493bd525daab4ecabe5bb4e04f138d94a61e893b73b837bcbfbfb28e0456f8"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/ocean_ocean_train_00002_4b95fd27afd7_90.000_siren128_w30.pt",
+          "bytes": 139259,
+          "sha256": "04b1b30d64e0146bf480634019f41ac3a24c917fcd341960c1f479926c604f30"
+        },
+        {
+          "path": "artifacts/coherent_representation_r0_two_domain_20261003/results.json",
+          "bytes": 118826,
+          "sha256": "808ffb0dcd21fc323e9dbf6a509ec9b7c70867c594307288c1a26990b799364d"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_spectrum_r1_baseline_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_spectrum_r1_baseline_20261003/config.json",
+          "bytes": 485,
+          "sha256": "44971e2e6fcb735a0ca11940f184487a85e7b06dd5cf2dc799845b64e3e66b99"
+        },
+        {
+          "path": "artifacts/coherent_spectrum_r1_baseline_20261003/results.json",
+          "bytes": 421846,
+          "sha256": "571b8bb393f7ebbcfe5fb8d7bacf98aec6c584ceb41f16bf97b295c2bf5cfef7"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_stage1_inventory_20261003",
+      "files": [
+        {
+          "path": "artifacts/coherent_stage1_inventory_20261003/inventory.json",
+          "bytes": 135746,
+          "sha256": "2dfd22c3bfc5805ac7a6829857fc8642472d6180bfc300cd49f5a939d81f4ae8"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003/best.pt",
+          "bytes": 126115,
+          "sha256": "60ed903ff75795e557db67b92e3cbc0400e96ea2d2c29f9fba41225c44979dcb"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003/best_validation.json",
+          "bytes": 13849,
+          "sha256": "bbe34ecf0c73e31232e8cbc4810a8c58e24e8967cc993613e0c336b87654a543"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003/config.json",
+          "bytes": 1757,
+          "sha256": "d2b24307f417bcee49cfde4c7bd1df75d47134855e83276533d26e2694622f96"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003/history.json",
+          "bytes": 1922,
+          "sha256": "e5227e8fb48d3cad6a942b0ed5fe04e2458ce9cd2da51333ee23452acb3e96d5"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003/last.pt",
+          "bytes": 126115,
+          "sha256": "36e7a675647dc51b59a27a0e7876c009a6838f0d168b8199569845ca26d4a7d4"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_20261003/summary.json",
+          "bytes": 301,
+          "sha256": "7f9c1c5a921e8c299f55f54cca8849d82f25d6a3965f60c040554d7d63321b6b"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/best.pt",
+          "bytes": 127843,
+          "sha256": "b714eb3749ad98892b1022546ef26cebf455e5efc8d837b95ad5d2a96a1dfb30"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/best_validation.json",
+          "bytes": 13855,
+          "sha256": "56935bf26de3c92e32c23dab68af4df3b9667ac22f1bf3ac1b4e95d28c87381f"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/config.json",
+          "bytes": 1951,
+          "sha256": "ecfddc52ee115e070284e1182875da4921ee00c3a13181b4847d338a2455e407"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/history.json",
+          "bytes": 1921,
+          "sha256": "17c17a0d5d6978d43b4de70519cf54ec32689f4ffb1775ee1fadc29dec881afc"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/last.pt",
+          "bytes": 127843,
+          "sha256": "f8a7334a0ce71e71a752ffbf39165fd26ccf3d67326428ac7385384b4f1ce2c0"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_20261003/summary.json",
+          "bytes": 302,
+          "sha256": "f15f9e9f5f914d8156cd2a99e1e5254a5391480f96d42d8d90658b5b1ffa84b8"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed43_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed43_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed43_20261003/best.pt",
+          "bytes": 127843,
+          "sha256": "3f1fb87e072f4b53a42383db48aab7d43185d1d8780a645db50823cab2eb76f1"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed43_20261003/best_validation.json",
+          "bytes": 13839,
+          "sha256": "665e6e7025916d70482f2bf535635c8b7fd9f774bb9d09561f1f043eeeba35b1"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed43_20261003/config.json",
+          "bytes": 1951,
+          "sha256": "fc6845225f085b8ce0874867e95bf1917afc6b0b9ef8c3288a4aaf6171c2e129"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed43_20261003/history.json",
+          "bytes": 1924,
+          "sha256": "4f39c1eaf0ff15704535993b2b0a0fc557bf5944a1ba3b3ee25d32244b2c18ce"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed43_20261003/last.pt",
+          "bytes": 127843,
+          "sha256": "d30b9dac0379f63115a0455cd733277688646379be7f26f44edc936c9bfcfaec"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed43_20261003/summary.json",
+          "bytes": 302,
+          "sha256": "40bbff1fb06fb202555e090a0897a9c84bb07340ea41c6b6bc8db63b5ac0df1a"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed44_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed44_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed44_20261003/best.pt",
+          "bytes": 127843,
+          "sha256": "7dda9085e2c4a3a9166ec2b55428c962a5473983e90fd5f600a167a1879db461"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed44_20261003/best_validation.json",
+          "bytes": 13863,
+          "sha256": "412a139e86b2d6878b8b81ad76c07fea5c8d98b581ab1217a471fcf790e07a6f"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed44_20261003/config.json",
+          "bytes": 1951,
+          "sha256": "874f7310c2f886dc0ccf021ee40df38a56b2bc5188d44b4f4cf4334e7741ad0d"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed44_20261003/history.json",
+          "bytes": 1923,
+          "sha256": "7764641d8ebf2a119dea1638179b0bda439a7a9e5111f34a039ad5000f766d59"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed44_20261003/last.pt",
+          "bytes": 127843,
+          "sha256": "c9375259ef93f70be65c15009005394c8596e3dff010f0faa65cb1c0190bdca6"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_curved_seed44_20261003/summary.json",
+          "bytes": 302,
+          "sha256": "b0d73989d39b46b77c1248f47bcb5c42ca390d5f737d8d4b4a70427a5e6ef715"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_kernel_global_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_global_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_global_20261003/best.pt",
+          "bytes": 3846,
+          "sha256": "05caf9f7d04c10f7d4a7b99227f452bb4da68ba1c6b59ce84aeee8af86ab2369"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_global_20261003/best_validation.json",
+          "bytes": 13824,
+          "sha256": "c95da98a5d40a5d0bda1a928f820745c3cf9ec97e60454b90e3817ea7d8dfc71"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_global_20261003/config.json",
+          "bytes": 1936,
+          "sha256": "52ddba1c574a3be1ed1c0fe10277f9ff8da35c3735ffcc23f54085bdba318ec0"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_global_20261003/history.json",
+          "bytes": 1918,
+          "sha256": "0260678be147cb4318466a3fa819588dc7b8cca0f1f5991712edd77acc5941ab"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_global_20261003/last.pt",
+          "bytes": 3846,
+          "sha256": "ad82e0519dad77df14341db2409d886675b1108fa45c52ef0e58ebc41e81dd3f"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_global_20261003/summary.json",
+          "bytes": 297,
+          "sha256": "469cf5243f61acaed17f907c8065b13a9944222315abbb514665772347fc4cf7"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nocarrier_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nocarrier_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nocarrier_20261003/best.pt",
+          "bytes": 126243,
+          "sha256": "64fa80a9e6b6c5d5d118af0b3df89d19b37faf8bda8d112044e0eed2593956e2"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nocarrier_20261003/best_validation.json",
+          "bytes": 13834,
+          "sha256": "4c965557432d7f559e0693981edd9a85d89ba86b67b8688cd6cca9e8ccc4036d"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nocarrier_20261003/config.json",
+          "bytes": 1837,
+          "sha256": "b3a9bdd342be924754c42d05e85d569c085a9c08272639849ce26408d4bdb348"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nocarrier_20261003/history.json",
+          "bytes": 1920,
+          "sha256": "edb82ab5e8ba640f8f3a99196512678ae8197109fa25f6316c10db97eb3bbb86"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nocarrier_20261003/last.pt",
+          "bytes": 126179,
+          "sha256": "db68d862b935a7728397946a3c03f30f2013bc607c4f287e4f0223f976914318"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nocarrier_20261003/summary.json",
+          "bytes": 302,
+          "sha256": "032d451cef00b756a0b754ef7231d856349db0c5b670c06254aa2012d7ce5b2b"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nometric_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nometric_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nometric_20261003/best.pt",
+          "bytes": 126243,
+          "sha256": "349a1ca920164e8a2c412dad62f4be691714019b633f18cc29b36140a7221e03"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nometric_20261003/best_validation.json",
+          "bytes": 13838,
+          "sha256": "07be0fb4ad6f9b74062ac35bfbff0d04833b4993fb3616b86c7b6dd7e0fbb53f"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nometric_20261003/config.json",
+          "bytes": 1832,
+          "sha256": "15656a5ccc306a6430b5c1701cf847c80f043c978a1c9d2c2ec08c72bc33314b"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nometric_20261003/history.json",
+          "bytes": 1924,
+          "sha256": "2d3170a719b22630bb94ae298e98602a18d8b986bc41ecccf889cfe260b60562"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nometric_20261003/last.pt",
+          "bytes": 126179,
+          "sha256": "ae4bab7978c521e0cd1b7ce9b5d77f45ed89811542b69189e67220e61f4114ff"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_nometric_20261003/summary.json",
+          "bytes": 302,
+          "sha256": "472a1391d53d1f3ba85167a98a8301072d87e4ec6550e5fa6d7408b761204d99"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003/best.pt",
+          "bytes": 233061,
+          "sha256": "e1259223d19f1846fe2a205049b89c311d859a72365681f51049e2e2dc182992"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003/best_training.json",
+          "bytes": 44269,
+          "sha256": "212820ba0a82dc3696e4fdb6276a2e55aa39de7172621ca43a5f71931778efa5"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003/best_validation.json",
+          "bytes": 13845,
+          "sha256": "6470789864fd38fd140cd5f7f7b1f3969387c1ab39c0be1f84e7ff828269a42d"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003/config.json",
+          "bytes": 2234,
+          "sha256": "8843e5e6f017fdc2442582f5f4c835e15fe297b906e3bb9b0698c1d0619a0b6d"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003/history.json",
+          "bytes": 1919,
+          "sha256": "8c080f3952e8ce34f45d475719bd5e25df0e58fc1f4ca6de972b996ce27dab41"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003/last.pt",
+          "bytes": 233061,
+          "sha256": "08dbae184c3f39f7461ce02b05d23f019f2d7981ac01dd27bd526dc568c11594"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_kernel_set_20261003/summary.json",
+          "bytes": 351,
+          "sha256": "82cbd482937caee1cdffa6c52269cec40e7b1aebbf245ff9a7d33bd8998a32a8"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_pilot_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_pilot_20261003/baselines.json",
+          "bytes": 72210,
+          "sha256": "595d75065036032bdfc6991c0a7f201a4f832c4cde022cd7d222705674606197"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_pilot_20261003/best.pt",
+          "bytes": 140259,
+          "sha256": "6e147cafd58906118c339f9a573442045b8f19df2d31a21f7fbba9f531659cb1"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_pilot_20261003/best_validation.json",
+          "bytes": 13667,
+          "sha256": "73d7712ae63f05331032f94ca93c65cf350a70fbcbeb3279983e6b1e65f7afd8"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_pilot_20261003/config.json",
+          "bytes": 1792,
+          "sha256": "e3f8d968217ce9c3e1ed68c17c709ee193ba55e71b898271a3914fc254e767bd"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_pilot_20261003/history.json",
+          "bytes": 1892,
+          "sha256": "a13ae9874efc3d00d6a7d54265c19db37f206438c5de1a38a3e202206b9d12fa"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_pilot_20261003/last.pt",
+          "bytes": 140259,
+          "sha256": "e26550cb3851bf9be86712a30bc140d5351e7f896e36cc1e3fcf6961f0a6ce29"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_pilot_20261003/summary.json",
+          "bytes": 300,
+          "sha256": "961e149db9b94ffbee373817eaff0cf4af4e18d8db69764f891668f808c8ce66"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/baselines.json",
+          "bytes": 72447,
+          "sha256": "364c385f4dbca4e352742d45ec8507c01192205ece03a42f8a93b2ce7d2d044c"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/best.pt",
+          "bytes": 140195,
+          "sha256": "905191408cd8f72dcf9f613ebf05e680a3eb4b0fc99cb2a2d632f0214d2b0733"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/best_validation.json",
+          "bytes": 13809,
+          "sha256": "a2aa5d6da29660f6425244536a71548572492ccaa13875ac9d3eb756c907ce61"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/config.json",
+          "bytes": 1749,
+          "sha256": "3848f4f0a65a7a6a2dea65ed4663795f4760f214a6a6a7cdb393e0556fd14268"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/history.json",
+          "bytes": 1907,
+          "sha256": "7aefcfe8ce138649b47533734b0678eaec5a7bd61c45706112ea9b90517f1bd8"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/last.pt",
+          "bytes": 140195,
+          "sha256": "44242258de5863f4219a801d6403edda398118751693cd1c1a9c86153f1c50ae"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/summary.json",
+          "bytes": 300,
+          "sha256": "729970cd01a1db45eb446530d74a4f0b52f71e0f445fd75911e0dae984b84459"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003/baselines.json",
+          "bytes": 72387,
+          "sha256": "36092158c80f01f94271dafabe84d35c3f69db1a411cf8facdeacfe27be8f780"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003/best.pt",
+          "bytes": 128284,
+          "sha256": "88806f2b5c80ea7c659b3e1bbbd4d3e344316e7c4ceb8f90f292ce4788f6ef45"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003/best_training.json",
+          "bytes": 44349,
+          "sha256": "11eb024479262e5c58b5e17d6db948c2ef433f6805e9bc20652295242614fba0"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003/best_validation.json",
+          "bytes": 13870,
+          "sha256": "e3c415807a38b64d7579575f77b96dd5441fe565f4a674e8ffb1c6972962465c"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003/config.json",
+          "bytes": 2097,
+          "sha256": "26086c907ac0277d2ee102c042561613e2e1232ef57c32918ce2da0c3c452adc"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003/history.json",
+          "bytes": 1242,
+          "sha256": "7004b43f217016e877dbaef1efc79b543733fb0f3cb54fe899d6aab58304f157"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003/last.pt",
+          "bytes": 128284,
+          "sha256": "7e60d7ff74f368cd33c518be9605d86b4d003cec26658b8c10472878d776946b"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_helmholtz_unrolled_20261003/summary.json",
+          "bytes": 352,
+          "sha256": "2715f3ec50192f75b78ffe6064df934c4a0dd7191f9b3825c4772c7fd5fe0d1f"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/baselines.json",
+          "bytes": 57499,
+          "sha256": "2c2143221a30ebfc907a2a2598ad70b90e54a71bf3e7fba7902f9b0501a7ca04"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/best.pt",
+          "bytes": 140131,
+          "sha256": "56b6ae6a175fb84af19b4a7567a673f978aa2224b7db659950be2c3af2b751e5"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/best_validation.json",
+          "bytes": 10996,
+          "sha256": "7c0f00e93149614d80f12326b31052b744d7122e0f44741a9e82180a85d3bf5e"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/config.json",
+          "bytes": 1502,
+          "sha256": "cedb70537068e97c3f817d184c24021560760a58963660d931e612fbf3ffcd1d"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/history.json",
+          "bytes": 1930,
+          "sha256": "2f93cce53bbee034ebd375949ce16745da7b0157ce8b3ce40e4556caece117a0"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/last.pt",
+          "bytes": 140067,
+          "sha256": "a0698e8f83604fa709d37294cff00e9badf71bcc601aba780683c4a1bbb4709c"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_16branch_20261003/summary.json",
+          "bytes": 302,
+          "sha256": "42f04ebe77b93434fe28228bcf60eb2bf6ab1647a1b87a9c3ed72f007821ec27"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_ocean_classical_audit_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_classical_audit_20261003/results.json",
+          "bytes": 568602,
+          "sha256": "9099a6bfaf29f198f957adab5af0f2d9876772942c1106ec2d9f371e5aa73a00"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_classical_audit_20261003/summary.json",
+          "bytes": 3088,
+          "sha256": "33d14d1098fe1bccb6af7ec80f483bd96547d1fd568946172ba81275fc1012cc"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_ocean_global_dictionary_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_dictionary_20261003/baselines.json",
+          "bytes": 57499,
+          "sha256": "2c2143221a30ebfc907a2a2598ad70b90e54a71bf3e7fba7902f9b0501a7ca04"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_dictionary_20261003/best.pt",
+          "bytes": 3910,
+          "sha256": "6f0b4bf764cac49e4ba880bfd7c3df3256a2d6179fd1e566f34378b719b2ef7f"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_dictionary_20261003/best_validation.json",
+          "bytes": 10948,
+          "sha256": "d5a7a61397d2894f555f2d5ce224ab3fede335b1748b8d2e54d198f9d319da16"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_dictionary_20261003/config.json",
+          "bytes": 1601,
+          "sha256": "d7dd4dacd02524a6d4f20c5b6e4d973221217842be7be9e25f42ca07cb03f5a9"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_dictionary_20261003/history.json",
+          "bytes": 1923,
+          "sha256": "f9437bde131687d1af3ad459e62f950fb8c4989b46418cb7e4d6d8470964edc8"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_dictionary_20261003/last.pt",
+          "bytes": 3910,
+          "sha256": "229ce9ba15f3bbde94a499feaf23022ada6c5e68ab74be6172e93036ca3fb6de"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_dictionary_20261003/summary.json",
+          "bytes": 299,
+          "sha256": "118175e98fb8d52e4f854622c33551d9474143f839e17c59df054b8809599b69"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/baselines.json",
+          "bytes": 57499,
+          "sha256": "2c2143221a30ebfc907a2a2598ad70b90e54a71bf3e7fba7902f9b0501a7ca04"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/best.pt",
+          "bytes": 3974,
+          "sha256": "93ce15d9f0d019721d425638c67353c7b0df00f0b92b89f1b4dbd15130a75a0b"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/best_validation.json",
+          "bytes": 11000,
+          "sha256": "9e4425e94996310d5b4e15d9797e7bfc448bba6d6327209ce1f46044dda97968"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/config.json",
+          "bytes": 1681,
+          "sha256": "b63f44c8e4c3deced88205a046a4e364ebf2f928ce23068929901f84063a13b1"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/history.json",
+          "bytes": 1928,
+          "sha256": "dfa909ea626da9d9598e0fd35688ef1c73065428fd6f1187906421ec30250462"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/last.pt",
+          "bytes": 3974,
+          "sha256": "43f037a297572f94475617d461ee28ee916f0bf8a6b6935bc8aff9afd2d9a7ec"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_global_lr_audit_20261003/summary.json",
+          "bytes": 300,
+          "sha256": "2aff75a88917d2597795bb4d3e7758edf8fa48ca1297101ed33c13fdf117d6fd"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_ocean_kernel_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_20261003/baselines.json",
+          "bytes": 57440,
+          "sha256": "27f744a1f529e6dc8a7193b59b420e30c0c19d3a8f70d5e20776188394c3d48e"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_20261003/best.pt",
+          "bytes": 127523,
+          "sha256": "6efb2c4c4093eb6e0e9d6340793bdb8ac23976fa19bc35c76b679e3fced5bfe4"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_20261003/best_validation.json",
+          "bytes": 11033,
+          "sha256": "704b03769366d166027f80d9228bbe15a261c5ce8856eaf49a3b3558ad98946d"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_20261003/config.json",
+          "bytes": 1458,
+          "sha256": "757a090869f7a6cd779ca00185ee9a8a5f54188b8e7be3060a9a0466f4639407"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_20261003/history.json",
+          "bytes": 1932,
+          "sha256": "dbae2a9fd8c44c472abf658526b0cae28a6472df493cd5c471569e715f3774c7"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_20261003/last.pt",
+          "bytes": 127523,
+          "sha256": "afe47cc0a401766689864e0a2396d4ed4f19487ebbad9e1db4ae82fa604df1eb"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_20261003/summary.json",
+          "bytes": 304,
+          "sha256": "0e907f67d1aef08e82e16c1e94114b3e9ef5627a6d6f359fc9fdc9cf4e5f828e"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_ocean_kernel_global_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_global_20261003/baselines.json",
+          "bytes": 57440,
+          "sha256": "27f744a1f529e6dc8a7193b59b420e30c0c19d3a8f70d5e20776188394c3d48e"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_global_20261003/best.pt",
+          "bytes": 3654,
+          "sha256": "9e0040cc8a84beed4078da2a70b319be5ed95857663cb0eea3283fdf01586e6c"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_global_20261003/best_validation.json",
+          "bytes": 11023,
+          "sha256": "6fa57ac713808f2f558179b46fb15603acaec120bd81ecfb5a91e142d44e229f"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_global_20261003/config.json",
+          "bytes": 1637,
+          "sha256": "36e4b63c64f54e76c495a33e0b85c5c18678f20a69538abd6651f7b1433bc848"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_global_20261003/history.json",
+          "bytes": 1928,
+          "sha256": "3ed6f74d7ee1a4a255f5e818f3b912ae08513709ce6202851a66ec7bd2f55d64"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_global_20261003/last.pt",
+          "bytes": 3654,
+          "sha256": "d9ccd6d917739ffc402c120629edcafa5a3cfd50bd0f23a7d232decf86e4d4df"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_kernel_global_20261003/summary.json",
+          "bytes": 300,
+          "sha256": "7eba5eb205acfd81d094f5d37c2a27aa99b96dd700c679af3a9ef792715b973c"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/learned_wave_chart_r2_ocean_pilot_20261003",
+      "files": [
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_pilot_20261003/baselines.json",
+          "bytes": 57499,
+          "sha256": "2c2143221a30ebfc907a2a2598ad70b90e54a71bf3e7fba7902f9b0501a7ca04"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_pilot_20261003/best.pt",
+          "bytes": 131683,
+          "sha256": "c42a9692a32eea1e94c5e8b6916b0dd96c5e5e34acea02f35618448db8994ace"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_pilot_20261003/best_validation.json",
+          "bytes": 10867,
+          "sha256": "7f82143cf7e8aaa0c5a00de7ce0ff0438ea7132a05c16cf8d8b3996375a8b87e"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_pilot_20261003/config.json",
+          "bytes": 1432,
+          "sha256": "5b04e84c741cd022b1458d150b0f51dec78ee72a161670277e3cd8e372e5e321"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_pilot_20261003/history.json",
+          "bytes": 1902,
+          "sha256": "0bc294cef4dd4b9d80a203bb34150efe0e63f93bb37953b5c0da6e1a967d8ed0"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_pilot_20261003/last.pt",
+          "bytes": 131619,
+          "sha256": "c7badec99bbb869a84ab18a5a952b8d792e6a904634a7c2e7188b92c4d459c19"
+        },
+        {
+          "path": "artifacts/learned_wave_chart_r2_ocean_pilot_20261003/summary.json",
+          "bytes": 302,
+          "sha256": "541bf69ca370d46bff20903c029b4356e1af96c32d87075cd995a05cd8ea5097"
+        }
+      ]
+    }
+  ]
+}

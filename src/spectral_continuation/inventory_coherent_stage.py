@@ -31,6 +31,11 @@ def run(root, output):
         ("coherent_helmholtz_development_20261003", 40),
         ("coherent_helmholtz_fine_queries_20261003", 4),
         ("coherent_ocean_fine_queries_20261003", 2),
+        ("coherent_ocean_fractional_queries_20261003", 4),
+        ("coherent_helmholtz_fractional_queries_20261003", 4),
+        ("coherent_structural_narrow_source_20261003", 4),
+        ("coherent_structural_high_contrast_20261003", 4),
+        ("coherent_structural_narrow_high_contrast_20261003", 4),
     ]:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -57,9 +62,20 @@ def run(root, output):
             "files": records,
         }
     sources = set()
-    for pattern in ["*coherent*.py", "*learned_wave_chart.py", "audit_modal_spectral_transport.py"]:
+    for pattern in [
+        "*coherent*.py",
+        "*learned_wave_chart.py",
+        "*modal*.py",
+        "*phase*rom*.py",
+        "*phase_reduced*.py",
+        "*fundamental_solution*.py",
+        "*rom_grid*.py",
+        "*continuous_phase*.py",
+    ]:
         sources.update((root / "src/spectral_continuation").glob(pattern))
     sources.update((root / "tests").glob("test_*coherent*.py"))
+    sources.update((root / "tests").glob("test_*phase*rom*.py"))
+    sources.update((root / "tests").glob("test_*fundamental_solution*.py"))
     artifacts = []
     dirs = sorted(
         set((root / "artifacts").glob("coherent_*_20261003"))

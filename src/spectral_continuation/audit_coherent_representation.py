@@ -252,7 +252,7 @@ def run(config: dict, output: Path):
         )
     keys = sorted(set().union(*(r.keys() for r in rows)))
     with (output / "results.csv").open("w") as handle:
-        writer = csv.DictWriter(handle, fieldnames=keys)
+        writer = csv.DictWriter(handle, fieldnames=keys, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     manifest = {

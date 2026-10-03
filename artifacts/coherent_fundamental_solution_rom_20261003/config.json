@@ -1,0 +1,29 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "observed_frequencies": [
+    6,
+    10,
+    14
+  ],
+  "query_frequencies": [
+    7,
+    8,
+    9,
+    11,
+    12,
+    13
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "hypothesis": "Phase-only carriers neglect the actual finite source and frequency-dependent near-field Green amplitude. Test the exact homogeneous Gaussian-source reference at the original SIX-column rank before adding learned envelope complexity.",
+  "stop_rule": "If the source-aware classical reference closes the gap, do not attribute the prior plateau to generic neural capacity or spectral unpredictability.",
+  "evidence": "development; known source/medium/PDE, no target-frequency observations; free-space reference differs from sponge teacher"
+}

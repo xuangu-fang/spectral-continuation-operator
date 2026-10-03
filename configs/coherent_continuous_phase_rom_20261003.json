@@ -1,0 +1,9 @@
+{
+  "context_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "query_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_fractional_queries_20261003",
+  "checkpoint": "artifacts/coherent_learned_envelope_neural_20261003/best.pt",
+  "systems": [20261132, 20261133], "observed_frequencies": [6, 10, 14], "query_grids": [257, 513],
+  "roi": [0.18, 0.82],
+  "hypothesis": "Check continuous frequency AND independent spatial coordinates for the actual learned envelope and strong classical reference; no query-frequency field samples.",
+  "evidence": "development only; known medium/source/PDE; learning advantage not yet established; query truth is direct PDE solve"
+}
