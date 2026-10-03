@@ -3,45 +3,46 @@
 本文件约束本仓库后续研究 Agent。开始编码或训练前，必须先读：
 
 1. `README.md`；
-2. `docs/CURRENT_STATUS_ZH.md`；
-3. `docs/EXPERIMENT_LEDGER_ZH.md`；
-4. 当前任务若涉及新模型，再读 `docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md`。
-5. 当前任务若涉及相空间、多路径或 wave token，再读
+2. `docs/CURRENT_STORY_AND_ROADMAP_ZH.md`；这是唯一的当前叙事与研究决策入口；
+3. `docs/CURRENT_STATUS_ZH.md`；
+4. `docs/EXPERIMENT_LEDGER_ZH.md`；
+5. 当前任务若涉及新模型，再读 `docs/WAVEFIELD_REPRESENTATION_NEXT_STAGE_ZH.md`。
+6. 当前任务若涉及相空间、多路径或 wave token，再读
    `docs/MULTIBRANCH_PHASE_SPACE_REPRESENTATION_ZH.md`。
-6. 上述任务必须再读结果归档 `reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`，不能只按执行前 brief 重跑。
-7. 当前任何新实验先读 `docs/IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md`；这是 2026-09-24 起的 active
+7. 上述任务必须再读结果归档 `reports/MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`，不能只按执行前 brief 重跑。
+8. 涉及早期 Response Query 协议时，再读 `docs/IN_CONTEXT_WAVE_RESPONSE_QUERY_PLAN_ZH.md`；这是历史
    roadmap，旧表征计划仅作证据档案。
-8. Response Query 相关任务必须读 `reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`，其中包含已通过的 Q2、
+9. Response Query 相关任务必须读 `reports/IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`，其中包含已通过的 Q2、
    未通过的 Q3、三 seed 结果和禁止重复的 backbone screens。
-9. 跨数据集 Response Query 新实验必须读 `reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`、
+10. 跨数据集 Response Query 新实验必须读 `reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`、
    `docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md` 与 `docs/CROSS_DOMAIN_QUERY_METRICS_NEXT_ZH.md`；当前
    response subspace 已是必须击败的 strong baseline，不能再只与 local interpolation 比较。
-10. 当前 active 方法计划是 `docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md`。任何 functional tensor、FNO、
-    DeepONet 或 flow 实验必须遵循其中 M0--M4 顺序；flow 未通过 latent ambiguity gate 前不得启动。
-11. PBNO 后续任务必须先读 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`；这是当前最新正式结果。M3/M2/M1
+11. 涉及早期 Wave as Prompt 方法审计时，再读 `docs/WAVE_AS_PROMPT_TOPCONFERENCE_PLAN_ZH.md`。任何
+    functional tensor、FNO、DeepONet 或 flow 实验都必须先核对其中已执行的 M0--M4 gate；flow 未通过
+    latent ambiguity gate 前不得启动。
+12. PBNO 后续任务必须先读 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`；这是当前最新正式结果。M3/M2/M1
     报告只用于方法细节与历史归因。
-12. 第一次理解 PBNO 可先读 `docs/PBNO_STORY_PLAIN_LANGUAGE_ZH.md`。若任务涉及下一代统一架构，再读
+13. 第一次理解 PBNO 可先读 `docs/PBNO_STORY_PLAIN_LANGUAGE_ZH.md`。若任务涉及下一代统一架构，再读
     `docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md`；该文档现在只保留设计来源，不能把未通过的 M1--M3 写成
     已有贡献或待自动执行清单。
-13. Posterior composer M0 已执行，必须读 `reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`。统一接口与严格
+14. Posterior composer M0 已执行，必须读 `reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`。统一接口与严格
     adapter fallback 成立，但 learned correction 在 calibration 为正、unseen systems 明确退化；不得继续
     扫宽度、深度或辅助 loss，也不得启动 M1，除非报告中的重启条件满足。
-14. 固定 PCA chart 的 heterogeneous functional replacement 已执行，必须读
+15. 固定 PCA chart 的 heterogeneous functional replacement 已执行，必须读
     `reports/HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md`。compressed oracle 有 16%--49% 空间，但
     functional evidence、reranking、listwise metric 与 nonlinear neural field 均未通过 unseen-system gate。
     不得继续扫 encoder/decoder 容量；必须区分 representation capacity 与 sparse identifiability。
-15. uncertainty-conditioned proximal operator prior 已执行，必须读
+16. uncertainty-conditioned proximal operator prior 已执行，必须读
     `reports/PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`。它在 Deepwave 25% receiver masks 的正式增益为
     2.93%，OpenFWI/Ocean 均低于 0.6%，没有任何域通过 5% gate。不得继续扫 width、depth、denoising
     noise、steps 或 proximal strength，也不得从该 checkpoint 启动 query-decomposition M1。
-16. 当前主线已推进到 target-aware wave interrogation。任何 active/query-selection 任务必须先读
-    `reports/ACTIVE_WAVE_INTERROGATION_M0_ZH.md` 与
-    `docs/ACTIVE_WAVE_INTERROGATION_NEXT_PLAN_ZH.md`。Deepwave/Ocean 的 K=2 强结果成立，但
-    population-optimal fixed schedule 几乎追平解析 planner；不得把当前方法写成 response-adaptive agent。
-17. query-conditioned posterior metric 最高仅 2.55%，learned acquisition policy 在 Deepwave 回退、Ocean
-    只比解析 planner 多改善 0.37%。禁止继续扫 policy/metric 容量；下一次 learning 升级只允许按计划验证
-    continuous acquisition utility operator，且必须保留解析 fallback 与 held-out-action regret gate。
-18. 上述 M1 已执行，必须读 `reports/ACTIVE_WAVE_INTERROGATION_M1_ZH.md`。Untouched IID 与 pair-action
+17. 当前主线已推进到 target-aware wave interrogation。任何 active/query-selection 任务必须先读
+    `docs/CURRENT_STORY_AND_ROADMAP_ZH.md` 与 `reports/ACTIVE_WAVE_INTERROGATION_M1_ZH.md`；M0 和旧 next
+    plan 只用于历史核对。不得把当前方法写成 response-adaptive agent。
+18. query-conditioned posterior metric 与 learned acquisition policy 已关闭；continuous acquisition utility
+    operator 也已在 M1 执行，不再是待办。下一次 method upgrade 需要更密的连续 physics teacher，且必须保留
+    analytic fallback、strict coordinate holdout 与 held-out-action regret gate。
+19. M1 的 untouched IID 与 pair-action
     utility 通过；top-4 hybrid AUC gap 为 0.29%/0.16%。但 strict source/frequency-coordinate holdout regret
     为 10.23%/18.43%，5× speed 和 Ocean OOD 均失败。不得写成任意连续 action 泛化，也不得继续扫 utility
     width/depth；重启需要更密连续 physics teacher 或新外部 acquisition data。

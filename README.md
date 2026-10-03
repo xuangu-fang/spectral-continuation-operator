@@ -1,5 +1,9 @@
 # 从复波动响应中学习可查询的 Wave-System Representation
 
+> **2026-10-03 阅读提示：** 当前唯一的主线、证据边界与未来路线图见
+> [当前故事、证据与未来路线图](docs/CURRENT_STORY_AND_ROADMAP_ZH.md)。本页后半部分保留了完整研究时间线，
+> 用于复现和避免重复实验，不表示所有方向仍在推进。
+
 > 仓库名 `spectral-continuation-operator` 是历史名称。当前研究主线已经从“直接做远频率延拓”推进到一个
 > 更基础的问题：**能否从少量复波动 response views 中识别可复用、可查询的隐藏波动系统表示？**
 
@@ -8,10 +12,19 @@
 这些响应的**隐藏 wave response operator**：把同一系统的少量 source--frequency 复响应当作 prompts，先
 识别系统，再回答新的 excitation query。
 
-第一次阅读本项目，建议先看不要求波动或信号处理背景的
-[大白话故事与实验说明](docs/PBNO_STORY_PLAIN_LANGUAGE_ZH.md)。对当前方法为何显得零碎、如何统一成现代
-in-context operator 的判断与分阶段方案，见
-[PBNO 方法统一升级备忘录](docs/PBNO_METHOD_UNIFICATION_NEXT_ZH.md)；后者是待验证设计，不是已有结果。
+## 从哪里开始读
+
+| 目的 | 只需阅读 |
+|---|---|
+| 重新理解当前故事和未来选择 | [当前故事与路线图](docs/CURRENT_STORY_AND_ROADMAP_ZH.md) |
+| 用大白话理解 PBNO | [大白话故事与实验说明](docs/PBNO_STORY_PLAIN_LANGUAGE_ZH.md) |
+| 核对最新数字、消融与边界 | [M1 正式中文报告](reports/ACTIVE_WAVE_INTERROGATION_M1_ZH.md) |
+| 接手代码或设计新实验 | [当前状态](docs/CURRENT_STATUS_ZH.md)与 [AGENTS.md](AGENTS.md) |
+| 查历史正负结果 | [报告索引](reports/README.md)与[归档索引](docs/archive/INDEX_ZH.md) |
+
+当前建议很明确：先补一个外部 multistatic 数据域，把现有故事做完整；再用密集连续 action teacher 研究
+continuous query operator；只有 response-conditioned oracle 在两个域超过 15% 后，才启动 generative
+belief、flow 或 RL agent。不要同时铺开三条线。
 
 ## 2026-09-28 最新结果：Untouched Wave Interrogation + Learned Query Utility
 

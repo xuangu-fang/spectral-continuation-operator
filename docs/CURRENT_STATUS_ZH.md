@@ -1,7 +1,21 @@
 # 当前状态：Wave-System Representation
 
-> 更新日期：2026-09-28
+> 更新日期：2026-10-03
 > 用途：项目的一页式决策入口。数字细节见完整 POC 报告，旧路线见历史归档。
+
+> **叙事入口已统一：** 请先读
+> [当前故事、证据与未来路线图](CURRENT_STORY_AND_ROADMAP_ZH.md)。本页以下内容是按时间累积的技术状态，
+> 用于核对实验，不再承担未来计划的组织功能。
+
+## 2026-10-03 当前决策
+
+- 冻结主方法为 `PBNO operator belief + learned continuous proposal + analytic top-4 certification`；
+- 当前可支持 target-aware experimental design，不支持 arbitrary continuous query extrapolation 或
+  response-adaptive autonomous agent；
+- 近期唯一最高优先级是外部 multistatic 数据验证；
+- 下一项方法研究是密集连续 action teacher 上的 continuous query operator；
+- generative belief、flow 与 RL 必须等待两域 response-conditioned oracle gap 超过 15%；
+- 不继续扫描 utility、policy、proximal prior 或 nonlinear decoder 的宽度、深度与辅助 loss。
 
 ## 2026-09-28 当前结论：M1 三项任务完成
 

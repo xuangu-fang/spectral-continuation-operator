@@ -3,6 +3,8 @@
 > 日期：2026-09-28
 > 状态：三项阶段任务完成；IID 主效应与 learning-based pair-action utility 通过，严格坐标外推与 Ocean OOD 未通过
 > 主指标：逐 physical system 等权的 raw complex relative L2
+> 当前叙事、论文边界与后续路线统一见
+> [项目故事与路线图](../docs/CURRENT_STORY_AND_ROADMAP_ZH.md)。
 
 ## 1. 一句话结论
 

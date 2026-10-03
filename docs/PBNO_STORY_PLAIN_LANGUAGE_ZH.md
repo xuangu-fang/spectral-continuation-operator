@@ -1,6 +1,10 @@
 # PBNO / Wave as Prompt：大白话故事与实验说明
 
-> 更新日期：2026-09-26
+> 更新日期：2026-10-03
+> 本文解释 PBNO 的基础。项目已经进一步推进到 target-aware interrogation；完整的新故事、M1 结果与未来
+> 三条路线见 [当前故事、证据与未来路线图](CURRENT_STORY_AND_ROADMAP_ZH.md)。
+>
+> 原文更新日期：2026-09-26
 > 用途：给第一次接触项目的 AI 研究者、合作者和未来 Agent 阅读。公式与完整数字以
 > `reports/PBNO_M4_RISK_RESOLUTION_ZH.md` 为准。统一 composer 的最新边界见
 > `reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`：统一和严格 fallback 成立，但 learned correction 未通过。

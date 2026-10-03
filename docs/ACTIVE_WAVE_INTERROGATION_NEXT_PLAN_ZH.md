@@ -1,5 +1,9 @@
 # Target-Aware Wave Interrogation：下一阶段论文计划
 
+> **历史计划，不是当前 roadmap。** M1 已经执行完毕；2026-10-03 起的研究排序与新 gate 统一见
+> [当前故事、证据与未来路线图](CURRENT_STORY_AND_ROADMAP_ZH.md)。保留本文只是为了核对预注册项目与结果，
+> 后续 Agent 不得从本文直接启动旧 M1/M2 清单。
+
 > 日期：2026-09-27
 > 前置结果：先读 `reports/ACTIVE_WAVE_INTERROGATION_M0_ZH.md`
 > 目标：把强 POC 变成经得住“只是固定 schedule / classical design / test reuse”质疑的论文证据。

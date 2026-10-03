@@ -1,69 +1,55 @@
 # 报告导航
 
-- [`ACTIVE_WAVE_INTERROGATION_M1_ZH.md`](ACTIVE_WAVE_INTERROGATION_M1_ZH.md)：**当前最新主报告**；
-  untouched IID/OOD systems、七类 acquisition 强基线、物理成本、continuous learned utility、top-4
-  analytic certification，以及严格 coordinate holdout/Ocean OOD 的负边界。
+> 更新日期：2026-10-03。项目的当前故事、claim boundary 和未来排序统一见
+> [`docs/CURRENT_STORY_AND_ROADMAP_ZH.md`](../docs/CURRENT_STORY_AND_ROADMAP_ZH.md)。本目录是证据档案，
+> “保留”不等于“仍应继续优化”。
 
-- [`ACTIVE_WAVE_INTERROGATION_M0_ZH.md`](ACTIVE_WAVE_INTERROGATION_M0_ZH.md)：上一阶段报告；将 PBNO
-  learned operator belief 用于 target-aware source--frequency experimental design，包含三域 K=1/2/4/8
-  顺序结果、固定 schedule 强边界、learned metric/policy/evidence 的正负审计，以及可投稿 POC 与尚未完成
-  证据的明确区分。
+## 只读这三份
 
-- [`PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`](PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)：**当前最新方法
-  审计**；global-phase-equivariant complex operator prior、posterior-precision proximal projection、独立
-  receiver masks 的 12 个三 seed 正式点，以及最佳 2.93% 仍未过 5% gate 的 NO-GO 结论。
+1. [`ACTIVE_WAVE_INTERROGATION_M1_ZH.md`](ACTIVE_WAVE_INTERROGATION_M1_ZH.md)：**当前主报告**。包含
+   untouched IID/OOD systems、七类 acquisition baseline、成本轴、continuous learned utility、top-4
+   analytic certification，以及 strict coordinate holdout、速度和 Ocean OOD 的失败边界。
+2. [`ACTIVE_WAVE_INTERROGATION_M0_ZH.md`](ACTIVE_WAVE_INTERROGATION_M0_ZH.md)：主任务如何从固定 prompts
+   推进到 target-aware source--frequency experimental design。
+3. [`PBNO_M4_RISK_RESOLUTION_ZH.md`](PBNO_M4_RISK_RESOLUTION_ZH.md)：当前 operator belief 的来历、
+   spectral dictionary、第四物理域和统一 adapter。
 
-- [`HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md`](HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md)：**当前最新
-  表征升级边界**；不规则 receiver prompts、functional natural-parameter encoder、learned reranking、
-  nonlinear complex neural field，以及“representation capacity 不等于 sparse identifiability”的 NO-GO
-  结论。
+## 与当前方法直接相关的报告
 
-- [`PBNO_POSTERIOR_COMPOSER_M0_ZH.md`](PBNO_POSTERIOR_COMPOSER_M0_ZH.md)：**当前最新方法边界**；
-  posterior-initialized latent composer、strict adapter fallback、九轮结构迭代，以及 learned correction 在
-  calibration 为正但 unseen systems 失败的正式三 seed 结论。
+- [`PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：Bayesian tokenizer、
+  neural latent transport 与 posterior-kernel operator。
+- [`PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`](PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)：rank/compute
+  Pareto、receiver residual 修复和明确停止线。
+- [`PBNO_JOINT_QUERY_M1_ZH.md`](PBNO_JOINT_QUERY_M1_ZH.md)：strict joint source--frequency query 的早期结果。
+- [`WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md`](WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)：latent spectrum prior 与
+  三域强基线。
+- [`CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)：OpenFWI、Deepwave、
+  Ocean 的跨域 response-query POC。
 
-- [`PBNO_M4_RISK_RESOLUTION_ZH.md`](PBNO_M4_RISK_RESOLUTION_ZH.md)：**当前最新正式结果**；rank-16
-  spectral dictionary、第四个 structural-wave 域、现实 prompt noise、hard-router 负结果，以及三域
-  K=1/2/4/8 共享连续 prior adapter。
+## 已关闭的方法分支
 
-- [`PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：上一轮方法主体；
-  stable Bayesian tokenizer、neural latent transport、posterior-kernel operator、strict-Q3 三域三 seed、
-  OOD gate、matched CNP、continuous receiver 兼容性以及参数/存储/延迟。
+以下报告很重要，因为它们记录了**不应重复的实验**：
 
-- [`PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`](PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)：上一轮开发结论；
-  receiver residual 的尺度修复与停止线、principal-tail 负结果、posterior-latent memory 单域正信号，以及
-  Q2 三 seed accuracy--compute Pareto。
+- [`PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`](PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)：复数
+  operator prior 最佳增益 2.93%，未过 5% gate；不要继续扫容量。
+- [`HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md`](HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md)：
+  functional encoder、reranker 和 nonlinear neural field 均未把表征容量转化为 sparse identifiability。
+- [`PBNO_POSTERIOR_COMPOSER_M0_ZH.md`](PBNO_POSTERIOR_COMPOSER_M0_ZH.md)：learned correction 在 selection
+  为正、unseen systems 回退；只保留 zero-update fallback 接口。
+- [`MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：多分量 oracle 成立，但
+  fixed packet representation 未过 15% promotion gate。
+- [`WAVEBENCH_REPRESENTATION_M1_ZH.md`](WAVEBENCH_REPRESENTATION_M1_ZH.md)：公开 WaveBench 的正结果和
+  fixed complex-edge token 负结果。
+- [`WAVE_SET_OPERATOR_M0_ZH.md`](WAVE_SET_OPERATOR_M0_ZH.md)：可变 source--frequency budget 的 set
+  operator、noise/OOD 边界与失败预训练。
 
-- [`PBNO_JOINT_QUERY_M1_ZH.md`](PBNO_JOINT_QUERY_M1_ZH.md)：上一轮正式结果；strict joint
-  source--frequency query、global Bayesian operator、三 seed neural latent transport、Q2/Q3 hierarchy、
-  OOD safety 与未通过的顶会 gate。
+## 更早的科学探索
 
-- [`WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md`](WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)：早期解析基线结果；
-  latent spectrum prior、三域三 seed 强基线比较、probe saving、OOD 边界与 functional-rank 负结果。
+连续谱、可靠延拓视界、稀疏 calibration、局部 token 和独立多保真等早期工作已经压缩到
+[`docs/archive/INDEX_ZH.md`](../docs/archive/INDEX_ZH.md)。需要追溯某个结论时再读，不要把旧计划当成当前任务。
 
-- [`CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)：早期跨域结果；
-  OpenFWI、Deepwave、Ocean 的统一 response-query POC、response subspace、轻量 residual operator、
-  The Well 数据审计与 claim boundary。
+## 机器可读结果
 
-- [`IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md`](IN_CONTEXT_RESPONSE_QUERY_RQ1_ZH.md)：上一阶段结果；多静态阵列
-  response query、reciprocity routing、三 seed test 与 ellipse geometry OOD。
-
-- [`MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：当前最新结果；波长尺度
-  oracle、global-gauge complex Gram 方法、三 seed downstream 结果与未过 15% gate 的严格归因。
-- [`WAVEBENCH_REPRESENTATION_M1_ZH.md`](WAVEBENCH_REPRESENTATION_M1_ZH.md)：当前最新正式结果；公开
-  WaveBench 三 seed 独立验证、HarmoCore 方法归因、fixed complex-edge 负结果与 2D/3D/时空表示路线。
-- [`WAVE_SET_OPERATOR_M0_ZH.md`](WAVE_SET_OPERATOR_M0_ZH.md)：当前最新正式结果；shared slot set
-  operator、可变 source-frequency budget、三 seed matched baselines 与 noise/OOD 边界。
-
-## 当前主报告
-
-- [`WAVEFIELD_REPRESENTATION_POC_ZH.md`](WAVEFIELD_REPRESENTATION_POC_ZH.md)：当前 wave-system
-  representation POC，包含方法、matched comparison、OOD、噪声、分辨率和边界条件结果。
-
-快速判断项目状态请先读 [`docs/CURRENT_STATUS_ZH.md`](../docs/CURRENT_STATUS_ZH.md)。
-
-## 历史报告
-
-本目录其余报告均为已结束阶段的证据档案，不代表当前计划。它们覆盖连续谱状态、局部 token、稀疏
-校准、独立多保真、reliable horizon 与 actionable horizon。压缩结论和建议阅读路径见
-[`docs/archive/INDEX_ZH.md`](../docs/archive/INDEX_ZH.md)。
+- M1 summary：[`artifacts/active_wave_interrogation_m1_summary/summary.json`](../artifacts/active_wave_interrogation_m1_summary/summary.json)
+- 实验账本：[`docs/EXPERIMENT_LEDGER_ZH.md`](../docs/EXPERIMENT_LEDGER_ZH.md)
+- 当前状态：[`docs/CURRENT_STATUS_ZH.md`](../docs/CURRENT_STATUS_ZH.md)
