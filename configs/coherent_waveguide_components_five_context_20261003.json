@@ -1,0 +1,11 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [20261332, 20261333, 20261334, 20261335, 20261336, 20261337, 20261338, 20261339],
+  "range_count": 2049, "modes": 32,
+  "observed_frequencies": [60, 80, 100, 120, 140], "roi_min_range_m": 50,
+  "gauge": "boundary_derivative", "carriers": ["background_modal_phase", "diagonal_medium_phase"],
+  "component_oracles": true,
+  "hypothesis": "denser frequency context distinguishes undersampling from an intrinsically unsuitable carrier; compare only shared query frequencies against three-context result",
+  "stop_rule": "do not combine the different query sets as a matched budget curve; preserve all systems and primary ROI",
+  "evidence": "development classical sampling and component attribution, not a neural result"
+}

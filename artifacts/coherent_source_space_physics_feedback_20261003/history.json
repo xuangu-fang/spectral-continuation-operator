@@ -1,0 +1,149 @@
+[
+  {
+    "step": 1,
+    "train_batch_rms_error": 0.016929770932402003,
+    "validation_macro_error": 0.014309545522709544,
+    "gradient_norm": 0.0020449637437859698,
+    "seconds": 2.565445118583739
+  },
+  {
+    "step": 200,
+    "train_batch_rms_error": 0.015917847173514504,
+    "validation_macro_error": 0.014324463613081406,
+    "gradient_norm": 0.0010092368876313605,
+    "seconds": 4.240402985364199
+  },
+  {
+    "step": 400,
+    "train_batch_rms_error": 0.01841685596561496,
+    "validation_macro_error": 0.014270604598380287,
+    "gradient_norm": 0.0006690829706683483,
+    "seconds": 5.857769349589944
+  },
+  {
+    "step": 600,
+    "train_batch_rms_error": 0.013036954965398102,
+    "validation_macro_error": 0.014309600322981309,
+    "gradient_norm": 0.000587115820248553,
+    "seconds": 7.352982553653419
+  },
+  {
+    "step": 800,
+    "train_batch_rms_error": 0.015799745055337898,
+    "validation_macro_error": 0.014197616524808237,
+    "gradient_norm": 0.0006432488498790666,
+    "seconds": 8.849059502594173
+  },
+  {
+    "step": 1000,
+    "train_batch_rms_error": 0.015425333796387053,
+    "validation_macro_error": 0.01440612821265328,
+    "gradient_norm": 0.0005002482641235255,
+    "seconds": 10.382724069058895
+  },
+  {
+    "step": 1200,
+    "train_batch_rms_error": 0.01630671331863746,
+    "validation_macro_error": 0.014219873929901128,
+    "gradient_norm": 0.0005329918460283614,
+    "seconds": 11.95282968133688
+  },
+  {
+    "step": 1400,
+    "train_batch_rms_error": 0.01865250626399748,
+    "validation_macro_error": 0.014278721723598215,
+    "gradient_norm": 0.0005481138428000827,
+    "seconds": 13.510497253388166
+  },
+  {
+    "step": 1600,
+    "train_batch_rms_error": 0.01830739110525711,
+    "validation_macro_error": 0.014157325922506785,
+    "gradient_norm": 0.00047932726064857416,
+    "seconds": 15.106554152444005
+  },
+  {
+    "step": 1800,
+    "train_batch_rms_error": 0.01518872423034891,
+    "validation_macro_error": 0.014420980992406551,
+    "gradient_norm": 0.0004834200712303863,
+    "seconds": 16.93566644191742
+  },
+  {
+    "step": 2000,
+    "train_batch_rms_error": 0.014171381123674952,
+    "validation_macro_error": 0.014381634432651386,
+    "gradient_norm": 0.000675380094731615,
+    "seconds": 18.547120355069637
+  },
+  {
+    "step": 2200,
+    "train_batch_rms_error": 0.01741194256782187,
+    "validation_macro_error": 0.014438543832371887,
+    "gradient_norm": 0.0016563739223786108,
+    "seconds": 20.029711219482124
+  },
+  {
+    "step": 2400,
+    "train_batch_rms_error": 0.014786929074133877,
+    "validation_macro_error": 0.0143318259217292,
+    "gradient_norm": 0.0003743820157734609,
+    "seconds": 21.82267344649881
+  },
+  {
+    "step": 2600,
+    "train_batch_rms_error": 0.01581297269346389,
+    "validation_macro_error": 0.014825352331073979,
+    "gradient_norm": 0.000731830594781455,
+    "seconds": 23.364205107092857
+  },
+  {
+    "step": 2800,
+    "train_batch_rms_error": 0.0147788505504304,
+    "validation_macro_error": 0.01438250441588309,
+    "gradient_norm": 0.0008447792225664581,
+    "seconds": 25.044511826708913
+  },
+  {
+    "step": 3000,
+    "train_batch_rms_error": 0.010706397562798823,
+    "validation_macro_error": 0.014499443199827414,
+    "gradient_norm": 0.0003247673060736273,
+    "seconds": 26.56237609963864
+  },
+  {
+    "step": 3200,
+    "train_batch_rms_error": 0.017907061007785014,
+    "validation_macro_error": 0.01526281304429959,
+    "gradient_norm": 0.0008421291510246754,
+    "seconds": 28.088932280428708
+  },
+  {
+    "step": 3400,
+    "train_batch_rms_error": 0.01835277653358267,
+    "validation_macro_error": 0.014716378933163498,
+    "gradient_norm": 0.0010096965209858131,
+    "seconds": 29.616737441159785
+  },
+  {
+    "step": 3600,
+    "train_batch_rms_error": 0.015773117296976707,
+    "validation_macro_error": 0.014678356997867468,
+    "gradient_norm": 0.0005257395649019697,
+    "seconds": 31.083196707069874
+  },
+  {
+    "step": 3800,
+    "train_batch_rms_error": 0.017977743870119547,
+    "validation_macro_error": 0.014779317611372642,
+    "gradient_norm": 0.0008351005352870429,
+    "seconds": 32.515314552001655
+  },
+  {
+    "step": 4000,
+    "train_batch_rms_error": 0.012641569874197664,
+    "validation_macro_error": 0.014839268820064741,
+    "gradient_norm": 0.0006987641640886458,
+    "seconds": 34.052654289640486
+  }
+]

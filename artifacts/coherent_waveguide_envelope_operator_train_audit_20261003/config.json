@@ -1,0 +1,90 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "train_systems": [
+    20261300,
+    20261301,
+    20261302,
+    20261303,
+    20261304,
+    20261305,
+    20261306,
+    20261307,
+    20261308,
+    20261309,
+    20261310,
+    20261311,
+    20261312,
+    20261313,
+    20261314,
+    20261315,
+    20261316,
+    20261317,
+    20261318,
+    20261319,
+    20261320,
+    20261321,
+    20261322,
+    20261323,
+    20261324,
+    20261325,
+    20261326,
+    20261327,
+    20261328,
+    20261329,
+    20261330,
+    20261331
+  ],
+  "validation_systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "observed_frequencies": [
+    60,
+    100,
+    140
+  ],
+  "query_frequencies": [
+    70,
+    80,
+    90,
+    110,
+    120,
+    130
+  ],
+  "range_samples": 65,
+  "roi_min_range_m": 50,
+  "model": {
+    "width": 64,
+    "modes": 16,
+    "layers": 4
+  },
+  "seed": 42,
+  "steps": 4000,
+  "batch_size": 32,
+  "eval_every": 400,
+  "learning_rate": 0.0003,
+  "kernel_control": {
+    "bandwidths": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "ridges": [
+      1e-06,
+      0.0001,
+      0.01,
+      0.1
+    ]
+  },
+  "information": "R1/R2 observation-conditioned spectral codec: complete 60/100/140 complex fields and known stationary background only; no range-dependent medium parameters or target-frequency values in input",
+  "hypothesis": "accurate compact spatial envelopes exist (R0 .00156 at 65 profiles), but their spectral interpolation is inaccurate; a shared neural operator may learn coherent frequency-dependent interaction corrections from full context envelopes",
+  "control": "starts at cubic spectral interpolation; compare same-input train-only RBF residual regression with development tuning; known-full-SSP coarse propagation is an additional-information oracle, retained in a separate table",
+  "stop_rule": "first require training raw error below .05 and development improvement at least 20% over the strongest same-input control with raw below .10; do not expand data merely to hide a train-capacity failure; no formal test or 3-seed claim in this pilot",
+  "scope": "different information condition from known-PDE source-space tests; never merge scores or claim this FNO itself is novel"
+}

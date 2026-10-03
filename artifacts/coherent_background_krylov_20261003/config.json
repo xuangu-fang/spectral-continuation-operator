@@ -1,0 +1,36 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [
+    20261132,
+    20261133,
+    20261134,
+    20261135
+  ],
+  "observed_frequencies": [
+    6,
+    10,
+    14
+  ],
+  "query_frequencies": [
+    7,
+    11,
+    13
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "application_budgets": [
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    12,
+    16
+  ],
+  "hypothesis": "classical Krylov correction with the same background inverse may dominate learned source spaces; this must be excluded before an AI-method claim",
+  "stop_rule": "if a few classical applications already beat the proposed learned budget, pause solver-style source encoders rather than hide the baseline",
+  "evidence": "development; zero and same-context field-ROM starts; all query labels evaluation-only; near/far diagnostics do not alter primary ROI"
+}

@@ -1,0 +1,11 @@
+{
+  "pool": "artifacts/learned_wave_chart_r2_helmholtz_smallchart_20261003/development_query_pool.npz",
+  "components": [1, 2, 4], "ridge": 1e-8, "initial_epsilon": 1.25,
+  "steps": 200, "learning_rate": 0.03, "batch": 128, "seed": 42,
+  "objective": "marginal_likelihood",
+  "hypothesis": "one effective phase frame may conflate interfering wave branches; positive mixtures of independently curved carriers are a structural change, not a wider shared encoder",
+  "control": "same 64 observations, same query pool, ridge, 200 steps and context-only selection; one component must reproduce the previous strongest classical control; report increased geometry and computation",
+  "stop_rule": "if multiple carriers do not reduce context-only held-coordinate error by at least 20%, do not start shared-encoder training or branch-count sweeps; optional truth oracle only for mechanism attribution",
+  "novelty": "spectral-mixture/deep kernels are prior art; this is a bounded representation audit, not a new AI method claim",
+  "evidence": "development; all queries have same-frequency spatial observations, not frequency generation"
+}

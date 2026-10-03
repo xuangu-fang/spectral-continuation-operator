@@ -1,0 +1,32 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "range_count": 2049,
+  "modes": 32,
+  "observed_frequencies": [
+    60,
+    100,
+    140
+  ],
+  "roi_min_range_m": 50,
+  "gauge": "boundary_derivative",
+  "carriers": [
+    "raw",
+    "scalar_phase",
+    "background_modal_phase",
+    "diagonal_medium_phase"
+  ],
+  "component_oracles": true,
+  "hypothesis": "after canonical gauge and known-medium diagonal phase, cross-frequency modal envelope error may be dominated by residual coherent phase rather than amplitude; use truth replacements solely for attribution",
+  "stop_rule": "do not train an amplitude-only correction if phase remains dominant; no deployment claim for either oracle; no system removal",
+  "evidence": "development attribution, 8 unseen-by-training but opened development systems; no formal test"
+}

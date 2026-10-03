@@ -12,3 +12,11 @@ Generated from recorded solver/experiment arrays with `plot_coherent_progress.py
 `contrast_source_classical.png`：左图四个开发环境、六频，同六列源/场空间，细线为逐环境；右图两个环境
 三个非整数频率的独立257/513真值。全部为经典方法，没有神经学习增益。背景逆算子成本在主报告
 单独列出。由`plot_contrast_source_progress.py`读取真实JSON生成，没有挑选单个最好场。
+# Superseding classical controls, 2026-10-03
+
+`strong_controls_and_codec.png` is produced by `plot_coherent_strong_controls.py` from
+`coherent_background_krylov_20261003`, `coherent_waveguide_curve_codec_20261003`, and
+`coherent_waveguide_coarse_operator_20261003`. Three distinct information protocols
+are labelled separately. All panels are classical development controls, not neural
+gains. Application counts are not wall-clock speedup; R0 codec has same-frequency
+profile observations; operator transport has complete known medium/source.

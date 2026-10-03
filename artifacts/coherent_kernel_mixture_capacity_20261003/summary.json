@@ -1,0 +1,29 @@
+[
+  {
+    "components": 1,
+    "macro_error": 0.007247271152796782,
+    "seconds": 42.323588348925114,
+    "patches": 2048,
+    "steps": 200,
+    "objective": "marginal_likelihood",
+    "scope": "development per-instance audit; NOT shared learning or unseen-frequency generation; wall time under concurrent GPU jobs"
+  },
+  {
+    "components": 2,
+    "macro_error": 0.008415267015828674,
+    "seconds": 46.421179665252566,
+    "patches": 2048,
+    "steps": 200,
+    "objective": "marginal_likelihood",
+    "scope": "development per-instance audit; NOT shared learning or unseen-frequency generation; wall time under concurrent GPU jobs"
+  },
+  {
+    "components": 4,
+    "macro_error": 0.010201482882978796,
+    "seconds": 43.316401491872966,
+    "patches": 2048,
+    "steps": 200,
+    "objective": "marginal_likelihood",
+    "scope": "development per-instance audit; NOT shared learning or unseen-frequency generation; wall time under concurrent GPU jobs"
+  }
+]

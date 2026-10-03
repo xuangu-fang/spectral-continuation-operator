@@ -1,0 +1,24 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "range_count": 2049,
+  "observed_frequencies": [
+    60,
+    100,
+    140
+  ],
+  "roi_min_range_m": 50,
+  "hypothesis": "interpolating the known source-to-mode excitation across frequency wastes available physics; anchor to the exact known-source adiabatic response and interpolate only the coupling residual",
+  "control": "same full SSP and 3 context fields; adiabatic-only no-context control; source projection and evanescent attenuation exact in the local basis",
+  "stop_rule": "no neural novelty claim; local eigenproblem cost recorded; if residual remains large, do not reinterpret missing mode-coupling as just an amplitude interpolation defect",
+  "evidence": "development classical mechanism control, no query truth in inference"
+}

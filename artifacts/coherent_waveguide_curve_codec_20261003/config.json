@@ -1,0 +1,33 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "range_count": 2049,
+  "frequencies": [
+    70,
+    90,
+    110,
+    130
+  ],
+  "range_samples": [
+    17,
+    33,
+    65,
+    129,
+    257,
+    513
+  ],
+  "roi_min_range_m": 50,
+  "hypothesis": "a cheap stationary-modal or diagonal carrier may permit accurate low-resolution envelope storage, separating representational capacity from shared prediction before training a larger amortized model",
+  "control": "identical same-frequency complete depth profiles; raw modal coefficients versus demodulated coefficients; query coordinates exclude every fitted range",
+  "stop_rule": "do not train a shared encoder at a latent resolution whose R0 raw complex error exceeds .01; report medium metadata and carrier cost; no frequency-generation claim",
+  "evidence": "development classical R0 capacity/compression audit, not learned or blind spectral reconstruction"
+}

@@ -2,7 +2,11 @@ import numpy as np
 import torch
 
 from spectral_continuation.contrast_source_cache import base_transform, projected_coefficients
-from spectral_continuation.learned_source_space import SourceSpaceEncoder, physics_coefficients
+from spectral_continuation.learned_source_space import (
+    SourceSpaceEncoder,
+    physics_coefficients,
+    physics_feedback_features,
+)
 
 
 def test_source_encoder_initialization_and_complex_gradients():
@@ -30,3 +34,18 @@ def test_compressed_physics_solve_matches_numpy():
         torch.tensor(transform)[None],
     )
     np.testing.assert_allclose(result[0].numpy(), expected, atol=1e-12)
+
+
+def test_physics_feedback_is_target_free_and_zero_initial_models_keep_base():
+    torch.manual_seed(18)
+    a = torch.randn(2, 80, 60, dtype=torch.complex128)
+    h = a.mH @ a
+    g = torch.randn(2, 60, dtype=torch.complex128)
+    scales = torch.rand(2, 60, dtype=torch.float64) + 1
+    feedback = physics_feedback_features(h, g, scales)
+    assert feedback.shape == (2, 9, 13) and torch.isfinite(feedback).all()
+    features = torch.cat((torch.randn(2, 9, 9, dtype=torch.float64), feedback), dim=-1)
+    for kind in ["gradient_step", "physics_conditional"]:
+        model = SourceSpaceEncoder(kind, feature_dim=22).double()
+        expected = torch.tensor(base_transform(6, 10))[None].expand(2, -1, -1)
+        torch.testing.assert_close(model(features, scales), expected)

@@ -52,6 +52,34 @@ range-dependent waveguide data are complete (40 development systems); they omit 
 Modal eigenvector sign gauge was a real spectral-query pitfall; use the boundary-derivative convention, not target
 phase alignment. Read source-space POC, waveguide data docs and report section 9 before more architecture work.
 
+CRITICAL superseding control: PDE-gradient input only improves shared source-space to 0.014157 (~2.7%). On
+4 matched systems x frequencies 7/11/13, classical right-preconditioned GMRES from the same field-ROM initial
+guess reaches 0.001987 with 4 background inverse applications and 0.0003467 with 6, versus source-ROM 0.013523
+(6 candidate inverse applications plus background source). Stop source-space selector capacity scans. No fair
+end-to-end latency claim yet (batch vs sequential costs, setup/context and diagnostic overhead matter). Known-PDE
+accuracy is largely a classical solve here, not AI novelty. Reopening needs a new amortization/compression/query
+capability hypothesis with this strong control retained. Current next diagnostic is waveguide amplitude/phase
+component truth replacement, explicitly oracle-only, plus frequency-context density; no blind extrapolation.
+
+Waveguide follow-up completed: 8 dev systems, 3-context cubic spectral error .21258 (background frame), .14009
+(full-medium diagonal phase), .09241 (range-local modal frame), .08327 (source-anchored residual). Both modal
+amplitude and phase contribute; neither oracle alone fixes the query. Complete known-medium classical coarse
+matrix transport is far stronger: 32/64 cells -> .002821/.000649, no context fields required. This is a reduced
+solver, NOT learned representation novelty. Source-linear/passive behavior is tested within the one-way model.
+R0 SAME-FREQUENCY profile codec with cheap background frame is .00156 at 65 profiles and .000372 at 129;
+raw curves alias badly at that spacing. Do not use this aliasing control as the sole neural baseline. Main open
+question remains prediction of compact envelopes / coupling, not their value capacity. Keep known-full-medium
+and observation-only spectral-codec protocols separate; never remove physics inputs silently to hide strong solvers.
+Bounded multi-phase-kernel audit also failed: 1/2/4 context-optimized components .007247/.008415/.010201.
+No shared mixture training or more branch-count sweeps under unchanged information. See report section 11.
+
+Observation-only spectral codec FNO pilot now failed: only stationary background + 3 context fields, no full SSP.
+Cubic .212574, tuned same-input RBF residual regressor .211940; final FNO dev .310725, best remains step 0.
+Exact same-seed rerun with last-state diagnostics reproduces the trajectory; last train .105016 (> .05 gate).
+Do NOT launch the prepared 512-system modal training cache merely because its config exists. It is ungenerated.
+First test whether one carrier per output mode hides multiple propagation phases under coupling, or other
+capacity/conditioning diagnostics. New data require a passed training-capacity gate or a genuinely new hypothesis.
+
 `coherent_representation.py`, `learned_wave_chart.py`, `learned_coherent_kernel.py`,
 `coherent_helmholtz_data.py`, `generate_coherent_ocean.py`, their `audit_*`/`evaluate_coherent_*` drivers,
 dated `configs/*coherent*20261003.json` and `configs/learned_wave_chart*20261003.json`.

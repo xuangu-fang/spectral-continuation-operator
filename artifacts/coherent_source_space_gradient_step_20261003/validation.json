@@ -1,0 +1,530 @@
+[
+  {
+    "system": 20261132,
+    "frequency": 7,
+    "complex_rel_l2": 0.02715683039079326,
+    "baseline": {
+      "base6": 0.027419583219581916,
+      "source_pod6": 0.13186890169306245,
+      "full60": 0.01660525046750472
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261132,
+    "frequency": 8,
+    "complex_rel_l2": 0.0204508625388738,
+    "baseline": {
+      "base6": 0.02061469928768413,
+      "source_pod6": 0.15370987445058898,
+      "full60": 0.011583604419895041
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261132,
+    "frequency": 9,
+    "complex_rel_l2": 0.010952670357736677,
+    "baseline": {
+      "base6": 0.010915189438380223,
+      "source_pod6": 0.1818612378511687,
+      "full60": 0.006184971700858202
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261132,
+    "frequency": 11,
+    "complex_rel_l2": 0.0072891693771322255,
+    "baseline": {
+      "base6": 0.006871408067351017,
+      "source_pod6": 0.23291357844748156,
+      "full60": 0.0038323921499309656
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261132,
+    "frequency": 12,
+    "complex_rel_l2": 0.007214809814094094,
+    "baseline": {
+      "base6": 0.006779717599980785,
+      "source_pod6": 0.2533075954622824,
+      "full60": 0.003000951547394598
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261132,
+    "frequency": 13,
+    "complex_rel_l2": 0.004596498671676635,
+    "baseline": {
+      "base6": 0.00382956673858658,
+      "source_pod6": 0.26137945155635117,
+      "full60": 0.001535694108818201
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261133,
+    "frequency": 7,
+    "complex_rel_l2": 0.03790124343635759,
+    "baseline": {
+      "base6": 0.038940244669937035,
+      "source_pod6": 0.06627139638390835,
+      "full60": 0.021135447355716295
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261133,
+    "frequency": 8,
+    "complex_rel_l2": 0.02434725251587387,
+    "baseline": {
+      "base6": 0.024701705506499,
+      "source_pod6": 0.06068132788494974,
+      "full60": 0.015707498727540074
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261133,
+    "frequency": 9,
+    "complex_rel_l2": 0.01360386538035143,
+    "baseline": {
+      "base6": 0.013825344491541365,
+      "source_pod6": 0.056415688542199,
+      "full60": 0.00903027590750164
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261133,
+    "frequency": 11,
+    "complex_rel_l2": 0.008039118652688571,
+    "baseline": {
+      "base6": 0.008325438159851926,
+      "source_pod6": 0.05973681149659474,
+      "full60": 0.005192772811164992
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261133,
+    "frequency": 12,
+    "complex_rel_l2": 0.006104250336638257,
+    "baseline": {
+      "base6": 0.006155915178986351,
+      "source_pod6": 0.06082280630693276,
+      "full60": 0.003576166341199977
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261133,
+    "frequency": 13,
+    "complex_rel_l2": 0.0034966292450404604,
+    "baseline": {
+      "base6": 0.0032093203301206347,
+      "source_pod6": 0.060806992195154945,
+      "full60": 0.0020292876884156117
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261134,
+    "frequency": 7,
+    "complex_rel_l2": 0.021069476971346732,
+    "baseline": {
+      "base6": 0.021804721572512845,
+      "source_pod6": 0.046916588657699335,
+      "full60": 0.011555659564564714
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261134,
+    "frequency": 8,
+    "complex_rel_l2": 0.013177835137685025,
+    "baseline": {
+      "base6": 0.013540799957574462,
+      "source_pod6": 0.03935716166860341,
+      "full60": 0.00709343730100299
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261134,
+    "frequency": 9,
+    "complex_rel_l2": 0.007854485882428722,
+    "baseline": {
+      "base6": 0.008361788140067803,
+      "source_pod6": 0.03920554349198758,
+      "full60": 0.0040136051150987135
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261134,
+    "frequency": 11,
+    "complex_rel_l2": 0.004459438426267522,
+    "baseline": {
+      "base6": 0.004999693877321468,
+      "source_pod6": 0.04551565423673264,
+      "full60": 0.002750315948180892
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261134,
+    "frequency": 12,
+    "complex_rel_l2": 0.00296416037105606,
+    "baseline": {
+      "base6": 0.0033824600897072177,
+      "source_pod6": 0.04708312894850079,
+      "full60": 0.0019327402059111894
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261134,
+    "frequency": 13,
+    "complex_rel_l2": 0.0020977781970483687,
+    "baseline": {
+      "base6": 0.0018653561753054575,
+      "source_pod6": 0.048136983287920924,
+      "full60": 0.0014464020664422938
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261135,
+    "frequency": 7,
+    "complex_rel_l2": 0.03477919536093132,
+    "baseline": {
+      "base6": 0.0356107015569512,
+      "source_pod6": 0.048192698432612514,
+      "full60": 0.019495714440812446
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261135,
+    "frequency": 8,
+    "complex_rel_l2": 0.020360653549148962,
+    "baseline": {
+      "base6": 0.020979529811236883,
+      "source_pod6": 0.045253773846506896,
+      "full60": 0.01111303843864597
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261135,
+    "frequency": 9,
+    "complex_rel_l2": 0.010865065231758026,
+    "baseline": {
+      "base6": 0.01110727641880615,
+      "source_pod6": 0.045874222818511244,
+      "full60": 0.006723684006189752
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261135,
+    "frequency": 11,
+    "complex_rel_l2": 0.007015731732116585,
+    "baseline": {
+      "base6": 0.006946383126732049,
+      "source_pod6": 0.0492220428160688,
+      "full60": 0.004018632806458916
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261135,
+    "frequency": 12,
+    "complex_rel_l2": 0.004963835036667983,
+    "baseline": {
+      "base6": 0.005084795746771529,
+      "source_pod6": 0.05128652666995921,
+      "full60": 0.0027590547952197043
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261135,
+    "frequency": 13,
+    "complex_rel_l2": 0.00270906086694678,
+    "baseline": {
+      "base6": 0.0024540086448946972,
+      "source_pod6": 0.05259853276802366,
+      "full60": 0.0016080481329353406
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261136,
+    "frequency": 7,
+    "complex_rel_l2": 0.04582043285282917,
+    "baseline": {
+      "base6": 0.04631714143965265,
+      "source_pod6": 0.11208670787296426,
+      "full60": 0.025787094036899365
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261136,
+    "frequency": 8,
+    "complex_rel_l2": 0.02951821888309052,
+    "baseline": {
+      "base6": 0.030181935135602567,
+      "source_pod6": 0.12579822663142892,
+      "full60": 0.01437339013578203
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261136,
+    "frequency": 9,
+    "complex_rel_l2": 0.01447024933659489,
+    "baseline": {
+      "base6": 0.014798092916882867,
+      "source_pod6": 0.13217568833497173,
+      "full60": 0.008564024638664142
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261136,
+    "frequency": 11,
+    "complex_rel_l2": 0.01370779688546813,
+    "baseline": {
+      "base6": 0.013616796229779127,
+      "source_pod6": 0.13937397455911035,
+      "full60": 0.008402296213854523
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261136,
+    "frequency": 12,
+    "complex_rel_l2": 0.013877114627626143,
+    "baseline": {
+      "base6": 0.01391219229226335,
+      "source_pod6": 0.13020103236542435,
+      "full60": 0.007879774182851648
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261136,
+    "frequency": 13,
+    "complex_rel_l2": 0.011007177414334322,
+    "baseline": {
+      "base6": 0.010726840942555573,
+      "source_pod6": 0.13093486227497853,
+      "full60": 0.006444666662852693
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261137,
+    "frequency": 7,
+    "complex_rel_l2": 0.04254872427198417,
+    "baseline": {
+      "base6": 0.043250923930511345,
+      "source_pod6": 0.06334232400190573,
+      "full60": 0.026419200118584184
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261137,
+    "frequency": 8,
+    "complex_rel_l2": 0.026369293742324062,
+    "baseline": {
+      "base6": 0.02638240319746236,
+      "source_pod6": 0.060258315014985596,
+      "full60": 0.01660542434755908
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261137,
+    "frequency": 9,
+    "complex_rel_l2": 0.014134264111890955,
+    "baseline": {
+      "base6": 0.014463421394350485,
+      "source_pod6": 0.05204109585900784,
+      "full60": 0.008617809939938968
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261137,
+    "frequency": 11,
+    "complex_rel_l2": 0.0076011895085411965,
+    "baseline": {
+      "base6": 0.00824579392627953,
+      "source_pod6": 0.05588064555211824,
+      "full60": 0.004329986085249636
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261137,
+    "frequency": 12,
+    "complex_rel_l2": 0.005056921664476353,
+    "baseline": {
+      "base6": 0.005631013288160153,
+      "source_pod6": 0.058470536088982415,
+      "full60": 0.003495686853658343
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261137,
+    "frequency": 13,
+    "complex_rel_l2": 0.0029582935105355672,
+    "baseline": {
+      "base6": 0.00282409446559698,
+      "source_pod6": 0.06008286804816312,
+      "full60": 0.0018680046119165814
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261138,
+    "frequency": 7,
+    "complex_rel_l2": 0.02788010197361052,
+    "baseline": {
+      "base6": 0.028560354490087713,
+      "source_pod6": 0.07668294283864706,
+      "full60": 0.00997053108672157
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261138,
+    "frequency": 8,
+    "complex_rel_l2": 0.016283557990573384,
+    "baseline": {
+      "base6": 0.016457966771185654,
+      "source_pod6": 0.07224043359017804,
+      "full60": 0.008169105005799444
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261138,
+    "frequency": 9,
+    "complex_rel_l2": 0.008495823445069833,
+    "baseline": {
+      "base6": 0.008770538829088407,
+      "source_pod6": 0.07062714428923328,
+      "full60": 0.004496246775865446
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261138,
+    "frequency": 11,
+    "complex_rel_l2": 0.0055992779008553345,
+    "baseline": {
+      "base6": 0.005716770794009969,
+      "source_pod6": 0.06747676265764523,
+      "full60": 0.003207912129816305
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261138,
+    "frequency": 12,
+    "complex_rel_l2": 0.0052897811019549735,
+    "baseline": {
+      "base6": 0.005334408490414564,
+      "source_pod6": 0.06592663261739737,
+      "full60": 0.0028072361696766094
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261138,
+    "frequency": 13,
+    "complex_rel_l2": 0.0034763699918146027,
+    "baseline": {
+      "base6": 0.0032386919292183938,
+      "source_pod6": 0.06394764138646974,
+      "full60": 0.0017745827969725162
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261139,
+    "frequency": 7,
+    "complex_rel_l2": 0.03752480097059173,
+    "baseline": {
+      "base6": 0.037842962009249206,
+      "source_pod6": 0.08617685293013932,
+      "full60": 0.022016751321915475
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261139,
+    "frequency": 8,
+    "complex_rel_l2": 0.021984056520095545,
+    "baseline": {
+      "base6": 0.02211310629351411,
+      "source_pod6": 0.0754809534620076,
+      "full60": 0.014873497430196997
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261139,
+    "frequency": 9,
+    "complex_rel_l2": 0.015441113554245576,
+    "baseline": {
+      "base6": 0.015705727010998097,
+      "source_pod6": 0.07778730436469769,
+      "full60": 0.009100489372475696
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261139,
+    "frequency": 11,
+    "complex_rel_l2": 0.009009542928631674,
+    "baseline": {
+      "base6": 0.009213767506698993,
+      "source_pod6": 0.08797459123832109,
+      "full60": 0.004809220967999025
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261139,
+    "frequency": 12,
+    "complex_rel_l2": 0.004550092316550395,
+    "baseline": {
+      "base6": 0.0046817203632061825,
+      "source_pod6": 0.09287484619760109,
+      "full60": 0.003245850995480815
+    },
+    "target_frequency_observations": 0
+  },
+  {
+    "system": 20261139,
+    "frequency": 13,
+    "complex_rel_l2": 0.0027535875224415163,
+    "baseline": {
+      "base6": 0.002528284819986297,
+      "source_pod6": 0.0958573156471214,
+      "full60": 0.001671848950614311
+    },
+    "target_frequency_observations": 0
+  }
+]

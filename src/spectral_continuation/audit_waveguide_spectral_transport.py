@@ -59,12 +59,73 @@ def diagonal_medium_phase(spec, frequency, ranges, vectors):
     return cumulative_trapezoid(kr, x=ranges, axis=0, initial=0)
 
 
+def component_replacement(prediction, target, component):
+    """QUERY-TRUTH ORACLE: isolate coefficient magnitude versus phase error.
+
+    No phase alignment is optimized. Zero coefficients use unit phase only to
+    define the intervention; this is not a deployable correction.
+    """
+    if component == "amplitude":
+        return abs(target) * np.exp(1j * np.angle(prediction))
+    if component == "phase":
+        return abs(prediction) * np.exp(1j * np.angle(target))
+    raise ValueError(component)
+
+
+def local_modal_frame(spec, frequency, ranges, modes, return_decay=False):
+    """Known-full-medium local eigenbasis. Classical, not a cheap learned encoder.
+
+    Surface-derivative sign fixes the real eigenvector gauge. Integrating the
+    real wavenumber does not invert evanescent decay. Range derivatives of the
+    basis (mode coupling) are deliberately left in the encoded envelope.
+    """
+    z, weights, basis = quadrature(spec, modes, 160)
+    speed = sound_speed(spec, ranges[:, None], z[None])
+    vertical = np.einsum(
+        "zm,rz,zn->rmn", basis, weights[None] * (2 * np.pi * frequency / speed) ** 2, basis
+    )
+    kz = (np.arange(modes) + 0.5) * np.pi / spec["depth_m"]
+    vertical -= np.diag(kz**2)[None]
+    values, vectors = np.linalg.eigh(vertical)
+    signs = np.sign(np.einsum("m,rmn->rn", kz, vectors))
+    vectors *= np.where(signs == 0, 1, signs)[:, None]
+    kr = np.sqrt(values.astype(complex))
+    phase = cumulative_trapezoid(kr.real, x=ranges, axis=0, initial=0)
+    if return_decay:
+        decay = cumulative_trapezoid(kr.imag, x=ranges, axis=0, initial=0)
+        decay += spec["attenuation_per_m"] * ranges[:, None]
+        return phase, vectors, np.exp(-decay)
+    return phase, vectors
+
+
+def modal_projection(coefficients, vectors, inverse=False):
+    if vectors.ndim == 2:
+        return coefficients @ (vectors.T if inverse else vectors)
+    if inverse:
+        return np.einsum("rn,rmn->rm", coefficients, vectors)
+    return np.einsum("rm,rmn->rn", coefficients, vectors)
+
+
+def carrier_frame(spec, frequency, ranges, modes, family, gauge):
+    if family == "local_modal_phase":
+        return local_modal_frame(spec, frequency, ranges, modes)
+    kr, vectors = background_modal_carrier(spec, frequency, modes, gauge)
+    phase = (
+        diagonal_medium_phase(spec, frequency, ranges, vectors)
+        if family == "diagonal_medium_phase"
+        else ranges[:, None] * kr[None]
+    )
+    return phase, vectors
+
+
 def run(config, output):
     output.mkdir(parents=True, exist_ok=True)
     (output / "config.json").write_text(json.dumps(config, indent=2))
     rows = []
     for system in config["systems"]:
-        with np.load(Path(config["data"]) / f"system{system}_m32_r1025.npz") as z:
+        modes = config.get("modes", 32)
+        range_count = config.get("range_count", 1025)
+        with np.load(Path(config["data"]) / f"system{system}_m{modes}_r{range_count}.npz") as z:
             fields, frequencies, ranges, depths = (
                 z["field"],
                 z["frequencies_hz"],
@@ -74,7 +135,10 @@ def run(config, output):
             spec = json.loads(str(z["spec"]))
         observed = np.flatnonzero(np.isin(frequencies, config["observed_frequencies"]))
         queries = np.flatnonzero(~np.isin(frequencies, config["observed_frequencies"]))
-        modes = 32
+        if "query_frequencies" in config:
+            if np.isin(config["query_frequencies"], frequencies[observed]).any():
+                raise ValueError("query frequencies overlap observed context")
+            queries = np.flatnonzero(np.isin(frequencies, config["query_frequencies"]))
         context = np.stack(
             [encode_field(fields[i], depths, spec["depth_m"], modes) for i in observed]
         )
@@ -90,15 +154,10 @@ def run(config, output):
                         -2j * np.pi * fi / spec["reference_speed_m_s"] * ranges[:, None]
                     )
                 else:
-                    kr, vectors = background_modal_carrier(
-                        spec, fi, modes, config.get("gauge", "largest_component")
+                    phase, vectors = carrier_frame(
+                        spec, fi, ranges, modes, family, config.get("gauge", "largest_component")
                     )
-                    phase = (
-                        diagonal_medium_phase(spec, fi, ranges, vectors)
-                        if family == "diagonal_medium_phase"
-                        else ranges[:, None] * kr[None]
-                    )
-                    envelope = (context[ci] @ vectors) * np.exp(-1j * phase)
+                    envelope = modal_projection(context[ci], vectors) * np.exp(-1j * phase)
                 envelopes.append(envelope)
             envelopes = np.stack(envelopes)
             for interpolation in ["linear", "cubic"]:
@@ -117,15 +176,17 @@ def run(config, output):
                             2j * np.pi * frequency / spec["reference_speed_m_s"] * ranges[:, None]
                         )
                     else:
-                        kr, vectors = background_modal_carrier(
-                            spec, frequency, modes, config.get("gauge", "largest_component")
+                        phase, vectors = carrier_frame(
+                            spec,
+                            frequency,
+                            ranges,
+                            modes,
+                            family,
+                            config.get("gauge", "largest_component"),
                         )
-                        phase = (
-                            diagonal_medium_phase(spec, frequency, ranges, vectors)
-                            if family == "diagonal_medium_phase"
-                            else ranges[:, None] * kr[None]
+                        prediction_modes = modal_projection(
+                            envelope * np.exp(1j * phase), vectors, inverse=True
                         )
-                        prediction_modes = (envelope * np.exp(1j * phase)) @ vectors.T
                     prediction = depth_readout @ prediction_modes.T
                     rows.append(
                         {
@@ -133,10 +194,35 @@ def run(config, output):
                             "frequency": frequency,
                             "method": family + "_" + interpolation,
                             "target_frequency_observations": 0,
-                            "information": "complete context fields; known full SSP for diagonal_medium_phase, stationary background SSP for other carriers; no target samples",
+                            "information": "complete context fields; known full SSP for diagonal/local modal phase, stationary background SSP for other carriers; no target samples",
                             **complex_metrics(prediction[:, roi], fields[qi][:, roi]),
                         }
                     )
+                    if config.get("component_oracles", False) and family in [
+                        "background_modal_phase",
+                        "diagonal_medium_phase",
+                        "local_modal_phase",
+                    ]:
+                        # Query truth is accessed only below, AFTER prediction.
+                        target_modes = encode_field(fields[qi], depths, spec["depth_m"], modes)
+                        target_envelope = modal_projection(target_modes, vectors) * np.exp(
+                            -1j * phase
+                        )
+                        for component in ["amplitude", "phase"]:
+                            replaced = component_replacement(envelope, target_envelope, component)
+                            oracle_modes = modal_projection(
+                                replaced * np.exp(1j * phase), vectors, inverse=True
+                            )
+                            oracle_field = depth_readout @ oracle_modes.T
+                            rows.append(
+                                {
+                                    "system": system,
+                                    "frequency": frequency,
+                                    "method": family + "_" + interpolation + "_truth_" + component,
+                                    "scope": "query-truth component replacement oracle; NOT deployable",
+                                    **complex_metrics(oracle_field[:, roi], fields[qi][:, roi]),
+                                }
+                            )
             print(
                 json.dumps(
                     {

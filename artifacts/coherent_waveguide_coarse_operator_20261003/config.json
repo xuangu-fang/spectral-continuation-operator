@@ -1,0 +1,35 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "range_count": 2049,
+  "modes": 32,
+  "cells": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "query_frequencies": [
+    70,
+    80,
+    90,
+    110,
+    120,
+    130
+  ],
+  "roi_min_range_m": 50,
+  "hypothesis": "encoding the frequency-affine local operator and retaining coherent matrix mode mixing can resolve rapid spatial phase using a latent range scale tied to medium variation, not output pixels",
+  "control": "same known full SSP/source as previous modal carriers; this method needs no context fields; compare full coherent mixing against adiabatic approximation, while reporting latent size and all computation",
+  "stop_rule": "classical representation result only; even high accuracy does not establish a neural encoder, arbitrary-medium Helmholtz generalization, or new theory",
+  "evidence": "development numerical experiment within declared one-way waveguide model"
+}

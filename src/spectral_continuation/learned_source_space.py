@@ -25,14 +25,16 @@ def source_transform(raw, scales, bounded=True):
 
 
 class SourceSpaceEncoder(nn.Module):
-    def __init__(self, kind="conditional", branches=6, patches=9, width=64):
+    def __init__(self, kind="conditional", branches=6, patches=9, width=64, feature_dim=9):
         super().__init__()
         self.kind, self.branches, self.patches = kind, branches, patches
         if kind == "global":
             self.raw = nn.Parameter(torch.zeros(patches, branches * 2))
-        elif kind == "conditional":
+        elif kind == "gradient_step":
+            self.step = nn.Parameter(torch.zeros(()))
+        elif kind in ("conditional", "physics_conditional"):
             self.encoder = nn.Sequential(
-                nn.Linear(9, width), nn.Tanh(), nn.Linear(width, width), nn.Tanh()
+                nn.Linear(feature_dim, width), nn.Tanh(), nn.Linear(width, width), nn.Tanh()
             )
             self.decoder = nn.Sequential(
                 nn.Linear(2 * width, width), nn.Tanh(), nn.Linear(width, branches * 2)
@@ -46,6 +48,8 @@ class SourceSpaceEncoder(nn.Module):
         batch = features.shape[0]
         if self.kind == "global":
             raw = self.raw[None].expand(batch, -1, -1)
+        elif self.kind == "gradient_step":
+            raw = -self.step * features[:, :, 9:21]
         else:
             local = self.encoder(features)
             pooled = local.mean(dim=1, keepdim=True).expand_as(local)
@@ -73,6 +77,26 @@ def squared_error(item, coefficients):
     return (quadratic - 2 * linear + item["e"]).clamp_min(0) / item["target_norm2"]
 
 
+def physics_feedback_features(h, g, scales):
+    """Known-PDE source-modulation sensitivity; no target Q/t/e argument.
+
+    Current implementation uses the full cache. A cheaper physical-adjoint online
+    realization must be independently verified before claiming a cost advantage.
+    """
+    with torch.enable_grad():
+        raw = torch.zeros(len(h), 9, 12, dtype=torch.float64, device=h.device, requires_grad=True)
+        transform = source_transform(raw, scales)
+        coeff = physics_coefficients(h, g, transform)
+        value = (coeff.conj() * (h @ coeff[..., None]).squeeze(-1)).sum(-1).real - 2 * (
+            coeff.conj() * g
+        ).sum(-1).real
+        gradient = torch.autograd.grad(value.sum(), raw)[0]
+    rms = gradient.square().mean(dim=(1, 2), keepdim=True).sqrt().clamp_min(1e-30)
+    normalized = (gradient / rms).clamp(-8, 8)
+    magnitude = (rms.log10() / 10).expand(-1, 9, 1)
+    return torch.cat((normalized, magnitude), dim=-1).detach()
+
+
 def load_cache(config, systems, device):
     values = []
     metadata = []
@@ -87,9 +111,13 @@ def load_cache(config, systems, device):
                     }
                 )
                 metadata.append(json.loads(str(z["metadata"])))
-    return {
+    result = {
         key: torch.tensor(np.stack([v[key] for v in values]), device=device) for key in values[0]
-    }, metadata
+    }
+    if config.get("physics_feedback", False):
+        feedback = physics_feedback_features(result["H"], result["g"], result["scales"])
+        result["features"] = torch.cat((result["features"], feedback), dim=-1)
+    return result, metadata
 
 
 @torch.no_grad()
@@ -120,7 +148,13 @@ def run(config, output):
     started = time.perf_counter()
     train, train_meta = load_cache(config, config["train_systems"], device)
     val, val_meta = load_cache(config, config["validation_systems"], device)
-    model = SourceSpaceEncoder(config["kind"], width=config.get("width", 64)).double().to(device)
+    model = (
+        SourceSpaceEncoder(
+            config["kind"], width=config.get("width", 64), feature_dim=train["features"].shape[-1]
+        )
+        .double()
+        .to(device)
+    )
     optimizer = torch.optim.Adam(model.parameters(), lr=config["learning_rate"])
     initial = evaluate(model, val, val_meta, config["ridge"])
     (output / "initial_validation.json").write_text(json.dumps(initial, indent=2))
