@@ -1,0 +1,16 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_medium_20261004/config.json",
+  "source_results": "artifacts/coherent_waveguide_spectral_medium_20261004/results.json",
+  "analytic_basis_config": "configs/coherent_waveguide_spectral_exact_basis_dev_20261004.json",
+  "systems": [
+    20264600,
+    20264601,
+    20264602,
+    20264603,
+    20264604,
+    20264605,
+    20264606,
+    20264607
+  ],
+  "scope": "POSTHOC extra-information true-test-medium projection into first-order analytic spectral basis; old8 development; capacity only, not a deployable inverse or strict best-response bound"
+}
