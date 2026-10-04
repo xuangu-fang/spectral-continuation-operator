@@ -29,6 +29,9 @@ def encode_field(field, depths, depth, modes):
 def background_modal_carrier(spec, frequency, modes, gauge="largest_component"):
     background = json.loads(json.dumps(spec))
     background["contrasts_m_s"] = [0.0] * len(background["contrasts_m_s"])
+    if "spectral_coefficients_m_s" in background:
+        count = len(background["spectral_coefficients_m_s"])
+        background["spectral_coefficients_m_s"] = [[0.0] * count for _ in range(count)]
     z, weights, basis = quadrature(background, modes, 160)
     kr, vectors = local_generator(background, frequency, 0.0, z, weights, basis)
     # Align eigenvector signs using the largest fixed-basis component, without

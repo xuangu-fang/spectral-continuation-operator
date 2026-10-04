@@ -25,7 +25,12 @@ from .coherent_waveguide_data import quadrature, sound_speed
 
 
 def background_spec(spec):
-    return {**spec, "contrasts_m_s": [0.0] * len(spec["contrasts_m_s"])}
+    background = {**spec, "contrasts_m_s": [0.0] * len(spec["contrasts_m_s"])}
+    if "spectral_coefficients_m_s" in spec:
+        background["spectral_coefficients_m_s"] = np.zeros_like(
+            spec["spectral_coefficients_m_s"], dtype=float
+        )
+    return background
 
 
 def generator_geometry(spec, cells=64, depth_terms=16, modes=32, quadrature_nodes=160):

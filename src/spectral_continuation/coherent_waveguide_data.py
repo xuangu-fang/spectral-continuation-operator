@@ -40,6 +40,27 @@ def environment(seed):
     }
 
 
+def spectral_environment(seed, terms=16, perturbation_rms_m_s=15.0):
+    """Correlated random medium with 256 hidden coefficients, not three Gaussians."""
+    if terms < 2 or perturbation_rms_m_s <= 0:
+        raise ValueError("positive perturbation and at least two terms required")
+    spec = environment(seed)
+    spec["contrasts_m_s"] = [0.0] * 3
+    rng = np.random.default_rng(seed + 1_000_000)
+    indices = np.arange(terms)
+    taper = np.exp(-0.5 * (indices / 5.0) ** 2)
+    coefficients = rng.standard_normal((terms, terms)) * taper[:, None] * taper[None]
+    coefficients[0, 0] = 0.0
+    range_basis = np.cos(np.pi * np.linspace(0, 1, 128)[:, None] * indices)
+    depth_basis_values = np.cos(np.pi * np.linspace(0, 1, 128)[:, None] * indices)
+    sample = range_basis @ coefficients @ depth_basis_values.T
+    coefficients *= perturbation_rms_m_s / np.sqrt(np.mean(sample**2))
+    spec["spectral_coefficients_m_s"] = coefficients.tolist()
+    spec["spectral_family"] = "correlated_cosine_16x16"
+    spec["spectral_perturbation_rms_m_s"] = float(perturbation_rms_m_s)
+    return spec
+
+
 def sound_speed(spec, ranges, depths):
     rr, zz = np.broadcast_arrays(np.asarray(ranges), np.asarray(depths))
     speed = spec["reference_speed_m_s"] - spec["thermocline_amplitude_m_s"] * np.tanh(
@@ -51,6 +72,39 @@ def sound_speed(spec, ranges, depths):
         speed = speed + contrast * np.exp(
             -0.5 * ((rr - center[0]) / width[0]) ** 2 - 0.5 * ((zz - center[1]) / width[1]) ** 2
         )
+    if "spectral_coefficients_m_s" in spec:
+        coefficients = np.asarray(spec["spectral_coefficients_m_s"], float)
+        range_modes, depth_modes = coefficients.shape
+        range_input, depth_input = np.asarray(ranges), np.asarray(depths)
+        if (
+            range_input.ndim == 2
+            and depth_input.ndim == 2
+            and range_input.shape[1] == 1
+            and depth_input.shape[0] == 1
+        ):
+            range_basis_values = np.cos(
+                np.pi
+                * range_input[:, 0, None]
+                / spec["range_m"]
+                * np.arange(range_modes)[None]
+            )
+            depth_basis_values = np.cos(
+                np.pi
+                * depth_input[0, :, None]
+                / spec["depth_m"]
+                * np.arange(depth_modes)[None]
+            )
+            speed = speed + range_basis_values @ coefficients @ depth_basis_values.T
+        else:
+            range_basis_values = np.cos(
+                np.pi * rr.ravel()[:, None] / spec["range_m"] * np.arange(range_modes)[None]
+            )
+            depth_basis_values = np.cos(
+                np.pi * zz.ravel()[:, None] / spec["depth_m"] * np.arange(depth_modes)[None]
+            )
+            speed = speed + np.einsum(
+                "ni,ij,nj->n", range_basis_values, coefficients, depth_basis_values
+            ).reshape(rr.shape)
     if np.min(speed) <= 1300:
         raise ValueError("unsupported wavespeed")
     return speed
