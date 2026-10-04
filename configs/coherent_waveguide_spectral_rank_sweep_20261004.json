@@ -1,0 +1,9 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_medium_20261004/config.json",
+  "source_results": "artifacts/coherent_waveguide_spectral_medium_20261004/results.json",
+  "training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "ranks": [128, 256, 384, 511],
+  "terms": 32,
+  "query_frequencies": [400, 800],
+  "scope": "POSTHOC extra-information Euclidean PCA projection oracle; all original frozen 32 systems; not deployable, not strict optimal-response lower bound"
+}
