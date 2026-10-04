@@ -19,6 +19,7 @@ def run(paths: dict[str, Path], output: Path) -> None:
     ood = json.loads(paths["ood"].read_text())
     matched = json.loads(paths["matched"].read_text())
     joint = json.loads(paths["joint"].read_text())
+    exact = json.loads(paths["exact"].read_text())
     systems = sorted({r["system"] for r in ood})
     if len(systems) != 16:
         raise ValueError("expected the complete same 16-system OOD cohort")
@@ -26,16 +27,19 @@ def run(paths: dict[str, Path], output: Path) -> None:
         ("fixed_taper5_lowband", ood, lambda r: r["method"] == "rank256_context"),
         ("matched_taper10_lowband", matched,
          lambda r: r["method"] == "matched_taper10_context"),
+        ("exact_known_speed_family_lowband", exact,
+         lambda r: r["method"] == "exact_known_speed_family"),
         ("joint_target_oracle", joint,
          lambda r: r["step"] == 5 and r["method"] == "joint_response_rank256_oracle"),
         ("true_medium32_oracle", ood,
          lambda r: r["method"] == "true_medium32_oracle"),
     ]
-    colors = ["#252525", "#d95f02", "#7570b3", "#1b9e77"]
-    markers = ["o", "s", "^", "D"]
+    colors = ["#252525", "#d95f02", "#1f78b4", "#7570b3", "#1b9e77"]
+    markers = ["o", "s", "P", "^", "D"]
     display = [
         "Frozen prior, low-band only",
-        "Target-family labels, low-band",
+        "Target-family labels + low-band",
+        "Known exact speed family + low-band",
         "Both target fields leaked (oracle)",
         "True medium readout (oracle)",
     ]
@@ -67,12 +71,12 @@ def run(paths: dict[str, Path], output: Path) -> None:
     axes[0].set_ylabel("Raw complex relative L2 at 800 Hz (no phase alignment)")
     handles, labels = axes[1].get_legend_handles_labels()
     fig.legend(handles, labels, loc="upper center", bbox_to_anchor=(0.5, 0.955),
-               ncol=2, fontsize=8, frameon=False)
+               ncol=3, fontsize=7.6, frameon=False)
     fig.suptitle("Medium correlation shift: accuracy depends on available information",
                  fontsize=13, y=0.995)
     fig.text(0.5, 0.025,
-             "All curves use the same 16 systems. Orange has 512 extra target-family medium labels; "
-             "purple/green read target-field/true-medium oracle information. Not a fair method ranking.",
+             "All curves use the same 16 systems. Orange has 512 extra target-family labels; "
+             "blue knows the true synthetic family; purple/green read target field/medium. Not a fair ranking.",
              ha="center", fontsize=8)
     fig.tight_layout(rect=(0, 0.055, 1, 0.845))
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -91,9 +95,11 @@ def main() -> None:
     parser.add_argument("--ood", type=Path, required=True)
     parser.add_argument("--matched", type=Path, required=True)
     parser.add_argument("--joint", type=Path, required=True)
+    parser.add_argument("--exact", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    run({"ood": args.ood, "matched": args.matched, "joint": args.joint}, args.output)
+    run({"ood": args.ood, "matched": args.matched, "joint": args.joint,
+         "exact": args.exact}, args.output)
 
 
 if __name__ == "__main__":

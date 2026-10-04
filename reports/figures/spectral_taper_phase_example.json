@@ -1,0 +1,26 @@
+{
+  "scope": "Preselected first OOD system; local visual only, full ROI metrics elsewhere; exact family knows true synthetic mechanism but not test coefficients or target fields.",
+  "config": {
+    "system": 20267000,
+    "frequency": 800,
+    "source_index": 1,
+    "range_min_m": 1500,
+    "range_max_m": 1600,
+    "depth_min_m": 5,
+    "depth_max_m": 95,
+    "amplitude_mask_quantile": 0.1,
+    "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+    "exact_config": "configs/coherent_waveguide_spectral_taper_exact_family_20261004.json",
+    "truth_npz": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_taper_shift_20261004/system20267000_f800.npz",
+    "frozen_code_npz": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/system20267000_codes.npz",
+    "exact_coordinates_npz": "artifacts/coherent_waveguide_spectral_taper_exact_family_20261004/system20267000_coordinates.npz"
+  },
+  "inputs_sha256": {
+    "truth_npz": "cb853fd8d8c05e46afb52f471440b606ec2f7dd35c3e83192af2e7fb47e6b81b",
+    "frozen_code_npz": "88436e32d06c3bf237037d5ca35bdcec828ab6f5c1c43c6d03c527b03c98f7b6",
+    "exact_coordinates_npz": "baa3c7dfc187368865ba35fc0e59ba88bc475073b3091776c09e24cc1107ee08"
+  },
+  "target_local_amplitude_mask_cutoff": 0.035271346485313375,
+  "masked_fraction": 0.10000529072535845,
+  "value_scale": "all phase maps and phase errors use [-pi,pi] circular scale"
+}

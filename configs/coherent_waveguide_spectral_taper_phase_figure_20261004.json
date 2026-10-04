@@ -1,0 +1,15 @@
+{
+  "system": 20267000,
+  "frequency": 800,
+  "source_index": 1,
+  "range_min_m": 1500,
+  "range_max_m": 1600,
+  "depth_min_m": 5,
+  "depth_max_m": 95,
+  "amplitude_mask_quantile": 0.10,
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "exact_config": "configs/coherent_waveguide_spectral_taper_exact_family_20261004.json",
+  "truth_npz": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_taper_shift_20261004/system20267000_f800.npz",
+  "frozen_code_npz": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/system20267000_codes.npz",
+  "exact_coordinates_npz": "artifacts/coherent_waveguide_spectral_taper_exact_family_20261004/system20267000_coordinates.npz"
+}

@@ -1,0 +1,47 @@
+{
+  "summary": [
+    {
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.0017454447575138768,
+      "mean_phase_rad": 0.0013513414328811479,
+      "max_raw": 0.0029229332462546,
+      "mean_context_last_sq_error": 4.074017128178493e-08
+    },
+    {
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.0019063002334997001,
+      "mean_phase_rad": 0.001455621406003891,
+      "max_raw": 0.0027653301666530836,
+      "mean_context_last_sq_error": 4.074017128178493e-08
+    },
+    {
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.003879554151321076,
+      "mean_phase_rad": 0.0030213363580884165,
+      "max_raw": 0.005806516693981584,
+      "mean_context_last_sq_error": 4.074017128178493e-08
+    },
+    {
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.004129106013845229,
+      "mean_phase_rad": 0.0032167665532760103,
+      "max_raw": 0.006824731841574696,
+      "mean_context_last_sq_error": 4.074017128178493e-08
+    }
+  ],
+  "gate_checks": {
+    "mean_raw": true,
+    "mean_phase": true,
+    "max_raw": true
+  },
+  "all_gates_pass": true,
+  "scope": "POSTHOC exact-known-family classical inverse on all16 already-seen taper10 OOD systems. It knows the TRUE 16x16 cosine SPEED generator and target family taper10 but not test coefficients or target fields or training medium labels. Same 60/100/140Hz lowband context, same known source, old8-selected 1e-7 initialization and 5+5 nonlinear GN, 400/800Hz broad/narrow complete ROI. Extra generator-family information, NOT same-information ranking or second independent cohort."
+}

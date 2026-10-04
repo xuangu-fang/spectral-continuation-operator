@@ -1,0 +1,37 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "ood_config": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/config.json",
+  "ood_results": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/results.json",
+  "ood_codes": "artifacts/coherent_waveguide_spectral_taper_shift_20261004",
+  "systems": [
+    20267000,
+    20267001,
+    20267002,
+    20267003,
+    20267004,
+    20267005,
+    20267006,
+    20267007,
+    20267008,
+    20267009,
+    20267010,
+    20267011,
+    20267012,
+    20267013,
+    20267014,
+    20267015
+  ],
+  "range_cosine_terms": 16,
+  "depth_cosine_terms": 16,
+  "depth_terms": 32,
+  "taper_scale": 10.0,
+  "linear_initial_prior_precision": 1e-07,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "gate_800hz_both_sources": {
+    "mean_raw_at_most": 0.05,
+    "mean_phase_rad_at_most": 0.05,
+    "max_raw_at_most": 0.1
+  },
+  "scope": "POSTHOC exact-known-family classical inverse on all16 already-seen taper10 OOD systems. It knows the TRUE 16x16 cosine SPEED generator and target family taper10 but not test coefficients or target fields or training medium labels. Same 60/100/140Hz lowband context, same known source, old8-selected 1e-7 initialization and 5+5 nonlinear GN, 400/800Hz broad/narrow complete ROI. Extra generator-family information, NOT same-information ranking or second independent cohort."
+}
