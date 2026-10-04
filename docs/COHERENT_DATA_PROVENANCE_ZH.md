@@ -222,7 +222,11 @@ coherent_waveguide_new_systems_high_frequency_20261004/则是**单独冻结的32
 
 这两个集合都是同一种**合成介质统计族且同一单向波方程**，不是第二物理域。原Gaussian环境谱扰动强度与新族不同，跨族误差不能纯粹归因于隐维数；新确认集合只评估同族新系统。另有`coherent_waveguide_spectral_amplitude_matched_dev_20261004/`，只在已看过的原谱族首8种子上把RMS调成旧Gaussian训练族平均8.168874841m/s，做配对强度控制，**不是独立确认**；其16份目标NPZ、配置、训练标签和审计单独保存。确认gate通过后执行的`coherent_waveguide_spectral_frequency_curve_20261004/`取同新32确认集合的固定前8系统，在原400/800Hz之外增加200/300/500/600/1000Hz五点，共40份额外目标NPZ；200/1000Hz数值审计最坏7.22e-5。它也不是第二个独立集合。大NPZ与介质标签留在本机数据目录/Git ignore的artifact NPZ中，小型配置、哈希、指标和图入版本管理。阶段九的799份快照不包含新数据；全部生成和确认结束后另做post-run inventory，不伪称它是运行前冻结证据。
 
-阶段十`artifacts/coherent_stage10_inventory_20261004/inventory.json`现已生成：覆盖26组数据、1098份本机NPZ、186个小型artifact目录，保存文件大小、形状、复数有限值检查和SHA256；其中相关谱原32/确认32/低RMS旧8/额外五频点40份均列出。它是**所有实验完成后的复用盘点快照**，不证明任何早期运行使用了此刻完全一致的源码；运行前证据仍应查各自的冻结manifest。这里的1098是文件数，不是1098个独立环境。
+阶段十`artifacts/coherent_stage10_inventory_20261004/inventory.json`现已生成：覆盖26组数据、1098份本机NPZ、186个小型artifact目录，保存文件大小、形状、复数有限值检查和SHA256；其中相关谱原32/确认32/低RMS旧8/额外五频点40份均列出。它是**当时主要目标数据生成结束后的复用盘点快照**，不证明任何早期运行使用了此刻完全一致的源码；运行前证据仍应查各自的冻结manifest。这里的1098是文件数，不是1098个独立环境。
+
+此后新增的观测密度/复噪声诊断和精确函数族反演**没有生成新目标场NPZ**，只重用上述旧8或已用32的目标及其低频观测。稀疏诊断首次目录`coherent_waveguide_spectral_context_robustness_dev_20261004/`仅留启动manifest并因GN观测索引错误退出；实际128行有效结果在`...context_robustness_dev_v2_20261004/`。1%噪声2×2对照在`...noise_initialization_dev_20261004/`；额外结构强基线旧8和已用32分别在`...exact_nonlinear_dev_20261004/`与`...exact_nonlinear_confirm_20261004/`。后两者每环境本地NPZ只存估计的255个速度坐标，不是测试真谱系数；其JSON配置/manifest/results完整保留。阶段十inventory生成于这些后补artifact之前，只覆盖已存在的文件；若需要全量后补哈希须重做新阶段清单，不能把旧快照追认成覆盖之后的运行。
+
+同已用32系统的1%复模态噪声条件复核在`artifacts/coherent_waveguide_spectral_noise_confirm_20261004/`，含256行双初始化/双频/双源评价及源文件/训练标签SHA，**没有生成新目标真值NPZ**。它固定了此前旧8选出的已知源初态，结果不能被重新称为“又32个独立系统”。随后才预登记[谱相关尺度5→10压力测试](SPECTRAL_TAPER_SHIFT_POC_ZH.md)：将用全新16个系统和32份目标NPZ，介质RMS与16×16余弦基不变；这是**同一PDE的分布外介质统计**，不计作第二物理域。其配置/源码和测试已在生成任何新目标场前由Git提交`15f9aa7`固定；最终数据、指标和post-run SHA清单须等全部完成后补齐。
 
 ## 旧 FDTD 数据的失败如何使用（历史）
 

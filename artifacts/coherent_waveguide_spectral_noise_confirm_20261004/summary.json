@@ -1,0 +1,91 @@
+{
+  "rows": [
+    {
+      "variant": "normal_noisy_source",
+      "frequency": 400,
+      "source": "original",
+      "systems": 32,
+      "mean_raw": 0.06250818093948056,
+      "mean_phase_rad": 0.04706487041480673,
+      "max_raw": 0.10625724911001153,
+      "wins_over_noisy_source": null
+    },
+    {
+      "variant": "normal_noisy_source",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 32,
+      "mean_raw": 0.087466302850499,
+      "mean_phase_rad": 0.06669379086350281,
+      "max_raw": 0.1464453239534775,
+      "wins_over_noisy_source": null
+    },
+    {
+      "variant": "normal_noisy_source",
+      "frequency": 800,
+      "source": "original",
+      "systems": 32,
+      "mean_raw": 0.1505408105133857,
+      "mean_phase_rad": 0.11720390961383308,
+      "max_raw": 0.2236387714806458,
+      "wins_over_noisy_source": null
+    },
+    {
+      "variant": "normal_noisy_source",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 32,
+      "mean_raw": 0.16094229194722215,
+      "mean_phase_rad": 0.12763565845446237,
+      "max_raw": 0.2749095082756815,
+      "wins_over_noisy_source": null
+    },
+    {
+      "variant": "normal_known_source",
+      "frequency": 400,
+      "source": "original",
+      "systems": 32,
+      "mean_raw": 0.036262750693036916,
+      "mean_phase_rad": 0.027649260846672977,
+      "max_raw": 0.06515301702767586,
+      "wins_over_noisy_source": 32
+    },
+    {
+      "variant": "normal_known_source",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 32,
+      "mean_raw": 0.04215274420775267,
+      "mean_phase_rad": 0.03139918165327273,
+      "max_raw": 0.08916508573577091,
+      "wins_over_noisy_source": 32
+    },
+    {
+      "variant": "normal_known_source",
+      "frequency": 800,
+      "source": "original",
+      "systems": 32,
+      "mean_raw": 0.08619204204880548,
+      "mean_phase_rad": 0.06791040903050866,
+      "max_raw": 0.12740240107775225,
+      "wins_over_noisy_source": 32
+    },
+    {
+      "variant": "normal_known_source",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 32,
+      "mean_raw": 0.08804973867868095,
+      "mean_phase_rad": 0.06901230094141803,
+      "max_raw": 0.14944525813585435,
+      "wins_over_noisy_source": 31
+    }
+  ],
+  "predeclared_checks": {
+    "mean_raw": true,
+    "mean_phase": true,
+    "wins": true,
+    "max_raw": true
+  },
+  "gate_passed": true
+}

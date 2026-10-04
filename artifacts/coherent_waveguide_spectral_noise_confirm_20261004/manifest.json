@@ -1,0 +1,6 @@
+{
+  "scope": "Noise-condition supplemental check on previously used32 spectral confirmation systems; 1% complex modal context noise and known-source correction fixed using old8 development only. Not fresh system cohort; no new target truth; same rank256 5+5 GN and 400/800 two sources; compare original noisy-source vs known physical source initial under identical noise.",
+  "source_config_sha256": "9bbc55cd37594e35ade180df74ee8d821bcca31bab8879d2bf4886a5f0393772",
+  "training_labels_sha256": "fcc6984db88839bcd659606338051df3c8db79c054e994f19e28d7df7eb44876",
+  "implementation_sha256": "37f456fa55f4fe865b663daeac9d7282a46fcf9c9a0c9b221a24e24aaadb391a"
+}
