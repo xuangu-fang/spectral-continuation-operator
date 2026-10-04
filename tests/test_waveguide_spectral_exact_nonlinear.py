@@ -4,9 +4,11 @@ from spectral_continuation.audit_waveguide_generator_identification import (
     generator_geometry,
     true_projection,
 )
+from spectral_continuation.audit_waveguide_spectral_exact_basis import analytic_prior
 from spectral_continuation.audit_waveguide_spectral_exact_nonlinear import (
     exact_family_projection,
 )
+from spectral_continuation.audit_waveguide_spectral_taper_shift import shifted_environment
 from spectral_continuation.coherent_waveguide_data import spectral_environment
 
 
@@ -40,3 +42,28 @@ def test_exact_speed_family_projection_matches_oracle_and_directional_derivative
     finite_difference = (forward - backward) / (2 * h)
     analytic = np.einsum("rdk,k->rd", factor, direction)
     np.testing.assert_allclose(finite_difference, analytic, rtol=1e-6, atol=1e-10)
+
+
+def test_exact_speed_family_projection_matches_shifted_taper_and_legacy_default():
+    spec = shifted_environment(20267000, terms=16, rms=15.0, taper_scale=10.0)
+    geometry = generator_geometry(spec, cells=64, depth_terms=32, modes=32)
+    config = {"range_cosine_terms": 16, "depth_cosine_terms": 16,
+              "depth_terms": 32, "taper_scale": 10.0}
+    _, _, speed_scale = analytic_prior(spec, config)
+    taper = np.exp(-0.5 * (np.arange(16) / 10.0) ** 2)
+    physical = np.asarray(spec["spectral_coefficients_m_s"])
+    coordinates = (physical / (speed_scale * np.outer(taper, taper))).ravel()[1:]
+    beta, factor = exact_family_projection(
+        spec, geometry, coordinates, speed_scale, taper_scale=10.0
+    )
+    np.testing.assert_allclose(beta, true_projection(spec, geometry), rtol=1e-12,
+                               atol=1e-12)
+    assert factor.shape == (64, 32, 255)
+    legacy, legacy_factor = exact_family_projection(
+        spec, geometry, coordinates, speed_scale
+    )
+    explicit, explicit_factor = exact_family_projection(
+        spec, geometry, coordinates, speed_scale, taper_scale=5.0
+    )
+    np.testing.assert_array_equal(legacy, explicit)
+    np.testing.assert_array_equal(legacy_factor, explicit_factor)

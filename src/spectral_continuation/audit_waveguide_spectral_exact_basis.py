@@ -33,8 +33,11 @@ def analytic_prior(spec, config):
     z = geometry["z"]
     background_speed = sound_speed(background_spec(spec), 0, z)
     derivative = -2 * spec["reference_speed_m_s"] ** 2 / background_speed**3
-    taper_r = np.exp(-0.5 * (np.arange(r_terms) / 5.0) ** 2)
-    taper_z = np.exp(-0.5 * (np.arange(z_terms) / 5.0) ** 2)
+    taper_scale = float(config.get("taper_scale", 5.0))
+    if taper_scale <= 0:
+        raise ValueError("positive taper scale required")
+    taper_r = np.exp(-0.5 * (np.arange(r_terms) / taper_scale) ** 2)
+    taper_z = np.exp(-0.5 * (np.arange(z_terms) / taper_scale) ** 2)
     cosine_r_norm = np.where(np.arange(r_terms) == 0, 1.0, 0.5)
     cosine_z_norm = np.where(np.arange(z_terms) == 0, 1.0, 0.5)
     variance = np.outer(taper_r**2 * cosine_r_norm, taper_z**2 * cosine_z_norm)

@@ -22,13 +22,15 @@ from .coherent_representation import complex_metrics
 from .coherent_waveguide_data import depth_basis, sound_speed
 
 
-def exact_family_projection(spec, geometry, coordinates, speed_scale):
+def exact_family_projection(spec, geometry, coordinates, speed_scale, taper_scale=5.0):
     """Project exact nonlinear c^-2 and differentiate w.r.t. public Fourier coordinates."""
     terms = int(np.sqrt(len(coordinates) + 1))
     if len(coordinates) != terms**2 - 1:
         raise ValueError("wrong exact-family coordinate dimension")
     indices = np.arange(terms)
-    taper = np.exp(-0.5 * (indices / 5.0) ** 2)
+    if taper_scale <= 0:
+        raise ValueError("positive taper scale required")
+    taper = np.exp(-0.5 * (indices / taper_scale) ** 2)
     scale = speed_scale * np.outer(taper, taper)
     coefficients = np.r_[0.0, coordinates].reshape(terms, terms) * scale
     range_cos = np.cos(
@@ -70,8 +72,10 @@ def initial_coordinates(spec, observed, ranges, source, config, geometry):
 
 
 def exact_step(coordinates, speed_scale, spec, geometry, observed, context_ranges,
-               frequencies, initial, source, indices=None):
-    beta, factor = exact_family_projection(spec, geometry, coordinates, speed_scale)
+               frequencies, initial, source, indices=None, taper_scale=5.0):
+    beta, factor = exact_family_projection(
+        spec, geometry, coordinates, speed_scale, taper_scale
+    )
     roi = context_ranges >= source["roi_min_range_m"]
     residuals, derivatives = [], []
     for frequency, truth in zip(frequencies, observed, strict=True):
@@ -98,7 +102,7 @@ def exact_step(coordinates, speed_scale, spec, geometry, observed, context_range
         proposal = coordinates + alpha * safety * direction
         try:
             beta_proposal, _ = exact_family_projection(
-                spec, geometry, proposal, speed_scale
+                spec, geometry, proposal, speed_scale, taper_scale
             )
             after = observation_objective(
                 beta_proposal, initial, geometry, frequencies, observed, roi, indices
@@ -113,6 +117,7 @@ def exact_step(coordinates, speed_scale, spec, geometry, observed, context_range
 
 
 def infer(spec, observed, context_ranges, source, config):
+    taper_scale = float(config.get("taper_scale", 5.0))
     coarse = generator_geometry(spec, 64, config["depth_terms"], modes=32)
     coordinates, speed_scale = initial_coordinates(
         spec, observed, context_ranges, source, config, coarse
@@ -123,6 +128,7 @@ def infer(spec, observed, context_ranges, source, config):
         coordinates, diagnostic = exact_step(
             coordinates, speed_scale, spec, coarse, observed, context_ranges,
             source["context_frequencies"], initial, source,
+            taper_scale=taper_scale,
         )
         history.append({"stage": "coarse", "step": step + 1, **diagnostic})
     fine = generator_geometry(spec, source["decoder_cells"], config["depth_terms"], modes=32)
@@ -133,9 +139,10 @@ def infer(spec, observed, context_ranges, source, config):
         coordinates, diagnostic = exact_step(
             coordinates, speed_scale, spec, fine, observed, context_ranges,
             source["context_frequencies"], initial, source, indices.astype(int),
+            taper_scale=taper_scale,
         )
         history.append({"stage": "fine", "step": step + 1, **diagnostic})
-    beta, _ = exact_family_projection(spec, fine, coordinates, speed_scale)
+    beta, _ = exact_family_projection(spec, fine, coordinates, speed_scale, taper_scale)
     return beta, coordinates, history
 
 
