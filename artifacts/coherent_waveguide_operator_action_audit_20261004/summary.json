@@ -1,0 +1,38 @@
+[
+  {
+    "method": "prior16_cells64",
+    "systems": 8,
+    "source_macro_raw": 0.006941086392986421,
+    "source_max_raw": 0.011628415397583722,
+    "frobenius_relative": 0.007218786619547677,
+    "query_only_seconds": 0.24833526241127402,
+    "worst_relative_system_mean": 0.015111874781245854
+  },
+  {
+    "method": "prior16_cells256",
+    "systems": 8,
+    "source_macro_raw": 0.00548818093456816,
+    "source_max_raw": 0.009283883574391224,
+    "frobenius_relative": 0.005822317190075305,
+    "query_only_seconds": 0.6241544582881033,
+    "worst_relative_system_mean": 0.01171670653738149
+  },
+  {
+    "method": "prior32_cells256",
+    "systems": 8,
+    "source_macro_raw": 0.0016998876282882645,
+    "source_max_raw": 0.0029670240783300043,
+    "frobenius_relative": 0.0018057131836463087,
+    "query_only_seconds": 0.7314371303655207,
+    "worst_relative_system_mean": 0.005188847597688722
+  },
+  {
+    "method": "true_medium32_oracle",
+    "systems": 8,
+    "source_macro_raw": 0.000841112717023493,
+    "source_max_raw": 0.0018899239131243242,
+    "frobenius_relative": 0.000985555118103908,
+    "query_only_seconds": 0.7453591101802886,
+    "worst_relative_system_mean": 0.0024890904540898853
+  }
+]

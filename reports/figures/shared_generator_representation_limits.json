@@ -1,0 +1,8 @@
+{
+  "scope": "Development mechanism diagnostics, not independent method validation. No query-driven stopping.",
+  "source_sha256": {
+    "artifacts/coherent_waveguide_profile5_initialization_20261003/summary.json": "32d21e44eed399ca1219b10e4ddd78df610ce7adf0daba9ea680d14ae26e4868",
+    "artifacts/coherent_waveguide_profile5_map_20261004/summary.json": "068dc0c8d02f8e53e763b43099ab35d70260199937dbba79085eca4263242f1e",
+    "artifacts/coherent_waveguide_continuous_generator_20261004/summary.json": "6e88976eecd2c8c878befa95e5ff644d323bd4a6c84f612c1da1404003c8d74a"
+  }
+}

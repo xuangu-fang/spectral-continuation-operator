@@ -1,0 +1,83 @@
+[
+  {
+    "method": "pca128_speed",
+    "oracle": false,
+    "systems": 4,
+    "raw": 0.001712623255310193,
+    "phase_rmse_rad": 0.0013024479228644487,
+    "per_system_real_parameters": 128,
+    "shared_real_parameters": 512001
+  },
+  {
+    "method": "pca128_speed",
+    "oracle": true,
+    "systems": 4,
+    "raw": 0.0007971008740789154,
+    "phase_rmse_rad": 0.0006069545465509259,
+    "per_system_real_parameters": 128,
+    "shared_real_parameters": 512001
+  },
+  {
+    "method": "separable_speed_rank4",
+    "oracle": false,
+    "systems": 4,
+    "raw": 0.00039283758550698235,
+    "phase_rmse_rad": 0.0003333986880093937,
+    "per_system_real_parameters": 508,
+    "shared_real_parameters": 0
+  },
+  {
+    "method": "separable_speed_rank4",
+    "oracle": true,
+    "systems": 4,
+    "raw": 6.875579458915039e-06,
+    "phase_rmse_rad": 5.676841328592506e-06,
+    "per_system_real_parameters": 508,
+    "shared_real_parameters": 0
+  },
+  {
+    "method": "separable_speed_rank8",
+    "oracle": false,
+    "systems": 4,
+    "raw": 0.0002050631963367419,
+    "phase_rmse_rad": 0.00016849191541575294,
+    "per_system_real_parameters": 1016,
+    "shared_real_parameters": 0
+  },
+  {
+    "method": "separable_speed_rank8",
+    "oracle": true,
+    "systems": 4,
+    "raw": 6.875579458927111e-06,
+    "phase_rmse_rad": 5.6768413285415365e-06,
+    "per_system_real_parameters": 1016,
+    "shared_real_parameters": 0
+  },
+  {
+    "method": "uncompressed_interior_speed",
+    "oracle": false,
+    "systems": 4,
+    "raw": 9.838335971834253e-05,
+    "phase_rmse_rad": 8.689074490871811e-05,
+    "per_system_real_parameters": 3969,
+    "shared_real_parameters": 0
+  },
+  {
+    "method": "uncompressed_interior_speed",
+    "oracle": true,
+    "systems": 4,
+    "raw": 6.875579459587161e-06,
+    "phase_rmse_rad": 5.6768413289254635e-06,
+    "per_system_real_parameters": 3969,
+    "shared_real_parameters": 0
+  },
+  {
+    "method": "uncompressed_original",
+    "oracle": false,
+    "systems": 4,
+    "raw": 9.886387757047899e-05,
+    "phase_rmse_rad": 8.754389150719275e-05,
+    "per_system_real_parameters": 4225,
+    "shared_real_parameters": 0
+  }
+]

@@ -7,6 +7,7 @@ projection is evaluated only as an oracle, never in code inference.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import time
 from pathlib import Path
@@ -46,6 +47,52 @@ def load_truth(path):
         }
 
 
+def fit_extended_prior(base, options, output):
+    """Training medium only; test/development specs never enter this fit."""
+    if set(base["train_systems"]) & set(base["validation_systems"]):
+        raise ValueError("training/development overlap")
+    labels, manifest = [], []
+    for system in base["train_systems"]:
+        path = Path(base["training_modal_cache"]) / f"system{system}_modal.npz"
+        with np.load(path) as data:
+            spec_text = str(data["spec"])
+            spec = json.loads(spec_text)
+        geometry = generator_geometry(
+            spec, options["training_range_centers"], options["depth_terms"]
+        )
+        labels.append(true_projection(spec, geometry))
+        manifest.append(
+            {
+                "system": system,
+                "path": str(path),
+                "spec_sha256": hashlib.sha256(spec_text.encode()).hexdigest(),
+            }
+        )
+    labels = np.array(labels)
+    mean, factor = fit_prior(labels, options["rank"])
+    np.savez_compressed(
+        output / "training_prior.npz",
+        mean=mean,
+        factor=factor,
+        target=labels,
+        systems=base["train_systems"],
+    )
+    (output / "training_labels_manifest.json").write_text(
+        json.dumps(
+            {
+                "source": "Existing TRAINING-ONLY medium specs; no new field supervision or validation labels",
+                "label_shape": list(labels.shape),
+                "training_systems": manifest,
+                "labels_basis_sha256": hashlib.sha256(
+                    (output / "training_prior.npz").read_bytes()
+                ).hexdigest(),
+            },
+            indent=2,
+        )
+    )
+    return mean, factor
+
+
 def query_rows(beta, data, frequencies, modes, roi_min=50):
     geometry = generator_geometry(data["spec"], len(beta), beta.shape[1], modes=modes)
     # Source/background metadata are public; hidden contrast is removed by geometry.
@@ -77,19 +124,38 @@ def run(options, output):
     output.mkdir(parents=True, exist_ok=False)
     base = json.loads((Path(options["training_run"]) / "config.json").read_text())
     (output / "config.json").write_text(json.dumps({**options, "base": base}, indent=2))
-    with np.load(Path(options["training_run"]) / "training_statistics.npz") as data:
-        mean, factor = fit_prior(data["target"].astype(float), options["rank"])
+    if options.get("fit_extended_prior"):
+        mean, factor = fit_extended_prior(base, options, output)
+    else:
+        with np.load(Path(options["training_run"]) / "training_statistics.npz") as data:
+            mean, factor = fit_prior(data["target"].astype(float), options["rank"])
     with np.load(options["initial_coefficients"]) as data:
         if data["systems"].tolist() != base["validation_systems"]:
             raise ValueError("initial code system order mismatch")
         initial_beta = data["coefficients"]
+    initial_terms = initial_beta.shape[-1]
     coordinates = np.linalg.lstsq(
-        factor.reshape(-1, options["rank"]),
-        (initial_beta - mean).reshape(len(initial_beta), -1).T,
+        factor[:, :initial_terms].reshape(-1, options["rank"]),
+        (initial_beta - mean[:, :initial_terms]).reshape(len(initial_beta), -1).T,
         rcond=None,
     )[0].T
     reconstructed = mean + np.einsum("rdk,bk->brd", factor, coordinates)
-    np.testing.assert_allclose(initial_beta, reconstructed, atol=1e-10, rtol=1e-8)
+    if options.get("fit_extended_prior"):
+        (output / "initial_projection.json").write_text(
+            json.dumps(
+                {
+                    "source": "previous context-only inferred16depthterms, NOT validation medium",
+                    "low_band_rmse": np.sqrt(
+                        np.mean(
+                            (initial_beta - reconstructed[:, :, :initial_terms]) ** 2, axis=(1, 2)
+                        )
+                    ).tolist(),
+                },
+                indent=2,
+            )
+        )
+    else:
+        np.testing.assert_allclose(initial_beta, reconstructed, atol=1e-10, rtol=1e-8)
     rows, history = [], []
     for si, system in enumerate(base["validation_systems"]):
         original = load_truth(Path(base["data"]) / f"system{system}_m32_r2049.npz")
@@ -119,7 +185,7 @@ def run(options, output):
                 resample_generator(factor, cells),
             )
             beta = fine_mean + np.einsum("rdk,k->rd", fine_factor, coordinates[si])
-            geometry = generator_geometry(original["spec"], cells, base["depth_terms"])
+            geometry = generator_geometry(original["spec"], cells, mean.shape[-1])
             indices = np.linspace(0, cells, base["context_range_samples"])
             if not np.array_equal(indices, indices.astype(int)):
                 raise ValueError("fixed observation profiles must remain decoder edges")
@@ -136,7 +202,7 @@ def run(options, output):
                                 "cells": cells,
                                 "step": step,
                                 "method": "continuous_prior",
-                                "depth_terms": base["depth_terms"],
+                                "depth_terms": mean.shape[-1],
                                 "latent_real_dof": options["rank"],
                                 "variant": variant,
                                 **row,
@@ -166,6 +232,30 @@ def run(options, output):
                             "seconds": time.perf_counter() - start,
                             **diagnostic,
                         }
+                    )
+            if options.get("capacity_oracle"):
+                # Extra-information diagnostic only, AFTER deployable inference.
+                oracle_geometry = generator_geometry(original["spec"], len(mean), mean.shape[-1])
+                true_beta = true_projection(original["spec"], oracle_geometry)
+                oracle_coordinates = np.linalg.lstsq(
+                    factor.reshape(-1, options["rank"]), (true_beta - mean).ravel(), rcond=None
+                )[0]
+                capacity_beta = fine_mean + np.einsum("rdk,k->rd", fine_factor, oracle_coordinates)
+                for variant, data, frequencies, modes in [
+                    ("original", original, base["query_frequencies"], 32),
+                    ("narrow", narrow, narrow["frequencies"], 64),
+                ]:
+                    rows.extend(
+                        {
+                            "system": system,
+                            "cells": cells,
+                            "step": -1,
+                            "method": "training_prior_capacity_oracle",
+                            "depth_terms": mean.shape[-1],
+                            "variant": variant,
+                            **row,
+                        }
+                        for row in query_rows(capacity_beta, data, frequencies, modes)
                     )
             for terms in options["oracle_depth_terms"]:
                 oracle_geometry = generator_geometry(original["spec"], cells, terms)

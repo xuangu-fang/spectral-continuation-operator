@@ -47,6 +47,7 @@ def run(root, output):
         ("coherent_waveguide_narrow_source_modes_expansion_20261003", 6),
         ("coherent_waveguide_frozen_system_audit_20261003/original", 64),
         ("coherent_waveguide_frozen_system_audit_20261003/narrow", 64),
+        ("coherent_waveguide_operator_action_20261004", 11),
     ]:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -54,11 +55,27 @@ def run(root, output):
         records = []
         for path in paths:
             with np.load(path, allow_pickle=False) as z:
-                value_key = "field" if "field" in z else "modal_coefficients"
+                value_key = next(
+                    key for key in ["field", "modal_coefficients", "transfer", "coarse"] if key in z
+                )
                 field = z[value_key]
-                frequency_key = "frequencies" if "frequencies" in z else "frequencies_hz"
+                frequency_key = next(
+                    (key for key in ["frequencies", "frequencies_hz", "frequency_hz"] if key in z),
+                    None,
+                )
+                frequencies = (
+                    z[frequency_key].tolist()
+                    if frequency_key
+                    else [json.loads((base / name / "config.json").read_text())["frequency"]]
+                )
                 if not np.iscomplexobj(field) or not np.isfinite(field).all():
                     raise ValueError(f"invalid complex data: {path}")
+                extra_arrays = {}
+                if "fine" in z:
+                    fine = z["fine"]
+                    if not np.iscomplexobj(fine) or not np.isfinite(fine).all():
+                        raise ValueError(f"invalid audit pair: {path}")
+                    extra_arrays["fine"] = {"shape": list(fine.shape), "dtype": str(fine.dtype)}
                 records.append(
                     {
                         "path": str(path),
@@ -67,7 +84,8 @@ def run(root, output):
                         "shape": list(field.shape),
                         "dtype": str(field.dtype),
                         "value_key": value_key,
-                        "frequencies": z[frequency_key].tolist(),
+                        "frequencies": frequencies,
+                        "additional_arrays": extra_arrays,
                     }
                 )
         independent = name.startswith("coherent_waveguide_frozen_system_audit_20261003/")
@@ -101,6 +119,7 @@ def run(root, output):
         "*waveguide*.py",
         "*frozen_generator*.py",
         "*generator_frozen*.py",
+        "*generator_representation*.py",
         "*helmholtz*.py",
         "*separable*.py",
     ]:

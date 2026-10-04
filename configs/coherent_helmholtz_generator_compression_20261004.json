@@ -1,0 +1,14 @@
+{
+  "data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+  "systems": [20261132,20261133,20261134,20261135],
+  "training_seed_start": 20262700,
+  "training_count": 512,
+  "observed_frequencies": [6,10,14],
+  "query_frequencies": [7,11,13],
+  "context_grid": 65,
+  "pca_rank": 128,
+  "separable_ranks": [4,8],
+  "scope": "Original4 development systems, representation compression only, not a shared neural encoder. Same observed fields, known source/loss/background, no true validation medium for inference. Training PCA uses additional labeled medium specs, no field simulation.",
+  "hypothesis": "Physical generator compression may preserve phase better than field compression, but a fixed128-coordinate global PCA need not be sufficient beyond the one-way domain.",
+  "warning": "Synthetic velocity perturbation is a sum of4axis-aligned Gaussian products; rank4SVD exploits this known construction, not universal separability."
+}

@@ -1,0 +1,21 @@
+{
+  "training_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "initial_coefficients": "artifacts/coherent_waveguide_trajectory_newton_20261003/gaussian_step5.npz",
+  "rank": 128,
+  "depth_terms": 32,
+  "training_range_centers": 64,
+  "decoder_cells": [256],
+  "oracle_depth_terms": [32],
+  "fit_extended_prior": true,
+  "capacity_oracle": true,
+  "checkpoints": [0,1,2,5],
+  "narrow_data": [
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_narrow_source_modes_truth_20261003",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_narrow_source_modes_expansion_20261003"
+  ],
+  "ridge_relative": 1e-8,
+  "max_coefficient_step": 0.01,
+  "line_search": [1.0,0.5,0.25,0.125,0.0625],
+  "scope": "Original8development only; same128physical coordinates with richer training-only32depth-term readout. Same512training labels, no new field supervision. Capacity projection oracle explicitly separate.",
+  "hypothesis": "A training-learned cross-depth covariance may carry finer medium structure at fixed latent dimension; first test this linear physical prior before proposing nonlinear latent capacity."
+}

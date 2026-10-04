@@ -1,0 +1,2571 @@
+{
+  "source": "Existing TRAINING-ONLY medium specs; no new field supervision or validation labels",
+  "label_shape": [
+    512,
+    64,
+    32
+  ],
+  "training_systems": [
+    {
+      "system": 20261300,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261300_modal.npz",
+      "spec_sha256": "2905f112689a266075f344ee0b332eb2c67399d217b0963086a0f769be7d78bc"
+    },
+    {
+      "system": 20261301,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261301_modal.npz",
+      "spec_sha256": "85eac8b53049aa712ef7cb5f03917552ac2c66339f4ed9bdba921e2fc437125a"
+    },
+    {
+      "system": 20261302,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261302_modal.npz",
+      "spec_sha256": "37f1cded061d01edd57ba7ae458f9f81bf477c23605038be4cc7e4066846ba14"
+    },
+    {
+      "system": 20261303,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261303_modal.npz",
+      "spec_sha256": "97485023377aa2289a7f3c83cb287518b6b52a904c52869a6e632dc0289c70c4"
+    },
+    {
+      "system": 20261304,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261304_modal.npz",
+      "spec_sha256": "baf55b12515a41ee5a5b0d5e88f1b80d02ab7fd1afca49b25b6d6ce1e5f134f4"
+    },
+    {
+      "system": 20261305,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261305_modal.npz",
+      "spec_sha256": "032dadba603aa63a98dcf08d26a89cbe0406812f468d3bdfac91ffaba0f14e87"
+    },
+    {
+      "system": 20261306,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261306_modal.npz",
+      "spec_sha256": "d3e1b3e0a263fb92dedba28e819d83aa0bf1026dc9c76377598e69f9d3e8706a"
+    },
+    {
+      "system": 20261307,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261307_modal.npz",
+      "spec_sha256": "fa2571d1701a98be6bb026b1d809448991557497479b21f85069329085e3cfc1"
+    },
+    {
+      "system": 20261308,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261308_modal.npz",
+      "spec_sha256": "869fb7aefba3b60d985e32112b3a31abef4ab1f6d726d55318f9e8a105c3ccca"
+    },
+    {
+      "system": 20261309,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261309_modal.npz",
+      "spec_sha256": "03bffc857bdd02a18f7702e85083134ef198ed95db8da3b14a9a8fdffd80b1bd"
+    },
+    {
+      "system": 20261310,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261310_modal.npz",
+      "spec_sha256": "e6831b4fbd26400d3c9267699ac78e9d9ee54d5ab85e30ba6737c492ec6c3fe6"
+    },
+    {
+      "system": 20261311,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261311_modal.npz",
+      "spec_sha256": "92950424d120d91b25a6cf4d58a44232ae8ed5da5b54f0b0445b721f192a325b"
+    },
+    {
+      "system": 20261312,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261312_modal.npz",
+      "spec_sha256": "b8478e1e9c77c892791c3057edc12b4a0041df11d74d34341baae75e7d4ff7b4"
+    },
+    {
+      "system": 20261313,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261313_modal.npz",
+      "spec_sha256": "987229e1d614f3f1fd28d21f9efeec6d8efc1e3b97934483f02e472cf0cbdc62"
+    },
+    {
+      "system": 20261314,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261314_modal.npz",
+      "spec_sha256": "b08b5acdc0a7fd100cbb3ef06ce3de59953e99aa841f3029751ee26ebc943026"
+    },
+    {
+      "system": 20261315,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261315_modal.npz",
+      "spec_sha256": "734fed1e7cb937ad817e60f249dc5acef15f4aa8203de77f2163551024efab8e"
+    },
+    {
+      "system": 20261316,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261316_modal.npz",
+      "spec_sha256": "3e9fcf53eaefb3f687725e4a922f1aa1abaf0495c2354934404e93dc0fe56f1c"
+    },
+    {
+      "system": 20261317,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261317_modal.npz",
+      "spec_sha256": "e56eed470db99ac7832817a68d0bab3a0d381da66bda73c927ac4e2d2c8b5369"
+    },
+    {
+      "system": 20261318,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261318_modal.npz",
+      "spec_sha256": "4da3bde401536cc8afdcd934af71ec05d88e5d36e1bde4693f88f963e746ddc1"
+    },
+    {
+      "system": 20261319,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261319_modal.npz",
+      "spec_sha256": "f4a7183fc0063e00afc0edf11bf67247ddd13f7c888dba73f0f577552a191805"
+    },
+    {
+      "system": 20261320,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261320_modal.npz",
+      "spec_sha256": "532bb66c01db187bb007350b29a2755aa7f5055582b76f0a208f778f381377d3"
+    },
+    {
+      "system": 20261321,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261321_modal.npz",
+      "spec_sha256": "8332691f4a976982ed024cde5d29937a0898c35ecf6cf0a8451460b57875ccd9"
+    },
+    {
+      "system": 20261322,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261322_modal.npz",
+      "spec_sha256": "071b6ceb27eb0ec1a434741e54021f6d328c14a280e66f61959b10ff63dec7df"
+    },
+    {
+      "system": 20261323,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261323_modal.npz",
+      "spec_sha256": "e299761fe347bb303f382e599d5dd5a478c38cae44ea44b4a976ee27ee481caa"
+    },
+    {
+      "system": 20261324,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261324_modal.npz",
+      "spec_sha256": "0843ab6729c4dce690a97ce69b6c8704541c713c29d3a62aa1e5a9d9e7ad2cc5"
+    },
+    {
+      "system": 20261325,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261325_modal.npz",
+      "spec_sha256": "c2813c377062a505921f646749cbd004bb24abe415d3e926a11099c4f1120cf5"
+    },
+    {
+      "system": 20261326,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261326_modal.npz",
+      "spec_sha256": "2dd692acc38c4a7aeaedb7888cbf821edaf293f8fa9dde8c12008b178a9e9e87"
+    },
+    {
+      "system": 20261327,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261327_modal.npz",
+      "spec_sha256": "073dbd651ec231639564b14ff17f541ec964cedb31dc69cab97e93e825451cb9"
+    },
+    {
+      "system": 20261328,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261328_modal.npz",
+      "spec_sha256": "ceb692f2a0bcebcace8ea3a6bb964239f7c3570c92bd6cd7b6c542ea4eab5db5"
+    },
+    {
+      "system": 20261329,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261329_modal.npz",
+      "spec_sha256": "2da9c8d45bc80b1a986d41c0615b98b058fae61c93652857cb2c56caadf7bb4b"
+    },
+    {
+      "system": 20261330,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261330_modal.npz",
+      "spec_sha256": "a82c58e63e297304005f86f00f16e59936c55876281731a12f7721ec388813a0"
+    },
+    {
+      "system": 20261331,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261331_modal.npz",
+      "spec_sha256": "21405fc5b888a19f36ae7715d999031dc36acf3a3ec72a5a4518186908cbf673"
+    },
+    {
+      "system": 20261500,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261500_modal.npz",
+      "spec_sha256": "97c712c7316c5d1bed1ec490038ca25b8a26a5c9179a408694bdaa1f5d8648d0"
+    },
+    {
+      "system": 20261501,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261501_modal.npz",
+      "spec_sha256": "9b5644bae1f9ed53dfd18f0e4a4207635fce05caa1b829c882bdfb90cefe3782"
+    },
+    {
+      "system": 20261502,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261502_modal.npz",
+      "spec_sha256": "1deb606a789840061d5b6531667ccd4087619233b3c438ad6ed10de3f6ea7346"
+    },
+    {
+      "system": 20261503,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261503_modal.npz",
+      "spec_sha256": "e6d986d6a9139c6a3775e0ac05fae68c4274ae12033956f437dc5506f3f04a54"
+    },
+    {
+      "system": 20261504,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261504_modal.npz",
+      "spec_sha256": "5be134b53779fe1ec621c6a070d569a19aee65ab9e01a48b117135e9fb11e0fe"
+    },
+    {
+      "system": 20261505,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261505_modal.npz",
+      "spec_sha256": "016ef4e36f13efe198076ad3f52fc99957d7e4a71818a692ad052857424f381b"
+    },
+    {
+      "system": 20261506,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261506_modal.npz",
+      "spec_sha256": "0ca7d71d1149f65d7689838b4ad9d45304c629bcd2e5c21940b141ddcf7e4047"
+    },
+    {
+      "system": 20261507,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261507_modal.npz",
+      "spec_sha256": "0d22ba0f2394401df1c27a078edcd2fb57055eadd9de31a62f5b08fdca75f149"
+    },
+    {
+      "system": 20261508,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261508_modal.npz",
+      "spec_sha256": "616165afaa180d55776972c8a00e08bf15acc8be0888203633fb329ed130c58c"
+    },
+    {
+      "system": 20261509,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261509_modal.npz",
+      "spec_sha256": "6ffa41a49e8f384b34ed3696c55cbe571070164ab251bab08a69a14700b1052f"
+    },
+    {
+      "system": 20261510,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261510_modal.npz",
+      "spec_sha256": "6f833db1681204d3cfbe7d3cda4d66492b07e42af3533dcf0c7f04b9bfbd9d22"
+    },
+    {
+      "system": 20261511,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261511_modal.npz",
+      "spec_sha256": "25e0597d60a82a27e3c04a393b8daca8ce9f44d744486213f6f4284d0c94caf4"
+    },
+    {
+      "system": 20261512,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261512_modal.npz",
+      "spec_sha256": "ca812cd6f4247bd1144f8bc6f4beea56a3d9e91245ae12b5b250858b0bcd3202"
+    },
+    {
+      "system": 20261513,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261513_modal.npz",
+      "spec_sha256": "a4e7888bb39b65e898277f085dd56a1d2dcd1ef80d0a373c3c3e6cc0024c1b4e"
+    },
+    {
+      "system": 20261514,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261514_modal.npz",
+      "spec_sha256": "8074ee3d69883005146f6e8c770c1b851a8f2c9f62acc85eead52769be9d92ba"
+    },
+    {
+      "system": 20261515,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261515_modal.npz",
+      "spec_sha256": "dd6d2ba8435c9f17164e4c6ad4a54c6bdf5d1103c732385899de5a387a4abc7f"
+    },
+    {
+      "system": 20261516,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261516_modal.npz",
+      "spec_sha256": "d1159050b0470c1f31fb0318acaf731bd4edebc14f6a16c37b7ee969dcfb9a47"
+    },
+    {
+      "system": 20261517,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261517_modal.npz",
+      "spec_sha256": "4b55689a6bc1dd34d94ce82eff579915e2a5aff8a5ceba541ba21a47fe3b523f"
+    },
+    {
+      "system": 20261518,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261518_modal.npz",
+      "spec_sha256": "14661744f11dc5f6aaac0d44538738ab83913c2830ad68e2ca22635306c7f118"
+    },
+    {
+      "system": 20261519,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261519_modal.npz",
+      "spec_sha256": "92e7d630d18da690ccc4dfaad7367619e9378a22bc4a301e9964377175cea03f"
+    },
+    {
+      "system": 20261520,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261520_modal.npz",
+      "spec_sha256": "170ff74c44371584ea999d98dae5bf07aaf9acb011b0eacb7617ca04de22bd26"
+    },
+    {
+      "system": 20261521,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261521_modal.npz",
+      "spec_sha256": "8c5201e904ae82da671ef9f9160c95d0eb664ab18d307f76f0b8ad95b21360f6"
+    },
+    {
+      "system": 20261522,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261522_modal.npz",
+      "spec_sha256": "284067651f7ab5c39a195725ec03b92027e02f1f8cade6544fcefe9848e4e731"
+    },
+    {
+      "system": 20261523,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261523_modal.npz",
+      "spec_sha256": "8d46a1cbc65800aa47aefb06a7a2812536fc1952c4dde21ddfe315dc95b76fe7"
+    },
+    {
+      "system": 20261524,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261524_modal.npz",
+      "spec_sha256": "bfe5f5059f26364925264edfe2412dc1c5901e5447badd92fb8bc2863fd01ddf"
+    },
+    {
+      "system": 20261525,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261525_modal.npz",
+      "spec_sha256": "afaeede8b21bca61d3d5e4dd42ccd70797e782fd88d1b4e4a7dc9f7edc246540"
+    },
+    {
+      "system": 20261526,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261526_modal.npz",
+      "spec_sha256": "5c1ca2156a95e48d79152a8196953bac1e50aae624a790272aa584eb80c8d456"
+    },
+    {
+      "system": 20261527,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261527_modal.npz",
+      "spec_sha256": "f49375556ccf167d5bb89ba2d716fb6add8e41c2ff91991b1eb685542abfb789"
+    },
+    {
+      "system": 20261528,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261528_modal.npz",
+      "spec_sha256": "9f4e25ae408c15f96025abd777cfd69d30c7c6703b03284aa5573a5c8b3295b7"
+    },
+    {
+      "system": 20261529,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261529_modal.npz",
+      "spec_sha256": "3d9882b9120188b001739d6f220ff04825de6219a153ebaa359c8c2c24e6c2b1"
+    },
+    {
+      "system": 20261530,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261530_modal.npz",
+      "spec_sha256": "a3f8ec720f3881557e4b8be1a0be7e012ea92e79c7cfbde82bf62a976b8d2e01"
+    },
+    {
+      "system": 20261531,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261531_modal.npz",
+      "spec_sha256": "194969d721dc2f54327858d5cd988ef609ab8b6678fe3a29f59969a7d9649cfb"
+    },
+    {
+      "system": 20261532,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261532_modal.npz",
+      "spec_sha256": "04d41fe6f731249b74a7754bcf59e81ac01e31019344090f9ee92b1653074ef7"
+    },
+    {
+      "system": 20261533,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261533_modal.npz",
+      "spec_sha256": "bc469075784b36ec7dc7c62148f117617362329c0dc8dd7cf182ddc77cb517f0"
+    },
+    {
+      "system": 20261534,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261534_modal.npz",
+      "spec_sha256": "4c665e6cf4e5619b35c221e1be6d1ebcf1471541322b8e8735071c3c8e807d4e"
+    },
+    {
+      "system": 20261535,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261535_modal.npz",
+      "spec_sha256": "1140c946ccfa53250cbc10d19c61e67b597fcd249299ae51f197a8f656a04e2b"
+    },
+    {
+      "system": 20261536,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261536_modal.npz",
+      "spec_sha256": "77e46b5d0a9a0ea388223dcfdee8370bee91d7aed59f13d3a2d0b3cabc3af2bd"
+    },
+    {
+      "system": 20261537,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261537_modal.npz",
+      "spec_sha256": "5ab95f5cb6f6f6f9af90df97e29083b4d991ef8dec0c58224f8e726e977ff69a"
+    },
+    {
+      "system": 20261538,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261538_modal.npz",
+      "spec_sha256": "937d0892f8853b732121552891ccd1afe3cf04778b2b3f4c19e92495c6dbea57"
+    },
+    {
+      "system": 20261539,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261539_modal.npz",
+      "spec_sha256": "46af8854dd1f7ce1521fd01e969add35a67c68f0097bf4165c513decf7527d39"
+    },
+    {
+      "system": 20261540,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261540_modal.npz",
+      "spec_sha256": "33474056a6201bc4dbb4a3f49cd801010a92409e1ee72def104e8ceccc9e2f8a"
+    },
+    {
+      "system": 20261541,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261541_modal.npz",
+      "spec_sha256": "8145ee1ce75098c70d7c473afab50b66c248944099d21ff5b179c9ae5c8a0537"
+    },
+    {
+      "system": 20261542,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261542_modal.npz",
+      "spec_sha256": "cb08f432d73fcc0d85233a19ab6f072a3276123d39859793dcdd61867b56e8de"
+    },
+    {
+      "system": 20261543,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261543_modal.npz",
+      "spec_sha256": "bb7597b8478290561aff2660968978d9658c2167880005c4f943cb22005ac467"
+    },
+    {
+      "system": 20261544,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261544_modal.npz",
+      "spec_sha256": "a56b085596a76851e13e3ba53a9766e9b7a4ea8a95ae4421d547201dc827a813"
+    },
+    {
+      "system": 20261545,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261545_modal.npz",
+      "spec_sha256": "38db0176bc987686466d4aa2507ef78c92f26c950dffb3f6e0d1db9119506ad2"
+    },
+    {
+      "system": 20261546,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261546_modal.npz",
+      "spec_sha256": "8e7887a51e7d7d9df5b543bac1fca30a058b80159d0e3b3919c6393f4993259a"
+    },
+    {
+      "system": 20261547,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261547_modal.npz",
+      "spec_sha256": "3ddb6d53ec45a8b3757fd850c2d31d75e32a0ded0352794e2359af585e4f247e"
+    },
+    {
+      "system": 20261548,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261548_modal.npz",
+      "spec_sha256": "416954ced1865913bb4ea3081e532470b04b748662b5487cdebe8e01e44923eb"
+    },
+    {
+      "system": 20261549,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261549_modal.npz",
+      "spec_sha256": "44463f4ce23330454266b8dd88576d5c50ea66798c8afb6a0172d0d9bc8e19fa"
+    },
+    {
+      "system": 20261550,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261550_modal.npz",
+      "spec_sha256": "51257c748efcc952aab76f0585442b1d23aed258e929010161553420787f2a82"
+    },
+    {
+      "system": 20261551,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261551_modal.npz",
+      "spec_sha256": "7f961dbbd7a74d3d6982573407d8b75382ebfe03610d5a41732cbe3487b6f1be"
+    },
+    {
+      "system": 20261552,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261552_modal.npz",
+      "spec_sha256": "d3b0d0bf2373192d5b862e53ec83b3bc7f0d4e2107bcb0ea3d882c6ec91238fa"
+    },
+    {
+      "system": 20261553,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261553_modal.npz",
+      "spec_sha256": "d849ed18783a1b2a7c01bb93ab44f865eaef2414d2142d55c33f57b64b38f153"
+    },
+    {
+      "system": 20261554,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261554_modal.npz",
+      "spec_sha256": "916cf1895a83c62e5a3ae12db3fd8f5131b6545b1670c8d89ad39b6e862d4de1"
+    },
+    {
+      "system": 20261555,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261555_modal.npz",
+      "spec_sha256": "991863bcdf09992128bc254a6033e48dbbfdd032747a56aa31ee17e2b75c1876"
+    },
+    {
+      "system": 20261556,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261556_modal.npz",
+      "spec_sha256": "23ea7dfee9a6366b6252562879c5b7a1186dd8f7dcbc1fac4f0230d0eebd37e1"
+    },
+    {
+      "system": 20261557,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261557_modal.npz",
+      "spec_sha256": "c5c61facd2d2151c99f06f42920327a5b655d3f43cc81d2830d2fa42fd10e6b1"
+    },
+    {
+      "system": 20261558,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261558_modal.npz",
+      "spec_sha256": "22fcc23cd74f3486fd8b70139ef454abab6a67b47b7df13fd8ecc97b0416a4e1"
+    },
+    {
+      "system": 20261559,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261559_modal.npz",
+      "spec_sha256": "3dfe3061e6690bc68545cb5eacdeaf2baea5c73cacd477a7f180b9ca19148d09"
+    },
+    {
+      "system": 20261560,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261560_modal.npz",
+      "spec_sha256": "8eb528e70682e9bdcd3eb565f57b3137e96fa42e916592dcf0196a83e27269de"
+    },
+    {
+      "system": 20261561,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261561_modal.npz",
+      "spec_sha256": "fee656f572e28bbb5c75cd26bf9c070a04655d95f50bca8f2328a8dc8ab37234"
+    },
+    {
+      "system": 20261562,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261562_modal.npz",
+      "spec_sha256": "84be9dff10b5946cf12db934217cc7a216feef429fe9e5a9a7a12a2b3a047161"
+    },
+    {
+      "system": 20261563,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261563_modal.npz",
+      "spec_sha256": "6ac97a0dafd99b8dd5925757dd0f001b7eb672b52a6c42d1064456b874a52d28"
+    },
+    {
+      "system": 20261564,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261564_modal.npz",
+      "spec_sha256": "5c945073121554ed8dc7a752c5714aa8b58f5a4e82457ca7e304216db1c63081"
+    },
+    {
+      "system": 20261565,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261565_modal.npz",
+      "spec_sha256": "b77f48db9ddcdc58cc6d4a109c0654fd8602a8ee086f8f590e7e4c4c60fc7cba"
+    },
+    {
+      "system": 20261566,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261566_modal.npz",
+      "spec_sha256": "7bf5a3a69c4337ebc54baa21d10645e7f89c2f309dedeb092f00de35f76260e3"
+    },
+    {
+      "system": 20261567,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261567_modal.npz",
+      "spec_sha256": "ff040919b3141eadb6fb46d49fceff283ec21a27ab31d0edac6a22bf3e78d499"
+    },
+    {
+      "system": 20261568,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261568_modal.npz",
+      "spec_sha256": "d6afa7d67169799b43e4361d28e5f4de42365e7e0fc5242b41b9fb1ed4c3607d"
+    },
+    {
+      "system": 20261569,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261569_modal.npz",
+      "spec_sha256": "8acf8e91123e002fdb85aad9b98043b21a1c79ec032741325831ac9ce16230ff"
+    },
+    {
+      "system": 20261570,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261570_modal.npz",
+      "spec_sha256": "ab55a8e2381fb1570dfe4a5287bba2013df3bceb03a5c75eb7d11421079ebe84"
+    },
+    {
+      "system": 20261571,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261571_modal.npz",
+      "spec_sha256": "674a1059c70cf02809d9c611f845b0c271d66708da8713a3952bb07f6e069fd6"
+    },
+    {
+      "system": 20261572,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261572_modal.npz",
+      "spec_sha256": "bd5d8c90baa3aad89d22bd03f4eb0e4f7e9e73dda09a91adc683033df63759c9"
+    },
+    {
+      "system": 20261573,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261573_modal.npz",
+      "spec_sha256": "582015082402e1cadfa3e125d68d4f7b94078782371b371b2491126df6ad550f"
+    },
+    {
+      "system": 20261574,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261574_modal.npz",
+      "spec_sha256": "0433bc48c4bbecbae80cdb0254505e28cc8650e8867bc8344e5352af249d05de"
+    },
+    {
+      "system": 20261575,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261575_modal.npz",
+      "spec_sha256": "e969a7c1fd5c6a0872d5ae1e9d87e03ab3cc97e66a70edb2d6ed0068ea604e23"
+    },
+    {
+      "system": 20261576,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261576_modal.npz",
+      "spec_sha256": "0b405275c99695a831549b2e2a8a84c7a2c226fb113e992c80c819a21e7e5544"
+    },
+    {
+      "system": 20261577,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261577_modal.npz",
+      "spec_sha256": "f354ea7cd1597118efd30d103937777fa77afec5d93751dcbc82392c477578fd"
+    },
+    {
+      "system": 20261578,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261578_modal.npz",
+      "spec_sha256": "87cd1923d0f04517f6712ee360ea94f6f7e1b087c4d7aabfbab603281211a83e"
+    },
+    {
+      "system": 20261579,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261579_modal.npz",
+      "spec_sha256": "8681fea006a386030d5302ab99b111e4585399d4ed225995cb3b4704637a44c7"
+    },
+    {
+      "system": 20261580,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261580_modal.npz",
+      "spec_sha256": "f6879e5c85e32567612989df0e826337cde0acbee6e69da4d21b5595128a39ad"
+    },
+    {
+      "system": 20261581,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261581_modal.npz",
+      "spec_sha256": "97efb3c666fbf70360cf79197dbc1064f93233b5e1ba0410e92ab692b91da3bf"
+    },
+    {
+      "system": 20261582,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261582_modal.npz",
+      "spec_sha256": "422fdd4a17ef3d9eda509e538120dca6cb51b9bfe376ce875c107f22f71d8f27"
+    },
+    {
+      "system": 20261583,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261583_modal.npz",
+      "spec_sha256": "d2c767bb7a3a120a44cb72d20b1463b44de393e87673f66c2e1a407927a3eb86"
+    },
+    {
+      "system": 20261584,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261584_modal.npz",
+      "spec_sha256": "445e49491625d98c3ca56553e1a0512098c7f777b84fc4ce3fd07c26c149b457"
+    },
+    {
+      "system": 20261585,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261585_modal.npz",
+      "spec_sha256": "6529bf40eda2d515ec569e08d2c4f468656b3be8309c678790cb5d3c9b3f4a2d"
+    },
+    {
+      "system": 20261586,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261586_modal.npz",
+      "spec_sha256": "9843d00d0389e83fe67ecd3b03cfaa4b3972549d6fd06861e58f0d8192c1c2c7"
+    },
+    {
+      "system": 20261587,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261587_modal.npz",
+      "spec_sha256": "636ff245f865b7ceb2e5c4e12843d2cd4a0edcdce40280d3c7d98786c5e4ae09"
+    },
+    {
+      "system": 20261588,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261588_modal.npz",
+      "spec_sha256": "a6b8171a2cbf3bc7187faf0de156ca82fb6c53ac0b3c8638be99cf25e1eba200"
+    },
+    {
+      "system": 20261589,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261589_modal.npz",
+      "spec_sha256": "6bec12df27a2b8e5e12436f0eb46c1e1e961bbedad9237b47abb4b02e885570c"
+    },
+    {
+      "system": 20261590,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261590_modal.npz",
+      "spec_sha256": "bfdc9f8ab173e127dae9e65df7103ac2f699648185fa0ea2bc5571085d4a4ca4"
+    },
+    {
+      "system": 20261591,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261591_modal.npz",
+      "spec_sha256": "36a454c5738fd4bd4fbc9f057a62bd786359c7538f22710f6541b07f24db3d41"
+    },
+    {
+      "system": 20261592,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261592_modal.npz",
+      "spec_sha256": "e080c983b23bf1f1258baa98effe0be1ea7fdce7e88a9db1b28e42fcec351ca6"
+    },
+    {
+      "system": 20261593,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261593_modal.npz",
+      "spec_sha256": "09b5fcc73ccd6c5362df9d5e9138b93d3865a8c569bb3ba352e29523aa5e559f"
+    },
+    {
+      "system": 20261594,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261594_modal.npz",
+      "spec_sha256": "27cbc5a64c586c3372f3c632efcb1b40c02c76560a3cd4b5694be154b3f92f84"
+    },
+    {
+      "system": 20261595,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261595_modal.npz",
+      "spec_sha256": "210b8a85055120b966ab75cd2344eb211059361674588ec2e993f57a0b608835"
+    },
+    {
+      "system": 20261596,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261596_modal.npz",
+      "spec_sha256": "224617d61e0d9a6eb35cfe03b858fef549923334acae9f62fd7a0ffaf5dd8b92"
+    },
+    {
+      "system": 20261597,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261597_modal.npz",
+      "spec_sha256": "7a66b8dc16823e10c81865918804f8a02db38352b41a1081903f9b23f36488b3"
+    },
+    {
+      "system": 20261598,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261598_modal.npz",
+      "spec_sha256": "5eda7760eec3dc5800f9699e78d0a8ec309014741a6adb5dd41f317f33a9f095"
+    },
+    {
+      "system": 20261599,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261599_modal.npz",
+      "spec_sha256": "af076fea9062b114fbbf6aa9083dd0022530f2ade17ae415c09005f5cca17813"
+    },
+    {
+      "system": 20261600,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261600_modal.npz",
+      "spec_sha256": "934e437e03bfd2e6da001d5b7af4dfe79d1027e9b862b724c96e81efa8d53819"
+    },
+    {
+      "system": 20261601,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261601_modal.npz",
+      "spec_sha256": "b8a4c80d97b33e05d66dc37354222326493908f53d2d460d4429986ce6183009"
+    },
+    {
+      "system": 20261602,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261602_modal.npz",
+      "spec_sha256": "c844b15c4a94159b4c65bc260d57350fd7d012ade9d978258da9ad771782b089"
+    },
+    {
+      "system": 20261603,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261603_modal.npz",
+      "spec_sha256": "ad489e185328abbcae0b56cfe0a805fa89782787afaf96918e456e945a8af670"
+    },
+    {
+      "system": 20261604,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261604_modal.npz",
+      "spec_sha256": "b837eba8da5cd7c19e1f2c5f2f0631cc098bd1dd088087d89998938b6996e4f5"
+    },
+    {
+      "system": 20261605,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261605_modal.npz",
+      "spec_sha256": "85c1e206dc7b6084a4e58071e5344aa0f8101848002f68f96c4dbdfef7f45ed4"
+    },
+    {
+      "system": 20261606,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261606_modal.npz",
+      "spec_sha256": "75f3b7c169da0eb3d923a0cf36119e196b05c2420951f6e4d3e718be54f7cfcd"
+    },
+    {
+      "system": 20261607,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261607_modal.npz",
+      "spec_sha256": "f5cbdd661197041030c7a03c05a5e8b47e518c7ee56b686467d46721ff365c31"
+    },
+    {
+      "system": 20261608,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261608_modal.npz",
+      "spec_sha256": "bb267ba49e1f0fb7df2b30542516fda3b6bfe93ba15986b751fbc35b046d685b"
+    },
+    {
+      "system": 20261609,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261609_modal.npz",
+      "spec_sha256": "9f287227a0beb6c3dcb0ad20a4d5febe4c5672b7a676fa9e45f5bca994497ab6"
+    },
+    {
+      "system": 20261610,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261610_modal.npz",
+      "spec_sha256": "6e5c0ee5ad7afb37b9adbf89922e2b6cf1bef0670d035928debec528f4999ef4"
+    },
+    {
+      "system": 20261611,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261611_modal.npz",
+      "spec_sha256": "8ce27149b83908d1f17a19f363452fa5c33ec0420d3a5ccb0c16cd5f8e3d4b16"
+    },
+    {
+      "system": 20261612,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261612_modal.npz",
+      "spec_sha256": "1fb7213a274cc613bf0b13eaf2e59b4509e8d033479d66d3d3c4bd93cd659403"
+    },
+    {
+      "system": 20261613,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261613_modal.npz",
+      "spec_sha256": "422af33da73d7575ac86bb767cf26ccce997c9edcbf5977675759018dae9ff7c"
+    },
+    {
+      "system": 20261614,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261614_modal.npz",
+      "spec_sha256": "fa16ee19f54f8efab85dc0306d303879601c086e19321515f75602d4db214094"
+    },
+    {
+      "system": 20261615,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261615_modal.npz",
+      "spec_sha256": "1e003a57d72e2a1c6d2ab8288ba34301ca8d3be925356faadfcc6e4fa702e7a1"
+    },
+    {
+      "system": 20261616,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261616_modal.npz",
+      "spec_sha256": "c639c982e0f5fbd08f38e7543731c7de45b901148e471edef9484804dfd46823"
+    },
+    {
+      "system": 20261617,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261617_modal.npz",
+      "spec_sha256": "b721b425dfd41761f8cbd8026bd5f78178993ed5dc7216ae72ca1b61fe0c94ca"
+    },
+    {
+      "system": 20261618,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261618_modal.npz",
+      "spec_sha256": "91014f2af6e6d144ee1014ccfaee30e5eceb72def06f88771d8f755488a55747"
+    },
+    {
+      "system": 20261619,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261619_modal.npz",
+      "spec_sha256": "3ad987f0b09675519d8ef54df68c3a25d73dedcd897ea0e142ca2ce12c506136"
+    },
+    {
+      "system": 20261620,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261620_modal.npz",
+      "spec_sha256": "39f6f4699f836269f0155a39195ee1d7d0cc5c58195e396af98ae52f562a34c0"
+    },
+    {
+      "system": 20261621,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261621_modal.npz",
+      "spec_sha256": "d4e53ef34071caf39d040ef846440257e592c75bd3a4950ac5bcd28d15ef9727"
+    },
+    {
+      "system": 20261622,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261622_modal.npz",
+      "spec_sha256": "3ac025bc391f18975da0dbc072925baa1daf7cc4aa6f89dd02936229d0d5c1f4"
+    },
+    {
+      "system": 20261623,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261623_modal.npz",
+      "spec_sha256": "cd1e3a27312316156d6ee30226ebee35588b9573cc8de099d00a9539995af431"
+    },
+    {
+      "system": 20261624,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261624_modal.npz",
+      "spec_sha256": "ce38e15ff4619d87b818a1b19867258fd94ea68a4b2214ad4b2671328a905a44"
+    },
+    {
+      "system": 20261625,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261625_modal.npz",
+      "spec_sha256": "10dbdc6d25b0b0de9eecf9bea87b035867f043a9b0704a1adc2157bb2be1e61d"
+    },
+    {
+      "system": 20261626,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261626_modal.npz",
+      "spec_sha256": "37627d2a1a1cb19542d6e96f83d64b55c8db796b51a95d4feb320adcf6a8fb1f"
+    },
+    {
+      "system": 20261627,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261627_modal.npz",
+      "spec_sha256": "a2a1e11d580215c8753332f882ba6eafc032d657f7a8ed446ee204c9ae785b64"
+    },
+    {
+      "system": 20261628,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261628_modal.npz",
+      "spec_sha256": "bb2f824242920689fdf0b86313b70dbb9561c9f74dacf2c795282126c952b7e6"
+    },
+    {
+      "system": 20261629,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261629_modal.npz",
+      "spec_sha256": "48e49f01bfda17cd8ad9da1578bd86886d1307e585354765f32094fe0906886d"
+    },
+    {
+      "system": 20261630,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261630_modal.npz",
+      "spec_sha256": "ca54efa7182de4010d41ac06451f46992dee2cdacd47ff3a0e35c656b619a791"
+    },
+    {
+      "system": 20261631,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261631_modal.npz",
+      "spec_sha256": "34b80fc7e1c4cf78e64c3b0ba6491840538c8a2b8ecafad8f9c9c357678934ab"
+    },
+    {
+      "system": 20261632,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261632_modal.npz",
+      "spec_sha256": "732f0adf15e59b64cabe4612e47c414d9400f9798e1d0f52d758d4cad07eb8d5"
+    },
+    {
+      "system": 20261633,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261633_modal.npz",
+      "spec_sha256": "4b2d3537d40bc0c660d1350da5fac93965df073132717d9f8f83581502154109"
+    },
+    {
+      "system": 20261634,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261634_modal.npz",
+      "spec_sha256": "aa01361e48c84bf5d0b435b4a0e53737319738e55480baa54c9d53fcc8027c69"
+    },
+    {
+      "system": 20261635,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261635_modal.npz",
+      "spec_sha256": "4f2a556e533c8064f600519675a607c375dbdb284341fef89be8db62784de5e3"
+    },
+    {
+      "system": 20261636,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261636_modal.npz",
+      "spec_sha256": "bd5cda87481517a8b4ade19b0142bd75a31a5be861978feef6f75f9bfbe7e512"
+    },
+    {
+      "system": 20261637,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261637_modal.npz",
+      "spec_sha256": "b9454274b000e7973f431ed3dcc970fb78211fada42c8ff7a3bfded2517e5c7f"
+    },
+    {
+      "system": 20261638,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261638_modal.npz",
+      "spec_sha256": "1e9937d020dfe126782dd3c182558fb6c4591663c0d0a1be734ca44ec19fe8e9"
+    },
+    {
+      "system": 20261639,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261639_modal.npz",
+      "spec_sha256": "9888526f9309c6f0abb04cf91d590fc999845255d98873b381553d8d31981ebf"
+    },
+    {
+      "system": 20261640,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261640_modal.npz",
+      "spec_sha256": "8e21106bb44a38f024241a69cde305636c6c8a43114c883833c8f310c74b42d4"
+    },
+    {
+      "system": 20261641,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261641_modal.npz",
+      "spec_sha256": "af8a885777ee61781dd90aa35266ae473dcbeaad35452bf6a9585ee0622da330"
+    },
+    {
+      "system": 20261642,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261642_modal.npz",
+      "spec_sha256": "874e3aeeec2d31dd11f89a32486d07351ea57cabc220eb2c538861f82468d473"
+    },
+    {
+      "system": 20261643,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261643_modal.npz",
+      "spec_sha256": "e0e31ca0a332cab13df510bdb291af2d24af7eabb8ed1410be1fddcd489ff5b1"
+    },
+    {
+      "system": 20261644,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261644_modal.npz",
+      "spec_sha256": "03abcf2fb8e835ed6ff2ce561e4ca274dfb2d733f6bcdb566e65e82445313198"
+    },
+    {
+      "system": 20261645,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261645_modal.npz",
+      "spec_sha256": "9a2931c519de6387c1a4fdd50eb1988bec6d86f63c3af72d5d96077044036a36"
+    },
+    {
+      "system": 20261646,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261646_modal.npz",
+      "spec_sha256": "e3b7e693e1a780a5e2f181058fd5280fe53f046b518d53f9e5ff7cf2b1ed44df"
+    },
+    {
+      "system": 20261647,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261647_modal.npz",
+      "spec_sha256": "fc4c1fd3585ca3a5ba23b496032743e0bb1bcce4caeef41266e75047a520fa1b"
+    },
+    {
+      "system": 20261648,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261648_modal.npz",
+      "spec_sha256": "3833441ae5a9e71ef8a2365251828a0616fedcd2fd04ad71bb95e2a0d535f5e5"
+    },
+    {
+      "system": 20261649,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261649_modal.npz",
+      "spec_sha256": "851a111e660ee151abbf0af3bd59761b9a95e50c2b5701e7ad03107c22b8dfa3"
+    },
+    {
+      "system": 20261650,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261650_modal.npz",
+      "spec_sha256": "9df91205df5035b5634e58f9317f15690028390436468e4568046132bbd88f0d"
+    },
+    {
+      "system": 20261651,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261651_modal.npz",
+      "spec_sha256": "bdabe356e1cf878a19140ee47a721c6631f6f7e3930434a8d90c0266b1de5034"
+    },
+    {
+      "system": 20261652,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261652_modal.npz",
+      "spec_sha256": "c22b4b2d9c9ff53c97253f77b44c3525f44fe4ef587e426718679631c6eeae5b"
+    },
+    {
+      "system": 20261653,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261653_modal.npz",
+      "spec_sha256": "d6a7b52d19b7333bdc684193c79b1fcece0ba74ce27eb6c58a0ecf8ba07b9c28"
+    },
+    {
+      "system": 20261654,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261654_modal.npz",
+      "spec_sha256": "a0130ce63d5fc4fca736a90d14c3b1865f8bc62d6dee2216fc30f3e9101ebdb3"
+    },
+    {
+      "system": 20261655,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261655_modal.npz",
+      "spec_sha256": "3facc1f30e5ff1ba12e44288077997c351f0473da0884b3e4af13a534a5bbfcd"
+    },
+    {
+      "system": 20261656,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261656_modal.npz",
+      "spec_sha256": "44838f7c52cef7175373ab31fb91832e2cdc934ac28c3d16ce07dabfb4b26469"
+    },
+    {
+      "system": 20261657,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261657_modal.npz",
+      "spec_sha256": "4db2aec91783535a26047ce913391431f0d04339f8f36c8cba2bdc1cfe10347e"
+    },
+    {
+      "system": 20261658,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261658_modal.npz",
+      "spec_sha256": "381bfcbccce69fbdb5519f0cee69671d10a3affd72d02bf6e540ec56b7e98163"
+    },
+    {
+      "system": 20261659,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261659_modal.npz",
+      "spec_sha256": "4f589681d345343991cdf6a08ffa4b70dd846f01b057d01da70730d4af77a3bc"
+    },
+    {
+      "system": 20261660,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261660_modal.npz",
+      "spec_sha256": "12038e2cb93824d7da199a5e96ac33cf85d3ef98f44628036273ee4bf876b55b"
+    },
+    {
+      "system": 20261661,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261661_modal.npz",
+      "spec_sha256": "696dc6c8f5b5ac5574c1f33b776e0ef33cb798d150745a48090d2f9564edde13"
+    },
+    {
+      "system": 20261662,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261662_modal.npz",
+      "spec_sha256": "001c902073af894753911e512225583a63f091a105fe5dfc94dbbc3f4fe44d1d"
+    },
+    {
+      "system": 20261663,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261663_modal.npz",
+      "spec_sha256": "6674e36ae70c887432a0204b3f52977dbd1367e8226851b79215ee98f47c358f"
+    },
+    {
+      "system": 20261664,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261664_modal.npz",
+      "spec_sha256": "c4b2e489b8a555f4db9f2ae7855bea1cafb596714302f4c1024662acb1be8e9f"
+    },
+    {
+      "system": 20261665,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261665_modal.npz",
+      "spec_sha256": "6aaed47c89dadb6ea6b23445227f32d1b869cda1ff6630c2dd895be565adbf8c"
+    },
+    {
+      "system": 20261666,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261666_modal.npz",
+      "spec_sha256": "9410197dc7011fb5447e89089e0cd57988e9d7457aa74c1362fdb543daadbdda"
+    },
+    {
+      "system": 20261667,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261667_modal.npz",
+      "spec_sha256": "cea57dcf952323ad30676cd039dfb47eecadb81d4c5cc3abdcef5bd48e590895"
+    },
+    {
+      "system": 20261668,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261668_modal.npz",
+      "spec_sha256": "439ba4f5903ee31cf28cf2978514655a8508888cf3a3363a15862a4cd91f6b12"
+    },
+    {
+      "system": 20261669,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261669_modal.npz",
+      "spec_sha256": "7b9e2ff469580ae8f62ffdfb66ce79a204631c0301cd8d7db654b80f3bb72483"
+    },
+    {
+      "system": 20261670,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261670_modal.npz",
+      "spec_sha256": "ddfc335a506605e798bf1f6e8b57750be6edc0a47418237430eb781147edcac8"
+    },
+    {
+      "system": 20261671,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261671_modal.npz",
+      "spec_sha256": "122132871e15be0446ab5dda1f9cb465f41c3d678c40c68043d19f101cf73bc0"
+    },
+    {
+      "system": 20261672,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261672_modal.npz",
+      "spec_sha256": "5be48a4d04095eaa68aa9b50d1a016a298e6a2653e9ed296ac7efb4f4eb233d6"
+    },
+    {
+      "system": 20261673,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261673_modal.npz",
+      "spec_sha256": "e344d2bd12d4202b54450966b6c6af0ecd3232484ba81d458459d4d463beb71c"
+    },
+    {
+      "system": 20261674,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261674_modal.npz",
+      "spec_sha256": "6af6409df06176bb6b71132582ee37274069b8d3f9e0567fff70b2146bb113c2"
+    },
+    {
+      "system": 20261675,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261675_modal.npz",
+      "spec_sha256": "e47348736dec6c744e273937d2a90e6e5c3b38f21e73a26f4ebb898492bbcd87"
+    },
+    {
+      "system": 20261676,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261676_modal.npz",
+      "spec_sha256": "5282b343863bf83d18f9a8ce796ed482ae20490ec7198619fb6287ee555cf2c6"
+    },
+    {
+      "system": 20261677,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261677_modal.npz",
+      "spec_sha256": "ae2dbe8b31e4c07dd2f0cc533a4d08fd574d718d0c6058575a765ff6b4aad0c7"
+    },
+    {
+      "system": 20261678,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261678_modal.npz",
+      "spec_sha256": "6f04c19252091b58de8826080265cb761fc0a0bbd65e6dab3808a7681ed98fc1"
+    },
+    {
+      "system": 20261679,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261679_modal.npz",
+      "spec_sha256": "f6b3101b40de02fc37414c16749a20fdbdc6b3efea77e14cb1d195e6fc4cc9df"
+    },
+    {
+      "system": 20261680,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261680_modal.npz",
+      "spec_sha256": "3be8e0e9e4237a0d9ab8f5adbf6fb0ee57968264c613135c31fed92f395d0f96"
+    },
+    {
+      "system": 20261681,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261681_modal.npz",
+      "spec_sha256": "f47375108b4176a19454a9a3f9edc49280e40cfa0583de119da46dbf38795999"
+    },
+    {
+      "system": 20261682,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261682_modal.npz",
+      "spec_sha256": "df6efef091ba55eaef018f2f7f5b280baf6fffa9aede29c1d95b5e6053be6f5b"
+    },
+    {
+      "system": 20261683,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261683_modal.npz",
+      "spec_sha256": "54437fbca98ba9dbd24cb9e277b711b77c42c8cc2431bdc0c25301ca84f509af"
+    },
+    {
+      "system": 20261684,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261684_modal.npz",
+      "spec_sha256": "7c55487449bf53f40821fe7a40a38614fb8f281f1121afd29a3548de84262189"
+    },
+    {
+      "system": 20261685,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261685_modal.npz",
+      "spec_sha256": "ed3a60e41982f9428a6778d9c44b24aef3acd09829ebb3817a932aa809fa9038"
+    },
+    {
+      "system": 20261686,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261686_modal.npz",
+      "spec_sha256": "80249b42cacf6818226a013ca7de9895df203c98811c7a691cad6d0a14345446"
+    },
+    {
+      "system": 20261687,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261687_modal.npz",
+      "spec_sha256": "27305ff311eff3921c496383f9cc84bfcbc89b04d5e031554c51686994dcb479"
+    },
+    {
+      "system": 20261688,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261688_modal.npz",
+      "spec_sha256": "93168c496f523c7ac83e2833b9412a8f1a5147edb6860f1c26f43cf6468616c0"
+    },
+    {
+      "system": 20261689,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261689_modal.npz",
+      "spec_sha256": "d5c8df8cd89c36b9680fc11b0e845ae6cab37b30069d24e87f4d476f3835fa74"
+    },
+    {
+      "system": 20261690,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261690_modal.npz",
+      "spec_sha256": "2cb48053489dad701437e7982e46c1e0588d709e35555e09d09d92367d93f856"
+    },
+    {
+      "system": 20261691,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261691_modal.npz",
+      "spec_sha256": "db10e144cbe8b63376e38e35a2cadf9af0bf57167fe8047d5c74edf6364cc4f8"
+    },
+    {
+      "system": 20261692,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261692_modal.npz",
+      "spec_sha256": "fd4eb90b528f9c8430d37040aed84df7ffb2c5b115f3617240618adb9c940687"
+    },
+    {
+      "system": 20261693,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261693_modal.npz",
+      "spec_sha256": "1430e6c3a93f406d6347de36a58e34c41d46cc40d1d1b3a4ed3d8cc1bf809105"
+    },
+    {
+      "system": 20261694,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261694_modal.npz",
+      "spec_sha256": "2eb2ea6f2a92b4e302e4641488af7b78ab43794e0f06891a5e0e36043f5a9a99"
+    },
+    {
+      "system": 20261695,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261695_modal.npz",
+      "spec_sha256": "2620defece4346f82553d99887fb37ce99e3d918c15535ef5835e76acaa03271"
+    },
+    {
+      "system": 20261696,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261696_modal.npz",
+      "spec_sha256": "403bc4f3bdfacdb838ad637098c9e9014dbcc07970b3b51557e2820bb5ffce05"
+    },
+    {
+      "system": 20261697,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261697_modal.npz",
+      "spec_sha256": "0b6a5440bd0f2b61ee08d1ec0daa58d8594edda47a9497acdde5ac901b721994"
+    },
+    {
+      "system": 20261698,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261698_modal.npz",
+      "spec_sha256": "8f73596a699ad1fc0469ee4994308c310dc0179126072a76fc46f12cc2e18c15"
+    },
+    {
+      "system": 20261699,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261699_modal.npz",
+      "spec_sha256": "e429ccf5c7e8689adcb5dee96dde5803a4d44df48303377ecb34e706ef122c8f"
+    },
+    {
+      "system": 20261700,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261700_modal.npz",
+      "spec_sha256": "89c48ee36fdcb5074fbc12f1965bbc4f89c18e301f1b75288d96c214451114f0"
+    },
+    {
+      "system": 20261701,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261701_modal.npz",
+      "spec_sha256": "294bcc33ae40e6a6a07f8ea348e7c0a44b7e6998f1afde4566257c984bc503fb"
+    },
+    {
+      "system": 20261702,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261702_modal.npz",
+      "spec_sha256": "106d4d3832fc95cd8847451e3537aac9f82063d7000838ec93b2f6a787373296"
+    },
+    {
+      "system": 20261703,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261703_modal.npz",
+      "spec_sha256": "a685a9a140c1090f0475d4f3698dd46d895e695104700ea864dc6286a5fc6ee3"
+    },
+    {
+      "system": 20261704,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261704_modal.npz",
+      "spec_sha256": "76a35509508989b5fc6763a9604ae191c9eef7b328a2cc59be1fa7220c403cbb"
+    },
+    {
+      "system": 20261705,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261705_modal.npz",
+      "spec_sha256": "fc169998c70c4d6679a4e272cca6806641fc0504cca6ed4d8c4e6cdd69ed0cea"
+    },
+    {
+      "system": 20261706,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261706_modal.npz",
+      "spec_sha256": "f2eb731baf50195fde10489eb89cb99947f4efba4bcb9d289a6ff346d5e82f4f"
+    },
+    {
+      "system": 20261707,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261707_modal.npz",
+      "spec_sha256": "3274ee7eeead6d514d88433467169e89ae56f2379d190dae1e5f6891605ad7ba"
+    },
+    {
+      "system": 20261708,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261708_modal.npz",
+      "spec_sha256": "21c57a40cec08a732712a12c0413b03c96da7781eae5329276b43242cae52ed6"
+    },
+    {
+      "system": 20261709,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261709_modal.npz",
+      "spec_sha256": "312e53e054f845a73f5140d4502de7f0a018541a6bc9eaf9a7a31a4692271979"
+    },
+    {
+      "system": 20261710,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261710_modal.npz",
+      "spec_sha256": "6a231d757027a5ddb824366b501d990138075979023d7d016394aea91817d06d"
+    },
+    {
+      "system": 20261711,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261711_modal.npz",
+      "spec_sha256": "8174e36a04f1e1bf73384123be93df4516c3041b8ed189902509e249b46cea33"
+    },
+    {
+      "system": 20261712,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261712_modal.npz",
+      "spec_sha256": "dba2d80a00c32c8135898e0a4df16f63bc8a1d1f53c66cec0b99ba326f7cbd6e"
+    },
+    {
+      "system": 20261713,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261713_modal.npz",
+      "spec_sha256": "bab7906b44b10856a3c1a5d47dfa235860448dee7d4419c3c63d51d3559365a9"
+    },
+    {
+      "system": 20261714,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261714_modal.npz",
+      "spec_sha256": "b2833f32189e9c4b855c35cdf980b14b1313a3b3ff7ea533e5859a851b71f5d4"
+    },
+    {
+      "system": 20261715,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261715_modal.npz",
+      "spec_sha256": "50819fae2eb3cffdc1d6414089a754a98732e8dcb8587e543f7bca68c84bcb53"
+    },
+    {
+      "system": 20261716,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261716_modal.npz",
+      "spec_sha256": "d3e23403410b2260c94a3398b3e939635584b79d65f747a69fcdb76dc424c910"
+    },
+    {
+      "system": 20261717,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261717_modal.npz",
+      "spec_sha256": "6d2c41f4e52997f40dcd2dcd943d807f3a105cd2ceb51cddb4e1d3c6342a3134"
+    },
+    {
+      "system": 20261718,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261718_modal.npz",
+      "spec_sha256": "1537b5d7dc8f4f0e9d0c2398719ed77f473d9fc5952fc1cf4e89508b0c1e97da"
+    },
+    {
+      "system": 20261719,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261719_modal.npz",
+      "spec_sha256": "74ecadc95814ffa7a396f1fc7ae446a2b13b146bb19a87b2c36c30caa475a09f"
+    },
+    {
+      "system": 20261720,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261720_modal.npz",
+      "spec_sha256": "1355ad55c22298f76f27dfc5067d87a3ad2c915a92c07faf839f59097324d1d0"
+    },
+    {
+      "system": 20261721,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261721_modal.npz",
+      "spec_sha256": "2e15f9a83a35260b913a61d64b7e50b4abab133db12a92cbda092e499b64c955"
+    },
+    {
+      "system": 20261722,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261722_modal.npz",
+      "spec_sha256": "a4eeec3d7451dda73fa0e088e27bccf70dfa5987e5413bf85e32cc99e67ea135"
+    },
+    {
+      "system": 20261723,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261723_modal.npz",
+      "spec_sha256": "ce4852c4563350c7cf22d27ff514838441d97bc88247bdacbd7d5044279f98aa"
+    },
+    {
+      "system": 20261724,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261724_modal.npz",
+      "spec_sha256": "fd86444341d066bd58cb4b8a79b67489650e74d31c0f5624030809c067ef5533"
+    },
+    {
+      "system": 20261725,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261725_modal.npz",
+      "spec_sha256": "a4ecc6fde515605c120d2d9531fd3c378a0d3ee58a1ea3e9bf0719cb89ce261a"
+    },
+    {
+      "system": 20261726,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261726_modal.npz",
+      "spec_sha256": "79b0847ac29b86f8cd1b4ef71cb259c8078e4b0f8abb723f72779dbda9c6f35a"
+    },
+    {
+      "system": 20261727,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261727_modal.npz",
+      "spec_sha256": "87e3cdf4b297156a9d666d2a7e8d727e067d3a3838f99d2f54be9efcc5a7b3fa"
+    },
+    {
+      "system": 20261728,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261728_modal.npz",
+      "spec_sha256": "546aa57f7a9c4ff3e2d83432417ba2b4be8a66a42e32e02a03dc94343f9c2cdf"
+    },
+    {
+      "system": 20261729,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261729_modal.npz",
+      "spec_sha256": "e2cfd079648c2caeb042bf1338a83e01d3ae3142645ecac5e3bb5e496aa5b408"
+    },
+    {
+      "system": 20261730,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261730_modal.npz",
+      "spec_sha256": "5d73602df268cbdbcb02609ad13b676232a0364be121352a07df312ffacb6c95"
+    },
+    {
+      "system": 20261731,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261731_modal.npz",
+      "spec_sha256": "3e55e93931533ffeb4ad219833f0f4a29da274e9837937bc4141e91d049653a4"
+    },
+    {
+      "system": 20261732,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261732_modal.npz",
+      "spec_sha256": "918add8233daf07115ad3ef41b07f187d2927ec39145b81978bc7e1abafbe0db"
+    },
+    {
+      "system": 20261733,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261733_modal.npz",
+      "spec_sha256": "f536dc6437da6e82f543bcfbf125580cd4e62c79d6e549fc18a785ecb6102be5"
+    },
+    {
+      "system": 20261734,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261734_modal.npz",
+      "spec_sha256": "89befdf1857d364311fa8f5859f9c28cf9eba2e95ae805b0ded7a711d62f4837"
+    },
+    {
+      "system": 20261735,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261735_modal.npz",
+      "spec_sha256": "4964fc1eebf9063cf64f8e68fcff4b2f21820521b73e001b624146dc92313515"
+    },
+    {
+      "system": 20261736,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261736_modal.npz",
+      "spec_sha256": "09f923bef5e6fdaa1d69a819f155928e4e4f9eb1221df1237465e491afa07029"
+    },
+    {
+      "system": 20261737,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261737_modal.npz",
+      "spec_sha256": "9178ce15361af4d278238e70d45c7780424d8b3a3eac54fd5c61e4edabecfb8f"
+    },
+    {
+      "system": 20261738,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261738_modal.npz",
+      "spec_sha256": "eeb986f1031eecea3b403124f97ddc341a2e1a214f97c3e36a455f76c910a2a4"
+    },
+    {
+      "system": 20261739,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261739_modal.npz",
+      "spec_sha256": "3e2f48426a9aec2e28fdd9423d6fd7176f8c3a293d6463d2ed698f66e25dbe7e"
+    },
+    {
+      "system": 20261740,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261740_modal.npz",
+      "spec_sha256": "9af4f22b5339b57b2032c1225698f047f0cef45802419e74b2ac8104323f0d7e"
+    },
+    {
+      "system": 20261741,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261741_modal.npz",
+      "spec_sha256": "08e07b50c97c9b02f48d9f4d95953eb1dad0b77553e0292bd84f153834ef5872"
+    },
+    {
+      "system": 20261742,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261742_modal.npz",
+      "spec_sha256": "8dcfe9eba0c2dfde7f3634e142643d0aadbb72baf91113104ef6497561876dc2"
+    },
+    {
+      "system": 20261743,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261743_modal.npz",
+      "spec_sha256": "8c41dd5aa67894d6fa6eab958612cb28cd2e03ac998a2db7a1aec953fcdd8c95"
+    },
+    {
+      "system": 20261744,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261744_modal.npz",
+      "spec_sha256": "d5f746bedc5487f1e9e43fc2856ad1a50d56f31c1f99c1b49f63881c8f1b8c9b"
+    },
+    {
+      "system": 20261745,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261745_modal.npz",
+      "spec_sha256": "03dec75cb0c1c187ba66d809117b7f0dc3c9de218ca3bc792e281e45e272ce9a"
+    },
+    {
+      "system": 20261746,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261746_modal.npz",
+      "spec_sha256": "9c0dd9302d17cd369364bae355d9e82a482d7c1748bcddb1cba7ebf3012cba69"
+    },
+    {
+      "system": 20261747,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261747_modal.npz",
+      "spec_sha256": "2802d133f15f46a874a9863b69226595682349b0b5dd483da8b7e727c76d2949"
+    },
+    {
+      "system": 20261748,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261748_modal.npz",
+      "spec_sha256": "48a891bc3efc8f848b81e2b66050964c117a95d70782c547482e402392d7b53d"
+    },
+    {
+      "system": 20261749,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261749_modal.npz",
+      "spec_sha256": "fdb7d7e0e924efb89799d31be171ab64c2aca973de5a5e6ecc4f98f6d11e35dc"
+    },
+    {
+      "system": 20261750,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261750_modal.npz",
+      "spec_sha256": "9169b847797c15ecdf9920051030137815a3693ce962dabbe79cf85fbc6e8b65"
+    },
+    {
+      "system": 20261751,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261751_modal.npz",
+      "spec_sha256": "6fadfc46bfb0d381b339618c006caff083883110be53c9a12cbe15e7b8af8235"
+    },
+    {
+      "system": 20261752,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261752_modal.npz",
+      "spec_sha256": "1eef32966d798ac9c255486d3e54bb96c15b1fd1082efb424a9456df28732228"
+    },
+    {
+      "system": 20261753,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261753_modal.npz",
+      "spec_sha256": "5d4c6a03b8b8b7090b68e473e023eab24d825e7a3afd048ec8e524540ebd6a38"
+    },
+    {
+      "system": 20261754,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261754_modal.npz",
+      "spec_sha256": "3f67fce638bde7a20da36e2f0e0350f14c963dcfc05306101eac6880e9f24a8a"
+    },
+    {
+      "system": 20261755,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261755_modal.npz",
+      "spec_sha256": "4ccc066753ccc7a8d9d2e5f3ffc5da36fb4110a7532dd26b86e56341db243fdc"
+    },
+    {
+      "system": 20261756,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261756_modal.npz",
+      "spec_sha256": "40badfdb598c557c843fb1eb8dd9f2b3bf39d6b260c9156be12ac89b163da588"
+    },
+    {
+      "system": 20261757,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261757_modal.npz",
+      "spec_sha256": "43ab5233d0fe29a959ba0c5648bff5840f0ca607166f1685ad749f84b0983826"
+    },
+    {
+      "system": 20261758,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261758_modal.npz",
+      "spec_sha256": "f282a2fcaf543a8c0d26fa68f6ef5f0f3fe7b64200f27e6a92c45fd68ea57650"
+    },
+    {
+      "system": 20261759,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261759_modal.npz",
+      "spec_sha256": "3cc530e181039be9946fc5c57d95567fc297f34ba648648a330ca04a0d1c841b"
+    },
+    {
+      "system": 20261760,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261760_modal.npz",
+      "spec_sha256": "70ed33a0ec8626b8f723fa4f20d63e48ea16c37dd6a75702da9f1ffed4e382c5"
+    },
+    {
+      "system": 20261761,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261761_modal.npz",
+      "spec_sha256": "3cf4f4cf086168b8837db3381b528a5106baf0572a252f37f54cdd7fca3945c4"
+    },
+    {
+      "system": 20261762,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261762_modal.npz",
+      "spec_sha256": "2fdf0569a504b4e2dafa819b289b9339189216f973b7986beff75ecbb5750432"
+    },
+    {
+      "system": 20261763,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261763_modal.npz",
+      "spec_sha256": "3b5f04b290bc7f7418ba66bcbc8eff9159602c2732e7a5b9af21e3d6e897dc46"
+    },
+    {
+      "system": 20261764,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261764_modal.npz",
+      "spec_sha256": "f6f93c23fddec324fdfcc08123556c21576e5aa0317e57f151644210c0f4f957"
+    },
+    {
+      "system": 20261765,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261765_modal.npz",
+      "spec_sha256": "d109a34fff0fe502d4fda97fee3ba681b87b2bf81cd1ea64a30507dfc1acdf29"
+    },
+    {
+      "system": 20261766,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261766_modal.npz",
+      "spec_sha256": "e059a42067ebdf7da229e332e90d06a6cbfb1314531e45372c766a3c4e3fed71"
+    },
+    {
+      "system": 20261767,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261767_modal.npz",
+      "spec_sha256": "ff400dc6371fabe38583657224536a8e1203f3d41997b59282e8b7fd8e5d5651"
+    },
+    {
+      "system": 20261768,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261768_modal.npz",
+      "spec_sha256": "5f4d7170be93678baeefd66c25a04c28f9a9b3ef5987f653ac5e8e438c3912b0"
+    },
+    {
+      "system": 20261769,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261769_modal.npz",
+      "spec_sha256": "5ec00c48a270ed885766d3375898665065a713214969c3da91a0fcd40aa69619"
+    },
+    {
+      "system": 20261770,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261770_modal.npz",
+      "spec_sha256": "f7997b21d28cf37cba189e9f687089ad6e5205aea5bb47bb93d8c866914b9b99"
+    },
+    {
+      "system": 20261771,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261771_modal.npz",
+      "spec_sha256": "18999156458cc55e1efa19ed299081fa2c41e0632fb645692173d73b12649bcc"
+    },
+    {
+      "system": 20261772,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261772_modal.npz",
+      "spec_sha256": "94a42b369b52afd812fffa2c46ad649913941498b18cb9c2578921ed7d4fd88d"
+    },
+    {
+      "system": 20261773,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261773_modal.npz",
+      "spec_sha256": "45a95e80572c8f91b7882110494247d683a2b3ce5d5b25d0939f7dfcce35b8f4"
+    },
+    {
+      "system": 20261774,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261774_modal.npz",
+      "spec_sha256": "e25a074809007903ecca96ac47dafbda02d76491571b06f6308eb4542e0da831"
+    },
+    {
+      "system": 20261775,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261775_modal.npz",
+      "spec_sha256": "44376942e74659f4895fb00bd083800e1abf2631dcfbf1555fc4c95f04c5696e"
+    },
+    {
+      "system": 20261776,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261776_modal.npz",
+      "spec_sha256": "2ff894207f2ed33d49ac1522c5393f4a8df661535f4d54059dbd90f1b8c1a532"
+    },
+    {
+      "system": 20261777,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261777_modal.npz",
+      "spec_sha256": "b3e296b2712a9094453dfdaecbb2d14556a3ad23253f39bc965600d7c4ddad31"
+    },
+    {
+      "system": 20261778,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261778_modal.npz",
+      "spec_sha256": "a21e6e3e4ecfbcffc126c0799c1fb3108ad72bdc7e3cdb63c8034c1d9d7c3acc"
+    },
+    {
+      "system": 20261779,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261779_modal.npz",
+      "spec_sha256": "cb1a4c5c44b0987988dfd2a88ac4e7008971846b6999dbaafb6e9a2dcd48b9dc"
+    },
+    {
+      "system": 20261780,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261780_modal.npz",
+      "spec_sha256": "cdbe020609bd7f398a8ae370501843faaabe27505e061cd7141347de282ddbb2"
+    },
+    {
+      "system": 20261781,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261781_modal.npz",
+      "spec_sha256": "9aaabbe5b286fe018e36c262fdc35f3c7d2a5b5fadd3f50bf5ef6960d70ff706"
+    },
+    {
+      "system": 20261782,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261782_modal.npz",
+      "spec_sha256": "f25ba67b71fe75b4d6390e6c04f6c491749580013b968019ef0a53c05ac0c8aa"
+    },
+    {
+      "system": 20261783,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261783_modal.npz",
+      "spec_sha256": "7a39e2de90c402169bd6f42e2062c07471e1a7123fd119021e441face0ee6079"
+    },
+    {
+      "system": 20261784,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261784_modal.npz",
+      "spec_sha256": "4bf98be462c816734d1b545db4866d1efff6f61505f29c4eab8856feb27831a0"
+    },
+    {
+      "system": 20261785,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261785_modal.npz",
+      "spec_sha256": "328cca3e3d94017676393a6ee4f5c4833530afa62d633ce362ff8bb0f5a38ee3"
+    },
+    {
+      "system": 20261786,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261786_modal.npz",
+      "spec_sha256": "096c67e5d0e9e7561d13d91de3fe3177d46e2d0f0cc67ecc5d9d4736c4a877e7"
+    },
+    {
+      "system": 20261787,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261787_modal.npz",
+      "spec_sha256": "21f02188f93ea6c18b51d265402dbdca9c593eb022fb124ab2e763116462ea9f"
+    },
+    {
+      "system": 20261788,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261788_modal.npz",
+      "spec_sha256": "3207b504c8e3a814df7cfb6d828de215802db529b8546326ef75c450cea7dda3"
+    },
+    {
+      "system": 20261789,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261789_modal.npz",
+      "spec_sha256": "a58eb6c00b166c2399f35fe3ff119a5f547fbf583e35ac0e47e98c75f1bc28a7"
+    },
+    {
+      "system": 20261790,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261790_modal.npz",
+      "spec_sha256": "b5f4f2bdc6e4560cecba8c97a19b1c2a84a3cf6b929d4539446c3206e9e16c85"
+    },
+    {
+      "system": 20261791,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261791_modal.npz",
+      "spec_sha256": "a42b2d151bee4a06178f673e412fb910521d8341b337b67c53d6a489a8317b09"
+    },
+    {
+      "system": 20261792,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261792_modal.npz",
+      "spec_sha256": "47c37d274e9c89c47db69f3b64732289f465765aadef4b0fc44ca572f0e8f885"
+    },
+    {
+      "system": 20261793,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261793_modal.npz",
+      "spec_sha256": "b717f8315c0c2d4a5376e298dd77d750e6094778c674303df355629e790c816a"
+    },
+    {
+      "system": 20261794,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261794_modal.npz",
+      "spec_sha256": "898471c449e40195aa85baaacd8033753e88c4821a4c3f7e8e1ea75bafd9610a"
+    },
+    {
+      "system": 20261795,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261795_modal.npz",
+      "spec_sha256": "03ef607076d5d027110cb543641f55801a2bf9052a486798298a90489e9e1f6e"
+    },
+    {
+      "system": 20261796,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261796_modal.npz",
+      "spec_sha256": "a5c327a2b1a2701cab6d4f73ce5e76418e3adeb1d4634b8b722fcd87ba988550"
+    },
+    {
+      "system": 20261797,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261797_modal.npz",
+      "spec_sha256": "28eb8001026c5d2c63b6bf800b92bd12305c9bf47e69a77b072a2455c84ae904"
+    },
+    {
+      "system": 20261798,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261798_modal.npz",
+      "spec_sha256": "3561e2776b7e73e7aaf00fa164f713ac2eb626107e10691abaedf953a9737dac"
+    },
+    {
+      "system": 20261799,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261799_modal.npz",
+      "spec_sha256": "2567a79685155656fe536ddb2b0de154e4ec2ebdd486b22b4854674edfc66839"
+    },
+    {
+      "system": 20261800,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261800_modal.npz",
+      "spec_sha256": "4e1a434c5c46fc4df8ac6acdabddca4a280bfad34819071b6204192b3ba225b8"
+    },
+    {
+      "system": 20261801,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261801_modal.npz",
+      "spec_sha256": "d988dc61749aa7546ddebc528096628d427ade20393e1f8148c10dd67217abd4"
+    },
+    {
+      "system": 20261802,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261802_modal.npz",
+      "spec_sha256": "dfbc51f90faa81b380e69cd9180380255a7f15ae279a462f0688aa6652d39798"
+    },
+    {
+      "system": 20261803,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261803_modal.npz",
+      "spec_sha256": "d44e800e132226dbe14269c5da9073632ba66f0332a7655bd99375bd3b9218c3"
+    },
+    {
+      "system": 20261804,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261804_modal.npz",
+      "spec_sha256": "d1c2aac3d54962f9121927aef8ed5522db7bf58c106deb6dffb52157e52a104e"
+    },
+    {
+      "system": 20261805,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261805_modal.npz",
+      "spec_sha256": "b0f5ab2a506e1d097a5e0b26fd04356e3fcfc8e5aa5e8f4b0839b1af3cf01eb3"
+    },
+    {
+      "system": 20261806,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261806_modal.npz",
+      "spec_sha256": "5319fdbac4c9272627fc53abdc1a5f58b2b17ccfee0590cf20757ede05133c8d"
+    },
+    {
+      "system": 20261807,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261807_modal.npz",
+      "spec_sha256": "b6c4d80d51774e15812d46f8dc4283aa94450fb5cd4ec2bd81e3df340d05b4c9"
+    },
+    {
+      "system": 20261808,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261808_modal.npz",
+      "spec_sha256": "2b987c47875539937d06b80c7d91e3be4408d052cc4848ee7670af9dde973cba"
+    },
+    {
+      "system": 20261809,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261809_modal.npz",
+      "spec_sha256": "d1d85ef9441504ef48e99443b9deb9cfb38e3a03d964997145b4a4599936d579"
+    },
+    {
+      "system": 20261810,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261810_modal.npz",
+      "spec_sha256": "b13d9690faf0fae3fc874f0122399e166ddab565464b139e1943d05096aee679"
+    },
+    {
+      "system": 20261811,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261811_modal.npz",
+      "spec_sha256": "be85efc35ef8c5e3ee63000b1d841bf0f449418b4f554962ae4a2aa1c62794d7"
+    },
+    {
+      "system": 20261812,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261812_modal.npz",
+      "spec_sha256": "4ebfd278f3548d86d02fc42e297f807a7b89feb869dd58ab8e957fde1c3409f1"
+    },
+    {
+      "system": 20261813,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261813_modal.npz",
+      "spec_sha256": "dd779040353665cb6ba959f5d44b9d1ddad7ec9f3f178edb8ee675e58247cbcf"
+    },
+    {
+      "system": 20261814,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261814_modal.npz",
+      "spec_sha256": "2c986a8ba8dc39ba19e9f59ab58e2a818af0d43be914bcd34b9f545d9a1cc51f"
+    },
+    {
+      "system": 20261815,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261815_modal.npz",
+      "spec_sha256": "3d7681d56a193d90971767c896a375723c8c6fb438af57f8baaca38fcc08d2d7"
+    },
+    {
+      "system": 20261816,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261816_modal.npz",
+      "spec_sha256": "f3cb79c2d959e4c6ac19872e9a8c2167d387ca7efe50cd5a209d6d780bd45f77"
+    },
+    {
+      "system": 20261817,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261817_modal.npz",
+      "spec_sha256": "eb85f2b3d1d22d7aae4dd20dd0c701374c0a065f54de2e666dba1548dd147233"
+    },
+    {
+      "system": 20261818,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261818_modal.npz",
+      "spec_sha256": "1f29e4ae3519c017bf80f3df4842d235a6c052cf2a8366e736cb16a0c9e2c9e6"
+    },
+    {
+      "system": 20261819,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261819_modal.npz",
+      "spec_sha256": "e4260cc9236b0ae7f607f6d38899fb055ed533a8520ecbb481c1d77d0b49f10a"
+    },
+    {
+      "system": 20261820,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261820_modal.npz",
+      "spec_sha256": "0c1a08589d6d4d2c5d6c50e2eb78b85128c006ff389800d3b2f4f570e2d786ca"
+    },
+    {
+      "system": 20261821,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261821_modal.npz",
+      "spec_sha256": "3eec9363f5ebfda960ccc2032e47b06727609139eef953c331d1c698e3d8e012"
+    },
+    {
+      "system": 20261822,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261822_modal.npz",
+      "spec_sha256": "71733adbaa22055a4765c6303bd353e4ccfbb13d11fe77b3776c883936718b2d"
+    },
+    {
+      "system": 20261823,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261823_modal.npz",
+      "spec_sha256": "cb9b75559f2ecf772931e5541cac9d9738669e488a54de9eb97c6ad1976e00cf"
+    },
+    {
+      "system": 20261824,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261824_modal.npz",
+      "spec_sha256": "07c68b6983bfc16046b917cfd40a997c415c9916773b196a69a82f7024f6e4e1"
+    },
+    {
+      "system": 20261825,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261825_modal.npz",
+      "spec_sha256": "c1434c381a2e7801892970bc0de8f23d5f402ab7ba51b5563836985d6202abc4"
+    },
+    {
+      "system": 20261826,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261826_modal.npz",
+      "spec_sha256": "d91538946ba6590fdfdf45b4608ac5d0cb25f7116d2781eaae1cd11366a0bdfa"
+    },
+    {
+      "system": 20261827,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261827_modal.npz",
+      "spec_sha256": "2e49f5e4286215ac45a587f6b6456e6a92c80042fe2e320432313fd445b9b00e"
+    },
+    {
+      "system": 20261828,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261828_modal.npz",
+      "spec_sha256": "fe0b70495a07c06d3054ddde1f2c73bbe3c0cf19cbe7a9d47c6413764649fb85"
+    },
+    {
+      "system": 20261829,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261829_modal.npz",
+      "spec_sha256": "0373b32d4b875463d879d265b45ecaa62e87b9f3320d9e30f33fc0828015f77c"
+    },
+    {
+      "system": 20261830,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261830_modal.npz",
+      "spec_sha256": "6b71ea525e59e762cc3585865d012de5380961c1143b2dff109486f2e072434a"
+    },
+    {
+      "system": 20261831,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261831_modal.npz",
+      "spec_sha256": "c6e4ec67d4700674fbe06aa1d3979b1db1f3413be0a308383dbb2861d1bae20e"
+    },
+    {
+      "system": 20261832,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261832_modal.npz",
+      "spec_sha256": "9e45997e04f25652d2345603cb7f5967186c5cd87f499f76c9c795ac1d99afff"
+    },
+    {
+      "system": 20261833,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261833_modal.npz",
+      "spec_sha256": "f9784dbfc01e117b91216d507decbb9e47909f1fa71d85c6efac9601e779cd08"
+    },
+    {
+      "system": 20261834,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261834_modal.npz",
+      "spec_sha256": "7a4d8ab8255086cb4228d549c898a6b7cd713b19e8ce871bdd6659a5fad628d1"
+    },
+    {
+      "system": 20261835,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261835_modal.npz",
+      "spec_sha256": "d07788f7e3fab94954a3ac447ac84d51c10831798b1db20c4637ed15df922e3c"
+    },
+    {
+      "system": 20261836,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261836_modal.npz",
+      "spec_sha256": "9d13be92718720e30cf1527102c9a7e92a2c180bbdbcf86e665cbf357c636b93"
+    },
+    {
+      "system": 20261837,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261837_modal.npz",
+      "spec_sha256": "902e619076d009bf748380656790474e471737f47a744065f040767255ce5a28"
+    },
+    {
+      "system": 20261838,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261838_modal.npz",
+      "spec_sha256": "7150241fe9cb1db52433b087e7767feebde152ed43012379ccdee2bf7ae02382"
+    },
+    {
+      "system": 20261839,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261839_modal.npz",
+      "spec_sha256": "a785f89090138f13deb328ada2068902e73dfe1b3662d2e7f23c0c2c9c517969"
+    },
+    {
+      "system": 20261840,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261840_modal.npz",
+      "spec_sha256": "c6b993cf470a619c48d31323c271788ae4919216a629fad7839799e1332efaad"
+    },
+    {
+      "system": 20261841,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261841_modal.npz",
+      "spec_sha256": "4ca4047c669f83a9a1aeeb66c0653ba9546b04339785e4de753f2866bd2d2b0f"
+    },
+    {
+      "system": 20261842,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261842_modal.npz",
+      "spec_sha256": "dad62666506bf2f4aa98bf946d3e80023321fec0e942b4fe9c734dc1e9eb1fe6"
+    },
+    {
+      "system": 20261843,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261843_modal.npz",
+      "spec_sha256": "38ab33d086c6c8e064617fd40c30201f888d9bdcba7f37642e56e2ddfec81086"
+    },
+    {
+      "system": 20261844,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261844_modal.npz",
+      "spec_sha256": "60a33cc5aa1d05d687f0a0ee8362ed3485222586ee1135477610d3a4848149b6"
+    },
+    {
+      "system": 20261845,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261845_modal.npz",
+      "spec_sha256": "8bdb1cd36d447e71b207ac7f78270395e7dd84abca4b269c221b1d7084d72b3c"
+    },
+    {
+      "system": 20261846,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261846_modal.npz",
+      "spec_sha256": "d6c61de74ca088e6aa4d0965e345cbc73e8f4d24c2bf5672e3839d17499500d4"
+    },
+    {
+      "system": 20261847,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261847_modal.npz",
+      "spec_sha256": "fbb1f25be39f013faeecacca201fdbcf45b30b0749ec5cbdf999e473befc0b3b"
+    },
+    {
+      "system": 20261848,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261848_modal.npz",
+      "spec_sha256": "706f9a546707334182fb616452e4af8824ea90b384d127f1c8ff52baaa02fc5e"
+    },
+    {
+      "system": 20261849,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261849_modal.npz",
+      "spec_sha256": "2d949b88b24b0cb1718eec2ef961ed2f4bf1c3adab5476e5ae88d81e7020a7ef"
+    },
+    {
+      "system": 20261850,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261850_modal.npz",
+      "spec_sha256": "2cf2922af3ac414fca7d58824d9a549c2090aba95c7496077e2b580c5d33cfc2"
+    },
+    {
+      "system": 20261851,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261851_modal.npz",
+      "spec_sha256": "c3bdc4986e65078fdc71e0a2e6a1f1f6c5418834bffa60230c13d51a1cd8d94e"
+    },
+    {
+      "system": 20261852,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261852_modal.npz",
+      "spec_sha256": "742537d3368575e8219dfb26833f323f4c91d033e548eb35e1784bbbba9b43ec"
+    },
+    {
+      "system": 20261853,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261853_modal.npz",
+      "spec_sha256": "c8790233da4163bcc8f7cab031d31922638787d4c6fcd9c7517f33eab5c73857"
+    },
+    {
+      "system": 20261854,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261854_modal.npz",
+      "spec_sha256": "101229b9c52e599ac4ed9b1eda0feba9ef30c2a3fb4b92b4cc938276790020a8"
+    },
+    {
+      "system": 20261855,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261855_modal.npz",
+      "spec_sha256": "ca40cbdb0c715108321f5372cbda0a3c0c67747e33c436ce9fe8e4ed5c067486"
+    },
+    {
+      "system": 20261856,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261856_modal.npz",
+      "spec_sha256": "f6fee55fc131cbccc23a79dae45210a9ba5c508e35e604bd5172e502a83daa4f"
+    },
+    {
+      "system": 20261857,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261857_modal.npz",
+      "spec_sha256": "8ea47c98581fded1018b6c4a24b843cbce7724786709a4bdd531fb346b3914a2"
+    },
+    {
+      "system": 20261858,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261858_modal.npz",
+      "spec_sha256": "b107195d3394dfa53d093aee04acd22baf422119639db36010e60651d48641e4"
+    },
+    {
+      "system": 20261859,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261859_modal.npz",
+      "spec_sha256": "8273f0c5bd94713e5ec19bdd09384583bc7733ac194e3034980bb6fac266cc00"
+    },
+    {
+      "system": 20261860,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261860_modal.npz",
+      "spec_sha256": "ff3a2ac762eb7e65213bc789c79f833d63671fb61d00a2dc58a164ca87f87dd2"
+    },
+    {
+      "system": 20261861,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261861_modal.npz",
+      "spec_sha256": "a678773a83aad7b34c83ba4dd23723b33f4b31331592ab7e8b827007f37294fa"
+    },
+    {
+      "system": 20261862,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261862_modal.npz",
+      "spec_sha256": "55f9a381917f2a678ff4dd8f5a1200354228fc5577416c7a36358692cdb89ef5"
+    },
+    {
+      "system": 20261863,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261863_modal.npz",
+      "spec_sha256": "75ef15635e9cd73138d722ec56793811c1fc1e5a9dfebef96dbf0f17f555efda"
+    },
+    {
+      "system": 20261864,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261864_modal.npz",
+      "spec_sha256": "d9a6b0fa0d3b422819c4fa9a192bf9cf6071ab4a0140a78db0b7832b01527944"
+    },
+    {
+      "system": 20261865,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261865_modal.npz",
+      "spec_sha256": "ea90aaf40730649e81405bde997f457448ee57628ede5be5657c9bc9ab20fe8c"
+    },
+    {
+      "system": 20261866,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261866_modal.npz",
+      "spec_sha256": "8903bca36872941f939f431933522438f8079ba18cd58a8616000d941ae886e5"
+    },
+    {
+      "system": 20261867,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261867_modal.npz",
+      "spec_sha256": "9f3968200cba81c4d75093f95aeadab9c2bc4e7f4bb31b5137e2443295ca2454"
+    },
+    {
+      "system": 20261868,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261868_modal.npz",
+      "spec_sha256": "2fafa17a65382f517df45b9e71b10b20c78af96a532a98b66448b1e360cffe5f"
+    },
+    {
+      "system": 20261869,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261869_modal.npz",
+      "spec_sha256": "194aa1bc0d1845318b29994697da56828e4325991aa261bd21a9576e7dac1078"
+    },
+    {
+      "system": 20261870,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261870_modal.npz",
+      "spec_sha256": "3cbc82726ca6508f414be15b6387484398123b3ee53ea2f877f0fba90fb93423"
+    },
+    {
+      "system": 20261871,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261871_modal.npz",
+      "spec_sha256": "94c6c900879686986bb58a53b619a2a702fd0298ff02af3a4774ce604891f70b"
+    },
+    {
+      "system": 20261872,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261872_modal.npz",
+      "spec_sha256": "7bff3d6b370bcd16fa65c7ce4b72bd592071d383ef1700cf426b15646b016f17"
+    },
+    {
+      "system": 20261873,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261873_modal.npz",
+      "spec_sha256": "2e4759b44e89eba301749537dbe927f8e8bb932b781f5c219f0c649d346254ae"
+    },
+    {
+      "system": 20261874,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261874_modal.npz",
+      "spec_sha256": "4dd268b39c6ce1cfb29bb0c2843b36d9f6711eb2828f52cb9b953c54af81850c"
+    },
+    {
+      "system": 20261875,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261875_modal.npz",
+      "spec_sha256": "71bbaea0d466809fd4039eab9b33f84cc17d13192956668b9d75244fa24607e3"
+    },
+    {
+      "system": 20261876,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261876_modal.npz",
+      "spec_sha256": "86392bf49bc3965a923ac51a0834c8ab6bf08eded2df4b78cc7147b78f34f09b"
+    },
+    {
+      "system": 20261877,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261877_modal.npz",
+      "spec_sha256": "0f6891050e0105ca6ba7ad87cd95eba392ba469cc59306c2aca222a8b2a647f6"
+    },
+    {
+      "system": 20261878,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261878_modal.npz",
+      "spec_sha256": "83866c67e7706c4c7617b285f4d80cf81f74fb6dfd339ce467ce9df96b441fc1"
+    },
+    {
+      "system": 20261879,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261879_modal.npz",
+      "spec_sha256": "18f0b2e77b79e0e70b8d108a7d3a43b9b9320f11b0c16f75a56a226a8950b686"
+    },
+    {
+      "system": 20261880,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261880_modal.npz",
+      "spec_sha256": "c0cce7740ad5ab665305f9fd1361622772f2e88d5d4db2cddac8b925dd440e3c"
+    },
+    {
+      "system": 20261881,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261881_modal.npz",
+      "spec_sha256": "b932f3f59dedc8ec1da2a4746580d32d98152253ed9c7f21210f0460cf2590dc"
+    },
+    {
+      "system": 20261882,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261882_modal.npz",
+      "spec_sha256": "b6fe8dcfccf6ddd349ebe5c560f3afc4bceabfcfa16964fb349b794c1ea77eb5"
+    },
+    {
+      "system": 20261883,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261883_modal.npz",
+      "spec_sha256": "afc70efc404e8ae3e471e1defa91ed9bc016fc988f1b3dd34b822ba620bb1188"
+    },
+    {
+      "system": 20261884,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261884_modal.npz",
+      "spec_sha256": "283f13d82daf0bf5aefc2fc51c1b40a5188a098906ba1908d198afcd6b16a02e"
+    },
+    {
+      "system": 20261885,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261885_modal.npz",
+      "spec_sha256": "b4db12206cf3e70fb76e12e1c1297c464543cafe997962fcccc72bb5dfea4ba7"
+    },
+    {
+      "system": 20261886,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261886_modal.npz",
+      "spec_sha256": "ec56bb15f27338f63b9111002d84404e704d27076f5e5b73bcc353ed5b6fb443"
+    },
+    {
+      "system": 20261887,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261887_modal.npz",
+      "spec_sha256": "5bd3081030611311204b14f588ce0394a2bb32c4b5b161abff0a7b849d17959a"
+    },
+    {
+      "system": 20261888,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261888_modal.npz",
+      "spec_sha256": "e6853774f37c7ca6b3a6c0a505682ffdcf2c0a051c21354c3fd8b9f787781254"
+    },
+    {
+      "system": 20261889,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261889_modal.npz",
+      "spec_sha256": "dc9efefe9fce9597cfe45b83d6813410d936b8d191c0cafc4a09d625ff467af4"
+    },
+    {
+      "system": 20261890,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261890_modal.npz",
+      "spec_sha256": "3f1631f4403ec9039428b0daa1fe456b2b5d5d809c3bac32bde86ffc19d514eb"
+    },
+    {
+      "system": 20261891,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261891_modal.npz",
+      "spec_sha256": "d81ddc0cdaf550f86675adf1d93f10c0365a952d2c22e505630c791cf9ba77f8"
+    },
+    {
+      "system": 20261892,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261892_modal.npz",
+      "spec_sha256": "33be72ac94d5752a88313638ef98b2c110a803a3ffdb3c3e9a25cfb6bfadec2d"
+    },
+    {
+      "system": 20261893,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261893_modal.npz",
+      "spec_sha256": "f9641084883bfb75a98c1c70f4dd2bee940e9da1f59e899eaf4935a08443f4be"
+    },
+    {
+      "system": 20261894,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261894_modal.npz",
+      "spec_sha256": "2e83a865f3827efe13420adde1caff39b907ba27c98e6cbb41385ea0f0e88fb8"
+    },
+    {
+      "system": 20261895,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261895_modal.npz",
+      "spec_sha256": "9d1abe9f4456f6b14771d04bbc5a14bfa7a0d1a8685bba2b926d02beada8dd17"
+    },
+    {
+      "system": 20261896,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261896_modal.npz",
+      "spec_sha256": "e7411a191a873af19f8a9c80233fe62462767d5d76361f04d47f8eef14f73851"
+    },
+    {
+      "system": 20261897,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261897_modal.npz",
+      "spec_sha256": "fbaae8676cf7f559b9280bdac9854606f8d034625e8c70abe309300e3ebfc12e"
+    },
+    {
+      "system": 20261898,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261898_modal.npz",
+      "spec_sha256": "4c94465ea6d9fe33b696a569c5e2958eb1ee3f4251e71cf28531c3838c291883"
+    },
+    {
+      "system": 20261899,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261899_modal.npz",
+      "spec_sha256": "5cfb535aa6afd36592e091df7464e0f1854ff80b220a6d8d40f7146935db1d3a"
+    },
+    {
+      "system": 20261900,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261900_modal.npz",
+      "spec_sha256": "93326ec2aafdfc3c478392cc482a125aeff9a0945d7c470d534313faa8eb7b21"
+    },
+    {
+      "system": 20261901,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261901_modal.npz",
+      "spec_sha256": "2a63f2dc3f617413319b8ccb9c196aecb9b9eba2032b1ad0b248078070631e3f"
+    },
+    {
+      "system": 20261902,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261902_modal.npz",
+      "spec_sha256": "de30fbecf185e5f2e7ed34863a76f7a778464c6ee79540dc5ae1b0a1c710b17e"
+    },
+    {
+      "system": 20261903,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261903_modal.npz",
+      "spec_sha256": "9ddd88e54562935c250fd67ea9f75451a0a47a076c6ceaad8594c9fdadf7eeb6"
+    },
+    {
+      "system": 20261904,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261904_modal.npz",
+      "spec_sha256": "b6864b260273a3868f9ec7781ae064b3bad319045c4a4f83c03a4434a08bb129"
+    },
+    {
+      "system": 20261905,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261905_modal.npz",
+      "spec_sha256": "b502ba9bd9ce88e8f192b2ed3f160ef384f9c5d65fbd9eeede522badfae95d9c"
+    },
+    {
+      "system": 20261906,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261906_modal.npz",
+      "spec_sha256": "671b0ed841a3c7075048c5f2ff1514a226574728f8751019acddcdd407f0ed09"
+    },
+    {
+      "system": 20261907,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261907_modal.npz",
+      "spec_sha256": "0e82e825d75965c16f015f12ad1f028f50d6f0e2184e03a8dc76fa921f3cbd3e"
+    },
+    {
+      "system": 20261908,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261908_modal.npz",
+      "spec_sha256": "3b2058da6e0cde75bdf5ba3ef76edbf711ae9e7034995700aa576d5a28dc8cbc"
+    },
+    {
+      "system": 20261909,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261909_modal.npz",
+      "spec_sha256": "468fa0d5bc4321d6afa33461707b7ca89de26a72f327ea7f21223564d5bdc157"
+    },
+    {
+      "system": 20261910,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261910_modal.npz",
+      "spec_sha256": "f563322c9c29d6d49100836d08dbdbad682197da13fb638430404cd88a926387"
+    },
+    {
+      "system": 20261911,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261911_modal.npz",
+      "spec_sha256": "639e82d4b4483493fb771717725bd4a7198cbd59d516a6a70ef32bef6d468471"
+    },
+    {
+      "system": 20261912,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261912_modal.npz",
+      "spec_sha256": "c9bb3873addfd15f40d845119f6a09684231534555cd734426a9c7dc4f4776ce"
+    },
+    {
+      "system": 20261913,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261913_modal.npz",
+      "spec_sha256": "428b38dfdea935128e705c93b16f3fbe141953604d6ffd69f8e6628e1b85756b"
+    },
+    {
+      "system": 20261914,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261914_modal.npz",
+      "spec_sha256": "eac0a816f2d7b83c0567a4e52e65f880546ac4d38def13436395a50a8907509e"
+    },
+    {
+      "system": 20261915,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261915_modal.npz",
+      "spec_sha256": "7ec5ab4a4579bc68c31a172e8df19e84a2344fe57b150d8e26650bb1999308ca"
+    },
+    {
+      "system": 20261916,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261916_modal.npz",
+      "spec_sha256": "5268874c5ec43de4a0c77543ee045d85ecdece0df4048b99c70fb18406c7ca38"
+    },
+    {
+      "system": 20261917,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261917_modal.npz",
+      "spec_sha256": "b15c5a43766c60bde92bd7b8a638ebf737646f116960bc630bb5c26b07a6bece"
+    },
+    {
+      "system": 20261918,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261918_modal.npz",
+      "spec_sha256": "f214b28ed36345d3e10d39914cbce28cc112223e24c36d762072140594cb748a"
+    },
+    {
+      "system": 20261919,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261919_modal.npz",
+      "spec_sha256": "096125773fd15033d5f23f69ab48931d6d577ba6fe714de6f7b2629c4ff80925"
+    },
+    {
+      "system": 20261920,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261920_modal.npz",
+      "spec_sha256": "c927ccfb3d2eebdd401bdb2579f348b25265f4f0914409ed2dd1cc38d70e6857"
+    },
+    {
+      "system": 20261921,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261921_modal.npz",
+      "spec_sha256": "4edbbfdc5a43b526dc12f86c45398d7600b3306085ffae8ff0082c3354442687"
+    },
+    {
+      "system": 20261922,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261922_modal.npz",
+      "spec_sha256": "1046b9b37ff74301c1a07b215e0e0cb21f96bd03476376185d3e2c0601275333"
+    },
+    {
+      "system": 20261923,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261923_modal.npz",
+      "spec_sha256": "2f8674b22a6cff50ef92f0c7974b49cd835cd6a937f07a365cd6cedacbc63abe"
+    },
+    {
+      "system": 20261924,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261924_modal.npz",
+      "spec_sha256": "4cac63b056a91b3678b254e17138ff8004dd3b92bbae3ffa1f94b58c17d0b8a2"
+    },
+    {
+      "system": 20261925,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261925_modal.npz",
+      "spec_sha256": "cac64341bf64e7e4b40257b41681daefa57e30bbc13da5b3d457dab3768ed332"
+    },
+    {
+      "system": 20261926,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261926_modal.npz",
+      "spec_sha256": "fa64bbeaf66b8bf7f0188202e29d00d3e1e665236f435ced8735489368e2d71e"
+    },
+    {
+      "system": 20261927,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261927_modal.npz",
+      "spec_sha256": "e70ec6cd63538fbaf7d08de616b50df02025124f19f25ef5eb684d2467548427"
+    },
+    {
+      "system": 20261928,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261928_modal.npz",
+      "spec_sha256": "deadb6bb639862e40d8df8ff7984d8ac85ba9d56a09961c18d4d27b21e1609b8"
+    },
+    {
+      "system": 20261929,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261929_modal.npz",
+      "spec_sha256": "d240bf15a2ca7061da9685d9f1b6193e04088597f4abd102d5a4c53498b16a35"
+    },
+    {
+      "system": 20261930,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261930_modal.npz",
+      "spec_sha256": "8bcf687d376bf620fd63c088152888b66ad797659d1c06400fb4961e2ec8d551"
+    },
+    {
+      "system": 20261931,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261931_modal.npz",
+      "spec_sha256": "c4d59655276755661fb096081322e0ba598c59736503c2cdd2da8a3ed6af0231"
+    },
+    {
+      "system": 20261932,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261932_modal.npz",
+      "spec_sha256": "d3466261f0b78aaaeb00f7d75930eae03d2ea76d8e5636bbcb2ff2f7e25898a5"
+    },
+    {
+      "system": 20261933,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261933_modal.npz",
+      "spec_sha256": "3e4b7741c99ff7fb4ec8d1ce5ebd60541dc9bb03fd6ef6b24b8b70d1ca69bab4"
+    },
+    {
+      "system": 20261934,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261934_modal.npz",
+      "spec_sha256": "5797e2d661f443ea056f2f007a7dec0c02cda4b0fd2bcd2896f4f97ae8cf1230"
+    },
+    {
+      "system": 20261935,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261935_modal.npz",
+      "spec_sha256": "9a30f9225244cb8737cc26ce2f944e03819acdc6fd472caaa70bf6f602079dcb"
+    },
+    {
+      "system": 20261936,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261936_modal.npz",
+      "spec_sha256": "6854c1bd31e190cd1a84d77c6fde521f12a0f1d5e609efd58e18ffa6139ef434"
+    },
+    {
+      "system": 20261937,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261937_modal.npz",
+      "spec_sha256": "0cd624fa392b70aef52b9bb5b1e08a7eddfe892565a23a25f7bda9ca2c569eb2"
+    },
+    {
+      "system": 20261938,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261938_modal.npz",
+      "spec_sha256": "d36ea8eeeaeda33596eb4580b6b84d77ea15b9229a1eb3635fc67d0d8b353f58"
+    },
+    {
+      "system": 20261939,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261939_modal.npz",
+      "spec_sha256": "da02d3fb6497557b6e186f0aa36427a8508e11580f83fbe7c7ef9ab5b1883d1b"
+    },
+    {
+      "system": 20261940,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261940_modal.npz",
+      "spec_sha256": "12d501e202b8b3f1c5ffd7421da85a31d12df85fce8cac8787d143f9edd5c52b"
+    },
+    {
+      "system": 20261941,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261941_modal.npz",
+      "spec_sha256": "9cf9b84bdcc8ac7863b9020425393f4ea5995954eb31b07f3bd597eb1b7e79a2"
+    },
+    {
+      "system": 20261942,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261942_modal.npz",
+      "spec_sha256": "769e49b4290096f59b54a8fe8e79d17b4f907759f9409df0bfcad8c52d4b3408"
+    },
+    {
+      "system": 20261943,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261943_modal.npz",
+      "spec_sha256": "1e895e16c76854d78f41aa9d03ce0950e79f59cabf382173361e42e4c1ce8b58"
+    },
+    {
+      "system": 20261944,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261944_modal.npz",
+      "spec_sha256": "a49be374f6e3b4411199611a0508075045cb373aa8a30f3bcc9859bfd87fb608"
+    },
+    {
+      "system": 20261945,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261945_modal.npz",
+      "spec_sha256": "3aad6662bfe65f55424c8cea32fdec22eac6a6e59215e33021bcf07e41785319"
+    },
+    {
+      "system": 20261946,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261946_modal.npz",
+      "spec_sha256": "f9bd2c3450d778057242549f7b2f47330b17ef2ad044fc157bd9567074d8f1a2"
+    },
+    {
+      "system": 20261947,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261947_modal.npz",
+      "spec_sha256": "1a1104285068e0117166afe80230a045203942229cb73783ff41c899f4cd2cce"
+    },
+    {
+      "system": 20261948,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261948_modal.npz",
+      "spec_sha256": "c2323392bdec8f89c3089bc0cbfd1f03ca706997f0dca515519f63ec9c1e8386"
+    },
+    {
+      "system": 20261949,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261949_modal.npz",
+      "spec_sha256": "2b4e0a444c7b39c0738be4927afa588dbb1fe6712768954267d399c15c7b26cd"
+    },
+    {
+      "system": 20261950,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261950_modal.npz",
+      "spec_sha256": "ce460add299d721ca39a2c625ef0c5ba58836d2c38695d37b17bafacb6609797"
+    },
+    {
+      "system": 20261951,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261951_modal.npz",
+      "spec_sha256": "e6ac0647b0d2bc2f201750c3c01dcb3d2b48ac4cd553d0523d46b14171f51b0a"
+    },
+    {
+      "system": 20261952,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261952_modal.npz",
+      "spec_sha256": "088e6ef8a8c63c068e0334d7fa632c450855033c62626cc3191e9b63fe0d64d1"
+    },
+    {
+      "system": 20261953,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261953_modal.npz",
+      "spec_sha256": "2e6385ed22aef29bf9923295c672834cc21e8f6e871167260b2ce3cf379661fb"
+    },
+    {
+      "system": 20261954,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261954_modal.npz",
+      "spec_sha256": "92a7623fc393b4436ad3b28a86f146f1e2f02f696c0011b7e82807855d0a5b56"
+    },
+    {
+      "system": 20261955,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261955_modal.npz",
+      "spec_sha256": "d05e3c89e191d2cf382289257a8b23cc4b6eb716f524efb2da91fac10866b6c8"
+    },
+    {
+      "system": 20261956,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261956_modal.npz",
+      "spec_sha256": "d913fc4f70e3801ccc04731764a98629ed4a7696c084850d95744d9ff3fce312"
+    },
+    {
+      "system": 20261957,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261957_modal.npz",
+      "spec_sha256": "1a8fede96709d71be753961e62816b4f2b1a4ac8613f74e6a7f29a4b9944d972"
+    },
+    {
+      "system": 20261958,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261958_modal.npz",
+      "spec_sha256": "bb9dfcb304650a6dbafcc65f47eb5b85815f93f98d5f165bc049c7ad61f7b6bf"
+    },
+    {
+      "system": 20261959,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261959_modal.npz",
+      "spec_sha256": "63137a729410b943cb3f345a2f2c11d67a9e0f5bf9898c95730b156f07092a5e"
+    },
+    {
+      "system": 20261960,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261960_modal.npz",
+      "spec_sha256": "691e7e38d7b8e471adaadb316e790856ee87bdff351ea77005c462dfb4ee5fee"
+    },
+    {
+      "system": 20261961,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261961_modal.npz",
+      "spec_sha256": "7faae02e9769b995ae18caa71c5d309e346694e1648509118eb95dbe59932b9c"
+    },
+    {
+      "system": 20261962,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261962_modal.npz",
+      "spec_sha256": "159d2798f3c3a929fc6b2c688e1a668fe6d0dfebc1c5dbc293e05f907042cec2"
+    },
+    {
+      "system": 20261963,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261963_modal.npz",
+      "spec_sha256": "5af66c035aae8b2e65fdf4cd6c8db4704f159a577a2667bfb5fb1c02b392abd3"
+    },
+    {
+      "system": 20261964,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261964_modal.npz",
+      "spec_sha256": "a026ceef02d2f55f1a305c09dc5f689f86c6fded5e7b5fdc47a1689b9bbbe4de"
+    },
+    {
+      "system": 20261965,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261965_modal.npz",
+      "spec_sha256": "32fde36822277bd6ebdea6a6040e13f9d1fa0b87b5588ff1e708a6f134f2de12"
+    },
+    {
+      "system": 20261966,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261966_modal.npz",
+      "spec_sha256": "3a9436f837b415000d4dd08c9769bc8ce804fae6c5c397c827b0347651d46745"
+    },
+    {
+      "system": 20261967,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261967_modal.npz",
+      "spec_sha256": "575d4b89f90f7ea536067989af61ee9e63089c927b28260792b2e4d6a976e1a1"
+    },
+    {
+      "system": 20261968,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261968_modal.npz",
+      "spec_sha256": "3eeec886790705f50029a6df40c0d018922c494eb38dfc903f282826631efaea"
+    },
+    {
+      "system": 20261969,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261969_modal.npz",
+      "spec_sha256": "d38db8628bba82c7d0f7de41f121516bf424d043355fb5ea8e8fcbc889c8fee9"
+    },
+    {
+      "system": 20261970,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261970_modal.npz",
+      "spec_sha256": "4671f5e16d6430574ac15c33ff2c1179a6dd3904e21e737b37d4c8179a521b01"
+    },
+    {
+      "system": 20261971,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261971_modal.npz",
+      "spec_sha256": "a7d42ea75a736aca73d7cfb7f13b63c45ed6f78baa016d899c8fd4c8124b086c"
+    },
+    {
+      "system": 20261972,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261972_modal.npz",
+      "spec_sha256": "cb9c138a533a55959336636282345585ea86b3bad5f7d2fdb4421bff1cae8127"
+    },
+    {
+      "system": 20261973,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261973_modal.npz",
+      "spec_sha256": "b77187fafa53496229d8b8ecfefda6b01c3768aeb17cf2f2ee40f3d0b62cb6f4"
+    },
+    {
+      "system": 20261974,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261974_modal.npz",
+      "spec_sha256": "6255abfe857d377436b6dfb2fc0eb2412eb92530dab871a45d54f2cf5dca2c3d"
+    },
+    {
+      "system": 20261975,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261975_modal.npz",
+      "spec_sha256": "1e114f7ab22ad184380fa0e5b26657a1ddf2fd260cdd6c80c81b765c549db64c"
+    },
+    {
+      "system": 20261976,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261976_modal.npz",
+      "spec_sha256": "c135bd36c5caa5cb8a6dc4ffbc1cda2d52ac6acbdd366c05adda6ba525351d18"
+    },
+    {
+      "system": 20261977,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261977_modal.npz",
+      "spec_sha256": "2355d6a8a04cb8d79a5cd440678bbebbbca39dcb1058da3151fb7439e7c749a7"
+    },
+    {
+      "system": 20261978,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261978_modal.npz",
+      "spec_sha256": "3bb22ff195665811a3e958c437a9b21f912c18254c2cd9b04daca7559f3a1c52"
+    },
+    {
+      "system": 20261979,
+      "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003/system20261979_modal.npz",
+      "spec_sha256": "77f731a2b632f038614a9721c2d2990add2d12c885f19b9bb0e4c20bedab8b85"
+    }
+  ],
+  "labels_basis_sha256": "b5de06541f9cb58cfa9bd0ad59f31bca171c11c5479c3c43a9b56524b7828b83"
+}

@@ -28,10 +28,10 @@ def background_spec(spec):
     return {**spec, "contrasts_m_s": [0.0] * len(spec["contrasts_m_s"])}
 
 
-def generator_geometry(spec, cells=64, depth_terms=16, modes=32):
+def generator_geometry(spec, cells=64, depth_terms=16, modes=32, quadrature_nodes=160):
     """Known-background geometry only; no hidden contrast in returned arrays."""
     background = background_spec(spec)
-    z, weights, basis = quadrature(background, modes, 160)
+    z, weights, basis = quadrature(background, modes, quadrature_nodes)
     psi = np.cos(np.pi * z[:, None] * np.arange(depth_terms)[None] / spec["depth_m"])
     psi[:, 1:] *= np.sqrt(2)
     matrices = np.einsum("zm,zd,z,zn->dmn", basis, psi, weights, basis)

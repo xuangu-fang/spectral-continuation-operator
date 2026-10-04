@@ -183,6 +183,19 @@ MAP now COMPLETE: lambda1e-8/1e-6/1e-4,50step .008790/.007623/.014105 vsnoMAP.07
 All3 improve; old5profilefailureNOTinformationlimit. Stopstrengthsweep/nonlinearpriorcapacityrestart.
 CurrentboundedOLD8diagnostic: cubiccontinuous128priorbasis,64/128/256rangecells,0/1/2/5samecontextsteps;
 true-medium16/32depthtermoracles separate. Checkcoarse-gridcompensation before claiming decoder refinement free.
+Continuousrange auditCOMPLETE:16terms256cells+5steps oldquery.000226,narrow400.005106;oracle16f400.004861,
+oracle32f400.000835. Depthbandwidth is an actualrepresentation bottleneck,notjustoutputsampling.
+Same128latent,training512labels32depthterms,256cells5steps:oldquery.000127,narrow400.001552;
+priorcapacityoracle.000184/.001335. Stilllinearlearnedphysicalprior+classicalinference,NOTdeepAIbreakthrough.
+Source-subspace audit8olddev400Hz40orthogonalsources:rawmean.001700,meansystemworstcomplexcombination.005189,
+maxsystemworst.015344;old16/64raw.006941. Newmatrixtruth[129,96,40],8NPZ+3auditNPZ;
+1024/96vs2048/128worstsourceconvergencemax1.514e-5. DoNOTcall40sources40independentsystems.
+Rank audit COMPLETE: all40source singular values flat, even last reception profile; best fixed output span
+rank8/16/32 rawFrob .8944/.7746/.4472. Traditional linear algebra, not newtheorem or genericFNO/tensor bound.
+Second-domain codec COMPLETE: same strong65grid inverse, uncompressed raw.0000984; speedSVD rank4/8
+.000393/.000205; new512training-label PCA128 .001713. True speed hasrank<=4 BYCONSTRUCTION; doNOT
+claim universal separability. All compression loses some accuracy. Same257teacher only, not1e-4 continuum.
+No deep-learning necessity shown; no automaticAE orPCAcapacityscans. Report15 and mechanism10–12 updated.
 
 `coherent_representation.py`, `learned_wave_chart.py`, `learned_coherent_kernel.py`,
 `coherent_helmholtz_data.py`, `generate_coherent_ocean.py`, their `audit_*`/`evaluate_coherent_*` drivers,

@@ -1,0 +1,362 @@
+[
+  {
+    "method": "continuous_prior",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": 0,
+    "variant": "narrow",
+    "raw": 0.004447298907132467,
+    "phase_rmse_rad": 0.003467050111071469,
+    "narrow400_raw": 0.006087569998376327
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": 0,
+    "variant": "original",
+    "raw": 0.0007019218276386102,
+    "phase_rmse_rad": 0.0006250773136773332,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": 1,
+    "variant": "narrow",
+    "raw": 0.004459202400078806,
+    "phase_rmse_rad": 0.0034746938301955985,
+    "narrow400_raw": 0.0061113155179146625
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": 1,
+    "variant": "original",
+    "raw": 0.0007017896388551121,
+    "phase_rmse_rad": 0.0006250265321111414,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": 2,
+    "variant": "narrow",
+    "raw": 0.004468377553282048,
+    "phase_rmse_rad": 0.003480617866126379,
+    "narrow400_raw": 0.0061300915618973
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": 2,
+    "variant": "original",
+    "raw": 0.0007017113218988858,
+    "phase_rmse_rad": 0.0006250008911467968,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": 5,
+    "variant": "narrow",
+    "raw": 0.004485663778847925,
+    "phase_rmse_rad": 0.0034918766843034304,
+    "narrow400_raw": 0.0061667468176769945
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": 5,
+    "variant": "original",
+    "raw": 0.0007016389642155516,
+    "phase_rmse_rad": 0.0006249969087713547,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": 0,
+    "variant": "narrow",
+    "raw": 0.0037190687506850253,
+    "phase_rmse_rad": 0.002869030268567866,
+    "narrow400_raw": 0.005824322630020534
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": 0,
+    "variant": "original",
+    "raw": 0.0005885974171502812,
+    "phase_rmse_rad": 0.0005045887029194085,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": 1,
+    "variant": "narrow",
+    "raw": 0.0031976533330868922,
+    "phase_rmse_rad": 0.0024100852483482198,
+    "narrow400_raw": 0.005224403266211651
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": 1,
+    "variant": "original",
+    "raw": 0.000282738988313281,
+    "phase_rmse_rad": 0.00022623932233320346,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": 2,
+    "variant": "narrow",
+    "raw": 0.003187049889982984,
+    "phase_rmse_rad": 0.0024023663466899194,
+    "narrow400_raw": 0.005200057822257441
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": 2,
+    "variant": "original",
+    "raw": 0.00027744240378600293,
+    "phase_rmse_rad": 0.00022266794954540567,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": 5,
+    "variant": "narrow",
+    "raw": 0.003190076313565989,
+    "phase_rmse_rad": 0.0024056330597346893,
+    "narrow400_raw": 0.005206874158344951
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": 5,
+    "variant": "original",
+    "raw": 0.0002751391749872554,
+    "phase_rmse_rad": 0.00022118413454712155,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": 0,
+    "variant": "narrow",
+    "raw": 0.0037245764559647038,
+    "phase_rmse_rad": 0.002863950938651671,
+    "narrow400_raw": 0.005842683705079696
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": 0,
+    "variant": "original",
+    "raw": 0.0006223469787588526,
+    "phase_rmse_rad": 0.0005256384452437395,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": 1,
+    "variant": "narrow",
+    "raw": 0.0031075689823825865,
+    "phase_rmse_rad": 0.00232496419408308,
+    "narrow400_raw": 0.0051320430310172315
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": 1,
+    "variant": "original",
+    "raw": 0.00023394494919350104,
+    "phase_rmse_rad": 0.00017081247481420968,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": 2,
+    "variant": "narrow",
+    "raw": 0.0030944704153557283,
+    "phase_rmse_rad": 0.002315434316618214,
+    "narrow400_raw": 0.005102876404835059
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": 2,
+    "variant": "original",
+    "raw": 0.00022831218187529558,
+    "phase_rmse_rad": 0.0001667483161063042,
+    "narrow400_raw": null
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": 5,
+    "variant": "narrow",
+    "raw": 0.0030952454401302768,
+    "phase_rmse_rad": 0.0023177902672666117,
+    "narrow400_raw": 0.005105929189586188
+  },
+  {
+    "method": "continuous_prior",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": 5,
+    "variant": "original",
+    "raw": 0.0002262759433254301,
+    "phase_rmse_rad": 0.00016540363885794436,
+    "narrow400_raw": null
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": -1,
+    "variant": "narrow",
+    "raw": 0.004064350532518831,
+    "phase_rmse_rad": 0.003268654804360247,
+    "narrow400_raw": 0.005584253314256221
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 64,
+    "depth_terms": 16,
+    "step": -1,
+    "variant": "original",
+    "raw": 0.0007822818846539072,
+    "phase_rmse_rad": 0.0006457780843643283,
+    "narrow400_raw": null
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 64,
+    "depth_terms": 32,
+    "step": -1,
+    "variant": "narrow",
+    "raw": 0.0025869544279387997,
+    "phase_rmse_rad": 0.0020674913217322245,
+    "narrow400_raw": 0.0024440314017616345
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 64,
+    "depth_terms": 32,
+    "step": -1,
+    "variant": "original",
+    "raw": 0.0006487829828494419,
+    "phase_rmse_rad": 0.0005600464390647178,
+    "narrow400_raw": null
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": -1,
+    "variant": "narrow",
+    "raw": 0.0029003438998791583,
+    "phase_rmse_rad": 0.0023630782684846948,
+    "narrow400_raw": 0.004933600254327555
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 128,
+    "depth_terms": 16,
+    "step": -1,
+    "variant": "original",
+    "raw": 0.00041238293737001167,
+    "phase_rmse_rad": 0.00031050383710838706,
+    "narrow400_raw": null
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 128,
+    "depth_terms": 32,
+    "step": -1,
+    "variant": "narrow",
+    "raw": 0.0008190331835560737,
+    "phase_rmse_rad": 0.0006562166286898114,
+    "narrow400_raw": 0.001035624039863611
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 128,
+    "depth_terms": 32,
+    "step": -1,
+    "variant": "original",
+    "raw": 0.00014684553151505709,
+    "phase_rmse_rad": 0.00013069729148793962,
+    "narrow400_raw": null
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": -1,
+    "variant": "narrow",
+    "raw": 0.0028431544273295377,
+    "phase_rmse_rad": 0.0023029645426448898,
+    "narrow400_raw": 0.004860613694614215
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 256,
+    "depth_terms": 16,
+    "step": -1,
+    "variant": "original",
+    "raw": 0.0003629231375272748,
+    "phase_rmse_rad": 0.00025976132577674587,
+    "narrow400_raw": null
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 256,
+    "depth_terms": 32,
+    "step": -1,
+    "variant": "narrow",
+    "raw": 0.0006911611015338289,
+    "phase_rmse_rad": 0.000528801111562425,
+    "narrow400_raw": 0.0008352276716998024
+  },
+  {
+    "method": "true_medium_projection_oracle",
+    "cells": 256,
+    "depth_terms": 32,
+    "step": -1,
+    "variant": "original",
+    "raw": 3.679172343795699e-05,
+    "phase_rmse_rad": 3.282697808067142e-05,
+    "narrow400_raw": null
+  }
+]
