@@ -1,0 +1,15 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "ood_config": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/config.json",
+  "ood_results": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/results.json",
+  "ood_codes": "artifacts/coherent_waveguide_spectral_taper_shift_20261004",
+  "training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "systems": [20267000, 20267001, 20267002, 20267003, 20267004, 20267005, 20267006, 20267007, 20267008, 20267009, 20267010, 20267011, 20267012, 20267013, 20267014, 20267015],
+  "target_frequency": 800,
+  "fit_modes": 64,
+  "fit_quadrature_nodes": 160,
+  "fit_cells": 256,
+  "rank": 256,
+  "steps": 5,
+  "scope": "FINAL bounded POSTHOC target-leaking capacity diagnostic after seeing OOD and single-source oracle: initialize from true-medium PCA projection, fit BOTH target-800Hz source responses at all257 full-depth profiles with one shared rank256 code, 5 GN steps and same line-search/ridge/step bound. Extra target and true-medium information; not deployable, not independent, not a best-response lower bound. No further oracle tuning under this goal."
+}
