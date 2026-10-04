@@ -37,6 +37,8 @@
 
 **辨识与正则：** 原q768低频5+5步在16系统上约0.123，虽拟合低频很小（首例末步context平方误差约2.9e-7），高频明显不对。首8的0+0、1+1、3+3、5+5步宽源分别1.219、0.147、0.130、0.126；因此至少在这段轨迹里，失败**不是简单的后期迭代过拟合**。更公平的高斯代码MAP扫描（惩罚`mean(code²)`）首8：无惩罚0.126/0.131，1e-6为**0.0313/0.0350**，1e-4为0.171/0.164，1e-2为0.916/0.871；零惩罚严格复现前一脚本。预先固定1e-6后，后8条件性复核为**0.0324/0.0321**，与前8近似。它说明前述q768无先验结果不能作为最终强基线；MAP确实大幅修复，但仍高于同环境的声速255。它**没有**排除其他强度、非高斯先验、不同求解器或神经q模型进一步改善。
 
+同16系统逐例配对，原冻结声速255在宽/窄源均为**16/16**低于此事后q768-MAP，逐例相对降幅最小分别52.9%/54.4%；这只描述**同一批已用样本**，不是新的统计确认，也不抵消未来需要更强q先验和第二方程的要求。
+
 **最小科学结论：** 当前余弦家族里，物理生成变量选得合适能同时减小表示所需维数和低频反演的有效歧义；仅增大线性q-PCA代码可以修复真介质投影误差，却不能自动保证从低频观测找到合适代码。传统信号处理/反问题理论会预期“高维逆问题需要正则化”；新增经验事实是这里的**具体rank–相位–低频部署曲线**以及非线性声速变量在同训练标签/信息下的优势。它不是跨介质族或跨PDE的理论，也不足以独立撑起一篇普适AI方法论文。下一个真正有分量的实验仍应是[非余弦的二维回散射与Ocean场](NEXT_CROSS_PHYSICS_POC_ZH.md)，并把高维q-MAP作为强对照。
 
 复现材料：oracle [`summary.json`](../artifacts/coherent_waveguide_q_capacity_oracle_20261004/summary.json)（128条逐系统双源结果）；q768原低频[`summary.json`](../artifacts/coherent_waveguide_q768_deploy_dev_20261004/summary.json)（64条）；步数诊断[`summary.json`](../artifacts/coherent_waveguide_q768_horizon_dev_20261004/summary.json)（64条）；前8 MAP[`summary.json`](../artifacts/coherent_waveguide_q768_map_dev_20261004/summary.json)（64条）；后8固定强度[`summary.json`](../artifacts/coherent_waveguide_q768_map_check_20261004/summary.json)（16条）。各artifact内还保留配置、SHA manifest、逐系统结果和必要的优化历史；图的数字及源SHA见[`spectral_q_capacity_audit.json`](../reports/figures/spectral_q_capacity_audit.json)。
