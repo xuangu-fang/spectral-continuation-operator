@@ -1,0 +1,402 @@
+[
+  {
+    "system": 20261332,
+    "initialization": "projected_neural",
+    "step": 1,
+    "cumulative_correction_seconds": 0.3656244659796357,
+    "context_before": 4.805546380998817e-05,
+    "context_after": 3.649115832773773e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 8.614692791360553e-10
+  },
+  {
+    "system": 20261332,
+    "initialization": "projected_neural",
+    "step": 2,
+    "cumulative_correction_seconds": 0.7313044751062989,
+    "context_before": 3.6491158327357526e-07,
+    "context_after": 2.6515314073434117e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 8.609895950243788e-10
+  },
+  {
+    "system": 20261332,
+    "initialization": "projected_neural",
+    "step": 3,
+    "cumulative_correction_seconds": 1.0990257812663913,
+    "context_before": 2.65153140734457e-07,
+    "context_after": 2.455441262200869e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 8.609816103504935e-10
+  },
+  {
+    "system": 20261332,
+    "initialization": "projected_neural",
+    "step": 4,
+    "cumulative_correction_seconds": 1.4689637776464224,
+    "context_before": 2.455441262257815e-07,
+    "context_after": 2.3942243060919677e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 8.60978862858345e-10
+  },
+  {
+    "system": 20261332,
+    "initialization": "projected_neural",
+    "step": 5,
+    "cumulative_correction_seconds": 1.8359189052134752,
+    "context_before": 2.3942243061002766e-07,
+    "context_after": 2.369955125310494e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 8.609779293572266e-10
+  },
+  {
+    "system": 20261333,
+    "initialization": "projected_neural",
+    "step": 1,
+    "cumulative_correction_seconds": 0.360101250000298,
+    "context_before": 0.00017033553553576423,
+    "context_after": 2.6135023256233023e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.627526207995266e-10
+  },
+  {
+    "system": 20261333,
+    "initialization": "projected_neural",
+    "step": 2,
+    "cumulative_correction_seconds": 0.7219597119837999,
+    "context_before": 2.613502325627014e-07,
+    "context_after": 1.6383152973385385e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.622448640177506e-10
+  },
+  {
+    "system": 20261333,
+    "initialization": "projected_neural",
+    "step": 3,
+    "cumulative_correction_seconds": 1.0830221669748425,
+    "context_before": 1.6383152973070236e-07,
+    "context_after": 1.5394057169294357e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.622633449696707e-10
+  },
+  {
+    "system": 20261333,
+    "initialization": "projected_neural",
+    "step": 4,
+    "cumulative_correction_seconds": 1.4421609593555331,
+    "context_before": 1.5394057169397433e-07,
+    "context_after": 1.5142498912297858e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.622720869116749e-10
+  },
+  {
+    "system": 20261333,
+    "initialization": "projected_neural",
+    "step": 5,
+    "cumulative_correction_seconds": 1.8123350506648421,
+    "context_before": 1.514249891246483e-07,
+    "context_after": 1.5050430441667102e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.622758744054464e-10
+  },
+  {
+    "system": 20261334,
+    "initialization": "projected_neural",
+    "step": 1,
+    "cumulative_correction_seconds": 0.3627735134214163,
+    "context_before": 1.9353592318605526e-05,
+    "context_after": 6.68533616074586e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.56841362497035e-10
+  },
+  {
+    "system": 20261334,
+    "initialization": "projected_neural",
+    "step": 2,
+    "cumulative_correction_seconds": 0.7301132073625922,
+    "context_before": 6.685336160876473e-08,
+    "context_after": 3.593395307928254e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.562555133146801e-10
+  },
+  {
+    "system": 20261334,
+    "initialization": "projected_neural",
+    "step": 3,
+    "cumulative_correction_seconds": 1.12658769544214,
+    "context_before": 3.593395307879911e-08,
+    "context_after": 3.1120715595899566e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.562580337899133e-10
+  },
+  {
+    "system": 20261334,
+    "initialization": "projected_neural",
+    "step": 4,
+    "cumulative_correction_seconds": 1.493969657458365,
+    "context_before": 3.1120715596586914e-08,
+    "context_after": 2.9716157406843477e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.562584494585859e-10
+  },
+  {
+    "system": 20261334,
+    "initialization": "projected_neural",
+    "step": 5,
+    "cumulative_correction_seconds": 1.856987813487649,
+    "context_before": 2.9716157405970332e-08,
+    "context_after": 2.9192235228649496e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.562585766953157e-10
+  },
+  {
+    "system": 20261335,
+    "initialization": "projected_neural",
+    "step": 1,
+    "cumulative_correction_seconds": 0.36703577172011137,
+    "context_before": 3.320309382501665e-05,
+    "context_after": 2.2789755390403613e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.487203877167595e-10
+  },
+  {
+    "system": 20261335,
+    "initialization": "projected_neural",
+    "step": 2,
+    "cumulative_correction_seconds": 0.7303831269964576,
+    "context_before": 2.2789755390493544e-07,
+    "context_after": 1.870245762778744e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.479409865614232e-10
+  },
+  {
+    "system": 20261335,
+    "initialization": "projected_neural",
+    "step": 3,
+    "cumulative_correction_seconds": 1.0914649199694395,
+    "context_before": 1.8702457628297176e-07,
+    "context_after": 1.8189482528497386e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.479485068270092e-10
+  },
+  {
+    "system": 20261335,
+    "initialization": "projected_neural",
+    "step": 4,
+    "cumulative_correction_seconds": 1.458108363673091,
+    "context_before": 1.8189482528725095e-07,
+    "context_after": 1.807697291021631e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.479515946780692e-10
+  },
+  {
+    "system": 20261335,
+    "initialization": "projected_neural",
+    "step": 5,
+    "cumulative_correction_seconds": 1.8226719982922077,
+    "context_before": 1.8076972910776784e-07,
+    "context_after": 1.8046714936690014e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.479529264343995e-10
+  },
+  {
+    "system": 20261336,
+    "initialization": "projected_neural",
+    "step": 1,
+    "cumulative_correction_seconds": 0.36208126693964005,
+    "context_before": 3.2973191750449304e-05,
+    "context_after": 2.7280502250348e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.574373443437774e-10
+  },
+  {
+    "system": 20261336,
+    "initialization": "projected_neural",
+    "step": 2,
+    "cumulative_correction_seconds": 0.7293956447392702,
+    "context_before": 2.728050225055133e-07,
+    "context_after": 2.3090466222146469e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.579782917196114e-10
+  },
+  {
+    "system": 20261336,
+    "initialization": "projected_neural",
+    "step": 3,
+    "cumulative_correction_seconds": 1.0970916859805584,
+    "context_before": 2.3090466222402797e-07,
+    "context_after": 2.211130699513268e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.579791498911864e-10
+  },
+  {
+    "system": 20261336,
+    "initialization": "projected_neural",
+    "step": 4,
+    "cumulative_correction_seconds": 1.46438352111727,
+    "context_before": 2.2111306995163208e-07,
+    "context_after": 2.1698804384474792e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.579758913487032e-10
+  },
+  {
+    "system": 20261336,
+    "initialization": "projected_neural",
+    "step": 5,
+    "cumulative_correction_seconds": 1.8332071527838707,
+    "context_before": 2.169880438459461e-07,
+    "context_after": 2.1489254967037972e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.579740956693751e-10
+  },
+  {
+    "system": 20261337,
+    "initialization": "projected_neural",
+    "step": 1,
+    "cumulative_correction_seconds": 0.2951886486262083,
+    "context_before": 4.6874250124858615e-05,
+    "context_after": 2.4105038059227324e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 1.0612713574964862e-09
+  },
+  {
+    "system": 20261337,
+    "initialization": "projected_neural",
+    "step": 2,
+    "cumulative_correction_seconds": 0.594434236176312,
+    "context_before": 2.4105038059098643e-07,
+    "context_after": 1.974358431225746e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 1.0607114137669282e-09
+  },
+  {
+    "system": 20261337,
+    "initialization": "projected_neural",
+    "step": 3,
+    "cumulative_correction_seconds": 0.9947336427867413,
+    "context_before": 1.9743584311917725e-07,
+    "context_after": 1.9101399558147443e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 1.0607049578337598e-09
+  },
+  {
+    "system": 20261337,
+    "initialization": "projected_neural",
+    "step": 4,
+    "cumulative_correction_seconds": 1.3913093330338597,
+    "context_before": 1.910139955824802e-07,
+    "context_after": 1.8934264012405035e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 1.0607070374696065e-09
+  },
+  {
+    "system": 20261337,
+    "initialization": "projected_neural",
+    "step": 5,
+    "cumulative_correction_seconds": 1.786041078157723,
+    "context_before": 1.8934264012612124e-07,
+    "context_after": 1.8877443122671758e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 1.0607081848052925e-09
+  },
+  {
+    "system": 20261338,
+    "initialization": "projected_neural",
+    "step": 1,
+    "cumulative_correction_seconds": 0.382244567386806,
+    "context_before": 1.7289923317789006e-05,
+    "context_after": 7.013274397726698e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.941032750390719e-10
+  },
+  {
+    "system": 20261338,
+    "initialization": "projected_neural",
+    "step": 2,
+    "cumulative_correction_seconds": 0.771777480840683,
+    "context_before": 7.01327439768405e-08,
+    "context_after": 3.844106343087709e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.94392325228349e-10
+  },
+  {
+    "system": 20261338,
+    "initialization": "projected_neural",
+    "step": 3,
+    "cumulative_correction_seconds": 1.1583891175687313,
+    "context_before": 3.844106343214363e-08,
+    "context_after": 3.022315387587398e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.94405872663189e-10
+  },
+  {
+    "system": 20261338,
+    "initialization": "projected_neural",
+    "step": 4,
+    "cumulative_correction_seconds": 1.5276198834180832,
+    "context_before": 3.02231538759122e-08,
+    "context_after": 2.697609529732389e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.944095470523744e-10
+  },
+  {
+    "system": 20261338,
+    "initialization": "projected_neural",
+    "step": 5,
+    "cumulative_correction_seconds": 1.9174508852884173,
+    "context_before": 2.6976095298225928e-08,
+    "context_after": 2.5449805542954072e-08,
+    "alpha": 1.0,
+    "ridge_absolute": 8.944117398336895e-10
+  },
+  {
+    "system": 20261339,
+    "initialization": "projected_neural",
+    "step": 1,
+    "cumulative_correction_seconds": 0.3894458329305053,
+    "context_before": 4.321580607668471e-05,
+    "context_after": 2.737481530757031e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.312358335717737e-10
+  },
+  {
+    "system": 20261339,
+    "initialization": "projected_neural",
+    "step": 2,
+    "cumulative_correction_seconds": 0.7010891837999225,
+    "context_before": 2.737481530765622e-07,
+    "context_after": 2.268300054447736e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.303983432375664e-10
+  },
+  {
+    "system": 20261339,
+    "initialization": "projected_neural",
+    "step": 3,
+    "cumulative_correction_seconds": 1.0852826368063688,
+    "context_before": 2.2683000544745743e-07,
+    "context_after": 2.1336411008482877e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.304035275642904e-10
+  },
+  {
+    "system": 20261339,
+    "initialization": "projected_neural",
+    "step": 4,
+    "cumulative_correction_seconds": 1.4729707278311253,
+    "context_before": 2.1336411008204134e-07,
+    "context_after": 2.0746838425591513e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.304018963608797e-10
+  },
+  {
+    "system": 20261339,
+    "initialization": "projected_neural",
+    "step": 5,
+    "cumulative_correction_seconds": 1.8557438775897026,
+    "context_before": 2.0746838425583585e-07,
+    "context_after": 2.0443894630265124e-07,
+    "alpha": 1.0,
+    "ridge_absolute": 9.304000404175801e-10
+  }
+]

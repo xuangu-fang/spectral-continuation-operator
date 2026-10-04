@@ -1,0 +1,103 @@
+{
+  "scope": "Independent IID cohort, one synthetic one-way domain. Neural shading is seed range, not a CI. Statistical prior is data-learned. GN was added after original candidate freeze.",
+  "source_sha256": {
+    "artifacts/coherent_waveguide_frozen_system_summary_20261003/all_methods.json": "916ae685c86f8f1cd0e91e68d5eb74e27e03daa88dc00a308a25bc6e50968d46",
+    "artifacts/coherent_waveguide_frozen_newton_supplement_20261003/summary.json": "464f98af893de13f4ffcac35b7e51d93951f5c6aa65de2a6aa30c7460c081674",
+    "artifacts/coherent_waveguide_frozen_new_queries_20261003/summary.json": "5b4d64b2eb8c962774583d82ffdf2db18088c0d4d046646a96b8f9b2e29a84b0",
+    "artifacts/coherent_waveguide_frozen_newton_narrow_20261003/results.json": "d205ecac267fe4439e450f594d497f4a50f0b9c8a0edee40eb368a296ae26b95"
+  },
+  "original_bars": {
+    "Kernel": 0.010215407810908678,
+    "Neural\n3 seeds": 0.008560078964308748,
+    "Prior +\nL-BFGS20": 0.004701671954085102,
+    "Neural +\nL-BFGS20": 0.004104639898586989,
+    "Prior +\nGN1*": 0.0008236952813480766,
+    "Prior +\nGN5*": 0.0006768405118074405
+  },
+  "narrow_newton": [
+    {
+      "method": "gaussian_newton_1",
+      "frequency": 140,
+      "systems": 64,
+      "raw": 0.0036196671279167996,
+      "phase_rmse_rad": 0.0026842412946186172
+    },
+    {
+      "method": "gaussian_newton_1",
+      "frequency": 200,
+      "systems": 64,
+      "raw": 0.0038234552558127134,
+      "phase_rmse_rad": 0.002872952710993816
+    },
+    {
+      "method": "gaussian_newton_1",
+      "frequency": 300,
+      "systems": 64,
+      "raw": 0.004307371646405419,
+      "phase_rmse_rad": 0.003328203326350974
+    },
+    {
+      "method": "gaussian_newton_1",
+      "frequency": 400,
+      "systems": 64,
+      "raw": 0.005930172305170045,
+      "phase_rmse_rad": 0.004637152776603455
+    },
+    {
+      "method": "gaussian_newton_2",
+      "frequency": 140,
+      "systems": 64,
+      "raw": 0.0035469153024692956,
+      "phase_rmse_rad": 0.0026346047486017214
+    },
+    {
+      "method": "gaussian_newton_2",
+      "frequency": 200,
+      "systems": 64,
+      "raw": 0.003694686552765793,
+      "phase_rmse_rad": 0.002783070859231117
+    },
+    {
+      "method": "gaussian_newton_2",
+      "frequency": 300,
+      "systems": 64,
+      "raw": 0.0038514956245027693,
+      "phase_rmse_rad": 0.003004491874334196
+    },
+    {
+      "method": "gaussian_newton_2",
+      "frequency": 400,
+      "systems": 64,
+      "raw": 0.005240283163287364,
+      "phase_rmse_rad": 0.004146579781521182
+    },
+    {
+      "method": "gaussian_newton_5",
+      "frequency": 140,
+      "systems": 64,
+      "raw": 0.0035699874032131813,
+      "phase_rmse_rad": 0.002653958839681214
+    },
+    {
+      "method": "gaussian_newton_5",
+      "frequency": 200,
+      "systems": 64,
+      "raw": 0.003728983783989645,
+      "phase_rmse_rad": 0.0028139492268630974
+    },
+    {
+      "method": "gaussian_newton_5",
+      "frequency": 300,
+      "systems": 64,
+      "raw": 0.003868631529364782,
+      "phase_rmse_rad": 0.003022252682332611
+    },
+    {
+      "method": "gaussian_newton_5",
+      "frequency": 400,
+      "systems": 64,
+      "raw": 0.005273286231282735,
+      "phase_rmse_rad": 0.004174559001813798
+    }
+  ]
+}

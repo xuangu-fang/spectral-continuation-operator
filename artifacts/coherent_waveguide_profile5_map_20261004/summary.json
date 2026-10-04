@@ -1,0 +1,107 @@
+[
+  {
+    "prior_strength": 1e-08,
+    "initialization": "gaussian",
+    "step": 0,
+    "raw": 0.4132899516216762,
+    "mean_correction_seconds": 0.0
+  },
+  {
+    "prior_strength": 1e-08,
+    "initialization": "gaussian",
+    "step": 1,
+    "raw": 0.39357908894886423,
+    "mean_correction_seconds": 0.22931289044208825
+  },
+  {
+    "prior_strength": 1e-08,
+    "initialization": "gaussian",
+    "step": 5,
+    "raw": 0.1756323931830144,
+    "mean_correction_seconds": 1.1441098691429943
+  },
+  {
+    "prior_strength": 1e-08,
+    "initialization": "gaussian",
+    "step": 20,
+    "raw": 0.028217768389514775,
+    "mean_correction_seconds": 4.543088665697724
+  },
+  {
+    "prior_strength": 1e-08,
+    "initialization": "gaussian",
+    "step": 50,
+    "raw": 0.00878980414939542,
+    "mean_correction_seconds": 11.392253022408113
+  },
+  {
+    "prior_strength": 1e-06,
+    "initialization": "gaussian",
+    "step": 0,
+    "raw": 0.4132899516216762,
+    "mean_correction_seconds": 0.0
+  },
+  {
+    "prior_strength": 1e-06,
+    "initialization": "gaussian",
+    "step": 1,
+    "raw": 0.3295102077074182,
+    "mean_correction_seconds": 0.20633473340421915
+  },
+  {
+    "prior_strength": 1e-06,
+    "initialization": "gaussian",
+    "step": 5,
+    "raw": 0.08423140038406522,
+    "mean_correction_seconds": 1.0343287725700065
+  },
+  {
+    "prior_strength": 1e-06,
+    "initialization": "gaussian",
+    "step": 20,
+    "raw": 0.007622850171118034,
+    "mean_correction_seconds": 5.532766180927865
+  },
+  {
+    "prior_strength": 1e-06,
+    "initialization": "gaussian",
+    "step": 50,
+    "raw": 0.00762285017115577,
+    "mean_correction_seconds": 17.631971719441935
+  },
+  {
+    "prior_strength": 0.0001,
+    "initialization": "gaussian",
+    "step": 0,
+    "raw": 0.4132899516216762,
+    "mean_correction_seconds": 0.0
+  },
+  {
+    "prior_strength": 0.0001,
+    "initialization": "gaussian",
+    "step": 1,
+    "raw": 0.2233000526387555,
+    "mean_correction_seconds": 0.21069481619633734
+  },
+  {
+    "prior_strength": 0.0001,
+    "initialization": "gaussian",
+    "step": 5,
+    "raw": 0.03401567982058077,
+    "mean_correction_seconds": 1.0557961583836004
+  },
+  {
+    "prior_strength": 0.0001,
+    "initialization": "gaussian",
+    "step": 20,
+    "raw": 0.014104652088027731,
+    "mean_correction_seconds": 6.29273498931434
+  },
+  {
+    "prior_strength": 0.0001,
+    "initialization": "gaussian",
+    "step": 50,
+    "raw": 0.014104652088023804,
+    "mean_correction_seconds": 17.689522068947554
+  }
+]

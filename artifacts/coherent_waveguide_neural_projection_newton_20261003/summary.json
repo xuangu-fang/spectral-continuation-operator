@@ -1,0 +1,26 @@
+[
+  {
+    "initialization": "projected_neural",
+    "step": 0,
+    "raw": 0.006283680952526169,
+    "mean_correction_seconds": 0.0
+  },
+  {
+    "initialization": "projected_neural",
+    "step": 1,
+    "raw": 0.0008651209582473877,
+    "mean_correction_seconds": 0.36056191462557763
+  },
+  {
+    "initialization": "projected_neural",
+    "step": 2,
+    "raw": 0.0007495714337489148,
+    "mean_correction_seconds": 0.713807133375667
+  },
+  {
+    "initialization": "projected_neural",
+    "step": 5,
+    "raw": 0.0007090568326418362,
+    "mean_correction_seconds": 1.840044595184736
+  }
+]

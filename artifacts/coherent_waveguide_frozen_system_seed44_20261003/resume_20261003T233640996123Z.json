@@ -1,0 +1,23 @@
+{
+  "completed_systems": [
+    20262300,
+    20262301,
+    20262302,
+    20262303,
+    20262304,
+    20262305,
+    20262306,
+    20262307,
+    20262308,
+    20262309,
+    20262310,
+    20262311,
+    20262312,
+    20262313,
+    20262314,
+    20262315
+  ],
+  "preserved_rows": 192,
+  "code_sha256": "51667462ba2180f50bb58c9d71c18afdd9e5727be9b72daae256e722d7541571",
+  "reason": "explicit resume after a completed chunk or interrupted process; same frozen settings and independent per-system optimizer"
+}

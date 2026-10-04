@@ -34,9 +34,19 @@ def run(config, output):
     for name, path in config.get("extra_coefficients", {}).items():
         with np.load(path) as z:
             beta = z["coefficients"] if "coefficients" in z else z["beta"]
+            if "systems" in z and z["systems"].tolist() != systems:
+                raise ValueError("extra coefficient system identities/order changed")
             if beta.shape != codes[config["methods"][0]].shape:
                 raise ValueError("extra coefficients must follow the frozen system order/shape")
             codes[name] = beta
+    aliases = config.get("method_aliases", {})
+    codes = {aliases.get(name, name): value for name, value in codes.items()}
+    if len(codes) != len(
+        set(config["methods"])
+        | set(config.get("extra_neural_runs", {}))
+        | set(config.get("extra_coefficients", {}))
+    ):
+        raise ValueError("method aliases must not merge distinct candidates")
     rows = []
     for system in config["systems"]:
         si = systems.index(system)

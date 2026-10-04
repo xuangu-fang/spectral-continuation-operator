@@ -1,0 +1,610 @@
+[
+  {
+    "training_seed": "42",
+    "method": "field_neural",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.017978464618152085,
+    "phase_rmse_rad": 0.013595178857835927
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.023055229837355303,
+    "phase_rmse_rad": 0.017415461851117083
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.03250719171826427,
+    "phase_rmse_rad": 0.0248746333373525
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.0448476387458404,
+    "phase_rmse_rad": 0.03425549927159416
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural_refine_20",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.012947532004126065,
+    "phase_rmse_rad": 0.00963570107594122
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural_refine_20",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.016771450247496406,
+    "phase_rmse_rad": 0.012450307406924589
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural_refine_20",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.021760049175730697,
+    "phase_rmse_rad": 0.016341408167958246
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural_refine_20",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.030374155487867167,
+    "phase_rmse_rad": 0.022693129635931834
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural_refine_5",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.014507381538810173,
+    "phase_rmse_rad": 0.010821028053874734
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural_refine_5",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.02058878814391276,
+    "phase_rmse_rad": 0.015314498858083324
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural_refine_5",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.02849837784706445,
+    "phase_rmse_rad": 0.02142370528069293
+  },
+  {
+    "training_seed": "42",
+    "method": "field_neural_refine_5",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.039979167217194196,
+    "phase_rmse_rad": 0.029899179111945035
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.026746494704943558,
+    "phase_rmse_rad": 0.021550258399024552
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.03469058904587962,
+    "phase_rmse_rad": 0.027878258934793704
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.04911263726552953,
+    "phase_rmse_rad": 0.039150760360070064
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.07195389794501711,
+    "phase_rmse_rad": 0.05730956138165899
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator_refine_20",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.01841999559509118,
+    "phase_rmse_rad": 0.014466364379403813
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator_refine_20",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.024138663038125938,
+    "phase_rmse_rad": 0.019749449868607143
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator_refine_20",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.031746608508611183,
+    "phase_rmse_rad": 0.025870798651431874
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator_refine_20",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.04339325455236083,
+    "phase_rmse_rad": 0.03477526251333904
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator_refine_5",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.02062358076813079,
+    "phase_rmse_rad": 0.01626124831032394
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator_refine_5",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.0295399550098566,
+    "phase_rmse_rad": 0.02371953899512337
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator_refine_5",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.04244470066557043,
+    "phase_rmse_rad": 0.033792628957303686
+  },
+  {
+    "training_seed": "42",
+    "method": "gaussian_generator_refine_5",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.06166326504019343,
+    "phase_rmse_rad": 0.048747081017404076
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.022483789311339087,
+    "phase_rmse_rad": 0.016998155114910436
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.02896350515105843,
+    "phase_rmse_rad": 0.02202730826511643
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.03900584479322211,
+    "phase_rmse_rad": 0.029981068021970838
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.05285878027816176,
+    "phase_rmse_rad": 0.04081026165907575
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator_refine_20",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.017172500429926907,
+    "phase_rmse_rad": 0.012701107546189229
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator_refine_20",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.022395686192025595,
+    "phase_rmse_rad": 0.016686683468679804
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator_refine_20",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.028852076757533138,
+    "phase_rmse_rad": 0.021620179274053422
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator_refine_20",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.03905191813886581,
+    "phase_rmse_rad": 0.029204142182761485
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator_refine_5",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.018874492822984423,
+    "phase_rmse_rad": 0.014003988411872155
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator_refine_5",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.026285848371472374,
+    "phase_rmse_rad": 0.01963460836894441
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator_refine_5",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.035585320876106885,
+    "phase_rmse_rad": 0.02666034830036302
+  },
+  {
+    "training_seed": "42",
+    "method": "kernel_generator_refine_5",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.048355419229286975,
+    "phase_rmse_rad": 0.03646446831908665
+  },
+  {
+    "training_seed": "42",
+    "method": "nonlinear_20",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.02210422599644539,
+    "phase_rmse_rad": 0.01733739526007185
+  },
+  {
+    "training_seed": "42",
+    "method": "nonlinear_20",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.029042986116634074,
+    "phase_rmse_rad": 0.023443941551783323
+  },
+  {
+    "training_seed": "42",
+    "method": "nonlinear_20",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.03876147086574146,
+    "phase_rmse_rad": 0.031048073198763567
+  },
+  {
+    "training_seed": "42",
+    "method": "nonlinear_20",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.05282956190185031,
+    "phase_rmse_rad": 0.04171662994420308
+  },
+  {
+    "training_seed": "42",
+    "method": "nonlinear_5",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.02433691073095856,
+    "phase_rmse_rad": 0.019181761851816585
+  },
+  {
+    "training_seed": "42",
+    "method": "nonlinear_5",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.03507755426940812,
+    "phase_rmse_rad": 0.027850133328380246
+  },
+  {
+    "training_seed": "42",
+    "method": "nonlinear_5",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.05117518636705545,
+    "phase_rmse_rad": 0.04035063645613315
+  },
+  {
+    "training_seed": "42",
+    "method": "nonlinear_5",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.07327813527246721,
+    "phase_rmse_rad": 0.057578368236822705
+  },
+  {
+    "training_seed": "42",
+    "method": "regularized_inverse",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.03065564129274506,
+    "phase_rmse_rad": 0.02463365240887052
+  },
+  {
+    "training_seed": "42",
+    "method": "regularized_inverse",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.03988677573708492,
+    "phase_rmse_rad": 0.03186942477194039
+  },
+  {
+    "training_seed": "42",
+    "method": "regularized_inverse",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.05688844913413422,
+    "phase_rmse_rad": 0.045363031587206
+  },
+  {
+    "training_seed": "42",
+    "method": "regularized_inverse",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.08192964108903322,
+    "phase_rmse_rad": 0.06545751951922735
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.018302070786182664,
+    "phase_rmse_rad": 0.013893192852085188
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.02285384817134944,
+    "phase_rmse_rad": 0.01728361262851634
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.03181398522038612,
+    "phase_rmse_rad": 0.02418693577233774
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.04459174140413801,
+    "phase_rmse_rad": 0.034151673253034476
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural_refine_20",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.013329673911305214,
+    "phase_rmse_rad": 0.00988079063560448
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural_refine_20",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.016627700126558433,
+    "phase_rmse_rad": 0.012353339371787276
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural_refine_20",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.021217990673685953,
+    "phase_rmse_rad": 0.015835510910816746
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural_refine_20",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.029447694230578643,
+    "phase_rmse_rad": 0.02202394754163376
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural_refine_5",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.014962290871168998,
+    "phase_rmse_rad": 0.011130357162669007
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural_refine_5",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.020193134205275486,
+    "phase_rmse_rad": 0.01495828063485025
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural_refine_5",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.02773892085425117,
+    "phase_rmse_rad": 0.020623487525976775
+  },
+  {
+    "training_seed": "43",
+    "method": "field_neural_refine_5",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.039511758309273864,
+    "phase_rmse_rad": 0.029550481317459704
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.01767516093385238,
+    "phase_rmse_rad": 0.013423919830942247
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.022856638527837536,
+    "phase_rmse_rad": 0.01745578561050891
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.033058085988818015,
+    "phase_rmse_rad": 0.025288246961896722
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.04627756362433787,
+    "phase_rmse_rad": 0.035479174816670817
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural_refine_20",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.012902154443562266,
+    "phase_rmse_rad": 0.009623847277689307
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural_refine_20",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.016881612724024386,
+    "phase_rmse_rad": 0.012678089065002094
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural_refine_20",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.022400491912859814,
+    "phase_rmse_rad": 0.016798714998636475
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural_refine_20",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.030877668364241315,
+    "phase_rmse_rad": 0.023103785055671427
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural_refine_5",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.014358271134020495,
+    "phase_rmse_rad": 0.01072579772403329
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural_refine_5",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.02056922347766975,
+    "phase_rmse_rad": 0.01540138144794585
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural_refine_5",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.029411749103881227,
+    "phase_rmse_rad": 0.021982300209832217
+  },
+  {
+    "training_seed": "44",
+    "method": "field_neural_refine_5",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.041639782468202075,
+    "phase_rmse_rad": 0.03118686548780594
+  },
+  {
+    "training_seed": "oracle",
+    "method": "true_medium_projection",
+    "frequency": 140.0,
+    "systems": 64,
+    "raw": 0.003622803646518757,
+    "phase_rmse_rad": 0.0027105232560371
+  },
+  {
+    "training_seed": "oracle",
+    "method": "true_medium_projection",
+    "frequency": 200.0,
+    "systems": 64,
+    "raw": 0.0034488947029097904,
+    "phase_rmse_rad": 0.0026171214881573596
+  },
+  {
+    "training_seed": "oracle",
+    "method": "true_medium_projection",
+    "frequency": 300.0,
+    "systems": 64,
+    "raw": 0.0031589546567118206,
+    "phase_rmse_rad": 0.00258624870906477
+  },
+  {
+    "training_seed": "oracle",
+    "method": "true_medium_projection",
+    "frequency": 400.0,
+    "systems": 64,
+    "raw": 0.0040728871147859705,
+    "phase_rmse_rad": 0.0033961908405356804
+  }
+]

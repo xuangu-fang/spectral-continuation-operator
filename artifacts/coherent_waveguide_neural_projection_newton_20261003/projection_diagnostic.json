@@ -1,0 +1,13 @@
+{
+  "per_system_removed_coefficient_rmse": [
+    6.681424788717853e-05,
+    7.269267411312786e-05,
+    4.14340153952924e-05,
+    6.090190600784597e-05,
+    5.8963636409738145e-05,
+    6.638537855482931e-05,
+    4.8379655845306895e-05,
+    5.389953498673225e-05
+  ],
+  "source": "training512prior only; no development medium labels used in projection"
+}

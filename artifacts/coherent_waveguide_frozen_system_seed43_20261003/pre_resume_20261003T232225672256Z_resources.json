@@ -1,0 +1,18 @@
+{
+  "torch": "2.8.0+cu128",
+  "platform": "Linux-6.14.0-1011-gcp-x86_64-with-glibc2.39",
+  "cpu_threads": 2,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_processes_at_start": "2081645, VLLM::EngineCore, 71374 MiB\n2177860, .venv/bin/python, 416 MiB\n",
+  "scope": "shared-machine warm latency pilot, not certified exclusive throughput; disk IO/offline fitting excluded for all",
+  "kernel_inference_array_bytes": 52690944,
+  "neural_parameter_bytes": 961216,
+  "gaussian_prior_array_bytes": 1056768,
+  "latent_real_entries": 1024,
+  "source_sha256": {
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/benchmark_waveguide_generator.py": "51667462ba2180f50bb58c9d71c18afdd9e5727be9b72daae256e722d7541571",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/coherent_waveguide_data.py": "9e5516c668808a419cca9d1ffe423ba5836876703475a3e313fb543516f03908",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_generator_identification.py": "7d4b66e311adb8e1fdb4945aa878be2d4348177879b39f6ecb5eed0b2768e867"
+  },
+  "quadrature_caching": "geometry-independent Gauss-Legendre rule shared by ALL pipelines; no system or frequency solution cached"
+}

@@ -1,0 +1,14 @@
+{
+  "training_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "independent_audit_manifest": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frozen_system_audit_20261003/freeze_manifest.json",
+  "rank": 128,
+  "initial_prior_precision": 1e-9,
+  "initializations": ["gaussian"],
+  "checkpoints": [0,1,2,5],
+  "ridge_relative": 1e-8,
+  "max_coefficient_step": 0.01,
+  "line_search": [1.0,0.5,0.25,0.125,0.0625],
+  "scope": "POST-original-freeze supplemental strengthened classical baseline on entire64IID cohort; this method/protocol was designed on original8development after original neural64audit began; NOT an originally preregistered comparison",
+  "selection": "none on these64systems; exact rank/ridge/steps transferred from original8dev; allcases/steps reported; original registered comparisons preserved",
+  "question": "does newly strong classical trajectory inversion also refute the earlier neural advantage on independent environments?"
+}

@@ -1,0 +1,8 @@
+{
+  "best_raw": 0.006907295489566745,
+  "kernel_raw": 0.010750078254430131,
+  "initialization_max_difference": 0.0,
+  "real_dof": 249520,
+  "seconds": 388.5235379310325,
+  "scope": "single-seed original8development only; NOT the independent64 evaluation"
+}

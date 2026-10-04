@@ -1,0 +1,50 @@
+[
+  {
+    "initialization": "gaussian",
+    "step": 0,
+    "raw": 0.009871560789415925,
+    "mean_correction_seconds": 0.0
+  },
+  {
+    "initialization": "gaussian",
+    "step": 1,
+    "raw": 0.0007343840316084285,
+    "mean_correction_seconds": 0.33593671955168247
+  },
+  {
+    "initialization": "gaussian",
+    "step": 2,
+    "raw": 0.0007026505876371753,
+    "mean_correction_seconds": 0.6704616929637268
+  },
+  {
+    "initialization": "gaussian",
+    "step": 5,
+    "raw": 0.0007019219879172543,
+    "mean_correction_seconds": 1.637636412284337
+  },
+  {
+    "initialization": "neural",
+    "step": 0,
+    "raw": 0.006953745843739069,
+    "mean_correction_seconds": 0.0
+  },
+  {
+    "initialization": "neural",
+    "step": 1,
+    "raw": 0.00571062110024496,
+    "mean_correction_seconds": 0.3078599894652143
+  },
+  {
+    "initialization": "neural",
+    "step": 2,
+    "raw": 0.00581157702289883,
+    "mean_correction_seconds": 0.6206689621321857
+  },
+  {
+    "initialization": "neural",
+    "step": 5,
+    "raw": 0.005908663470515548,
+    "mean_correction_seconds": 1.5397978479741141
+  }
+]

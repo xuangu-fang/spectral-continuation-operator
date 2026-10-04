@@ -1,0 +1,29 @@
+{
+  "freeze_manifest": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frozen_system_audit_20261003/freeze_manifest.json",
+  "inference_runs": {
+    "42": "artifacts/coherent_waveguide_frozen_system_seed42_20261003",
+    "43": "artifacts/coherent_waveguide_frozen_system_seed43_20261003",
+    "44": "artifacts/coherent_waveguide_frozen_system_seed44_20261003"
+  },
+  "primary_comparisons": [
+    {
+      "model": "field_neural",
+      "baseline": "kernel_generator",
+      "physical_refinement_steps": 0
+    },
+    {
+      "model": "field_neural_refine_5",
+      "baseline": "gaussian_generator_refine_5",
+      "physical_refinement_steps": 5
+    },
+    {
+      "model": "field_neural_refine_20",
+      "baseline": "gaussian_generator_refine_20",
+      "physical_refinement_steps": 20
+    }
+  ],
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 202623,
+  "selection": "baselines fixed by original development, NOT chosen from new system results; allother controls also reported",
+  "scope": "three-seed average ERROR within system, not field ensembling; paired systems are bootstrap units; no change to rawphase or20percent/two-domain gates"
+}

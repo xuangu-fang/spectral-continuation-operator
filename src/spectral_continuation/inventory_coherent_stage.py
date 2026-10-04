@@ -100,6 +100,7 @@ def run(root, output):
         "*source_space*.py",
         "*waveguide*.py",
         "*frozen_generator*.py",
+        "*generator_frozen*.py",
         "*helmholtz*.py",
         "*separable*.py",
     ]:
@@ -119,14 +120,15 @@ def run(root, output):
     artifacts = []
     dirs = sorted(
         set((root / "artifacts").glob("coherent_*_20261003"))
+        | set((root / "artifacts").glob("coherent_*_20261004"))
         | set((root / "artifacts").glob("learned_wave_chart_*_20261003"))
     )
     for directory in dirs:
         if directory == output:
             continue
         files = []
-        for path in sorted(directory.iterdir()):
-            if path.suffix in (".json", ".pt"):
+        for path in sorted(directory.rglob("*")):
+            if path.is_file() and path.suffix in (".json", ".pt", ".npz"):
                 files.append(
                     {
                         "path": str(path.relative_to(root)),

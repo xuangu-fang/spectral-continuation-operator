@@ -1,0 +1,71 @@
+[
+  {
+    "systems": 64,
+    "model_raw": 0.008560078964308748,
+    "baseline_raw": 0.010215407810908678,
+    "relative_improvement": 0.1620423655365244,
+    "paired_bootstrap_95_percent": [
+      0.12915397610108598,
+      0.19338799716087016
+    ],
+    "system_win_rate": 0.875,
+    "model_p90": 0.014324244261112788,
+    "model_p95": 0.015485303448548938,
+    "model": "field_neural",
+    "baseline": "kernel_generator",
+    "physical_refinement_steps": 0,
+    "seed_raw_means": {
+      "42": 0.008498094362292557,
+      "43": 0.008530917958064852,
+      "44": 0.008651224572568833
+    },
+    "seed_average_is_not_prediction_ensemble": true,
+    "evidence": "independent frozen IID systems; one-way synthetic domain only"
+  },
+  {
+    "systems": 64,
+    "model_raw": 0.0060318150705350616,
+    "baseline_raw": 0.007598706945948433,
+    "relative_improvement": 0.20620506706720998,
+    "paired_bootstrap_95_percent": [
+      0.14883167082782128,
+      0.25533441740700724
+    ],
+    "system_win_rate": 0.71875,
+    "model_p90": 0.01060375693137292,
+    "model_p95": 0.012303240112363929,
+    "model": "field_neural_refine_5",
+    "baseline": "gaussian_generator_refine_5",
+    "physical_refinement_steps": 5,
+    "seed_raw_means": {
+      "42": 0.006047467220092511,
+      "43": 0.005915623008592851,
+      "44": 0.0061323549829198215
+    },
+    "seed_average_is_not_prediction_ensemble": true,
+    "evidence": "independent frozen IID systems; one-way synthetic domain only"
+  },
+  {
+    "systems": 64,
+    "model_raw": 0.004104639898586989,
+    "baseline_raw": 0.004701671954085102,
+    "relative_improvement": 0.1269829246549995,
+    "paired_bootstrap_95_percent": [
+      0.034367078325415794,
+      0.20222873361973406
+    ],
+    "system_win_rate": 0.515625,
+    "model_p90": 0.006891100041541252,
+    "model_p95": 0.008695359266536673,
+    "model": "field_neural_refine_20",
+    "baseline": "gaussian_generator_refine_20",
+    "physical_refinement_steps": 20,
+    "seed_raw_means": {
+      "42": 0.004126947992864456,
+      "43": 0.00403517248302988,
+      "44": 0.004151799219866631
+    },
+    "seed_average_is_not_prediction_ensemble": true,
+    "evidence": "independent frozen IID systems; one-way synthetic domain only"
+  }
+]

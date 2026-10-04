@@ -161,6 +161,28 @@ Proper nonlinearGaussian-priorcontrol staysin128trainingPCAcoordinates,20step.00
 capacityoracle.000810 vsfulltrueprojection.000782. No evidence for adding nonlinearlearnedlatentmanifold.
 Localactual15physicalparameter sensitivity2olddevcases:110Hz amplification1.56–1.86,400Hz8.33–12.25.
 Actualperturbationssmall/bound-limited, NOTglobalnonidentifiability or learnednoiseoptimality. See stabilityauditdoc.
+Coherentinnovation input control now FAILED: same249520DOF,3000steps,zero-initializedextraweights,
+exactinitialoutputmatch; extraobservedcomplexresidual best.006907 vszerofeaturecontinuation.006855.
+Same-newinputRBF.010750 vsold.008874. No3seed/width/residual-frame scans. Currentclassicalcontrol uses
+exactFULLtrajectory Frechet sensitivities in128trainingprior directions (notearlierlocalderivativematching).
+See GENERATOR_TRAJECTORY_NEWTON_CONTROL_ZH.md; independent64frozencomparisonunchanged.
+CRITICAL superseding FULLtrajectory GN control: trainingprior128 +Gaussianinit,1/2/5steps raw
+.0007344/.0007027/.0007019;only~.336s firstcorrection(notendtoend). Neuralinit affine128directionupdate
+stalls~.0059 because off-subspaceerrorcannotberemoved. Project neural into trainingprior first:
+step0.006284,step1.000865,step5.000709. DoNOT claim neuralwarmstartadvantageagainstweakLBFGS/localGN.
+PCApriorISdata-learned; thisnegatescurrentdeep-networknecessity,NOTallstatisticallearning. Newsource/f400audit
+ongoing. No neuralpreconditioner until an actualnewcost/information bottleneck. Reportsection13supersedes12.
+2026-10-04: ALL64frozen3seeds+newqueries COMPLETE. OriginaldirectNN mean.008560 vsRBF.010215(16.2%);
+NN20.004105 vsGaussian20.004702(12.7%);NN5improvement20.6%CI14.9–25.5,NOTstable20gate.
+POST-freeze supplementalGN1/2/5 oldquery .000824/.000684/.000677;newnarrow400 .005930/.005240/.005273,
+vsNN3seedmean.04524. Parametersfixedold8,notnew64. DoNOTuse64auditfornewmodelselection.
+ProfilebudgetOLD8only:17profilesGN5.000730;5profilesGN50.07774,priormeaninit50.7211.
+Contextfitnearperfectbutlargewhitenedcoordinates. TestingONLYproperGaussianMAPstrength1e-8/1e-6/1e-4
+fixed50steps;currentridgeonlypenalizesUPDATE,notfullpriornorm. DoNOTjumpfromfailed5steptoimpossibility.
+MAP now COMPLETE: lambda1e-8/1e-6/1e-4,50step .008790/.007623/.014105 vsnoMAP.077742.
+All3 improve; old5profilefailureNOTinformationlimit. Stopstrengthsweep/nonlinearpriorcapacityrestart.
+CurrentboundedOLD8diagnostic: cubiccontinuous128priorbasis,64/128/256rangecells,0/1/2/5samecontextsteps;
+true-medium16/32depthtermoracles separate. Checkcoarse-gridcompensation before claiming decoder refinement free.
 
 `coherent_representation.py`, `learned_wave_chart.py`, `learned_coherent_kernel.py`,
 `coherent_helmholtz_data.py`, `generate_coherent_ocean.py`, their `audit_*`/`evaluate_coherent_*` drivers,

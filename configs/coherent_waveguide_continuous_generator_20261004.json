@@ -1,0 +1,17 @@
+{
+  "training_run": "artifacts/coherent_waveguide_learned_generator_20261003",
+  "initial_coefficients": "artifacts/coherent_waveguide_trajectory_newton_20261003/gaussian_step5.npz",
+  "rank": 128,
+  "decoder_cells": [64,128,256],
+  "checkpoints": [0,1,2,5],
+  "oracle_depth_terms": [16,32],
+  "narrow_data": [
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_narrow_source_modes_truth_20261003",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_narrow_source_modes_expansion_20261003"
+  ],
+  "ridge_relative": 1e-8,
+  "max_coefficient_step": 0.01,
+  "line_search": [1.0,0.5,0.25,0.125,0.0625],
+  "scope": "Original8development only. Fixed training128-coordinate latent, cubic continuous range basis, unchanged65context profiles. Oracle labels NEVER enter inference. All decoder grids and checkpoint results retained.",
+  "hypothesis": "Discretization compensation may prevent a fixed inferred code from benefiting from finer readout; same-context recalibration separates representation from decoder bias."
+}

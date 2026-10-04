@@ -1,0 +1,32 @@
+[
+  {
+    "initialization": "gaussian",
+    "step": 0,
+    "raw": 0.4132899516216762,
+    "mean_correction_seconds": 0.0
+  },
+  {
+    "initialization": "gaussian",
+    "step": 1,
+    "raw": 0.3295102077074182,
+    "mean_correction_seconds": 0.20633473340421915
+  },
+  {
+    "initialization": "gaussian",
+    "step": 5,
+    "raw": 0.08423140038406522,
+    "mean_correction_seconds": 1.0343287725700065
+  },
+  {
+    "initialization": "gaussian",
+    "step": 20,
+    "raw": 0.007622850171118034,
+    "mean_correction_seconds": 5.532766180927865
+  },
+  {
+    "initialization": "gaussian",
+    "step": 50,
+    "raw": 0.00762285017115577,
+    "mean_correction_seconds": 17.631971719441935
+  }
+]
