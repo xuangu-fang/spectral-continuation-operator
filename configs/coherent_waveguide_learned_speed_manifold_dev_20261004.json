@@ -1,0 +1,27 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "taper5_training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "taper10_training_labels": "artifacts/coherent_waveguide_spectral_taper_matched_prior_20261004/training_labels.npz",
+  "taper5_train_seed_start": 20264000,
+  "taper10_train_seed_start": 20266000,
+  "train_count_per_taper": 512,
+  "train_taper_scales": [5.0, 10.0],
+  "dev_systems": [20267000, 20267001, 20267002, 20267003, 20267004, 20267005, 20267006, 20267007, 20267008, 20267009, 20267010, 20267011, 20267012, 20267013, 20267014, 20267015],
+  "dev_taper_scale": 10.0,
+  "dev_codes": "artifacts/coherent_waveguide_spectral_taper_shift_20261004",
+  "dev_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_taper_shift_20261004",
+  "rank": 255,
+  "terms": 32,
+  "speed_sample_cells": 64,
+  "speed_sample_depth_nodes": 160,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "speed_linear_initial_prior_precision": 1e-7,
+  "q_prior_initial_precisions": [1e-9, 1e-7],
+  "dev_gate_800hz_both_sources": {
+    "speed_mean_raw_at_most": 0.05,
+    "speed_mean_phase_rad_at_most": 0.05,
+    "speed_raw_improvement_vs_best_matched_q_pca_at_least": 0.30
+  },
+  "scope": "One-change posthoc DEV POC on already-seen16 taper10 systems: learn a 255D SPEED-field PCA basis from the SAME 512 taper5 + 512 taper10 medium labels used for q-PCA comparator; apply exact physical nonlinear speed->slowness-squared map and 5+5 GN from identical lowband context. No known cosine basis supplied to speed model; source/background/PDE remain known. q-PCA comparator gets its stronger of two PRESET init precisions. Extra target-family training labels mean this is not OOD deployment. Only if all dev gates pass, freeze code/hyperparameters and generate new taper7.5 systems under separate prereg protocol."
+}
