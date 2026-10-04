@@ -9,9 +9,11 @@ from pathlib import Path
 
 import numpy as np
 
+from .audit_waveguide_continuous_generator import resample_generator
 from .audit_waveguide_frequency_scaling import modal_raw, propagate_code
-from .audit_waveguide_generator_prior import fit_prior
-from .audit_waveguide_spectral_rank256_inference import infer
+from .audit_waveguide_generator_identification import generator_geometry, normal_statistics
+from .audit_waveguide_generator_prior import conditional_mean, fit_prior
+from .audit_waveguide_trajectory_newton import newton_step
 from .coherent_representation import complex_metrics
 from .coherent_waveguide_data import depth_basis
 
@@ -38,6 +40,49 @@ def make_context(saved_ranges, saved_observed, condition, noise_unit):
         unit_norm = np.linalg.norm(unit, axis=(1, 2))
         observed += level * unit * (signal_norm / unit_norm)[:, None, None]
     return ranges, observed
+
+
+def infer_indexed(spec, observed, ranges, source, mean, factor, coarse_steps, fine_steps):
+    """Same fixed GN update with the actual observation indices at both resolutions."""
+    geometry = generator_geometry(spec, 64, mean.shape[1], modes=32, quadrature_nodes=160)
+    gram, rhs = normal_statistics(
+        spec, observed, source["context_frequencies"], ranges, geometry
+    )
+    beta = conditional_mean(gram, rhs, mean, factor, source["initial_prior_precision"])
+    count = source["context_profiles"]
+    roi = ranges >= source["roi_min_range_m"]
+    options = {key: source[key] for key in
+               ["ridge_relative", "max_coefficient_step", "line_search"]}
+    initial = observed[0, 0]
+    coarse_indices = np.linspace(0, 64, count)
+    if not np.array_equal(coarse_indices, coarse_indices.astype(int)):
+        raise ValueError("context observations must coincide with coarse-grid edges")
+    coarse_options = {**options, "observation_indices": coarse_indices.astype(int)}
+    history = []
+    for step in range(coarse_steps):
+        beta, diagnostic = newton_step(
+            beta, factor, initial, geometry, source["context_frequencies"],
+            observed, roi, coarse_options,
+        )
+        history.append({"stage": "coarse", "step": step + 1, **diagnostic})
+    fine_mean = resample_generator(mean, source["decoder_cells"])
+    fine_factor = resample_generator(factor, source["decoder_cells"])
+    coordinates = np.linalg.lstsq(
+        factor.reshape(-1, factor.shape[-1]), (beta - mean).ravel(), rcond=None
+    )[0]
+    beta = fine_mean + np.einsum("rdk,k->rd", fine_factor, coordinates)
+    fine_geometry = generator_geometry(spec, source["decoder_cells"], mean.shape[1])
+    fine_indices = np.linspace(0, source["decoder_cells"], count)
+    if not np.array_equal(fine_indices, fine_indices.astype(int)):
+        raise ValueError("context observations must coincide with fine-grid edges")
+    fine_options = {**options, "observation_indices": fine_indices.astype(int)}
+    for step in range(fine_steps):
+        beta, diagnostic = newton_step(
+            beta, fine_factor, initial, fine_geometry, source["context_frequencies"],
+            observed, roi, fine_options,
+        )
+        history.append({"stage": "fine", "step": step + 1, **diagnostic})
+    return beta, history
 
 
 def run(config, output):
@@ -100,7 +145,7 @@ def run(config, output):
             noise_checks.append({"system": system, "condition": condition["name"],
                                  "actual_relative_norm_by_frequency": actual_noise.tolist()})
             method_source = {**source, "context_profiles": count}
-            beta, history = infer(
+            beta, history = infer_indexed(
                 spec, observed, context_ranges, method_source, mean, factor,
                 config["coarse_steps"], config["fine_steps"],
             )
