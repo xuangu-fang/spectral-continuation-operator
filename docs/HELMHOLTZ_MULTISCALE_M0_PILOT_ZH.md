@@ -35,3 +35,5 @@
 初版`q≥1`错误裁剪的65×65 raw曾是0.145/0.129，裁剪约40%–45%；该结果仅作错误审计，**不能作为论文强对照**。修正后65→129在11.3略改善、17几乎不变；完整低频复场加已知源/方程使经典正弦谱识别几乎重现同网格teacher。结论比“新介质更复杂所以有learning headroom”相反：**即使改成多尺度二维回散射介质，完整场这个信息设置仍太容易。** 下一阶段必须先固定有限接收线/噪声与同信息强PDE-MAP、正则化q对照，再谈学习必要性；不要仅因为把输入变稀疏后弱插值基线变差就宣称AI创新。[纠错后48行](../artifacts/coherent_helmholtz_multiscale_sampling_corrected_20261004/results.json)与[SHA manifest](../artifacts/coherent_helmholtz_multiscale_sampling_corrected_20261004/manifest.json)；初版[错误审计](../artifacts/coherent_helmholtz_multiscale_sampling_audit_20261004/summary.json)保留可追踪。
 
 纠错运行时的`public_spec` helper版本见提交`68bc0f2`；本地后续又将它加固为**显式删除全部隐藏介质纹理与包体位置/宽度/幅值**。因经典估计器仅使用从公开source/loss/BC算出的两项，单元测试验证删前删后这两项逐元素完全相等；这是一项防未来误用的代码卫生改动，不是对已报告结果的重调。
+
+为避免“经典完整场能解”被误读成“介质变化对波场影响很小”，再做一个**描述性难度诊断**：相同已知源/边界/PDE，完全不利用低频观测，只用均匀背景预测目标查询场；它衡量异质性实际造成多大复场变化，**不是同信息强基线**。固定两个查询频率和已用8开发系统，配置见[`configs/coherent_helmholtz_multiscale_background_diagnostic_20261004.json`](../configs/coherent_helmholtz_multiscale_background_diagnostic_20261004.json)。

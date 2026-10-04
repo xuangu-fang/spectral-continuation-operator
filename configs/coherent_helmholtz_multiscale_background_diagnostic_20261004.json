@@ -1,0 +1,8 @@
+{
+  "source_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004",
+  "systems": [20269600, 20269601, 20269602, 20269603, 20269604, 20269605, 20269606, 20269607],
+  "query_frequencies_hz": [11.3, 17.0],
+  "grid": 257,
+  "roi": [0.18, 0.82],
+  "scope": "POSTHOC descriptive M0 medium-difficulty diagnostic on eight already-used multiscale 2D Helmholtz pilot systems: compare direct heterogeneous query fields to direct HOMOGENEOUS background fields with the SAME known source/loss/BC/PDE. This baseline has NO lowband response adaptation, so it is not a strong same-information competitor. Purpose only to check that multiscale heterogeneity has a substantial complex-wave effect despite near-exact full-field classical inverse. Hidden medium coefficients are removed before homogeneous forward solves."
+}
