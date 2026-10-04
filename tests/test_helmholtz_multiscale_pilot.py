@@ -3,6 +3,7 @@ from pathlib import Path
 
 import numpy as np
 
+from spectral_continuation.audit_helmholtz_multiscale_fullfield_classic import public_spec
 from spectral_continuation.coherent_helmholtz_data import sample_environment
 from spectral_continuation.coherent_helmholtz_multiscale_pilot import environment
 
@@ -27,3 +28,13 @@ def test_old_gaussian_environment_has_no_texture_change():
     speed, _, _ = sample_environment(spec, np.linspace(0, 1, 33))
     assert speed.shape == (33, 33)
     assert "spectral_texture" not in spec
+
+
+def test_fullfield_classical_public_spec_removes_texture_coefficients():
+    config = json.loads(Path("configs/coherent_helmholtz_multiscale_pilot_20261004.json").read_text())
+    spec = environment(20269600, config)
+    stripped = public_spec(spec)
+    assert "spectral_texture" not in stripped
+    assert "texture_scale" not in stripped
+    assert stripped["source"] == spec["source"]
+    assert stripped["sponge_strength"] == spec["sponge_strength"]
