@@ -1,0 +1,146 @@
+[
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268000,
+    "speed_relative_grid_projection_residual": 5.558504978471555e-15,
+    "q_relative_coefficient_projection_residual": 0.006965201381027921
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268001,
+    "speed_relative_grid_projection_residual": 6.223596106312205e-15,
+    "q_relative_coefficient_projection_residual": 0.0059753333422693155
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268002,
+    "speed_relative_grid_projection_residual": 5.902775554411579e-15,
+    "q_relative_coefficient_projection_residual": 0.007219548433124049
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268003,
+    "speed_relative_grid_projection_residual": 6.009346677187682e-15,
+    "q_relative_coefficient_projection_residual": 0.006777223211028393
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268004,
+    "speed_relative_grid_projection_residual": 6.974153914472504e-15,
+    "q_relative_coefficient_projection_residual": 0.008667017703974744
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268005,
+    "speed_relative_grid_projection_residual": 6.488857651529496e-15,
+    "q_relative_coefficient_projection_residual": 0.006879914377432157
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268006,
+    "speed_relative_grid_projection_residual": 6.117709866758586e-15,
+    "q_relative_coefficient_projection_residual": 0.0072500360133637256
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268007,
+    "speed_relative_grid_projection_residual": 5.816147201392577e-15,
+    "q_relative_coefficient_projection_residual": 0.007659540780462835
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268008,
+    "speed_relative_grid_projection_residual": 7.122560598037395e-15,
+    "q_relative_coefficient_projection_residual": 0.007097096982352757
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268009,
+    "speed_relative_grid_projection_residual": 7.207747947809647e-15,
+    "q_relative_coefficient_projection_residual": 0.005002204086786255
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268010,
+    "speed_relative_grid_projection_residual": 5.8607671935719035e-15,
+    "q_relative_coefficient_projection_residual": 0.005343350737208641
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268011,
+    "speed_relative_grid_projection_residual": 6.425440592042517e-15,
+    "q_relative_coefficient_projection_residual": 0.005789096551737983
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268012,
+    "speed_relative_grid_projection_residual": 6.462530174346897e-15,
+    "q_relative_coefficient_projection_residual": 0.007049701162155487
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268013,
+    "speed_relative_grid_projection_residual": 6.654239632509177e-15,
+    "q_relative_coefficient_projection_residual": 0.006710901239398439
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268014,
+    "speed_relative_grid_projection_residual": 5.333278475981429e-15,
+    "q_relative_coefficient_projection_residual": 0.006616561695926432
+  },
+  {
+    "family": "cosine_taper7p5_new16",
+    "system": 20268015,
+    "speed_relative_grid_projection_residual": 5.930012292059558e-15,
+    "q_relative_coefficient_projection_residual": 0.005303075596543948
+  },
+  {
+    "family": "gaussian_old8_dev",
+    "system": 20261332,
+    "speed_relative_grid_projection_residual": 0.001735693122702428,
+    "q_relative_coefficient_projection_residual": 0.0013052097548522186
+  },
+  {
+    "family": "gaussian_old8_dev",
+    "system": 20261333,
+    "speed_relative_grid_projection_residual": 0.00068910201958578,
+    "q_relative_coefficient_projection_residual": 0.0008198497262136751
+  },
+  {
+    "family": "gaussian_old8_dev",
+    "system": 20261334,
+    "speed_relative_grid_projection_residual": 0.0001653338000776545,
+    "q_relative_coefficient_projection_residual": 0.00016838964402209205
+  },
+  {
+    "family": "gaussian_old8_dev",
+    "system": 20261335,
+    "speed_relative_grid_projection_residual": 0.00015947254105171812,
+    "q_relative_coefficient_projection_residual": 0.0001607398164198207
+  },
+  {
+    "family": "gaussian_old8_dev",
+    "system": 20261336,
+    "speed_relative_grid_projection_residual": 0.0005788812372196316,
+    "q_relative_coefficient_projection_residual": 0.00040850768121050387
+  },
+  {
+    "family": "gaussian_old8_dev",
+    "system": 20261337,
+    "speed_relative_grid_projection_residual": 0.00014551470134386798,
+    "q_relative_coefficient_projection_residual": 0.00021260225700797227
+  },
+  {
+    "family": "gaussian_old8_dev",
+    "system": 20261338,
+    "speed_relative_grid_projection_residual": 0.00019648387534705508,
+    "q_relative_coefficient_projection_residual": 0.00013706656691207962
+  },
+  {
+    "family": "gaussian_old8_dev",
+    "system": 20261339,
+    "speed_relative_grid_projection_residual": 0.0004163912475031134,
+    "q_relative_coefficient_projection_residual": 0.0005356786828051949
+  }
+]

@@ -1,7 +1,7 @@
 {
-  "captured_utc": "2026-10-04T11:57:32.015978+00:00",
+  "captured_utc": "2026-10-04T12:11:41.992582+00:00",
   "capture_type": "post-run working-tree snapshot; not an at-launch source attestation",
-  "git_base": "a7363b7cd8dd79deb0bb053bfe018ed9fe3b4518",
+  "git_base": "f5e29b5ae0dd725e0dbeef8511b926de091b241d",
   "large_files": "NPZ and PT intentionally local-only; regenerate via stored config or resolve these local paths",
   "datasets": {
     "coherent_helmholtz_development_20261003": {
@@ -24429,6 +24429,7 @@
     "src/spectral_continuation/audit_separable_source_rom.py": "690ac4c05ea568c1248afcf8eee48e23d66e87bd5cf11717bf395750b3501927",
     "src/spectral_continuation/audit_source_space_capacity.py": "ede1f4b465668b9fa9f30f2a2de747dd8c34cca5ce483fd9b4e6368d24397e59",
     "src/spectral_continuation/audit_speed_resolution_scaling.py": "79023b55121b45e558c4ee92180269ae15e1140ff320824c7115b4cafb1b4b1c",
+    "src/spectral_continuation/audit_variable_projection_attribution.py": "9b094d6925f5ca8175a7c05118d7f36582dd0bec2f8181d93663de55df1587db",
     "src/spectral_continuation/audit_waveguide_adaptive_modes.py": "f5d4e2951ada92614f4833bf9b3c812fd9edf783842459137124a881f5e21d68",
     "src/spectral_continuation/audit_waveguide_adiabatic_reference.py": "4b0b634381a7c864b8765fc6633620c0e1a3bd2ada52f09a7e24f84fbaa9c123",
     "src/spectral_continuation/audit_waveguide_boundary_closure.py": "ac638598ccf215c332faca8789d20283ad4d4662b6672960d624fbb3ecd4198c",
@@ -24487,7 +24488,7 @@
     "src/spectral_continuation/generate_waveguide_frozen_audit.py": "38accc8b640aeda0d8a38501a734cbf79f41dc065632f90317955c9dd09bfc35",
     "src/spectral_continuation/generate_waveguide_modal_cache.py": "2ccb8d724059b1c11ca937bf1f9ae7650e649bbc0fe3ecee32f64cd26ea4b90e",
     "src/spectral_continuation/generate_waveguide_query_transfer.py": "bda9dd50c0c5b07212eb63878a3e10dcdeafc421a44aa7cc71650374f27ae1e1",
-    "src/spectral_continuation/inventory_coherent_stage.py": "25205f969fa3b0cc169bc75f00e77408fc63ab3440907f25e7608fc128ea06de",
+    "src/spectral_continuation/inventory_coherent_stage.py": "6313e1aab8f34b70caffd326f8ad22e8c382ab468e2da497a2a727a30f937b05",
     "src/spectral_continuation/learned_coherent_kernel.py": "f210bbe0d23e965434d69f0b0f9f7726085fb59cca2a7d61837aef6b3d7d6676",
     "src/spectral_continuation/learned_phase_rom.py": "a358fdf9f57cae1d77c1284e2966f143dbd15b16c7888b5e5794e1baf08a7362",
     "src/spectral_continuation/learned_source_space.py": "f6da42847e3dc94b3dc1da72af17a1aeabb908c0f6dc7234fd86551781ec37d0",
@@ -24506,6 +24507,7 @@
     "src/spectral_continuation/plot_learned_speed_manifold_confirm.py": "5e2204a7d81176d5a4cebedf1e53b03cba0498b19c5376b7b09e596f0e12c748",
     "src/spectral_continuation/plot_learned_speed_manifold_phase.py": "e41aac898fbd5c39b57320cce9407d113d24962644b6acd70afc93cd8842bdf7",
     "src/spectral_continuation/plot_phase_rom_progress.py": "c829f519a6c6537304f2fb07219da92e888ba637f84ef1c1145a6df4394bd434",
+    "src/spectral_continuation/plot_variable_projection_attribution.py": "890f2641f953d46ff9c91f86f5d08138afec626131a5c1f8917baf4e8b29d5ed",
     "src/spectral_continuation/plot_waveguide_medium_families.py": "10e9fbbe7c8531adcb87de016d401a31c98b103af30d85f50c66a6f499b44b9b",
     "src/spectral_continuation/register_waveguide_spectral_confirm.py": "f0b2b412cd687f83183b71ba86df7303520a276c892cc6440a980a43d9393102",
     "src/spectral_continuation/separable_background.py": "6fc55f2d4008088eb687dd3f05dc234a05bded65b66fefc709f0b5553853a939",
@@ -47430,6 +47432,36 @@
           "path": "artifacts/coherent_waveguide_unwrapped_envelopes_20261003/results.json",
           "bytes": 486195,
           "sha256": "e0739182a66d0d216225c2bf0d460d7a13b4f6a9beefe36997a35a9ce3c180dd"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_waveguide_variable_projection_attribution_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_waveguide_variable_projection_attribution_20261004/config.json",
+          "bytes": 3342,
+          "sha256": "908e3b798608e2ce653f2fde4e07247970207dad8da5de00d84cbf857d0c9f66"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_variable_projection_attribution_20261004/manifest.json",
+          "bytes": 7587,
+          "sha256": "76c3ca9bb24cffea2f8f57a2fda487fa349f86639828c0eef6d860408d137545"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_variable_projection_attribution_20261004/projection_residuals.json",
+          "bytes": 5097,
+          "sha256": "e97b095e733b9be14251c69f91f2d53517b89c5d4a7c8169ef03277933d3b2bf"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_variable_projection_attribution_20261004/results.json",
+          "bytes": 53195,
+          "sha256": "2bc65922b27326f0b494194e59569027c41d894bbc9e40881e8a65e60d345d88"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_variable_projection_attribution_20261004/summary.json",
+          "bytes": 4045,
+          "sha256": "44e6058cf71bd1ef5a9cb0471c4267ac4d6400332998de663adafe2f2c12fb2f"
         }
       ]
     },

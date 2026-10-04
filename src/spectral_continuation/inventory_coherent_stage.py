@@ -178,6 +178,7 @@ def run(root, output):
         "*learned_speed*.py",
         "*speed_variable*.py",
         "*speed_resolution*.py",
+        "*variable_projection*.py",
     ]:
         sources.update((root / "src/spectral_continuation").glob(pattern))
     sources.update((root / "tests").glob("test_*coherent*.py"))

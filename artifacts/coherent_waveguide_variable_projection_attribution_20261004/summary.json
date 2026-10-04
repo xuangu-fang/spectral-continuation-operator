@@ -1,0 +1,106 @@
+{
+  "oracle_summary": [
+    {
+      "family": "cosine_taper7p5_new16",
+      "method": "speed_true_medium_euclidean_oracle",
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.0023906573075588716,
+      "mean_phase_rad": 0.0020296700701411714,
+      "max_raw": 0.0035740936526585205
+    },
+    {
+      "family": "cosine_taper7p5_new16",
+      "method": "speed_true_medium_euclidean_oracle",
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.0024044438900896483,
+      "mean_phase_rad": 0.0020356020775451397,
+      "max_raw": 0.004292662310486832
+    },
+    {
+      "family": "cosine_taper7p5_new16",
+      "method": "q_true_medium_euclidean_oracle",
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.07778506092125045,
+      "mean_phase_rad": 0.07212141991568166,
+      "max_raw": 0.16348145935526875
+    },
+    {
+      "family": "cosine_taper7p5_new16",
+      "method": "q_true_medium_euclidean_oracle",
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.07574731808312994,
+      "mean_phase_rad": 0.07017926411671283,
+      "max_raw": 0.14973810298854656
+    },
+    {
+      "family": "gaussian_old8_dev",
+      "method": "speed_true_medium_euclidean_oracle",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.002447747125709065,
+      "mean_phase_rad": 0.001983553350049706,
+      "max_raw": 0.00580500296316194
+    },
+    {
+      "family": "gaussian_old8_dev",
+      "method": "speed_true_medium_euclidean_oracle",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.003064515103651735,
+      "mean_phase_rad": 0.0024731413005476,
+      "max_raw": 0.007444138838566831
+    },
+    {
+      "family": "gaussian_old8_dev",
+      "method": "q_true_medium_euclidean_oracle",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.0024838417842682012,
+      "mean_phase_rad": 0.001963277260466434,
+      "max_raw": 0.006195903871579228
+    },
+    {
+      "family": "gaussian_old8_dev",
+      "method": "q_true_medium_euclidean_oracle",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.002883805937111088,
+      "mean_phase_rad": 0.0022601031902724634,
+      "max_raw": 0.006677196843834861
+    }
+  ],
+  "mechanism_checks": {
+    "cosine_speed_projection_mean_raw": true,
+    "cosine_q_projection_mean_raw": true,
+    "gaussian_speed_projection_mean_raw": true,
+    "gaussian_q_projection_mean_raw": true
+  },
+  "all_mechanism_checks_pass": true,
+  "training_variance": {
+    "cosine_taper7p5_new16": {
+      "training_q_variance_fraction": 0.999974524384235,
+      "training_speed_variance_fraction": 1.0,
+      "q_training_fields": 1024
+    },
+    "gaussian_old8_dev": {
+      "training_q_variance_fraction": 0.999999842414278,
+      "training_speed_variance_fraction": 0.9999998158861211,
+      "q_training_fields": 512
+    }
+  },
+  "mean_test_medium_projection_residual_by_family": {
+    "cosine_taper7p5_new16": {
+      "speed_relative_grid_projection_residual": 6.25547930355592e-15,
+      "q_relative_coefficient_projection_residual": 0.006644112705924568
+    },
+    "gaussian_old8_dev": {
+      "speed_relative_grid_projection_residual": 0.0005108590681039061,
+      "q_relative_coefficient_projection_residual": 0.0004685055161804446
+    }
+  },
+  "scope": "Posthoc EXPLANATORY TRUE-TEST-MEDIUM Euclidean projection oracles on existing cosine new16 and Gaussian old8 systems, committed before computing these projection results. No new target data, no online deployable method, no optimization with target fields, no claim of a strict best-response capacity lower bound. Read the true test medium ONLY to form projections into each frozen trained speed/q basis; compare f800 broad/narrow raw/phase in the same one-way PDE. Check whether small training q variance residual corresponds to phase-sensitive test response and whether this contrast disappears in the Gaussian family. Different code ranks/family dimensions mean cross-family numerical values are not a matched-capacity method leaderboard."
+}

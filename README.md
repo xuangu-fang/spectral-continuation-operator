@@ -12,6 +12,7 @@
 | 最新结果、方法细节、正负结论与图 | [连续复场表征进度报告](reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md) |
 | 大白话理解当前表示、频率与分辨率 | [共同生成器的机制备忘](docs/GENERATOR_REPRESENTATION_MECHANISM_ZH.md) |
 | 当前故事和下一阶段的取舍 | [当前主线与路线图](docs/CURRENT_STORY_AND_ROADMAP_ZH.md) |
+| 真正跨方程的下一轮实验如何设计 | [第二物理域 POC 计划](docs/NEXT_CROSS_PHYSICS_POC_ZH.md) |
 | 本次24小时目标、阶段和门槛 | [执行协议](docs/COHERENT_CONTINUOUS_REPRESENTATION_24H_ZH.md) |
 | 数据怎么生成、哪些能复用 | [数据来源](docs/COHERENT_DATA_PROVENANCE_ZH.md) |
 | Agent接手、避免重复实验 | [AGENTS](AGENTS.md)、[当前状态](docs/CURRENT_STATUS_ZH.md)、[实验账本](docs/EXPERIMENT_LEDGER_ZH.md) |
@@ -21,6 +22,8 @@
 **必须同时看的负结果：** 换成旧的局部Gaussian介质家族，在已用8个开发环境中同标签rank128声速表示虽然800Hz双源raw也达到0.00322/0.00343，但仅比强q-PCA改善**5.7%/2.6%**，未过预设20%增量门槛，逐环境各只4/8获益。[完整负结果](docs/GAUSSIAN_SPEED_VARIABLE_DEV_ZH.md)。因此“选择声速变量”不是普适显著优势；余弦族的新16结果成立，但不能代替跨介质/跨物理域证明。
 
 固定上述新确认集前8环境的代码继续查1000/1200Hz，原物理读出在1200Hz宽/窄raw仍0.00674/0.00654、相位约0.005rad；加密距离和模态只改善raw3.2%/0.15%，没有通过预设20%“读出分辨率瓶颈”门槛。这是[同8环境的条件性频率压力测试](docs/SPEED_RESOLUTION_SCALING_ZH.md)，不是新独立环境或1200Hz学习方法对照。
+
+为什么余弦族收益大而Gaussian族收益小？[额外真介质投影归因](docs/VARIABLE_PROJECTION_ATTRIBUTION_ZH.md)发现：余弦新16中冻结速度/q空间在800Hz的真介质欧氏投影响应raw约0.0024 vs 0.076–0.078；Gaussian旧8两空间都约0.002–0.003。[机制图](reports/figures/spectral_variable_projection_attribution.png)。这些是**读取真测试介质的不可部署oracle**，且欧氏投影不是响应最优下界；它支持非线性变量变换在某些介质族引起相位敏感秩膨胀的假说，但不证明普适性。
 
 ## 已经知道什么
 
