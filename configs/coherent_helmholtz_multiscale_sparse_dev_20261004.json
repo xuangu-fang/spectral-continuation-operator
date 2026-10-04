@@ -1,0 +1,10 @@
+{
+  "source_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004",
+  "systems": [20269600, 20269601, 20269602, 20269603, 20269604, 20269605, 20269606, 20269607],
+  "teacher_grid": 257,
+  "x_indices": [88, 128, 168, 208],
+  "y_indices": {"start": 32, "step": 3, "count": 65},
+  "context_frequencies_hz": [6.0, 10.0, 14.0],
+  "reserved_query_frequencies_hz": [11.3, 17.0],
+  "scope": "DEV-ONLY deterministic four-line observation extraction from eight already-used multiscale 2D Helmholtz pilot systems. Each public file contains exactly 780 complex lowband samples plus public source/loss/BC metadata. No target-frequency fields, full-field lowband arrays, medium maps, or hidden generation parameters are included. Not independent test evidence."
+}
