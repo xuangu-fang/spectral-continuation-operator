@@ -1,0 +1,17 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_medium_20261004/config.json",
+  "source_results": "artifacts/coherent_waveguide_spectral_medium_20261004/results.json",
+  "source_codes": "artifacts/coherent_waveguide_spectral_medium_20261004",
+  "training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "ranks": [128, 256],
+  "terms": 32,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "systems": [20264600, 20264601, 20264602, 20264603, 20264604, 20264605, 20264606, 20264607],
+  "development_gate": {
+    "rank256_800hz_both_sources_raw_at_most": 0.1,
+    "rank256_800hz_both_sources_phase_rmse_rad_at_most": 0.15,
+    "rank256_both_sources_raw_improvement_over_original_rank128_at_least": 0.5
+  },
+  "scope": "POSTHOC first8 development systems from already inspected spectral cohort; same low-frequency context only; if gate passes, use a newly seeded independent cohort for confirmation"
+}
