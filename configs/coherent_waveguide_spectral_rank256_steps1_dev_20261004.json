@@ -1,0 +1,12 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_medium_20261004/config.json",
+  "source_results": "artifacts/coherent_waveguide_spectral_medium_20261004/results.json",
+  "source_codes": "artifacts/coherent_waveguide_spectral_medium_20261004",
+  "training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "ranks": [256],
+  "terms": 32,
+  "coarse_steps": 1,
+  "fine_steps": 1,
+  "systems": [20264600, 20264601, 20264602, 20264603, 20264604, 20264605, 20264606, 20264607],
+  "scope": "POSTHOC old8 development cost diagnostic; same training-only rank256 prior and same low-frequency context; not a new confirmation candidate"
+}
