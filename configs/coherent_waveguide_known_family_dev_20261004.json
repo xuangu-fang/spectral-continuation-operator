@@ -1,0 +1,21 @@
+{
+  "systems": [20261332,20261333,20261334,20261335,20261336,20261337,20261338,20261339],
+  "context_frequencies": [60,100,140],
+  "query_frequencies": [400,800],
+  "source_variants": ["original","narrow2m"],
+  "roi_min_range_m": 50,
+  "decoder_cells": 256,
+  "decoder_modes": 128,
+  "quadrature_nodes": 384,
+  "device": "cuda",
+  "batch": 64,
+  "initializations": 3,
+  "fit_max_evaluations": 60,
+  "newton_steps": 5,
+  "training_prior": "artifacts/coherent_waveguide_depth_bandwidth_20261004/training_prior.npz",
+  "prior32_run": "artifacts/coherent_waveguide_depth_bandwidth_20261004",
+  "training_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003",
+  "development_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+  "query_truth": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frequency_scaling_20261004",
+  "scope": "Old8 development, exact 15-parameter Gaussian family known, extra structural information; not a matched-info learning candidate or independent32 frozen method"
+}
