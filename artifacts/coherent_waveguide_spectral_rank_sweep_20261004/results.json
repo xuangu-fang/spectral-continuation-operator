@@ -1,0 +1,4610 @@
+[
+  {
+    "system": 20264600,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.23235104978084564,
+    "coefficient_rel_l2": 0.04960242124575115,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.24601155519485474,
+    "coefficient_rel_l2": 0.04960242124575115,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.5141451358795166,
+    "coefficient_rel_l2": 0.04960242124575115,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.6405453681945801,
+    "coefficient_rel_l2": 0.04960242124575115,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.003205407876521349,
+    "coefficient_rel_l2": 0.001117288486628153,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0031877325382083654,
+    "coefficient_rel_l2": 0.001117288486628153,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.007118322886526585,
+    "coefficient_rel_l2": 0.001117288486628153,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.008369801566004753,
+    "coefficient_rel_l2": 0.001117288486628153,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0005933991051279008,
+    "coefficient_rel_l2": 0.00022901143184006942,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006900463486090302,
+    "coefficient_rel_l2": 0.00022901143184006942,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0017571444623172283,
+    "coefficient_rel_l2": 0.00022901143184006942,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0017208597855642438,
+    "coefficient_rel_l2": 0.00022901143184006942,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.00041165173752233386,
+    "coefficient_rel_l2": 7.208099026263704e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0004921411746181548,
+    "coefficient_rel_l2": 7.208099026263704e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0009710487211123109,
+    "coefficient_rel_l2": 7.208099026263704e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264600,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009521947940811515,
+    "coefficient_rel_l2": 7.208099026263704e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.2107105553150177,
+    "coefficient_rel_l2": 0.051700602514397176,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.1992705911397934,
+    "coefficient_rel_l2": 0.051700602514397176,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.42298415303230286,
+    "coefficient_rel_l2": 0.051700602514397176,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.3595260977745056,
+    "coefficient_rel_l2": 0.051700602514397176,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.003493859665468335,
+    "coefficient_rel_l2": 0.0015587788438158642,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.003199532628059387,
+    "coefficient_rel_l2": 0.0015587788438158642,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.009939572773873806,
+    "coefficient_rel_l2": 0.0015587788438158642,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.008752979338169098,
+    "coefficient_rel_l2": 0.0015587788438158642,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0010004994692280889,
+    "coefficient_rel_l2": 0.000384034915446984,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009654295863583684,
+    "coefficient_rel_l2": 0.000384034915446984,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0018204330699518323,
+    "coefficient_rel_l2": 0.000384034915446984,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.002178400056436658,
+    "coefficient_rel_l2": 0.000384034915446984,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.000589508970733732,
+    "coefficient_rel_l2": 0.0001307315856978365,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005859336233697832,
+    "coefficient_rel_l2": 0.0001307315856978365,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0012608078541234136,
+    "coefficient_rel_l2": 0.0001307315856978365,
+    "oracle": true
+  },
+  {
+    "system": 20264601,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001137525774538517,
+    "coefficient_rel_l2": 0.0001307315856978365,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.20142054557800293,
+    "coefficient_rel_l2": 0.05199897735074368,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.17868587374687195,
+    "coefficient_rel_l2": 0.05199897735074368,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.41690701246261597,
+    "coefficient_rel_l2": 0.05199897735074368,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.4062897264957428,
+    "coefficient_rel_l2": 0.05199897735074368,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0034868225920945406,
+    "coefficient_rel_l2": 0.0014871972307680724,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.003948577214032412,
+    "coefficient_rel_l2": 0.0014871972307680724,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.00734035624191165,
+    "coefficient_rel_l2": 0.0014871972307680724,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.006642954424023628,
+    "coefficient_rel_l2": 0.0014871972307680724,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0008825290133245289,
+    "coefficient_rel_l2": 0.000352946361322128,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007466627866961062,
+    "coefficient_rel_l2": 0.000352946361322128,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0018978401785716414,
+    "coefficient_rel_l2": 0.000352946361322128,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0016597079811617732,
+    "coefficient_rel_l2": 0.000352946361322128,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0005862184916622937,
+    "coefficient_rel_l2": 0.00011265521158791385,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005659933085553348,
+    "coefficient_rel_l2": 0.00011265521158791385,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0011088030878454447,
+    "coefficient_rel_l2": 0.00011265521158791385,
+    "oracle": true
+  },
+  {
+    "system": 20264602,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0010520047508180141,
+    "coefficient_rel_l2": 0.00011265521158791385,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.37105995416641235,
+    "coefficient_rel_l2": 0.050113969839180386,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.34757810831069946,
+    "coefficient_rel_l2": 0.050113969839180386,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.8179376721382141,
+    "coefficient_rel_l2": 0.050113969839180386,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.7478201389312744,
+    "coefficient_rel_l2": 0.050113969839180386,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.005157089792191982,
+    "coefficient_rel_l2": 0.0013453276220544963,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.005301598459482193,
+    "coefficient_rel_l2": 0.0013453276220544963,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.009451866149902344,
+    "coefficient_rel_l2": 0.0013453276220544963,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00966273620724678,
+    "coefficient_rel_l2": 0.0013453276220544963,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0010103884851559997,
+    "coefficient_rel_l2": 0.00029579632926613706,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009404902230016887,
+    "coefficient_rel_l2": 0.00029579632926613706,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.002923481399193406,
+    "coefficient_rel_l2": 0.00029579632926613706,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.002656850265339017,
+    "coefficient_rel_l2": 0.00029579632926613706,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007365673664025962,
+    "coefficient_rel_l2": 9.624178475665738e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007833542767912149,
+    "coefficient_rel_l2": 9.624178475665738e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0017612994415685534,
+    "coefficient_rel_l2": 9.624178475665738e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264603,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0019780246075242758,
+    "coefficient_rel_l2": 9.624178475665738e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.1418032944202423,
+    "coefficient_rel_l2": 0.05139624711943976,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.11501697450876236,
+    "coefficient_rel_l2": 0.05139624711943976,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.24868133664131165,
+    "coefficient_rel_l2": 0.05139624711943976,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.19612199068069458,
+    "coefficient_rel_l2": 0.05139624711943976,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0032743802294135094,
+    "coefficient_rel_l2": 0.0012253879033475954,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00276790838688612,
+    "coefficient_rel_l2": 0.0012253879033475954,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0077369906939566135,
+    "coefficient_rel_l2": 0.0012253879033475954,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.007243040483444929,
+    "coefficient_rel_l2": 0.0012253879033475954,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0010755336843430996,
+    "coefficient_rel_l2": 0.00025011867469789246,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009455683757551014,
+    "coefficient_rel_l2": 0.00025011867469789246,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0017892157193273306,
+    "coefficient_rel_l2": 0.00025011867469789246,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0019023948116227984,
+    "coefficient_rel_l2": 0.00025011867469789246,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007589528104290366,
+    "coefficient_rel_l2": 9.414962559162831e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006974850548431277,
+    "coefficient_rel_l2": 9.414962559162831e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0013389792293310165,
+    "coefficient_rel_l2": 9.414962559162831e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264604,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0015753726474940777,
+    "coefficient_rel_l2": 9.414962559162831e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.14925183355808258,
+    "coefficient_rel_l2": 0.04661594728429447,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.11252009123563766,
+    "coefficient_rel_l2": 0.04661594728429447,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.40054264664649963,
+    "coefficient_rel_l2": 0.04661594728429447,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.31986114382743835,
+    "coefficient_rel_l2": 0.04661594728429447,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0030817824881523848,
+    "coefficient_rel_l2": 0.0013375462928579924,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00395280122756958,
+    "coefficient_rel_l2": 0.0013375462928579924,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.008272117003798485,
+    "coefficient_rel_l2": 0.0013375462928579924,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.008438249118626118,
+    "coefficient_rel_l2": 0.0013375462928579924,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0009153358405455947,
+    "coefficient_rel_l2": 0.0002680089833022647,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009187261457554996,
+    "coefficient_rel_l2": 0.0002680089833022647,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0020427405834198,
+    "coefficient_rel_l2": 0.0002680089833022647,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0017534709768369794,
+    "coefficient_rel_l2": 0.0002680089833022647,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007289315690286458,
+    "coefficient_rel_l2": 9.612448892820695e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007041081553325057,
+    "coefficient_rel_l2": 9.612448892820695e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0014405996771529317,
+    "coefficient_rel_l2": 9.612448892820695e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264605,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0013042626669630408,
+    "coefficient_rel_l2": 9.612448892820695e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.2226603478193283,
+    "coefficient_rel_l2": 0.07092827554218419,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.19629544019699097,
+    "coefficient_rel_l2": 0.07092827554218419,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.3987303078174591,
+    "coefficient_rel_l2": 0.07092827554218419,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.43636104464530945,
+    "coefficient_rel_l2": 0.07092827554218419,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.00537591939792037,
+    "coefficient_rel_l2": 0.0020182079622634757,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.005118012893944979,
+    "coefficient_rel_l2": 0.0020182079622634757,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.010421043261885643,
+    "coefficient_rel_l2": 0.0020182079622634757,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.009824131615459919,
+    "coefficient_rel_l2": 0.0020182079622634757,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0016067912802100182,
+    "coefficient_rel_l2": 0.0005165395861896248,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0015604505315423012,
+    "coefficient_rel_l2": 0.0005165395861896248,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.003317649010568857,
+    "coefficient_rel_l2": 0.0005165395861896248,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0028223618865013123,
+    "coefficient_rel_l2": 0.0005165395861896248,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007851225091144443,
+    "coefficient_rel_l2": 0.0001754598425697774,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007670489139854908,
+    "coefficient_rel_l2": 0.0001754598425697774,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0016899670008569956,
+    "coefficient_rel_l2": 0.0001754598425697774,
+    "oracle": true
+  },
+  {
+    "system": 20264606,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0015472299419343472,
+    "coefficient_rel_l2": 0.0001754598425697774,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.14616431295871735,
+    "coefficient_rel_l2": 0.04695631320747497,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.13514924049377441,
+    "coefficient_rel_l2": 0.04695631320747497,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.3173973858356476,
+    "coefficient_rel_l2": 0.04695631320747497,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.36490747332572937,
+    "coefficient_rel_l2": 0.04695631320747497,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.003148760413751006,
+    "coefficient_rel_l2": 0.0013332083356614557,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00328651606105268,
+    "coefficient_rel_l2": 0.0013332083356614557,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.007939621806144714,
+    "coefficient_rel_l2": 0.0013332083356614557,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0071129403077065945,
+    "coefficient_rel_l2": 0.0013332083356614557,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.001100967638194561,
+    "coefficient_rel_l2": 0.0002918620505292007,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008786502294242382,
+    "coefficient_rel_l2": 0.0002918620505292007,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0017865481786429882,
+    "coefficient_rel_l2": 0.0002918620505292007,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0018733195029199123,
+    "coefficient_rel_l2": 0.0002918620505292007,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007984701660461724,
+    "coefficient_rel_l2": 0.00011618334109969654,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006970445974729955,
+    "coefficient_rel_l2": 0.00011618334109969654,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0014492213958874345,
+    "coefficient_rel_l2": 0.00011618334109969654,
+    "oracle": true
+  },
+  {
+    "system": 20264607,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0013522172812372446,
+    "coefficient_rel_l2": 0.00011618334109969654,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.1818782389163971,
+    "coefficient_rel_l2": 0.049921883055071004,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.22637353837490082,
+    "coefficient_rel_l2": 0.049921883055071004,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.47591638565063477,
+    "coefficient_rel_l2": 0.049921883055071004,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.6213947534561157,
+    "coefficient_rel_l2": 0.049921883055071004,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0039021247066557407,
+    "coefficient_rel_l2": 0.0015231456497271328,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.003116911044344306,
+    "coefficient_rel_l2": 0.0015231456497271328,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.008046304807066917,
+    "coefficient_rel_l2": 0.0015231456497271328,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00813449639827013,
+    "coefficient_rel_l2": 0.0015231456497271328,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0013260561972856522,
+    "coefficient_rel_l2": 0.0002722202860204464,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0014610487269237638,
+    "coefficient_rel_l2": 0.0002722202860204464,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.002476976253092289,
+    "coefficient_rel_l2": 0.0002722202860204464,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.003541568759828806,
+    "coefficient_rel_l2": 0.0002722202860204464,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007899576448835433,
+    "coefficient_rel_l2": 9.729569976794024e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009960364550352097,
+    "coefficient_rel_l2": 9.729569976794024e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.001591652981005609,
+    "coefficient_rel_l2": 9.729569976794024e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264608,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0022973420564085245,
+    "coefficient_rel_l2": 9.729569976794024e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.202872633934021,
+    "coefficient_rel_l2": 0.04812156585187085,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.19450116157531738,
+    "coefficient_rel_l2": 0.04812156585187085,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.43032026290893555,
+    "coefficient_rel_l2": 0.04812156585187085,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.3439691364765167,
+    "coefficient_rel_l2": 0.04812156585187085,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0031403759494423866,
+    "coefficient_rel_l2": 0.001146215169333873,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0036563053727149963,
+    "coefficient_rel_l2": 0.001146215169333873,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.008034499362111092,
+    "coefficient_rel_l2": 0.001146215169333873,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00827031210064888,
+    "coefficient_rel_l2": 0.001146215169333873,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0012965128989890218,
+    "coefficient_rel_l2": 0.00032054123531370475,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0011220363667234778,
+    "coefficient_rel_l2": 0.00032054123531370475,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.002347037196159363,
+    "coefficient_rel_l2": 0.00032054123531370475,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.002495919354259968,
+    "coefficient_rel_l2": 0.00032054123531370475,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.000786728342063725,
+    "coefficient_rel_l2": 8.828935979837677e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007676843088120222,
+    "coefficient_rel_l2": 8.828935979837677e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0013902286300435662,
+    "coefficient_rel_l2": 8.828935979837677e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264609,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0017180757131427526,
+    "coefficient_rel_l2": 8.828935979837677e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.19311131536960602,
+    "coefficient_rel_l2": 0.05225968551370955,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.2160528004169464,
+    "coefficient_rel_l2": 0.05225968551370955,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.41903066635131836,
+    "coefficient_rel_l2": 0.05225968551370955,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.40377452969551086,
+    "coefficient_rel_l2": 0.05225968551370955,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0030693188309669495,
+    "coefficient_rel_l2": 0.0011936846642344179,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0028195607010275126,
+    "coefficient_rel_l2": 0.0011936846642344179,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.006180132739245892,
+    "coefficient_rel_l2": 0.0011936846642344179,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.006047811824828386,
+    "coefficient_rel_l2": 0.0011936846642344179,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006707224529236555,
+    "coefficient_rel_l2": 0.00023670277891998408,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006750365719199181,
+    "coefficient_rel_l2": 0.00023670277891998408,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0016075435560196638,
+    "coefficient_rel_l2": 0.00023670277891998408,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0015868253540247679,
+    "coefficient_rel_l2": 0.00023670277891998408,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0005266470834612846,
+    "coefficient_rel_l2": 8.07092781857339e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005247473600320518,
+    "coefficient_rel_l2": 8.07092781857339e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0009320281678810716,
+    "coefficient_rel_l2": 8.07092781857339e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264610,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008313754806295037,
+    "coefficient_rel_l2": 8.07092781857339e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.218794584274292,
+    "coefficient_rel_l2": 0.047125679067400526,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.20068193972110748,
+    "coefficient_rel_l2": 0.047125679067400526,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.46449458599090576,
+    "coefficient_rel_l2": 0.047125679067400526,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.44805848598480225,
+    "coefficient_rel_l2": 0.047125679067400526,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.004163477569818497,
+    "coefficient_rel_l2": 0.0014973260881611277,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.004526962526142597,
+    "coefficient_rel_l2": 0.0014973260881611277,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.008100531995296478,
+    "coefficient_rel_l2": 0.0014973260881611277,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.008800063282251358,
+    "coefficient_rel_l2": 0.0014973260881611277,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0009992767591029406,
+    "coefficient_rel_l2": 0.0003383202351588369,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0013146573910489678,
+    "coefficient_rel_l2": 0.0003383202351588369,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0025825940538197756,
+    "coefficient_rel_l2": 0.0003383202351588369,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0028604259714484215,
+    "coefficient_rel_l2": 0.0003383202351588369,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006904186448082328,
+    "coefficient_rel_l2": 0.00010489157090203468,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008198078139685094,
+    "coefficient_rel_l2": 0.00010489157090203468,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.001415389240719378,
+    "coefficient_rel_l2": 0.00010489157090203468,
+    "oracle": true
+  },
+  {
+    "system": 20264611,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0017247183714061975,
+    "coefficient_rel_l2": 0.00010489157090203468,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.15343892574310303,
+    "coefficient_rel_l2": 0.056714359484197785,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.11729013919830322,
+    "coefficient_rel_l2": 0.056714359484197785,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.33961936831474304,
+    "coefficient_rel_l2": 0.056714359484197785,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.21544645726680756,
+    "coefficient_rel_l2": 0.056714359484197785,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.004787777550518513,
+    "coefficient_rel_l2": 0.0016029718320017745,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.004425759892910719,
+    "coefficient_rel_l2": 0.0016029718320017745,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.009430463425815105,
+    "coefficient_rel_l2": 0.0016029718320017745,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.009720148518681526,
+    "coefficient_rel_l2": 0.0016029718320017745,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.001050638733431697,
+    "coefficient_rel_l2": 0.0003405567215177492,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008800082723610103,
+    "coefficient_rel_l2": 0.0003405567215177492,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.001607320155017078,
+    "coefficient_rel_l2": 0.0003405567215177492,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0014413484605029225,
+    "coefficient_rel_l2": 0.0003405567215177492,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006158908945508301,
+    "coefficient_rel_l2": 0.00011664656940512449,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005484367138706148,
+    "coefficient_rel_l2": 0.00011664656940512449,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0012193768052384257,
+    "coefficient_rel_l2": 0.00011664656940512449,
+    "oracle": true
+  },
+  {
+    "system": 20264612,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001155142323113978,
+    "coefficient_rel_l2": 0.00011664656940512449,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.17337089776992798,
+    "coefficient_rel_l2": 0.05287064812525174,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.16859446465969086,
+    "coefficient_rel_l2": 0.05287064812525174,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.3449072539806366,
+    "coefficient_rel_l2": 0.05287064812525174,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.3343861997127533,
+    "coefficient_rel_l2": 0.05287064812525174,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.004360909573733807,
+    "coefficient_rel_l2": 0.0017203222683237313,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00488010048866272,
+    "coefficient_rel_l2": 0.0017203222683237313,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.011030194349586964,
+    "coefficient_rel_l2": 0.0017203222683237313,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.010465741157531738,
+    "coefficient_rel_l2": 0.0017203222683237313,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0009637181647121906,
+    "coefficient_rel_l2": 0.0003076559185941473,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009277536883018911,
+    "coefficient_rel_l2": 0.0003076559185941473,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0022621569223701954,
+    "coefficient_rel_l2": 0.0003076559185941473,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0022483146749436855,
+    "coefficient_rel_l2": 0.0003076559185941473,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006669557769782841,
+    "coefficient_rel_l2": 0.00011009896887288501,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006801292765885592,
+    "coefficient_rel_l2": 0.00011009896887288501,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.001428785384632647,
+    "coefficient_rel_l2": 0.00011009896887288501,
+    "oracle": true
+  },
+  {
+    "system": 20264613,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0013217941159382463,
+    "coefficient_rel_l2": 0.00011009896887288501,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.1988447606563568,
+    "coefficient_rel_l2": 0.04888239835978476,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.19218052923679352,
+    "coefficient_rel_l2": 0.04888239835978476,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.4284336268901825,
+    "coefficient_rel_l2": 0.04888239835978476,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.397887259721756,
+    "coefficient_rel_l2": 0.04888239835978476,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0032887649722397327,
+    "coefficient_rel_l2": 0.0012705433511356506,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0036231076810508966,
+    "coefficient_rel_l2": 0.0012705433511356506,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.008309499360620975,
+    "coefficient_rel_l2": 0.0012705433511356506,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.007807957474142313,
+    "coefficient_rel_l2": 0.0012705433511356506,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.001009870320558548,
+    "coefficient_rel_l2": 0.0003143475005680609,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009688948630355299,
+    "coefficient_rel_l2": 0.0003143475005680609,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0025580907240509987,
+    "coefficient_rel_l2": 0.0003143475005680609,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0022290623746812344,
+    "coefficient_rel_l2": 0.0003143475005680609,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006774463690817356,
+    "coefficient_rel_l2": 9.734083329963825e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006806402816437185,
+    "coefficient_rel_l2": 9.734083329963825e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0014774551382288337,
+    "coefficient_rel_l2": 9.734083329963825e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264614,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001466710469685495,
+    "coefficient_rel_l2": 9.734083329963825e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.1950690597295761,
+    "coefficient_rel_l2": 0.0520848504581592,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.20350177586078644,
+    "coefficient_rel_l2": 0.0520848504581592,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.41636958718299866,
+    "coefficient_rel_l2": 0.0520848504581592,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.46137842535972595,
+    "coefficient_rel_l2": 0.0520848504581592,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.002913367934525013,
+    "coefficient_rel_l2": 0.0015618138925519208,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0033679783809930086,
+    "coefficient_rel_l2": 0.0015618138925519208,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.009159496054053307,
+    "coefficient_rel_l2": 0.0015618138925519208,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.009014351293444633,
+    "coefficient_rel_l2": 0.0015618138925519208,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007821661420166492,
+    "coefficient_rel_l2": 0.00033103398056354643,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008226011996157467,
+    "coefficient_rel_l2": 0.00033103398056354643,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0017926491564139724,
+    "coefficient_rel_l2": 0.00033103398056354643,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001852719229646027,
+    "coefficient_rel_l2": 0.00033103398056354643,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0005610784282907844,
+    "coefficient_rel_l2": 0.00011131194149866848,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006216861656866968,
+    "coefficient_rel_l2": 0.00011131194149866848,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0010913999285548925,
+    "coefficient_rel_l2": 0.00011131194149866848,
+    "oracle": true
+  },
+  {
+    "system": 20264615,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0010869642719626427,
+    "coefficient_rel_l2": 0.00011131194149866848,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.13425922393798828,
+    "coefficient_rel_l2": 0.04021261962459076,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.1258990466594696,
+    "coefficient_rel_l2": 0.04021261962459076,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.34760698676109314,
+    "coefficient_rel_l2": 0.04021261962459076,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.3276095986366272,
+    "coefficient_rel_l2": 0.04021261962459076,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0026239168364554644,
+    "coefficient_rel_l2": 0.0010233865345237706,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.002880146261304617,
+    "coefficient_rel_l2": 0.0010233865345237706,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.006875318009406328,
+    "coefficient_rel_l2": 0.0010233865345237706,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.006565735675394535,
+    "coefficient_rel_l2": 0.0010233865345237706,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006437996635213494,
+    "coefficient_rel_l2": 0.00020723724399776612,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007790304953232408,
+    "coefficient_rel_l2": 0.00020723724399776612,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0016610244056209922,
+    "coefficient_rel_l2": 0.00020723724399776612,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001995333470404148,
+    "coefficient_rel_l2": 0.00020723724399776612,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.000537825864739716,
+    "coefficient_rel_l2": 7.160501059485117e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006706800195388496,
+    "coefficient_rel_l2": 7.160501059485117e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.001118268584832549,
+    "coefficient_rel_l2": 7.160501059485117e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264616,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0014734488213434815,
+    "coefficient_rel_l2": 7.160501059485117e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.13741818070411682,
+    "coefficient_rel_l2": 0.04424271844412705,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.11873263865709305,
+    "coefficient_rel_l2": 0.04424271844412705,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.26102545857429504,
+    "coefficient_rel_l2": 0.04424271844412705,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.2409442663192749,
+    "coefficient_rel_l2": 0.04424271844412705,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0035815772134810686,
+    "coefficient_rel_l2": 0.0012548471806335373,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.003412091638892889,
+    "coefficient_rel_l2": 0.0012548471806335373,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.006666720379143953,
+    "coefficient_rel_l2": 0.0012548471806335373,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00686717638745904,
+    "coefficient_rel_l2": 0.0012548471806335373,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0009150413097813725,
+    "coefficient_rel_l2": 0.00026672975899962633,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008445103885605931,
+    "coefficient_rel_l2": 0.00026672975899962633,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0022047257516533136,
+    "coefficient_rel_l2": 0.00026672975899962633,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0019904065411537886,
+    "coefficient_rel_l2": 0.00026672975899962633,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006577581516467035,
+    "coefficient_rel_l2": 9.952986022886728e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005668984958902001,
+    "coefficient_rel_l2": 9.952986022886728e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0013144356198608875,
+    "coefficient_rel_l2": 9.952986022886728e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264617,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0010487372055649757,
+    "coefficient_rel_l2": 9.952986022886728e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.15041093528270721,
+    "coefficient_rel_l2": 0.041820800661197206,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.19420212507247925,
+    "coefficient_rel_l2": 0.041820800661197206,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.3526553511619568,
+    "coefficient_rel_l2": 0.041820800661197206,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.35145384073257446,
+    "coefficient_rel_l2": 0.041820800661197206,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0035249434877187014,
+    "coefficient_rel_l2": 0.0014246142559754674,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.003535020863637328,
+    "coefficient_rel_l2": 0.0014246142559754674,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0077239880338311195,
+    "coefficient_rel_l2": 0.0014246142559754674,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0070524369366467,
+    "coefficient_rel_l2": 0.0014246142559754674,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0011348522966727614,
+    "coefficient_rel_l2": 0.0002753364776141177,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0009170364355668426,
+    "coefficient_rel_l2": 0.0002753364776141177,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0025059005711227655,
+    "coefficient_rel_l2": 0.0002753364776141177,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0021071345545351505,
+    "coefficient_rel_l2": 0.0002753364776141177,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0008875069906935096,
+    "coefficient_rel_l2": 0.00011449870859608758,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.000764080265071243,
+    "coefficient_rel_l2": 0.00011449870859608758,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0017787296092137694,
+    "coefficient_rel_l2": 0.00011449870859608758,
+    "oracle": true
+  },
+  {
+    "system": 20264618,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0018748304573819041,
+    "coefficient_rel_l2": 0.00011449870859608758,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.2006964385509491,
+    "coefficient_rel_l2": 0.06422780973406103,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.23370222747325897,
+    "coefficient_rel_l2": 0.06422780973406103,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.45926812291145325,
+    "coefficient_rel_l2": 0.06422780973406103,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.5317969918251038,
+    "coefficient_rel_l2": 0.06422780973406103,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.004441343247890472,
+    "coefficient_rel_l2": 0.0011999554341059343,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00370162446051836,
+    "coefficient_rel_l2": 0.0011999554341059343,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.008060249499976635,
+    "coefficient_rel_l2": 0.0011999554341059343,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.008570808917284012,
+    "coefficient_rel_l2": 0.0011999554341059343,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007165611023083329,
+    "coefficient_rel_l2": 0.00030813719143553745,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007375541026704013,
+    "coefficient_rel_l2": 0.00030813719143553745,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0016241070115938783,
+    "coefficient_rel_l2": 0.00030813719143553745,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0020688269287347794,
+    "coefficient_rel_l2": 0.00030813719143553745,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0004206454905215651,
+    "coefficient_rel_l2": 8.79173275226724e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005193249671719968,
+    "coefficient_rel_l2": 8.79173275226724e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0008932831115089357,
+    "coefficient_rel_l2": 8.79173275226724e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264619,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0011854132171720266,
+    "coefficient_rel_l2": 8.79173275226724e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.25358840823173523,
+    "coefficient_rel_l2": 0.07011013159440188,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.2065722793340683,
+    "coefficient_rel_l2": 0.07011013159440188,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.6180256605148315,
+    "coefficient_rel_l2": 0.07011013159440188,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.5402513742446899,
+    "coefficient_rel_l2": 0.07011013159440188,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.005434080958366394,
+    "coefficient_rel_l2": 0.001966167101011769,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.005264878273010254,
+    "coefficient_rel_l2": 0.001966167101011769,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.010197218507528305,
+    "coefficient_rel_l2": 0.001966167101011769,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.008835476823151112,
+    "coefficient_rel_l2": 0.001966167101011769,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0009222608641721308,
+    "coefficient_rel_l2": 0.0003805795369608305,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0010543758980929852,
+    "coefficient_rel_l2": 0.0003805795369608305,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0027885970193892717,
+    "coefficient_rel_l2": 0.0003805795369608305,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.002969941357150674,
+    "coefficient_rel_l2": 0.0003805795369608305,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006969874957576394,
+    "coefficient_rel_l2": 0.00013424450728606363,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006766716251149774,
+    "coefficient_rel_l2": 0.00013424450728606363,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0014044370036572218,
+    "coefficient_rel_l2": 0.00013424450728606363,
+    "oracle": true
+  },
+  {
+    "system": 20264620,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0014742127386853099,
+    "coefficient_rel_l2": 0.00013424450728606363,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.2100605070590973,
+    "coefficient_rel_l2": 0.04999620290472659,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.16054652631282806,
+    "coefficient_rel_l2": 0.04999620290472659,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.4186519980430603,
+    "coefficient_rel_l2": 0.04999620290472659,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.3640105128288269,
+    "coefficient_rel_l2": 0.04999620290472659,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0036914118099957705,
+    "coefficient_rel_l2": 0.0012650140163514424,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.004033127333968878,
+    "coefficient_rel_l2": 0.0012650140163514424,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.007520355749875307,
+    "coefficient_rel_l2": 0.0012650140163514424,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.007620908785611391,
+    "coefficient_rel_l2": 0.0012650140163514424,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006837959517724812,
+    "coefficient_rel_l2": 0.00022891653936828098,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008289841935038567,
+    "coefficient_rel_l2": 0.00022891653936828098,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0013969015562906861,
+    "coefficient_rel_l2": 0.00022891653936828098,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0016098618507385254,
+    "coefficient_rel_l2": 0.00022891653936828098,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0005507859750650823,
+    "coefficient_rel_l2": 8.687753076901022e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006498789298348129,
+    "coefficient_rel_l2": 8.687753076901022e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0011463714763522148,
+    "coefficient_rel_l2": 8.687753076901022e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264621,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0011315195588395,
+    "coefficient_rel_l2": 8.687753076901022e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.1802094280719757,
+    "coefficient_rel_l2": 0.047126284004076945,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.1849173903465271,
+    "coefficient_rel_l2": 0.047126284004076945,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.3921480178833008,
+    "coefficient_rel_l2": 0.047126284004076945,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.46804818511009216,
+    "coefficient_rel_l2": 0.047126284004076945,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0058629936538636684,
+    "coefficient_rel_l2": 0.0017133462910805188,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.005162668414413929,
+    "coefficient_rel_l2": 0.0017133462910805188,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.010565338656306267,
+    "coefficient_rel_l2": 0.0017133462910805188,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.01077489834278822,
+    "coefficient_rel_l2": 0.0017133462910805188,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007502350490540266,
+    "coefficient_rel_l2": 0.0002865839475508836,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008068358874879777,
+    "coefficient_rel_l2": 0.0002865839475508836,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0016117688501253724,
+    "coefficient_rel_l2": 0.0002865839475508836,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0016853362321853638,
+    "coefficient_rel_l2": 0.0002865839475508836,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0004859592590946704,
+    "coefficient_rel_l2": 0.00010237119119331937,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005686327931471169,
+    "coefficient_rel_l2": 0.00010237119119331937,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0010986466659232974,
+    "coefficient_rel_l2": 0.00010237119119331937,
+    "oracle": true
+  },
+  {
+    "system": 20264622,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0010759875876829028,
+    "coefficient_rel_l2": 0.00010237119119331937,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.2111322581768036,
+    "coefficient_rel_l2": 0.051052688343460155,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.20022444427013397,
+    "coefficient_rel_l2": 0.051052688343460155,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.3807480037212372,
+    "coefficient_rel_l2": 0.051052688343460155,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.41437211632728577,
+    "coefficient_rel_l2": 0.051052688343460155,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.003452035365626216,
+    "coefficient_rel_l2": 0.0012160967835475316,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.003890682477504015,
+    "coefficient_rel_l2": 0.0012160967835475316,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.008357889950275421,
+    "coefficient_rel_l2": 0.0012160967835475316,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.008119352161884308,
+    "coefficient_rel_l2": 0.0012160967835475316,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0009223782690241933,
+    "coefficient_rel_l2": 0.00025736719434618486,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007641232223249972,
+    "coefficient_rel_l2": 0.00025736719434618486,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0020038688089698553,
+    "coefficient_rel_l2": 0.00025736719434618486,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.002002736320719123,
+    "coefficient_rel_l2": 0.00025736719434618486,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006036105914972723,
+    "coefficient_rel_l2": 9.728901770768126e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.000552373705431819,
+    "coefficient_rel_l2": 9.728901770768126e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0014690995449200273,
+    "coefficient_rel_l2": 9.728901770768126e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264623,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0013433137210085988,
+    "coefficient_rel_l2": 9.728901770768126e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.18267613649368286,
+    "coefficient_rel_l2": 0.059523249200650115,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.17129243910312653,
+    "coefficient_rel_l2": 0.059523249200650115,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.3463383615016937,
+    "coefficient_rel_l2": 0.059523249200650115,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.3418129086494446,
+    "coefficient_rel_l2": 0.059523249200650115,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.003954214509576559,
+    "coefficient_rel_l2": 0.0013120031246031808,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0032051883172243834,
+    "coefficient_rel_l2": 0.0013120031246031808,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.008275773376226425,
+    "coefficient_rel_l2": 0.0013120031246031808,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.007231744937598705,
+    "coefficient_rel_l2": 0.0013120031246031808,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0010089417919516563,
+    "coefficient_rel_l2": 0.00029180006185663303,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.000990709406323731,
+    "coefficient_rel_l2": 0.00029180006185663303,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0018145376816391945,
+    "coefficient_rel_l2": 0.00029180006185663303,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0020355740562081337,
+    "coefficient_rel_l2": 0.00029180006185663303,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006595960003323853,
+    "coefficient_rel_l2": 0.00010026681552882102,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006478310679085553,
+    "coefficient_rel_l2": 0.00010026681552882102,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0013148357393220067,
+    "coefficient_rel_l2": 0.00010026681552882102,
+    "oracle": true
+  },
+  {
+    "system": 20264624,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0013441627379506826,
+    "coefficient_rel_l2": 0.00010026681552882102,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.14286144077777863,
+    "coefficient_rel_l2": 0.050200142696223186,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.12824302911758423,
+    "coefficient_rel_l2": 0.050200142696223186,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.281568318605423,
+    "coefficient_rel_l2": 0.050200142696223186,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.2707078456878662,
+    "coefficient_rel_l2": 0.050200142696223186,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.004497102927416563,
+    "coefficient_rel_l2": 0.0014299426302741205,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.004572291858494282,
+    "coefficient_rel_l2": 0.0014299426302741205,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.007631693035364151,
+    "coefficient_rel_l2": 0.0014299426302741205,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.008282175287604332,
+    "coefficient_rel_l2": 0.0014299426302741205,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0008563934243284166,
+    "coefficient_rel_l2": 0.0002817793032306375,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008467041770927608,
+    "coefficient_rel_l2": 0.0002817793032306375,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0022102794609963894,
+    "coefficient_rel_l2": 0.0002817793032306375,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0021889933850616217,
+    "coefficient_rel_l2": 0.0002817793032306375,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.000595299934502691,
+    "coefficient_rel_l2": 8.07957159648424e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005895269569009542,
+    "coefficient_rel_l2": 8.07957159648424e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0014370559947565198,
+    "coefficient_rel_l2": 8.07957159648424e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264625,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001325986348092556,
+    "coefficient_rel_l2": 8.07957159648424e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.1499219536781311,
+    "coefficient_rel_l2": 0.04937654492599396,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.14715781807899475,
+    "coefficient_rel_l2": 0.04937654492599396,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.32496488094329834,
+    "coefficient_rel_l2": 0.04937654492599396,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.3197203576564789,
+    "coefficient_rel_l2": 0.04937654492599396,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.00371074047870934,
+    "coefficient_rel_l2": 0.0011926827510446787,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.003399868495762348,
+    "coefficient_rel_l2": 0.0011926827510446787,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.005453609395772219,
+    "coefficient_rel_l2": 0.0011926827510446787,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.006256537511944771,
+    "coefficient_rel_l2": 0.0011926827510446787,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0009302719263359904,
+    "coefficient_rel_l2": 0.00027923145951099475,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007722022128291428,
+    "coefficient_rel_l2": 0.00027923145951099475,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.001880344469100237,
+    "coefficient_rel_l2": 0.00027923145951099475,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0021347678266465664,
+    "coefficient_rel_l2": 0.00027923145951099475,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006881668232381344,
+    "coefficient_rel_l2": 0.00010970040955930827,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0006528791855089366,
+    "coefficient_rel_l2": 0.00010970040955930827,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0012132739648222923,
+    "coefficient_rel_l2": 0.00010970040955930827,
+    "oracle": true
+  },
+  {
+    "system": 20264626,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001407788135111332,
+    "coefficient_rel_l2": 0.00010970040955930827,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.1677674651145935,
+    "coefficient_rel_l2": 0.04768212759735327,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.1506604552268982,
+    "coefficient_rel_l2": 0.04768212759735327,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.3522507846355438,
+    "coefficient_rel_l2": 0.04768212759735327,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.33991315960884094,
+    "coefficient_rel_l2": 0.04768212759735327,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.003286016173660755,
+    "coefficient_rel_l2": 0.0013461972329072024,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0035868047270923853,
+    "coefficient_rel_l2": 0.0013461972329072024,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.00578064052388072,
+    "coefficient_rel_l2": 0.0013461972329072024,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.006221691146492958,
+    "coefficient_rel_l2": 0.0013461972329072024,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0008559644338674843,
+    "coefficient_rel_l2": 0.00030591976845983633,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001094179111532867,
+    "coefficient_rel_l2": 0.00030591976845983633,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0017280224710702896,
+    "coefficient_rel_l2": 0.00030591976845983633,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0017804050585255027,
+    "coefficient_rel_l2": 0.00030591976845983633,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0004823879280593246,
+    "coefficient_rel_l2": 0.00012068633211299488,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007067866390570998,
+    "coefficient_rel_l2": 0.00012068633211299488,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0011537647806107998,
+    "coefficient_rel_l2": 0.00012068633211299488,
+    "oracle": true
+  },
+  {
+    "system": 20264627,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0012107107322663069,
+    "coefficient_rel_l2": 0.00012068633211299488,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.12364040315151215,
+    "coefficient_rel_l2": 0.05169969105003118,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.10581108927726746,
+    "coefficient_rel_l2": 0.05169969105003118,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.27581748366355896,
+    "coefficient_rel_l2": 0.05169969105003118,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.23360544443130493,
+    "coefficient_rel_l2": 0.05169969105003118,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0052842628210783005,
+    "coefficient_rel_l2": 0.0016113242673516672,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.004586896859109402,
+    "coefficient_rel_l2": 0.0016113242673516672,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.009725657291710377,
+    "coefficient_rel_l2": 0.0016113242673516672,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.009312168695032597,
+    "coefficient_rel_l2": 0.0016113242673516672,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0010065826354548335,
+    "coefficient_rel_l2": 0.00033313187277451105,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008706464432179928,
+    "coefficient_rel_l2": 0.00033313187277451105,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0024089941289275885,
+    "coefficient_rel_l2": 0.00033313187277451105,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.002180475741624832,
+    "coefficient_rel_l2": 0.00033313187277451105,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0006296752253547311,
+    "coefficient_rel_l2": 0.00012027649766535375,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005997141706757247,
+    "coefficient_rel_l2": 0.00012027649766535375,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0014210328226909041,
+    "coefficient_rel_l2": 0.00012027649766535375,
+    "oracle": true
+  },
+  {
+    "system": 20264628,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0014810190768912435,
+    "coefficient_rel_l2": 0.00012027649766535375,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.15262067317962646,
+    "coefficient_rel_l2": 0.05005269504452481,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.1567009687423706,
+    "coefficient_rel_l2": 0.05005269504452481,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.24724899232387543,
+    "coefficient_rel_l2": 0.05005269504452481,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.25349608063697815,
+    "coefficient_rel_l2": 0.05005269504452481,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.003903185250237584,
+    "coefficient_rel_l2": 0.0013080690912691858,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0035207157488912344,
+    "coefficient_rel_l2": 0.0013080690912691858,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.006252709776163101,
+    "coefficient_rel_l2": 0.0013080690912691858,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.005834027659147978,
+    "coefficient_rel_l2": 0.0013080690912691858,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0010555076878517866,
+    "coefficient_rel_l2": 0.00023377372708780563,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.000907710928004235,
+    "coefficient_rel_l2": 0.00023377372708780563,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0021341799292713404,
+    "coefficient_rel_l2": 0.00023377372708780563,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0023381556384265423,
+    "coefficient_rel_l2": 0.00023377372708780563,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0008802738739177585,
+    "coefficient_rel_l2": 7.185018703653657e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007194941863417625,
+    "coefficient_rel_l2": 7.185018703653657e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.001724983798339963,
+    "coefficient_rel_l2": 7.185018703653657e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264629,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0017322765197604895,
+    "coefficient_rel_l2": 7.185018703653657e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.14254866540431976,
+    "coefficient_rel_l2": 0.04170720039267345,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.19707168638706207,
+    "coefficient_rel_l2": 0.04170720039267345,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.30846136808395386,
+    "coefficient_rel_l2": 0.04170720039267345,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.3740496337413788,
+    "coefficient_rel_l2": 0.04170720039267345,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.003090475918725133,
+    "coefficient_rel_l2": 0.0012060775708573315,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0037178799975663424,
+    "coefficient_rel_l2": 0.0012060775708573315,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.007183247245848179,
+    "coefficient_rel_l2": 0.0012060775708573315,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.007672502659261227,
+    "coefficient_rel_l2": 0.0012060775708573315,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0007779329316690564,
+    "coefficient_rel_l2": 0.00025607508696179316,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0007804394699633121,
+    "coefficient_rel_l2": 0.00025607508696179316,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0019276260863989592,
+    "coefficient_rel_l2": 0.00025607508696179316,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0018300862284377217,
+    "coefficient_rel_l2": 0.00025607508696179316,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0004981778911314905,
+    "coefficient_rel_l2": 8.022664759436014e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005404800758697093,
+    "coefficient_rel_l2": 8.022664759436014e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0011928671738132834,
+    "coefficient_rel_l2": 8.022664759436014e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264630,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0011160760186612606,
+    "coefficient_rel_l2": 8.022664759436014e-05,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.11956523358821869,
+    "coefficient_rel_l2": 0.04901069722101809,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.1099831685423851,
+    "coefficient_rel_l2": 0.04901069722101809,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.2768600583076477,
+    "coefficient_rel_l2": 0.04901069722101809,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.27879512310028076,
+    "coefficient_rel_l2": 0.04901069722101809,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0027179548051208258,
+    "coefficient_rel_l2": 0.0011095597002440886,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.002950793132185936,
+    "coefficient_rel_l2": 0.0011095597002440886,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.006008119322359562,
+    "coefficient_rel_l2": 0.0011095597002440886,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.005502576939761639,
+    "coefficient_rel_l2": 0.0011095597002440886,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0008715115254744887,
+    "coefficient_rel_l2": 0.0002654295277357304,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0008767708786763251,
+    "coefficient_rel_l2": 0.0002654295277357304,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0016692319186404347,
+    "coefficient_rel_l2": 0.0002654295277357304,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.001494319410994649,
+    "coefficient_rel_l2": 0.0002654295277357304,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 0.0005507974419742823,
+    "coefficient_rel_l2": 0.00010280695156895492,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.0005930479965172708,
+    "coefficient_rel_l2": 0.00010280695156895492,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.0011470377212390304,
+    "coefficient_rel_l2": 0.00010280695156895492,
+    "oracle": true
+  },
+  {
+    "system": 20264631,
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00109651789534837,
+    "coefficient_rel_l2": 0.00010280695156895492,
+    "oracle": true
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "registration": "POSTHOC first8 development systems from already inspected spectral cohort; same low-frequency context only; if gate passes, use a newly seeded independent cohort for confirmation",
+  "original_results_sha256": "c1fd3de77a452776bad4724a0aca7abbdd493609741f9692220e932fb14da5ad",
+  "training_labels_sha256": "fcc6984db88839bcd659606338051df3c8db79c054e994f19e28d7df7eb44876",
+  "code_sha256": "4291baceff00da3dfe6fbcee08be2623361167aa412f122789b713984f90a3d1"
+}

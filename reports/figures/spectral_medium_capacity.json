@@ -1,0 +1,18 @@
+{
+  "run": "artifacts/coherent_waveguide_spectral_rank_sweep_20261004",
+  "summary_sha256": "6148584d0d866330c82e538725866ac355140894fa9fe52538f52e3152f824d2",
+  "manifest_sha256": "153fe2e9bfaf4f84c015d234f40e6737470f5d5e0127bebcc272c6aaa0305903",
+  "ranks": [
+    128,
+    256,
+    384,
+    511
+  ],
+  "omitted_training_variance": [
+    0.0013627267551664657,
+    4.3764009960423067e-07,
+    4.604018832843337e-09,
+    1.1102230246251565e-16
+  ],
+  "source": "posthoc true-medium projection oracle; not a deployable inverse"
+}

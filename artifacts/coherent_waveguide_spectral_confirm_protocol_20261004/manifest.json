@@ -1,0 +1,59 @@
+{
+  "registered_utc": "2026-10-04T06:33:55.516271+00:00",
+  "registration": "BEFORE new independent validation and numerical-audit truth; rank256 selected on old first8 only; all new32 systems fixed",
+  "git_head": "79fa8bedc918b4a4526f55a799e2f1aa66a0ddbe",
+  "systems": [
+    20265000,
+    20265001,
+    20265002,
+    20265003,
+    20265004,
+    20265005,
+    20265006,
+    20265007,
+    20265008,
+    20265009,
+    20265010,
+    20265011,
+    20265012,
+    20265013,
+    20265014,
+    20265015,
+    20265016,
+    20265017,
+    20265018,
+    20265019,
+    20265020,
+    20265021,
+    20265022,
+    20265023,
+    20265024,
+    20265025,
+    20265026,
+    20265027,
+    20265028,
+    20265029,
+    20265030,
+    20265031
+  ],
+  "audit_systems": [
+    20265100,
+    20265101,
+    20265102
+  ],
+  "confirm_gate": {
+    "rank256_800hz_both_sources_mean_raw_at_most": 0.05,
+    "rank256_800hz_both_sources_mean_phase_rmse_rad_at_most": 0.05,
+    "rank256_both_sources_raw_improvement_over_original_rank128_at_least": 0.7,
+    "rank256_both_sources_system_wins_at_least": 28,
+    "rank256_800hz_both_sources_max_system_raw_at_most": 0.1
+  },
+  "tracked_sha256": {
+    "configs/coherent_waveguide_spectral_confirm_20261004.json": "e2f50dd58ef25b4808dc849cc19ce5ad86052f54fedd51dbce888a4e2f4e943f",
+    "configs/coherent_waveguide_spectral_rank256_confirm_20261004.json": "c348c7aee52ceb3ec89babdfd65789ff10c8f41e8f3c6aeb5b68b6707a6a6241",
+    "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz": "fcc6984db88839bcd659606338051df3c8db79c054e994f19e28d7df7eb44876",
+    "src/spectral_continuation/audit_waveguide_spectral_medium.py": "1f9214b33242c611bb4b84729d8867f473f1bd44be701ff79d53987c01e93a64",
+    "src/spectral_continuation/audit_waveguide_spectral_rank256_inference.py": "4291baceff00da3dfe6fbcee08be2623361167aa412f122789b713984f90a3d1",
+    "src/spectral_continuation/coherent_waveguide_data.py": "aee274b7c7e357b32ca9be96d85c20441849692b6072bb67535c01b49397c3e9"
+  }
+}

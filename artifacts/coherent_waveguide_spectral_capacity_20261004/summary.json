@@ -1,0 +1,74 @@
+[
+  {
+    "method": "rank128_16_oracle",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.18290552678821154,
+    "energy_weighted_phase_rmse_rad": 0.1468355288562334,
+    "max_system_raw": 0.3715259357528709
+  },
+  {
+    "method": "rank128_16_oracle",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.17631459884528178,
+    "energy_weighted_phase_rmse_rad": 0.14107923096915365,
+    "max_system_raw": 0.34789132046724747
+  },
+  {
+    "method": "rank128_16_oracle",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.3905670630761513,
+    "energy_weighted_phase_rmse_rad": 0.3493398125756288,
+    "max_system_raw": 0.8182941143489865
+  },
+  {
+    "method": "rank128_16_oracle",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.38588175207323855,
+    "energy_weighted_phase_rmse_rad": 0.3461934979820457,
+    "max_system_raw": 0.747522084130549
+  },
+  {
+    "method": "rank128_32_oracle",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.18287976884105148,
+    "energy_weighted_phase_rmse_rad": 0.14680864952714195,
+    "max_system_raw": 0.3710498936786526
+  },
+  {
+    "method": "rank128_32_oracle",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.1762939742169034,
+    "energy_weighted_phase_rmse_rad": 0.1410615187929648,
+    "max_system_raw": 0.3475689209390063
+  },
+  {
+    "method": "rank128_32_oracle",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.39062548783782436,
+    "energy_weighted_phase_rmse_rad": 0.3493668147302861,
+    "max_system_raw": 0.8179192062245666
+  },
+  {
+    "method": "rank128_32_oracle",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.3858833619228716,
+    "energy_weighted_phase_rmse_rad": 0.3461838690927777,
+    "max_system_raw": 0.7478016756494144
+  }
+]

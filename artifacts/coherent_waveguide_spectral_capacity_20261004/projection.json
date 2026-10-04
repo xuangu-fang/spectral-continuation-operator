@@ -1,0 +1,322 @@
+[
+  {
+    "system": 20264600,
+    "terms": 16,
+    "coefficient_rel_l2": 0.049598646077031336
+  },
+  {
+    "system": 20264600,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04960242124575115
+  },
+  {
+    "system": 20264601,
+    "terms": 16,
+    "coefficient_rel_l2": 0.05168815743169013
+  },
+  {
+    "system": 20264601,
+    "terms": 32,
+    "coefficient_rel_l2": 0.05170060251439719
+  },
+  {
+    "system": 20264602,
+    "terms": 16,
+    "coefficient_rel_l2": 0.05199094815136943
+  },
+  {
+    "system": 20264602,
+    "terms": 32,
+    "coefficient_rel_l2": 0.05199897735074368
+  },
+  {
+    "system": 20264603,
+    "terms": 16,
+    "coefficient_rel_l2": 0.050106037289046584
+  },
+  {
+    "system": 20264603,
+    "terms": 32,
+    "coefficient_rel_l2": 0.05011396983918041
+  },
+  {
+    "system": 20264604,
+    "terms": 16,
+    "coefficient_rel_l2": 0.051389021111603234
+  },
+  {
+    "system": 20264604,
+    "terms": 32,
+    "coefficient_rel_l2": 0.05139624711943976
+  },
+  {
+    "system": 20264605,
+    "terms": 16,
+    "coefficient_rel_l2": 0.04661063144650808
+  },
+  {
+    "system": 20264605,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04661594728429449
+  },
+  {
+    "system": 20264606,
+    "terms": 16,
+    "coefficient_rel_l2": 0.07091765856514358
+  },
+  {
+    "system": 20264606,
+    "terms": 32,
+    "coefficient_rel_l2": 0.07092827554218419
+  },
+  {
+    "system": 20264607,
+    "terms": 16,
+    "coefficient_rel_l2": 0.04694991804961758
+  },
+  {
+    "system": 20264607,
+    "terms": 32,
+    "coefficient_rel_l2": 0.046956313207474974
+  },
+  {
+    "system": 20264608,
+    "terms": 16,
+    "coefficient_rel_l2": 0.049916854621569834
+  },
+  {
+    "system": 20264608,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04992188305507101
+  },
+  {
+    "system": 20264609,
+    "terms": 16,
+    "coefficient_rel_l2": 0.048115375210226186
+  },
+  {
+    "system": 20264609,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04812156585187086
+  },
+  {
+    "system": 20264610,
+    "terms": 16,
+    "coefficient_rel_l2": 0.05225751111449209
+  },
+  {
+    "system": 20264610,
+    "terms": 32,
+    "coefficient_rel_l2": 0.05225968551370955
+  },
+  {
+    "system": 20264611,
+    "terms": 16,
+    "coefficient_rel_l2": 0.047118270576679284
+  },
+  {
+    "system": 20264611,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04712567906740053
+  },
+  {
+    "system": 20264612,
+    "terms": 16,
+    "coefficient_rel_l2": 0.0567050419484865
+  },
+  {
+    "system": 20264612,
+    "terms": 32,
+    "coefficient_rel_l2": 0.056714359484197806
+  },
+  {
+    "system": 20264613,
+    "terms": 16,
+    "coefficient_rel_l2": 0.05286159481983153
+  },
+  {
+    "system": 20264613,
+    "terms": 32,
+    "coefficient_rel_l2": 0.05287064812525175
+  },
+  {
+    "system": 20264614,
+    "terms": 16,
+    "coefficient_rel_l2": 0.04887610365931919
+  },
+  {
+    "system": 20264614,
+    "terms": 32,
+    "coefficient_rel_l2": 0.048882398359784744
+  },
+  {
+    "system": 20264615,
+    "terms": 16,
+    "coefficient_rel_l2": 0.05207487016789925
+  },
+  {
+    "system": 20264615,
+    "terms": 32,
+    "coefficient_rel_l2": 0.052084850458159186
+  },
+  {
+    "system": 20264616,
+    "terms": 16,
+    "coefficient_rel_l2": 0.04021066953685281
+  },
+  {
+    "system": 20264616,
+    "terms": 32,
+    "coefficient_rel_l2": 0.040212619624590745
+  },
+  {
+    "system": 20264617,
+    "terms": 16,
+    "coefficient_rel_l2": 0.044236951881248265
+  },
+  {
+    "system": 20264617,
+    "terms": 32,
+    "coefficient_rel_l2": 0.044242718444127034
+  },
+  {
+    "system": 20264618,
+    "terms": 16,
+    "coefficient_rel_l2": 0.04180950483390703
+  },
+  {
+    "system": 20264618,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04182080066119724
+  },
+  {
+    "system": 20264619,
+    "terms": 16,
+    "coefficient_rel_l2": 0.06422315963247699
+  },
+  {
+    "system": 20264619,
+    "terms": 32,
+    "coefficient_rel_l2": 0.06422780973406103
+  },
+  {
+    "system": 20264620,
+    "terms": 16,
+    "coefficient_rel_l2": 0.07010157075907889
+  },
+  {
+    "system": 20264620,
+    "terms": 32,
+    "coefficient_rel_l2": 0.0701101315944019
+  },
+  {
+    "system": 20264621,
+    "terms": 16,
+    "coefficient_rel_l2": 0.04999201896787494
+  },
+  {
+    "system": 20264621,
+    "terms": 32,
+    "coefficient_rel_l2": 0.049996202904726596
+  },
+  {
+    "system": 20264622,
+    "terms": 16,
+    "coefficient_rel_l2": 0.047112875618912434
+  },
+  {
+    "system": 20264622,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04712628400407695
+  },
+  {
+    "system": 20264623,
+    "terms": 16,
+    "coefficient_rel_l2": 0.051047220704201826
+  },
+  {
+    "system": 20264623,
+    "terms": 32,
+    "coefficient_rel_l2": 0.05105268834346015
+  },
+  {
+    "system": 20264624,
+    "terms": 16,
+    "coefficient_rel_l2": 0.05951191613342487
+  },
+  {
+    "system": 20264624,
+    "terms": 32,
+    "coefficient_rel_l2": 0.0595232492006501
+  },
+  {
+    "system": 20264625,
+    "terms": 16,
+    "coefficient_rel_l2": 0.050192243345812806
+  },
+  {
+    "system": 20264625,
+    "terms": 32,
+    "coefficient_rel_l2": 0.0502001426962232
+  },
+  {
+    "system": 20264626,
+    "terms": 16,
+    "coefficient_rel_l2": 0.049369900467722196
+  },
+  {
+    "system": 20264626,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04937654492599396
+  },
+  {
+    "system": 20264627,
+    "terms": 16,
+    "coefficient_rel_l2": 0.04767480204955316
+  },
+  {
+    "system": 20264627,
+    "terms": 32,
+    "coefficient_rel_l2": 0.047682127597353255
+  },
+  {
+    "system": 20264628,
+    "terms": 16,
+    "coefficient_rel_l2": 0.05169154893777235
+  },
+  {
+    "system": 20264628,
+    "terms": 32,
+    "coefficient_rel_l2": 0.05169969105003117
+  },
+  {
+    "system": 20264629,
+    "terms": 16,
+    "coefficient_rel_l2": 0.05004925355695307
+  },
+  {
+    "system": 20264629,
+    "terms": 32,
+    "coefficient_rel_l2": 0.050052695044524816
+  },
+  {
+    "system": 20264630,
+    "terms": 16,
+    "coefficient_rel_l2": 0.041703687769483265
+  },
+  {
+    "system": 20264630,
+    "terms": 32,
+    "coefficient_rel_l2": 0.041707200392673456
+  },
+  {
+    "system": 20264631,
+    "terms": 16,
+    "coefficient_rel_l2": 0.04900318414771574
+  },
+  {
+    "system": 20264631,
+    "terms": 32,
+    "coefficient_rel_l2": 0.04901069722101807
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "method": "prior16",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.24225611534653813,
+    "energy_weighted_phase_rmse_rad": 0.2007535289850207,
+    "amplitude_rel_l2": 0.14914319128693088,
+    "modal_parseval_raw": 0.24225701818080653
+  },
+  {
+    "method": "prior16",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.2355902229605188,
+    "energy_weighted_phase_rmse_rad": 0.1899190879528786,
+    "amplitude_rel_l2": 0.15272724986861916,
+    "modal_parseval_raw": 0.23559044657094502
+  },
+  {
+    "method": "prior16",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.5176053993630929,
+    "energy_weighted_phase_rmse_rad": 0.4994662624745074,
+    "amplitude_rel_l2": 0.29584823224229795,
+    "modal_parseval_raw": 0.5176054506373164
+  },
+  {
+    "method": "prior16",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.5026222591073788,
+    "energy_weighted_phase_rmse_rad": 0.4827560501000213,
+    "amplitude_rel_l2": 0.2902476464644674,
+    "modal_parseval_raw": 0.5026212971470652
+  },
+  {
+    "method": "prior32",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.24218845533133448,
+    "energy_weighted_phase_rmse_rad": 0.20067088164545335,
+    "amplitude_rel_l2": 0.14912016461152988,
+    "modal_parseval_raw": 0.24218935795986035
+  },
+  {
+    "method": "prior32",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.2354991701287787,
+    "energy_weighted_phase_rmse_rad": 0.1898312299342339,
+    "amplitude_rel_l2": 0.15268613615721702,
+    "modal_parseval_raw": 0.23549939496415828
+  },
+  {
+    "method": "prior32",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.5174782046708859,
+    "energy_weighted_phase_rmse_rad": 0.4993141925499762,
+    "amplitude_rel_l2": 0.2957439175999226,
+    "modal_parseval_raw": 0.5174782546590487
+  },
+  {
+    "method": "prior32",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.502363447854388,
+    "energy_weighted_phase_rmse_rad": 0.4824474829270262,
+    "amplitude_rel_l2": 0.2901652888645251,
+    "modal_parseval_raw": 0.5023624873581859
+  },
+  {
+    "method": "true_medium32_oracle",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.0005555812161006409,
+    "energy_weighted_phase_rmse_rad": 0.00047440925368634235,
+    "amplitude_rel_l2": 0.0002830254934298538,
+    "modal_parseval_raw": 0.0005555828276490868
+  },
+  {
+    "method": "true_medium32_oracle",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.0005532626311585897,
+    "energy_weighted_phase_rmse_rad": 0.0004589632768446757,
+    "amplitude_rel_l2": 0.00030673676011291006,
+    "modal_parseval_raw": 0.0005532639466001136
+  },
+  {
+    "method": "true_medium32_oracle",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.0011116132402545155,
+    "energy_weighted_phase_rmse_rad": 0.0009808003944166775,
+    "amplitude_rel_l2": 0.0005118151427888295,
+    "modal_parseval_raw": 0.0011116160291211189
+  },
+  {
+    "method": "true_medium32_oracle",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.0011363349306495146,
+    "energy_weighted_phase_rmse_rad": 0.0009968082429103783,
+    "amplitude_rel_l2": 0.0005325911460679529,
+    "modal_parseval_raw": 0.001136338221395028
+  },
+  {
+    "method": "true_medium64_oracle",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.000555249731234102,
+    "energy_weighted_phase_rmse_rad": 0.00047415850601381225,
+    "amplitude_rel_l2": 0.0002828051210876175,
+    "modal_parseval_raw": 0.0005552513483231725
+  },
+  {
+    "method": "true_medium64_oracle",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.000552479808948831,
+    "energy_weighted_phase_rmse_rad": 0.00045831266737253137,
+    "amplitude_rel_l2": 0.00030630013886542867,
+    "modal_parseval_raw": 0.0005524811317842036
+  },
+  {
+    "method": "true_medium64_oracle",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.0011101315977961003,
+    "energy_weighted_phase_rmse_rad": 0.000979376364279935,
+    "amplitude_rel_l2": 0.0005113542829050198,
+    "modal_parseval_raw": 0.001110134404706435
+  },
+  {
+    "method": "true_medium64_oracle",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.0011349765326661432,
+    "energy_weighted_phase_rmse_rad": 0.0009955826380173122,
+    "amplitude_rel_l2": 0.000532020004536569,
+    "modal_parseval_raw": 0.001134979846696795
+  },
+  {
+    "method": "full_medium_oracle",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.000555249721550959,
+    "energy_weighted_phase_rmse_rad": 0.0004741584985316546,
+    "amplitude_rel_l2": 0.0002828051143037773,
+    "modal_parseval_raw": 0.0005552513387115233
+  },
+  {
+    "method": "full_medium_oracle",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.0005524800758728934,
+    "energy_weighted_phase_rmse_rad": 0.0004583117263318616,
+    "amplitude_rel_l2": 0.0003063018854777546,
+    "modal_parseval_raw": 0.000552481398753165
+  },
+  {
+    "method": "full_medium_oracle",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.0011100085614380462,
+    "energy_weighted_phase_rmse_rad": 0.0009792724751957384,
+    "amplitude_rel_l2": 0.0005112878084074438,
+    "modal_parseval_raw": 0.0011100113702903302
+  },
+  {
+    "method": "full_medium_oracle",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.0011346497612600179,
+    "energy_weighted_phase_rmse_rad": 0.0009952914774757763,
+    "amplitude_rel_l2": 0.0005318759631148234,
+    "modal_parseval_raw": 0.0011346530747173118
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.18288061441853642,
+    "max_modal_parseval_raw": 0.37105995416641235,
+    "mean_coefficient_rel_l2": 0.051104232108063155
+  },
+  {
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.17629442363977432,
+    "max_modal_parseval_raw": 0.34757810831069946,
+    "mean_coefficient_rel_l2": 0.051104232108063155
+  },
+  {
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.39062678860500455,
+    "max_modal_parseval_raw": 0.8179376721382141,
+    "mean_coefficient_rel_l2": 0.051104232108063155
+  },
+  {
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.38588486472144723,
+    "max_modal_parseval_raw": 0.7478201389312744,
+    "mean_coefficient_rel_l2": 0.051104232108063155
+  },
+  {
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.003840824843791779,
+    "max_modal_parseval_raw": 0.0058629936538636684,
+    "mean_coefficient_rel_l2": 0.0013911952987077552
+  },
+  {
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0038312513861455955,
+    "max_modal_parseval_raw": 0.005301598459482193,
+    "mean_coefficient_rel_l2": 0.0013911952987077552
+  },
+  {
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.00808717317704577,
+    "max_modal_parseval_raw": 0.011030194349586964,
+    "mean_coefficient_rel_l2": 0.0013911952987077552
+  },
+  {
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.00796962293679826,
+    "max_modal_parseval_raw": 0.01077489834278822,
+    "mean_coefficient_rel_l2": 0.0013911952987077552
+  },
+  {
+    "rank": 384,
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0009480136577622034,
+    "max_modal_parseval_raw": 0.0016067912802100182,
+    "mean_coefficient_rel_l2": 0.0002971164277231858
+  },
+  {
+    "rank": 384,
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0009278085799451219,
+    "max_modal_parseval_raw": 0.0015604505315423012,
+    "mean_coefficient_rel_l2": 0.0002971164277231858
+  },
+  {
+    "rank": 384,
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0020668603356170934,
+    "max_modal_parseval_raw": 0.003317649010568857,
+    "mean_coefficient_rel_l2": 0.0002971164277231858
+  },
+  {
+    "rank": 384,
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0021011220014770515,
+    "max_modal_parseval_raw": 0.003541568759828806,
+    "mean_coefficient_rel_l2": 0.0002971164277231858
+  },
+  {
+    "rank": 511,
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0006417500544557697,
+    "max_modal_parseval_raw": 0.0008875069906935096,
+    "mean_coefficient_rel_l2": 0.00010253605634857752
+  },
+  {
+    "rank": 511,
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0006547055800183443,
+    "max_modal_parseval_raw": 0.0009960364550352097,
+    "mean_coefficient_rel_l2": 0.00010253605634857752
+  },
+  {
+    "rank": 511,
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0013248489467514446,
+    "max_modal_parseval_raw": 0.0017787296092137694,
+    "mean_coefficient_rel_l2": 0.00010253605634857752
+  },
+  {
+    "rank": 511,
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.0013694673762074672,
+    "max_modal_parseval_raw": 0.0022973420564085245,
+    "mean_coefficient_rel_l2": 0.00010253605634857752
+  }
+]

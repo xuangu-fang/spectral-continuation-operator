@@ -1,0 +1,112 @@
+{
+  "registered_utc": "2026-10-04T05:38:23.247563+00:00",
+  "registration": "After training-only prior fit, BEFORE new audit and validation truth",
+  "tracked_sha256": {
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_spectral_medium.py": "1f9214b33242c611bb4b84729d8867f473f1bd44be701ff79d53987c01e93a64",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/coherent_waveguide_data.py": "aee274b7c7e357b32ca9be96d85c20441849692b6072bb67535c01b49397c3e9",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_generator_identification.py": "ab0b238b873dbbf3c50e64d1cead5777f835427078b3399ca779f21bb3688b7d",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_new_systems.py": "059a18366781604450afc062b90839c1c1e2cee7f7426db8b78deb8cb4f0d70d",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_spectral_transport.py": "81cd49a9dcfd0ab688c241b869b148cfb2673956ca48f190a1bac46e1e76b2b9",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_generator_prior.py": "daf2aee9e26028b1268bfbd5fb6ba3bd2833d26c0bcfc900ffdbfce69e2a0303",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_trajectory_newton.py": "3731d877c777667150827cdf7598d2ff58b955567dff9aa5c531d30bf8d0114a",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_frequency_scaling.py": "2210887e285cc1a64969be2555a877611094b33421f2acac4324830c10a04130",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/coarse_waveguide_operator.py": "984945f3809549ce057c467e733e4eb7b53b527d16476c7b22a6f5146548129f",
+    "artifacts/coherent_waveguide_spectral_medium_20261004/training_priors.npz": "c31f808224a72fc322c754a88d7e5905d347a7364165f951dd2a6a0308bf8b3d"
+  },
+  "config": {
+    "train_seed_start": 20264000,
+    "train_count": 512,
+    "systems": [
+      20264600,
+      20264601,
+      20264602,
+      20264603,
+      20264604,
+      20264605,
+      20264606,
+      20264607,
+      20264608,
+      20264609,
+      20264610,
+      20264611,
+      20264612,
+      20264613,
+      20264614,
+      20264615,
+      20264616,
+      20264617,
+      20264618,
+      20264619,
+      20264620,
+      20264621,
+      20264622,
+      20264623,
+      20264624,
+      20264625,
+      20264626,
+      20264627,
+      20264628,
+      20264629,
+      20264630,
+      20264631
+    ],
+    "audit_systems": [
+      20264700,
+      20264701,
+      20264702
+    ],
+    "spectral_terms": 16,
+    "perturbation_rms_m_s": 15.0,
+    "context_frequencies": [
+      60,
+      100,
+      140
+    ],
+    "query_frequencies": [
+      400,
+      800
+    ],
+    "source_variants": [
+      "original",
+      "narrow2m"
+    ],
+    "context_profiles": 65,
+    "query_range_count": 4097,
+    "query_depth_count": 513,
+    "roi_min_range_m": 50,
+    "decoder_cells": 256,
+    "decoder_modes": 128,
+    "teacher_cells": 1024,
+    "teacher_modes": 160,
+    "teacher_quadrature_nodes": 384,
+    "audit_cells": 2048,
+    "audit_modes": 192,
+    "audit_quadrature_nodes": 512,
+    "audit_gate": 0.001,
+    "old_prior_steps": 5,
+    "continuous_steps": 5,
+    "rank": 128,
+    "initial_prior_precision": 1e-09,
+    "ridge_relative": 1e-08,
+    "max_coefficient_step": 0.01,
+    "line_search": [
+      1.0,
+      0.5,
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "eigh_device": "cuda",
+    "eigh_batch": 64,
+    "output_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_medium_20261004",
+    "scope": "Correlated 16x16 random spectral medium, one-way waveguide, new32 systems; no deep neural or second-PDE claim"
+  },
+  "backend": {
+    "scipy_comparison_raw": [
+      2.0921086411136095e-13,
+      2.1442572076998453e-13
+    ],
+    "frequency": 400,
+    "modes": 48
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "source": "artifacts/coherent_waveguide_spectral_medium_20261004/results.json",
+  "selection": "all frozen32 independent IID systems",
+  "bootstrap_unit": "physical system, same index for both methods",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261004,
+  "records": [
+    {
+      "frequency": 400,
+      "source": "original",
+      "systems": 32,
+      "prior16_raw": 0.24225611534653813,
+      "prior32_raw": 0.24218845533133448,
+      "prior16_phase_rmse_rad": 0.2007535289850207,
+      "prior32_phase_rmse_rad": 0.20067088164545335,
+      "phase_relative_improvement": 0.00041168561262749925,
+      "true_medium32_oracle_raw": 0.0005555812161006409,
+      "relative_improvement": 0.00027929125796000154,
+      "paired_bootstrap_95": [
+        -0.00013408004686737418,
+        0.000711691385927237
+      ],
+      "win_fraction": 0.5625,
+      "max_prior32_system_raw": 0.3447174609585647
+    },
+    {
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 32,
+      "prior16_raw": 0.2355902229605188,
+      "prior32_raw": 0.2354991701287787,
+      "prior16_phase_rmse_rad": 0.1899190879528786,
+      "prior32_phase_rmse_rad": 0.1898312299342339,
+      "phase_relative_improvement": 0.00046260762723593363,
+      "true_medium32_oracle_raw": 0.0005532626311585897,
+      "relative_improvement": 0.00038648815980513174,
+      "paired_bootstrap_95": [
+        3.2166668362865195e-06,
+        0.0008157015619204705
+      ],
+      "win_fraction": 0.59375,
+      "max_prior32_system_raw": 0.33021124617558517
+    },
+    {
+      "frequency": 800,
+      "source": "original",
+      "systems": 32,
+      "prior16_raw": 0.5176053993630929,
+      "prior32_raw": 0.5174782046708859,
+      "prior16_phase_rmse_rad": 0.4994662624745074,
+      "prior32_phase_rmse_rad": 0.4993141925499762,
+      "phase_relative_improvement": 0.00030446485770185827,
+      "true_medium32_oracle_raw": 0.0011116132402545155,
+      "relative_improvement": 0.0002457367955657208,
+      "paired_bootstrap_95": [
+        -0.00017769814943361384,
+        0.0006839889273438034
+      ],
+      "win_fraction": 0.59375,
+      "max_prior32_system_raw": 0.7840181746262386
+    },
+    {
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 32,
+      "prior16_raw": 0.5026222591073788,
+      "prior32_raw": 0.502363447854388,
+      "prior16_phase_rmse_rad": 0.4827560501000213,
+      "prior32_phase_rmse_rad": 0.4824474829270262,
+      "phase_relative_improvement": 0.0006391782618387909,
+      "true_medium32_oracle_raw": 0.0011363349306495146,
+      "relative_improvement": 0.0005149219882351064,
+      "paired_bootstrap_95": [
+        0.00010394395421089998,
+        0.0009130601805354132
+      ],
+      "win_fraction": 0.65625,
+      "max_prior32_system_raw": 0.693945246587001
+    }
+  ],
+  "illustration": {
+    "system": 20264600,
+    "frequency": 800,
+    "selection": "first frozen system",
+    "phase_display_limit_rad": 0.75,
+    "display_only_low_amplitude_mask": [
+      {
+        "method": "16 terms",
+        "low_amplitude_display_fraction": 1.5889409708429333e-05
+      },
+      {
+        "method": "32 terms",
+        "low_amplitude_display_fraction": 1.5889409708429333e-05
+      }
+    ],
+    "primary_metric": "full >=50 m ROI, no amplitude mask or phase alignment"
+  }
+}

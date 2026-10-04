@@ -1,0 +1,26 @@
+[
+  {
+    "training_seed": 20264000,
+    "source": "original",
+    "linearization_frequency_hz": 800,
+    "normalized_jacobian_frobenius": 12.021436624343602
+  },
+  {
+    "training_seed": 20264000,
+    "source": "narrow2m",
+    "linearization_frequency_hz": 800,
+    "normalized_jacobian_frobenius": 11.364550692024864
+  },
+  {
+    "training_seed": 20264001,
+    "source": "original",
+    "linearization_frequency_hz": 800,
+    "normalized_jacobian_frobenius": 17.390988158368543
+  },
+  {
+    "training_seed": 20264001,
+    "source": "narrow2m",
+    "linearization_frequency_hz": 800,
+    "normalized_jacobian_frobenius": 15.36545756033722
+  }
+]

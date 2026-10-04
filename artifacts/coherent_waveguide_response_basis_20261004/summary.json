@@ -1,0 +1,66 @@
+[
+  {
+    "representation": "pca128",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.1828816586639732,
+    "mean_coefficient_rel_l2": 0.051104232108063155
+  },
+  {
+    "representation": "pca128",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.1762985521927476,
+    "mean_coefficient_rel_l2": 0.051104232108063155
+  },
+  {
+    "representation": "pca128",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.39063155138865113,
+    "mean_coefficient_rel_l2": 0.051104232108063155
+  },
+  {
+    "representation": "pca128",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.38589487597346306,
+    "mean_coefficient_rel_l2": 0.051104232108063155
+  },
+  {
+    "representation": "response128",
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.1964298584498465,
+    "mean_coefficient_rel_l2": 0.09456052925297778
+  },
+  {
+    "representation": "response128",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.2000377611257136,
+    "mean_coefficient_rel_l2": 0.09456052925297778
+  },
+  {
+    "representation": "response128",
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.3796265348792076,
+    "mean_coefficient_rel_l2": 0.09456052925297778
+  },
+  {
+    "representation": "response128",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "mean_modal_parseval_raw": 0.38461066177114844,
+    "mean_coefficient_rel_l2": 0.09456052925297778
+  }
+]

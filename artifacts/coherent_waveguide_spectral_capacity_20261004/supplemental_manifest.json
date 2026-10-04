@@ -1,0 +1,12 @@
+{
+  "registration": "POSTHOC mechanism oracle after frozen16/32 methods failed; full original32 cohort; test medium read ONLY for explicitly labelled oracle",
+  "config": {
+    "source_config": "configs/coherent_waveguide_spectral_medium_20261004.json",
+    "source_results": "artifacts/coherent_waveguide_spectral_medium_20261004/results.json",
+    "training_priors": "artifacts/coherent_waveguide_spectral_medium_20261004/training_priors.npz",
+    "scope": "POSTHOC extra-true-medium Euclidean PCA projection capacity oracle; all frozen32 systems, both 16/32 terms, same 400/800Hz and original/new source; not a deployable method or strict output-error lower bound"
+  },
+  "source_results_sha256": "c1fd3de77a452776bad4724a0aca7abbdd493609741f9692220e932fb14da5ad",
+  "training_priors_sha256": "c31f808224a72fc322c754a88d7e5905d347a7364165f951dd2a6a0308bf8b3d",
+  "code_sha256": "7df150dcb16e85eccb4e552486439ab11881fb98240ab4cf38737941d8f4e9a6"
+}

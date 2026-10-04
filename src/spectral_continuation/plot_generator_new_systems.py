@@ -29,6 +29,22 @@ def paired_summary(rows, systems, frequencies, sources):
             new = np.array(
                 [lookup[(s, frequency, source, "prior32")]["complex_rel_l2"] for s in systems]
             )
+            old_phase = np.array(
+                [
+                    lookup[(s, frequency, source, "prior16")][
+                        "energy_weighted_phase_rmse_rad"
+                    ]
+                    for s in systems
+                ]
+            )
+            new_phase = np.array(
+                [
+                    lookup[(s, frequency, source, "prior32")][
+                        "energy_weighted_phase_rmse_rad"
+                    ]
+                    for s in systems
+                ]
+            )
             oracle = np.array(
                 [
                     lookup[(s, frequency, source, "true_medium32_oracle")]["complex_rel_l2"]
@@ -44,6 +60,11 @@ def paired_summary(rows, systems, frequencies, sources):
                     "systems": len(systems),
                     "prior16_raw": float(old.mean()),
                     "prior32_raw": float(new.mean()),
+                    "prior16_phase_rmse_rad": float(old_phase.mean()),
+                    "prior32_phase_rmse_rad": float(new_phase.mean()),
+                    "phase_relative_improvement": float(
+                        1 - new_phase.mean() / old_phase.mean()
+                    ),
                     "true_medium32_oracle_raw": float(oracle.mean()),
                     "relative_improvement": float(1 - new.mean() / old.mean()),
                     "paired_bootstrap_95": np.quantile(improvement, [0.025, 0.975]).tolist(),
@@ -129,8 +150,13 @@ def plot(config, results, output):
             ax.yaxis.set_minor_locator(NullLocator())
             if si == 0:
                 ax.set_ylabel("Raw complex relative L2")
+    family_label = (
+        "32 new correlated-spectral media"
+        if "spectral_terms" in config
+        else "32 new Gaussian-medium waveguide systems"
+    )
     fig.suptitle(
-        "32 new waveguide systems; identical 128-dimensional code budget\n"
+        family_label + "; identical 128-dimensional code budget\n"
         "Each line is one matched environment; diamonds mark system means",
         fontsize=12,
     )
@@ -164,6 +190,7 @@ def plot(config, results, output):
         interpolation="nearest",
     )
     mask = np.abs(truth) < 0.001 * amplitude
+    phase_limit = 0.75 if "spectral_terms" in config else 0.05
     images, hidden = [], []
     for ax, (label, beta) in zip(axes[1:], predictions, strict=True):
         prediction = propagate_code(
@@ -189,8 +216,8 @@ def plot(config, results, output):
                 extent=extent,
                 aspect="auto",
                 cmap="RdBu_r",
-                vmin=-0.05,
-                vmax=0.05,
+                vmin=-phase_limit,
+                vmax=phase_limit,
                 interpolation="nearest",
             )
         )
@@ -200,7 +227,7 @@ def plot(config, results, output):
     axes[-1].set_xlabel("Range (m); fixed 1500–1600 m illustration window")
     fig.suptitle(
         f"Fixed new system {system}, 800 Hz, new 2 m source\n"
-        "Pointwise phase difference without alignment; common scale ±0.05 rad",
+        f"Pointwise phase difference without alignment; common scale ±{phase_limit:g} rad",
         fontsize=12,
     )
     fig.subplots_adjust(top=0.86, bottom=0.08, left=0.15, right=0.83, hspace=0.12)
@@ -220,6 +247,7 @@ def plot(config, results, output):
         "system": system,
         "frequency": f,
         "selection": "first frozen system",
+        "phase_display_limit_rad": phase_limit,
         "display_only_low_amplitude_mask": hidden,
         "primary_metric": "full >=50 m ROI, no amplitude mask or phase alignment",
     }
