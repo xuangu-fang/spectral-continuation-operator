@@ -1,0 +1,62 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_medium_20261004/config.json",
+  "source_codes": "artifacts/coherent_waveguide_spectral_medium_20261004",
+  "training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "baseline_results": "artifacts/coherent_waveguide_spectral_rank256_inference_20261004/results.json",
+  "systems": [
+    20264600,
+    20264601,
+    20264602,
+    20264603,
+    20264604,
+    20264605,
+    20264606,
+    20264607
+  ],
+  "rank": 256,
+  "terms": 32,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "conditions": [
+    {
+      "name": "profiles33_clean",
+      "context_profiles": 33,
+      "relative_complex_noise": 0.0
+    },
+    {
+      "name": "profiles17_clean",
+      "context_profiles": 17,
+      "relative_complex_noise": 0.0
+    },
+    {
+      "name": "profiles65_noise0p001",
+      "context_profiles": 65,
+      "relative_complex_noise": 0.001
+    },
+    {
+      "name": "profiles65_noise0p01",
+      "context_profiles": 65,
+      "relative_complex_noise": 0.01
+    }
+  ],
+  "noise_seed_offset": 20261004,
+  "gates_800hz_both_sources": {
+    "profiles33_clean": {
+      "mean_raw_at_most": 0.05,
+      "mean_phase_rad_at_most": 0.05
+    },
+    "profiles17_clean": {
+      "mean_raw_at_most": 0.1,
+      "mean_phase_rad_at_most": 0.1
+    },
+    "profiles65_noise0p001": {
+      "mean_raw_at_most": 0.05,
+      "mean_phase_rad_at_most": 0.05
+    },
+    "profiles65_noise0p01": {
+      "mean_raw_at_most": 0.1,
+      "mean_phase_rad_at_most": 0.1
+    }
+  },
+  "scope": "Post-hoc first8 already-inspected spectral development systems only; fixed rank256 5+5 GN, no hyperparameter selection; subsample original65 context and add exact relative-norm complex modal noise; evaluate full ROI 400/800 two sources, not independent confirmation"
+}

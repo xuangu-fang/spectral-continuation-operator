@@ -1,0 +1,290 @@
+[
+  {
+    "system": 20264600,
+    "condition": "profiles33_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264600,
+    "condition": "profiles17_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264600,
+    "condition": "profiles65_noise0p001",
+    "actual_relative_norm_by_frequency": [
+      0.0010000000483130968,
+      0.0009999999165248184,
+      0.0009999998995702407
+    ]
+  },
+  {
+    "system": 20264600,
+    "condition": "profiles65_noise0p01",
+    "actual_relative_norm_by_frequency": [
+      0.010000000483130964,
+      0.009999999165248182,
+      0.009999998995702418
+    ]
+  },
+  {
+    "system": 20264601,
+    "condition": "profiles33_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264601,
+    "condition": "profiles17_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264601,
+    "condition": "profiles65_noise0p001",
+    "actual_relative_norm_by_frequency": [
+      0.0010000000576875984,
+      0.001000000095588021,
+      0.0009999999121996716
+    ]
+  },
+  {
+    "system": 20264601,
+    "condition": "profiles65_noise0p01",
+    "actual_relative_norm_by_frequency": [
+      0.010000000576875985,
+      0.01000000095588023,
+      0.009999999121996728
+    ]
+  },
+  {
+    "system": 20264602,
+    "condition": "profiles33_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264602,
+    "condition": "profiles17_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264602,
+    "condition": "profiles65_noise0p001",
+    "actual_relative_norm_by_frequency": [
+      0.0010000000596496997,
+      0.0009999999697040685,
+      0.0009999999193784335
+    ]
+  },
+  {
+    "system": 20264602,
+    "condition": "profiles65_noise0p01",
+    "actual_relative_norm_by_frequency": [
+      0.01000000059649698,
+      0.009999999697040686,
+      0.00999999919378432
+    ]
+  },
+  {
+    "system": 20264603,
+    "condition": "profiles33_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264603,
+    "condition": "profiles17_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264603,
+    "condition": "profiles65_noise0p001",
+    "actual_relative_norm_by_frequency": [
+      0.0010000000531088238,
+      0.000999999953440043,
+      0.0010000000500130328
+    ]
+  },
+  {
+    "system": 20264603,
+    "condition": "profiles65_noise0p01",
+    "actual_relative_norm_by_frequency": [
+      0.01000000053108823,
+      0.009999999534400422,
+      0.01000000050013032
+    ]
+  },
+  {
+    "system": 20264604,
+    "condition": "profiles33_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264604,
+    "condition": "profiles17_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264604,
+    "condition": "profiles65_noise0p001",
+    "actual_relative_norm_by_frequency": [
+      0.00100000002498455,
+      0.0010000001054094865,
+      0.0009999999858871888
+    ]
+  },
+  {
+    "system": 20264604,
+    "condition": "profiles65_noise0p01",
+    "actual_relative_norm_by_frequency": [
+      0.010000000249845502,
+      0.010000001054094864,
+      0.009999999858871888
+    ]
+  },
+  {
+    "system": 20264605,
+    "condition": "profiles33_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264605,
+    "condition": "profiles17_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264605,
+    "condition": "profiles65_noise0p001",
+    "actual_relative_norm_by_frequency": [
+      0.0010000000402554368,
+      0.0009999998877633658,
+      0.0009999999864714645
+    ]
+  },
+  {
+    "system": 20264605,
+    "condition": "profiles65_noise0p01",
+    "actual_relative_norm_by_frequency": [
+      0.010000000402554369,
+      0.009999998877633655,
+      0.00999999986471465
+    ]
+  },
+  {
+    "system": 20264606,
+    "condition": "profiles33_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264606,
+    "condition": "profiles17_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264606,
+    "condition": "profiles65_noise0p001",
+    "actual_relative_norm_by_frequency": [
+      0.0010000000561726345,
+      0.0009999999281629281,
+      0.000999999976591394
+    ]
+  },
+  {
+    "system": 20264606,
+    "condition": "profiles65_noise0p01",
+    "actual_relative_norm_by_frequency": [
+      0.010000000561726343,
+      0.009999999281629288,
+      0.00999999976591395
+    ]
+  },
+  {
+    "system": 20264607,
+    "condition": "profiles33_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264607,
+    "condition": "profiles17_clean",
+    "actual_relative_norm_by_frequency": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "system": 20264607,
+    "condition": "profiles65_noise0p001",
+    "actual_relative_norm_by_frequency": [
+      0.0010000000729793043,
+      0.0009999999610963665,
+      0.0009999998773925559
+    ]
+  },
+  {
+    "system": 20264607,
+    "condition": "profiles65_noise0p01",
+    "actual_relative_norm_by_frequency": [
+      0.010000000729793047,
+      0.009999999610963668,
+      0.009999998773925559
+    ]
+  }
+]

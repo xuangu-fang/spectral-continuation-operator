@@ -1,0 +1,23 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_medium_20261004/config.json",
+  "source_codes": "artifacts/coherent_waveguide_spectral_medium_20261004",
+  "training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "failed_noise_results": "artifacts/coherent_waveguide_spectral_context_robustness_dev_v2_20261004/results.json",
+  "systems": [20264600, 20264601, 20264602, 20264603, 20264604, 20264605, 20264606, 20264607],
+  "noise_seed_offset": 20261004,
+  "relative_complex_noise": 0.01,
+  "rank": 256,
+  "terms": 32,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "variants": [
+    {"name": "mean_noisy_initial", "medium_initialization": "training_mean", "source_initialization": "noisy_observed"},
+    {"name": "normal_known_source", "medium_initialization": "normal_statistics", "source_initialization": "known_source"},
+    {"name": "mean_known_source", "medium_initialization": "training_mean", "source_initialization": "known_source"}
+  ],
+  "diagnostic_gate": {
+    "any_variant_800hz_both_sources_mean_raw_at_most": 0.10,
+    "same_variant_both_sources_mean_phase_rad_at_most": 0.10
+  },
+  "scope": "Posthoc old8 spectral development-only 1% noisy context mechanism audit; exact same random noise and rank256 5+5 GN/targets as failed context robustness; 2x2 isolation of normal-derivative versus mean medium initialization and noisy versus known physical source initial; no regularization retuning or independent claim"
+}

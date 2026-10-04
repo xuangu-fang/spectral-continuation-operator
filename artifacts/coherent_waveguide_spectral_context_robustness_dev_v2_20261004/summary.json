@@ -1,0 +1,167 @@
+{
+  "rows": [
+    {
+      "condition": "profiles33_clean",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.0074014238675177155,
+      "mean_phase_rad": 0.00564443801363862,
+      "max_raw": 0.009434918380770218
+    },
+    {
+      "condition": "profiles33_clean",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.008363395534065307,
+      "mean_phase_rad": 0.006249316593665677,
+      "max_raw": 0.009889209264548551
+    },
+    {
+      "condition": "profiles33_clean",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.01486791104376774,
+      "mean_phase_rad": 0.011543624783069797,
+      "max_raw": 0.019870730006089462
+    },
+    {
+      "condition": "profiles33_clean",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.016535933762381567,
+      "mean_phase_rad": 0.012923931724005862,
+      "max_raw": 0.024454144942590187
+    },
+    {
+      "condition": "profiles17_clean",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.008221544858567882,
+      "mean_phase_rad": 0.006318075226528925,
+      "max_raw": 0.011089134003758067
+    },
+    {
+      "condition": "profiles17_clean",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.008868616894871305,
+      "mean_phase_rad": 0.006673354550983999,
+      "max_raw": 0.013857909808578605
+    },
+    {
+      "condition": "profiles17_clean",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.018089287518364097,
+      "mean_phase_rad": 0.014030212748614553,
+      "max_raw": 0.028366783703180676
+    },
+    {
+      "condition": "profiles17_clean",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.018772588417481403,
+      "mean_phase_rad": 0.014565166193898896,
+      "max_raw": 0.02860118874177361
+    },
+    {
+      "condition": "profiles65_noise0p001",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.009886184980940432,
+      "mean_phase_rad": 0.007577193915086739,
+      "max_raw": 0.013271947764374003
+    },
+    {
+      "condition": "profiles65_noise0p001",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.013943103570716387,
+      "mean_phase_rad": 0.010703827933067539,
+      "max_raw": 0.02229908753011375
+    },
+    {
+      "condition": "profiles65_noise0p001",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.02427121938070683,
+      "mean_phase_rad": 0.018884805519824507,
+      "max_raw": 0.03180651024795798
+    },
+    {
+      "condition": "profiles65_noise0p001",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.02486863174529879,
+      "mean_phase_rad": 0.019762256738438205,
+      "max_raw": 0.036116300399835086
+    },
+    {
+      "condition": "profiles65_noise0p01",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.06441115180984272,
+      "mean_phase_rad": 0.04873726311511112,
+      "max_raw": 0.08810719557167536
+    },
+    {
+      "condition": "profiles65_noise0p01",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.10584328989447009,
+      "mean_phase_rad": 0.08405555049227642,
+      "max_raw": 0.18399684139302797
+    },
+    {
+      "condition": "profiles65_noise0p01",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.17234670080539732,
+      "mean_phase_rad": 0.13744505024038495,
+      "max_raw": 0.26406588783998586
+    },
+    {
+      "condition": "profiles65_noise0p01",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.1782174591703619,
+      "mean_phase_rad": 0.1469286464573931,
+      "max_raw": 0.2521287487231179
+    }
+  ],
+  "predeclared_checks": {
+    "profiles33_clean": {
+      "raw": true,
+      "phase": true
+    },
+    "profiles17_clean": {
+      "raw": true,
+      "phase": true
+    },
+    "profiles65_noise0p001": {
+      "raw": true,
+      "phase": true
+    },
+    "profiles65_noise0p01": {
+      "raw": false,
+      "phase": false
+    }
+  },
+  "all_checks_passed": false
+}
