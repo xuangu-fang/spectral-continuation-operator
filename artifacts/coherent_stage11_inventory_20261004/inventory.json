@@ -1,7 +1,7 @@
 {
-  "captured_utc": "2026-10-04T13:46:52.202535+00:00",
+  "captured_utc": "2026-10-04T14:20:15.296890+00:00",
   "capture_type": "post-run working-tree snapshot; not an at-launch source attestation",
-  "git_base": "864d2eb18a8983125aaecbe142c81fc4de08a797",
+  "git_base": "efee62cdb77aaa4ee3929fceb01e33d0e2eab5c0",
   "large_files": "NPZ and PT intentionally local-only; regenerate via stored config or resolve these local paths",
   "datasets": {
     "coherent_helmholtz_development_20261003": {
@@ -24580,6 +24580,165 @@
           "sha256": "2c64ebdfae30cd343424997ddf0b149ea779b5267f5f872968e65828be44d995"
         }
       ]
+    },
+    "coherent_helmholtz_multiscale_sparse_dev_20261004": {
+      "evidence": "DEV-ONLY four-line sparse extraction from the SAME eight M0 Helmholtz systems: 780 complex lowband samples plus source/loss/BC metadata per file; not eight new environments, not independent test, target fields and medium omitted",
+      "files": [
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_00_four_lines.npz",
+          "bytes": 7177,
+          "sha256": "3eba459354222937767d0d9b1dab85177077007be450c48a3a7561ece19f234c",
+          "shape": [
+            3,
+            65,
+            4
+          ],
+          "dtype": "complex64",
+          "value_key": "samples",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_01_four_lines.npz",
+          "bytes": 7199,
+          "sha256": "78a211ae7ede4d77d275ff1d4e20ad76bb8a95b4bf2d40e783acc133a809c97d",
+          "shape": [
+            3,
+            65,
+            4
+          ],
+          "dtype": "complex64",
+          "value_key": "samples",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_02_four_lines.npz",
+          "bytes": 7183,
+          "sha256": "d23be422b66b0738489a67397f75b1e812f815d4d3f7bd87623b4372a870fa67",
+          "shape": [
+            3,
+            65,
+            4
+          ],
+          "dtype": "complex64",
+          "value_key": "samples",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_03_four_lines.npz",
+          "bytes": 7176,
+          "sha256": "6a129c38f7c7ab972e2d0a09c37fcec4fbb11540df557320ab640a4bf8fa2591",
+          "shape": [
+            3,
+            65,
+            4
+          ],
+          "dtype": "complex64",
+          "value_key": "samples",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_04_four_lines.npz",
+          "bytes": 7196,
+          "sha256": "6c1d17f7f1c5e22f601496b16f23698dc51f949564ca86b3b6903841a030ee02",
+          "shape": [
+            3,
+            65,
+            4
+          ],
+          "dtype": "complex64",
+          "value_key": "samples",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_05_four_lines.npz",
+          "bytes": 7179,
+          "sha256": "a38f0f041f900659cad3a603e05aa33f36b7cf7f45a9c1e8b04fac338e511aea",
+          "shape": [
+            3,
+            65,
+            4
+          ],
+          "dtype": "complex64",
+          "value_key": "samples",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_06_four_lines.npz",
+          "bytes": 7189,
+          "sha256": "c5549c983eaa57aae1f28ac8db8f1af4863c02d365883ff67d7eed18a4c8eb93",
+          "shape": [
+            3,
+            65,
+            4
+          ],
+          "dtype": "complex64",
+          "value_key": "samples",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_07_four_lines.npz",
+          "bytes": 7188,
+          "sha256": "4bea9059ac05d2ac16e382afab4d7eac0a9dffcd0ac31b872aeacb9f34fc0732",
+          "shape": [
+            3,
+            65,
+            4
+          ],
+          "dtype": "complex64",
+          "value_key": "samples",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0
+          ],
+          "additional_arrays": {}
+        }
+      ],
+      "metadata": [
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/config.json",
+          "sha256": "e3c618124d2c1bdf69e1b52f21636ec589b2b42a0c8f6c7fc8a40290c0c8a755"
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/manifest.json",
+          "sha256": "3d256e5750dd2b73b4ac1d3384dfae5d329afc2b1e9575c8e4166c2aaa420991"
+        }
+      ]
     }
   },
   "source_snapshot_sha256": {
@@ -24595,6 +24754,8 @@
     "src/spectral_continuation/audit_helmholtz_multiscale_fullfield_classic.py": "877059e9e2c89a0a5fcb2a4b98fae45846a6257956f65257b06e888e4b2aba3d",
     "src/spectral_continuation/audit_helmholtz_multiscale_sampling.py": "2e030daa86c7817c2b58ef12f51022f430d8ee7bc7f8dfc0cec83bf5afce1dd6",
     "src/spectral_continuation/audit_helmholtz_multiscale_sampling_corrected.py": "3ba40de22308c8f83fdbc63435fcdfd3455f26c5bcbd3e98c51e001b77eea99a",
+    "src/spectral_continuation/audit_helmholtz_sparse_capacity_oracle.py": "12bb71c8c096f464717a66d3ffeefb6ce8528d74c5f2747060f1e5931672f0a2",
+    "src/spectral_continuation/audit_helmholtz_sparse_linear_info.py": "fc8c253d6642fcfe74af18c2f815dbfdeec48a1da9fc5822ecc55f4852d512e5",
     "src/spectral_continuation/audit_learned_speed_basis_storage.py": "7e1b2f127b754896d5836ce1a2df7ea1dcfea109276294062bfbce3aff78bf2a",
     "src/spectral_continuation/audit_learned_speed_manifold_confirm.py": "cc2283c71ebec6af626164dc69c049ba166bcd3273fd58b3467c44010f2e005f",
     "src/spectral_continuation/audit_learned_speed_manifold_dev.py": "3a16570ceb798095204a72935cb1f2fd4d7e0960be8028be59d5b95b61f1aed8",
@@ -24673,7 +24834,7 @@
     "src/spectral_continuation/generate_waveguide_frozen_audit.py": "38accc8b640aeda0d8a38501a734cbf79f41dc065632f90317955c9dd09bfc35",
     "src/spectral_continuation/generate_waveguide_modal_cache.py": "2ccb8d724059b1c11ca937bf1f9ae7650e649bbc0fe3ecee32f64cd26ea4b90e",
     "src/spectral_continuation/generate_waveguide_query_transfer.py": "bda9dd50c0c5b07212eb63878a3e10dcdeafc421a44aa7cc71650374f27ae1e1",
-    "src/spectral_continuation/inventory_coherent_stage.py": "35e5ebbc01d65cc13d3341a234b3fc362a952c668655d585620a3ed9e6cf8543",
+    "src/spectral_continuation/inventory_coherent_stage.py": "02444d09870ece9fc7a7b010c475c4716df92960ef947c582aeafb620de0b3c3",
     "src/spectral_continuation/learned_coherent_kernel.py": "f210bbe0d23e965434d69f0b0f9f7726085fb59cca2a7d61837aef6b3d7d6676",
     "src/spectral_continuation/learned_phase_rom.py": "a358fdf9f57cae1d77c1284e2966f143dbd15b16c7888b5e5794e1baf08a7362",
     "src/spectral_continuation/learned_source_space.py": "f6da42847e3dc94b3dc1da72af17a1aeabb908c0f6dc7234fd86551781ec37d0",
@@ -24691,12 +24852,14 @@
     "src/spectral_continuation/plot_generator_representation_limits.py": "103063634fd252cea2cc873ff6728dff198754c20b53f3220217c2a3c8e45013",
     "src/spectral_continuation/plot_helmholtz_multiscale_correction.py": "9861b841f292940744979a9772917a39e0c7f55c004a7c0ad1b3b42cd8686746",
     "src/spectral_continuation/plot_helmholtz_multiscale_example.py": "5a918a55f504b2d501736bb3b04d126dcfeaee901c4e06a7b62db501e7878594",
+    "src/spectral_continuation/plot_helmholtz_sparse_audits.py": "01c00b94b92749514aee266f871c5d233cda19d4e68b5b604c8553aefe0e95c2",
     "src/spectral_continuation/plot_learned_speed_manifold_confirm.py": "5e2204a7d81176d5a4cebedf1e53b03cba0498b19c5376b7b09e596f0e12c748",
     "src/spectral_continuation/plot_learned_speed_manifold_phase.py": "e41aac898fbd5c39b57320cce9407d113d24962644b6acd70afc93cd8842bdf7",
     "src/spectral_continuation/plot_phase_rom_progress.py": "c829f519a6c6537304f2fb07219da92e888ba637f84ef1c1145a6df4394bd434",
     "src/spectral_continuation/plot_q_capacity_audit.py": "418c91eafe449bfa38836124989dbd669df908f5c552eb769a9cf2924ee9fcdc",
     "src/spectral_continuation/plot_variable_projection_attribution.py": "890f2641f953d46ff9c91f86f5d08138afec626131a5c1f8917baf4e8b29d5ed",
     "src/spectral_continuation/plot_waveguide_medium_families.py": "10e9fbbe7c8531adcb87de016d401a31c98b103af30d85f50c66a6f499b44b9b",
+    "src/spectral_continuation/prepare_helmholtz_sparse_dev.py": "b66aa33172ee11ab66e8e15b7f2892e415f7ccffe8a098e63bc83e4c681ba43e",
     "src/spectral_continuation/register_waveguide_spectral_confirm.py": "f0b2b412cd687f83183b71ba86df7303520a276c892cc6440a980a43d9393102",
     "src/spectral_continuation/separable_background.py": "6fc55f2d4008088eb687dd3f05dc234a05bded65b66fefc709f0b5553853a939",
     "src/spectral_continuation/summarize_frozen_generator_audit.py": "471d860342bfbb5e9d0b5cb328c4d3e0cb005ed060ccdf9b060f1baef9814391",
@@ -24717,6 +24880,7 @@
     "tests/test_helmholtz_generator_compression.py": "99c192330242ae371848aaec8caa48fe159bec49a2adc62ffd5c9c61d24521b1",
     "tests/test_helmholtz_generator_identification.py": "504be6e284b165d17e3d5466cc81ed649e91d1e50b6aa0dfe852ad2b331828a6",
     "tests/test_helmholtz_multiscale_pilot.py": "d2ef7d1a4104b4305e7eb02ca2c80d296a9f83695838ff3398d570afc5494bd9",
+    "tests/test_helmholtz_sparse_linear_info.py": "b941153e217e78723111488a34e8d67493b5f3172f3c0614cf8eda769dd72bec",
     "tests/test_learned_coherent_kernel.py": "7b94b3e1069fc78a7dc9bff9d0debed106ce78962864ae9f157f66b9ed57792f",
     "tests/test_learned_phase_rom.py": "c1fcd131bc22e4d2752edbd90402eaf97aa6d347dc234e171c433bdb96114ea3",
     "tests/test_learned_source_space.py": "e55bf8900c3694742aae967a554214ee9ff0a9ada4da5241b78be324777d83a3",
@@ -24724,6 +24888,7 @@
     "tests/test_learned_speed_manifold.py": "6d9e0753745d30b91909c27f93a06f3400cb9122e58112e4e87ed3342b7c3784",
     "tests/test_learned_waveguide_generator.py": "6cfeec173471c12a6057ef00b5d147c2e365c784dd753ab30e25245d451b3f5d",
     "tests/test_mixture_coherent_kernel.py": "ac5ad6686745998d6be252ad95270abf37c93ee5cde3d2402a32acf33b2d040e",
+    "tests/test_prepare_helmholtz_sparse_dev.py": "726d0dbf43915d593ce7269a6900e44d69cc56e8ad83ac37763d5943744c68d9",
     "tests/test_q_capacity_diagnostics.py": "a11e14178b1a775933b12238363d88b95203a9454de30a719beae8ddefe9b110",
     "tests/test_separable_background.py": "f6e3b0ac9d3ccc1c5a7507725914a9a1483ae31616fb5cf5f0d80a68c4c87646",
     "tests/test_unrolled_coherent_kernel.py": "e0830a4a4d1a7bb9e9a43c76f2c88b4c4dafaef61f81cfc17c0e393f4201280a",
@@ -25412,6 +25577,76 @@
           "path": "artifacts/coherent_helmholtz_multiscale_sampling_corrected_20261004/summary.json",
           "bytes": 2266,
           "sha256": "84d978f06469b723be0d22f24e95c3939a9624e947db37296f5f819b0ebd5b7d"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_sparse_capacity_oracle_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_capacity_oracle_20261004/config.json",
+          "bytes": 1156,
+          "sha256": "d023c24b9b62aad768650a48c419aa970e565e53c95b6e15a98055c8ec40ca1f"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_capacity_oracle_20261004/manifest.json",
+          "bytes": 2776,
+          "sha256": "0145ea93e5fd4513fb0a9520080168c4013e4987ad90f117f88eceeccae2f815"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_capacity_oracle_20261004/results.json",
+          "bytes": 30015,
+          "sha256": "297c1a81f77923602da9615bc74873c7b06657d9adade7ce32f260d6a8c6c95b"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_capacity_oracle_20261004/summary.json",
+          "bytes": 2604,
+          "sha256": "a1a4102f5f2d062fc3f7d70c4af775c979906c4d2e98ff198a31fc80046b71a4"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_capacity_oracle_20261004/training_prior_basis.npz",
+          "bytes": 8312855,
+          "sha256": "23c8cc9db74e84fb30343c02cbef3ad239a98114b44d43a5b7e2d85eed6a1b95"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_sparse_linear_info_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_linear_info_20261004/config.json",
+          "bytes": 1205,
+          "sha256": "31bc4234fb5ed9b12c223c2114425da1b5c1f5cbf8515f06e8ae4a1273790816"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_linear_info_20261004/manifest.json",
+          "bytes": 1047,
+          "sha256": "40dc748d01360c6bdaf3d2c997df17e9beb736d425d37c66d511fc610cdd24ca"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_linear_info_20261004/results.json",
+          "bytes": 5868,
+          "sha256": "80c7d31ccee67e777fff9fa7544c93459365e2bc175fa6f167ab426f9ff53cd3"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_sparse_linear_info_rank256_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_linear_info_rank256_20261004/config.json",
+          "bytes": 1180,
+          "sha256": "bbca54b229f4bbe92d1a683e2c2ec7e816a9cae38415beadc9796efcd72b398e"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_linear_info_rank256_20261004/manifest.json",
+          "bytes": 1050,
+          "sha256": "65e96ddac84df50aaffff650ab9d73bd2ff447abc0b95243f6ab2e744362b982"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_sparse_linear_info_rank256_20261004/results.json",
+          "bytes": 1595,
+          "sha256": "68a5ced9ef613b35788332149494ca34fb3092e0ea9659ddba1ee3602c91274c"
         }
       ]
     },
