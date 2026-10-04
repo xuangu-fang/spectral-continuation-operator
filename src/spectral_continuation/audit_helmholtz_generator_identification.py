@@ -41,7 +41,8 @@ def laplacian(grid):
     return sparse.kronsum(d4, d4, format="csc")
 
 
-def estimate_slowness(fields, frequencies, spec, axis, derivative, smoothing):
+def estimate_slowness(fields, frequencies, spec, axis, derivative, smoothing,
+                      q_bounds=(1.0, 6.25)):
     loss, source = known_terms(spec, axis)
     u = fields[:, 1:-1, 1:-1]
     if derivative == "fourth_order":
@@ -66,7 +67,9 @@ def estimate_slowness(fields, frequencies, spec, axis, derivative, smoothing):
         gram = gaussian_filter(gram, smoothing, mode="nearest")
         rhs = gaussian_filter(rhs, smoothing, mode="nearest")
     q = rhs / np.maximum(gram, gram.max() * 1e-12)
-    clipped = np.clip(q, 1, 6.25)
+    if not (0 < q_bounds[0] < q_bounds[1]):
+        raise ValueError("positive ordered slowness-square bounds required")
+    clipped = np.clip(q, *q_bounds)
     result = np.ones((len(axis), len(axis)))
     result[1:-1, 1:-1] = clipped
     return result, float(np.mean(clipped != q))

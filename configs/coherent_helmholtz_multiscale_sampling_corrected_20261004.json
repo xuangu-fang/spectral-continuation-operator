@@ -1,0 +1,12 @@
+{
+  "source_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004",
+  "invalid_initial_sampling_results": "artifacts/coherent_helmholtz_multiscale_sampling_audit_20261004/results.json",
+  "systems": [20269600, 20269601, 20269602, 20269603, 20269604, 20269605, 20269606, 20269607],
+  "observation_grids": [65, 129, 257],
+  "teacher_grid": 257,
+  "context_frequencies_hz": [6.0, 10.0, 14.0],
+  "query_frequencies_hz": [11.3, 17.0],
+  "roi": [0.18, 0.82],
+  "q_bounds": [0.5, 6.25],
+  "scope": "POSTHOC CORRECTION of classical full-field baseline on same eight already-used multiscale Helmholtz M0 pilot systems. Initial legacy estimator clipped q>=1 because old Gaussian media only slowed waves; the new texture has faster-than-background regions and initial 65x65 baseline clipped ~40 percent pixels, rendering its 0.13-0.15 raw errors invalid as strong-baseline evidence. Now keep exact same fields/source/PDE/frequencies/grids and sine-spectral inverse but use broad physics-admissible q bounds [0.5,6.25] at BOTH estimation and interpolation. Compare all 65/129/257 grids. This correction is not a new independent test or neural performance result. Original invalid audit is retained, not overwritten."
+}

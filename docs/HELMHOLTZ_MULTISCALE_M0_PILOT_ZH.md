@@ -13,3 +13,5 @@
 补充一个不借助新模型的**完整场强经典对照**：对上述已生成8个pilot系统，取三个频率的完整65×65复场，隐藏纹理系数和所有Gaussian幅值/位置，仍公开源、边界损耗和方程，用正弦谱导数逐点识别实慢度，再由同PDE查询11.3/17。配置/源码在运行前提交见[`configs/coherent_helmholtz_multiscale_fullfield_classic_20261004.json`](../configs/coherent_helmholtz_multiscale_fullfield_classic_20261004.json)。这不是主任务的有限接收线设置；若误差已接近数值底噪，不能为了找学习优势只换一个更复杂介质而保留完整场信息。
 
 旧系统65×65完整场经典方法接近数值底噪，而新pilot同信息条件初步误差很大。为了避免把空间欠采样/求导失真包装成神经表示机会，再固定**同8旧pilot**完整复场观察网格65/129/257的正弦谱识别对照；方程、三个低频、两个查询和目标真值都不变，隐藏介质系数，65结果需严格复现。配置见[`configs/coherent_helmholtz_multiscale_sampling_audit_20261004.json`](../configs/coherent_helmholtz_multiscale_sampling_audit_20261004.json)。更高网格给更多观测信息，不是和65模型的同信息排行榜；只定位机制。
+
+**重要运行中纠错：** 原旧Gaussian数据只允许声速低于背景，故继承的经典代码硬裁`q≥1`；新纹理有局部声速高于背景，初版完整场基线约40%像素被错误裁掉。这使初版0.13–0.15 raw**不构成强基线失败或learning机会**；即使增到257完整观测也不变，是先验物理范围错，而非必然分辨率错。初版脚本/配置/结果留档，不覆写。修正版只改统一的慢度平方允许范围为`[0.5,6.25]`，三个观测网格均重新评估，公开源/边界/方程、目标与split不变；配置/源码见[`configs/coherent_helmholtz_multiscale_sampling_corrected_20261004.json`](../configs/coherent_helmholtz_multiscale_sampling_corrected_20261004.json)。修正结果出来前暂停任何新域方法结论。
