@@ -1,0 +1,41 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "frequency_hz": 800,
+  "groups": [
+    {
+      "name": "cosine_taper7p5_new16",
+      "family": "correlated_cosine_taper7p5",
+      "systems": [20268000, 20268001, 20268002, 20268003, 20268004, 20268005, 20268006, 20268007, 20268008, 20268009, 20268010, 20268011, 20268012, 20268013, 20268014, 20268015],
+      "rank": 255,
+      "speed_prior": "artifacts/coherent_waveguide_learned_speed_manifold_dev_20261004/learned_priors.npz",
+      "speed_training_manifest": "artifacts/coherent_waveguide_learned_speed_manifold_dev_20261004/training_manifest.json",
+      "q_training_labels": ["artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz", "artifacts/coherent_waveguide_spectral_taper_matched_prior_20261004/training_labels.npz"],
+      "q_training_array_key": "target32",
+      "truth_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004",
+      "deployed_results": "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/results.json"
+    },
+    {
+      "name": "gaussian_old8_dev",
+      "family": "three_local_gaussians",
+      "systems": [20261332, 20261333, 20261334, 20261335, 20261336, 20261337, 20261338, 20261339],
+      "rank": 128,
+      "speed_prior": "artifacts/coherent_waveguide_gaussian_speed_variable_dev_20261004/learned_priors.npz",
+      "speed_training_manifest": "artifacts/coherent_waveguide_gaussian_speed_variable_dev_20261004/training_manifest.json",
+      "q_training_labels": ["artifacts/coherent_waveguide_depth_bandwidth_20261004/training_prior.npz"],
+      "q_training_array_key": "target",
+      "truth_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frequency_scaling_20261004",
+      "deployed_results": "artifacts/coherent_waveguide_gaussian_speed_variable_dev_20261004/results.json"
+    }
+  ],
+  "depth_terms": 32,
+  "coarse_speed_cells": 64,
+  "fine_decoder_cells": 256,
+  "projection_quadrature_nodes": 160,
+  "mechanism_checks": {
+    "cosine_q_projection_mean_raw_at_least": 0.02,
+    "cosine_speed_projection_mean_raw_at_most": 0.01,
+    "gaussian_q_projection_mean_raw_at_most": 0.005,
+    "gaussian_speed_projection_mean_raw_at_most": 0.005
+  },
+  "scope": "Posthoc EXPLANATORY TRUE-TEST-MEDIUM Euclidean projection oracles on existing cosine new16 and Gaussian old8 systems, committed before computing these projection results. No new target data, no online deployable method, no optimization with target fields, no claim of a strict best-response capacity lower bound. Read the true test medium ONLY to form projections into each frozen trained speed/q basis; compare f800 broad/narrow raw/phase in the same one-way PDE. Check whether small training q variance residual corresponds to phase-sensitive test response and whether this contrast disappears in the Gaussian family. Different code ranks/family dimensions mean cross-family numerical values are not a matched-capacity method leaderboard."
+}
