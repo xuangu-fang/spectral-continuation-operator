@@ -1,0 +1,183 @@
+{
+  "summary": [
+    {
+      "method": "speed_nonlinear",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.003289184976444204,
+      "mean_phase_rad": 0.002483211100280881,
+      "max_raw": 0.007751469525487286
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.004533928855602231,
+      "mean_phase_rad": 0.0033483865507361967,
+      "max_raw": 0.012123379465176417
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.008591971503741948,
+      "mean_phase_rad": 0.006615383437613358,
+      "max_raw": 0.03282350052918204
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.009277916083040481,
+      "mean_phase_rad": 0.007291591358792473,
+      "max_raw": 0.03074601558751133
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.05140839673027124,
+      "mean_phase_rad": 0.038181303352086214,
+      "max_raw": 0.07602380340783137
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.05725655045848623,
+      "mean_phase_rad": 0.04335690981431117,
+      "max_raw": 0.1116621321002975
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.11563588246386672,
+      "mean_phase_rad": 0.09267725893805265,
+      "max_raw": 0.17414411988480016
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.1270691585141011,
+      "mean_phase_rad": 0.1030255953935705,
+      "max_raw": 0.21960631179423823
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.051408396739019785,
+      "mean_phase_rad": 0.038181303360509906,
+      "max_raw": 0.07602380334132376
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.05725655041371614,
+      "mean_phase_rad": 0.04335690978381956,
+      "max_raw": 0.11166213146280356
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.11563588242761161,
+      "mean_phase_rad": 0.09267725890617698,
+      "max_raw": 0.17414411982233943
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.12706915855573703,
+      "mean_phase_rad": 0.10302559543117623,
+      "max_raw": 0.2196063112726201
+    },
+    {
+      "method": "speed_true_medium_projection_oracle",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.002000510170729687,
+      "mean_phase_rad": 0.0016414120047342313,
+      "max_raw": 0.0030904693952620243
+    },
+    {
+      "method": "speed_true_medium_projection_oracle",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.0020334926855264442,
+      "mean_phase_rad": 0.0017043414172672653,
+      "max_raw": 0.0035290252295796685
+    },
+    {
+      "method": "speed_true_medium_projection_oracle",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.0037829056700828517,
+      "mean_phase_rad": 0.0031653783133466567,
+      "max_raw": 0.005583313359845728
+    },
+    {
+      "method": "speed_true_medium_projection_oracle",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.0038491709659502446,
+      "mean_phase_rad": 0.0033032890049056397,
+      "max_raw": 0.006496825368617843
+    }
+  ],
+  "comparisons": [
+    {
+      "source": "original",
+      "best_q_mean_raw": 0.11563588242761161,
+      "speed_raw_improvement": 0.9256980504375832
+    },
+    {
+      "source": "narrow2m",
+      "best_q_mean_raw": 0.1270691585141011,
+      "speed_raw_improvement": 0.9269853031881777
+    }
+  ],
+  "gate_checks": {
+    "mean_raw": true,
+    "mean_phase": true,
+    "improvement": true
+  },
+  "all_dev_gates_pass": true,
+  "speed_prior": {
+    "training_fields": 1024,
+    "speed_sample_shape": [
+      64,
+      160
+    ],
+    "rank": 255,
+    "training_speed_variance_fraction": 1.0,
+    "global_basis_float64_values": 2621440
+  },
+  "q_global_basis_float64_values": 524288,
+  "mean_inference_seconds_by_method": {
+    "q_pca_1e-07": 9.011738215456717,
+    "q_pca_1e-09": 9.057238571695052,
+    "speed_nonlinear": 10.314329542859923
+  },
+  "scope": "One-change posthoc DEV POC on already-seen16 taper10 systems: learn a 255D SPEED-field PCA basis from the SAME 512 taper5 + 512 taper10 medium labels used for q-PCA comparator; apply exact physical nonlinear speed->slowness-squared map and 5+5 GN from identical lowband context. No known cosine basis supplied to speed model; source/background/PDE remain known. q-PCA comparator gets its stronger of two PRESET init precisions. Extra target-family training labels mean this is not OOD deployment. Only if all dev gates pass, freeze code/hyperparameters and generate new taper7.5 systems under separate prereg protocol."
+}

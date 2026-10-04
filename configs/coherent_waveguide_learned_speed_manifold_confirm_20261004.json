@@ -1,0 +1,21 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "dev_config": "configs/coherent_waveguide_learned_speed_manifold_dev_20261004.json",
+  "frozen_priors": "artifacts/coherent_waveguide_learned_speed_manifold_dev_20261004/learned_priors.npz",
+  "frozen_priors_sha256": "8f41a634f781c9ba56715595b0c1e0ecf9d305d8000b30609d4479620c3559e1",
+  "systems": [20268000, 20268001, 20268002, 20268003, 20268004, 20268005, 20268006, 20268007, 20268008, 20268009, 20268010, 20268011, 20268012, 20268013, 20268014, 20268015],
+  "audit_systems": [20268100, 20268101],
+  "test_taper_scale": 7.5,
+  "terms": 16,
+  "perturbation_rms_m_s": 15.0,
+  "q_prior_initial_precisions": [1e-9, 1e-7],
+  "gate_800hz_both_sources": {
+    "speed_mean_raw_at_most": 0.02,
+    "speed_mean_phase_rad_at_most": 0.02,
+    "speed_raw_improvement_vs_best_matched_q_pca_at_least": 0.5,
+    "systems_raw_at_most_0p05_at_least": 16,
+    "numerical_audit_max_raw_below": 0.001
+  },
+  "output_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004",
+  "scope": "Prospective independent-system interpolation confirmation conditional on PREDECLARED positive dev gates: 16 never-used taper7.5 16x16 correlated-cosine speed media with RMS15, same one-way waveguide; frozen speed-PCA and q-PCA priors trained from same 1024 taper5+taper10 medium labels. Source/background/PDE remain known, lowband clean dense 60/100/140Hz context, no target-frequency observations, no test medium labels in deployable inference. Taper7.5 is statistical interpolation within the SAME synthetic family, NOT OOD extrapolation or a second physics domain. Classical exact-family baseline has extra synthesis knowledge and is not a matched-information competitor. Gate and implementation committed before generating any new truth."
+}
