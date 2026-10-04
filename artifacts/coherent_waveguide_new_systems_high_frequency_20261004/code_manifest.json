@@ -1,0 +1,194 @@
+[
+  {
+    "system": 20263400,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263400_codes.npz",
+    "sha256": "55243d2ec00575cd4a4ba1337140340971c5a97c94ea548413f658dfdf4b54a6",
+    "context_inference_seconds": 12.165110348723829
+  },
+  {
+    "system": 20263401,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263401_codes.npz",
+    "sha256": "78cb16d33544f298baf322ede923a7339f76925833fc917e76f19f6219f951c2",
+    "context_inference_seconds": 12.319190304726362
+  },
+  {
+    "system": 20263402,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263402_codes.npz",
+    "sha256": "12350d631d5da6d59140a7607aa3c09bfee999beea70f518babaa6eb83f5ca1c",
+    "context_inference_seconds": 11.891330279409885
+  },
+  {
+    "system": 20263403,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263403_codes.npz",
+    "sha256": "77f69459bb718af3a0373cff17ec2a263dd8682807b89fb3a388b4928434e77b",
+    "context_inference_seconds": 12.222171763889492
+  },
+  {
+    "system": 20263404,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263404_codes.npz",
+    "sha256": "c84db9898716323df97a89d020e565fd41c977bcdf6610d2c7cb8a233d37ce08",
+    "context_inference_seconds": 12.06622286979109
+  },
+  {
+    "system": 20263405,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263405_codes.npz",
+    "sha256": "2f37d7906552617c720c238e2f131cd0d977aa134fe5328349b5927502650b6f",
+    "context_inference_seconds": 12.19693951215595
+  },
+  {
+    "system": 20263406,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263406_codes.npz",
+    "sha256": "c15162df26192d0c8f6d104e3d7bf11779209987fea39c828370ce70dc524c5e",
+    "context_inference_seconds": 12.678190996870399
+  },
+  {
+    "system": 20263407,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263407_codes.npz",
+    "sha256": "7f1fbd71888c2fb8522e884780c6721201c246a0983d0baa5c949a84e3916d98",
+    "context_inference_seconds": 12.19073155336082
+  },
+  {
+    "system": 20263408,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263408_codes.npz",
+    "sha256": "2a8d22ed0970c68284f54dc55800f4b1560bb23d360caf687cf47bfb957c0c0e",
+    "context_inference_seconds": 12.154198721051216
+  },
+  {
+    "system": 20263409,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263409_codes.npz",
+    "sha256": "5e570237cca136bef7328c781b9d12c57016f5e9231dfaa0e4658c55a13fd6e3",
+    "context_inference_seconds": 12.473204186186194
+  },
+  {
+    "system": 20263410,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263410_codes.npz",
+    "sha256": "ae080749684c6ce4b49a6b9bec98ec65860481124c0c7cad1d648270d27a53af",
+    "context_inference_seconds": 12.258776232600212
+  },
+  {
+    "system": 20263411,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263411_codes.npz",
+    "sha256": "57a0e7577c58aa522ba6028a0cb4c04e7d965fd6bc90684455aded871dbd0c92",
+    "context_inference_seconds": 12.007873230613768
+  },
+  {
+    "system": 20263412,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263412_codes.npz",
+    "sha256": "67aaeb66b4d1a3f6a1786a305e823461dc97a4b3e600fdea63bee260b2db7acb",
+    "context_inference_seconds": 12.185384674929082
+  },
+  {
+    "system": 20263413,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263413_codes.npz",
+    "sha256": "d408e49093c42d2a82f4f6b0ff6eae73def5302ea833b389b0c6122c8b8c7b09",
+    "context_inference_seconds": 12.20857415907085
+  },
+  {
+    "system": 20263414,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263414_codes.npz",
+    "sha256": "46c60ab42c1ac7471b7a6209ed9087e7f052555b4e338a915bf05d04f8693d4c",
+    "context_inference_seconds": 12.37955538649112
+  },
+  {
+    "system": 20263415,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263415_codes.npz",
+    "sha256": "8a3aa6be454e15e9837695a0d8382a1c0c596459a8d81bf068b5cc72676a6881",
+    "context_inference_seconds": 12.396869008429348
+  },
+  {
+    "system": 20263416,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263416_codes.npz",
+    "sha256": "cb2f5d0d1d70690e91093c957384d400030a888ebb38dad4b06784478183bf91",
+    "context_inference_seconds": 12.284740252420306
+  },
+  {
+    "system": 20263417,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263417_codes.npz",
+    "sha256": "812cf21676f06ddedb2f30bcf8c0ac231ab4518b10fd795b7e18beeba1beb3a6",
+    "context_inference_seconds": 12.2581060603261
+  },
+  {
+    "system": 20263418,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263418_codes.npz",
+    "sha256": "01c06d8d513cfdfc15236c462b3cece49497bf0496dde3250f8f5ea262ed4b26",
+    "context_inference_seconds": 12.444600475020707
+  },
+  {
+    "system": 20263419,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263419_codes.npz",
+    "sha256": "88610745a9bdfc65658a7760e9cc782965dab0ad5ccaf601d5d393c348736db5",
+    "context_inference_seconds": 12.135636320337653
+  },
+  {
+    "system": 20263420,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263420_codes.npz",
+    "sha256": "378dcc414183982cfcc4f46876c599369871c806bc63d189cc22ed85fb0a6ffc",
+    "context_inference_seconds": 12.17182913608849
+  },
+  {
+    "system": 20263421,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263421_codes.npz",
+    "sha256": "48a8efc516235c745beb0ef83216d99bed3485472a8fb68ca8f952b354f1f84c",
+    "context_inference_seconds": 12.272291778586805
+  },
+  {
+    "system": 20263422,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263422_codes.npz",
+    "sha256": "9deb2169df19a375312c6e9515eba68df4fb1c2c53af6a4078bbe1103e2a19a1",
+    "context_inference_seconds": 12.10981251951307
+  },
+  {
+    "system": 20263423,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263423_codes.npz",
+    "sha256": "dc36a43fbfa24afb1d7a278b8e92fb82bce9f24bb1d04ffb4ee59c320a81bdd6",
+    "context_inference_seconds": 12.1973534533754
+  },
+  {
+    "system": 20263424,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263424_codes.npz",
+    "sha256": "9419523d4e54d844fed749824b68bc442d3fb6ef7901d494f3415ed444e822b1",
+    "context_inference_seconds": 12.057364128530025
+  },
+  {
+    "system": 20263425,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263425_codes.npz",
+    "sha256": "9f75e749bce7321dcbffdcad91d32949db886f3e0e8939a1a2d878ff5ae865a8",
+    "context_inference_seconds": 12.19701587036252
+  },
+  {
+    "system": 20263426,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263426_codes.npz",
+    "sha256": "80328cab7c37707b79623d8795153aac04ac23c0e4c2034b008444a7fc887281",
+    "context_inference_seconds": 12.170664871111512
+  },
+  {
+    "system": 20263427,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263427_codes.npz",
+    "sha256": "3eb2246be9f34219a12fed8decf68c9f9ceec6c9a91d34cf511b2fba3f875f4d",
+    "context_inference_seconds": 12.046415502205491
+  },
+  {
+    "system": 20263428,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263428_codes.npz",
+    "sha256": "0244b7de2ee2a5e8063204a664fbb2b749d3421eabb94ceb60ee2013618efa34",
+    "context_inference_seconds": 12.177864451892674
+  },
+  {
+    "system": 20263429,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263429_codes.npz",
+    "sha256": "dfff36767fc02ffdfd5aec12ebbbb31a369fb6a6de32b30211d63fdbc6083e96",
+    "context_inference_seconds": 12.295066459104419
+  },
+  {
+    "system": 20263430,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263430_codes.npz",
+    "sha256": "1431c4d3883e8e1e0decef5a9c0d16a2f0f04837d3f8d50e7572c8b3d8b98fbf",
+    "context_inference_seconds": 12.40096483193338
+  },
+  {
+    "system": 20263431,
+    "path": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/system20263431_codes.npz",
+    "sha256": "0babf6d442b21dd80f8bcc061d29078243a141b7314afdf1fb7abdf543940f25",
+    "context_inference_seconds": 12.168054648675025
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "systems": [20261332,20261333,20261334,20261335,20261336,20261337,20261338,20261339],
+  "frequencies": [400,800],
+  "source_variants": ["original","narrow2m"],
+  "prior32": "artifacts/coherent_waveguide_depth_bandwidth_20261004",
+  "query_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frequency_scaling_20261004",
+  "decoder_cells": 256,
+  "decoder_modes": 128,
+  "quadrature_nodes": 384,
+  "derivative_step_m": 0.02,
+  "roi_min_range_m": 50,
+  "eigh_device": "cuda",
+  "eigh_batch": 64,
+  "m1_entry_min_relative_improvement": 0.30,
+  "m1_entry_min_system_wins": 6,
+  "scope": "M0 extra-information true-boundary-derivative oracle on original8 development; not deployed, not neural, not new independent test."
+}

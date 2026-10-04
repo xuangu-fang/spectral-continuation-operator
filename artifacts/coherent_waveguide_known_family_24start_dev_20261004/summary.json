@@ -1,0 +1,66 @@
+[
+  {
+    "method": "initial",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0006836606434711277,
+    "energy_weighted_phase_rmse_rad": 0.0005759101618583332
+  },
+  {
+    "method": "initial",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.0006491835692698795,
+    "energy_weighted_phase_rmse_rad": 0.0005276912325390434
+  },
+  {
+    "method": "initial",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0013589740193137374,
+    "energy_weighted_phase_rmse_rad": 0.001202381993262244
+  },
+  {
+    "method": "initial",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.00130205479225308,
+    "energy_weighted_phase_rmse_rad": 0.0010784300457698918
+  },
+  {
+    "method": "gn5",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.00012631785250233481,
+    "energy_weighted_phase_rmse_rad": 0.00011791539588385057
+  },
+  {
+    "method": "gn5",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.00011827176159969776,
+    "energy_weighted_phase_rmse_rad": 0.00011042994425476137
+  },
+  {
+    "method": "gn5",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0002655370191792209,
+    "energy_weighted_phase_rmse_rad": 0.00025044723945498264
+  },
+  {
+    "method": "gn5",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.0002538430254426326,
+    "energy_weighted_phase_rmse_rad": 0.00023573909938679025
+  }
+]

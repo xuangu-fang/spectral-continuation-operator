@@ -1,0 +1,85 @@
+{
+  "source": "artifacts/coherent_waveguide_new_systems_high_frequency_20261004/results.json",
+  "selection": "all frozen32 independent IID systems",
+  "bootstrap_unit": "physical system, same index for both methods",
+  "bootstrap_repetitions": 10000,
+  "bootstrap_seed": 20261004,
+  "records": [
+    {
+      "frequency": 400,
+      "source": "original",
+      "systems": 32,
+      "prior16_raw": 0.0059660002676632275,
+      "prior32_raw": 0.001767303815401885,
+      "true_medium32_oracle_raw": 0.0001899849286296082,
+      "relative_improvement": 0.7037707448688892,
+      "paired_bootstrap_95": [
+        0.5852981595911125,
+        0.8111453812576754
+      ],
+      "win_fraction": 0.96875,
+      "max_prior32_system_raw": 0.010237114513725835
+    },
+    {
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 32,
+      "prior16_raw": 0.006084052520389088,
+      "prior32_raw": 0.0020716841619585835,
+      "true_medium32_oracle_raw": 0.0007221631523516935,
+      "relative_improvement": 0.6594894348765261,
+      "paired_bootstrap_95": [
+        0.5521215150697244,
+        0.7582593934641094
+      ],
+      "win_fraction": 0.96875,
+      "max_prior32_system_raw": 0.011570992991075151
+    },
+    {
+      "frequency": 800,
+      "source": "original",
+      "systems": 32,
+      "prior16_raw": 0.01195762634661608,
+      "prior32_raw": 0.00496675897262121,
+      "true_medium32_oracle_raw": 0.0025402416274129345,
+      "relative_improvement": 0.5846367139556283,
+      "paired_bootstrap_95": [
+        0.4647704952518238,
+        0.6801743145128921
+      ],
+      "win_fraction": 0.96875,
+      "max_prior32_system_raw": 0.020178322596137135
+    },
+    {
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 32,
+      "prior16_raw": 0.012179560658343755,
+      "prior32_raw": 0.005428812063542335,
+      "true_medium32_oracle_raw": 0.0027349372618980716,
+      "relative_improvement": 0.5542686459857431,
+      "paired_bootstrap_95": [
+        0.43527809025463954,
+        0.6526782758117393
+      ],
+      "win_fraction": 0.96875,
+      "max_prior32_system_raw": 0.023135850531017174
+    }
+  ],
+  "illustration": {
+    "system": 20263400,
+    "frequency": 800,
+    "selection": "first frozen system",
+    "display_only_low_amplitude_mask": [
+      {
+        "method": "16 terms",
+        "low_amplitude_display_fraction": 1.5889409708429333e-05
+      },
+      {
+        "method": "32 terms",
+        "low_amplitude_display_fraction": 1.5889409708429333e-05
+      }
+    ],
+    "primary_metric": "full >=50 m ROI, no amplitude mask or phase alignment"
+  }
+}

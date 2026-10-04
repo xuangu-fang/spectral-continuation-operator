@@ -1,0 +1,50 @@
+[
+  {
+    "system": 20261336,
+    "frequency": 400,
+    "source": "original",
+    "modal_parseval_raw": 8.937691745813936e-05,
+    "complex_rel_l2": 8.938058420286035e-05,
+    "amplitude_rel_l2": 2.3180457942412762e-05,
+    "energy_weighted_phase_rmse_rad": 8.632240986629451e-05,
+    "energy_weighted_phase_cos": 0.9999999962742208,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999961596988
+  },
+  {
+    "system": 20261336,
+    "frequency": 400,
+    "source": "narrow2m",
+    "modal_parseval_raw": 9.247653360944241e-05,
+    "complex_rel_l2": 9.24837461853549e-05,
+    "amplitude_rel_l2": 2.5675657150247634e-05,
+    "energy_weighted_phase_rmse_rad": 8.884824979736284e-05,
+    "energy_weighted_phase_cos": 0.9999999960529941,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999957242631
+  },
+  {
+    "system": 20261336,
+    "frequency": 800,
+    "source": "original",
+    "modal_parseval_raw": 0.00017144993762485683,
+    "complex_rel_l2": 0.00017145934849419823,
+    "amplitude_rel_l2": 3.6054291034918174e-05,
+    "energy_weighted_phase_rmse_rad": 0.00016762572947961706,
+    "energy_weighted_phase_cos": 0.9999999859508076,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999859699906
+  },
+  {
+    "system": 20261336,
+    "frequency": 800,
+    "source": "narrow2m",
+    "modal_parseval_raw": 0.00017420346557628363,
+    "complex_rel_l2": 0.00017421539934221904,
+    "amplitude_rel_l2": 4.5673998756237166e-05,
+    "energy_weighted_phase_rmse_rad": 0.00016812176462908222,
+    "energy_weighted_phase_cos": 0.9999999858675364,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999848338786
+  }
+]

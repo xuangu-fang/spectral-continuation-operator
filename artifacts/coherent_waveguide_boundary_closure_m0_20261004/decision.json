@@ -1,0 +1,14 @@
+[
+  {
+    "source": "original",
+    "relative_improvement": 0.145447202715835,
+    "systems_improved": 7,
+    "go": false
+  },
+  {
+    "source": "narrow2m",
+    "relative_improvement": 0.16354838573715735,
+    "systems_improved": 7,
+    "go": false
+  }
+]

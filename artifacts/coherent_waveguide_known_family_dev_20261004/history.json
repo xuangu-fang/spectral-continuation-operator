@@ -1,0 +1,322 @@
+[
+  {
+    "system": 20261332,
+    "initialization": {
+      "stage": "fit_to_code",
+      "training_system": 20261733,
+      "context_error": 3.799968755932737e-08
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_before": 3.799968755932737e-08,
+        "context_after": 1.5461726685701147e-09,
+        "alpha": 1.0
+      },
+      {
+        "step": 2,
+        "context_before": 1.5461726685701147e-09,
+        "context_after": 1.4816033858793594e-09,
+        "alpha": 1.0
+      },
+      {
+        "step": 3,
+        "context_before": 1.4816033858793594e-09,
+        "context_after": 1.4816033789392218e-09,
+        "alpha": 1.0
+      },
+      {
+        "step": 4,
+        "context_before": 1.4816033789392218e-09,
+        "context_after": 1.481603378708939e-09,
+        "alpha": 1.0
+      },
+      {
+        "step": 5,
+        "context_before": 1.481603378708939e-09,
+        "context_after": 1.481603378708939e-09,
+        "alpha": 0.0
+      }
+    ]
+  },
+  {
+    "system": 20261333,
+    "initialization": {
+      "stage": "fit_to_code",
+      "training_system": 20261977,
+      "context_error": 5.843482053090591e-06
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_before": 5.843482053090591e-06,
+        "context_after": 5.843482053090591e-06,
+        "alpha": 0.0
+      },
+      {
+        "step": 2,
+        "context_before": 5.843482053090591e-06,
+        "context_after": 5.843482053090591e-06,
+        "alpha": 0.0
+      },
+      {
+        "step": 3,
+        "context_before": 5.843482053090591e-06,
+        "context_after": 5.843482053090591e-06,
+        "alpha": 0.0
+      },
+      {
+        "step": 4,
+        "context_before": 5.843482053090591e-06,
+        "context_after": 5.843482053090591e-06,
+        "alpha": 0.0
+      },
+      {
+        "step": 5,
+        "context_before": 5.843482053090591e-06,
+        "context_after": 5.843482053090591e-06,
+        "alpha": 0.0
+      }
+    ]
+  },
+  {
+    "system": 20261334,
+    "initialization": {
+      "stage": "fit_to_code",
+      "training_system": 20261864,
+      "context_error": 1.3123771271976407e-08
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_before": 1.3123771271976407e-08,
+        "context_after": 1.854593706563334e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 2,
+        "context_before": 1.854593706563334e-10,
+        "context_after": 1.841530089464632e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 3,
+        "context_before": 1.841530089464632e-10,
+        "context_after": 1.8415300734387032e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 4,
+        "context_before": 1.8415300734387032e-10,
+        "context_after": 1.8415300731261333e-10,
+        "alpha": 0.5
+      },
+      {
+        "step": 5,
+        "context_before": 1.8415300731261333e-10,
+        "context_after": 1.841530072779351e-10,
+        "alpha": 0.25
+      }
+    ]
+  },
+  {
+    "system": 20261335,
+    "initialization": {
+      "stage": "fit_to_code",
+      "training_system": 20261751,
+      "context_error": 9.72316737126199e-09
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_before": 9.72316737126199e-09,
+        "context_after": 9.643750992002684e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 2,
+        "context_before": 9.643750992002684e-10,
+        "context_after": 9.64360344242486e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 3,
+        "context_before": 9.64360344242486e-10,
+        "context_after": 9.643603440666255e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 4,
+        "context_before": 9.643603440666255e-10,
+        "context_after": 9.643603440149368e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 5,
+        "context_before": 9.643603440149368e-10,
+        "context_after": 9.64360343805419e-10,
+        "alpha": 1.0
+      }
+    ]
+  },
+  {
+    "system": 20261336,
+    "initialization": {
+      "stage": "fit_to_code",
+      "training_system": 20261644,
+      "context_error": 7.67026390135464e-09
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_before": 7.67026390135464e-09,
+        "context_after": 7.342712164662883e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 2,
+        "context_before": 7.342712164662883e-10,
+        "context_after": 7.329600769896947e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 3,
+        "context_before": 7.329600769896947e-10,
+        "context_after": 7.329600768633784e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 4,
+        "context_before": 7.329600768633784e-10,
+        "context_after": 7.329600768341858e-10,
+        "alpha": 0.5
+      },
+      {
+        "step": 5,
+        "context_before": 7.329600768341858e-10,
+        "context_after": 7.329600768143651e-10,
+        "alpha": 0.25
+      }
+    ]
+  },
+  {
+    "system": 20261337,
+    "initialization": {
+      "stage": "fit_to_code",
+      "training_system": 20261310,
+      "context_error": 2.5430577087908225e-08
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_before": 2.5430577087908225e-08,
+        "context_after": 9.497481523079799e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 2,
+        "context_before": 9.497481523079799e-10,
+        "context_after": 9.497095893992953e-10,
+        "alpha": 1.0
+      },
+      {
+        "step": 3,
+        "context_before": 9.497095893992953e-10,
+        "context_after": 9.497095893388857e-10,
+        "alpha": 0.25
+      },
+      {
+        "step": 4,
+        "context_before": 9.497095893388857e-10,
+        "context_after": 9.497095893388857e-10,
+        "alpha": 0.0
+      },
+      {
+        "step": 5,
+        "context_before": 9.497095893388857e-10,
+        "context_after": 9.497095893388857e-10,
+        "alpha": 0.0
+      }
+    ]
+  },
+  {
+    "system": 20261338,
+    "initialization": {
+      "stage": "fit_to_code",
+      "training_system": 20261588,
+      "context_error": 4.033508804223706e-06
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_before": 4.033508804223706e-06,
+        "context_after": 3.7596847245381703e-06,
+        "alpha": 0.125
+      },
+      {
+        "step": 2,
+        "context_before": 3.7596847245381703e-06,
+        "context_after": 3.6503768723799906e-06,
+        "alpha": 0.0625
+      },
+      {
+        "step": 3,
+        "context_before": 3.6503768723799906e-06,
+        "context_after": 3.5260735812065966e-06,
+        "alpha": 0.0625
+      },
+      {
+        "step": 4,
+        "context_before": 3.5260735812065966e-06,
+        "context_after": 3.3728230366375213e-06,
+        "alpha": 0.25
+      },
+      {
+        "step": 5,
+        "context_before": 3.3728230366375213e-06,
+        "context_after": 2.462851740336351e-06,
+        "alpha": 0.5
+      }
+    ]
+  },
+  {
+    "system": 20261339,
+    "initialization": {
+      "stage": "fit_to_code",
+      "training_system": 20261889,
+      "context_error": 1.2688231825758177e-07
+    },
+    "steps": [
+      {
+        "step": 1,
+        "context_before": 1.2688231825758177e-07,
+        "context_after": 1.590655143406267e-09,
+        "alpha": 1.0
+      },
+      {
+        "step": 2,
+        "context_before": 1.590655143406267e-09,
+        "context_after": 1.5900275538404765e-09,
+        "alpha": 1.0
+      },
+      {
+        "step": 3,
+        "context_before": 1.5900275538404765e-09,
+        "context_after": 1.5900275538404765e-09,
+        "alpha": 0.0
+      },
+      {
+        "step": 4,
+        "context_before": 1.5900275538404765e-09,
+        "context_after": 1.5900275538404765e-09,
+        "alpha": 0.0
+      },
+      {
+        "step": 5,
+        "context_before": 1.5900275538404765e-09,
+        "context_after": 1.5900275538404765e-09,
+        "alpha": 0.0
+      }
+    ]
+  }
+]

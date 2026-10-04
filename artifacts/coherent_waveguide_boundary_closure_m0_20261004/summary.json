@@ -1,0 +1,122 @@
+[
+  {
+    "method": "zero_high_terms",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0011846895355018855,
+    "energy_weighted_phase_rmse_rad": 0.0008639575669370344,
+    "amplitude_rel_l2": 0.0008095366206797211,
+    "modal_parseval_raw": 0.001184625702080666
+  },
+  {
+    "method": "zero_high_terms",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.0015524168005300574,
+    "energy_weighted_phase_rmse_rad": 0.0011696608596120962,
+    "amplitude_rel_l2": 0.0010110361739032354,
+    "modal_parseval_raw": 0.0015524363770964555
+  },
+  {
+    "method": "zero_high_terms",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.003507716930142895,
+    "energy_weighted_phase_rmse_rad": 0.002890966861396997,
+    "amplitude_rel_l2": 0.001969978679761759,
+    "modal_parseval_raw": 0.0035076137355645187
+  },
+  {
+    "method": "zero_high_terms",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.0035564301116823268,
+    "energy_weighted_phase_rmse_rad": 0.002713223606091805,
+    "amplitude_rel_l2": 0.00228268266890886,
+    "modal_parseval_raw": 0.003556496332748793
+  },
+  {
+    "method": "true_boundary_derivative_oracle",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0011436797402663865,
+    "energy_weighted_phase_rmse_rad": 0.0008331630884854871,
+    "amplitude_rel_l2": 0.0007812424885379888,
+    "modal_parseval_raw": 0.0011436624608904822
+  },
+  {
+    "method": "true_boundary_derivative_oracle",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.0013279064123110427,
+    "energy_weighted_phase_rmse_rad": 0.0009701552206104405,
+    "amplitude_rel_l2": 0.0009053491925826781,
+    "modal_parseval_raw": 0.0013279363301990088
+  },
+  {
+    "method": "true_boundary_derivative_oracle",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.002997529314734635,
+    "energy_weighted_phase_rmse_rad": 0.002377708399480468,
+    "amplitude_rel_l2": 0.0017989118040897434,
+    "modal_parseval_raw": 0.0029975059514981695
+  },
+  {
+    "method": "true_boundary_derivative_oracle",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.002974781707929664,
+    "energy_weighted_phase_rmse_rad": 0.002216324533132737,
+    "amplitude_rel_l2": 0.001973928105703878,
+    "modal_parseval_raw": 0.002974861672555562
+  },
+  {
+    "method": "true_medium64_oracle",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.00013404943461615745,
+    "energy_weighted_phase_rmse_rad": 0.00012166544555660663,
+    "amplitude_rel_l2": 5.491014922995436e-05,
+    "modal_parseval_raw": 0.00013403386083155056
+  },
+  {
+    "method": "true_medium64_oracle",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.0001470737448381599,
+    "energy_weighted_phase_rmse_rad": 0.00012770273119817394,
+    "amplitude_rel_l2": 6.987167661932488e-05,
+    "modal_parseval_raw": 0.00014706510137330042
+  },
+  {
+    "method": "true_medium64_oracle",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.00031130804996280483,
+    "energy_weighted_phase_rmse_rad": 0.00028798061427891145,
+    "amplitude_rel_l2": 0.00011371699129898868,
+    "modal_parseval_raw": 0.00031125514578889124
+  },
+  {
+    "method": "true_medium64_oracle",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.00037475466925826256,
+    "energy_weighted_phase_rmse_rad": 0.0003344117642891644,
+    "amplitude_rel_l2": 0.0001650688472261357,
+    "modal_parseval_raw": 0.0003747209229914006
+  }
+]

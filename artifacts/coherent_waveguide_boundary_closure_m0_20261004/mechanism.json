@@ -1,0 +1,66 @@
+[
+  {
+    "system": 20261332,
+    "derivative_step_rel": 4.222093566993039e-07,
+    "true_tail_norm": 0.0004361286726893776,
+    "boundary_tail_norm": 0.000434899566339516,
+    "tail_relative_coefficient_error": 0.0029856461187152436,
+    "tail_rms_absolute": 1.4386594357989664e-08
+  },
+  {
+    "system": 20261333,
+    "derivative_step_rel": 1.390697834901184e-06,
+    "true_tail_norm": 0.00027041411700641147,
+    "boundary_tail_norm": 0.00026814380204624147,
+    "tail_relative_coefficient_error": 0.009799671420886554,
+    "tail_rms_absolute": 2.927830311420211e-08
+  },
+  {
+    "system": 20261334,
+    "derivative_step_rel": 1.4184023119005503e-07,
+    "true_tail_norm": 0.0001677456173751416,
+    "boundary_tail_norm": 0.0001677702759970724,
+    "tail_relative_coefficient_error": 0.001017570503358956,
+    "tail_rms_absolute": 1.885908943163938e-09
+  },
+  {
+    "system": 20261335,
+    "derivative_step_rel": 3.024166888938e-07,
+    "true_tail_norm": 0.00026111425042245676,
+    "boundary_tail_norm": 0.0002610017247074061,
+    "tail_relative_coefficient_error": 0.002218645874781312,
+    "tail_rms_absolute": 6.400642797611231e-09
+  },
+  {
+    "system": 20261336,
+    "derivative_step_rel": 9.174027965384669e-07,
+    "true_tail_norm": 5.850532767808078e-05,
+    "boundary_tail_norm": 5.851611196468868e-05,
+    "tail_relative_coefficient_error": 0.006183579409225133,
+    "tail_rms_absolute": 3.9970574148235e-09
+  },
+  {
+    "system": 20261337,
+    "derivative_step_rel": 6.022106822602046e-07,
+    "true_tail_norm": 0.00017611069615988535,
+    "boundary_tail_norm": 0.00017680071241030877,
+    "tail_relative_coefficient_error": 0.004483724818916099,
+    "tail_rms_absolute": 8.724282353124176e-09
+  },
+  {
+    "system": 20261338,
+    "derivative_step_rel": 1.8759148778238675e-07,
+    "true_tail_norm": 0.00016837925547353888,
+    "boundary_tail_norm": 0.00016855544426826346,
+    "tail_relative_coefficient_error": 0.0014208656320358498,
+    "tail_rms_absolute": 2.6433010147778286e-09
+  },
+  {
+    "system": 20261339,
+    "derivative_step_rel": 6.426693693972334e-07,
+    "true_tail_norm": 0.0003950635378477626,
+    "boundary_tail_norm": 0.0003949658198190039,
+    "tail_relative_coefficient_error": 0.004558029492572364,
+    "tail_rms_absolute": 1.9895236574193027e-08
+  }
+]

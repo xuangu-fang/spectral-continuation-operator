@@ -1,0 +1,66 @@
+[
+  {
+    "method": "initial",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0025603667294478195,
+    "energy_weighted_phase_rmse_rad": 0.0019644318711122817
+  },
+  {
+    "method": "initial",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.002561348572062044,
+    "energy_weighted_phase_rmse_rad": 0.0020342763413044333
+  },
+  {
+    "method": "initial",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.005356984335355224,
+    "energy_weighted_phase_rmse_rad": 0.004521294920983982
+  },
+  {
+    "method": "initial",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.005574844726137484,
+    "energy_weighted_phase_rmse_rad": 0.0043226355257571375
+  },
+  {
+    "method": "gn5",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0025248296331998386,
+    "energy_weighted_phase_rmse_rad": 0.002015847045644443
+  },
+  {
+    "method": "gn5",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.00204760178140961,
+    "energy_weighted_phase_rmse_rad": 0.0016221470870909668
+  },
+  {
+    "method": "gn5",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.005339730694404695,
+    "energy_weighted_phase_rmse_rad": 0.0045890967598817105
+  },
+  {
+    "method": "gn5",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.004960077623687285,
+    "energy_weighted_phase_rmse_rad": 0.003961542275170654
+  }
+]

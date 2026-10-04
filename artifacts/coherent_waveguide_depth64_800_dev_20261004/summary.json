@@ -1,0 +1,134 @@
+[
+  {
+    "method": "prior64_inferred",
+    "frequency": 140,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 9.174370912013604e-05,
+    "energy_weighted_phase_rmse_rad": 7.499111626674307e-05,
+    "amplitude_rel_l2": 5.0469472053689175e-05,
+    "modal_parseval_raw": 9.174075694318162e-05,
+    "query_only_seconds": 2.3356783451745287
+  },
+  {
+    "method": "prior64_inferred",
+    "frequency": 140,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.00034786571015028167,
+    "energy_weighted_phase_rmse_rad": 0.00026649637373570343,
+    "amplitude_rel_l2": 0.0002232217025329114,
+    "modal_parseval_raw": 0.00034785933576131356,
+    "query_only_seconds": 2.3356783451745287
+  },
+  {
+    "method": "prior64_capacity_oracle",
+    "frequency": 140,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0002669017316626467,
+    "energy_weighted_phase_rmse_rad": 0.0001975404905897279,
+    "amplitude_rel_l2": 0.0001790103807917531,
+    "modal_parseval_raw": 0.0002669023701855622,
+    "query_only_seconds": 2.294665470835753
+  },
+  {
+    "method": "prior64_capacity_oracle",
+    "frequency": 140,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.00028496291622039153,
+    "energy_weighted_phase_rmse_rad": 0.0002209698834750543,
+    "amplitude_rel_l2": 0.00017930826296284772,
+    "modal_parseval_raw": 0.00028496124059529393,
+    "query_only_seconds": 2.294665470835753
+  },
+  {
+    "method": "prior64_inferred",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0011116040850545033,
+    "energy_weighted_phase_rmse_rad": 0.0008044107371130261,
+    "amplitude_rel_l2": 0.0007660797599439045,
+    "modal_parseval_raw": 0.0011115873239759821,
+    "query_only_seconds": 2.2699913843534887
+  },
+  {
+    "method": "prior64_inferred",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.001274079256274335,
+    "energy_weighted_phase_rmse_rad": 0.0009280676344934895,
+    "amplitude_rel_l2": 0.0008718879693204154,
+    "modal_parseval_raw": 0.001274113723411574,
+    "query_only_seconds": 2.2699913843534887
+  },
+  {
+    "method": "prior64_capacity_oracle",
+    "frequency": 400,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0009054455943121345,
+    "energy_weighted_phase_rmse_rad": 0.0006538749688711328,
+    "amplitude_rel_l2": 0.0006258894689366091,
+    "modal_parseval_raw": 0.0009054262454810669,
+    "query_only_seconds": 2.2933672023937106
+  },
+  {
+    "method": "prior64_capacity_oracle",
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.0009243236969754566,
+    "energy_weighted_phase_rmse_rad": 0.0006936068752173615,
+    "amplitude_rel_l2": 0.0006096961551822711,
+    "modal_parseval_raw": 0.0009243370386684546,
+    "query_only_seconds": 2.2933672023937106
+  },
+  {
+    "method": "prior64_inferred",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.002902213720336649,
+    "energy_weighted_phase_rmse_rad": 0.0022953307540080604,
+    "amplitude_rel_l2": 0.0017470042726964946,
+    "modal_parseval_raw": 0.002902190222812351,
+    "query_only_seconds": 2.2859069040277973
+  },
+  {
+    "method": "prior64_inferred",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.00284074390971026,
+    "energy_weighted_phase_rmse_rad": 0.0021076525660383505,
+    "amplitude_rel_l2": 0.0018927994052273913,
+    "modal_parseval_raw": 0.0028408213511283975,
+    "query_only_seconds": 2.2859069040277973
+  },
+  {
+    "method": "prior64_capacity_oracle",
+    "frequency": 800,
+    "source": "original",
+    "systems": 8,
+    "complex_rel_l2": 0.0018140415997156152,
+    "energy_weighted_phase_rmse_rad": 0.0013302177200795948,
+    "amplitude_rel_l2": 0.0012281358191630221,
+    "modal_parseval_raw": 0.0018140029606001917,
+    "query_only_seconds": 2.323509457986802
+  },
+  {
+    "method": "prior64_capacity_oracle",
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 8,
+    "complex_rel_l2": 0.0019013186117616864,
+    "energy_weighted_phase_rmse_rad": 0.0014248421153761743,
+    "amplitude_rel_l2": 0.0012534545237518852,
+    "modal_parseval_raw": 0.0019013463424926158,
+    "query_only_seconds": 2.323509457986802
+  }
+]
