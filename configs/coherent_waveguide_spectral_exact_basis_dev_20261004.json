@@ -1,0 +1,16 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_medium_20261004/config.json",
+  "source_results": "artifacts/coherent_waveguide_spectral_medium_20261004/results.json",
+  "source_codes": "artifacts/coherent_waveguide_spectral_medium_20261004",
+  "systems": [20264600, 20264601, 20264602, 20264603, 20264604, 20264605, 20264606, 20264607],
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "depth_terms": 32,
+  "range_cosine_terms": 16,
+  "depth_cosine_terms": 16,
+  "development_gate": {
+    "both_sources_800hz_raw_at_most": 0.05,
+    "both_sources_ratio_to_trained_pca256_at_most": 2.0
+  },
+  "scope": "POSTHOC extra-exact-generator-family 256D analytic cosine basis, no training medium labels; old8 development only; stronger structural prior than generic PCA and not a matched-information leaderboard"
+}
