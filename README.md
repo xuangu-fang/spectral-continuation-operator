@@ -16,6 +16,12 @@
 | 数据怎么生成、哪些能复用 | [数据来源](docs/COHERENT_DATA_PROVENANCE_ZH.md) |
 | Agent接手、避免重复实验 | [AGENTS](AGENTS.md)、[当前状态](docs/CURRENT_STATUS_ZH.md)、[实验账本](docs/EXPERIMENT_LEDGER_ZH.md) |
 
+**最新可复核结果（2026-10-04，优先读）：** 只用60/100/140Hz复场识别环境后查询800Hz，在新16个未见taper7.5合成波导中，从同1024份介质标签学习**声速**基并经精确`c^{-2}`映射，宽/新窄源raw为**0.00538/0.00505**、相位0.00420/0.00391rad；同标签、同255代码的慢度平方PCA为0.08068/0.08197。16/16系统raw≤0.05，事前冻结门槛全部通过。[协议与解释](docs/LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md) · [逐环境图](reports/figures/spectral_speed_manifold_confirm.png) · [相位图](reports/figures/spectral_speed_manifold_phase_example.png)。这证明**同一已知合成介质族的统计插值中，学习变量和非线性物理组合影响相位保真**；它仍依赖已知一向PDE、密集干净低频场和几乎完整的255介质自由度，**不是第二物理域或顶会通用AI方法已成立**。从数据学得16条深度基可把共享声速基近无损压到慢度平方PCA约半数存储，但不降低目前在线推断时间；详见[存储审计](docs/LEARNED_SPEED_BASIS_STORAGE_AUDIT_ZH.md)与[报告第22节](reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)。
+
+**必须同时看的负结果：** 换成旧的局部Gaussian介质家族，在已用8个开发环境中同标签rank128声速表示虽然800Hz双源raw也达到0.00322/0.00343，但仅比强q-PCA改善**5.7%/2.6%**，未过预设20%增量门槛，逐环境各只4/8获益。[完整负结果](docs/GAUSSIAN_SPEED_VARIABLE_DEV_ZH.md)。因此“选择声速变量”不是普适显著优势；余弦族的新16结果成立，但不能代替跨介质/跨物理域证明。
+
+固定上述新确认集前8环境的代码继续查1000/1200Hz，原物理读出在1200Hz宽/窄raw仍0.00674/0.00654、相位约0.005rad；加密距离和模态只改善raw3.2%/0.15%，没有通过预设20%“读出分辨率瓶颈”门槛。这是[同8环境的条件性频率压力测试](docs/SPEED_RESOLUTION_SCALING_ZH.md)，不是新独立环境或1200Hz学习方法对照。
+
 ## 已经知道什么
 
 **当前最重要的更新（2026-10-04，报告第21节）：** 在更丰富的16×16相关谱介质上，原128维代码虽解释99.86%训练介质方差，800Hz宽/窄源raw仍约0.51/0.50，相位不保真。增至256维训练介质PCA先验、只用60/100/140Hz宽源观测和已知物理反演后，**全新32环境独立确认**的800Hz宽/新2m窄源raw降至**0.01475/0.01532**、相位RMSE **0.01123/0.01170rad**；两源各32/32受益，预设门槛全部通过。固定前8新系统的预登记200–1000Hz曲线在1000Hz仍只有raw **0.0208/0.0202**、相位约0.016rad；见[配对图](reports/figures/spectral_rank256_confirm.png)、[频率曲线](reports/figures/spectral_frequency_curve_confirm.png)和[完整协议与结果](docs/SPECTRAL_MEDIUM_STRESS_POC_ZH.md)。但256维已接近合成器255个随机自由系数，方法是统计PCA先验+经典物理反演；它不是高压缩深神经表示、跨PDE创新或真实海洋验证。低RMS配对对照说明强度会影响128维误差，却不能单独解释其失败。

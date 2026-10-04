@@ -1,0 +1,122 @@
+[
+  {
+    "system": 20261332,
+    "method": "speed_nonlinear",
+    "inference_seconds": 8.29931141063571
+  },
+  {
+    "system": 20261332,
+    "method": "q_pca_1e-09",
+    "inference_seconds": 7.615032885223627
+  },
+  {
+    "system": 20261332,
+    "method": "q_pca_1e-07",
+    "inference_seconds": 7.709682228974998
+  },
+  {
+    "system": 20261333,
+    "method": "speed_nonlinear",
+    "inference_seconds": 7.784494490362704
+  },
+  {
+    "system": 20261333,
+    "method": "q_pca_1e-09",
+    "inference_seconds": 8.22443771082908
+  },
+  {
+    "system": 20261333,
+    "method": "q_pca_1e-07",
+    "inference_seconds": 7.743695080280304
+  },
+  {
+    "system": 20261334,
+    "method": "speed_nonlinear",
+    "inference_seconds": 7.662120062857866
+  },
+  {
+    "system": 20261334,
+    "method": "q_pca_1e-09",
+    "inference_seconds": 7.603631051257253
+  },
+  {
+    "system": 20261334,
+    "method": "q_pca_1e-07",
+    "inference_seconds": 7.169246939942241
+  },
+  {
+    "system": 20261335,
+    "method": "speed_nonlinear",
+    "inference_seconds": 7.655513297766447
+  },
+  {
+    "system": 20261335,
+    "method": "q_pca_1e-09",
+    "inference_seconds": 7.161489206366241
+  },
+  {
+    "system": 20261335,
+    "method": "q_pca_1e-07",
+    "inference_seconds": 7.112966895103455
+  },
+  {
+    "system": 20261336,
+    "method": "speed_nonlinear",
+    "inference_seconds": 7.541338519193232
+  },
+  {
+    "system": 20261336,
+    "method": "q_pca_1e-09",
+    "inference_seconds": 7.084888018667698
+  },
+  {
+    "system": 20261336,
+    "method": "q_pca_1e-07",
+    "inference_seconds": 7.293469780124724
+  },
+  {
+    "system": 20261337,
+    "method": "speed_nonlinear",
+    "inference_seconds": 7.642491664737463
+  },
+  {
+    "system": 20261337,
+    "method": "q_pca_1e-09",
+    "inference_seconds": 6.995385890826583
+  },
+  {
+    "system": 20261337,
+    "method": "q_pca_1e-07",
+    "inference_seconds": 7.150027598254383
+  },
+  {
+    "system": 20261338,
+    "method": "speed_nonlinear",
+    "inference_seconds": 7.748042929917574
+  },
+  {
+    "system": 20261338,
+    "method": "q_pca_1e-09",
+    "inference_seconds": 7.304184654727578
+  },
+  {
+    "system": 20261338,
+    "method": "q_pca_1e-07",
+    "inference_seconds": 7.4821730284020305
+  },
+  {
+    "system": 20261339,
+    "method": "speed_nonlinear",
+    "inference_seconds": 7.779209962114692
+  },
+  {
+    "system": 20261339,
+    "method": "q_pca_1e-09",
+    "inference_seconds": 7.286036494188011
+  },
+  {
+    "system": 20261339,
+    "method": "q_pca_1e-07",
+    "inference_seconds": 7.361125433817506
+  }
+]

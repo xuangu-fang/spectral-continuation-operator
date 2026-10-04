@@ -1,0 +1,150 @@
+{
+  "summary": [
+    {
+      "method": "speed_nonlinear",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.002044824403728609,
+      "mean_phase_rad": 0.0015551519083414555,
+      "max_raw": 0.004634105031994251,
+      "systems_raw_at_most_0p05": 16
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.0024871268176853835,
+      "mean_phase_rad": 0.001868635315883769,
+      "max_raw": 0.007140974863617838,
+      "systems_raw_at_most_0p05": 16
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.0053753589395262764,
+      "mean_phase_rad": 0.004197102825959428,
+      "max_raw": 0.017686228050877502,
+      "systems_raw_at_most_0p05": 16
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.005052415748884527,
+      "mean_phase_rad": 0.003914924732237844,
+      "max_raw": 0.016235809443560744,
+      "systems_raw_at_most_0p05": 16
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.03490594106383993,
+      "mean_phase_rad": 0.026502798178746238,
+      "max_raw": 0.05619391326927535,
+      "systems_raw_at_most_0p05": 14
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.03876067450553429,
+      "mean_phase_rad": 0.029526741928120014,
+      "max_raw": 0.06640916618490461,
+      "systems_raw_at_most_0p05": 14
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.08067830995038242,
+      "mean_phase_rad": 0.0644410444814808,
+      "max_raw": 0.15611894968462683,
+      "systems_raw_at_most_0p05": 0
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.0819653617780437,
+      "mean_phase_rad": 0.06520620396187957,
+      "max_raw": 0.12687517412625463,
+      "systems_raw_at_most_0p05": 1
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.03490594110643498,
+      "mean_phase_rad": 0.026502798203777225,
+      "max_raw": 0.056193913150942874,
+      "systems_raw_at_most_0p05": 14
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.03876067437354754,
+      "mean_phase_rad": 0.029526741826751374,
+      "max_raw": 0.06640916618508523,
+      "systems_raw_at_most_0p05": 14
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.08067831047530438,
+      "mean_phase_rad": 0.06444104497085645,
+      "max_raw": 0.15611894897666112,
+      "systems_raw_at_most_0p05": 0
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.08196536206660238,
+      "mean_phase_rad": 0.06520620424799309,
+      "max_raw": 0.12687517732120518,
+      "systems_raw_at_most_0p05": 1
+    }
+  ],
+  "comparisons": [
+    {
+      "source": "original",
+      "best_q_mean_raw": 0.08067830995038242,
+      "speed_raw_improvement": 0.9333729357638733
+    },
+    {
+      "source": "narrow2m",
+      "best_q_mean_raw": 0.0819653617780437,
+      "speed_raw_improvement": 0.9383591356240688
+    }
+  ],
+  "gate_checks": {
+    "mean_raw": true,
+    "mean_phase": true,
+    "improvement": true,
+    "all_systems_raw": true,
+    "numerical_audit": true
+  },
+  "all_confirm_gates_pass": true,
+  "mean_inference_seconds_by_method": {
+    "speed_nonlinear": 9.035794341529254,
+    "q_pca_1e-09": 7.833966496575158,
+    "q_pca_1e-07": 7.934982247184962
+  },
+  "scope": "Prospective independent-system interpolation confirmation conditional on PREDECLARED positive dev gates: 16 never-used taper7.5 16x16 correlated-cosine speed media with RMS15, same one-way waveguide; frozen speed-PCA and q-PCA priors trained from same 1024 taper5+taper10 medium labels. Source/background/PDE remain known, lowband clean dense 60/100/140Hz context, no target-frequency observations, no test medium labels in deployable inference. Taper7.5 is statistical interpolation within the SAME synthetic family, NOT OOD extrapolation or a second physics domain. Classical exact-family baseline has extra synthesis knowledge and is not a matched-information competitor. Gate and implementation committed before generating any new truth."
+}

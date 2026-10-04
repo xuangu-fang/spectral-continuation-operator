@@ -1,0 +1,42 @@
+{
+  "prior_relative_error": 2.555703577847469e-15,
+  "prior_max_absolute_error": 2.744471316873387e-13,
+  "dev_fixed_code_beta_relative_error": 3.912485715844282e-15,
+  "dev_fixed_code_beta_max_absolute_error": 6.418561564408912e-17,
+  "training_prior_depth_singular_values_first20": [
+    827.1164171688987,
+    779.7407934761018,
+    524.380614797807,
+    467.12446927758674,
+    428.99205383415864,
+    388.8016436101001,
+    346.05828918212325,
+    306.9281346246667,
+    267.74019948707644,
+    231.9493962281335,
+    204.89570590878202,
+    178.0793608390165,
+    156.071918677277,
+    133.96974280929615,
+    116.01180165496417,
+    100.85959112219709,
+    5.877015618472816e-12,
+    5.417412610483304e-13,
+    5.179677030419911e-13,
+    4.896009799496661e-13
+  ],
+  "stored_float64_values": {
+    "uncompressed_speed": 2621440,
+    "compressed_speed": 264704,
+    "uncompressed_q_pca": 524288
+  },
+  "compressed_speed_over_q_pca_storage": 0.5048828125,
+  "compression_factor_vs_uncompressed_speed": 9.903288201160542,
+  "gate_checks": {
+    "prior_reconstruction": true,
+    "fixed_code_beta": true
+  },
+  "scope": "Post-development exact shared-basis storage audit, NOT a new prediction candidate: factorize the already-frozen speed prior along depth using data-derived SVD rank16, then reconstruct and compare all prior values and one preselected previously-used dev code. No new training, target fields, method selection, or independent evidence. Synthetic 16x16 cosine family creates this favorable depth rank; general media need not.",
+  "all_gates_pass": true,
+  "compressed_prior_sha256": "6ffe2fa29d89c0d18f059dfadf62b66ff40ca42a0815c998be6cb38d105146da"
+}

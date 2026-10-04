@@ -1,0 +1,147 @@
+{
+  "summary": [
+    {
+      "method": "speed_nonlinear",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.0010361559570645587,
+      "mean_phase_rad": 0.0007883578065485159,
+      "max_raw": 0.0035857642114117457
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.0013809856569879844,
+      "mean_phase_rad": 0.0010540269318657378,
+      "max_raw": 0.0038559647505476136
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.0032185196871225502,
+      "mean_phase_rad": 0.0026672983602238068,
+      "max_raw": 0.011075821210105974
+    },
+    {
+      "method": "speed_nonlinear",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.003434927766938704,
+      "mean_phase_rad": 0.002630193917881686,
+      "max_raw": 0.010000761466336662
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.001167324682665951,
+      "mean_phase_rad": 0.0008522918582540028,
+      "max_raw": 0.003213268817875223
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.0015395495446433231,
+      "mean_phase_rad": 0.0011562287568612178,
+      "max_raw": 0.0035537212259703125
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.00345090175581782,
+      "mean_phase_rad": 0.0028616729861711517,
+      "max_raw": 0.009305284056612372
+    },
+    {
+      "method": "q_pca_1e-09",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.003549563771282646,
+      "mean_phase_rad": 0.0027212845293218884,
+      "max_raw": 0.008311327681941164
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.0011573047669459352,
+      "mean_phase_rad": 0.0008459324454462842,
+      "max_raw": 0.003209220216048626
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.0015452390700655691,
+      "mean_phase_rad": 0.0011617824557881224,
+      "max_raw": 0.003553087503341389
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.003414521922521007,
+      "mean_phase_rad": 0.002833337266397568,
+      "max_raw": 0.009289555849529969
+    },
+    {
+      "method": "q_pca_1e-07",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.0035281180665069508,
+      "mean_phase_rad": 0.0027020032831232936,
+      "max_raw": 0.008297728382696181
+    }
+  ],
+  "comparison": [
+    {
+      "source": "original",
+      "best_q_mean_raw": 0.003414521922521007,
+      "speed_raw_improvement": 0.05740254121834554
+    },
+    {
+      "source": "narrow2m",
+      "best_q_mean_raw": 0.0035281180665069508,
+      "speed_raw_improvement": 0.02641360005860316
+    }
+  ],
+  "gate_checks": {
+    "mean_raw": true,
+    "mean_phase": true,
+    "improvement": false
+  },
+  "all_dev_gates_pass": false,
+  "speed_prior": {
+    "training_fields": 512,
+    "speed_sample_shape": [
+      64,
+      160
+    ],
+    "rank": 128,
+    "training_speed_variance_fraction": 0.9999998158861211,
+    "global_basis_float64_values": 1320960
+  },
+  "q_global_basis_float64_values": 264192,
+  "mean_inference_seconds_by_method": {
+    "q_pca_1e-07": 7.377798373112455,
+    "q_pca_1e-09": 7.409385739010759,
+    "speed_nonlinear": 7.764065292198211
+  },
+  "scope": "One-change posthoc DEVELOPMENT on previously used Gaussian medium8 systems, second medium STATISTICAL FAMILY but SAME one-way PDE: train speed PCA128 from exact same512 Gaussian medium-label systems underlying cached q32 labels; retain known background/source/PDE, dense clean60/100/140Hz context, 5+5 GN, full >=50m ROI, 400/800Hz broad and unseen narrow source. No cosine generator supplied, no test medium/high-frequency targets in inference. Gate fixed before results; failure stops this branch with no tuning on old8; only if all gates pass may a separate prospectively frozen new-Gaussian-system confirmation be generated. Not a second physics domain."
+}

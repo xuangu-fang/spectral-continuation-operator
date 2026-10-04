@@ -234,7 +234,17 @@ coherent_waveguide_new_systems_high_frequency_20261004/则是**单独冻结的32
 
 双声源共同目标oracle现已完成，artifact`coherent_waveguide_spectral_taper_joint_oracle_20261004/`同样保存192行0–5步结果，使用**同16系统的两个800Hz目标复场**与真介质投影初值，最终宽/窄raw0.08293/0.08303。另一个与目标泄漏不同的额外信息控制`coherent_waveguide_spectral_taper_matched_prior_20261004/`由提交`5a7e405`预登记：用全新训练seed20266000–20266511生成512个taper10介质**标签**、不与测试16重叠，重拟合相同rank256并只用原低频context评价原有目标。训练标签NPZ在该artifact本地路径，SHA在`training_labels_sha256.json`；128行部署/真介质投影oracle结果、配置、manifest和历史完整保存。新统计族标签使部署800Hz raw降到0.12705/0.13668，但预设救援门槛失败。这些后补artifact都**不生成新目标场NPZ，也不增加新的测试系统**，不可与原OOD新16数目相加。
 
-**阶段十一最终post-run清单**：`artifacts/coherent_stage11_inventory_20261004/inventory.json`于2026-10-04 10:13:46 UTC捕获27组数据、1130份本机目标/训练数据NPZ及197个小型artifact目录，包含新增taper10目标32份和上述所有后补结果/标签的文件SHA；源码快照SHA也在其中。1130是NPZ**文件数**，不是独立环境数；大NPZ仍在本机`/mnt/data/...`或Git ignored的artifact目录，远端仓库只存复现配置、代码、图和小型指标/哈希。清单是**运行完成后**的盘点，不代替原新32的预真值冻结manifest、taper10实验的提交`15f9aa7`或各自的启动manifest；它的`git_base=5a7e405`只记录当时已提交基点，不代表后来文档提交号。
+**阶段十一post-run清单已在本阶段末重做**：`artifacts/coherent_stage11_inventory_20261004/inventory.json`当前覆盖**29组数据、1178份本机NPZ及203个artifact目录**，逐文件SHA、大小、关键数组形状/有限复数检查以及当前源码哈希均有记录。1178是NPZ**文件数**，不是独立环境数；大NPZ仍在本机`/mnt/data/...`或Git ignored的artifact目录，远端仓库只存复现配置、代码、图和小型指标/哈希。清单是**运行完成后**的盘点，不代替原新32的预真值冻结manifest、taper10实验的提交`15f9aa7`、学得声速新16确认的提交`5fe88a5`、额外频率审计提交`a7363b7`或各自的启动manifest；`git_base`仅记录盘点当时已提交基点，不代表所有先前运行使用该提交的字节级源码。
+
+额外精确生成族控制`coherent_waveguide_spectral_taper_exact_family_20261004/`在已用同16系统上只存估计255声速坐标的本地NPZ，以及64行400/800Hz双源评价、历史、配置、源文件SHA；不生成新目标场NPZ。它知道真合成函数族及taper10但不读测试系数/目标场；1+1步删真谱系数后推断坐标和beta逐元素不变。结果见[精确生成族控制](SPECTRAL_TAPER_EXACT_FAMILY_ZH.md)。
+
+**新加入的独立系统集合只是一向波导合成族内插值：** `coherent_waveguide_learned_speed_manifold_confirm_20261004/`位于同一本机datasets根目录，16个此前未用的系统seed20268000–015、taper7.5、RMS15m/s、16×16相关余弦声速合成，400/800Hz各16份直接教师复模态场，共**32份新目标NPZ**；审计系统20268100–101不参与评价。每份含4097查询距离、513深度、原宽/新2m窄源复场、频率与spec；teacher1024段/160模态/384积分节点，2048/192/512数值审计最坏raw9.13e-5。新集合与训练seed20264000–4511及20266000–66511、旧开发20267000–015和先前确认集合均不交叉。前置确认配置/实现于`5fe88a5`提交后才生成新真值；启动manifest含来源配置、冻结共享基与实现SHA，`data_sha256.json`含32个目标文件SHA。它**不是第二波动方程或真实海洋数据**，taper7.5在训练5与10之间，不能说成统计外推。部署只用60/100/140Hz宽源×65完整深度复剖面与冻结训练共享基，目标频率真值/测试介质标签不进入推断；artifact的`system*_codes.npz`本地保存这些输入与估计代码，JSON有192行评价、历史/时间/summary。详见[确认记录](LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md)。
+
+相同1024份**介质网格标签**派生的声速基与q-PCA基位于`artifacts/coherent_waveguide_learned_speed_manifold_dev_20261004/learned_priors.npz`，原始声速标签、每环境代码NPZ留本机；Git保留`training_manifest.json`及SHA。它与16个旧taper10已用环境上的开发结果分开；后者没有新目标真值。纯存储因子分解`artifacts/coherent_waveguide_speed_basis_storage_audit_20261004/compressed_speed_prior.npz`也仅在本机，Git保存配置/来源SHA/数值误差JSON；**未产生独立预测数据**。结果见[存储审计](LEARNED_SPEED_BASIS_STORAGE_AUDIT_ZH.md)。
+
+Gaussian第二统计族开发只重用原512训练系统seed和旧8开发系统20261332–339：q32标签来自`artifacts/coherent_waveguide_depth_bandwidth_20261004/training_prior.npz`，用完全相同512 ID的公开Gaussian生成器另取声速网格标签，真值读取既有`coherent_waveguide_frequency_scaling_20261004/`的400/800Hz NPZ，**没有产生新目标场或独立系统**。新速度标签、共享基和环境代码NPZ在本地`artifacts/coherent_waveguide_gaussian_speed_variable_dev_20261004/`，Git保留配置/来源SHA/96条评价；相对增量门槛失败，停止新Gaussian确认，见[负结果](GAUSSIAN_SPEED_VARIABLE_DEV_ZH.md)。
+
+额外频率集合`coherent_waveguide_speed_resolution_scaling_20261004/`在相同datasets根目录，取taper7.5确认集**已经用过的前8系统**20268000–007，1000/1200Hz各8份**新目标NPZ，共16文件**。固定先前保存的255维声速代码，不重新拟合，分别用256/512距离段与128/192传播模态查询；教师1024段/256模态/384积分节点，另2个审计seed20268200–201以2048/320/512检查，最坏raw1.935e-4。生成前配置/实现提交`a7363b7`，启动manifest与16个文件SHA在`artifacts/coherent_waveguide_speed_resolution_scaling_20261004/`；完整128行评价与数值审计亦保存。**这是已用环境的新频率条件，不是新独立环境，也没有q-PCA同频方法对照**；见[分辨率审计](SPEED_RESOLUTION_SCALING_ZH.md)。
 
 ## 旧 FDTD 数据的失败如何使用（历史）
 

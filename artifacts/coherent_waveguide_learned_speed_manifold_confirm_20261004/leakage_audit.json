@@ -1,0 +1,10 @@
+{
+  "system": 20268000,
+  "audit_type": "post-confirmation fixed-observation hidden-test-medium removal",
+  "inference": "frozen learned speed prior, identical saved low-band observations and source/background/PDE, one coarse plus one fine Gauss-Newton step",
+  "change": "delete spectral_coefficients_m_s from the test spec before inference; keep all observations fixed",
+  "coordinates_max_absolute_difference": 0.0,
+  "generator_beta_max_absolute_difference": 0.0,
+  "exactly_equal": true,
+  "interpretation": "This preselected one-system 1+1-step audit rules out reading hidden test spectral coefficients in these inference paths. It does not prove all deployments or data pipelines are leak-free, and the teacher used hidden coefficients to generate observations as intended."
+}

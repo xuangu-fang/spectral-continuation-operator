@@ -1,0 +1,29 @@
+{
+  "scope": "Prospective independent-system interpolation confirmation conditional on PREDECLARED positive dev gates: 16 never-used taper7.5 16x16 correlated-cosine speed media with RMS15, same one-way waveguide; frozen speed-PCA and q-PCA priors trained from same 1024 taper5+taper10 medium labels. Source/background/PDE remain known, lowband clean dense 60/100/140Hz context, no target-frequency observations, no test medium labels in deployable inference. Taper7.5 is statistical interpolation within the SAME synthetic family, NOT OOD extrapolation or a second physics domain. Classical exact-family baseline has extra synthesis knowledge and is not a matched-information competitor. Gate and implementation committed before generating any new truth.",
+  "source_config_sha256": "9bbc55cd37594e35ade180df74ee8d821bcca31bab8879d2bf4886a5f0393772",
+  "dev_config_sha256": "0ae173d6ffae0affd967b55952427bcd863e1ffdb6727d64fcb6e9bea5f18a36",
+  "frozen_priors_sha256": "8f41a634f781c9ba56715595b0c1e0ecf9d305d8000b30609d4479620c3559e1",
+  "implementation_sha256": "cc2283c71ebec6af626164dc69c049ba166bcd3273fd58b3467c44010f2e005f",
+  "systems": [
+    20268000,
+    20268001,
+    20268002,
+    20268003,
+    20268004,
+    20268005,
+    20268006,
+    20268007,
+    20268008,
+    20268009,
+    20268010,
+    20268011,
+    20268012,
+    20268013,
+    20268014,
+    20268015
+  ],
+  "audit_systems": [
+    20268100,
+    20268101
+  ]
+}

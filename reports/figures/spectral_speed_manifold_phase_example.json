@@ -1,0 +1,30 @@
+{
+  "scope": "Preselected first fresh taper7.5 system and narrow source; display-only lowest-10-percent-amplitude mask; raw full-ROI metrics unmasked; q inference rerun with frozen 1e-9 initialization.",
+  "config": {
+    "system": 20268000,
+    "frequency": 800,
+    "source_index": 1,
+    "range_min_m": 1500,
+    "range_max_m": 1600,
+    "depth_min_m": 5,
+    "depth_max_m": 95,
+    "amplitude_mask_quantile": 0.1,
+    "phase_error_display_rad": 0.15,
+    "q_initial_prior_precision": 1e-09,
+    "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+    "frozen_priors": "artifacts/coherent_waveguide_learned_speed_manifold_dev_20261004/learned_priors.npz",
+    "confirm_config": "configs/coherent_waveguide_learned_speed_manifold_confirm_20261004.json",
+    "confirm_code": "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268000_codes.npz",
+    "truth_npz": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268000_f800.npz"
+  },
+  "input_sha256": {
+    "source_config": "9bbc55cd37594e35ade180df74ee8d821bcca31bab8879d2bf4886a5f0393772",
+    "frozen_priors": "8f41a634f781c9ba56715595b0c1e0ecf9d305d8000b30609d4479620c3559e1",
+    "confirm_config": "176c624768eef78b2eed83b67b7e7ee0d109fe98ab13cda8447b5afd7e3c5d9a",
+    "confirm_code": "e53baa6fb1f1f5fdd2d71792678f9ead47b7dce686c49738305dc3db556f00ee",
+    "truth_npz": "93c174421d2980d4a7a5f8aa53b37f3cf25cbd1ab5da2b950e391464d1e283b0"
+  },
+  "display_masked_fraction": 0.10000529072535845,
+  "display_local_amplitude_cutoff": 0.04775462794488146,
+  "value_scale": "top phase in [-pi,pi]; bottom phase residual display saturated at [-0.15,0.15] rad"
+}

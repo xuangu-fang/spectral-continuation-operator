@@ -1,0 +1,168 @@
+{
+  "summary": [
+    {
+      "method": "fixed_256x128",
+      "frequency": 1000,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.005522079587965961,
+      "mean_phase_rad": 0.004361175209994587,
+      "max_raw": 0.009276174124808408
+    },
+    {
+      "method": "fixed_256x128",
+      "frequency": 1000,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.005323531846535537,
+      "mean_phase_rad": 0.004152564986222045,
+      "max_raw": 0.00788272425833624
+    },
+    {
+      "method": "fixed_256x128",
+      "frequency": 1200,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.006741112338833677,
+      "mean_phase_rad": 0.005434836092466702,
+      "max_raw": 0.010506411072496714
+    },
+    {
+      "method": "fixed_256x128",
+      "frequency": 1200,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.00653676800477772,
+      "mean_phase_rad": 0.005188822311802649,
+      "max_raw": 0.010131206659424538
+    },
+    {
+      "method": "range_512x128",
+      "frequency": 1000,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.005340823896222164,
+      "mean_phase_rad": 0.004123915267077889,
+      "max_raw": 0.009080195556834538
+    },
+    {
+      "method": "range_512x128",
+      "frequency": 1000,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.0052020504422955905,
+      "mean_phase_rad": 0.0039914680668635205,
+      "max_raw": 0.008126940364089794
+    },
+    {
+      "method": "range_512x128",
+      "frequency": 1200,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.006527351282326739,
+      "mean_phase_rad": 0.0050821557762175985,
+      "max_raw": 0.01037379816860808
+    },
+    {
+      "method": "range_512x128",
+      "frequency": 1200,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.006526795823811523,
+      "mean_phase_rad": 0.005134914475983643,
+      "max_raw": 0.01034251954212986
+    },
+    {
+      "method": "modal_256x192",
+      "frequency": 1000,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.005521198732427589,
+      "mean_phase_rad": 0.004360626398144012,
+      "max_raw": 0.009276158123265266
+    },
+    {
+      "method": "modal_256x192",
+      "frequency": 1000,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.00532353184597811,
+      "mean_phase_rad": 0.004152564979244771,
+      "max_raw": 0.007882724260028388
+    },
+    {
+      "method": "modal_256x192",
+      "frequency": 1200,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.006739705083442629,
+      "mean_phase_rad": 0.005433924766008151,
+      "max_raw": 0.01050638636213471
+    },
+    {
+      "method": "modal_256x192",
+      "frequency": 1200,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.006536768006843686,
+      "mean_phase_rad": 0.005188822312811715,
+      "max_raw": 0.010131206684372267
+    },
+    {
+      "method": "adaptive_512x192",
+      "frequency": 1000,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.005339967854800677,
+      "mean_phase_rad": 0.0041233815506177395,
+      "max_raw": 0.009080179189232086
+    },
+    {
+      "method": "adaptive_512x192",
+      "frequency": 1000,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.005202050442623927,
+      "mean_phase_rad": 0.003991468051005247,
+      "max_raw": 0.00812694036586428
+    },
+    {
+      "method": "adaptive_512x192",
+      "frequency": 1200,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.00652596505722162,
+      "mean_phase_rad": 0.005081246226954622,
+      "max_raw": 0.010373773121133294
+    },
+    {
+      "method": "adaptive_512x192",
+      "frequency": 1200,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.006526795826779704,
+      "mean_phase_rad": 0.005134914455069317,
+      "max_raw": 0.010342519567054922
+    }
+  ],
+  "comparison": [
+    {
+      "source": "original",
+      "fixed_mean_raw": 0.006741112338833677,
+      "adaptive_raw_improvement": 0.03191569444298581
+    },
+    {
+      "source": "narrow2m",
+      "fixed_mean_raw": 0.00653676800477772,
+      "adaptive_raw_improvement": 0.0015255517697320142
+    }
+  ],
+  "gate_checks": {
+    "mean_raw": true,
+    "mean_phase": true,
+    "readout_improvement": false,
+    "numerical_audit": true
+  },
+  "all_gates_pass": false,
+  "scope": "Conditional fixed-code high-frequency resolution diagnostic on the FIRST8 already-used taper7.5 confirmation systems only, NOT independent confirmation. Generate new 1000/1200Hz truth with adequate teacher modes and 2 fresh numerical audit systems after protocol commit. NEVER retrain/refit or select code using these targets. Compare four deterministic physical readout resolutions from identical frozen speed coordinates: 256/512 range cells x128/192 modal states; q baseline not part of this particular decoder-only audit. Full >=50m raw complex RelL2 and circular phase RMSE, both original and narrow2m sources; no global phase alignment."
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Conditional fixed-code high-frequency resolution diagnostic on the FIRST8 already-used taper7.5 confirmation systems only, NOT independent confirmation. Generate new 1000/1200Hz truth with adequate teacher modes and 2 fresh numerical audit systems after protocol commit. NEVER retrain/refit or select code using these targets. Compare four deterministic physical readout resolutions from identical frozen speed coordinates: 256/512 range cells x128/192 modal states; q baseline not part of this particular decoder-only audit. Full >=50m raw complex RelL2 and circular phase RMSE, both original and narrow2m sources; no global phase alignment.",
+  "source_config_sha256": "9bbc55cd37594e35ade180df74ee8d821bcca31bab8879d2bf4886a5f0393772",
+  "confirm_config_sha256": "176c624768eef78b2eed83b67b7e7ee0d109fe98ab13cda8447b5afd7e3c5d9a",
+  "frozen_priors_sha256": "8f41a634f781c9ba56715595b0c1e0ecf9d305d8000b30609d4479620c3559e1",
+  "implementation_sha256": "79023b55121b45e558c4ee92180269ae15e1140ff320824c7115b4cafb1b4b1c",
+  "systems": [
+    20268000,
+    20268001,
+    20268002,
+    20268003,
+    20268004,
+    20268005,
+    20268006,
+    20268007
+  ],
+  "audit_systems": [
+    20268200,
+    20268201
+  ]
+}

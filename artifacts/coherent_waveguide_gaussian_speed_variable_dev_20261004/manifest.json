@@ -1,0 +1,7 @@
+{
+  "scope": "One-change posthoc DEVELOPMENT on previously used Gaussian medium8 systems, second medium STATISTICAL FAMILY but SAME one-way PDE: train speed PCA128 from exact same512 Gaussian medium-label systems underlying cached q32 labels; retain known background/source/PDE, dense clean60/100/140Hz context, 5+5 GN, full >=50m ROI, 400/800Hz broad and unseen narrow source. No cosine generator supplied, no test medium/high-frequency targets in inference. Gate fixed before results; failure stops this branch with no tuning on old8; only if all gates pass may a separate prospectively frozen new-Gaussian-system confirmation be generated. Not a second physics domain.",
+  "source_config_sha256": "9bbc55cd37594e35ade180df74ee8d821bcca31bab8879d2bf4886a5f0393772",
+  "gaussian_training_config_sha256": "7046faffa9beefd96d726ba9b7d088e01b57678336400cd504320c5bff895055",
+  "q_training_labels_sha256": "b5de06541f9cb58cfa9bd0ad59f31bca171c11c5479c3c43a9b56524b7828b83",
+  "implementation_sha256": "cd4c85cb1213e6a6c5713daa12ed3d45955483c6dd70cd9a73deacaec20a269d"
+}

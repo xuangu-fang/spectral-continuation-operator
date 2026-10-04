@@ -1,0 +1,33 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "gaussian_training_config": "artifacts/coherent_waveguide_learned_generator_20261003/config.json",
+  "q_training_labels": "artifacts/coherent_waveguide_depth_bandwidth_20261004/training_prior.npz",
+  "dev_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frequency_scaling_20261004",
+  "dev_systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "rank": 128,
+  "terms": 32,
+  "speed_sample_cells": 64,
+  "speed_sample_depth_nodes": 160,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "speed_linear_initial_prior_precision": 1e-07,
+  "q_prior_initial_precisions": [
+    1e-09,
+    1e-07
+  ],
+  "gate_800hz_both_sources": {
+    "speed_mean_raw_at_most": 0.005,
+    "speed_mean_phase_rad_at_most": 0.005,
+    "speed_raw_improvement_vs_best_q_pca_at_least": 0.2
+  },
+  "scope": "One-change posthoc DEVELOPMENT on previously used Gaussian medium8 systems, second medium STATISTICAL FAMILY but SAME one-way PDE: train speed PCA128 from exact same512 Gaussian medium-label systems underlying cached q32 labels; retain known background/source/PDE, dense clean60/100/140Hz context, 5+5 GN, full >=50m ROI, 400/800Hz broad and unseen narrow source. No cosine generator supplied, no test medium/high-frequency targets in inference. Gate fixed before results; failure stops this branch with no tuning on old8; only if all gates pass may a separate prospectively frozen new-Gaussian-system confirmation be generated. Not a second physics domain."
+}

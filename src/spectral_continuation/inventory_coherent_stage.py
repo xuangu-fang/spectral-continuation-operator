@@ -60,6 +60,12 @@ def run(root, output):
     taper_shift_name = "coherent_waveguide_spectral_taper_shift_20261004"
     if (base / taper_shift_name).exists():
         dataset_specs.append((taper_shift_name, 32))
+    speed_confirm_name = "coherent_waveguide_learned_speed_manifold_confirm_20261004"
+    if (base / speed_confirm_name).exists():
+        dataset_specs.append((speed_confirm_name, 32))
+    speed_scaling_name = "coherent_waveguide_speed_resolution_scaling_20261004"
+    if (base / speed_scaling_name).exists():
+        dataset_specs.append((speed_scaling_name, 16))
     for name, expected in dataset_specs:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -116,6 +122,8 @@ def run(root, output):
         amplitude_control = name == "coherent_waveguide_spectral_amplitude_matched_dev_20261004"
         frequency_curve = name == frequency_curve_name
         taper_shift = name == taper_shift_name
+        speed_confirm = name == speed_confirm_name
+        speed_scaling = name == speed_scaling_name
         metadata_paths = set((base / name).glob("*.json"))
         if independent:
             metadata_paths.update((base / name).parent.glob("*.json"))
@@ -135,6 +143,10 @@ def run(root, output):
                 if frequency_curve
                 else "fresh16 correlation-scale-shift systems20267000–015, RMS matched, taper5 training to taper10 test; post-main-result fixed-method OOD diagnostic within the SAME one-way PDE, not a second physics domain"
                 if taper_shift
+                else "fresh16 taper7.5 systems20268000–015, same one-way PDE and 16x16 cosine medium family; statistical INTERPOLATION between training taper5/10; learned speed variable and gates frozen before truth at git5fe88a5, NOT a second physics domain"
+                if speed_confirm
+                else "conditional first8 ALREADY-USED taper7.5 confirmation systems, fixed learned speed codes queried at1000/1200Hz with 4 physical decoder resolutions; 16 new target NPZ, NOT new independent environments or new PDE; prereg git a7363b7"
+                if speed_scaling
                 else "development/training only; not independent test evidence"
             ),
             "files": records,
@@ -163,6 +175,9 @@ def run(root, output):
         "*generator_new_systems*.py",
         "*helmholtz*.py",
         "*separable*.py",
+        "*learned_speed*.py",
+        "*speed_variable*.py",
+        "*speed_resolution*.py",
     ]:
         sources.update((root / "src/spectral_continuation").glob(pattern))
     sources.update((root / "tests").glob("test_*coherent*.py"))
@@ -175,6 +190,7 @@ def run(root, output):
         "test_*frozen_generator*.py",
         "test_*helmholtz*.py",
         "test_*separable*.py",
+        "test_*learned_speed*.py",
     ]:
         sources.update((root / "tests").glob(pattern))
     artifacts = []
