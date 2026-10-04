@@ -1,0 +1,33 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "training_labels": [
+    "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+    "artifacts/coherent_waveguide_spectral_taper_matched_prior_20261004/training_labels.npz"
+  ],
+  "context_codes": "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004",
+  "truth_dir": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004",
+  "previous_q768_results": "artifacts/coherent_waveguide_q768_deploy_dev_20261004/results.json",
+  "systems": [
+    20268000,
+    20268001,
+    20268002,
+    20268003,
+    20268004,
+    20268005,
+    20268006,
+    20268007
+  ],
+  "rank": 768,
+  "frequency_hz": 800,
+  "initial_prior_precision": 1e-07,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "prior_strengths": [
+    0.0,
+    1e-06,
+    0.0001,
+    0.01
+  ],
+  "max_unregularized_reproduction_raw_difference": 1e-06,
+  "scope": "POSTHOC bounded Gaussian-code MAP regularization diagnosis on first8 already-used cosine taper7.5 systems, motivated by q768 oracle/deployment gap. Same rank768 q-PCA, same 1024 training labels and 60/100/140 Hz observations, fixed 5+5 GN and prior strengths 0/1e-6/1e-4/1e-2; no true test medium or target in inference. Zero-strength MUST reproduce original q768 deployment on eight systems before interpreting positives. Query outcomes select no formal method; all are development-only. Strength tunes could further improve q, so failure of this bounded sweep is not impossibility of q modeling."
+}

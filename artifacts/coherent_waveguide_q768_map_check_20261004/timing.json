@@ -1,0 +1,34 @@
+[
+  {
+    "system": 20268008,
+    "inference_seconds": 13.937214908190072
+  },
+  {
+    "system": 20268009,
+    "inference_seconds": 15.693824326619506
+  },
+  {
+    "system": 20268010,
+    "inference_seconds": 13.87590664345771
+  },
+  {
+    "system": 20268011,
+    "inference_seconds": 13.84490692615509
+  },
+  {
+    "system": 20268012,
+    "inference_seconds": 15.764455238357186
+  },
+  {
+    "system": 20268013,
+    "inference_seconds": 13.859411552548409
+  },
+  {
+    "system": 20268014,
+    "inference_seconds": 13.998107513412833
+  },
+  {
+    "system": 20268015,
+    "inference_seconds": 15.459207816049457
+  }
+]

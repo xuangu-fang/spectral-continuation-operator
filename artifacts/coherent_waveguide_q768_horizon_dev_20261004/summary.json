@@ -1,0 +1,61 @@
+{
+  "summary": [
+    {
+      "method": "q_pca768_0plus0",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 1.2188416257015429,
+      "mean_phase_rad": 1.5095536459038448
+    },
+    {
+      "method": "q_pca768_0plus0",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 1.215154723636909,
+      "mean_phase_rad": 1.500847269110224
+    },
+    {
+      "method": "q_pca768_1plus1",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.14699498019115662,
+      "mean_phase_rad": 0.11237647567455734
+    },
+    {
+      "method": "q_pca768_1plus1",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.15243041774185423,
+      "mean_phase_rad": 0.11697707088604782
+    },
+    {
+      "method": "q_pca768_3plus3",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.13045247723467296,
+      "mean_phase_rad": 0.0969082401067988
+    },
+    {
+      "method": "q_pca768_3plus3",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.13377376822493928,
+      "mean_phase_rad": 0.10229848077231148
+    },
+    {
+      "method": "q_pca768_5plus5",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.1260118593954027,
+      "mean_phase_rad": 0.09355290023672994
+    },
+    {
+      "method": "q_pca768_5plus5",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.1309965706093117,
+      "mean_phase_rad": 0.10066800618194358
+    }
+  ],
+  "scope": "POSTHOC optimization-horizon diagnosis after observing poor q-PCA768 5+5 deployment. First eight already-used systems only; no new independence or formal gate. Same q prior, same 60/100/140 Hz observed context, same query truth; bounded zero/one/three/five coarse and fine Gauss-Newton iterations. Purpose: determine whether high-rank q failure is simply late-iteration low-band overfitting. Reporting best query-error stage is descriptive DEV selection, not a deployable model selection protocol."
+}

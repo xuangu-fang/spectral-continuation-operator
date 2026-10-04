@@ -1,0 +1,30 @@
+{
+  "scope": "POSTHOC fixed-strength q-PCA768 MAP check on the latter eight already-used cosine taper7.5 systems. Prior strength 1e-6 was chosen from early first-eight DEV feedback, then frozen in code/config before this method was run on the latter eight. These systems and target fields were previously used for speed255 and unregularized q768 experiments, so this is not an independent method test, only a conditional within-cohort robustness check. Same 1024 training medium labels, clean dense 60/100/140 Hz context, known source/PDE, no test medium or target in inference. No extra hyperparameter sweep on this latter-eight set.",
+  "implementation_sha256": "b5eb616e9e7753870a49c8e1ae1fa674682c3bc78829ccd22b57512085cabce3",
+  "map_implementation_sha256": "f2f5160924e9db3757e717687dcccabc7f9a795fb2c2154ef0322f71f0837c74",
+  "source_config_sha256": "9bbc55cd37594e35ade180df74ee8d821bcca31bab8879d2bf4886a5f0393772",
+  "training_label_sha256": {
+    "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz": "fcc6984db88839bcd659606338051df3c8db79c054e994f19e28d7df7eb44876",
+    "artifacts/coherent_waveguide_spectral_taper_matched_prior_20261004/training_labels.npz": "46ed337164fdf387cc74594cb7a61e4e07d4f76d00ac751bd73330cf2c8611fc"
+  },
+  "context_code_sha256": {
+    "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268008_codes.npz": "e6c8d5c6ed0710f8a0afc81f2aa1ab9c285f507566d286799179543ad617b0c0",
+    "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268009_codes.npz": "d5f42b38c92b9cb9f36efc27baf7ce8645640f13803c8fb3e875f108e1ba3628",
+    "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268010_codes.npz": "b45edab07b93ad8fdae41d5577acc955784d6773ea50738d454385f798fea556",
+    "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268011_codes.npz": "1f99c9fea5480832a8beb2b878640cdba793c0020e2c9a9ad4f6fb82ef28a22e",
+    "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268012_codes.npz": "b3798d2a190801f6d27d35f2fc01f9371433c785d09bae76f27f8e92a2675142",
+    "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268013_codes.npz": "2f66ebff223479889a8423d75daa9da67025f5eec80cef56221e03c5b1131e3c",
+    "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268014_codes.npz": "9e2a7cb5994a92562429c6a74540c1ea826dc614faa4fb5d3c0084a76e105af9",
+    "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268015_codes.npz": "059931822b03809119ad22d39750d040e02929e378a7c49baffb06361e044a88"
+  },
+  "truth_sha256": {
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268008_f800.npz": "52ea1ee3a7541b8fbd8a42f9094416f5fba18bfcf8493f21013cb84da8c9a5d4",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268009_f800.npz": "e6545e437e86293f29ee89faae2358b52572a41200f057feb4559713bea75e2f",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268010_f800.npz": "be75f1b3e05ca9f4d575ccad82681fec8063d51120991d040d566adbdaa8f833",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268011_f800.npz": "ce9a17eceb3b6d7b01f6b2145b933a3b6f179aa47740064b9d45c2bb7d1a4ec0",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268012_f800.npz": "cc0999e5d82fc0a7b8530706b02aecd7d3f55c470b48b37158687e939aadd775",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268013_f800.npz": "2263d95d4ac363f76db303070cbd4dec0ff06ae9fe2ae4bfa6a49b00f3079504",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268014_f800.npz": "26c8f8bea182122a62872b16af8a936c0d6a8ab6fcc03d08d0abb6f3d8ef29ec",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004/system20268015_f800.npz": "6b33135795abdf82a5220d7dc8375642820df9855d369dc1009f95e678a5219b"
+  }
+}

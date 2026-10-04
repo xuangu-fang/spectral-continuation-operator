@@ -1,0 +1,102 @@
+{
+  "oracle_summary": [
+    {
+      "rank": 255,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.07778506092126328,
+      "mean_phase_rad": 0.07212141991569543,
+      "max_raw": 0.16348145935525174,
+      "mean_medium_projection_residual": 0.00664411270592457,
+      "training_variance_fraction": 0.9999745243842343,
+      "per_environment_code_float64_values": 255,
+      "shared_basis_float64_values": 524288
+    },
+    {
+      "rank": 255,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.07574731808313867,
+      "mean_phase_rad": 0.07017926411672416,
+      "max_raw": 0.14973810298857204,
+      "mean_medium_projection_residual": 0.00664411270592457,
+      "training_variance_fraction": 0.9999745243842343,
+      "per_environment_code_float64_values": 255,
+      "shared_basis_float64_values": 524288
+    },
+    {
+      "rank": 384,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.01925823979770156,
+      "mean_phase_rad": 0.014208044017037088,
+      "max_raw": 0.027187351373172183,
+      "mean_medium_projection_residual": 0.0035384434378202528,
+      "training_variance_fraction": 0.9999971722169034,
+      "per_environment_code_float64_values": 384,
+      "shared_basis_float64_values": 788480
+    },
+    {
+      "rank": 384,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.01927851126034497,
+      "mean_phase_rad": 0.014342262034929696,
+      "max_raw": 0.028029505264197802,
+      "mean_medium_projection_residual": 0.0035384434378202528,
+      "training_variance_fraction": 0.9999971722169034,
+      "per_environment_code_float64_values": 384,
+      "shared_basis_float64_values": 788480
+    },
+    {
+      "rank": 512,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.011587545181658922,
+      "mean_phase_rad": 0.008528989993749396,
+      "max_raw": 0.019228131237909757,
+      "mean_medium_projection_residual": 0.0021578999604680783,
+      "training_variance_fraction": 0.9999996916272755,
+      "per_environment_code_float64_values": 512,
+      "shared_basis_float64_values": 1050624
+    },
+    {
+      "rank": 512,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.011237984178613629,
+      "mean_phase_rad": 0.008273987022424791,
+      "max_raw": 0.01663575460791727,
+      "mean_medium_projection_residual": 0.0021578999604680783,
+      "training_variance_fraction": 0.9999996916272755,
+      "per_environment_code_float64_values": 512,
+      "shared_basis_float64_values": 1050624
+    },
+    {
+      "rank": 768,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.0030888264718680744,
+      "mean_phase_rad": 0.002487917416335655,
+      "max_raw": 0.0049269620687079525,
+      "mean_medium_projection_residual": 0.000403966097476384,
+      "training_variance_fraction": 0.9999999997913334,
+      "per_environment_code_float64_values": 768,
+      "shared_basis_float64_values": 1574912
+    },
+    {
+      "rank": 768,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.003105000358578844,
+      "mean_phase_rad": 0.002521326803680847,
+      "max_raw": 0.005916885111484491,
+      "mean_medium_projection_residual": 0.000403966097476384,
+      "training_variance_fraction": 0.9999999997913334,
+      "per_environment_code_float64_values": 768,
+      "shared_basis_float64_values": 1574912
+    }
+  ],
+  "scope": "POSTHOC capacity diagnostic on already-used cosine new16 systems. Each rank reads TRUE TEST MEDIUM to form a q-PCA Euclidean projection, so these are oracle responses, never deployable low-band scores or capacity lower bounds. The sole question is whether increasing linear q-code dimension above the matched speed255 code can close the observed q255 oracle gap; higher ranks explicitly spend more per-environment code and shared basis storage. This uses the same 1024 training q labels as before, same source/PDE/truth, no new systems, no target-response optimization. Rank255 should reproduce the prior true-medium q projection within numerical tolerance. Interpret only within the cosine statistical family.",
+  "training_fields": 1024
+}

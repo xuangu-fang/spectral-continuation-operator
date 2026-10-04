@@ -52,6 +52,8 @@
 
 新做的**额外真介质信息oracle**把这一解释进一步钉实：余弦新16系统把真实介质欧氏投到冻结速度/q空间，800Hz双源raw分别约**0.0024 vs 0.076–0.078**；Gaussian旧8则两种投影都约**0.002–0.003**。余弦q介质系数相对投影残差仅0.00664，仍导致强相干相位误差；Gaussian q残差0.000469，响应较稳。四项预设机制检查通过，[逐系统图](../reports/figures/spectral_variable_projection_attribution.png)展示两族差别。**但欧氏投影不是响应最优容量下界**，且都直接读取真实测试介质，不能混入可部署结果；其价值是定位“表示变量”而非证明所有q参数化都失败。详见[归因协议](VARIABLE_PROJECTION_ATTRIBUTION_ZH.md)。
 
+为避免把匹配255维的胜出误写成“q变量永远不能表示”，又在**同一批已用16系统**作[容量—辨识事后审计](Q_CAPACITY_ORACLE_AUDIT_ZH.md)：q-PCA真介质投影从rank255的约0.077变为rank768的约0.0031，但同低频反演无持续先验时反而约0.123；加入显式代码MAP后约0.032/0.034，仍未达到声速255的约0.005。rank768需3倍环境代码与q共享基。强MAP改善是实证，不能只引用无先验失败；后8复核仍是已用环境，不是新确认。最稳妥的解释是**学得的非线性物理变量坐标在这个合成族里同时给出较紧凑的表示与较稳定的低频识别**，不是一个普适的q不可辨识定理。未来跨域实验必须把高维、正则化q作为强对照。
+
 固定确认集首8环境代码的1000/1200Hz附加测试又显示另一边界：在1200Hz，原256段×128模态读出raw仍约0.0066、相位约0.005rad；扩大至512段×192模态仅有3.2%/0.15% raw收益，预设≥20%分辨率收益门槛失败。这说明**至少到1200Hz、在这些系统和声源上**相位残差不主要由输出网格/模态数造成；它不否认更高频、更多散射或3D场需要适配分辨率。该实验不重新拟合代码、无q-PCA同频对照，详见[频率读出审计](SPEED_RESOLUTION_SCALING_ZH.md)。
 
 ![预先固定第一个新环境与1500–1600m视窗的800Hz窄源相位：同色标下PCA旧先验相位漂移、精确已知生成族接近真值](../reports/figures/spectral_taper_phase_example.png)
@@ -72,4 +74,4 @@
 
 ## 复现和证据边界
 
-主结果、所有失败与运行前协议见[相关谱介质记录](SPECTRAL_MEDIUM_STRESS_POC_ZH.md)、[谱统计分布外测试](SPECTRAL_TAPER_SHIFT_POC_ZH.md)、[学习声速确认](LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md)和[完整报告第21–22节](../reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)；[第二物理域 POC 计划](NEXT_CROSS_PHYSICS_POC_ZH.md)仅是下一阶段设计，尚未实施。大NPZ在本机`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/`同名目录，训练标签/代码和JSON指标在`artifacts/`对应目录。阶段十一[post-run清单](../artifacts/coherent_stage11_inventory_20261004/inventory.json)覆盖29组数据、1178份本机NPZ和204个artifact目录，但它不是运行前冻结证据；新32确认的[预真值manifest](../artifacts/coherent_waveguide_spectral_confirm_protocol_20261004/manifest.json)和学习声速新16的提交`5fe88a5`/启动manifest分别承担该职责。既有32环境被精确结构法与噪声条件复核再次使用，不能给它们第二次“全新test”标签；taper10新16与taper7.5新16虽各自独立，仍是同一PDE及合成器家族。
+主结果、所有失败与运行前协议见[相关谱介质记录](SPECTRAL_MEDIUM_STRESS_POC_ZH.md)、[谱统计分布外测试](SPECTRAL_TAPER_SHIFT_POC_ZH.md)、[学习声速确认](LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md)和[完整报告第21–23节](../reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)；[第二物理域 POC 计划](NEXT_CROSS_PHYSICS_POC_ZH.md)仅是下一阶段设计，尚未实施。大NPZ在本机`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/`同名目录，训练标签/代码和JSON指标在`artifacts/`对应目录。阶段十一[post-run清单](../artifacts/coherent_stage11_inventory_20261004/inventory.json)覆盖29组数据、1178份本机NPZ和209个artifact目录，但它不是运行前冻结证据；新32确认的[预真值manifest](../artifacts/coherent_waveguide_spectral_confirm_protocol_20261004/manifest.json)和学习声速新16的提交`5fe88a5`/启动manifest分别承担该职责。既有32环境被精确结构法与噪声条件复核再次使用，不能给它们第二次“全新test”标签；taper10新16与taper7.5新16虽各自独立，仍是同一PDE及合成器家族。

@@ -1,0 +1,68 @@
+{
+  "summary": [
+    {
+      "method": "q_pca768_map_0e+00",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.12601185939538212,
+      "mean_phase_rad": 0.0935529002367372
+    },
+    {
+      "method": "q_pca768_map_0e+00",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.13099657060923814,
+      "mean_phase_rad": 0.10066800618187087
+    },
+    {
+      "method": "q_pca768_map_1e-06",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.031337092421222984,
+      "mean_phase_rad": 0.023862992730911
+    },
+    {
+      "method": "q_pca768_map_1e-06",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.035000350830689586,
+      "mean_phase_rad": 0.02649434926500882
+    },
+    {
+      "method": "q_pca768_map_1e-04",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.1713519105965886,
+      "mean_phase_rad": 0.14455027304600954
+    },
+    {
+      "method": "q_pca768_map_1e-04",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.16428763019069667,
+      "mean_phase_rad": 0.13370650127484462
+    },
+    {
+      "method": "q_pca768_map_1e-02",
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.9155742552931314,
+      "mean_phase_rad": 1.0503791296430192
+    },
+    {
+      "method": "q_pca768_map_1e-02",
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.8706952157001795,
+      "mean_phase_rad": 0.9867246880251883
+    }
+  ],
+  "scope": "POSTHOC bounded Gaussian-code MAP regularization diagnosis on first8 already-used cosine taper7.5 systems, motivated by q768 oracle/deployment gap. Same rank768 q-PCA, same 1024 training labels and 60/100/140 Hz observations, fixed 5+5 GN and prior strengths 0/1e-6/1e-4/1e-2; no true test medium or target in inference. Zero-strength MUST reproduce original q768 deployment on eight systems before interpreting positives. Query outcomes select no formal method; all are development-only. Strength tunes could further improve q, so failure of this bounded sweep is not impossibility of q modeling.",
+  "zero_strength_original_reproduction_passed": true,
+  "mean_inference_seconds_by_method": {
+    "q_pca768_map_0e+00": 14.142779395217076,
+    "q_pca768_map_1e-06": 14.922562644118443,
+    "q_pca768_map_1e-04": 14.80792437971104,
+    "q_pca768_map_1e-02": 14.509477416519076
+  }
+}

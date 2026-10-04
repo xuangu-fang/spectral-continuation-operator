@@ -1,0 +1,44 @@
+{
+  "summary": [
+    {
+      "method": "q_pca768_1e-09",
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.12435502399869312,
+      "mean_phase_rad": 0.09397804950627989,
+      "max_raw": 0.19703880454871284
+    },
+    {
+      "method": "q_pca768_1e-09",
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.1249983966878758,
+      "mean_phase_rad": 0.09568155285634898,
+      "max_raw": 0.2213005901764076
+    },
+    {
+      "method": "q_pca768_1e-07",
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.1230783355971869,
+      "mean_phase_rad": 0.0928581599752632,
+      "max_raw": 0.19805776217945217
+    },
+    {
+      "method": "q_pca768_1e-07",
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.123374663529357,
+      "mean_phase_rad": 0.0942269365726267,
+      "max_raw": 0.2209005117599542
+    }
+  ],
+  "mean_inference_seconds_by_method": {
+    "q_pca768_1e-09": 15.358478945679963,
+    "q_pca768_1e-07": 15.200361519178841
+  },
+  "rank": 768,
+  "per_environment_code_float64_values": 768,
+  "shared_basis_float64_values": 1574912,
+  "scope": "POSTHOC high-capacity q-PCA deployment diagnosis on already-used cosine taper7.5 new16 systems. Same 1024 training medium labels, same saved 60/100/140 Hz clean dense low-band context and same known source/PDE as speed255 and q255, no true test medium or target in inference. Compare rank768 linear q prior against frozen original speed255/q255 results only as a capacity/time tradeoff; rank768 uses 3x per-environment code and 3x q shared basis storage, and 5+5 GN iterations do not imply matched wall time. Two initialization precisions were fixed in prior matched-rank experiment. No formal independent-test status or gate."
+}

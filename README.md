@@ -25,6 +25,8 @@
 
 为什么余弦族收益大而Gaussian族收益小？[额外真介质投影归因](docs/VARIABLE_PROJECTION_ATTRIBUTION_ZH.md)发现：余弦新16中冻结速度/q空间在800Hz的真介质欧氏投影响应raw约0.0024 vs 0.076–0.078；Gaussian旧8两空间都约0.002–0.003。[机制图](reports/figures/spectral_variable_projection_attribution.png)。这些是**读取真测试介质的不可部署oracle**，且欧氏投影不是响应最优下界；它支持非线性变量变换在某些介质族引起相位敏感秩膨胀的假说，但不证明普适性。
 
+**新增强基线边界：** 在同一批**已用**余弦新16系统上，把q-PCA从255升到768维，真介质投影oracle的800Hz双源raw降到约0.0031，证明q线性表示并非原则上无容量；但无持续先验的低频反演反而约0.123。带高斯代码MAP先验的768维低频反演改善到**0.03185/0.03353**（前8选强度、后8仅条件性复核），仍高于固定声速255的0.00538/0.00505；这是**事后开发审计，不是第二次独立确认**。[容量—辨识报告](docs/Q_CAPACITY_ORACLE_AUDIT_ZH.md) · [分信息条件曲线](reports/figures/spectral_q_capacity_audit.png)。真正跨方程的[下一轮POC设计](docs/NEXT_CROSS_PHYSICS_POC_ZH.md)尚未实施。
+
 ## 已经知道什么
 
 **当前最重要的更新（2026-10-04，报告第21节）：** 在更丰富的16×16相关谱介质上，原128维代码虽解释99.86%训练介质方差，800Hz宽/窄源raw仍约0.51/0.50，相位不保真。增至256维训练介质PCA先验、只用60/100/140Hz宽源观测和已知物理反演后，**全新32环境独立确认**的800Hz宽/新2m窄源raw降至**0.01475/0.01532**、相位RMSE **0.01123/0.01170rad**；两源各32/32受益，预设门槛全部通过。固定前8新系统的预登记200–1000Hz曲线在1000Hz仍只有raw **0.0208/0.0202**、相位约0.016rad；见[配对图](reports/figures/spectral_rank256_confirm.png)、[频率曲线](reports/figures/spectral_frequency_curve_confirm.png)和[完整协议与结果](docs/SPECTRAL_MEDIUM_STRESS_POC_ZH.md)。但256维已接近合成器255个随机自由系数，方法是统计PCA先验+经典物理反演；它不是高压缩深神经表示、跨PDE创新或真实海洋验证。低RMS配对对照说明强度会影响128维误差，却不能单独解释其失败。

@@ -1,0 +1,20 @@
+{
+  "summary": [
+    {
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.03236245189554574,
+      "mean_phase_rad": 0.02462943033273799,
+      "max_raw": 0.055574251352973454
+    },
+    {
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.032063088001905105,
+      "mean_phase_rad": 0.024900807186626073,
+      "max_raw": 0.05554225153182241
+    }
+  ],
+  "mean_inference_seconds": 14.554129365598783,
+  "scope": "POSTHOC fixed-strength q-PCA768 MAP check on the latter eight already-used cosine taper7.5 systems. Prior strength 1e-6 was chosen from early first-eight DEV feedback, then frozen in code/config before this method was run on the latter eight. These systems and target fields were previously used for speed255 and unregularized q768 experiments, so this is not an independent method test, only a conditional within-cohort robustness check. Same 1024 training medium labels, clean dense 60/100/140 Hz context, known source/PDE, no test medium or target in inference. No extra hyperparameter sweep on this latter-eight set."
+}

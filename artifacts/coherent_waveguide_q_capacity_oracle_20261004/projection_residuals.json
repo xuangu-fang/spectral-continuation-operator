@@ -1,0 +1,322 @@
+[
+  {
+    "system": 20268000,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.0069652013810279365
+  },
+  {
+    "system": 20268000,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.0032667109189582835
+  },
+  {
+    "system": 20268000,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.001934230537279077
+  },
+  {
+    "system": 20268000,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0003340698981800244
+  },
+  {
+    "system": 20268001,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.005975333342269323
+  },
+  {
+    "system": 20268001,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.003470937247075823
+  },
+  {
+    "system": 20268001,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0020135975263086137
+  },
+  {
+    "system": 20268001,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0004303443048774358
+  },
+  {
+    "system": 20268002,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.007219548433124051
+  },
+  {
+    "system": 20268002,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.004376463853987439
+  },
+  {
+    "system": 20268002,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.002784875273020727
+  },
+  {
+    "system": 20268002,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0005700625744111477
+  },
+  {
+    "system": 20268003,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.006777223211028432
+  },
+  {
+    "system": 20268003,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.0028233937503465397
+  },
+  {
+    "system": 20268003,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0016347561923803573
+  },
+  {
+    "system": 20268003,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.00029542855123022155
+  },
+  {
+    "system": 20268004,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.008667017703974786
+  },
+  {
+    "system": 20268004,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.004526173147562291
+  },
+  {
+    "system": 20268004,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0027398974031985664
+  },
+  {
+    "system": 20268004,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.00048562342422180885
+  },
+  {
+    "system": 20268005,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.006879914377432157
+  },
+  {
+    "system": 20268005,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.003908867902804873
+  },
+  {
+    "system": 20268005,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.002456794157305182
+  },
+  {
+    "system": 20268005,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0004474569500101592
+  },
+  {
+    "system": 20268006,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.007250036013363718
+  },
+  {
+    "system": 20268006,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.0039060864746325724
+  },
+  {
+    "system": 20268006,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0022731698935822804
+  },
+  {
+    "system": 20268006,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0004021901747865606
+  },
+  {
+    "system": 20268007,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.007659540780462831
+  },
+  {
+    "system": 20268007,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.004169318931382467
+  },
+  {
+    "system": 20268007,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0024568929835197414
+  },
+  {
+    "system": 20268007,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0004202595477113212
+  },
+  {
+    "system": 20268008,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.007097096982352772
+  },
+  {
+    "system": 20268008,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.003625702391505096
+  },
+  {
+    "system": 20268008,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.002280719133237916
+  },
+  {
+    "system": 20268008,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.00048240321539424233
+  },
+  {
+    "system": 20268009,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.005002204086786251
+  },
+  {
+    "system": 20268009,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.0028962945916730888
+  },
+  {
+    "system": 20268009,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0017250387977436972
+  },
+  {
+    "system": 20268009,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.00031569538384506566
+  },
+  {
+    "system": 20268010,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.005343350737208664
+  },
+  {
+    "system": 20268010,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.0030918490823830446
+  },
+  {
+    "system": 20268010,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0018248844119687368
+  },
+  {
+    "system": 20268010,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.00031816095082980677
+  },
+  {
+    "system": 20268011,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.005789096551737966
+  },
+  {
+    "system": 20268011,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.003317658623089132
+  },
+  {
+    "system": 20268011,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.002068392283171305
+  },
+  {
+    "system": 20268011,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0003981163145432838
+  },
+  {
+    "system": 20268012,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.007049701162155475
+  },
+  {
+    "system": 20268012,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.003923745506110569
+  },
+  {
+    "system": 20268012,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0023811625977629607
+  },
+  {
+    "system": 20268012,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0004755394240791825
+  },
+  {
+    "system": 20268013,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.006710901239398404
+  },
+  {
+    "system": 20268013,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.0033427890470859485
+  },
+  {
+    "system": 20268013,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0021325978145231342
+  },
+  {
+    "system": 20268013,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0004418605313337244
+  },
+  {
+    "system": 20268014,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.006616561695926427
+  },
+  {
+    "system": 20268014,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.002906396499808567
+  },
+  {
+    "system": 20268014,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0018030519314692205
+  },
+  {
+    "system": 20268014,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.00036717324697896944
+  },
+  {
+    "system": 20268015,
+    "rank": 255,
+    "q_relative_coefficient_projection_residual": 0.005303075596543928
+  },
+  {
+    "system": 20268015,
+    "rank": 384,
+    "q_relative_coefficient_projection_residual": 0.003062707036718314
+  },
+  {
+    "system": 20268015,
+    "rank": 512,
+    "q_relative_coefficient_projection_residual": 0.0020163384310177375
+  },
+  {
+    "system": 20268015,
+    "rank": 768,
+    "q_relative_coefficient_projection_residual": 0.0002790730671891907
+  }
+]

@@ -1,7 +1,7 @@
 {
-  "captured_utc": "2026-10-04T12:11:41.992582+00:00",
+  "captured_utc": "2026-10-04T13:00:14.291903+00:00",
   "capture_type": "post-run working-tree snapshot; not an at-launch source attestation",
-  "git_base": "f5e29b5ae0dd725e0dbeef8511b926de091b241d",
+  "git_base": "0ddfdffabae930beb29b2e363fd2b51376ea61e6",
   "large_files": "NPZ and PT intentionally local-only; regenerate via stored config or resolve these local paths",
   "datasets": {
     "coherent_helmholtz_development_20261003": {
@@ -24425,6 +24425,11 @@
     "src/spectral_continuation/audit_ocean_modal_birth.py": "57d777ca2a31a1e58a2641e2ff1dac12ba44f0f55f0b571466ce45cf0dc4e3f9",
     "src/spectral_continuation/audit_phase_reduced_operator.py": "3086dfba6c374e60cc2eeaaa79afc96c2849ade2be5a263c74b5aa17ffc96707",
     "src/spectral_continuation/audit_phase_rom_envelopes.py": "f00aeb7d8d32ff493c3894871e11081b016c4b70b7671dadf473e554e776ef3e",
+    "src/spectral_continuation/audit_q768_deploy_dev.py": "0fb9b9541a5f97177407c06e14206eb042fbb610411d487d90d549ac1b51a633",
+    "src/spectral_continuation/audit_q768_horizon_dev.py": "387f82cebc94ff03d5a5c6282c6941f45fce23928782db633401a9309eec199d",
+    "src/spectral_continuation/audit_q768_map_check.py": "b5eb616e9e7753870a49c8e1ae1fa674682c3bc78829ccd22b57512085cabce3",
+    "src/spectral_continuation/audit_q768_map_dev.py": "f2f5160924e9db3757e717687dcccabc7f9a795fb2c2154ef0322f71f0837c74",
+    "src/spectral_continuation/audit_q_capacity_oracle.py": "bd09b6d0476ba938ae0d45383aec4a961320686d357652ecd33577348d682b5e",
     "src/spectral_continuation/audit_rom_grid_sensitivity.py": "696d66c5063e5d90b696fc3c9ded7a8f7c841847758f2420b9884346545d67fd",
     "src/spectral_continuation/audit_separable_source_rom.py": "690ac4c05ea568c1248afcf8eee48e23d66e87bd5cf11717bf395750b3501927",
     "src/spectral_continuation/audit_source_space_capacity.py": "ede1f4b465668b9fa9f30f2a2de747dd8c34cca5ce483fd9b4e6368d24397e59",
@@ -24488,7 +24493,7 @@
     "src/spectral_continuation/generate_waveguide_frozen_audit.py": "38accc8b640aeda0d8a38501a734cbf79f41dc065632f90317955c9dd09bfc35",
     "src/spectral_continuation/generate_waveguide_modal_cache.py": "2ccb8d724059b1c11ca937bf1f9ae7650e649bbc0fe3ecee32f64cd26ea4b90e",
     "src/spectral_continuation/generate_waveguide_query_transfer.py": "bda9dd50c0c5b07212eb63878a3e10dcdeafc421a44aa7cc71650374f27ae1e1",
-    "src/spectral_continuation/inventory_coherent_stage.py": "6313e1aab8f34b70caffd326f8ad22e8c382ab468e2da497a2a727a30f937b05",
+    "src/spectral_continuation/inventory_coherent_stage.py": "7852d2484ebd8e7368a358e8273907aaa786e78f1448aadd7615ca0965e0f961",
     "src/spectral_continuation/learned_coherent_kernel.py": "f210bbe0d23e965434d69f0b0f9f7726085fb59cca2a7d61837aef6b3d7d6676",
     "src/spectral_continuation/learned_phase_rom.py": "a358fdf9f57cae1d77c1284e2966f143dbd15b16c7888b5e5794e1baf08a7362",
     "src/spectral_continuation/learned_source_space.py": "f6da42847e3dc94b3dc1da72af17a1aeabb908c0f6dc7234fd86551781ec37d0",
@@ -24507,6 +24512,7 @@
     "src/spectral_continuation/plot_learned_speed_manifold_confirm.py": "5e2204a7d81176d5a4cebedf1e53b03cba0498b19c5376b7b09e596f0e12c748",
     "src/spectral_continuation/plot_learned_speed_manifold_phase.py": "e41aac898fbd5c39b57320cce9407d113d24962644b6acd70afc93cd8842bdf7",
     "src/spectral_continuation/plot_phase_rom_progress.py": "c829f519a6c6537304f2fb07219da92e888ba637f84ef1c1145a6df4394bd434",
+    "src/spectral_continuation/plot_q_capacity_audit.py": "418c91eafe449bfa38836124989dbd669df908f5c552eb769a9cf2924ee9fcdc",
     "src/spectral_continuation/plot_variable_projection_attribution.py": "890f2641f953d46ff9c91f86f5d08138afec626131a5c1f8917baf4e8b29d5ed",
     "src/spectral_continuation/plot_waveguide_medium_families.py": "10e9fbbe7c8531adcb87de016d401a31c98b103af30d85f50c66a6f499b44b9b",
     "src/spectral_continuation/register_waveguide_spectral_confirm.py": "f0b2b412cd687f83183b71ba86df7303520a276c892cc6440a980a43d9393102",
@@ -24535,6 +24541,7 @@
     "tests/test_learned_speed_manifold.py": "6d9e0753745d30b91909c27f93a06f3400cb9122e58112e4e87ed3342b7c3784",
     "tests/test_learned_waveguide_generator.py": "6cfeec173471c12a6057ef00b5d147c2e365c784dd753ab30e25245d451b3f5d",
     "tests/test_mixture_coherent_kernel.py": "ac5ad6686745998d6be252ad95270abf37c93ee5cde3d2402a32acf33b2d040e",
+    "tests/test_q_capacity_diagnostics.py": "a11e14178b1a775933b12238363d88b95203a9454de30a719beae8ddefe9b110",
     "tests/test_separable_background.py": "f6e3b0ac9d3ccc1c5a7507725914a9a1483ae31616fb5cf5f0d80a68c4c87646",
     "tests/test_unrolled_coherent_kernel.py": "e0830a4a4d1a7bb9e9a43c76f2c88b4c4dafaef61f81cfc17c0e393f4201280a",
     "tests/test_waveguide_adiabatic_reference.py": "948cdf0f0efeaa4ec501b1812d72e0ab346fb85196e328f14dc427172baeddef",
@@ -44862,6 +44869,171 @@
           "path": "artifacts/coherent_waveguide_profile5_newton_20261003/summary.json",
           "bytes": 544,
           "sha256": "acc599d451151a67873de65b2e39e3f6c207c410cfe9fc7183af16455b901588"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_waveguide_q768_deploy_dev_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_waveguide_q768_deploy_dev_20261004/config.json",
+          "bytes": 1581,
+          "sha256": "8adb71d9f9e092f69c44d590ebcfbc12f12afafc29b5fdbc57471213cc2caa2c"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_deploy_dev_20261004/history.json",
+          "bytes": 141528,
+          "sha256": "b3e21a80a09a133bfd0a4940ec4fb63dafaf4c83ec5dc1e08300463f345c0131"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_deploy_dev_20261004/manifest.json",
+          "bytes": 7487,
+          "sha256": "3bc0cb37fc95a9afceef6c98a11240de9f1a639622e41ae9e8807d403e2a9619"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_deploy_dev_20261004/results.json",
+          "bytes": 31216,
+          "sha256": "0944a1d739cad1abe7151a21917f733d9122ca68a97011b71e3dd6a092b1e1b6"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_deploy_dev_20261004/summary.json",
+          "bytes": 1753,
+          "sha256": "70abf71397707b9d406bf041ab73b343c6e90ef68f7c226796465f3b092a8f15"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_deploy_dev_20261004/timing.json",
+          "bytes": 3484,
+          "sha256": "3b3fb09649a01b0b9ca8baeb6000191e4620f66e0592933fbeaf9debb31b864c"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_waveguide_q768_horizon_dev_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_waveguide_q768_horizon_dev_20261004/config.json",
+          "bytes": 1384,
+          "sha256": "effcbd55f611bc16809587050916d8ce2e53a9436ce31ac4225f9ce547f74949"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_horizon_dev_20261004/history.json",
+          "bytes": 63733,
+          "sha256": "429abce761ec3f93ae344c7a65ad767943ff9b1e0d0a616471d050a421205375"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_horizon_dev_20261004/manifest.json",
+          "bytes": 4230,
+          "sha256": "748e8bfd0968991a4237aedac92f01d40644bc9e3a010f1d8a54028570f423d8"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_horizon_dev_20261004/results.json",
+          "bytes": 31494,
+          "sha256": "f43dc319346fe73cee6bd0bc31d90205d279eceeab65cdbd5ce5c2bd6f6c3a29"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_horizon_dev_20261004/summary.json",
+          "bytes": 1956,
+          "sha256": "7d916012649e898beeffe1d47b106ce15bf4bb4aa7728176bd5cc3e49661d91b"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_waveguide_q768_map_check_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_check_20261004/config.json",
+          "bytes": 1432,
+          "sha256": "f5ad16ff9f9e88af8e45b4ed2eca8a8ac5f717b2bb5030e259ea3e407db9a489"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_check_20261004/history.json",
+          "bytes": 35183,
+          "sha256": "d3b9eb21aea59f2cabd74c839938eb3baba88647ebb9ca351438825c8674bdef"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_check_20261004/manifest.json",
+          "bytes": 4452,
+          "sha256": "78d3f991bde090b94f54e7fbea61fd728508ef6acc159fd8afc4d32d8f118282"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_check_20261004/results.json",
+          "bytes": 8139,
+          "sha256": "cbab4b308d2682c599e8db6cc6bd59e32fcb63fa9c8c52ce894749074a1c5a6e"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_check_20261004/summary.json",
+          "bytes": 1071,
+          "sha256": "e336bf4a6515bc7104f89026bf19e8430677442850a1425e845e08f98ebd7815"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_check_20261004/timing.json",
+          "bytes": 616,
+          "sha256": "ceb8f82af8316f4b3dba2a9c83974228a2ff84cfc293d2e76087c36e3dabe3f8"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_waveguide_q768_map_dev_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_dev_20261004/config.json",
+          "bytes": 1606,
+          "sha256": "5a94ba23a5f8da8a77c6329e49332fcb6e89dfc66c203ed37e99d4489327cd19"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_dev_20261004/history.json",
+          "bytes": 152099,
+          "sha256": "08da08105d35092a497f9856eb4ddaa8e915b0778ce1214dff4e1290469d90ff"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_dev_20261004/manifest.json",
+          "bytes": 4432,
+          "sha256": "e01dc43434c9df7eb9ce76ab51a369846b0b69736fb616f819c43328092c9361"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_dev_20261004/results.json",
+          "bytes": 31738,
+          "sha256": "0db347ea5fd910e1a96f5b9d2f83d0b1716862c69379911fbd7a32182fbb7c11"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_dev_20261004/summary.json",
+          "bytes": 2364,
+          "sha256": "d278e08478b6c5937ed9c4110d705ac572f816dfdf342ec4a367095e86ac6de2"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q768_map_dev_20261004/timing.json",
+          "bytes": 3612,
+          "sha256": "98ac3948be318f1110d4bcc45a644208b6edc0850b4650dcf7aeb81f01b5f94b"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_waveguide_q_capacity_oracle_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_waveguide_q_capacity_oracle_20261004/config.json",
+          "bytes": 1624,
+          "sha256": "1b847e88949daa76578137f6123ce1196bd5ae50c821f816763f157963eaf2b0"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q_capacity_oracle_20261004/manifest.json",
+          "bytes": 4836,
+          "sha256": "70992398d9f525eecfd7c915df1fd9c05064de485195696f4cde7ae84ff615a0"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q_capacity_oracle_20261004/projection_residuals.json",
+          "bytes": 7786,
+          "sha256": "706c21b7b703f934a33e522503347e3c003c996162c802037f3c56a0ca7d023b"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q_capacity_oracle_20261004/results.json",
+          "bytes": 68123,
+          "sha256": "b0bc8497b02280d3c354397a81f651ea1e77ee27eac2f38a644f617e4b4ccc7c"
+        },
+        {
+          "path": "artifacts/coherent_waveguide_q_capacity_oracle_20261004/summary.json",
+          "bytes": 4131,
+          "sha256": "da1520d113f89b61171784688ed3ee103378496f7c1136041d338c414552318c"
         }
       ]
     },

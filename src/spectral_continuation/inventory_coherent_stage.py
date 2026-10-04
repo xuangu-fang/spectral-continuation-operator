@@ -179,6 +179,8 @@ def run(root, output):
         "*speed_variable*.py",
         "*speed_resolution*.py",
         "*variable_projection*.py",
+        "*q_capacity*.py",
+        "*q768*.py",
     ]:
         sources.update((root / "src/spectral_continuation").glob(pattern))
     sources.update((root / "tests").glob("test_*coherent*.py"))
@@ -192,6 +194,7 @@ def run(root, output):
         "test_*helmholtz*.py",
         "test_*separable*.py",
         "test_*learned_speed*.py",
+        "test_*q_capacity*.py",
     ]:
         sources.update((root / "tests").glob(pattern))
     artifacts = []
