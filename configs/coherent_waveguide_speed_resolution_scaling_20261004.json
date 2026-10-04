@@ -1,0 +1,33 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "confirm_config": "configs/coherent_waveguide_learned_speed_manifold_confirm_20261004.json",
+  "frozen_priors": "artifacts/coherent_waveguide_learned_speed_manifold_dev_20261004/learned_priors.npz",
+  "frozen_priors_sha256": "8f41a634f781c9ba56715595b0c1e0ecf9d305d8000b30609d4479620c3559e1",
+  "frozen_confirm_codes": "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004",
+  "systems": [20268000, 20268001, 20268002, 20268003, 20268004, 20268005, 20268006, 20268007],
+  "audit_systems": [20268200, 20268201],
+  "frequencies_hz": [1000, 1200],
+  "taper_scale": 7.5,
+  "terms": 16,
+  "perturbation_rms_m_s": 15.0,
+  "teacher_cells": 1024,
+  "teacher_modes": 256,
+  "teacher_quadrature_nodes": 384,
+  "audit_cells": 2048,
+  "audit_modes": 320,
+  "audit_quadrature_nodes": 512,
+  "decoder_variants": [
+    {"name": "fixed_256x128", "cells": 256, "modes": 128},
+    {"name": "range_512x128", "cells": 512, "modes": 128},
+    {"name": "modal_256x192", "cells": 256, "modes": 192},
+    {"name": "adaptive_512x192", "cells": 512, "modes": 192}
+  ],
+  "gate_1200hz_both_sources": {
+    "adaptive_mean_raw_at_most": 0.03,
+    "adaptive_mean_phase_rad_at_most": 0.03,
+    "adaptive_raw_improvement_vs_fixed_at_least": 0.20,
+    "numerical_audit_max_raw_below": 0.001
+  },
+  "output_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_speed_resolution_scaling_20261004",
+  "scope": "Conditional fixed-code high-frequency resolution diagnostic on the FIRST8 already-used taper7.5 confirmation systems only, NOT independent confirmation. Generate new 1000/1200Hz truth with adequate teacher modes and 2 fresh numerical audit systems after protocol commit. NEVER retrain/refit or select code using these targets. Compare four deterministic physical readout resolutions from identical frozen speed coordinates: 256/512 range cells x128/192 modal states; q baseline not part of this particular decoder-only audit. Full >=50m raw complex RelL2 and circular phase RMSE, both original and narrow2m sources; no global phase alignment."
+}
