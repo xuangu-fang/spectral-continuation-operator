@@ -11,3 +11,5 @@
 运行后填写数值审计与数据来源，未通过则明确停止。
 
 补充一个不借助新模型的**完整场强经典对照**：对上述已生成8个pilot系统，取三个频率的完整65×65复场，隐藏纹理系数和所有Gaussian幅值/位置，仍公开源、边界损耗和方程，用正弦谱导数逐点识别实慢度，再由同PDE查询11.3/17。配置/源码在运行前提交见[`configs/coherent_helmholtz_multiscale_fullfield_classic_20261004.json`](../configs/coherent_helmholtz_multiscale_fullfield_classic_20261004.json)。这不是主任务的有限接收线设置；若误差已接近数值底噪，不能为了找学习优势只换一个更复杂介质而保留完整场信息。
+
+旧系统65×65完整场经典方法接近数值底噪，而新pilot同信息条件初步误差很大。为了避免把空间欠采样/求导失真包装成神经表示机会，再固定**同8旧pilot**完整复场观察网格65/129/257的正弦谱识别对照；方程、三个低频、两个查询和目标真值都不变，隐藏介质系数，65结果需严格复现。配置见[`configs/coherent_helmholtz_multiscale_sampling_audit_20261004.json`](../configs/coherent_helmholtz_multiscale_sampling_audit_20261004.json)。更高网格给更多观测信息，不是和65模型的同信息排行榜；只定位机制。

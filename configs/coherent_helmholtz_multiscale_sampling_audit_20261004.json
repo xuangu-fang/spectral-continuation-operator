@@ -1,0 +1,12 @@
+{
+  "source_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004",
+  "source_65_results": "artifacts/coherent_helmholtz_multiscale_fullfield_classic_20261004/results.json",
+  "systems": [20269600, 20269601, 20269602, 20269603, 20269604, 20269605, 20269606, 20269607],
+  "observation_grids": [65, 129, 257],
+  "teacher_grid": 257,
+  "context_frequencies_hz": [6.0, 10.0, 14.0],
+  "query_frequencies_hz": [11.3, 17.0],
+  "roi": [0.18, 0.82],
+  "max_grid65_reproduction_raw_difference": 1e-9,
+  "scope": "POSTHOC spatial sampling audit on same eight already-used multiscale Helmholtz M0 pilot systems. Hold source/PDE/3 context frequencies/query truths and sine-spectral real-q identification fixed; increase FULL complex-field observation grid 65->129->257 to determine whether poor 65-grid classical performance is a resolution/differentiation artifact. Remove hidden Gaussian/texture parameters before inference. 65-grid result must reproduce preceding classical audit. Grid257 has almost full target-space information and is not comparable to 65-grid learning task; all outcomes development-only."
+}
