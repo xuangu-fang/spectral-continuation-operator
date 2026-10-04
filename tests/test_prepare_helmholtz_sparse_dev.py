@@ -24,7 +24,7 @@ def test_sparse_context_shape_and_private_metadata_removed():
     assert public["samples"][0, 0, 0] == field[0, 32, 88]
     assert public["samples"][2, 64, 3] == field[2, 224, 208]
     assert set(json.loads(public["public_spec"])) == {
-        "seed", "source", "source_width", "sponge_width", "sponge_strength",
+        "source", "source_width", "sponge_width", "sponge_strength",
         "background_loss",
     }
 

@@ -6,5 +6,5 @@
   "y_indices": {"start": 32, "step": 3, "count": 65},
   "context_frequencies_hz": [6.0, 10.0, 14.0],
   "reserved_query_frequencies_hz": [11.3, 17.0],
-  "scope": "DEV-ONLY deterministic four-line observation extraction from eight already-used multiscale 2D Helmholtz pilot systems. Each public file contains exactly 780 complex lowband samples plus public source/loss/BC metadata. No target-frequency fields, full-field lowband arrays, medium maps, or hidden generation parameters are included. Not independent test evidence."
+  "scope": "DEV-ONLY deterministic four-line observation extraction from eight already-used multiscale 2D Helmholtz pilot systems. Each public file contains exactly 780 complex lowband samples plus public source/loss/BC metadata. Public NPZ files omit generator seeds and hidden medium parameters; the local provenance manifest maps opaque ordinal filenames to truth seeds and must not be provided as model input. No target-frequency fields, full-field lowband arrays, or medium maps are included. Not independent test evidence."
 }

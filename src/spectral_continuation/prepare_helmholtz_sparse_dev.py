@@ -11,7 +11,7 @@ import numpy as np
 from .audit_waveguide_spectral_context_robustness import digest
 
 PUBLIC_SPEC_KEYS = (
-    "seed", "source", "source_width", "sponge_width", "sponge_strength",
+    "source", "source_width", "sponge_width", "sponge_strength",
     "background_loss",
 )
 
@@ -71,14 +71,14 @@ def run(config: dict, output: Path) -> None:
     (output / "config.json").write_text(json.dumps(config, indent=2))
     manifest = {"scope": config["scope"], "implementation_sha256": digest(__file__),
                 "source_sha256": {}, "public_sha256": {}}
-    for system in config["systems"]:
+    for ordinal, system in enumerate(config["systems"]):
         source = Path(config["source_data"]) / f"system_{system}_grid257.npz"
         manifest["source_sha256"][str(source)] = digest(source)
         with np.load(source) as data:
+            if json.loads(str(data["spec"]))["seed"] != system:
+                raise ValueError("system seed mismatch")
             public = extract_public_observations(data, config)
-        if json.loads(public["public_spec"])["seed"] != system:
-            raise ValueError("system seed mismatch")
-        destination = output / f"system_{system}_four_lines.npz"
+        destination = output / f"dev_{ordinal:02d}_four_lines.npz"
         np.savez_compressed(destination, **public)
         manifest["public_sha256"][destination.name] = digest(destination)
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2))
