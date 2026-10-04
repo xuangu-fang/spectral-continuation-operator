@@ -106,7 +106,9 @@ def run(config: dict, output: Path) -> None:
     ])
     if speed.min() < 0.4:
         raise ValueError("unsafe prior mean speed")
-    _, loss, source = sample_environment(spec, axis)
+    _, loss, source = sample_environment(
+        {**spec, "centers": [], "widths": [], "contrasts": []}, axis
+    )
     lap = laplacian(config["grid"])
     observations = {}
     for frequency in config["context_frequencies_hz"] + config["query_frequencies_hz"]:
