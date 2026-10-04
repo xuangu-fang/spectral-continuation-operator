@@ -214,6 +214,14 @@ coherent_waveguide_new_systems_high_frequency_20261004/则是**单独冻结的32
 
 阶段九799文件快照不含以上115份新NPZ；待所有本轮运行结束后再记录阶段十post-run hash清单，不把事后清单误称为运行前的冻结manifest。大型NPZ仍保存在本机/mnt/data目录，Git仅保存配置、元数据、图和必要的小型artifact。
 
+## 2026-10-04新增：相关谱介质与确认集合
+
+原压力测试目录 `coherent_waveguide_spectral_medium_20261004/` 保存16×16相关余弦声速扰动、RMS15m/s的一向波导场。训练介质seed20264000–20264511的64距离×16/32深度系数标签及训练PCA先验保存在同名artifact，**不作为模型输入的测试介质标签**。独立首32系统20264600–631的400/800Hz直接目标各32份，合计64份NPZ；每份同时存原宽源与新2m窄源复模态轨迹、4097偏移坐标、513深度坐标、环境spec、相位约定和数据SHA。教师1024单元/160模态/384点积分，审计seed20264700–702的2048/192/512差最大5.75e-5。首32在原128维候选数据生成前冻结，后续rank扫描、响应感知基和rank256开发均是**事后机制实验**，不能倒填为原候选。
+
+新确认集合 `coherent_waveguide_spectral_confirm_20261004/` 仅在首8开发rank256达到预设门槛后立项：seed20265000–031与训练512/原32/审计集合全不交叉；另外20265100–102用于数值审计。相同频率、源、坐标与teacher配置。`artifacts/coherent_waveguide_spectral_confirm_protocol_20261004/manifest.json` 于2026-10-04 06:33:55 UTC、**任何确认真值前**记录新系统、rank256确认gate、配置、训练标签与源码SHA和Git提交；新集合自己的freeze manifest于06:34:33 UTC、数值审计前记录训练先验与生成器源码。确认rank256仍使用原512训练标签；新32介质spec中真实谱系数只供teacher和明确标识的oracle使用，推断通过`background_spec`/`background_modal_carrier`剔除它们。数字结果未出前不能称新集合已完成验证。
+
+这两个集合都是同一种**合成介质统计族且同一单向波方程**，不是第二物理域。原Gaussian环境谱扰动强度与新族不同，跨族误差不能纯粹归因于隐维数；新确认集合只评估同族新系统。大NPZ与介质标签留在本机数据目录/Git ignore的artifact NPZ中，小型配置、哈希、指标和图入版本管理。阶段九的799份快照不包含新数据；全部生成和确认结束后另做post-run inventory，不伪称它是运行前冻结证据。
+
 ## 旧 FDTD 数据的失败如何使用（历史）
 
 `wave_operator/operator_id_64_160.npz` 的粗网格 R0 留点拟合失败被完整保留。
