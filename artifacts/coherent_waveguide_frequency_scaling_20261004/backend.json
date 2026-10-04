@@ -1,0 +1,11 @@
+{
+  "scipy_comparison_raw": [
+    2.206094259135071e-13,
+    2.2382854681402523e-13
+  ],
+  "frequency": 400,
+  "modes": 48,
+  "device": "cuda",
+  "torch_version": "2.8.0+cu128",
+  "hardware": "NVIDIA A100-SXM4-80GB"
+}

@@ -1,0 +1,64 @@
+{
+  "source": "artifacts/coherent_waveguide_frequency_scaling_20261004",
+  "systems": [
+    20261332,
+    20261333,
+    20261334,
+    20261335,
+    20261336,
+    20261337,
+    20261338,
+    20261339
+  ],
+  "system_illustration": 20261332,
+  "illustration_selection": "first system in predeclared development list, not best-performing",
+  "phase_display": "Only illustration hides |truth| < 0.001 crop maximum; metrics unmasked",
+  "display_details": [
+    {
+      "frequency": 140,
+      "method": "frozen_code_cells256_modes32",
+      "low_amplitude_display_fraction": 3.1778819416858666e-05
+    },
+    {
+      "frequency": 140,
+      "method": "frozen_code_cells256_modes128",
+      "low_amplitude_display_fraction": 3.1778819416858666e-05
+    },
+    {
+      "frequency": 140,
+      "method": "full_medium_oracle",
+      "low_amplitude_display_fraction": 3.1778819416858666e-05
+    },
+    {
+      "frequency": 400,
+      "method": "frozen_code_cells256_modes32",
+      "low_amplitude_display_fraction": 0.0
+    },
+    {
+      "frequency": 400,
+      "method": "frozen_code_cells256_modes128",
+      "low_amplitude_display_fraction": 0.0
+    },
+    {
+      "frequency": 400,
+      "method": "full_medium_oracle",
+      "low_amplitude_display_fraction": 0.0
+    },
+    {
+      "frequency": 800,
+      "method": "frozen_code_cells256_modes32",
+      "low_amplitude_display_fraction": 0.0
+    },
+    {
+      "frequency": 800,
+      "method": "frozen_code_cells256_modes128",
+      "low_amplitude_display_fraction": 0.0
+    },
+    {
+      "frequency": 800,
+      "method": "full_medium_oracle",
+      "low_amplitude_display_fraction": 0.0
+    }
+  ],
+  "scope": "development only; numerical/representation audit, not neural performance claim"
+}

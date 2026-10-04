@@ -1,0 +1,42 @@
+[
+  {
+    "system": 20261332,
+    "path": "artifacts/coherent_waveguide_depth_bandwidth_20261004/system20261332_cells256_step5.npz",
+    "sha256": "6fb815734a1d796bf6ee873bcffda81582a28a99e9ddbeb50e9d91c30f6629ca"
+  },
+  {
+    "system": 20261333,
+    "path": "artifacts/coherent_waveguide_depth_bandwidth_20261004/system20261333_cells256_step5.npz",
+    "sha256": "385e8a277aa1fb18b622a97e5b70e2c33d812b47c990487a393b04fbea0203f2"
+  },
+  {
+    "system": 20261334,
+    "path": "artifacts/coherent_waveguide_depth_bandwidth_20261004/system20261334_cells256_step5.npz",
+    "sha256": "d1002a62f0d837d9756c07881687710e76f6146e1ef20e84ae56c55f512504b1"
+  },
+  {
+    "system": 20261335,
+    "path": "artifacts/coherent_waveguide_depth_bandwidth_20261004/system20261335_cells256_step5.npz",
+    "sha256": "bad29dd7c84f227daa233c1dee5ec78b6228ac6f507a2aae3d5b7abd323b13da"
+  },
+  {
+    "system": 20261336,
+    "path": "artifacts/coherent_waveguide_depth_bandwidth_20261004/system20261336_cells256_step5.npz",
+    "sha256": "5e756885e4216ad89565370aa42f785ea942b480e0e02e33f4d5c38195c42f4b"
+  },
+  {
+    "system": 20261337,
+    "path": "artifacts/coherent_waveguide_depth_bandwidth_20261004/system20261337_cells256_step5.npz",
+    "sha256": "f031cf9bf0143a9b7abccba2b8976521642ddab01a846f4290a9936d3c087897"
+  },
+  {
+    "system": 20261338,
+    "path": "artifacts/coherent_waveguide_depth_bandwidth_20261004/system20261338_cells256_step5.npz",
+    "sha256": "ac5a840e0f359291be10eeaeccbca0169e8563e17f8c3e5e7fc660a5a99b46bc"
+  },
+  {
+    "system": 20261339,
+    "path": "artifacts/coherent_waveguide_depth_bandwidth_20261004/system20261339_cells256_step5.npz",
+    "sha256": "d9dc8c26053518b08c79c2b9d0e642c7ef49df1da7cbc9f509c44e1a7fb9e853"
+  }
+]
