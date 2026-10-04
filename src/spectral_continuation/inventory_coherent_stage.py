@@ -27,7 +27,7 @@ def digest(path):
 def run(root, output):
     base = Path("/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets")
     datasets = {}
-    for name, expected in [
+    dataset_specs = [
         ("coherent_helmholtz_development_20261003", 40),
         ("coherent_helmholtz_fine_queries_20261003", 4),
         ("coherent_ocean_fine_queries_20261003", 2),
@@ -53,7 +53,11 @@ def run(root, output):
         ("coherent_waveguide_spectral_medium_20261004", 64),
         ("coherent_waveguide_spectral_confirm_20261004", 64),
         ("coherent_waveguide_spectral_amplitude_matched_dev_20261004", 16),
-    ]:
+    ]
+    frequency_curve_name = "coherent_waveguide_spectral_frequency_curve_20261004"
+    if (base / frequency_curve_name).exists():
+        dataset_specs.append((frequency_curve_name, 40))
+    for name, expected in dataset_specs:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
             raise ValueError(f"incomplete dataset {name}: {len(paths)} != {expected}")
@@ -107,6 +111,7 @@ def run(root, output):
         spectral_medium = name == "coherent_waveguide_spectral_medium_20261004"
         spectral_confirm = name == "coherent_waveguide_spectral_confirm_20261004"
         amplitude_control = name == "coherent_waveguide_spectral_amplitude_matched_dev_20261004"
+        frequency_curve = name == frequency_curve_name
         metadata_paths = set((base / name).glob("*.json"))
         if independent:
             metadata_paths.update((base / name).parent.glob("*.json"))
@@ -122,6 +127,8 @@ def run(root, output):
                 if spectral_confirm
                 else "posthoc first8 spectral development systems with Gaussian-family-matched RMS; tests contrast amplitude only, not independent method confirmation"
                 if amplitude_control
+                else "conditional fixed-code five-frequency follow-up on the first8 confirmation systems; NOT a second independent cohort; run only after confirmation gate"
+                if frequency_curve
                 else "development/training only; not independent test evidence"
             ),
             "files": records,
