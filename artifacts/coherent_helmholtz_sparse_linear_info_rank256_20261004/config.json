@@ -1,0 +1,28 @@
+{
+  "training_medium_labels": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/training_medium_labels.npz",
+  "public_context": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_00_four_lines.npz",
+  "grid": 129,
+  "prior_rank": 256,
+  "randomized_svd_seed": 20261004,
+  "context_frequencies_hz": [
+    6.0,
+    10.0,
+    14.0
+  ],
+  "query_frequencies_hz": [
+    11.3,
+    17.0
+  ],
+  "receiver_line_counts": [
+    2,
+    4
+  ],
+  "relative_complex_noise_rms": [
+    0.01
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "scope": "POSTHOC follow-up to rank64 local audit after observing small rank64 model-based uncertainty and before reading full eight-system rank-capacity oracle summary. At the TRAINING-MEDIUM MEAN and same public DEV source, rank256 standardized linear speed prior from512 training labels, physical Helmholtz tangent solves at grid129; 2/4 receiver lines, assumed1% relative complex noise, queries11.3/17. No DEV target truth or true medium is read. Not a deployed inverse, not numerical-grid257 accuracy, and NOT independent test."
+}

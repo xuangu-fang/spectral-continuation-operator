@@ -1,0 +1,48 @@
+{
+  "rows": [
+    {
+      "receiver_lines": 2,
+      "relative_complex_noise_rms": 0.01,
+      "query_frequency_hz": 11.3,
+      "posterior_trace_over_rank": 0.5958162213501879,
+      "linearized_expected_raw_rms": 0.04413405090138181,
+      "linearized_expected_weighted_phase_rms_rad": 0.043286683729751266
+    },
+    {
+      "receiver_lines": 2,
+      "relative_complex_noise_rms": 0.01,
+      "query_frequency_hz": 17.0,
+      "posterior_trace_over_rank": 0.5958162213501879,
+      "linearized_expected_raw_rms": 0.03428571207351876,
+      "linearized_expected_weighted_phase_rms_rad": 0.033651047723195375
+    },
+    {
+      "receiver_lines": 4,
+      "relative_complex_noise_rms": 0.01,
+      "query_frequency_hz": 11.3,
+      "posterior_trace_over_rank": 0.3888961111084693,
+      "linearized_expected_raw_rms": 0.013073665052846352,
+      "linearized_expected_weighted_phase_rms_rad": 0.012519944437042909
+    },
+    {
+      "receiver_lines": 4,
+      "relative_complex_noise_rms": 0.01,
+      "query_frequency_hz": 17.0,
+      "posterior_trace_over_rank": 0.3888961111084693,
+      "linearized_expected_raw_rms": 0.010232306579002926,
+      "linearized_expected_weighted_phase_rms_rad": 0.009866360944340877
+    }
+  ],
+  "prior": [
+    {
+      "query_frequency_hz": 11.3,
+      "linearized_expected_raw_rms": 0.4494213501812945,
+      "linearized_expected_weighted_phase_rms_rad": 0.4367298660344423
+    },
+    {
+      "query_frequency_hz": 17.0,
+      "linearized_expected_raw_rms": 0.3757180239376388,
+      "linearized_expected_weighted_phase_rms_rad": 0.3514857636063876
+    }
+  ]
+}

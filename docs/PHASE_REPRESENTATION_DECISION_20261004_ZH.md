@@ -56,6 +56,8 @@
 
 新建的[二维多尺度Helmholtz M0 pilot](HELMHOLTZ_MULTISCALE_M0_PILOT_ZH.md)完成数值检查和可复用数据，但**没有第二域方法成绩**。完整65×65低频复场给经典谱反演的查询raw仍约0.000123/0.0000684；最初0.145/0.129是错用旧`q≥1`裁剪范围导致，不能作为学习优势。故下一轮必须改变有真实需求的观测条件（如有限接收线），不是对完整场再加一个网络；同时比较正确物理范围下的PDE-MAP与正则化高维q。
 
+四线×65点×三个低频的[模型侧公开输入](HELMHOLTZ_SPARSE_CONTEXT_ZH.md)已从同8开发环境生成且剔除隐藏介质/随机种子。进一步的[局部信息—容量审计](HELMHOLTZ_SPARSE_INFO_AUDIT_ZH.md)显示：64维先验的四线1%假定噪声模型内查询raw预期虽仅约0.003–0.004，但**读取真实介质**的64维投影oracle竟约0.06；256维投影约0.008–0.009，四线局部后验预期约0.010–0.013。前者仅局部线性模型、后者不可部署；二者不等于实际重建。它收紧了下一步：要证明高容量环境坐标在有限观测下真实可辨识且优于强同信息物理逆解，而不是再单独夸低维压缩或理想化Jacobian。
+
 固定确认集首8环境代码的1000/1200Hz附加测试又显示另一边界：在1200Hz，原256段×128模态读出raw仍约0.0066、相位约0.005rad；扩大至512段×192模态仅有3.2%/0.15% raw收益，预设≥20%分辨率收益门槛失败。这说明**至少到1200Hz、在这些系统和声源上**相位残差不主要由输出网格/模态数造成；它不否认更高频、更多散射或3D场需要适配分辨率。该实验不重新拟合代码、无q-PCA同频对照，详见[频率读出审计](SPEED_RESOLUTION_SCALING_ZH.md)。
 
 ![预先固定第一个新环境与1500–1600m视窗的800Hz窄源相位：同色标下PCA旧先验相位漂移、精确已知生成族接近真值](../reports/figures/spectral_taper_phase_example.png)
@@ -76,4 +78,4 @@
 
 ## 复现和证据边界
 
-主结果、所有失败与运行前协议见[相关谱介质记录](SPECTRAL_MEDIUM_STRESS_POC_ZH.md)、[谱统计分布外测试](SPECTRAL_TAPER_SHIFT_POC_ZH.md)、[学习声速确认](LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md)和[完整报告第21–24节](../reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)；[第二物理域 POC 计划](NEXT_CROSS_PHYSICS_POC_ZH.md)只完成M0数据pilot，方法验证尚未实施。大NPZ在本机`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/`同名目录，训练标签/代码和JSON指标在`artifacts/`对应目录。阶段十一[post-run清单](../artifacts/coherent_stage11_inventory_20261004/inventory.json)覆盖30组数据、1186份本机复场NPZ、额外1份速度训练标签NPZ和214个artifact目录，但它不是运行前冻结证据；新32确认的[预真值manifest](../artifacts/coherent_waveguide_spectral_confirm_protocol_20261004/manifest.json)、学习声速新16的提交`5fe88a5`以及二维M0提交`518ff59`/启动manifest分别承担该职责。既有32环境被精确结构法与噪声条件复核再次使用，不能给它们第二次“全新test”标签；taper10新16与taper7.5新16虽各自独立，仍是同一PDE及合成器家族。
+主结果、所有失败与运行前协议见[相关谱介质记录](SPECTRAL_MEDIUM_STRESS_POC_ZH.md)、[谱统计分布外测试](SPECTRAL_TAPER_SHIFT_POC_ZH.md)、[学习声速确认](LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md)和[完整报告第21–24节](../reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)；[第二物理域 POC 计划](NEXT_CROSS_PHYSICS_POC_ZH.md)只完成M0数据pilot与[四线开发输入](HELMHOLTZ_SPARSE_CONTEXT_ZH.md)，方法验证尚未实施。大NPZ在本机`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/`同名目录，训练标签/代码和JSON指标在`artifacts/`对应目录。阶段十一[post-run清单](../artifacts/coherent_stage11_inventory_20261004/inventory.json)覆盖31组数据、1194份本机复场/复观测NPZ（含同8开发系统的四线副本）、额外1份速度训练标签NPZ和214个artifact目录，但它不是运行前冻结证据；新32确认的[预真值manifest](../artifacts/coherent_waveguide_spectral_confirm_protocol_20261004/manifest.json)、学习声速新16的提交`5fe88a5`以及二维M0提交`518ff59`/启动manifest分别承担该职责。既有32环境被精确结构法与噪声条件复核再次使用，不能给它们第二次“全新test”标签；taper10新16与taper7.5新16虽各自独立，仍是同一PDE及合成器家族。

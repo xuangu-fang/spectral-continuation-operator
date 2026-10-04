@@ -1,0 +1,29 @@
+{
+  "training_medium_labels": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/training_medium_labels.npz",
+  "dev_truth": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004",
+  "systems": [
+    20269600,
+    20269601,
+    20269602,
+    20269603,
+    20269604,
+    20269605,
+    20269606,
+    20269607
+  ],
+  "ranks": [
+    64,
+    128,
+    256
+  ],
+  "randomized_svd_seed": 20261004,
+  "query_frequencies_hz": [
+    11.3,
+    17.0
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "scope": "POSTHOC oracle capacity audit on eight ALREADY-USED multiscale 2D Helmholtz DEV systems. Read TRUE test speed at grid65, Euclidean-project into speed PCA rank64/128/256 trained on512 medium labels, spline to grid257 and physically solve the two query fields. Include full true-grid65 interpolation as a floor. All methods READ TRUE TEST MEDIUM and are NONDEPLOYABLE; Euclidean projection is not the best response lower bound. Purpose is to interpret the rank64 local sparse-response information audit, not a learned-method score or independent test."
+}

@@ -1,0 +1,77 @@
+{
+  "summary": [
+    {
+      "method": "true_speed_grid65_interp",
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 1.1214298902983214e-05,
+      "mean_phase_rad": 7.89993724771156e-06,
+      "max_raw": 2.0554378470197975e-05,
+      "max_clip_fraction": 0.0
+    },
+    {
+      "method": "true_speed_grid65_interp",
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 1.1582609284548584e-05,
+      "mean_phase_rad": 7.937539726987474e-06,
+      "max_raw": 2.1311328073368544e-05,
+      "max_clip_fraction": 0.0
+    },
+    {
+      "method": "true_speed_pca64",
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.062256011556366925,
+      "mean_phase_rad": 0.047967802030233195,
+      "max_raw": 0.0774665751103401,
+      "max_clip_fraction": 0.0
+    },
+    {
+      "method": "true_speed_pca64",
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 0.06327072736265445,
+      "mean_phase_rad": 0.04682754797104083,
+      "max_raw": 0.0839087491090475,
+      "max_clip_fraction": 0.0
+    },
+    {
+      "method": "true_speed_pca128",
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.03397574549537312,
+      "mean_phase_rad": 0.02252225764603336,
+      "max_raw": 0.044656713052981196,
+      "max_clip_fraction": 0.0
+    },
+    {
+      "method": "true_speed_pca128",
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 0.03761094111823955,
+      "mean_phase_rad": 0.02364691720454829,
+      "max_raw": 0.05163929489987762,
+      "max_clip_fraction": 0.0
+    },
+    {
+      "method": "true_speed_pca256",
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.008188555322557975,
+      "mean_phase_rad": 0.005457790074638055,
+      "max_raw": 0.012567532729842783,
+      "max_clip_fraction": 0.0
+    },
+    {
+      "method": "true_speed_pca256",
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 0.009345022570563917,
+      "mean_phase_rad": 0.0059792643039012165,
+      "max_raw": 0.014231162468896533,
+      "max_clip_fraction": 0.0
+    }
+  ],
+  "scope": "POSTHOC oracle capacity audit on eight ALREADY-USED multiscale 2D Helmholtz DEV systems. Read TRUE test speed at grid65, Euclidean-project into speed PCA rank64/128/256 trained on512 medium labels, spline to grid257 and physically solve the two query fields. Include full true-grid65 interpolation as a floor. All methods READ TRUE TEST MEDIUM and are NONDEPLOYABLE; Euclidean projection is not the best response lower bound. Purpose is to interpret the rank64 local sparse-response information audit, not a learned-method score or independent test."
+}

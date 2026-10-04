@@ -1,0 +1,17 @@
+{
+  "scope": "POSTHOC local first-order identifiability diagnostic at the TRAINING-MEDIUM MEAN and a public DEV source, not a deployed inverse/method score. Rank64 standardized linear speed prior from512 training medium labels, physical Helmholtz tangent solves at grid129. Compare expected query-field raw and phase uncertainty under a Gaussian linearization for 1/2/4 receiver lines and 0.1/1/5 percent relative complex noise. No DEV target truth or true medium is read; grid129 sensitivities are not a grid257 accuracy certificate.",
+  "implementation_sha256": "b4bbcaab46b16efb79ff43669f038a626695be19cfd50fa1d873aacb03ee3533",
+  "training_labels_sha256": "2c64ebdfae30cd343424997ddf0b149ea779b5267f5f872968e65828be44d995",
+  "public_context_sha256": "3eba459354222937767d0d9b1dab85177077007be450c48a3a7561ece19f234c",
+  "label_singular_top": [
+    18.65489497749138,
+    15.513621787980647,
+    15.119027649416328,
+    12.733018407246357,
+    11.21059229583692
+  ],
+  "mean_speed_range": [
+    0.9812120875678113,
+    1.0057983008446174
+  ]
+}

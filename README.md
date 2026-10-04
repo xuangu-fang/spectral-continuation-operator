@@ -14,6 +14,8 @@
 | 当前故事和下一阶段的取舍 | [当前主线与路线图](docs/CURRENT_STORY_AND_ROADMAP_ZH.md) |
 | 真正跨方程的下一轮实验如何设计 | [第二物理域 POC 计划](docs/NEXT_CROSS_PHYSICS_POC_ZH.md) |
 | 第二物理域数据pilot与经典强基线纠错 | [二维多尺度 Helmholtz M0](docs/HELMHOLTZ_MULTISCALE_M0_PILOT_ZH.md) |
+| 下一轮四线有限观测的公开输入与防泄漏边界 | [Helmholtz四线开发输入](docs/HELMHOLTZ_SPARSE_CONTEXT_ZH.md) |
+| 四线是否有信息、声速代码是否有容量 | [四线局部信息—容量审计](docs/HELMHOLTZ_SPARSE_INFO_AUDIT_ZH.md) |
 | 本次24小时目标、阶段和门槛 | [执行协议](docs/COHERENT_CONTINUOUS_REPRESENTATION_24H_ZH.md) |
 | 数据怎么生成、哪些能复用 | [数据来源](docs/COHERENT_DATA_PROVENANCE_ZH.md) |
 | Agent接手、避免重复实验 | [AGENTS](AGENTS.md)、[当前状态](docs/CURRENT_STATUS_ZH.md)、[实验账本](docs/EXPERIMENT_LEDGER_ZH.md) |
@@ -29,6 +31,10 @@
 **新增强基线边界：** 在同一批**已用**余弦新16系统上，把q-PCA从255升到768维，真介质投影oracle的800Hz双源raw降到约0.0031，证明q线性表示并非原则上无容量；但无持续先验的低频反演反而约0.123。带高斯代码MAP先验的768维低频反演改善到**0.03185/0.03353**（前8选强度、后8仅条件性复核），仍高于固定声速255的0.00538/0.00505；这是**事后开发审计，不是第二次独立确认**。[容量—辨识报告](docs/Q_CAPACITY_ORACLE_AUDIT_ZH.md) · [分信息条件曲线](reports/figures/spectral_q_capacity_audit.png)。真正跨方程的[下一轮POC设计](docs/NEXT_CROSS_PHYSICS_POC_ZH.md)只完成了M0数据pilot，**尚无第二域方法成绩**。
 
 **第二物理域M0边界（新增）：** 二维含回散射、多尺度介质的512训练标签/8开发系统和257→513数值审计已生成，最坏网格raw0.00198，数据可复用。但在完整65×65低频复场、已知源/PDE下，正确允许快于背景声速的经典正弦谱反演，查询11.3/17的raw仅**0.000123/0.0000684**；初版0.145/0.129是旧代码错误裁`q≥1`，已留档且**不可作弱对照**。[M0数据、纠错与结论](docs/HELMHOLTZ_MULTISCALE_M0_PILOT_ZH.md)。有限接收线的正式验证仍未做。
+
+四线×65点×三低频的**开发输入已切片并去除介质/随机种子泄漏**；它只是未来同信息强基线/最小学习方法的共同输入，尚无四线方法分数，8个已用开发系统不能称新测试。[文件schema和复用说明](docs/HELMHOLTZ_SPARSE_CONTEXT_ZH.md)。
+
+**四线事后可行性审计：** 在训练平均介质附近的线性高斯模型中，假定1%复噪声时256维声速先验的四线查询raw预期标准差为11.3/17频率 **0.0131/0.0102**；但这不是实际预测。另一个额外读取8个开发环境**真实介质**的不可部署投影显示：64维代码的目标raw仍 **0.0623/0.0633**，256维为 **0.00819/0.00935**。这明确把“能装下相位信息”和“四线能辨识代码”分开，尚不能据此声称第二域学得方法有效。[图和完整边界](docs/HELMHOLTZ_SPARSE_INFO_AUDIT_ZH.md)。
 
 ## 已经知道什么
 

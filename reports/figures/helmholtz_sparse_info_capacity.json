@@ -1,0 +1,7 @@
+{
+  "scope": "LEFT: rank64/256 Gaussian prior LOCAL LINEARIZATION at training mean/public DEV source and assumed 1% complex RMS noise; expected error, NOT measured reconstruction. RIGHT: true DEV medium projected to trained PCA then query solved; oracle READS TRUE MEDIUM, not deployable or same-information method. Different information assumptions; do not compare panel heights as a leaderboard.",
+  "local_info_sha256": "80c7d31ccee67e777fff9fa7544c93459365e2bc175fa6f167ab426f9ff53cd3",
+  "local_info_rank256_sha256": "68a5ced9ef613b35788332149494ca34fb3092e0ea9659ddba1ee3602c91274c",
+  "capacity_summary_sha256": "a1a4102f5f2d062fc3f7d70c4af775c979906c4d2e98ff198a31fc80046b71a4",
+  "implementation_sha256": "01c00b94b92749514aee266f871c5d233cda19d4e68b5b604c8553aefe0e95c2"
+}
