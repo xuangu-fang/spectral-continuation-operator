@@ -125,12 +125,40 @@ def phase_illustration(base, new, source, output):
 
 def plot(base_path, new_path, output):
     source = json.loads((base_path / "config.json").read_text())
+    inference_config = json.loads((new_path / "config.json").read_text())
     base_rows = json.loads((base_path / "results.json").read_text())
     new_rows = json.loads((new_path / "results.json").read_text())
     if len(base_rows) != 20 * len(source["systems"]) or len(new_rows) != 8 * len(source["systems"]):
         raise ValueError("complete independent cohort required")
     records = summarize(base_rows, new_rows, source["systems"],
                         source["query_frequencies"], source["source_variants"])
+    thresholds = inference_config["confirm_gate"]
+    at_800 = [row for row in records if row["frequency"] == 800]
+    gate = {
+        "raw_mean": all(
+            row["rank256_raw"] <= thresholds["rank256_800hz_both_sources_mean_raw_at_most"]
+            for row in at_800
+        ),
+        "phase_mean": all(
+            row["rank256_phase_rmse_rad"]
+            <= thresholds["rank256_800hz_both_sources_mean_phase_rmse_rad_at_most"]
+            for row in at_800
+        ),
+        "raw_improvement": all(
+            row["relative_improvement"]
+            >= thresholds["rank256_both_sources_raw_improvement_over_original_rank128_at_least"]
+            for row in at_800
+        ),
+        "system_wins": all(
+            row["system_wins"] >= thresholds["rank256_both_sources_system_wins_at_least"]
+            for row in at_800
+        ),
+        "worst_system_raw": all(
+            row["max_rank256_system_raw"]
+            <= thresholds["rank256_800hz_both_sources_max_system_raw_at_most"]
+            for row in at_800
+        ),
+    }
     output.parent.mkdir(parents=True, exist_ok=True)
     lookup_base = {(r["system"], r["frequency"], r["source"]): r for r in base_rows
                    if r["method"] == "prior32"}
@@ -173,6 +201,8 @@ def plot(base_path, new_path, output):
         "rank256_results_sha256": digest(new_path / "results.json"),
         "paired_bootstrap_unit": "physical system", "paired_bootstrap_repetitions": 10000,
         "paired_bootstrap_seed": 20261004, "records": records,
+        "predeclared_gate": thresholds, "gate_checks": gate,
+        "gate_passed": all(gate.values()),
         "illustration": illustration,
     }, indent=2))
 

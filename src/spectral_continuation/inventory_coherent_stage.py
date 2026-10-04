@@ -48,6 +48,11 @@ def run(root, output):
         ("coherent_waveguide_frozen_system_audit_20261003/original", 64),
         ("coherent_waveguide_frozen_system_audit_20261003/narrow", 64),
         ("coherent_waveguide_operator_action_20261004", 11),
+        ("coherent_waveguide_frequency_scaling_20261004", 51),
+        ("coherent_waveguide_new_systems_high_frequency_20261004", 64),
+        ("coherent_waveguide_spectral_medium_20261004", 64),
+        ("coherent_waveguide_spectral_confirm_20261004", 64),
+        ("coherent_waveguide_spectral_amplitude_matched_dev_20261004", 16),
     ]:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -56,18 +61,22 @@ def run(root, output):
         for path in paths:
             with np.load(path, allow_pickle=False) as z:
                 value_key = next(
-                    key for key in ["field", "modal_coefficients", "transfer", "coarse"] if key in z
+                    key for key in ["field", "modal_coefficients", "transfer", "coarse", "coarse140"]
+                    if key in z
                 )
                 field = z[value_key]
                 frequency_key = next(
                     (key for key in ["frequencies", "frequencies_hz", "frequency_hz"] if key in z),
                     None,
                 )
-                frequencies = (
-                    z[frequency_key].tolist()
-                    if frequency_key
-                    else [json.loads((base / name / "config.json").read_text())["frequency"]]
-                )
+                if frequency_key:
+                    frequencies = z[frequency_key].tolist()
+                else:
+                    metadata = json.loads((base / name / "config.json").read_text())
+                    frequencies = metadata.get(
+                        "audit_frequencies",
+                        metadata.get("query_frequencies", [metadata.get("frequency")]),
+                    )
                 if not np.iscomplexobj(field) or not np.isfinite(field).all():
                     raise ValueError(f"invalid complex data: {path}")
                 extra_arrays = {}
@@ -76,6 +85,11 @@ def run(root, output):
                     if not np.iscomplexobj(fine) or not np.isfinite(fine).all():
                         raise ValueError(f"invalid audit pair: {path}")
                     extra_arrays["fine"] = {"shape": list(fine.shape), "dtype": str(fine.dtype)}
+                for key in sorted(k for k in z.files if k.startswith("fine") and k != "fine"):
+                    fine = z[key]
+                    if not np.iscomplexobj(fine) or not np.isfinite(fine).all():
+                        raise ValueError(f"invalid audit pair: {path} {key}")
+                    extra_arrays[key] = {"shape": list(fine.shape), "dtype": str(fine.dtype)}
                 records.append(
                     {
                         "path": str(path),
@@ -89,6 +103,10 @@ def run(root, output):
                     }
                 )
         independent = name.startswith("coherent_waveguide_frozen_system_audit_20261003/")
+        new_independent = name == "coherent_waveguide_new_systems_high_frequency_20261004"
+        spectral_medium = name == "coherent_waveguide_spectral_medium_20261004"
+        spectral_confirm = name == "coherent_waveguide_spectral_confirm_20261004"
+        amplitude_control = name == "coherent_waveguide_spectral_amplitude_matched_dev_20261004"
         metadata_paths = set((base / name).glob("*.json"))
         if independent:
             metadata_paths.update((base / name).parent.glob("*.json"))
@@ -96,6 +114,14 @@ def run(root, output):
             "evidence": (
                 "independent64IID environments20262300–363; candidates frozen before generation; original/narrow are paired queries NOT128independent systems; no current-model tuning"
                 if independent
+                else "independent32IID systems20263400–431; prior16/32 candidates frozen before new data generation; distinct from prior64IID and not a test of later depth64 dev diagnostic"
+                if new_independent
+                else "new correlated-spectral medium statistical family; independent32 systems20264600–631; same one-way waveguide PDE; prior16/32 frozen before new truth; not a second physical domain or a deep-neural-method test"
+                if spectral_medium
+                else "independent new32 correlated-spectral systems20265000–031; rank256 method and gates frozen before truth generation; same PDE and medium family, NOT a second physical domain"
+                if spectral_confirm
+                else "posthoc first8 spectral development systems with Gaussian-family-matched RMS; tests contrast amplitude only, not independent method confirmation"
+                if amplitude_control
                 else "development/training only; not independent test evidence"
             ),
             "files": records,
@@ -120,6 +146,8 @@ def run(root, output):
         "*frozen_generator*.py",
         "*generator_frozen*.py",
         "*generator_representation*.py",
+        "*generator_frequency_scaling*.py",
+        "*generator_new_systems*.py",
         "*helmholtz*.py",
         "*separable*.py",
     ]:
