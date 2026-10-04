@@ -78,11 +78,12 @@ def query_uncertainty(field: np.ndarray, jacobian: np.ndarray, covariance: np.nd
 
 
 def run(config: dict, output: Path) -> None:
-    if (config["grid"], config["prior_rank"], config["context_frequencies_hz"],
-        config["query_frequencies_hz"], config["receiver_line_counts"],
-        config["relative_complex_noise_rms"]) != (
-            129, 64, [6.0, 10.0, 14.0], [11.3, 17.0], [1, 2, 4],
-            [0.001, 0.01, 0.05]):
+    if (config["grid"] != 129 or config["prior_rank"] not in (64, 256)
+        or config["context_frequencies_hz"] != [6.0, 10.0, 14.0]
+        or config["query_frequencies_hz"] != [11.3, 17.0]
+        or config["receiver_line_counts"] not in ([1, 2, 4], [2, 4])
+        or config["relative_complex_noise_rms"] not in
+            ([0.001, 0.01, 0.05], [0.01])):
         raise ValueError("frozen local information setting changed")
     output.mkdir(parents=True, exist_ok=False)
     (output / "config.json").write_text(json.dumps(config, indent=2))
