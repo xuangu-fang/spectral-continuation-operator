@@ -1,0 +1,13 @@
+{
+  "training_medium_labels": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/training_medium_labels.npz",
+  "public_context": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/dev_00_four_lines.npz",
+  "grid": 129,
+  "prior_rank": 64,
+  "randomized_svd_seed": 20261004,
+  "context_frequencies_hz": [6.0, 10.0, 14.0],
+  "query_frequencies_hz": [11.3, 17.0],
+  "receiver_line_counts": [1, 2, 4],
+  "relative_complex_noise_rms": [0.001, 0.01, 0.05],
+  "roi": [0.18, 0.82],
+  "scope": "POSTHOC local first-order identifiability diagnostic at the TRAINING-MEDIUM MEAN and a public DEV source, not a deployed inverse/method score. Rank64 standardized linear speed prior from512 training medium labels, physical Helmholtz tangent solves at grid129. Compare expected query-field raw and phase uncertainty under a Gaussian linearization for 1/2/4 receiver lines and 0.1/1/5 percent relative complex noise. No DEV target truth or true medium is read; grid129 sensitivities are not a grid257 accuracy certificate."
+}
