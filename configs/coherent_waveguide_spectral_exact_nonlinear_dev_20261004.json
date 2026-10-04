@@ -1,0 +1,14 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_medium_20261004/config.json",
+  "source_codes": "artifacts/coherent_waveguide_spectral_medium_20261004",
+  "systems": [20264600, 20264601, 20264602, 20264603, 20264604, 20264605, 20264606, 20264607],
+  "range_cosine_terms": 16,
+  "depth_cosine_terms": 16,
+  "depth_terms": 32,
+  "linear_initial_prior_precision": 1e-7,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "gate_800hz_both_sources_mean_raw_at_most": 0.03,
+  "gate_800hz_both_sources_max_raw_at_most": 0.10,
+  "scope": "Extra-information KNOWN exact nonlinear 16x16 speed generator family, but NO test hidden coefficients and NO training-medium labels; posthoc first8 already-inspected spectral development only. Fixed linear initialization precision 1e-7 and exact nonlinear speed-to-slowness 5+5 GN with same low-frequency context. Not matched-information/cost against PCA256 and not independent confirmation."
+}

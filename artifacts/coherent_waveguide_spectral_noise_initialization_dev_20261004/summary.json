@@ -1,0 +1,118 @@
+{
+  "rows": [
+    {
+      "variant": "mean_noisy_initial",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.34735765399984053,
+      "mean_phase_rad": 0.4028474736735294,
+      "max_raw": 1.2170291737588501
+    },
+    {
+      "variant": "mean_noisy_initial",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.3741495984268945,
+      "mean_phase_rad": 0.42930008846841416,
+      "max_raw": 1.1906062665719237
+    },
+    {
+      "variant": "mean_noisy_initial",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.48861041378291503,
+      "mean_phase_rad": 0.5426766349974596,
+      "max_raw": 1.306307214326871
+    },
+    {
+      "variant": "mean_noisy_initial",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.4824161565636248,
+      "mean_phase_rad": 0.5231627552787622,
+      "max_raw": 1.3096957027860627
+    },
+    {
+      "variant": "normal_known_source",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.03542088371226816,
+      "mean_phase_rad": 0.02667547233065379,
+      "max_raw": 0.07100869193174139
+    },
+    {
+      "variant": "normal_known_source",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.039743876558067805,
+      "mean_phase_rad": 0.030695562476258122,
+      "max_raw": 0.07841900638573714
+    },
+    {
+      "variant": "normal_known_source",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.0845469475933128,
+      "mean_phase_rad": 0.06748633577426436,
+      "max_raw": 0.17970647462972433
+    },
+    {
+      "variant": "normal_known_source",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.08887449297771992,
+      "mean_phase_rad": 0.07238003502235753,
+      "max_raw": 0.16770454216410377
+    },
+    {
+      "variant": "mean_known_source",
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.3332803791819123,
+      "mean_phase_rad": 0.39348535554791436,
+      "max_raw": 1.2091492355126994
+    },
+    {
+      "variant": "mean_known_source",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.34317991637416734,
+      "mean_phase_rad": 0.4028070360526261,
+      "max_raw": 1.1864592638735698
+    },
+    {
+      "variant": "mean_known_source",
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.4498923923948441,
+      "mean_phase_rad": 0.5147110312541878,
+      "max_raw": 1.3122917979959023
+    },
+    {
+      "variant": "mean_known_source",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.4340403652825408,
+      "mean_phase_rad": 0.4838779804985349,
+      "max_raw": 1.309426023157793
+    }
+  ],
+  "predeclared_checks": {
+    "mean_noisy_initial": false,
+    "normal_known_source": true,
+    "mean_known_source": false
+  },
+  "any_variant_passed": true
+}

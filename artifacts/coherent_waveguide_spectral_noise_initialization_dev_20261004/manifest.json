@@ -1,0 +1,7 @@
+{
+  "scope": "Posthoc old8 spectral development-only 1% noisy context mechanism audit; exact same random noise and rank256 5+5 GN/targets as failed context robustness; 2x2 isolation of normal-derivative versus mean medium initialization and noisy versus known physical source initial; no regularization retuning or independent claim",
+  "source_config_sha256": "ec51f8c25387ca965f0f6fa34425639278ed408bca745fca5627cf3a781c89d2",
+  "failed_noise_results_sha256": "3d27774c1109f1530ff799b7f8f4d2a9700dda88bf83a1d635ac913cc52f1042",
+  "training_labels_sha256": "fcc6984db88839bcd659606338051df3c8db79c054e994f19e28d7df7eb44876",
+  "implementation_sha256": "fc25ee44d7cf8d1cc6ec8d31293f1d9fb937b0dbe49df4a969d167d24023d555"
+}
