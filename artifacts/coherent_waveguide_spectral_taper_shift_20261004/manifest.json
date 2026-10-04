@@ -1,0 +1,24 @@
+{
+  "scope": "Additional post-main-result fixed-method distribution-shift stress test, NOT a second PDE domain or new primary independent confirmation: old training taper 5, unseen matched-RMS 16x16 cosine media with taper 10, same one-way waveguide and known background/source. Fresh systems and truths generated only after protocol commit. No target-frequency observations. Rank256 PCA prior and 5+5 GN frozen from original IID confirmation. True-medium projection methods are extra-information oracles, not deployable comparators.",
+  "source_config_sha256": "9bbc55cd37594e35ade180df74ee8d821bcca31bab8879d2bf4886a5f0393772",
+  "training_labels_sha256": "fcc6984db88839bcd659606338051df3c8db79c054e994f19e28d7df7eb44876",
+  "implementation_sha256": "e0610f12ca76c5f941ccdba36888456cf00360a9dc5c57bd7e4330deae81b6f3",
+  "systems": [
+    20267000,
+    20267001,
+    20267002,
+    20267003,
+    20267004,
+    20267005,
+    20267006,
+    20267007,
+    20267008,
+    20267009,
+    20267010,
+    20267011,
+    20267012,
+    20267013,
+    20267014,
+    20267015
+  ]
+}

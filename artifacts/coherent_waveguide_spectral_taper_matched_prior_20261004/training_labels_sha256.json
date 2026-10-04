@@ -1,0 +1,9 @@
+{
+  "sha256": "46ed337164fdf387cc74594cb7a61e4e07d4f76d00ac751bd73330cf2c8611fc",
+  "systems": 512,
+  "target_shape": [
+    512,
+    64,
+    32
+  ]
+}

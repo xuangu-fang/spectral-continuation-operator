@@ -228,6 +228,14 @@ coherent_waveguide_new_systems_high_frequency_20261004/则是**单独冻结的32
 
 同已用32系统的1%复模态噪声条件复核在`artifacts/coherent_waveguide_spectral_noise_confirm_20261004/`，含256行双初始化/双频/双源评价及源文件/训练标签SHA，**没有生成新目标真值NPZ**。它固定了此前旧8选出的已知源初态，结果不能被重新称为“又32个独立系统”。随后才预登记[谱相关尺度5→10压力测试](SPECTRAL_TAPER_SHIFT_POC_ZH.md)：将用全新16个系统和32份目标NPZ，介质RMS与16×16余弦基不变；这是**同一PDE的分布外介质统计**，不计作第二物理域。其配置/源码和测试已在生成任何新目标场前由Git提交`15f9aa7`固定；最终数据、指标和post-run SHA清单须等全部完成后补齐。
 
+谱相关尺度变化测试现已完成：新16系统seed20267000–015的400/800Hz宽/窄源直接teacher目标共32份NPZ，目录`coherent_waveguide_spectral_taper_shift_20261004/`；另2个独立数值审计seed20267100–101只产审计JSON，不进入模型评价。artifact同名目录含每系统输入context和部署beta的本地NPZ、192行逐系统结果、summary、运行前manifest与源码/训练标签SHA。它的正交变化是训练谱taper5→新taper10、RMS都15m/s；**不是新PDE**。部署800Hz raw0.4155/0.4350，效果gate失败，准确数值见[记录](SPECTRAL_TAPER_SHIFT_POC_ZH.md)。`003116d`又在已见这些结果后登记了读取真介质和800Hz宽源目标的响应优化oracle；它只使用同一批已有真值作机制归因，不会生成可部署训练数据。最终post-run inventory另补，不能把阶段十旧哈希快照说成涵盖这32份。
+
+单目标800Hz响应oracle已运行在同一16系统，artifact`coherent_waveguide_spectral_taper_response_oracle_20261004/`保存192行（0–5步×双源×16系统）、每步目标上下文残差及预配置SHA；**没有新增独立系统或高频目标NPZ**。它直接读取目标宽源与真实测试介质，宽源raw到0.07536、未拟合窄源仍0.22321，只作PCA欧氏投影是否代表响应容量的诊断。随后代码/协议在`aad6fd6`登记双声源共同目标oracle，同一已用数据、同样不可部署；不得把这两类目标泄漏实验和低频预测表混排。
+
+双声源共同目标oracle现已完成，artifact`coherent_waveguide_spectral_taper_joint_oracle_20261004/`同样保存192行0–5步结果，使用**同16系统的两个800Hz目标复场**与真介质投影初值，最终宽/窄raw0.08293/0.08303。另一个与目标泄漏不同的额外信息控制`coherent_waveguide_spectral_taper_matched_prior_20261004/`由提交`5a7e405`预登记：用全新训练seed20266000–20266511生成512个taper10介质**标签**、不与测试16重叠，重拟合相同rank256并只用原低频context评价原有目标。训练标签NPZ在该artifact本地路径，SHA在`training_labels_sha256.json`；128行部署/真介质投影oracle结果、配置、manifest和历史完整保存。新统计族标签使部署800Hz raw降到0.12705/0.13668，但预设救援门槛失败。这些后补artifact都**不生成新目标场NPZ，也不增加新的测试系统**，不可与原OOD新16数目相加。
+
+**阶段十一最终post-run清单**：`artifacts/coherent_stage11_inventory_20261004/inventory.json`于2026-10-04 10:13:46 UTC捕获27组数据、1130份本机目标/训练数据NPZ及197个小型artifact目录，包含新增taper10目标32份和上述所有后补结果/标签的文件SHA；源码快照SHA也在其中。1130是NPZ**文件数**，不是独立环境数；大NPZ仍在本机`/mnt/data/...`或Git ignored的artifact目录，远端仓库只存复现配置、代码、图和小型指标/哈希。清单是**运行完成后**的盘点，不代替原新32的预真值冻结manifest、taper10实验的提交`15f9aa7`或各自的启动manifest；它的`git_base=5a7e405`只记录当时已提交基点，不代表后来文档提交号。
+
 ## 旧 FDTD 数据的失败如何使用（历史）
 
 `wave_operator/operator_id_64_160.npz` 的粗网格 R0 留点拟合失败被完整保留。

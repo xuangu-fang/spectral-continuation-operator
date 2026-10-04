@@ -57,6 +57,9 @@ def run(root, output):
     frequency_curve_name = "coherent_waveguide_spectral_frequency_curve_20261004"
     if (base / frequency_curve_name).exists():
         dataset_specs.append((frequency_curve_name, 40))
+    taper_shift_name = "coherent_waveguide_spectral_taper_shift_20261004"
+    if (base / taper_shift_name).exists():
+        dataset_specs.append((taper_shift_name, 32))
     for name, expected in dataset_specs:
         paths = sorted((base / name).glob("*.npz"))
         if len(paths) != expected:
@@ -112,6 +115,7 @@ def run(root, output):
         spectral_confirm = name == "coherent_waveguide_spectral_confirm_20261004"
         amplitude_control = name == "coherent_waveguide_spectral_amplitude_matched_dev_20261004"
         frequency_curve = name == frequency_curve_name
+        taper_shift = name == taper_shift_name
         metadata_paths = set((base / name).glob("*.json"))
         if independent:
             metadata_paths.update((base / name).parent.glob("*.json"))
@@ -129,6 +133,8 @@ def run(root, output):
                 if amplitude_control
                 else "conditional fixed-code five-frequency follow-up on the first8 confirmation systems; NOT a second independent cohort; run only after confirmation gate"
                 if frequency_curve
+                else "fresh16 correlation-scale-shift systems20267000–015, RMS matched, taper5 training to taper10 test; post-main-result fixed-method OOD diagnostic within the SAME one-way PDE, not a second physics domain"
+                if taper_shift
                 else "development/training only; not independent test evidence"
             ),
             "files": records,

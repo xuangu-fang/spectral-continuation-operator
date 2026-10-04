@@ -1,0 +1,93 @@
+{
+  "summary": [
+    {
+      "method": "matched_taper10_context",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.05503348933284498,
+      "mean_phase_rad": 0.041066894370882956,
+      "max_raw": 0.09554271985617258
+    },
+    {
+      "method": "matched_taper10_context",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.05929639710421568,
+      "mean_phase_rad": 0.04418044475290659,
+      "max_raw": 0.11485513059752456
+    },
+    {
+      "method": "matched_taper10_context",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.127048429617576,
+      "mean_phase_rad": 0.10171603669929902,
+      "max_raw": 0.2005226891538413
+    },
+    {
+      "method": "matched_taper10_context",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.13667523661084652,
+      "mean_phase_rad": 0.10969675694769196,
+      "max_raw": 0.25379333457576064
+    },
+    {
+      "method": "matched_taper10_true_medium_projection_oracle",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.030481151287200543,
+      "mean_phase_rad": 0.023020103948902457,
+      "max_raw": 0.03887347658386428
+    },
+    {
+      "method": "matched_taper10_true_medium_projection_oracle",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.02972024469573794,
+      "mean_phase_rad": 0.02251509384830785,
+      "max_raw": 0.03642251233043387
+    },
+    {
+      "method": "matched_taper10_true_medium_projection_oracle",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.0672796029829516,
+      "mean_phase_rad": 0.05134563837078848,
+      "max_raw": 0.08315630066232022
+    },
+    {
+      "method": "matched_taper10_true_medium_projection_oracle",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.06516221532059119,
+      "mean_phase_rad": 0.04980741353822821,
+      "max_raw": 0.08804177900159565
+    }
+  ],
+  "comparisons": [
+    {
+      "source": "original",
+      "raw_improvement_vs_fixed_taper5": 0.694255237293214
+    },
+    {
+      "source": "narrow2m",
+      "raw_improvement_vs_fixed_taper5": 0.6857903218787513
+    }
+  ],
+  "gate_checks": {
+    "mean_raw": false,
+    "mean_phase": false,
+    "improvement": false
+  },
+  "all_gates_pass": false,
+  "scope": "POSTHOC matched-statistics rescue control on already-seen16 taper10 OOD systems: fit a NEW rank256 PCA prior from 512 DISJOINT taper10 training-medium LABELS, then keep same 60/100/140Hz context, rank, 5+5 GN, 400/800Hz targets and metrics. Extra target-family training distribution information; NOT OOD generalization or independent test. True-medium projection inside new subspace remains an explicit nondeployable oracle."
+}

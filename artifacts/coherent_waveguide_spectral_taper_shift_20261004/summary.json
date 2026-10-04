@@ -1,0 +1,132 @@
+{
+  "summary": [
+    {
+      "method": "rank256_context",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.18103597158199422,
+      "mean_phase_rad": 0.1405661629779598,
+      "max_raw": 0.25406566348544385,
+      "systems_raw_at_most_0p10": 0
+    },
+    {
+      "method": "rank256_context",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.19520510661124002,
+      "mean_phase_rad": 0.15291959887855394,
+      "max_raw": 0.29405478917919264,
+      "systems_raw_at_most_0p10": 0
+    },
+    {
+      "method": "rank256_context",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.4155375499904065,
+      "mean_phase_rad": 0.3743424634604654,
+      "max_raw": 0.6553267824808123,
+      "systems_raw_at_most_0p10": 0
+    },
+    {
+      "method": "rank256_context",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.434980989217352,
+      "mean_phase_rad": 0.40407306238759133,
+      "max_raw": 0.7718699379185567,
+      "systems_raw_at_most_0p10": 0
+    },
+    {
+      "method": "rank256_true_medium_projection_oracle",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.13001377493483124,
+      "mean_phase_rad": 0.09876170896631112,
+      "max_raw": 0.17209947746161564,
+      "systems_raw_at_most_0p10": 3
+    },
+    {
+      "method": "rank256_true_medium_projection_oracle",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.11938418834995496,
+      "mean_phase_rad": 0.08947843873162592,
+      "max_raw": 0.17189945563498446,
+      "systems_raw_at_most_0p10": 3
+    },
+    {
+      "method": "rank256_true_medium_projection_oracle",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.29250952751132875,
+      "mean_phase_rad": 0.2402125493829146,
+      "max_raw": 0.44578575703723955,
+      "systems_raw_at_most_0p10": 0
+    },
+    {
+      "method": "rank256_true_medium_projection_oracle",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.27886546626842845,
+      "mean_phase_rad": 0.22999687081107562,
+      "max_raw": 0.4425305473507561,
+      "systems_raw_at_most_0p10": 0
+    },
+    {
+      "method": "true_medium32_oracle",
+      "frequency": 400,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.0015185454140311872,
+      "mean_phase_rad": 0.0012487567656605946,
+      "max_raw": 0.0019321676787522684,
+      "systems_raw_at_most_0p10": 16
+    },
+    {
+      "method": "true_medium32_oracle",
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.0014836699289795987,
+      "mean_phase_rad": 0.0011771360352244233,
+      "max_raw": 0.002043272913128859,
+      "systems_raw_at_most_0p10": 16
+    },
+    {
+      "method": "true_medium32_oracle",
+      "frequency": 800,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.002845340202824312,
+      "mean_phase_rad": 0.0023761227658604432,
+      "max_raw": 0.0038447448073582937,
+      "systems_raw_at_most_0p10": 16
+    },
+    {
+      "method": "true_medium32_oracle",
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.0028088482411492903,
+      "mean_phase_rad": 0.0023245980459858113,
+      "max_raw": 0.003687120683615341,
+      "systems_raw_at_most_0p10": 16
+    }
+  ],
+  "gate_checks": {
+    "mean_raw": false,
+    "mean_phase": false,
+    "systems_below_raw": false,
+    "numerical_audit": true
+  },
+  "all_gates_pass": false,
+  "scope": "Additional post-main-result fixed-method distribution-shift stress test, NOT a second PDE domain or new primary independent confirmation: old training taper 5, unseen matched-RMS 16x16 cosine media with taper 10, same one-way waveguide and known background/source. Fresh systems and truths generated only after protocol commit. No target-frequency observations. Rank256 PCA prior and 5+5 GN frozen from original IID confirmation. True-medium projection methods are extra-information oracles, not deployable comparators."
+}

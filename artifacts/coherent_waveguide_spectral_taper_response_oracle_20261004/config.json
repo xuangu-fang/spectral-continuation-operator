@@ -1,0 +1,32 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "ood_config": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/config.json",
+  "ood_results": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/results.json",
+  "ood_codes": "artifacts/coherent_waveguide_spectral_taper_shift_20261004",
+  "training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "systems": [
+    20267000,
+    20267001,
+    20267002,
+    20267003,
+    20267004,
+    20267005,
+    20267006,
+    20267007,
+    20267008,
+    20267009,
+    20267010,
+    20267011,
+    20267012,
+    20267013,
+    20267014,
+    20267015
+  ],
+  "target_frequency": 800,
+  "fit_modes": 64,
+  "fit_quadrature_nodes": 160,
+  "fit_cells": 256,
+  "rank": 256,
+  "steps": 5,
+  "scope": "POSTHOC extra-information response-optimized oracle on all16 already-evaluated taper10 OOD systems. Starts from TRUE-medium Euclidean PCA projection and fits 800Hz broad-source TARGET response at 257 full-depth boundary profiles, not low-frequency context. It CANNOT be reported as a deployable method or an independent confirmation. Tests whether the frozen rank256 PCA subspace can represent target response better than Euclidean medium projection; finite 5-step local optimization is not a global subspace lower bound. Narrow2m source remains held out from oracle fit, but the oracle already has target-frequency broad truth."
+}

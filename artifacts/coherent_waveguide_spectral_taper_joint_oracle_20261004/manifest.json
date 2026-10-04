@@ -1,0 +1,6 @@
+{
+  "scope": "FINAL bounded POSTHOC target-leaking capacity diagnostic after seeing OOD and single-source oracle: initialize from true-medium PCA projection, fit BOTH target-800Hz source responses at all257 full-depth profiles with one shared rank256 code, 5 GN steps and same line-search/ridge/step bound. Extra target and true-medium information; not deployable, not independent, not a best-response lower bound. No further oracle tuning under this goal.",
+  "ood_results_sha256": "2f111970b78d9554ebf7e2de355243a064e2767829853a04c1848f4a93a48707",
+  "training_labels_sha256": "fcc6984db88839bcd659606338051df3c8db79c054e994f19e28d7df7eb44876",
+  "implementation_sha256": "54b3630e864d996ba56700b9d0fd29234f5f5806c8b042405503fd1507d406f9"
+}

@@ -1,0 +1,102 @@
+{
+  "summary": [
+    {
+      "step": 0,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.2925095274946063,
+      "mean_phase_rad": 0.2402125493658065,
+      "max_raw": 0.44578575704902934
+    },
+    {
+      "step": 0,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.2788654662896284,
+      "mean_phase_rad": 0.2299968708388061,
+      "max_raw": 0.4425305473258562
+    },
+    {
+      "step": 1,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.1427513932694156,
+      "mean_phase_rad": 0.1084896532840057,
+      "max_raw": 0.27321832337963403
+    },
+    {
+      "step": 1,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.22489960002423431,
+      "mean_phase_rad": 0.18212363435627446,
+      "max_raw": 0.36977820236233205
+    },
+    {
+      "step": 2,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.09656227526806285,
+      "mean_phase_rad": 0.07247848627288704,
+      "max_raw": 0.22688907536997385
+    },
+    {
+      "step": 2,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.21901544142096613,
+      "mean_phase_rad": 0.17786558580922907,
+      "max_raw": 0.364243515665207
+    },
+    {
+      "step": 3,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.08402507057373884,
+      "mean_phase_rad": 0.06283558627878832,
+      "max_raw": 0.19606029418690643
+    },
+    {
+      "step": 3,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.2215785622372482,
+      "mean_phase_rad": 0.18091300149292894,
+      "max_raw": 0.36425936024680217
+    },
+    {
+      "step": 4,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.07716473484679574,
+      "mean_phase_rad": 0.05759826367230171,
+      "max_raw": 0.17230481074443632
+    },
+    {
+      "step": 4,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.2230422308452142,
+      "mean_phase_rad": 0.18226162242116625,
+      "max_raw": 0.37656239945385495
+    },
+    {
+      "step": 5,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.07536269083182162,
+      "mean_phase_rad": 0.05620298704947897,
+      "max_raw": 0.15242681501082014
+    },
+    {
+      "step": 5,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.2232091193669284,
+      "mean_phase_rad": 0.18227674059422505,
+      "max_raw": 0.38411188454912537
+    }
+  ],
+  "scope": "POSTHOC extra-information response-optimized oracle on all16 already-evaluated taper10 OOD systems. Starts from TRUE-medium Euclidean PCA projection and fits 800Hz broad-source TARGET response at 257 full-depth boundary profiles, not low-frequency context. It CANNOT be reported as a deployable method or an independent confirmation. Tests whether the frozen rank256 PCA subspace can represent target response better than Euclidean medium projection; finite 5-step local optimization is not a global subspace lower bound. Narrow2m source remains held out from oracle fit, but the oracle already has target-frequency broad truth.",
+  "interpretation": "Posthoc target-800Hz broad-field oracle. It tests a finite local response fit inside the same frozen PCA256 subspace, not its global best capacity and not an inference method."
+}

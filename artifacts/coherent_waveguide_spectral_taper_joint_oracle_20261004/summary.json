@@ -1,0 +1,102 @@
+{
+  "summary": [
+    {
+      "step": 0,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.2925095274946063,
+      "mean_phase_rad": 0.2402125493658065,
+      "max_raw": 0.44578575704902934
+    },
+    {
+      "step": 0,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.2788654662896284,
+      "mean_phase_rad": 0.2299968708388061,
+      "max_raw": 0.4425305473258562
+    },
+    {
+      "step": 1,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.14719035052489804,
+      "mean_phase_rad": 0.1125290160135639,
+      "max_raw": 0.2520518259574038
+    },
+    {
+      "step": 1,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.14349608725192442,
+      "mean_phase_rad": 0.1117603942293477,
+      "max_raw": 0.2566161991683816
+    },
+    {
+      "step": 2,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.10139427653228189,
+      "mean_phase_rad": 0.0762606962597431,
+      "max_raw": 0.20858385356522832
+    },
+    {
+      "step": 2,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.10072178125591483,
+      "mean_phase_rad": 0.07680362413646023,
+      "max_raw": 0.20931753637659453
+    },
+    {
+      "step": 3,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.08965678664033111,
+      "mean_phase_rad": 0.06720849879451406,
+      "max_raw": 0.170085214910751
+    },
+    {
+      "step": 3,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.08977339438150529,
+      "mean_phase_rad": 0.06787140067385342,
+      "max_raw": 0.1679926770284645
+    },
+    {
+      "step": 4,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.08444362565042904,
+      "mean_phase_rad": 0.06333672858627185,
+      "max_raw": 0.1347408420716942
+    },
+    {
+      "step": 4,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.08461433554819676,
+      "mean_phase_rad": 0.06385072865687859,
+      "max_raw": 0.13187601015589276
+    },
+    {
+      "step": 5,
+      "source": "original",
+      "systems": 16,
+      "mean_raw": 0.08293231307536653,
+      "mean_phase_rad": 0.06232114578577183,
+      "max_raw": 0.12068854502431371
+    },
+    {
+      "step": 5,
+      "source": "narrow2m",
+      "systems": 16,
+      "mean_raw": 0.08302678898890153,
+      "mean_phase_rad": 0.06265463674341204,
+      "max_raw": 0.12082288201846851
+    }
+  ],
+  "scope": "FINAL bounded POSTHOC target-leaking capacity diagnostic after seeing OOD and single-source oracle: initialize from true-medium PCA projection, fit BOTH target-800Hz source responses at all257 full-depth profiles with one shared rank256 code, 5 GN steps and same line-search/ridge/step bound. Extra target and true-medium information; not deployable, not independent, not a best-response lower bound. No further oracle tuning under this goal.",
+  "interpretation": "Extra-information target-f800 BOTH-source local oracle; never report as deployment, global capacity lower bound, or independent system test."
+}
