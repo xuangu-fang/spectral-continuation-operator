@@ -1,0 +1,41 @@
+{
+  "rows": [
+    {
+      "frequency": 400,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.0029964783043110723,
+      "mean_phase_rad": 0.0023072245322081786,
+      "max_raw": 0.005446069702231118,
+      "context_last_sq_error": 1.1906981508011199e-08
+    },
+    {
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.003650625506993171,
+      "mean_phase_rad": 0.002747975308386031,
+      "max_raw": 0.006187963660098773,
+      "context_last_sq_error": 1.1906981508011199e-08
+    },
+    {
+      "frequency": 800,
+      "source": "original",
+      "systems": 8,
+      "mean_raw": 0.007498807107812128,
+      "mean_phase_rad": 0.0057093344963078125,
+      "max_raw": 0.01119899782733832,
+      "context_last_sq_error": 1.1906981508011199e-08
+    },
+    {
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 8,
+      "mean_raw": 0.007978723426817325,
+      "mean_phase_rad": 0.005938215402683369,
+      "max_raw": 0.012399927007050743,
+      "context_last_sq_error": 1.1906981508011199e-08
+    }
+  ],
+  "predeclared_gate_passed": true
+}

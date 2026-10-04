@@ -1,0 +1,5 @@
+{
+  "scope": "Extra-information KNOWN exact nonlinear 16x16 speed generator family, but NO test hidden coefficients and NO training-medium labels; posthoc first8 already-inspected spectral development only. Fixed linear initialization precision 1e-7 and exact nonlinear speed-to-slowness 5+5 GN with same low-frequency context. Not matched-information/cost against PCA256 and not independent confirmation.",
+  "source_config_sha256": "ec51f8c25387ca965f0f6fa34425639278ed408bca745fca5627cf3a781c89d2",
+  "implementation_sha256": "fea61a1c67e1a08b9dab8ed8809ca20ea9350b17b50d6214496f91831c54c521"
+}
