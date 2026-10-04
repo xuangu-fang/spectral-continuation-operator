@@ -921,3 +921,15 @@ data，或 Ocean nonlinear-belief oracle-first 设定。
 `artifacts/active_wave_interrogation_m1_summary/summary.json`、`paper_table.csv`、主图 PNG/PDF；配置
 `configs/acquisition_baselines_m1_untouched_20260928.json` 与
 `configs/continuous_acquisition_utility_m2_coordinate_holdout_20260928.json`。
+
+## E23 / 2026-10-04 / 连续复波场相位表示：相关谱介质容量与固定代码频率查询
+
+**为什么做。** 原一向波导介质只含3个二维Gaussian/15个隐藏参数，且知道精确合成族的经典多初值反演可在旧8系统800Hz做到raw约0.00026，比128维PCA代码更准。原漂亮的“紧凑相位表示”不足以外推到复杂介质。
+
+**固定数据与方法。** 相同单向PDE，介质改为16×16相关余弦谱/RMS15m/s；训练512介质标签，首32系统检验原128维，另32全新系统20265000–031在真值生成前冻结rank128/256直接先验+相同60/100/140Hz宽源×65完整剖面、5+5次GN、400/800Hz宽/未见2m窄源、完整ROI未配准raw/phase门槛。新32数值审计最坏5.93e-5。不是第二物理域，也不是真实Ocean。
+
+**主正结果。** 原128维在新32的800Hz宽/窄raw0.51131/0.49965；rank256仅由低频context推断降至0.01475/0.01532、相位RMSE0.01123/0.01170rad，双源32/32受益，配对改善97.11%/96.93%，最差系统raw0.02263/0.02439，全部事前gate通过。固定前8新系统、**确认过门槛后才执行**的200–1000Hz查询在1000Hz宽/窄raw0.02081/0.02016、phase0.01615/0.01588rad，预登记门槛通过；数值审计7.22e-5。该子集不是又一批独立测试。
+
+**主负结果与归因。** 原128维训练介质方差解释率99.8637%，真测试介质的欧氏PCA投影800Hz仍raw0.3906/0.3859；rank256真介质投影降至0.00809/0.00797。少数背景的局部响应Jacobian选128维基失败（0.3796/0.3846），一阶解析余弦先验在旧8开发上也失败（0.2058/0.2276），但精确非线性已知谱族逆解**尚未测试**。旧8同谱形状RMS15→8.1689m/s，原128维raw0.53366/0.54360→0.30562/0.30982：强度解释部分恶化，但不单独解释失败。当前256维接近合成器255个随机谱系数，非高度压缩latent；1+1次GN旧8已到raw约0.027/0.028，不能仅以摊销加速包装一个未证实必要的网络。统计PCA先验+经典物理反演是已验证方法，深神经/跨PDE/真实海洋增量未通过gate。
+
+**复用与禁忌。** 读`docs/SPECTRAL_MEDIUM_STRESS_POC_ZH.md`及报告第21节，图`reports/figures/spectral_rank256_confirm.png`与`spectral_frequency_curve_confirm.png`。原始谱介质64+64+16+40份NPZ分别在本地同名数据目录；训练标签、每系统代码、结果与预真值manifest在`artifacts/coherent_waveguide_spectral_*_20261004/`，大NPZ Git ignored。不要把原32后选rank256的旧8开发写成独立，不能把确认前的128失败和确认后的256成功表述为同容量神经优势；不能把1000Hz同8系统再算新的独立集合。阶段十post-run inventory记录哈希，但不是预冻结证据。

@@ -1,0 +1,112 @@
+{
+  "base_results_sha256": "4f3895033d8b95df606a8b1ef85b7024e1b99d766991004cd643262ffdde3cac",
+  "rank256_results_sha256": "adc31d3af8c6da808b9a48c95e9bf2e5d1bf1d68c57b28bcbb63c3b2e5752229",
+  "paired_bootstrap_unit": "physical system",
+  "paired_bootstrap_repetitions": 10000,
+  "paired_bootstrap_seed": 20261004,
+  "records": [
+    {
+      "frequency": 400,
+      "source": "original",
+      "systems": 32,
+      "original_rank128_raw": 0.23703218507185372,
+      "direct_rank128_raw": 0.23703218570925494,
+      "rank256_raw": 0.006226172133331423,
+      "rank256_amplitude_rel_l2": 0.00409962076276173,
+      "original_rank128_phase_rmse_rad": 0.19226734105389648,
+      "rank256_phase_rmse_rad": 0.004665385659694392,
+      "relative_improvement": 0.9737327986431715,
+      "paired_bootstrap_95": [
+        0.9712739674634444,
+        0.9758901957785077
+      ],
+      "system_wins": 32,
+      "max_rank256_system_raw": 0.00873778184987043,
+      "max_rank256_system_phase_rmse_rad": 0.007110377437830458
+    },
+    {
+      "frequency": 400,
+      "source": "narrow2m",
+      "systems": 32,
+      "original_rank128_raw": 0.24059370254973442,
+      "direct_rank128_raw": 0.24059369987374435,
+      "rank256_raw": 0.007489529700935754,
+      "rank256_amplitude_rel_l2": 0.004991541531585484,
+      "original_rank128_phase_rmse_rad": 0.19323507745122676,
+      "rank256_phase_rmse_rad": 0.005573729756585321,
+      "relative_improvement": 0.9688706328488064,
+      "paired_bootstrap_95": [
+        0.9657976170967849,
+        0.9715633139587335
+      ],
+      "system_wins": 32,
+      "max_rank256_system_raw": 0.012651761766016689,
+      "max_rank256_system_phase_rmse_rad": 0.009621813160348453
+    },
+    {
+      "frequency": 800,
+      "source": "original",
+      "systems": 32,
+      "original_rank128_raw": 0.5113114151394649,
+      "direct_rank128_raw": 0.511311415806253,
+      "rank256_raw": 0.01475174331379435,
+      "rank256_amplitude_rel_l2": 0.009484533011301352,
+      "original_rank128_phase_rmse_rad": 0.48932322541436923,
+      "rank256_phase_rmse_rad": 0.011232234919631304,
+      "relative_improvement": 0.9711492001214745,
+      "paired_bootstrap_95": [
+        0.9681536969703045,
+        0.9738770711572508
+      ],
+      "system_wins": 32,
+      "max_rank256_system_raw": 0.022630569989178735,
+      "max_rank256_system_phase_rmse_rad": 0.01637517918064085
+    },
+    {
+      "frequency": 800,
+      "source": "narrow2m",
+      "systems": 32,
+      "original_rank128_raw": 0.4996519344635311,
+      "direct_rank128_raw": 0.4996519311889584,
+      "rank256_raw": 0.01532289200987332,
+      "rank256_amplitude_rel_l2": 0.009870499064351125,
+      "original_rank128_phase_rmse_rad": 0.4736368109076843,
+      "rank256_phase_rmse_rad": 0.01169514644038968,
+      "relative_improvement": 0.9693328676364972,
+      "paired_bootstrap_95": [
+        0.9662283439469347,
+        0.9722359244665657
+      ],
+      "system_wins": 32,
+      "max_rank256_system_raw": 0.024386562088522912,
+      "max_rank256_system_phase_rmse_rad": 0.018301801718043097
+    }
+  ],
+  "predeclared_gate": {
+    "rank256_800hz_both_sources_mean_raw_at_most": 0.05,
+    "rank256_800hz_both_sources_mean_phase_rmse_rad_at_most": 0.05,
+    "rank256_both_sources_raw_improvement_over_original_rank128_at_least": 0.7,
+    "rank256_both_sources_system_wins_at_least": 28,
+    "rank256_800hz_both_sources_max_system_raw_at_most": 0.1
+  },
+  "gate_checks": {
+    "raw_mean": true,
+    "phase_mean": true,
+    "raw_improvement": true,
+    "system_wins": true,
+    "worst_system_raw": true
+  },
+  "gate_passed": true,
+  "illustration": {
+    "system": 20265000,
+    "frequency": 800,
+    "source": "narrow2m",
+    "selection": "first predeclared independent system",
+    "display_mask_fraction": 0.0,
+    "phase_display_limits_rad": [
+      0.75,
+      0.05
+    ],
+    "primary_metric": "full >=50 m ROI, no mask or phase alignment"
+  }
+}

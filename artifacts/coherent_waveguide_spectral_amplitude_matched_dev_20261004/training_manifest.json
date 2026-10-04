@@ -1,0 +1,25 @@
+{
+  "train_seed_start": 20264000,
+  "train_count": 512,
+  "no_validation_overlap": true,
+  "training_labels_sha256": "50c1f154254ce7f0776ab098d3620b29daa1ea496bb78543ac6742d9c74a5fc6",
+  "training_priors_sha256": "6a5962dfdc4381a3fa3eefbe7791b85f3f95b8df8e95e04966d338ae125a54cf",
+  "statistics": {
+    "16": {
+      "shape": [
+        512,
+        64,
+        16
+      ],
+      "pca128_variance_fraction": 0.9986442066982316
+    },
+    "32": {
+      "shape": [
+        512,
+        64,
+        32
+      ],
+      "pca128_variance_fraction": 0.9986440254172191
+    }
+  }
+}

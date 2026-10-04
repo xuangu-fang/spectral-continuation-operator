@@ -1,0 +1,16 @@
+{
+  "registration": "Conditional post-confirmation frequency stress: only if new32 rank256 gate passes; same first8 confirmed systems but five frequencies never used for rank/method choice; no new spatial or source evidence",
+  "tracked_sha256": {
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_spectral_frequency_curve.py": "0a2bdfc039598cf2ce32f066d376193304d5ccc4f2f3725e6c9e36fbfdc76773",
+    "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json": "9bbc55cd37594e35ade180df74ee8d821bcca31bab8879d2bf4886a5f0393772",
+    "artifacts/coherent_waveguide_spectral_confirm_20261004/results.json": "4f3895033d8b95df606a8b1ef85b7024e1b99d766991004cd643262ffdde3cac",
+    "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004/system20265000_rank256_code.npz": "4495464482052ee60a5b7d7bc8604a0c58864185fd0f2f1c14ebfff8462b3703",
+    "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004/system20265001_rank256_code.npz": "4d5056b2f8068f716aacaca1d664ceb4b5f52884a5f733f717851ade25eb2a08",
+    "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004/system20265002_rank256_code.npz": "d81cc8d82f1b3535cab7f56b366d912eb45eb17bc3ea575d62d561409e2367df",
+    "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004/system20265003_rank256_code.npz": "eb2dd8996f16260da8786df27ec01efd4fbc60d56d00216516ed723c5c623164",
+    "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004/system20265004_rank256_code.npz": "e2a659c7c7a188422e49570f5cd9fa336ecd077ed35ea5c007f6e4f407cc7757",
+    "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004/system20265005_rank256_code.npz": "aa48ba74eaf8ca4b011b6bf7b23a6a40ce6b44520ca9477cda627839431cfc33",
+    "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004/system20265006_rank256_code.npz": "e821b159a79498c0508aec8cb5aaa0e3eccd3d3029bb776867d1dbbf094ba6c9",
+    "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004/system20265007_rank256_code.npz": "8bea4752d6be3266292fef56257e230d66541d63c954da7eec5f3dea24ffa7b5"
+  }
+}

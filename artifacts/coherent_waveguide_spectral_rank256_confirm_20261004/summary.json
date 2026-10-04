@@ -1,0 +1,82 @@
+[
+  {
+    "rank": 128,
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.23703218570925494,
+    "phase_rmse_rad": 0.19226734176811322,
+    "max_raw": 0.3329605574841373,
+    "mean_context_last_sq_error": 0.0001732645053363972
+  },
+  {
+    "rank": 128,
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.24059369987374435,
+    "phase_rmse_rad": 0.19323507527899023,
+    "max_raw": 0.38719453846434404,
+    "mean_context_last_sq_error": 0.0001732645053363972
+  },
+  {
+    "rank": 128,
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.511311415806253,
+    "phase_rmse_rad": 0.4893232255385228,
+    "max_raw": 0.8427817986562792,
+    "mean_context_last_sq_error": 0.0001732645053363972
+  },
+  {
+    "rank": 128,
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.4996519311889584,
+    "phase_rmse_rad": 0.4736368061890782,
+    "max_raw": 0.7919784545395546,
+    "mean_context_last_sq_error": 0.0001732645053363972
+  },
+  {
+    "rank": 256,
+    "frequency": 400,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.006226172133331423,
+    "phase_rmse_rad": 0.004665385659694392,
+    "max_raw": 0.00873778184987043,
+    "mean_context_last_sq_error": 4.661180700002551e-08
+  },
+  {
+    "rank": 256,
+    "frequency": 400,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.007489529700935754,
+    "phase_rmse_rad": 0.005573729756585321,
+    "max_raw": 0.012651761766016689,
+    "mean_context_last_sq_error": 4.661180700002551e-08
+  },
+  {
+    "rank": 256,
+    "frequency": 800,
+    "source": "original",
+    "systems": 32,
+    "complex_rel_l2": 0.01475174331379435,
+    "phase_rmse_rad": 0.011232234919631304,
+    "max_raw": 0.022630569989178735,
+    "mean_context_last_sq_error": 4.661180700002551e-08
+  },
+  {
+    "rank": 256,
+    "frequency": 800,
+    "source": "narrow2m",
+    "systems": 32,
+    "complex_rel_l2": 0.01532289200987332,
+    "phase_rmse_rad": 0.01169514644038968,
+    "max_raw": 0.024386562088522912,
+    "mean_context_last_sq_error": 4.661180700002551e-08
+  }
+]

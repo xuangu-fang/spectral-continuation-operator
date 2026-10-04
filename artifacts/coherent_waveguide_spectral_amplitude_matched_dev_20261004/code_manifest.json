@@ -1,0 +1,50 @@
+[
+  {
+    "system": 20264600,
+    "path": "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/system20264600_codes.npz",
+    "sha256": "c7b72c540e42ec02b19ef9e3007cc3a2a19efbf72f2e385a613b19af0995cf0a",
+    "context_inference_seconds": 253.99990973528475
+  },
+  {
+    "system": 20264601,
+    "path": "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/system20264601_codes.npz",
+    "sha256": "c96b183304dce46c271892d7f3ae18d0131bc36e83cba61507528d1c81699972",
+    "context_inference_seconds": 261.37493595387787
+  },
+  {
+    "system": 20264602,
+    "path": "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/system20264602_codes.npz",
+    "sha256": "585d683f4920f8eb695b15ef5c31c751ca27cd804bab4dae7b71cb804fad24bc",
+    "context_inference_seconds": 267.8240325432271
+  },
+  {
+    "system": 20264603,
+    "path": "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/system20264603_codes.npz",
+    "sha256": "686815450690c6321d45687160ba85ab9ed65293160012a0d409cd12a77269e1",
+    "context_inference_seconds": 2532.916943397373
+  },
+  {
+    "system": 20264604,
+    "path": "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/system20264604_codes.npz",
+    "sha256": "6031ad5e54b8247acb51d3aaf6e54550798e334aa7854ad8d7856ac5e20e6a5e",
+    "context_inference_seconds": 36.97169488016516
+  },
+  {
+    "system": 20264605,
+    "path": "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/system20264605_codes.npz",
+    "sha256": "cad6237c74b2c33be113f47590dff5ad3b3d599e02ba6b9aa529ab072307b4f0",
+    "context_inference_seconds": 37.69631368294358
+  },
+  {
+    "system": 20264606,
+    "path": "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/system20264606_codes.npz",
+    "sha256": "f9a66f5fd7259b0cb32194ea14295f3dd044c6a1cebe273fb8711e9937cfe583",
+    "context_inference_seconds": 62.727323146536946
+  },
+  {
+    "system": 20264607,
+    "path": "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/system20264607_codes.npz",
+    "sha256": "3c4dae2293513fb66b69f3568cf080901e76b0a4fa0368323377232b500738db",
+    "context_inference_seconds": 35.213007444515824
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "registered_utc": "2026-10-04T07:02:04.081405+00:00",
+  "registration": "After training-only prior fit, BEFORE new audit and validation truth",
+  "tracked_sha256": {
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_spectral_medium.py": "1f9214b33242c611bb4b84729d8867f473f1bd44be701ff79d53987c01e93a64",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/coherent_waveguide_data.py": "aee274b7c7e357b32ca9be96d85c20441849692b6072bb67535c01b49397c3e9",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_generator_identification.py": "ab0b238b873dbbf3c50e64d1cead5777f835427078b3399ca779f21bb3688b7d",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_new_systems.py": "059a18366781604450afc062b90839c1c1e2cee7f7426db8b78deb8cb4f0d70d",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_spectral_transport.py": "81cd49a9dcfd0ab688c241b869b148cfb2673956ca48f190a1bac46e1e76b2b9",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_generator_prior.py": "daf2aee9e26028b1268bfbd5fb6ba3bd2833d26c0bcfc900ffdbfce69e2a0303",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_trajectory_newton.py": "3731d877c777667150827cdf7598d2ff58b955567dff9aa5c531d30bf8d0114a",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/audit_waveguide_frequency_scaling.py": "2210887e285cc1a64969be2555a877611094b33421f2acac4324830c10a04130",
+    "/home/ubuntu/project/spectral-continuation-operator/src/spectral_continuation/coarse_waveguide_operator.py": "984945f3809549ce057c467e733e4eb7b53b527d16476c7b22a6f5146548129f",
+    "artifacts/coherent_waveguide_spectral_amplitude_matched_dev_20261004/training_priors.npz": "6a5962dfdc4381a3fa3eefbe7791b85f3f95b8df8e95e04966d338ae125a54cf"
+  },
+  "config": {
+    "train_seed_start": 20264000,
+    "train_count": 512,
+    "systems": [
+      20264600,
+      20264601,
+      20264602,
+      20264603,
+      20264604,
+      20264605,
+      20264606,
+      20264607
+    ],
+    "audit_systems": [
+      20265400,
+      20265401,
+      20265402
+    ],
+    "spectral_terms": 16,
+    "perturbation_rms_m_s": 8.168874841270227,
+    "context_frequencies": [
+      60,
+      100,
+      140
+    ],
+    "query_frequencies": [
+      400,
+      800
+    ],
+    "source_variants": [
+      "original",
+      "narrow2m"
+    ],
+    "context_profiles": 65,
+    "query_range_count": 4097,
+    "query_depth_count": 513,
+    "roi_min_range_m": 50,
+    "decoder_cells": 256,
+    "decoder_modes": 128,
+    "teacher_cells": 1024,
+    "teacher_modes": 160,
+    "teacher_quadrature_nodes": 384,
+    "audit_cells": 2048,
+    "audit_modes": 192,
+    "audit_quadrature_nodes": 512,
+    "audit_gate": 0.001,
+    "old_prior_steps": 5,
+    "continuous_steps": 5,
+    "rank": 128,
+    "initial_prior_precision": 1e-09,
+    "ridge_relative": 1e-08,
+    "max_coefficient_step": 0.01,
+    "line_search": [
+      1.0,
+      0.5,
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "eigh_device": "cuda",
+    "eigh_batch": 64,
+    "output_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_amplitude_matched_dev_20261004",
+    "scope": "POSTHOC paired old8 spectral-system amplitude-control only: same seeds and shape as RMS15 family, lower RMS matched to mean of old Gaussian training512; not independent validation or a dimension-only causal experiment"
+  },
+  "backend": {
+    "scipy_comparison_raw": [
+      2.804334824516451e-13,
+      2.9330223812071125e-13
+    ],
+    "frequency": 400,
+    "modes": 48
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "source_results": "artifacts/coherent_waveguide_spectral_confirm_20261004/results.json",
+  "rank128_codes": "artifacts/coherent_waveguide_spectral_confirm_20261004",
+  "rank256_codes": "artifacts/coherent_waveguide_spectral_rank256_confirm_20261004",
+  "systems": [
+    20265000,
+    20265001,
+    20265002,
+    20265003,
+    20265004,
+    20265005,
+    20265006,
+    20265007
+  ],
+  "audit_systems": [
+    20265100,
+    20265101,
+    20265102
+  ],
+  "query_frequencies_hz": [
+    200,
+    300,
+    500,
+    600,
+    1000
+  ],
+  "audit_frequencies_hz": [
+    200,
+    1000
+  ],
+  "roi_min_range_m": 50,
+  "query_range_count": 4097,
+  "query_depth_count": 513,
+  "teacher_cells": 1024,
+  "teacher_modes": 160,
+  "teacher_quadrature_nodes": 384,
+  "audit_cells": 2048,
+  "audit_modes": 192,
+  "audit_quadrature_nodes": 512,
+  "audit_gate": 0.001,
+  "decoder_cells": 256,
+  "decoder_modes": 128,
+  "eigh_device": "cuda",
+  "eigh_batch": 64,
+  "output_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_frequency_curve_20261004",
+  "continuation_gate": {
+    "f1000_both_sources_rank256_mean_raw_at_most": 0.05,
+    "f1000_both_sources_rank256_phase_rmse_rad_at_most": 0.05,
+    "f1000_both_sources_max_system_raw_at_most": 0.1
+  },
+  "scope": "Conditional post-confirmation frequency stress: only if new32 rank256 gate passes; same first8 confirmed systems but five frequencies never used for rank/method choice; no new spatial or source evidence"
+}
