@@ -1,7 +1,7 @@
 {
-  "captured_utc": "2026-10-04T14:20:15.296890+00:00",
+  "captured_utc": "2026-10-04T14:29:05.757261+00:00",
   "capture_type": "post-run working-tree snapshot; not an at-launch source attestation",
-  "git_base": "efee62cdb77aaa4ee3929fceb01e33d0e2eab5c0",
+  "git_base": "6875d8bc111ba43d389d31f7fcd4475d72162c39",
   "large_files": "NPZ and PT intentionally local-only; regenerate via stored config or resolve these local paths",
   "datasets": {
     "coherent_helmholtz_development_20261003": {
@@ -24750,6 +24750,7 @@
     "src/spectral_continuation/audit_gaussian_speed_variable_dev.py": "cd4c85cb1213e6a6c5713daa12ed3d45955483c6dd70cd9a73deacaec20a269d",
     "src/spectral_continuation/audit_helmholtz_generator_compression.py": "d573d7f1138df1dc5bf9ac71a55300659ed3f5e7ad74e7b28ab390b52d8e9a3e",
     "src/spectral_continuation/audit_helmholtz_generator_identification.py": "3774527fdeb9efdd26a133fbbbb20fb1c41be126f20a39c3aec944a7632a175d",
+    "src/spectral_continuation/audit_helmholtz_linearization_remainder.py": "b043ba94cfbd1a7d2057c290302ef842fef95ae7861427bf6c78b000d374ddef",
     "src/spectral_continuation/audit_helmholtz_multiscale_background.py": "ada38fdccd17e61303df372963634488786fb284108ac033134864aeb0a45324",
     "src/spectral_continuation/audit_helmholtz_multiscale_fullfield_classic.py": "877059e9e2c89a0a5fcb2a4b98fae45846a6257956f65257b06e888e4b2aba3d",
     "src/spectral_continuation/audit_helmholtz_multiscale_sampling.py": "2e030daa86c7817c2b58ef12f51022f430d8ee7bc7f8dfc0cec83bf5afce1dd6",
@@ -25447,6 +25448,31 @@
           "path": "artifacts/coherent_helmholtz_generator_identification_20261003/results.json",
           "bytes": 74189,
           "sha256": "7e87383d80dee9ea080f14d71cafb04425ff04f487be7ac3a58883375a848f57"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_linearization_remainder_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_linearization_remainder_20261004/config.json",
+          "bytes": 998,
+          "sha256": "ea839177bb965634877ee0c27740dc929c50ef0e29fd698a6b3548b8c269c29b"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_linearization_remainder_20261004/manifest.json",
+          "bytes": 2382,
+          "sha256": "ad135e1f0df236e0a94886c9c0e6d133d9d77ea73640e1a2ed8a53130987ea9e"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_linearization_remainder_20261004/results.json",
+          "bytes": 21425,
+          "sha256": "5e9c820036fd9989ebe7fc6b5b0a37927787085c29f345589c7a0520dc22bc04"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_linearization_remainder_20261004/summary.json",
+          "bytes": 1795,
+          "sha256": "33bc13f10f004069bcb0b6c9876c8e93ece2033ba415ddede7a5e8397d2adfb8"
         }
       ]
     },
