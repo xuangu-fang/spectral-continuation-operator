@@ -1,0 +1,19 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "source_results": "artifacts/coherent_waveguide_spectral_confirm_20261004/results.json",
+  "source_codes": "artifacts/coherent_waveguide_spectral_confirm_20261004",
+  "training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "ranks": [128, 256],
+  "terms": 32,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "systems": [20265000, 20265001, 20265002, 20265003, 20265004, 20265005, 20265006, 20265007, 20265008, 20265009, 20265010, 20265011, 20265012, 20265013, 20265014, 20265015, 20265016, 20265017, 20265018, 20265019, 20265020, 20265021, 20265022, 20265023, 20265024, 20265025, 20265026, 20265027, 20265028, 20265029, 20265030, 20265031],
+  "confirm_gate": {
+    "rank256_800hz_both_sources_mean_raw_at_most": 0.05,
+    "rank256_800hz_both_sources_mean_phase_rmse_rad_at_most": 0.05,
+    "rank256_both_sources_raw_improvement_over_original_rank128_at_least": 0.7,
+    "rank256_both_sources_system_wins_at_least": 28,
+    "rank256_800hz_both_sources_max_system_raw_at_most": 0.1
+  },
+  "scope": "Independent new32 confirmation after original first8 spectral development; method and metrics committed before generating new truths; same one-way PDE and synthetic medium statistical family"
+}
