@@ -1,0 +1,126 @@
+[
+  {
+    "seed": 20269600,
+    "kind": "pilot",
+    "max_solver_residual": 2.792193150457805e-13,
+    "min_speed": 0.8999999999723038,
+    "min_points_per_wavelength": 13.552941176053517,
+    "solve_seconds": 14.85267099365592,
+    "wall_seconds": 15.222420220263302
+  },
+  {
+    "seed": 20269601,
+    "kind": "pilot",
+    "max_solver_residual": 2.9900820281348343e-13,
+    "min_speed": 0.8083527330558868,
+    "min_points_per_wavelength": 12.172841156606296,
+    "solve_seconds": 14.229799252934754,
+    "wall_seconds": 14.523031442426145
+  },
+  {
+    "seed": 20269602,
+    "kind": "pilot",
+    "max_solver_residual": 2.916039167263644e-13,
+    "min_speed": 0.8986896481797987,
+    "min_points_per_wavelength": 13.533208819648733,
+    "solve_seconds": 14.116016472689807,
+    "wall_seconds": 14.463523800484836
+  },
+  {
+    "seed": 20269603,
+    "kind": "pilot",
+    "max_solver_residual": 3.1731756316714374e-13,
+    "min_speed": 0.9227374804572462,
+    "min_points_per_wavelength": 13.895340882179708,
+    "solve_seconds": 14.052062500268221,
+    "wall_seconds": 14.32095078099519
+  },
+  {
+    "seed": 20269604,
+    "kind": "pilot",
+    "max_solver_residual": 2.7116997187507697e-13,
+    "min_speed": 0.8912514604153764,
+    "min_points_per_wavelength": 13.421198462725668,
+    "solve_seconds": 13.899190071038902,
+    "wall_seconds": 14.137311958707869
+  },
+  {
+    "seed": 20269605,
+    "kind": "pilot",
+    "max_solver_residual": 2.82772936570924e-13,
+    "min_speed": 0.8848931690342231,
+    "min_points_per_wavelength": 13.3254500748683,
+    "solve_seconds": 14.354425999335945,
+    "wall_seconds": 14.61376047320664
+  },
+  {
+    "seed": 20269606,
+    "kind": "pilot",
+    "max_solver_residual": 2.780779870998252e-13,
+    "min_speed": 0.8863153699929595,
+    "min_points_per_wavelength": 13.346866748129273,
+    "solve_seconds": 14.221041489392519,
+    "wall_seconds": 14.515304891392589
+  },
+  {
+    "seed": 20269607,
+    "kind": "pilot",
+    "max_solver_residual": 3.2006318832926096e-13,
+    "min_speed": 0.8899884287438894,
+    "min_points_per_wavelength": 13.402178691672688,
+    "solve_seconds": 14.2028330527246,
+    "wall_seconds": 14.47313276026398
+  },
+  {
+    "seed": 20269700,
+    "kind": "numerical_audit",
+    "frequency": 14.0,
+    "max_solver_residual": 1.430042426540369e-13,
+    "min_speed": 0.893911709942306,
+    "complex_rel_l2": 0.0011766367440320918,
+    "amplitude_rel_l2": 0.00011017621245737748,
+    "energy_weighted_phase_rmse_rad": 0.001171494647644595,
+    "energy_weighted_phase_cos": 0.9999993138005258,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999995641469921
+  },
+  {
+    "seed": 20269700,
+    "kind": "numerical_audit",
+    "frequency": 17.0,
+    "max_solver_residual": 1.430042426540369e-13,
+    "min_speed": 0.893911709942306,
+    "complex_rel_l2": 0.0019843976443014062,
+    "amplitude_rel_l2": 0.0002117987503570868,
+    "energy_weighted_phase_rmse_rad": 0.0019734550646794986,
+    "energy_weighted_phase_cos": 0.9999980527450493,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999983407752473
+  },
+  {
+    "seed": 20269701,
+    "kind": "numerical_audit",
+    "frequency": 14.0,
+    "max_solver_residual": 2.008374782556485e-13,
+    "min_speed": 0.8679765346305963,
+    "complex_rel_l2": 0.0009897685457348386,
+    "amplitude_rel_l2": 0.00011276226121682294,
+    "energy_weighted_phase_rmse_rad": 0.0009833882029494955,
+    "energy_weighted_phase_cos": 0.9999995164740495,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.999999666050936
+  },
+  {
+    "seed": 20269701,
+    "kind": "numerical_audit",
+    "frequency": 17.0,
+    "max_solver_residual": 2.008374782556485e-13,
+    "min_speed": 0.8679765346305963,
+    "complex_rel_l2": 0.0014981103388232858,
+    "amplitude_rel_l2": 0.00022587824020887994,
+    "energy_weighted_phase_rmse_rad": 0.0014814582731641232,
+    "energy_weighted_phase_cos": 0.9999989026442274,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999990018069438
+  }
+]

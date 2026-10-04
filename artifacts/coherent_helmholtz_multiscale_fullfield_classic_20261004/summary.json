@@ -1,0 +1,19 @@
+{
+  "summary": [
+    {
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.1451905774228338,
+      "mean_phase_rad": 0.13925093878121658,
+      "max_raw": 0.3293731721647164
+    },
+    {
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 0.12926857269089606,
+      "mean_phase_rad": 0.11747735768095671,
+      "max_raw": 0.33033793169774217
+    }
+  ],
+  "scope": "POSTHOC classical full-field information audit on already-generated eight multiscale two-way Helmholtz M0 PILOT systems. Hidden texture coefficients and Gaussian contrasts are removed from the spec before inference; public known source/loss/BC/PDE and three FULL 65x65 complex context fields are used. Query 11.3 and 17 with the same numerical PDE. This is not the future sparse-line main task or independent method confirmation. Its purpose is to decide whether full-field low-frequency observations leave any meaningful learning headroom despite changing the medium statistical family."
+}

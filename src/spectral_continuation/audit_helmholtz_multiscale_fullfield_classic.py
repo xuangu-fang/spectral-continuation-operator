@@ -22,8 +22,10 @@ from .coherent_representation import complex_metrics
 
 def public_spec(spec: dict) -> dict:
     """Keep source/loss/BC; remove all hidden medium coefficients."""
-    return {key: value for key, value in spec.items()
-            if key not in {"spectral_texture", "texture_scale", "family"}}
+    public = {key: value for key, value in spec.items()
+              if key not in {"spectral_texture", "texture_scale", "family",
+                             "centers", "widths", "contrasts"}}
+    return {**public, "centers": [], "widths": [], "contrasts": []}
 
 
 def run(config: dict, output: Path) -> None:

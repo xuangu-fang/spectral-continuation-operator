@@ -1,7 +1,7 @@
 {
-  "captured_utc": "2026-10-04T13:00:14.291903+00:00",
+  "captured_utc": "2026-10-04T13:32:59.097889+00:00",
   "capture_type": "post-run working-tree snapshot; not an at-launch source attestation",
-  "git_base": "0ddfdffabae930beb29b2e363fd2b51376ea61e6",
+  "git_base": "68bc0f289b795e78971fbef69081376a45d194aa",
   "large_files": "NPZ and PT intentionally local-only; regenerate via stored config or resolve these local paths",
   "datasets": {
     "coherent_helmholtz_development_20261003": {
@@ -24405,6 +24405,181 @@
         }
       ],
       "metadata": []
+    },
+    "coherent_helmholtz_multiscale_pilot_20261004": {
+      "evidence": "M0 multiscale TWO-WAY Helmholtz DATA PILOT ONLY: 8 direct grid257 development fields, 512 training speed labels stored separately as metadata, two grid257/513 numeric audit systems; NOT independent method test or completed cross-PDE learning gate",
+      "files": [
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269600_grid257.npz",
+          "bytes": 2647231,
+          "sha256": "1075ab976f85acd0c85c38317bb1827b1d44e22d7102470c218cf171ba540534",
+          "shape": [
+            5,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "value_key": "field",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0,
+            11.3,
+            17.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269601_grid257.npz",
+          "bytes": 2643369,
+          "sha256": "068138b5a6012174765dd5a2261f4df24c1e180c4c84e7f02265d7174847e72e",
+          "shape": [
+            5,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "value_key": "field",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0,
+            11.3,
+            17.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269602_grid257.npz",
+          "bytes": 2647586,
+          "sha256": "8b4dcd299dc1ad2819c5b0c2e2fbed737a83bb6003314d816a0eed8f79db7676",
+          "shape": [
+            5,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "value_key": "field",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0,
+            11.3,
+            17.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269603_grid257.npz",
+          "bytes": 2641678,
+          "sha256": "d1f4739512d9bd2ef36449cf908d3286bd4b55084b5fcfdf88c24c7dfecf685c",
+          "shape": [
+            5,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "value_key": "field",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0,
+            11.3,
+            17.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269604_grid257.npz",
+          "bytes": 2644832,
+          "sha256": "1c71ece9ef3ea26036386ac53d4dc176c6e4609c4a2c519bcc179688401305cc",
+          "shape": [
+            5,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "value_key": "field",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0,
+            11.3,
+            17.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269605_grid257.npz",
+          "bytes": 2643465,
+          "sha256": "913b295a8fabefbd050d107efc207658eb4491f07f355afb23a85abafd4cad13",
+          "shape": [
+            5,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "value_key": "field",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0,
+            11.3,
+            17.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269606_grid257.npz",
+          "bytes": 2644530,
+          "sha256": "3e9ac3e559eec9435c4dc8bdcec5737537f131a3d5d792c34f9e65970f4ed165",
+          "shape": [
+            5,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "value_key": "field",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0,
+            11.3,
+            17.0
+          ],
+          "additional_arrays": {}
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269607_grid257.npz",
+          "bytes": 2646748,
+          "sha256": "073dae9a261f0b05afffb94c6a412ed9febbb55dcff94d2c8e6e838d1fc12584",
+          "shape": [
+            5,
+            257,
+            257
+          ],
+          "dtype": "complex64",
+          "value_key": "field",
+          "frequencies": [
+            6.0,
+            10.0,
+            14.0,
+            11.3,
+            17.0
+          ],
+          "additional_arrays": {}
+        }
+      ],
+      "metadata": [
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/config.json",
+          "sha256": "3ddb443f43516cb70290381f0961d0b30d0afedb8f5f3a63d4db18a267604a1d"
+        },
+        {
+          "path": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/training_medium_labels.npz",
+          "sha256": "2c64ebdfae30cd343424997ddf0b149ea779b5267f5f872968e65828be44d995"
+        }
+      ]
     }
   },
   "source_snapshot_sha256": {
@@ -24415,7 +24590,10 @@
     "src/spectral_continuation/audit_fundamental_solution_rom.py": "eef3f8dd59e82aa4cee5b2b73423a4a83c581d5cc9e0f9004f8d99c4b10b73a3",
     "src/spectral_continuation/audit_gaussian_speed_variable_dev.py": "cd4c85cb1213e6a6c5713daa12ed3d45955483c6dd70cd9a73deacaec20a269d",
     "src/spectral_continuation/audit_helmholtz_generator_compression.py": "d573d7f1138df1dc5bf9ac71a55300659ed3f5e7ad74e7b28ab390b52d8e9a3e",
-    "src/spectral_continuation/audit_helmholtz_generator_identification.py": "b6d2b99d1295fc24eebea88d3626ddfacd0af23ac18ef3e6cea121dabb4f4056",
+    "src/spectral_continuation/audit_helmholtz_generator_identification.py": "3774527fdeb9efdd26a133fbbbb20fb1c41be126f20a39c3aec944a7632a175d",
+    "src/spectral_continuation/audit_helmholtz_multiscale_fullfield_classic.py": "877059e9e2c89a0a5fcb2a4b98fae45846a6257956f65257b06e888e4b2aba3d",
+    "src/spectral_continuation/audit_helmholtz_multiscale_sampling.py": "2e030daa86c7817c2b58ef12f51022f430d8ee7bc7f8dfc0cec83bf5afce1dd6",
+    "src/spectral_continuation/audit_helmholtz_multiscale_sampling_corrected.py": "3ba40de22308c8f83fdbc63435fcdfd3455f26c5bcbd3e98c51e001b77eea99a",
     "src/spectral_continuation/audit_learned_speed_basis_storage.py": "7e1b2f127b754896d5836ce1a2df7ea1dcfea109276294062bfbce3aff78bf2a",
     "src/spectral_continuation/audit_learned_speed_manifold_confirm.py": "cc2283c71ebec6af626164dc69c049ba166bcd3273fd58b3467c44010f2e005f",
     "src/spectral_continuation/audit_learned_speed_manifold_dev.py": "3a16570ceb798095204a72935cb1f2fd4d7e0960be8028be59d5b95b61f1aed8",
@@ -24477,7 +24655,8 @@
     "src/spectral_continuation/audit_waveguide_unwrapped_envelopes.py": "a22df4b6e8ffcf52225ba9fa5e47f7507f1967d9c8209b0ccd245cf1bb6a9c07",
     "src/spectral_continuation/benchmark_waveguide_generator.py": "51667462ba2180f50bb58c9d71c18afdd9e5727be9b72daae256e722d7541571",
     "src/spectral_continuation/coarse_waveguide_operator.py": "984945f3809549ce057c467e733e4eb7b53b527d16476c7b22a6f5146548129f",
-    "src/spectral_continuation/coherent_helmholtz_data.py": "e05f036c8241d658ab010c8e7bb885b46ab1b6a92a88dc309c0f9a9b9895bd70",
+    "src/spectral_continuation/coherent_helmholtz_data.py": "50471fe1bbecc944ac579c009d1a8fbbfc36b17fd4fffb33fa3b0650ebd2d196",
+    "src/spectral_continuation/coherent_helmholtz_multiscale_pilot.py": "005b3a53cdb239ecb99388439520c7f4df3f817511e4d53bc3146cfdd163eee0",
     "src/spectral_continuation/coherent_representation.py": "cfb64668f7605c764b64ecdea567075529a9d0bcbcb64f3681603d72eefc84f5",
     "src/spectral_continuation/coherent_set_encoder.py": "8e1a3f0688543b4acb19f33a9d53da97fdd343e8a1df1ff4f926cd53442c776b",
     "src/spectral_continuation/coherent_waveguide_data.py": "aee274b7c7e357b32ca9be96d85c20441849692b6072bb67535c01b49397c3e9",
@@ -24493,7 +24672,7 @@
     "src/spectral_continuation/generate_waveguide_frozen_audit.py": "38accc8b640aeda0d8a38501a734cbf79f41dc065632f90317955c9dd09bfc35",
     "src/spectral_continuation/generate_waveguide_modal_cache.py": "2ccb8d724059b1c11ca937bf1f9ae7650e649bbc0fe3ecee32f64cd26ea4b90e",
     "src/spectral_continuation/generate_waveguide_query_transfer.py": "bda9dd50c0c5b07212eb63878a3e10dcdeafc421a44aa7cc71650374f27ae1e1",
-    "src/spectral_continuation/inventory_coherent_stage.py": "7852d2484ebd8e7368a358e8273907aaa786e78f1448aadd7615ca0965e0f961",
+    "src/spectral_continuation/inventory_coherent_stage.py": "35e5ebbc01d65cc13d3341a234b3fc362a952c668655d585620a3ed9e6cf8543",
     "src/spectral_continuation/learned_coherent_kernel.py": "f210bbe0d23e965434d69f0b0f9f7726085fb59cca2a7d61837aef6b3d7d6676",
     "src/spectral_continuation/learned_phase_rom.py": "a358fdf9f57cae1d77c1284e2966f143dbd15b16c7888b5e5794e1baf08a7362",
     "src/spectral_continuation/learned_source_space.py": "f6da42847e3dc94b3dc1da72af17a1aeabb908c0f6dc7234fd86551781ec37d0",
@@ -24509,6 +24688,7 @@
     "src/spectral_continuation/plot_generator_frozen_audit.py": "5e7a7926f5fa3e814f86b34afc56a066b006aca03b5fce6505755065c0027ad5",
     "src/spectral_continuation/plot_generator_new_systems.py": "047c1df728744dfe11d01be18e50d90765d8085ca2a6a88ccd811569757f27ed",
     "src/spectral_continuation/plot_generator_representation_limits.py": "103063634fd252cea2cc873ff6728dff198754c20b53f3220217c2a3c8e45013",
+    "src/spectral_continuation/plot_helmholtz_multiscale_correction.py": "9861b841f292940744979a9772917a39e0c7f55c004a7c0ad1b3b42cd8686746",
     "src/spectral_continuation/plot_learned_speed_manifold_confirm.py": "5e2204a7d81176d5a4cebedf1e53b03cba0498b19c5376b7b09e596f0e12c748",
     "src/spectral_continuation/plot_learned_speed_manifold_phase.py": "e41aac898fbd5c39b57320cce9407d113d24962644b6acd70afc93cd8842bdf7",
     "src/spectral_continuation/plot_phase_rom_progress.py": "c829f519a6c6537304f2fb07219da92e888ba637f84ef1c1145a6df4394bd434",
@@ -24534,6 +24714,7 @@
     "tests/test_fundamental_solution_rom.py": "927d9b6c79a1fe7fe8a98dc2dcd4b8acde967e88da39370f1ec7954466f3a100",
     "tests/test_helmholtz_generator_compression.py": "99c192330242ae371848aaec8caa48fe159bec49a2adc62ffd5c9c61d24521b1",
     "tests/test_helmholtz_generator_identification.py": "504be6e284b165d17e3d5466cc81ed649e91d1e50b6aa0dfe852ad2b331828a6",
+    "tests/test_helmholtz_multiscale_pilot.py": "d2ef7d1a4104b4305e7eb02ca2c80d296a9f83695838ff3398d570afc5494bd9",
     "tests/test_learned_coherent_kernel.py": "7b94b3e1069fc78a7dc9bff9d0debed106ce78962864ae9f157f66b9ed57792f",
     "tests/test_learned_phase_rom.py": "c1fcd131bc22e4d2752edbd90402eaf97aa6d347dc234e171c433bdb96114ea3",
     "tests/test_learned_source_space.py": "e55bf8900c3694742aae967a554214ee9ff0a9ada4da5241b78be324777d83a3",
@@ -25099,6 +25280,111 @@
           "path": "artifacts/coherent_helmholtz_generator_identification_20261003/results.json",
           "bytes": 74189,
           "sha256": "7e87383d80dee9ea080f14d71cafb04425ff04f487be7ac3a58883375a848f57"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_multiscale_fullfield_classic_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_fullfield_classic_20261004/config.json",
+          "bytes": 1135,
+          "sha256": "05c7ea77160dbf68b44e1db7e38d0e0f35b0bcefd2a7417b165a885fa95a1b2a"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_fullfield_classic_20261004/manifest.json",
+          "bytes": 2425,
+          "sha256": "b5cab0f4d6d4635b36b39fe7e4cbb290758c9d9a6e08a66f5b3d82afcae6c8a6"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_fullfield_classic_20261004/results.json",
+          "bytes": 10231,
+          "sha256": "b2f52360e6c571be45ddb1694f82e87601a7c972dc55b80138a787b892629281"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_fullfield_classic_20261004/summary.json",
+          "bytes": 979,
+          "sha256": "f5b410470be067d49fe148d230c06308de02464cd2aa516826af3710f8f4fb46"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_multiscale_pilot_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_pilot_20261004/config.json",
+          "bytes": 1337,
+          "sha256": "3ddb443f43516cb70290381f0961d0b30d0afedb8f5f3a63d4db18a267604a1d"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_pilot_20261004/manifest.json",
+          "bytes": 10182,
+          "sha256": "ddb9ebb1762f6efe4c810f21f03babd0cd7937314c44f4e7a4ca66fa834c3e7f"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_pilot_20261004/progress.json",
+          "bytes": 4036,
+          "sha256": "166ef5a8a99ec198a07d83ca35827a4ccc6465ba343f4f949fe82edd45c6499d"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_pilot_20261004/results.json",
+          "bytes": 4036,
+          "sha256": "166ef5a8a99ec198a07d83ca35827a4ccc6465ba343f4f949fe82edd45c6499d"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_pilot_20261004/summary.json",
+          "bytes": 988,
+          "sha256": "6227e8f5ce4afd9b33ee1dd120f8b50330dc59755a94d43d988be444c3a1df2b"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_multiscale_sampling_audit_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_sampling_audit_20261004/config.json",
+          "bytes": 1257,
+          "sha256": "959cf013acfea00e59545b48f4daf7fbc9be9742f5f453043f828109e70ef733"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_sampling_audit_20261004/manifest.json",
+          "bytes": 2525,
+          "sha256": "d6e24d2c9ba958b3c208d4c42b4f9fcd5db27f9296ac328fd4ea3ac4a64ee583"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_sampling_audit_20261004/results.json",
+          "bytes": 23083,
+          "sha256": "4d8e875e16826ba99809d237bebbba392c88c6fd982e99e82f3633a852fc50b0"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_sampling_audit_20261004/summary.json",
+          "bytes": 1921,
+          "sha256": "3b1e80d6470e0253874a31fdf5e78794f0920a4d58f52182b26474ab0d2aad91"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_multiscale_sampling_corrected_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_sampling_corrected_20261004/config.json",
+          "bytes": 1373,
+          "sha256": "8bec422bac70fd2a7565199eed9a86ac1b89569d36a5a9a8302156f055366026"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_sampling_corrected_20261004/manifest.json",
+          "bytes": 2761,
+          "sha256": "99c35eaf054795069d539ffbbfdeb610052c49a521761632fcd4be43341afae2"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_sampling_corrected_20261004/results.json",
+          "bytes": 24938,
+          "sha256": "2adc7670d1514ccf700b6384d5f7af066547d21a55d8b799e4a742b980150264"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_sampling_corrected_20261004/summary.json",
+          "bytes": 2266,
+          "sha256": "84d978f06469b723be0d22f24e95c3939a9624e947db37296f5f819b0ebd5b7d"
         }
       ]
     },

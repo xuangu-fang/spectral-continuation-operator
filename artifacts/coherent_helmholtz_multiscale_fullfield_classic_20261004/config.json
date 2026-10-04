@@ -1,0 +1,30 @@
+{
+  "source_data": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004",
+  "systems": [
+    20269600,
+    20269601,
+    20269602,
+    20269603,
+    20269604,
+    20269605,
+    20269606,
+    20269607
+  ],
+  "context_frequencies_hz": [
+    6.0,
+    10.0,
+    14.0
+  ],
+  "query_frequencies_hz": [
+    11.3,
+    17.0
+  ],
+  "observation_grid": 65,
+  "teacher_grid": 257,
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "method": "sine_spectral_real_q_identification_then_known_PDE_query",
+  "scope": "POSTHOC classical full-field information audit on already-generated eight multiscale two-way Helmholtz M0 PILOT systems. Hidden texture coefficients and Gaussian contrasts are removed from the spec before inference; public known source/loss/BC/PDE and three FULL 65x65 complex context fields are used. Query 11.3 and 17 with the same numerical PDE. This is not the future sparse-line main task or independent method confirmation. Its purpose is to decide whether full-field low-frequency observations leave any meaningful learning headroom despite changing the medium statistical family."
+}

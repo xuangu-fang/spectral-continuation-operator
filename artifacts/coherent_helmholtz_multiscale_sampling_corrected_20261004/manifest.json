@@ -1,0 +1,16 @@
+{
+  "scope": "POSTHOC CORRECTION of classical full-field baseline on same eight already-used multiscale Helmholtz M0 pilot systems. Initial legacy estimator clipped q>=1 because old Gaussian media only slowed waves; the new texture has faster-than-background regions and initial 65x65 baseline clipped ~40 percent pixels, rendering its 0.13-0.15 raw errors invalid as strong-baseline evidence. Now keep exact same fields/source/PDE/frequencies/grids and sine-spectral inverse but use broad physics-admissible q bounds [0.5,6.25] at BOTH estimation and interpolation. Compare all 65/129/257 grids. This correction is not a new independent test or neural performance result. Original invalid audit is retained, not overwritten.",
+  "implementation_sha256": "3ba40de22308c8f83fdbc63435fcdfd3455f26c5bcbd3e98c51e001b77eea99a",
+  "estimator_implementation_sha256": "3774527fdeb9efdd26a133fbbbb20fb1c41be126f20a39c3aec944a7632a175d",
+  "invalid_initial_sampling_results_sha256": "4d8e875e16826ba99809d237bebbba392c88c6fd982e99e82f3633a852fc50b0",
+  "truth_sha256": {
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269600_grid257.npz": "1075ab976f85acd0c85c38317bb1827b1d44e22d7102470c218cf171ba540534",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269601_grid257.npz": "068138b5a6012174765dd5a2261f4df24c1e180c4c84e7f02265d7174847e72e",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269602_grid257.npz": "8b4dcd299dc1ad2819c5b0c2e2fbed737a83bb6003314d816a0eed8f79db7676",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269603_grid257.npz": "d1f4739512d9bd2ef36449cf908d3286bd4b55084b5fcfdf88c24c7dfecf685c",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269604_grid257.npz": "1c71ece9ef3ea26036386ac53d4dc176c6e4609c4a2c519bcc179688401305cc",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269605_grid257.npz": "913b295a8fabefbd050d107efc207658eb4491f07f355afb23a85abafd4cad13",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269606_grid257.npz": "3e9ac3e559eec9435c4dc8bdcec5737537f131a3d5d792c34f9e65970f4ed165",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269607_grid257.npz": "073dae9a261f0b05afffb94c6a412ed9febbb55dcff94d2c8e6e838d1fc12584"
+  }
+}

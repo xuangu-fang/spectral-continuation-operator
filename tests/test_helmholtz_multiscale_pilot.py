@@ -36,5 +36,13 @@ def test_fullfield_classical_public_spec_removes_texture_coefficients():
     stripped = public_spec(spec)
     assert "spectral_texture" not in stripped
     assert "texture_scale" not in stripped
+    assert stripped["centers"] == []
+    assert stripped["widths"] == []
+    assert stripped["contrasts"] == []
     assert stripped["source"] == spec["source"]
     assert stripped["sponge_strength"] == spec["sponge_strength"]
+    axis = np.linspace(0, 1, 33)
+    _, true_loss, true_source = sample_environment(spec, axis)
+    _, public_loss, public_source = sample_environment(stripped, axis)
+    np.testing.assert_array_equal(public_loss, true_loss)
+    np.testing.assert_array_equal(public_source, true_source)

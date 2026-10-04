@@ -66,8 +66,13 @@ def run(root, output):
     speed_scaling_name = "coherent_waveguide_speed_resolution_scaling_20261004"
     if (base / speed_scaling_name).exists():
         dataset_specs.append((speed_scaling_name, 16))
+    multiscale_helmholtz_name = "coherent_helmholtz_multiscale_pilot_20261004"
+    if (base / multiscale_helmholtz_name).exists():
+        dataset_specs.append((multiscale_helmholtz_name, 8))
     for name, expected in dataset_specs:
-        paths = sorted((base / name).glob("*.npz"))
+        paths = sorted((base / name).glob(
+            "system_*_grid257.npz" if name == multiscale_helmholtz_name else "*.npz"
+        ))
         if len(paths) != expected:
             raise ValueError(f"incomplete dataset {name}: {len(paths)} != {expected}")
         records = []
@@ -125,6 +130,12 @@ def run(root, output):
         speed_confirm = name == speed_confirm_name
         speed_scaling = name == speed_scaling_name
         metadata_paths = set((base / name).glob("*.json"))
+        if name == multiscale_helmholtz_name:
+            training_path = base / name / "training_medium_labels.npz"
+            with np.load(training_path, allow_pickle=False) as z:
+                if z["speed"].shape != (512, 65, 65) or not np.isfinite(z["speed"]).all():
+                    raise ValueError("invalid multiscale Helmholtz training medium labels")
+            metadata_paths.add(training_path)
         if independent:
             metadata_paths.update((base / name).parent.glob("*.json"))
         datasets[name] = {
@@ -147,6 +158,8 @@ def run(root, output):
                 if speed_confirm
                 else "conditional first8 ALREADY-USED taper7.5 confirmation systems, fixed learned speed codes queried at1000/1200Hz with 4 physical decoder resolutions; 16 new target NPZ, NOT new independent environments or new PDE; prereg git a7363b7"
                 if speed_scaling
+                else "M0 multiscale TWO-WAY Helmholtz DATA PILOT ONLY: 8 direct grid257 development fields, 512 training speed labels stored separately as metadata, two grid257/513 numeric audit systems; NOT independent method test or completed cross-PDE learning gate"
+                if name == multiscale_helmholtz_name
                 else "development/training only; not independent test evidence"
             ),
             "files": records,

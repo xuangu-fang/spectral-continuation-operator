@@ -1,0 +1,59 @@
+{
+  "summary": [
+    {
+      "observation_grid": 65,
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.00012313722474299613,
+      "mean_phase_rad": 0.00010131586595468997,
+      "max_raw": 0.0001369911851059625,
+      "mean_clipping_fraction": 0.0
+    },
+    {
+      "observation_grid": 65,
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 6.836710689968645e-05,
+      "mean_phase_rad": 6.078929016986698e-05,
+      "max_raw": 0.00010139681669438766,
+      "mean_clipping_fraction": 0.0
+    },
+    {
+      "observation_grid": 129,
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 6.952067063911106e-05,
+      "mean_phase_rad": 6.890661444714099e-05,
+      "max_raw": 9.599305569360529e-05,
+      "mean_clipping_fraction": 0.0
+    },
+    {
+      "observation_grid": 129,
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 6.102757657458154e-05,
+      "mean_phase_rad": 5.552249303006375e-05,
+      "max_raw": 7.641056364488473e-05,
+      "mean_clipping_fraction": 0.0
+    },
+    {
+      "observation_grid": 257,
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 6.947522738926103e-05,
+      "mean_phase_rad": 6.884388844569312e-05,
+      "max_raw": 9.606170501081286e-05,
+      "mean_clipping_fraction": 0.0
+    },
+    {
+      "observation_grid": 257,
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 6.101441575631876e-05,
+      "mean_phase_rad": 5.548406824706154e-05,
+      "max_raw": 7.633164132938388e-05,
+      "mean_clipping_fraction": 0.0
+    }
+  ],
+  "scope": "POSTHOC CORRECTION of classical full-field baseline on same eight already-used multiscale Helmholtz M0 pilot systems. Initial legacy estimator clipped q>=1 because old Gaussian media only slowed waves; the new texture has faster-than-background regions and initial 65x65 baseline clipped ~40 percent pixels, rendering its 0.13-0.15 raw errors invalid as strong-baseline evidence. Now keep exact same fields/source/PDE/frequencies/grids and sine-spectral inverse but use broad physics-admissible q bounds [0.5,6.25] at BOTH estimation and interpolation. Compare all 65/129/257 grids. This correction is not a new independent test or neural performance result. Original invalid audit is retained, not overwritten."
+}

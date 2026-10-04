@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "numerical_raw": true,
+    "resolution": true,
+    "solver_residual": true
+  },
+  "all_m0_pilot_checks_pass": true,
+  "max_numerical_raw": 0.0019843976443014062,
+  "min_teacher_points_per_wavelength": 12.172841156606296,
+  "training_medium_labels": 512,
+  "pilot_systems": 8,
+  "audit_pairs": 4,
+  "scope": "M0 DATA/NUMERICS PILOT ONLY, not method comparison or independent paper test: genuinely two-way 2D heterogeneous Helmholtz with random multiscale cosine texture plus three localized inclusions, varying source position, known homogeneous boundary loss/source/PDE. Train 512 medium GRID labels only on disjoint seeds, generate 8 direct grid257 pilot wave systems at three context frequencies 6/10/14 and query 11.3/17, plus 2 disjoint systems grid257-vs513 numerical convergence at 14/17. Pilot data must not be used as a frozen method test; no claim of full 512/64/64 next-stage protocol. All physics definitions and gates frozen before generating new truth."
+}

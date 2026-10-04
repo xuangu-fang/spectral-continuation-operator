@@ -1,0 +1,818 @@
+[
+  {
+    "system": 20269600,
+    "observation_grid": 65,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.0001369911851059625,
+    "amplitude_rel_l2": 7.050872953669212e-05,
+    "energy_weighted_phase_rmse_rad": 0.00011745284101174308,
+    "energy_weighted_phase_cos": 0.9999999931024153,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999929437795
+  },
+  {
+    "system": 20269600,
+    "observation_grid": 65,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.028103306303778e-05,
+    "amplitude_rel_l2": 2.6117614828475598e-05,
+    "energy_weighted_phase_rmse_rad": 4.2964853785694335e-05,
+    "energy_weighted_phase_cos": 0.9999999990770105,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.999999998841493
+  },
+  {
+    "system": 20269600,
+    "observation_grid": 129,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.445092786740698e-05,
+    "amplitude_rel_l2": 9.317873581049532e-06,
+    "energy_weighted_phase_rmse_rad": 6.377365160609277e-05,
+    "energy_weighted_phase_cos": 0.9999999979664608,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999988835557
+  },
+  {
+    "system": 20269600,
+    "observation_grid": 129,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.329571200045807e-05,
+    "amplitude_rel_l2": 2.5117229631344132e-05,
+    "energy_weighted_phase_rmse_rad": 4.70045404711922e-05,
+    "energy_weighted_phase_cos": 0.9999999988952866,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999987696061
+  },
+  {
+    "system": 20269600,
+    "observation_grid": 257,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.450027628783839e-05,
+    "amplitude_rel_l2": 9.351955542821194e-06,
+    "energy_weighted_phase_rmse_rad": 6.381853505077196e-05,
+    "energy_weighted_phase_cos": 0.9999999979635974,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.999999998879872
+  },
+  {
+    "system": 20269600,
+    "observation_grid": 257,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.335485985089666e-05,
+    "amplitude_rel_l2": 2.5046073667188483e-05,
+    "energy_weighted_phase_rmse_rad": 4.710949011995664e-05,
+    "energy_weighted_phase_cos": 0.9999999988903481,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999987667535
+  },
+  {
+    "system": 20269601,
+    "observation_grid": 65,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.00011817796994631038,
+    "amplitude_rel_l2": 6.6259905112741e-05,
+    "energy_weighted_phase_rmse_rad": 9.785511842622072e-05,
+    "energy_weighted_phase_cos": 0.9999999952121877,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999941548217
+  },
+  {
+    "system": 20269601,
+    "observation_grid": 65,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 8.164655121174363e-05,
+    "amplitude_rel_l2": 3.28999756305848e-05,
+    "energy_weighted_phase_rmse_rad": 7.472207426711276e-05,
+    "energy_weighted_phase_cos": 0.999999997208306,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999970032776
+  },
+  {
+    "system": 20269601,
+    "observation_grid": 129,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 9.599305569360529e-05,
+    "amplitude_rel_l2": 1.1311815456903665e-05,
+    "energy_weighted_phase_rmse_rad": 9.532355825295207e-05,
+    "energy_weighted_phase_cos": 0.9999999954567095,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999972305307
+  },
+  {
+    "system": 20269601,
+    "observation_grid": 129,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 7.395915586082493e-05,
+    "amplitude_rel_l2": 3.102129543579269e-05,
+    "energy_weighted_phase_rmse_rad": 6.713624966261246e-05,
+    "energy_weighted_phase_cos": 0.9999999977463621,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999975764502
+  },
+  {
+    "system": 20269601,
+    "observation_grid": 257,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 9.606170501081286e-05,
+    "amplitude_rel_l2": 1.1400447870794712e-05,
+    "energy_weighted_phase_rmse_rad": 9.538213579266521e-05,
+    "energy_weighted_phase_cos": 0.999999995451124,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999972239826
+  },
+  {
+    "system": 20269601,
+    "observation_grid": 257,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 7.403765217590406e-05,
+    "amplitude_rel_l2": 3.0993599371319666e-05,
+    "energy_weighted_phase_rmse_rad": 6.723548388619242e-05,
+    "energy_weighted_phase_cos": 0.999999997739695,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999975717561
+  },
+  {
+    "system": 20269602,
+    "observation_grid": 65,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.00011248319712974929,
+    "amplitude_rel_l2": 7.119917217625906e-05,
+    "energy_weighted_phase_rmse_rad": 8.708153347153014e-05,
+    "energy_weighted_phase_cos": 0.9999999962084032,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999940126667
+  },
+  {
+    "system": 20269602,
+    "observation_grid": 65,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.00010139681669438766,
+    "amplitude_rel_l2": 4.5866675895868365e-05,
+    "energy_weighted_phase_rmse_rad": 9.042688496963492e-05,
+    "energy_weighted_phase_cos": 0.9999999959114891,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999958388883
+  },
+  {
+    "system": 20269602,
+    "observation_grid": 129,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 8.123010745426769e-05,
+    "amplitude_rel_l2": 7.642763107790487e-06,
+    "energy_weighted_phase_rmse_rad": 8.086959869241418e-05,
+    "energy_weighted_phase_cos": 0.999999996730054,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999983783697
+  },
+  {
+    "system": 20269602,
+    "observation_grid": 129,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 7.641056364488473e-05,
+    "amplitude_rel_l2": 2.1498958653197166e-05,
+    "energy_weighted_phase_rmse_rad": 7.33222524113247e-05,
+    "energy_weighted_phase_cos": 0.9999999973119237,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999976481043
+  },
+  {
+    "system": 20269602,
+    "observation_grid": 257,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 8.118007255869789e-05,
+    "amplitude_rel_l2": 7.849047084882706e-06,
+    "energy_weighted_phase_rmse_rad": 8.079956186481098e-05,
+    "energy_weighted_phase_cos": 0.9999999967357153,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999983765369
+  },
+  {
+    "system": 20269602,
+    "observation_grid": 257,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 7.633164132938388e-05,
+    "amplitude_rel_l2": 2.1136395158883106e-05,
+    "energy_weighted_phase_rmse_rad": 7.334547999394173e-05,
+    "energy_weighted_phase_cos": 0.9999999973102202,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999976537416
+  },
+  {
+    "system": 20269603,
+    "observation_grid": 65,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.00010222375443231886,
+    "amplitude_rel_l2": 6.731037671071243e-05,
+    "energy_weighted_phase_rmse_rad": 7.693436490079673e-05,
+    "energy_weighted_phase_cos": 0.9999999970405516,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999951246191
+  },
+  {
+    "system": 20269603,
+    "observation_grid": 65,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.259527373762169e-05,
+    "amplitude_rel_l2": 2.8597634895529475e-05,
+    "energy_weighted_phase_rmse_rad": 5.5679623613589675e-05,
+    "energy_weighted_phase_cos": 0.9999999984498897,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999983001477
+  },
+  {
+    "system": 20269603,
+    "observation_grid": 129,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.323361868630262e-05,
+    "amplitude_rel_l2": 8.165080952122434e-06,
+    "energy_weighted_phase_rmse_rad": 6.270413327593102e-05,
+    "energy_weighted_phase_cos": 0.9999999980340958,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999988493481
+  },
+  {
+    "system": 20269603,
+    "observation_grid": 129,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.8163189281626314e-05,
+    "amplitude_rel_l2": 2.206723840604663e-05,
+    "energy_weighted_phase_rmse_rad": 5.381321653181314e-05,
+    "energy_weighted_phase_cos": 0.9999999985520689,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.999999998581159
+  },
+  {
+    "system": 20269603,
+    "observation_grid": 257,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.322083713199104e-05,
+    "amplitude_rel_l2": 8.104325939786412e-06,
+    "energy_weighted_phase_rmse_rad": 6.269912565064491e-05,
+    "energy_weighted_phase_cos": 0.9999999980344098,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999988498445
+  },
+  {
+    "system": 20269603,
+    "observation_grid": 257,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.8097341908165466e-05,
+    "amplitude_rel_l2": 2.1849578875586016e-05,
+    "energy_weighted_phase_rmse_rad": 5.383091314930585e-05,
+    "energy_weighted_phase_cos": 0.9999999985511165,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999985837773
+  },
+  {
+    "system": 20269604,
+    "observation_grid": 65,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.00013559134799193113,
+    "amplitude_rel_l2": 7.010802075875004e-05,
+    "energy_weighted_phase_rmse_rad": 0.00011606116727539033,
+    "energy_weighted_phase_cos": 0.9999999932649027,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999935549192
+  },
+  {
+    "system": 20269604,
+    "observation_grid": 65,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 4.9495173318393484e-05,
+    "amplitude_rel_l2": 2.5407694249585347e-05,
+    "energy_weighted_phase_rmse_rad": 4.247525960843273e-05,
+    "energy_weighted_phase_cos": 0.999999999097926,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999988650623
+  },
+  {
+    "system": 20269604,
+    "observation_grid": 129,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.007706715017221e-05,
+    "amplitude_rel_l2": 9.506854820854992e-06,
+    "energy_weighted_phase_rmse_rad": 5.931996524493141e-05,
+    "energy_weighted_phase_cos": 0.9999999982405707,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999989866712
+  },
+  {
+    "system": 20269604,
+    "observation_grid": 129,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.3690721944960617e-05,
+    "amplitude_rel_l2": 2.5288016703854794e-05,
+    "energy_weighted_phase_rmse_rad": 4.7361232611802144e-05,
+    "energy_weighted_phase_cos": 0.9999999988784568,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999987757983
+  },
+  {
+    "system": 20269604,
+    "observation_grid": 257,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.008725739677197e-05,
+    "amplitude_rel_l2": 9.767093097437714e-06,
+    "energy_weighted_phase_rmse_rad": 5.928799017498552e-05,
+    "energy_weighted_phase_cos": 0.999999998242467,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999989834079
+  },
+  {
+    "system": 20269604,
+    "observation_grid": 257,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.381840187496716e-05,
+    "amplitude_rel_l2": 2.5425174483746937e-05,
+    "energy_weighted_phase_rmse_rad": 4.7432658744319065e-05,
+    "energy_weighted_phase_cos": 0.9999999988750713,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999987730157
+  },
+  {
+    "system": 20269605,
+    "observation_grid": 65,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.0001251756869532215,
+    "amplitude_rel_l2": 6.6807523215133e-05,
+    "energy_weighted_phase_rmse_rad": 0.00010585848408145808,
+    "energy_weighted_phase_cos": 0.9999999943969908,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999939021121
+  },
+  {
+    "system": 20269605,
+    "observation_grid": 65,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.712963355244396e-05,
+    "amplitude_rel_l2": 2.7043177857343543e-05,
+    "energy_weighted_phase_rmse_rad": 6.144055941715501e-05,
+    "energy_weighted_phase_cos": 0.9999999981125288,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999980116425
+  },
+  {
+    "system": 20269605,
+    "observation_grid": 129,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.812679555328681e-05,
+    "amplitude_rel_l2": 7.715855992772647e-06,
+    "energy_weighted_phase_rmse_rad": 6.768832688435691e-05,
+    "energy_weighted_phase_cos": 0.9999999977091452,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999986504426
+  },
+  {
+    "system": 20269605,
+    "observation_grid": 129,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.620514869343131e-05,
+    "amplitude_rel_l2": 1.762164856912644e-05,
+    "energy_weighted_phase_rmse_rad": 6.381590570810054e-05,
+    "energy_weighted_phase_cos": 0.9999999979637649,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999981991248
+  },
+  {
+    "system": 20269605,
+    "observation_grid": 257,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.806800190594909e-05,
+    "amplitude_rel_l2": 8.126383273351927e-06,
+    "energy_weighted_phase_rmse_rad": 6.758102921544793e-05,
+    "energy_weighted_phase_cos": 0.9999999977164024,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.999999998646237
+  },
+  {
+    "system": 20269605,
+    "observation_grid": 257,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.644957239950079e-05,
+    "amplitude_rel_l2": 1.8286690449385617e-05,
+    "energy_weighted_phase_rmse_rad": 6.388275978455085e-05,
+    "energy_weighted_phase_cos": 0.9999999979594963,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999981880133
+  },
+  {
+    "system": 20269606,
+    "observation_grid": 65,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.00012591121344777276,
+    "amplitude_rel_l2": 6.696962707073232e-05,
+    "energy_weighted_phase_rmse_rad": 0.00010662359711672508,
+    "energy_weighted_phase_cos": 0.9999999943157043,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999937530589
+  },
+  {
+    "system": 20269606,
+    "observation_grid": 65,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.288800904178048e-05,
+    "amplitude_rel_l2": 3.0427281343540396e-05,
+    "energy_weighted_phase_rmse_rad": 5.503543576164931e-05,
+    "energy_weighted_phase_cos": 0.99999999848555,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999982466284
+  },
+  {
+    "system": 20269606,
+    "observation_grid": 129,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.8578607636134775e-05,
+    "amplitude_rel_l2": 9.050121827879997e-06,
+    "energy_weighted_phase_rmse_rad": 5.7875181348671334e-05,
+    "energy_weighted_phase_cos": 0.9999999983252319,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999990245865
+  },
+  {
+    "system": 20269606,
+    "observation_grid": 129,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.251088807338353e-05,
+    "amplitude_rel_l2": 2.5118277715965705e-05,
+    "energy_weighted_phase_rmse_rad": 4.611230911465746e-05,
+    "energy_weighted_phase_cos": 0.9999999989368272,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999988189677
+  },
+  {
+    "system": 20269606,
+    "observation_grid": 257,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.8384810403985925e-05,
+    "amplitude_rel_l2": 9.159789660241416e-06,
+    "energy_weighted_phase_rmse_rad": 5.7661704395619574e-05,
+    "energy_weighted_phase_cos": 0.999999998337564,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999990277461
+  },
+  {
+    "system": 20269606,
+    "observation_grid": 257,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.2321285823736874e-05,
+    "amplitude_rel_l2": 2.5371717353483437e-05,
+    "energy_weighted_phase_rmse_rad": 4.5756675850332134e-05,
+    "energy_weighted_phase_cos": 0.999999998953163,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999988287447
+  },
+  {
+    "system": 20269607,
+    "observation_grid": 65,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 0.0001285434429367025,
+    "amplitude_rel_l2": 7.735471190598629e-05,
+    "energy_weighted_phase_rmse_rad": 0.00010265982135365559,
+    "energy_weighted_phase_cos": 0.9999999947304806,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999936756242
+  },
+  {
+    "system": 20269607,
+    "observation_grid": 65,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_65x65_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 7.150436457808301e-05,
+    "amplitude_rel_l2": 3.273461994791854e-05,
+    "energy_weighted_phase_rmse_rad": 6.356962993566709e-05,
+    "energy_weighted_phase_cos": 0.999999997979451,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999978002628
+  },
+  {
+    "system": 20269607,
+    "observation_grid": 129,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.447518507171209e-05,
+    "amplitude_rel_l2": 9.976483509216892e-06,
+    "energy_weighted_phase_rmse_rad": 6.369850027177824e-05,
+    "energy_weighted_phase_cos": 0.9999999979712505,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999989355568
+  },
+  {
+    "system": 20269607,
+    "observation_grid": 129,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_129x129_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.3985233097082833e-05,
+    "amplitude_rel_l2": 2.8872255705374962e-05,
+    "energy_weighted_phase_rmse_rad": 4.561423772900738e-05,
+    "energy_weighted_phase_cos": 0.9999999989596708,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999987428849
+  },
+  {
+    "system": 20269607,
+    "observation_grid": 257,
+    "frequency": 11.3,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 6.429885841804105e-05,
+    "amplitude_rel_l2": 9.97010426187578e-06,
+    "energy_weighted_phase_rmse_rad": 6.352102542059886e-05,
+    "energy_weighted_phase_cos": 0.9999999979825398,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999989402225
+  },
+  {
+    "system": 20269607,
+    "observation_grid": 257,
+    "frequency": 17.0,
+    "clipping_fraction": 0.0,
+    "information": "THREE_FULL_257x257_COMPLEX_LOWBAND_FIELDS",
+    "q_bounds": [
+      0.5,
+      6.25
+    ],
+    "complex_rel_l2": 5.370457068799519e-05,
+    "amplitude_rel_l2": 2.8876426148827343e-05,
+    "energy_weighted_phase_rmse_rad": 4.527908444789361e-05,
+    "energy_weighted_phase_cos": 0.9999999989749024,
+    "zero_prediction_energy_fraction": 0.0,
+    "complex_coherence": 0.9999999987558659
+  }
+]

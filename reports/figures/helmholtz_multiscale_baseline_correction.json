@@ -1,0 +1,123 @@
+{
+  "scope": "Technical error audit, not a paper method comparison. Initial q>=1 classical baseline is invalid for media with speed above background. Corrected result is the strong same-information full-field baseline.",
+  "invalid_summary_sha256": "3b1e80d6470e0253874a31fdf5e78794f0920a4d58f52182b26474ab0d2aad91",
+  "corrected_summary_sha256": "84d978f06469b723be0d22f24e95c3939a9624e947db37296f5f819b0ebd5b7d",
+  "plotted": [
+    {
+      "frequency": 11.3,
+      "invalid": [
+        {
+          "observation_grid": 65,
+          "frequency": 11.3,
+          "systems": 8,
+          "mean_raw": 0.1451905774228338,
+          "mean_phase_rad": 0.13925093878121658,
+          "max_raw": 0.3293731721647164
+        },
+        {
+          "observation_grid": 129,
+          "frequency": 11.3,
+          "systems": 8,
+          "mean_raw": 0.1450510237365274,
+          "mean_phase_rad": 0.13909341858163404,
+          "max_raw": 0.32911906512095773
+        },
+        {
+          "observation_grid": 257,
+          "frequency": 11.3,
+          "systems": 8,
+          "mean_raw": 0.14501573089509756,
+          "mean_phase_rad": 0.13905326744059957,
+          "max_raw": 0.3290688872917639
+        }
+      ],
+      "corrected": [
+        {
+          "observation_grid": 65,
+          "frequency": 11.3,
+          "systems": 8,
+          "mean_raw": 0.00012313722474299613,
+          "mean_phase_rad": 0.00010131586595468997,
+          "max_raw": 0.0001369911851059625,
+          "mean_clipping_fraction": 0.0
+        },
+        {
+          "observation_grid": 129,
+          "frequency": 11.3,
+          "systems": 8,
+          "mean_raw": 6.952067063911106e-05,
+          "mean_phase_rad": 6.890661444714099e-05,
+          "max_raw": 9.599305569360529e-05,
+          "mean_clipping_fraction": 0.0
+        },
+        {
+          "observation_grid": 257,
+          "frequency": 11.3,
+          "systems": 8,
+          "mean_raw": 6.947522738926103e-05,
+          "mean_phase_rad": 6.884388844569312e-05,
+          "max_raw": 9.606170501081286e-05,
+          "mean_clipping_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "frequency": 17.0,
+      "invalid": [
+        {
+          "observation_grid": 65,
+          "frequency": 17.0,
+          "systems": 8,
+          "mean_raw": 0.12926857269089606,
+          "mean_phase_rad": 0.11747735768095671,
+          "max_raw": 0.33033793169774217
+        },
+        {
+          "observation_grid": 129,
+          "frequency": 17.0,
+          "systems": 8,
+          "mean_raw": 0.12919007985321798,
+          "mean_phase_rad": 0.11736755190252797,
+          "max_raw": 0.33020059857108547
+        },
+        {
+          "observation_grid": 257,
+          "frequency": 17.0,
+          "systems": 8,
+          "mean_raw": 0.12916036234469247,
+          "mean_phase_rad": 0.11733012304974319,
+          "max_raw": 0.330170794201025
+        }
+      ],
+      "corrected": [
+        {
+          "observation_grid": 65,
+          "frequency": 17.0,
+          "systems": 8,
+          "mean_raw": 6.836710689968645e-05,
+          "mean_phase_rad": 6.078929016986698e-05,
+          "max_raw": 0.00010139681669438766,
+          "mean_clipping_fraction": 0.0
+        },
+        {
+          "observation_grid": 129,
+          "frequency": 17.0,
+          "systems": 8,
+          "mean_raw": 6.102757657458154e-05,
+          "mean_phase_rad": 5.552249303006375e-05,
+          "max_raw": 7.641056364488473e-05,
+          "mean_clipping_fraction": 0.0
+        },
+        {
+          "observation_grid": 257,
+          "frequency": 17.0,
+          "systems": 8,
+          "mean_raw": 6.101441575631876e-05,
+          "mean_phase_rad": 5.548406824706154e-05,
+          "max_raw": 7.633164132938388e-05,
+          "mean_clipping_fraction": 0.0
+        }
+      ]
+    }
+  ]
+}

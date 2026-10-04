@@ -13,6 +13,7 @@
 | 大白话理解当前表示、频率与分辨率 | [共同生成器的机制备忘](docs/GENERATOR_REPRESENTATION_MECHANISM_ZH.md) |
 | 当前故事和下一阶段的取舍 | [当前主线与路线图](docs/CURRENT_STORY_AND_ROADMAP_ZH.md) |
 | 真正跨方程的下一轮实验如何设计 | [第二物理域 POC 计划](docs/NEXT_CROSS_PHYSICS_POC_ZH.md) |
+| 第二物理域数据pilot与经典强基线纠错 | [二维多尺度 Helmholtz M0](docs/HELMHOLTZ_MULTISCALE_M0_PILOT_ZH.md) |
 | 本次24小时目标、阶段和门槛 | [执行协议](docs/COHERENT_CONTINUOUS_REPRESENTATION_24H_ZH.md) |
 | 数据怎么生成、哪些能复用 | [数据来源](docs/COHERENT_DATA_PROVENANCE_ZH.md) |
 | Agent接手、避免重复实验 | [AGENTS](AGENTS.md)、[当前状态](docs/CURRENT_STATUS_ZH.md)、[实验账本](docs/EXPERIMENT_LEDGER_ZH.md) |
@@ -25,7 +26,9 @@
 
 为什么余弦族收益大而Gaussian族收益小？[额外真介质投影归因](docs/VARIABLE_PROJECTION_ATTRIBUTION_ZH.md)发现：余弦新16中冻结速度/q空间在800Hz的真介质欧氏投影响应raw约0.0024 vs 0.076–0.078；Gaussian旧8两空间都约0.002–0.003。[机制图](reports/figures/spectral_variable_projection_attribution.png)。这些是**读取真测试介质的不可部署oracle**，且欧氏投影不是响应最优下界；它支持非线性变量变换在某些介质族引起相位敏感秩膨胀的假说，但不证明普适性。
 
-**新增强基线边界：** 在同一批**已用**余弦新16系统上，把q-PCA从255升到768维，真介质投影oracle的800Hz双源raw降到约0.0031，证明q线性表示并非原则上无容量；但无持续先验的低频反演反而约0.123。带高斯代码MAP先验的768维低频反演改善到**0.03185/0.03353**（前8选强度、后8仅条件性复核），仍高于固定声速255的0.00538/0.00505；这是**事后开发审计，不是第二次独立确认**。[容量—辨识报告](docs/Q_CAPACITY_ORACLE_AUDIT_ZH.md) · [分信息条件曲线](reports/figures/spectral_q_capacity_audit.png)。真正跨方程的[下一轮POC设计](docs/NEXT_CROSS_PHYSICS_POC_ZH.md)尚未实施。
+**新增强基线边界：** 在同一批**已用**余弦新16系统上，把q-PCA从255升到768维，真介质投影oracle的800Hz双源raw降到约0.0031，证明q线性表示并非原则上无容量；但无持续先验的低频反演反而约0.123。带高斯代码MAP先验的768维低频反演改善到**0.03185/0.03353**（前8选强度、后8仅条件性复核），仍高于固定声速255的0.00538/0.00505；这是**事后开发审计，不是第二次独立确认**。[容量—辨识报告](docs/Q_CAPACITY_ORACLE_AUDIT_ZH.md) · [分信息条件曲线](reports/figures/spectral_q_capacity_audit.png)。真正跨方程的[下一轮POC设计](docs/NEXT_CROSS_PHYSICS_POC_ZH.md)只完成了M0数据pilot，**尚无第二域方法成绩**。
+
+**第二物理域M0边界（新增）：** 二维含回散射、多尺度介质的512训练标签/8开发系统和257→513数值审计已生成，最坏网格raw0.00198，数据可复用。但在完整65×65低频复场、已知源/PDE下，正确允许快于背景声速的经典正弦谱反演，查询11.3/17的raw仅**0.000123/0.0000684**；初版0.145/0.129是旧代码错误裁`q≥1`，已留档且**不可作弱对照**。[M0数据、纠错与结论](docs/HELMHOLTZ_MULTISCALE_M0_PILOT_ZH.md)。有限接收线的正式验证仍未做。
 
 ## 已经知道什么
 
