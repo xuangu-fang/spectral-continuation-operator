@@ -11,7 +11,7 @@ from spectral_continuation.audit_waveguide_trajectory_newton import (
     trajectory_jacobian,
 )
 from spectral_continuation.coarse_waveguide_operator import query_coefficients
-from spectral_continuation.coherent_waveguide_data import environment
+from spectral_continuation.coherent_waveguide_data import environment, spectral_environment
 
 
 @pytest.mark.parametrize("frequency", [15, 70])
@@ -36,6 +36,29 @@ def test_trajectory_derivative_and_value_match_independent_decoder(frequency):
     ) / (2 * h)
     np.testing.assert_allclose(
         np.einsum("rmk,k->rm", jacobian, direction), finite, rtol=2e-6, atol=2e-7
+    )
+
+
+def test_high_frequency_spectral_medium_jacobian_matches_finite_difference():
+    spec = spectral_environment(20264000)
+    geometry = generator_geometry(spec, 12, 8, modes=64, quadrature_nodes=160)
+    rng = np.random.default_rng(800)
+    beta = rng.normal(0, 0.0002, (12, 8))
+    factor = rng.normal(0, 0.0001, (12, 8, 2))
+    initial = rng.normal(size=64) + 1j * rng.normal(size=64)
+    frequency = 800
+    _, jacobian = trajectory_jacobian(beta, factor, initial, frequency, geometry)
+    direction = np.array([0.6, -0.8])
+    delta = np.einsum("rdk,k->rd", factor, direction)
+    step = 1e-4
+    plus, _ = latent_from_coefficients(beta + step * delta, initial, geometry)
+    minus, _ = latent_from_coefficients(beta - step * delta, initial, geometry)
+    finite = (
+        query_coefficients(plus, frequency, geometry["edges"])
+        - query_coefficients(minus, frequency, geometry["edges"])
+    ) / (2 * step)
+    np.testing.assert_allclose(
+        np.einsum("rmk,k->rm", jacobian, direction), finite, rtol=1e-5, atol=2e-6
     )
 
 
