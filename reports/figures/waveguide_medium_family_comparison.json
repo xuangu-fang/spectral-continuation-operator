@@ -1,0 +1,19 @@
+{
+  "old_illustration_system": 20261332,
+  "spectral_illustration_system": 20264600,
+  "old_training_labels": "artifacts/coherent_waveguide_depth_bandwidth_20261004/training_prior.npz",
+  "spectral_training_labels": "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+  "ranks_for_99_percent": {
+    "gaussian": 21,
+    "spectral": 90
+  },
+  "ranks_for_99_9_percent": {
+    "gaussian": 38,
+    "spectral": 134
+  },
+  "explained_at_128": {
+    "gaussian": 0.9999998424142796,
+    "spectral": 0.9986372732448344
+  },
+  "maps_are_dev_illustrations_not_validation_performance_selection": true
+}

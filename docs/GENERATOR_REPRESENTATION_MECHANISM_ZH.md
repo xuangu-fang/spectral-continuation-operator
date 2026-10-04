@@ -287,3 +287,11 @@ decoder，把学习集中在从多频观测识别环境代码/其不确定性，
 encoder或query条件化子空间。这个方向必须先在新的相关谱介质族上看到容量或推断瓶颈，
 再安排未使用系统和不同物理域验证。若经典精确家族/充分反演仍接近数值上限，复杂learned
 prior只会增加方法包装，不产生实质增量。
+
+**已有理论不能重命名为创新。** 基于数据似然/物理Jacobian寻找低维参数子空间，早有
+[Likelihood-Informed Dimension Reduction](https://arxiv.org/abs/1403.4680)；
+按目标输出误差而非介质/状态MSE构造波动方程的降阶基，也已有
+[Goal-Oriented Reduced Basis for Wave Equations](https://arxiv.org/abs/1305.3519)。
+所以“响应加权PCA”最多是下一轮强经典控制/机制探针。若要形成AI方法贡献，需要在
+复杂波介质、不同频率与源、有限观测和连续相位查询下展示旧方法没有的可预测表征或
+泛化性质，并和这些先例比较，不把Jacobian权重本身包装成新发明。
