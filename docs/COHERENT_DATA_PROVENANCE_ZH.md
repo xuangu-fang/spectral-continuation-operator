@@ -256,6 +256,8 @@ Gaussian第二统计族开发只重用原512训练系统seed和旧8开发系统2
 
 另将这**同8个已用开发系统**的6/10/14三个低频真值在四条垂直线、每线65点处确定性切出：本机目录`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004/`保存8个公开小NPZ，每份仅780个复数、坐标与公开源/边界元数据；无真实介质、完整场、查询响应或随机种子。配置/代码在`c5bd2f1`先于修正版切片冻结；本机manifest含真值SHA与模型侧**不得使用**的seed文件映射。第一次包含seed的临时切片另名隔离为`..._unsafe_seed_metadata_20261004`，无方法可用性。详见[四线输入schema](HELMHOLTZ_SPARSE_CONTEXT_ZH.md)。这8份NPZ不是8个新系统，更不是第二域方法确认。
 
+在同8开发系统上的四线局部信息、真介质PCA容量oracle与线性化余项审计分别存于`coherent_helmholtz_sparse_linear_info_20261004/`、`coherent_helmholtz_sparse_linear_info_rank256_20261004/`、`coherent_helmholtz_sparse_capacity_oracle_20261004/`和`coherent_helmholtz_linearization_remainder_20261004/`；前三项结果已入库，最后一项协议`c97fc21`在运行前冻结，48行、summary与原真值SHA均存于artifact。这些**重用同8系统**，后两类直接读取真实介质/目标，不能列入可部署分数。两个中断/早期错误运行的本地文件移到`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_failed_local_runs_20261004/`以免污染主artifact目录；它们不贡献结果。详见[三类审计的边界](HELMHOLTZ_SPARSE_INFO_AUDIT_ZH.md)。
+
 ## 旧 FDTD 数据的失败如何使用（历史）
 
 `wave_operator/operator_id_64_160.npz` 的粗网格 R0 留点拟合失败被完整保留。

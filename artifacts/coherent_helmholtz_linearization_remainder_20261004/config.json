@@ -1,0 +1,24 @@
+{
+  "training_medium_labels": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/training_medium_labels.npz",
+  "dev_truth": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004",
+  "systems": [
+    20269600,
+    20269601,
+    20269602,
+    20269603,
+    20269604,
+    20269605,
+    20269606,
+    20269607
+  ],
+  "grid": 129,
+  "query_frequencies_hz": [
+    11.3,
+    17.0
+  ],
+  "roi": [
+    0.18,
+    0.82
+  ],
+  "scope": "POSTHOC true-medium/target-reading diagnostic on eight ALREADY-USED 2D Helmholtz DEV systems. At the TRAINING speed mean and each public source, evaluate first-order physical tangent in the TRUE speed difference direction; compare its target field to direct teacher, alongside mean field and direct grid129 true-speed solve. This tests global Taylor validity of local information estimates, not a deployed inverse, not model training or independent test."
+}

@@ -1,0 +1,53 @@
+{
+  "summary": [
+    {
+      "method": "training_mean",
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.39517630460698927,
+      "mean_phase_rad": 0.431502870972818,
+      "max_raw": 0.9561241502502852
+    },
+    {
+      "method": "training_mean",
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 0.31067372269548776,
+      "mean_phase_rad": 0.3224202408022597,
+      "max_raw": 0.5423352808446318
+    },
+    {
+      "method": "true_delta_first_order",
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.23820740648944702,
+      "mean_phase_rad": 0.1359952039069001,
+      "max_raw": 1.150041642905674
+    },
+    {
+      "method": "true_delta_first_order",
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 0.2509052617975135,
+      "mean_phase_rad": 0.14672325936446068,
+      "max_raw": 1.0319710811329363
+    },
+    {
+      "method": "direct_true_speed_grid129",
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.0070489959030755,
+      "mean_phase_rad": 0.00699029639908056,
+      "max_raw": 0.01000588700223221
+    },
+    {
+      "method": "direct_true_speed_grid129",
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 0.028485593032123883,
+      "mean_phase_rad": 0.028396046282473667,
+      "max_raw": 0.03683144425563628
+    }
+  ],
+  "scope": "POSTHOC true-medium/target-reading diagnostic on eight ALREADY-USED 2D Helmholtz DEV systems. At the TRAINING speed mean and each public source, evaluate first-order physical tangent in the TRUE speed difference direction; compare its target field to direct teacher, alongside mean field and direct grid129 true-speed solve. This tests global Taylor validity of local information estimates, not a deployed inverse, not model training or independent test."
+}
