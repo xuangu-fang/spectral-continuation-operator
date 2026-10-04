@@ -38,6 +38,15 @@ def environment(seed: int) -> dict:
 def sample_environment(spec: dict, axis: np.ndarray):
     xx, yy = np.meshgrid(axis, axis, indexing="xy")
     speed = np.ones_like(xx)
+    if "spectral_texture" in spec:
+        coefficients = np.asarray(spec["spectral_texture"], dtype=float)
+        if coefficients.ndim != 2 or coefficients.shape[0] != coefficients.shape[1]:
+            raise ValueError("spectral texture must be a square coefficient array")
+        cosines = np.cos(np.pi * np.outer(axis, np.arange(1, len(coefficients) + 1)))
+        # Rows of the field index y, columns index x; coefficients index x then y.
+        speed += float(spec["texture_scale"]) * (
+            cosines @ coefficients.T @ cosines.T
+        )
     for c, w, contrast in zip(spec["centers"], spec["widths"], spec["contrasts"], strict=True):
         speed -= contrast * np.exp(-((xx - c[0]) ** 2 + (yy - c[1]) ** 2) / (2 * w * w))
     if speed.min() < 0.4:

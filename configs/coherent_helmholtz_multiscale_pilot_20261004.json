@@ -1,0 +1,18 @@
+{
+  "train_seed_start": 20269000,
+  "train_count": 512,
+  "pilot_systems": [20269600, 20269601, 20269602, 20269603, 20269604, 20269605, 20269606, 20269607],
+  "audit_systems": [20269700, 20269701],
+  "medium_label_grid": 65,
+  "teacher_grid": 257,
+  "audit_grid": 513,
+  "frequencies_hz": [6.0, 10.0, 14.0, 11.3, 17.0],
+  "audit_frequencies_hz": [14.0, 17.0],
+  "spectral_modes_per_axis": 16,
+  "texture_target_rms": 0.07,
+  "texture_max_abs": 0.10,
+  "numeric_roi": [0.18, 0.82],
+  "numerical_raw_max_below": 0.005,
+  "min_teacher_points_per_wavelength_at_least": 8.0,
+  "scope": "M0 DATA/NUMERICS PILOT ONLY, not method comparison or independent paper test: genuinely two-way 2D heterogeneous Helmholtz with random multiscale cosine texture plus three localized inclusions, varying source position, known homogeneous boundary loss/source/PDE. Train 512 medium GRID labels only on disjoint seeds, generate 8 direct grid257 pilot wave systems at three context frequencies 6/10/14 and query 11.3/17, plus 2 disjoint systems grid257-vs513 numerical convergence at 14/17. Pilot data must not be used as a frozen method test; no claim of full 512/64/64 next-stage protocol. All physics definitions and gates frozen before generating new truth."
+}
