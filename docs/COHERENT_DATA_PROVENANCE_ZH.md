@@ -234,7 +234,7 @@ coherent_waveguide_new_systems_high_frequency_20261004/则是**单独冻结的32
 
 双声源共同目标oracle现已完成，artifact`coherent_waveguide_spectral_taper_joint_oracle_20261004/`同样保存192行0–5步结果，使用**同16系统的两个800Hz目标复场**与真介质投影初值，最终宽/窄raw0.08293/0.08303。另一个与目标泄漏不同的额外信息控制`coherent_waveguide_spectral_taper_matched_prior_20261004/`由提交`5a7e405`预登记：用全新训练seed20266000–20266511生成512个taper10介质**标签**、不与测试16重叠，重拟合相同rank256并只用原低频context评价原有目标。训练标签NPZ在该artifact本地路径，SHA在`training_labels_sha256.json`；128行部署/真介质投影oracle结果、配置、manifest和历史完整保存。新统计族标签使部署800Hz raw降到0.12705/0.13668，但预设救援门槛失败。这些后补artifact都**不生成新目标场NPZ，也不增加新的测试系统**，不可与原OOD新16数目相加。
 
-**阶段十一post-run清单已在本阶段末重做**：`artifacts/coherent_stage11_inventory_20261004/inventory.json`当前覆盖**30组数据、1186份本机复波场NPZ、额外1份二维速度训练标签NPZ及213个artifact目录**，逐文件SHA、大小、关键数组形状/有限复数检查以及当前源码哈希均有记录。1186是复场NPZ**文件数**，不是独立环境数；二维训练速度标签单列为metadata；大NPZ仍在本机`/mnt/data/...`或Git ignored的artifact目录，远端仓库只存复现配置、代码、图和小型指标/哈希。清单是**运行完成后**的盘点，不代替原新32的预真值冻结manifest、taper10实验的提交`15f9aa7`、学得声速新16确认的提交`5fe88a5`、二维M0提交`518ff59`或各自的启动manifest；`git_base`仅记录盘点当时已提交基点，不代表所有先前运行使用该提交的字节级源码。
+**阶段十一post-run清单已在本阶段末重做**：`artifacts/coherent_stage11_inventory_20261004/inventory.json`当前覆盖**30组数据、1186份本机复波场NPZ、额外1份二维速度训练标签NPZ及214个artifact目录**，逐文件SHA、大小、关键数组形状/有限复数检查以及当前源码哈希均有记录。1186是复场NPZ**文件数**，不是独立环境数；二维训练速度标签单列为metadata；大NPZ仍在本机`/mnt/data/...`或Git ignored的artifact目录，远端仓库只存复现配置、代码、图和小型指标/哈希。清单是**运行完成后**的盘点，不代替原新32的预真值冻结manifest、taper10实验的提交`15f9aa7`、学得声速新16确认的提交`5fe88a5`、二维M0提交`518ff59`或各自的启动manifest；`git_base`仅记录盘点当时已提交基点，不代表所有先前运行使用该提交的字节级源码。
 
 额外精确生成族控制`coherent_waveguide_spectral_taper_exact_family_20261004/`在已用同16系统上只存估计255声速坐标的本地NPZ，以及64行400/800Hz双源评价、历史、配置、源文件SHA；不生成新目标场NPZ。它知道真合成函数族及taper10但不读测试系数/目标场；1+1步删真谱系数后推断坐标和beta逐元素不变。结果见[精确生成族控制](SPECTRAL_TAPER_EXACT_FAMILY_ZH.md)。
 
@@ -251,6 +251,8 @@ Gaussian第二统计族开发只重用原512训练系统seed和旧8开发系统2
 后续q-PCA容量/优化审计**不新增目标场NPZ或系统**，全部重用上述余弦taper7.5新16的800Hz真值与保存的低频观测：`coherent_waveguide_q_capacity_oracle_20261004/`存128条**读取真测试介质**的4rank×双源结果；`coherent_waveguide_q768_deploy_dev_20261004/`存64条同低频观测的2初始化×双源结果；`coherent_waveguide_q768_horizon_dev_20261004/`存已用首8环境64条不同步数开发结果；`coherent_waveguide_q768_map_dev_20261004/`存首8的64条强度开发结果，零强度复现原q768；`coherent_waveguide_q768_map_check_20261004/`只在已用后8跑冻结强度1e-6，存16条条件性复核结果。运行前分别提交`c3e34f6`、`876592c`、`8d85a08`、`a7ef659`和`0ddfdff`配置/代码；后8虽未用于MAP强度反馈，仍不是独立方法测试。每目录均有配置、逐系统JSON、来源SHA manifest；大规模训练标签/原确认代码与真值仍只在本机。见[容量—辨识报告](Q_CAPACITY_ORACLE_AUDIT_ZH.md)。
 
 新二维多尺度Helmholtz M0数据位于`/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/`：`training_medium_labels.npz`包含512个**实声速介质标签**（种子20269000–9511，65×65），另8份`system_20269600–607_grid257.npz`各含5个频率的**复波场直接真值**；两个网格审计种子20269700–701没有持久化为大NPZ，只保存257→513比较JSON。M0源码/配置提交`518ff59`在真值前、9个本地NPZ的SHA见`artifacts/coherent_helmholtz_multiscale_pilot_20261004/manifest.json`。完整场经典审计是**同8开发系统**的额外计算，无新系统/NPZ：初版`coherent_helmholtz_multiscale_fullfield_classic_20261004/`和三网格`coherent_helmholtz_multiscale_sampling_audit_20261004/`都沿用了旧`q≥1`错误裁剪，不能作为强基线；修正版在提交`68bc0f2`后运行，`coherent_helmholtz_multiscale_sampling_corrected_20261004/`保存48行、输入真值SHA与正确允许`q∈[0.5,6.25]`的近零误差。详情及事故解释见[二维M0记录](HELMHOLTZ_MULTISCALE_M0_PILOT_ZH.md)。这些pilot系统不是64验证/64封存，也没有任何第二域学得方法成绩。
+
+同一8开发系统上的`coherent_helmholtz_multiscale_background_diagnostic_20261004/`只用公开源/边界/均匀速度再直接求解11.3/17，不使用低频观测，16条与异质真值的复场差异说明介质效应大小；代码/配置预提交`864d2eb`，真值SHA和逐例指标保存于artifact。它没有新增系统或NPZ，更不是四线任务的同信息强对照。
 
 ## 旧 FDTD 数据的失败如何使用（历史）
 

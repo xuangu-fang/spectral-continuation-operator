@@ -1,0 +1,21 @@
+{
+  "summary": [
+    {
+      "frequency": 11.3,
+      "systems": 8,
+      "mean_raw": 0.448391288951152,
+      "mean_phase_rad": 0.4939489525729871,
+      "min_raw": 0.2609489944554973,
+      "max_raw": 1.0776569712566189
+    },
+    {
+      "frequency": 17.0,
+      "systems": 8,
+      "mean_raw": 0.33301914906309393,
+      "mean_phase_rad": 0.34783544628802565,
+      "min_raw": 0.20023796783272238,
+      "max_raw": 0.5954475565754395
+    }
+  ],
+  "scope": "POSTHOC descriptive M0 medium-difficulty diagnostic on eight already-used multiscale 2D Helmholtz pilot systems: compare direct heterogeneous query fields to direct HOMOGENEOUS background fields with the SAME known source/loss/BC/PDE. This baseline has NO lowband response adaptation, so it is not a strong same-information competitor. Purpose only to check that multiscale heterogeneity has a substantial complex-wave effect despite near-exact full-field classical inverse. Hidden medium coefficients are removed before homogeneous forward solves."
+}

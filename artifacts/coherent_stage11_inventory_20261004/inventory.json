@@ -1,7 +1,7 @@
 {
-  "captured_utc": "2026-10-04T13:32:59.097889+00:00",
+  "captured_utc": "2026-10-04T13:46:52.202535+00:00",
   "capture_type": "post-run working-tree snapshot; not an at-launch source attestation",
-  "git_base": "68bc0f289b795e78971fbef69081376a45d194aa",
+  "git_base": "864d2eb18a8983125aaecbe142c81fc4de08a797",
   "large_files": "NPZ and PT intentionally local-only; regenerate via stored config or resolve these local paths",
   "datasets": {
     "coherent_helmholtz_development_20261003": {
@@ -24591,6 +24591,7 @@
     "src/spectral_continuation/audit_gaussian_speed_variable_dev.py": "cd4c85cb1213e6a6c5713daa12ed3d45955483c6dd70cd9a73deacaec20a269d",
     "src/spectral_continuation/audit_helmholtz_generator_compression.py": "d573d7f1138df1dc5bf9ac71a55300659ed3f5e7ad74e7b28ab390b52d8e9a3e",
     "src/spectral_continuation/audit_helmholtz_generator_identification.py": "3774527fdeb9efdd26a133fbbbb20fb1c41be126f20a39c3aec944a7632a175d",
+    "src/spectral_continuation/audit_helmholtz_multiscale_background.py": "ada38fdccd17e61303df372963634488786fb284108ac033134864aeb0a45324",
     "src/spectral_continuation/audit_helmholtz_multiscale_fullfield_classic.py": "877059e9e2c89a0a5fcb2a4b98fae45846a6257956f65257b06e888e4b2aba3d",
     "src/spectral_continuation/audit_helmholtz_multiscale_sampling.py": "2e030daa86c7817c2b58ef12f51022f430d8ee7bc7f8dfc0cec83bf5afce1dd6",
     "src/spectral_continuation/audit_helmholtz_multiscale_sampling_corrected.py": "3ba40de22308c8f83fdbc63435fcdfd3455f26c5bcbd3e98c51e001b77eea99a",
@@ -24689,6 +24690,7 @@
     "src/spectral_continuation/plot_generator_new_systems.py": "047c1df728744dfe11d01be18e50d90765d8085ca2a6a88ccd811569757f27ed",
     "src/spectral_continuation/plot_generator_representation_limits.py": "103063634fd252cea2cc873ff6728dff198754c20b53f3220217c2a3c8e45013",
     "src/spectral_continuation/plot_helmholtz_multiscale_correction.py": "9861b841f292940744979a9772917a39e0c7f55c004a7c0ad1b3b42cd8686746",
+    "src/spectral_continuation/plot_helmholtz_multiscale_example.py": "5a918a55f504b2d501736bb3b04d126dcfeaee901c4e06a7b62db501e7878594",
     "src/spectral_continuation/plot_learned_speed_manifold_confirm.py": "5e2204a7d81176d5a4cebedf1e53b03cba0498b19c5376b7b09e596f0e12c748",
     "src/spectral_continuation/plot_learned_speed_manifold_phase.py": "e41aac898fbd5c39b57320cce9407d113d24962644b6acd70afc93cd8842bdf7",
     "src/spectral_continuation/plot_phase_rom_progress.py": "c829f519a6c6537304f2fb07219da92e888ba637f84ef1c1145a6df4394bd434",
@@ -25280,6 +25282,31 @@
           "path": "artifacts/coherent_helmholtz_generator_identification_20261003/results.json",
           "bytes": 74189,
           "sha256": "7e87383d80dee9ea080f14d71cafb04425ff04f487be7ac3a58883375a848f57"
+        }
+      ]
+    },
+    {
+      "directory": "artifacts/coherent_helmholtz_multiscale_background_diagnostic_20261004",
+      "files": [
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_background_diagnostic_20261004/config.json",
+          "bytes": 927,
+          "sha256": "7a74be530469ffc33ea46e065f3e19b60054849482c31c021176f9888173e048"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_background_diagnostic_20261004/manifest.json",
+          "bytes": 2472,
+          "sha256": "b06bd39c9f850a9774f361527bce18db56e344551bb977de4be2cccf16f59b4d"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_background_diagnostic_20261004/results.json",
+          "bytes": 7364,
+          "sha256": "d37b0a1478caccd04ac597d651bef0d5e5fb3707a3a689fbdaf357492b9eedfd"
+        },
+        {
+          "path": "artifacts/coherent_helmholtz_multiscale_background_diagnostic_20261004/summary.json",
+          "bytes": 1012,
+          "sha256": "1807493a13c09e6b5d77ba607bbcacbb743aec80a9af5ed954da3b25480fef52"
         }
       ]
     },

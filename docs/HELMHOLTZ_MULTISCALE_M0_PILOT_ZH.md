@@ -37,3 +37,7 @@
 纠错运行时的`public_spec` helper版本见提交`68bc0f2`；本地后续又将它加固为**显式删除全部隐藏介质纹理与包体位置/宽度/幅值**。因经典估计器仅使用从公开source/loss/BC算出的两项，单元测试验证删前删后这两项逐元素完全相等；这是一项防未来误用的代码卫生改动，不是对已报告结果的重调。
 
 为避免“经典完整场能解”被误读成“介质变化对波场影响很小”，再做一个**描述性难度诊断**：相同已知源/边界/PDE，完全不利用低频观测，只用均匀背景预测目标查询场；它衡量异质性实际造成多大复场变化，**不是同信息强基线**。固定两个查询频率和已用8开发系统，配置见[`configs/coherent_helmholtz_multiscale_background_diagnostic_20261004.json`](../configs/coherent_helmholtz_multiscale_background_diagnostic_20261004.json)。
+
+结果：均匀背景在11.3/17的raw分别为**0.448/0.333**，相位RMSE **0.494/0.348rad**，所以异质介质确实造成显著波场变化；完整场经典法约1e-4是因为**信息条件过强且波动方程可直接识别介质**，不是因为任务没有散射效应。[逐系统及来源SHA](../artifacts/coherent_helmholtz_multiscale_background_diagnostic_20261004/summary.json)。均匀背景没有使用低频观测，不能在未来四线任务中被称为最强基线；真正的比较仍需同信息PDE-MAP和统计先验。
+
+![预先取第一个开发系统：左至右为真实声速、17的对数幅值、复相位、相对均匀背景的相位差。星号为公开声源；低幅值5%仅在相位图中为显示遮罩，不改变任何完整ROI指标。](../reports/figures/helmholtz_multiscale_m0_example.png)

@@ -1,0 +1,15 @@
+{
+  "scope": "POSTHOC descriptive M0 medium-difficulty diagnostic on eight already-used multiscale 2D Helmholtz pilot systems: compare direct heterogeneous query fields to direct HOMOGENEOUS background fields with the SAME known source/loss/BC/PDE. This baseline has NO lowband response adaptation, so it is not a strong same-information competitor. Purpose only to check that multiscale heterogeneity has a substantial complex-wave effect despite near-exact full-field classical inverse. Hidden medium coefficients are removed before homogeneous forward solves.",
+  "implementation_sha256": "ada38fdccd17e61303df372963634488786fb284108ac033134864aeb0a45324",
+  "public_spec_sha256": "877059e9e2c89a0a5fcb2a4b98fae45846a6257956f65257b06e888e4b2aba3d",
+  "truth_sha256": {
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269600_grid257.npz": "1075ab976f85acd0c85c38317bb1827b1d44e22d7102470c218cf171ba540534",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269601_grid257.npz": "068138b5a6012174765dd5a2261f4df24c1e180c4c84e7f02265d7174847e72e",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269602_grid257.npz": "8b4dcd299dc1ad2819c5b0c2e2fbed737a83bb6003314d816a0eed8f79db7676",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269603_grid257.npz": "d1f4739512d9bd2ef36449cf908d3286bd4b55084b5fcfdf88c24c7dfecf685c",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269604_grid257.npz": "1c71ece9ef3ea26036386ac53d4dc176c6e4609c4a2c519bcc179688401305cc",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269605_grid257.npz": "913b295a8fabefbd050d107efc207658eb4491f07f355afb23a85abafd4cad13",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269606_grid257.npz": "3e9ac3e559eec9435c4dc8bdcec5737537f131a3d5d792c34f9e65970f4ed165",
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004/system_20269607_grid257.npz": "073dae9a261f0b05afffb94c6a412ed9febbb55dcff94d2c8e6e838d1fc12584"
+  }
+}

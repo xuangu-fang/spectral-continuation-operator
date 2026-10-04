@@ -1,0 +1,14 @@
+{
+  "scope": "DISPLAY ONLY, preselected first M0 DEV system, direct grid257 f17 truth and direct homogeneous reference; bottom5% amplitude mask only in phase display, not any metric.",
+  "truth_sha256": "1075ab976f85acd0c85c38317bb1827b1d44e22d7102470c218cf171ba540534",
+  "implementation_sha256": "5a918a55f504b2d501736bb3b04d126dcfeaee901c4e06a7b62db501e7878594",
+  "system": 20269600,
+  "frequency": 17.0,
+  "source": [
+    0.20401947086997865,
+    0.4249405323981411
+  ],
+  "speed_min": 0.8999999761581421,
+  "speed_max": 1.0942038297653198,
+  "display_mask_fraction": 0.05000832715105452
+}
