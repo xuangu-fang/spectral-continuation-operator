@@ -1,0 +1,21 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "ood_config": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/config.json",
+  "ood_results": "artifacts/coherent_waveguide_spectral_taper_shift_20261004/results.json",
+  "ood_codes": "artifacts/coherent_waveguide_spectral_taper_shift_20261004",
+  "train_seed_start": 20266000,
+  "train_count": 512,
+  "systems": [20267000, 20267001, 20267002, 20267003, 20267004, 20267005, 20267006, 20267007, 20267008, 20267009, 20267010, 20267011, 20267012, 20267013, 20267014, 20267015],
+  "taper_scale": 10.0,
+  "terms": 16,
+  "perturbation_rms_m_s": 15.0,
+  "rank": 256,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "gate_800hz_both_sources": {
+    "mean_raw_at_most": 0.05,
+    "mean_phase_rad_at_most": 0.05,
+    "relative_raw_improvement_vs_fixed_taper5_at_least": 0.70
+  },
+  "scope": "POSTHOC matched-statistics rescue control on already-seen16 taper10 OOD systems: fit a NEW rank256 PCA prior from 512 DISJOINT taper10 training-medium LABELS, then keep same 60/100/140Hz context, rank, 5+5 GN, 400/800Hz targets and metrics. Extra target-family training distribution information; NOT OOD generalization or independent test. True-medium projection inside new subspace remains an explicit nondeployable oracle."
+}
