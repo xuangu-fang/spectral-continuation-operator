@@ -1,0 +1,17 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "training_labels": [
+    "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+    "artifacts/coherent_waveguide_spectral_taper_matched_prior_20261004/training_labels.npz"
+  ],
+  "training_array_key": "target32",
+  "truth_dir": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004",
+  "systems": [20268000, 20268001, 20268002, 20268003, 20268004, 20268005, 20268006, 20268007, 20268008, 20268009, 20268010, 20268011, 20268012, 20268013, 20268014, 20268015],
+  "ranks": [255, 384, 512, 768],
+  "frequency_hz": 800,
+  "coarse_cells": 64,
+  "fine_decoder_cells": 256,
+  "depth_terms": 32,
+  "projection_quadrature_nodes": 160,
+  "scope": "POSTHOC capacity diagnostic on already-used cosine new16 systems. Each rank reads TRUE TEST MEDIUM to form a q-PCA Euclidean projection, so these are oracle responses, never deployable low-band scores or capacity lower bounds. The sole question is whether increasing linear q-code dimension above the matched speed255 code can close the observed q255 oracle gap; higher ranks explicitly spend more per-environment code and shared basis storage. This uses the same 1024 training q labels as before, same source/PDE/truth, no new systems, no target-response optimization. Rank255 should reproduce the prior true-medium q projection within numerical tolerance. Interpret only within the cosine statistical family."
+}
