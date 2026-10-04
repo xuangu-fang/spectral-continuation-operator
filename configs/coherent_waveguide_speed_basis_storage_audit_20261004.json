@@ -1,0 +1,9 @@
+{
+  "frozen_priors": "artifacts/coherent_waveguide_learned_speed_manifold_dev_20261004/learned_priors.npz",
+  "frozen_priors_sha256": "8f41a634f781c9ba56715595b0c1e0ecf9d305d8000b30609d4479620c3559e1",
+  "dev_code": "artifacts/coherent_waveguide_learned_speed_manifold_dev_20261004/system20267000_speed_code.npz",
+  "depth_rank": 16,
+  "max_prior_relative_error": 1e-10,
+  "max_beta_relative_error": 1e-10,
+  "scope": "Post-development exact shared-basis storage audit, NOT a new prediction candidate: factorize the already-frozen speed prior along depth using data-derived SVD rank16, then reconstruct and compare all prior values and one preselected previously-used dev code. No new training, target fields, method selection, or independent evidence. Synthetic 16x16 cosine family creates this favorable depth rank; general media need not."
+}
