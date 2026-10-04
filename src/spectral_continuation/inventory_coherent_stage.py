@@ -69,6 +69,9 @@ def run(root, output):
     multiscale_helmholtz_name = "coherent_helmholtz_multiscale_pilot_20261004"
     if (base / multiscale_helmholtz_name).exists():
         dataset_specs.append((multiscale_helmholtz_name, 8))
+    sparse_helmholtz_name = "coherent_helmholtz_multiscale_sparse_dev_20261004"
+    if (base / sparse_helmholtz_name).exists():
+        dataset_specs.append((sparse_helmholtz_name, 8))
     for name, expected in dataset_specs:
         paths = sorted((base / name).glob(
             "system_*_grid257.npz" if name == multiscale_helmholtz_name else "*.npz"
@@ -79,7 +82,7 @@ def run(root, output):
         for path in paths:
             with np.load(path, allow_pickle=False) as z:
                 value_key = next(
-                    key for key in ["field", "modal_coefficients", "transfer", "coarse", "coarse140"]
+                    key for key in ["field", "samples", "modal_coefficients", "transfer", "coarse", "coarse140"]
                     if key in z
                 )
                 field = z[value_key]
@@ -160,6 +163,8 @@ def run(root, output):
                 if speed_scaling
                 else "M0 multiscale TWO-WAY Helmholtz DATA PILOT ONLY: 8 direct grid257 development fields, 512 training speed labels stored separately as metadata, two grid257/513 numeric audit systems; NOT independent method test or completed cross-PDE learning gate"
                 if name == multiscale_helmholtz_name
+                else "DEV-ONLY four-line sparse extraction from the SAME eight M0 Helmholtz systems: 780 complex lowband samples plus source/loss/BC metadata per file; not eight new environments, not independent test, target fields and medium omitted"
+                if name == sparse_helmholtz_name
                 else "development/training only; not independent test evidence"
             ),
             "files": records,
