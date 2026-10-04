@@ -13,3 +13,5 @@
 由于5+5步的初步结果比q255更差，另外固定一个**事后、更窄**的迭代步数诊断：首8已用环境、768维、初值精度1e-7，检查(0,0)/(1,1)/(3,3)/(5,5)粗细Gauss–Newton步。配置见[`configs/coherent_waveguide_q768_horizon_dev_20261004.json`](../configs/coherent_waveguide_q768_horizon_dev_20261004.json)。若少步明显更好，则“低频代码不可辨识”也要限定为当前目标/优化轨迹；选最佳步数属于用开发目标反馈的事后调参，不可当无泄漏部署协议。
 
 最后做一个对强基线公平性重要的**有界正则化检查**：原q768的5+5步只有数值阻尼而没有持续的高斯代码先验，不能把它当最终强MAP基线。首8已用环境固定先验强度0、1e-6、1e-4、1e-2，零强度需严格复现原q768；两阶段更新都用相同的`mean(code²)`惩罚。配置见[`configs/coherent_waveguide_q768_map_dev_20261004.json`](../configs/coherent_waveguide_q768_map_dev_20261004.json)。不把从这批旧目标中挑出的最佳强度称为独立测试；本次仅检查“不加正则导致的高维不稳”是否可被简单强MAP修复。
+
+看到前几例`1e-6`明显优于无先验后，在运行该MAP方案的**后8个系统**前，固定仅此一个强度做条件性复核。后8虽然尚未用于MAP超参反馈，已经在先前声速/q768无先验实验中使用，所以**不是全新的方法测试集**；不再在后8上追加强度搜索。设置见[`configs/coherent_waveguide_q768_map_check_20261004.json`](../configs/coherent_waveguide_q768_map_check_20261004.json)。

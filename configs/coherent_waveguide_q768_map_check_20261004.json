@@ -1,0 +1,17 @@
+{
+  "source_config": "artifacts/coherent_waveguide_spectral_confirm_20261004/config.json",
+  "training_labels": [
+    "artifacts/coherent_waveguide_spectral_medium_20261004/training_labels.npz",
+    "artifacts/coherent_waveguide_spectral_taper_matched_prior_20261004/training_labels.npz"
+  ],
+  "context_codes": "artifacts/coherent_waveguide_learned_speed_manifold_confirm_20261004",
+  "truth_dir": "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004",
+  "systems": [20268008, 20268009, 20268010, 20268011, 20268012, 20268013, 20268014, 20268015],
+  "rank": 768,
+  "frequency_hz": 800,
+  "initial_prior_precision": 1e-7,
+  "prior_strength": 1e-6,
+  "coarse_steps": 5,
+  "fine_steps": 5,
+  "scope": "POSTHOC fixed-strength q-PCA768 MAP check on the latter eight already-used cosine taper7.5 systems. Prior strength 1e-6 was chosen from early first-eight DEV feedback, then frozen in code/config before this method was run on the latter eight. These systems and target fields were previously used for speed255 and unregularized q768 experiments, so this is not an independent method test, only a conditional within-cohort robustness check. Same 1024 training medium labels, clean dense 60/100/140 Hz context, known source/PDE, no test medium or target in inference. No extra hyperparameter sweep on this latter-eight set."
+}
