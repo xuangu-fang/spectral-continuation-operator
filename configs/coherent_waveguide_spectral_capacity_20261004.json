@@ -1,0 +1,6 @@
+{
+  "source_config": "configs/coherent_waveguide_spectral_medium_20261004.json",
+  "source_results": "artifacts/coherent_waveguide_spectral_medium_20261004/results.json",
+  "training_priors": "artifacts/coherent_waveguide_spectral_medium_20261004/training_priors.npz",
+  "scope": "POSTHOC extra-true-medium Euclidean PCA projection capacity oracle; all frozen32 systems, both 16/32 terms, same 400/800Hz and original/new source; not a deployable method or strict output-error lower bound"
+}
