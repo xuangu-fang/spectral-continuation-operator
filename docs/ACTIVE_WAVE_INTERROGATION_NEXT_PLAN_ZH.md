@@ -1,5 +1,8 @@
 # Target-Aware Wave Interrogation：下一阶段论文计划
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > **历史计划，不是当前 roadmap。** M1 已经执行完毕；2026-10-03 起的研究排序与新 gate 统一见
 > [当前故事、证据与未来路线图](CURRENT_STORY_AND_ROADMAP_ZH.md)。保留本文只是为了核对预注册项目与结果，
 > 后续 Agent 不得从本文直接启动旧 M1/M2 清单。

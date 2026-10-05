@@ -1,5 +1,8 @@
 # 连续复谱状态：carrier-gauged pole–residue operator
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > 状态：上一阶段冻结记录。最新的误差诊断、全局条件化生成器和校准 gate 请读
 > [连续谱生成器诊断与 Gate 报告](../reports/SPECTRAL_GENERATOR_GATE_REPORT_ZH.md)。
 

@@ -1,5 +1,8 @@
 # PBNO M2：效率正结果、receiver residual 边界与下一步判断
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 日期：2026-09-25  
 > 证据等级：Q2 efficiency 为三组 prompt-order seed 的 A 级结果；M2 neural 与 memory 为单 seed development evidence  
 > 一句话结论：Q2 已通过“近等精度、更低解析推断代价”的替代 gate；Q3 的神经收益仍未达到两个域 10%，不再堆 receiver encoder。

@@ -1,5 +1,8 @@
 # Actionable Horizon / Value-of-Calibration Map 第一阶段报告
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 更新日期：2026-09-22
 
 ## 结论先行

@@ -1,5 +1,8 @@
 # Reliable-horizon Map M2a：Matched-cost 单次 Sequential Calibration
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 日期：2026-09-17
 
 结论：**机制级 GO，完整 M2 gate 尚未通过。** 在每个环境都只允许一次、且观测成本完全相同的条件
@@ -132,4 +135,3 @@ M2b 将继续保持固定阵列与冻结场模型，只增加 repeated decision�
   oracle-gap 和图表；
 - `artifacts/reliable_horizon_map/sequential_replay_ocean_20260917`：逐实例/endpoint error tensor；
 - `artifacts/reliable_horizon_map/sequential_summary_ocean_20260917`：汇总与主图。
-

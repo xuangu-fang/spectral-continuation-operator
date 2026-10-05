@@ -1,5 +1,8 @@
 # PBNO 长程研究计划：从响应子空间到 Prompted Bayesian Neural Operator
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > 冻结日期：2026-09-25  
 > 状态：原 M0--M4 已执行；当前强正结果入口为 `reports/PBNO_M4_RISK_RESOLUTION_ZH.md`，后续统一
 > composer 的边界见 `reports/PBNO_POSTERIOR_COMPOSER_M0_ZH.md`

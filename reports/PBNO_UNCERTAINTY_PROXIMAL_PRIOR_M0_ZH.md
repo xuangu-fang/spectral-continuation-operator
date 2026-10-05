@@ -1,5 +1,8 @@
 # Uncertainty-Conditioned Proximal Prior M0：学习应该放在哪里，以及为什么仍未过 Gate
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 日期：2026-09-27
 >
 > 状态：机制方向稳定，但 5% promotion gate 未通过；M1 query decomposition 保持关闭

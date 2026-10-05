@@ -1,5 +1,8 @@
 # 连续复场表征的数据来源与复用说明
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > 2026-10-03；对应 [24 小时执行协议](COHERENT_CONTINUOUS_REPRESENTATION_24H_ZH.md)。
 > 本轮所有已打开的新数据均为 development；尚未生成或打开正式 test。
 > 阶段一3组新数据共46个NPZ的SHA256、shape、频率，以及本地checkpoint清单见

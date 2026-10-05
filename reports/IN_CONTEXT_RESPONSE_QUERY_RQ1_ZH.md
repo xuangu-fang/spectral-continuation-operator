@@ -1,5 +1,8 @@
 # In-Context Wave Response Query RQ-1：多静态阵列上的物理路由与轻量表征学习
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 日期：2026-09-24  
 > 状态：三 seed、system-held-out test、geometry OOD 均已完成  
 > 结论：Q2 held-out-source query 通过；Q3 joint source-frequency query 尚未通过。

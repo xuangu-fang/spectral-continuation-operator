@@ -1,5 +1,8 @@
 # Reliable-horizon Map M1：Target-free 风险预测
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 日期：2026-09-17
 
 结论：**development GO，进入 sequential calibration POC。** 三 seed 冻结预测的 disagreement 在
@@ -126,4 +129,3 @@ oracle attainable gap closure；原始改善仍报告为 7.2% 和 9.3%。这项�
 - `spectral_continuation.risk`：轻量 logistic calibration、AUROC、AUPRC 和 risk--coverage；
 - `artifacts/reliable_horizon_map/features_*`：特征与 ensemble 标签；
 - `artifacts/reliable_horizon_map/risk_*`：交叉验证概率、表格和图。
-

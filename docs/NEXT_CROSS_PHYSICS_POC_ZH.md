@@ -1,5 +1,8 @@
 # 下一阶段：让“物理变量中的可学习表示”接受真正的跨方程检验
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > 2026-10-04阶段交付后的**研究设计**，不是已完成实验或已冻结的新确认协议。先读[阶段决策](PHASE_REPRESENTATION_DECISION_20261004_ZH.md)、[报告第21–22节](../reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)和[真介质投影归因](VARIABLE_PROJECTION_ATTRIBUTION_ZH.md)。当前跨两物理域的论文gate**没有**通过。
 
 ## 为什么不能拿现有二维Helmholtz结果“补齐第二域”

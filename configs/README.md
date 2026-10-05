@@ -1,82 +1,23 @@
-# 配置索引
+# 配置入口：旧协议保留，新路线尚未启动训练
 
-## 当前主线
+当前任务是 [A 补全 / B 新实验 / C 校准](../docs/wave_as_prompt/README.md)。
+本目录已有 JSON 是各历史实验的冻结记录，**不是下一轮应顺序运行的任务列表**。
+目录中的旧 active、horizon、pending、M0 等名字不代表当前优先级。
 
-- `active_wave_interrogation_untouched_20260927.json`：全新 Deepwave/Ocean IID/OOD systems 的 seed、数量与
-  数据生成协议；不得用于重新选择方法；
-- `sequential_active_wave_query_m1_untouched_20260927.json`：冻结 PBNO/acquisition 后的 untouched
-  K=1/2/4/8 评测；
-- `acquisition_baselines_m1_untouched_20260928.json`：random、nearest、farthest、D-opt、exact、population、
-  learned utility 与 K=2 truth oracle 的正式全表；
-- `continuous_acquisition_utility_m1_20260928.json`：160,801 参数 pair-action holdout utility；top-4 hybrid
-  AUC gate 通过；
-- `continuous_acquisition_utility_m2_coordinate_holdout_20260928.json`：整块 source/frequency coordinate
-  holdout；regret 10.23%/18.43%，正式 NO-GO。
+## 怎么复用
 
-- `sequential_active_wave_query_m0_20260927.json`：当前正式 target-aware source--frequency interrogation；
-  strict-Q3、相同第一条随机 probe、nested K=1/2/4/8、三个 prompt seeds 与完整 PBNO downstream；
-- `pbno_query_conditioned_metric_m0_20260927.json`：query-conditioned positive posterior metric 的
-  leave-one-system-out learning 审计；最高 2.55%，不继续扫参；
-- `active_wave_query_policy_m0_20260927.json`：解析 acquisition 加有界 neural residual 的 policy 审计；
-  system-conditioned adaptivity gate 未过，不作为部署配置；
+1. 从[问题卡](../docs/wave_as_prompt/README.md)确定输入输出和评价条件。
+2. 在[机器目录](../docs/wave_as_prompt/research_catalog.json)与[历史清单](../docs/archive/INVENTORY_20261005.md)
+   找到相关数据/协议；核对原报告，不只看配置名字。
+3. 若修改 source/frequency、split、观测预算、metric 或先验信息，新建配置和输出目录，
+   不覆盖旧配置，不把历史分数作为新协议结果。
+4. 在生成/读取独立确认真值前冻结配置；所有已使用系统继续标记为 DEV 或历史 test。
 
-- `pbno_uncertainty_proximal_prior_m0_20260927.json`：strict-Q3 K=2 的 uncertainty-conditioned complex
-  operator prior、解析 proximal projection、精确 fallback、receiver-mask 与 denoising/strength 消融；正式
-  结论为最佳 2.93%、5% gate 未过，不作为继续扫参模板；
+可优先参考的旧配置：
 
-- `heterogeneous_prompt_headroom_m0_20260926.json`：strict-Q3 K=2、独立 receiver masks 的 compressed
-  candidate/subspace headroom；
-- `functional_evidence_operator_m0_20260926.json`、`functional_prompt_reranker_m0_20260926.json` 与
-  `functional_response_metric_m1_multilayout_20260926.json`：additive evidence、functional reranking 与
-  多 query/layout listwise metric 的冻结 NO-GO 配置；
-- `wave_neural_field_autodecoder_m0_ocean_20260926.json` 与
-  `wave_neural_field_prompt_encoder_m0_ocean_20260926.json`：nonlinear complex neural field 的完整 response
-  capacity 与 K=2 sparse latent identifiability 分层审计；
+- [跨域数据](cross_domain_response_query_20260924.json)：B 的数据来源与轴。
+- [WaveBench](wavebench_representation_m1_20260923.json)：读取/split 参考；不是相位重构实验。
+- [安全 Helmholtz 切片](coherent_helmholtz_multiscale_sparse_dev_20261004.json)：公共输入白名单。
+- [独立多保真 pilot](ocean_multifidelity_pilot_20260916.json)：C 的旧负结果，不是现成训练集。
 
-- `pbno_m0_joint_query_20260925.json` 与 `pbno_m1_semilinear_long_20260925.json`：strict Q3 的 global
-  Bayesian operator 与三 seed PBNO 主实验；
-- `pbno_m2_receiver_sparse_20260925.json`：完成 coordinate-RMS residual likelihood 后唯一一次冻结的
-  sparse-budget receiver residual stop experiment；K=1 未过 0.1138，不再沿此配置扫参；
-- `pbno_q2_efficiency_formal_20260925.json`：固定 OpenFWI rank 96 与 Deepwave rank 112 后的三 seed
-  Q2 efficiency 汇总入口；选择文件在 `artifacts/pbno_q2_efficiency_selection/`；
-- `pbno_latent_belief_audit_20260925.json`：K=1 posterior-latent top-8 memory 的 deployable mean、
-  target-reading oracle 与 15% flow existence gate；两域均未通过，flow 保持关闭；
-- `wave_as_prompt_pfto_m0_20260925.json`：当前 active PFTO functional-rank existence audit；只读
-  validation split，比较存储量、full-table reconstruction、half-budget query 与 reciprocity，不提前打开 test；
-- `wave_as_prompt_latent_prior_m0_20260925.json`：functional spatial rank 失败后冻结的 latent-spectrum prior
-  审计；validation 选择 rank/strength，随后按原始逐 query complex RelL2 做 test/OOD；
-- `wave_as_prompt_continuous_query_m0_20260925.json`：Deepwave/Ocean 全局交错 receiver-coordinate holdout；
-  scalar/spectrum family 各自在 validation 选择插值、rank 与 strength，三 seed test；
-- `wave_as_prompt_deepwave_dense_20260925.json` 与 `wave_as_prompt_deepwave_dense176_20260925.json`：保持
-  systems/sources/frequencies 不变的 128/176 receiver Deepwave sampling audit；
-- `wave_as_prompt_continuous_query_dense_m0_20260925.json` 与
-  `wave_as_prompt_continuous_query_dense176_m0_20260925.json`：对应的 interleaved coordinate-query 协议；
-- `cross_domain_response_query_20260924.json`：当前跨域 Q2 协议；OpenFWI/Deepwave/Ocean/The Well adapter、
-  system split、频带、source budget、三 seed 与 measurement-efficiency gates。
-- `in_context_response_query_rq0_20260924.json`：当前 active Response Query 协议；固定 receiver array，
-  Q1/Q2/Q3、1--16 context probes、information audits、最小 CNP 与 belief/active 的 stop rules。
-- `in_context_response_query_rq1_formal_20260924.json`：首个通过 gate 的正式 setting；co-located multistatic
-  array、Q2 held-out source query、calibrated reciprocity residual Transformer、三 seed两阶段训练。
-- `wave_operator_representation_poc_20260922.json`：160-system 主数据、split、episode 与最初 gates；
-- `wave_operator_ood_ellipses_20260922.json`：未见 ellipse geometry 的 OOD 数据。
-- `wave_system_set_encoder_m0_20260922.json`：M0 自监督 set encoder 的预注册探索协议。
-- `wave_set_operator_m0_formal_20260922.json`：冻结后的三 seed variable-budget 正式协议与 claim 边界。
-- `wavebench_representation_m1_20260923.json`：公开 WaveBench 的系统级固定 split、三 seed matched
-  representation comparison、15% promotion gate 与开发型 edge variants。
-- `multibranch_phase_space_mps0_20260923.json`：多分支相空间方向的 oracle-first 协议；先比较 K=1 与
-  top-K local wave packets 在 held-out pixels 上的 complex error，未过 15% gate 不训练 learned router。
-- `multibranch_phase_space_mps0b_20260923.json`：MPS-0 固定大窗口失败后的 wavelength-scaled 诊断；
-  窗口只由公开 frequency、grid spacing 和 reference speed 决定，并用三个 patch seeds 验证。
-- `multibranch_phase_space_mps1_20260923.json`：oracle 通过后的 matched downstream POC；冻结 two-scale
-  complex packet Gram、residual initialization、三 seed boundary gate 与 2% IID safety boundary。
-
-`in_context_response_query_rq0_20260924.json` 在 test 未打开前只允许补充机器生成的 manifest 路径，不改变
-任务语义或 gate。后续新阶段使用新的日期化配置，不回写已经产生结果的文件。
-
-## 历史冻结配置
-
-其余配置属于 spectral continuation、continuous-state、sparse calibration、reliable/actionable horizon
-或 independent multi-fidelity 阶段。它们保留在原位置，是因为报告、artifact manifest 和自动测试直接
-记录了这些路径。除复现或审计外，不再把它们作为新实验模板。
-
-历史阶段的结论和报告入口见 [`docs/archive/INDEX_ZH.md`](../docs/archive/INDEX_ZH.md)。
+本次不创建伪装成“已冻结新实验”的 A/B/C 训练配置。

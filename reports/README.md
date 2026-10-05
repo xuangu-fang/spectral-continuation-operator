@@ -1,60 +1,23 @@
-# 报告导航
+# 结果入口：先读结论，需要时再追原始报告
 
-> 更新日期：2026-10-03。项目的当前故事、claim boundary 和未来排序统一见
-> [`docs/CURRENT_STORY_AND_ROADMAP_ZH.md`](../docs/CURRENT_STORY_AND_ROADMAP_ZH.md)。本目录是证据档案，
-> “保留”不等于“仍应继续优化”。
+**新主线是三条 Wave as Prompt 路线；这里保存历史证据，不代表三条新任务已做完。**
 
-## 当前报告
+优先读[正负发现与科学 insight](../docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md)，
+再按需要查下面的原报告。大部分旧文档的“下一步”已被[当前路线图](../docs/CURRENT_STORY_AND_ROADMAP_ZH.md)取代。
 
-[连续复波场表征：进度、方法、图与正负结论](COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md)。
-目标执行中，所有新结果仍是development；旧active query暂停。
+| 想了解什么 | 最短证据入口 | 关键边界 |
+|---|---|---|
+| 为什么相位需要不同表示？ | [声速表示独立确认](../docs/LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md)、[另一介质族反例](../docs/GAUSSIAN_SPEED_VARIABLE_DEV_ZH.md) | 一个族显著、另一个族不显著；同一 PDE |
+| 为什么不只增大 latent？ | [q 容量审计](../docs/Q_CAPACITY_ORACLE_AUDIT_ZH.md) | oracle 好不等于 sparse inference 好 |
+| 小状态能否产生复杂响应？ | [生成机制/输出秩](../docs/GENERATOR_REPRESENTATION_MECHANISM_ZH.md) | 受控矩阵诊断，不是所有模型下界 |
+| 跨域新实验预测有没有基础？ | [Cross-domain response query](CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md) | 阵列响应；强统计基线，不是新神经成功 |
+| learning 升级试过什么？ | [Latent-prior M0](WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)、[完整实验账本](../docs/EXPERIMENT_LEDGER_ZH.md) | 保留 episodic/neural residual 等负结果 |
+| WaveBench 相位编码是否有用？ | [WaveBench representation](WAVEBENCH_REPRESENTATION_M1_ZH.md) | 输出指标是介质识别，不是相位重构 |
+| 稀疏校准成功到什么程度？ | [同库校准](SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md)、[独立多保真失败](PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md) | 不混淆两种数据与信息条件 |
+| 连续波场探索完整过程 | [Coherent progress](COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md) | 多数机制实验；确认/DEV 身份逐段不同 |
+| 为什么暂停 active query？ | [Reliable horizon](RELIABLE_HORIZON_MAP_FINAL_ZH.md)、[Actionable horizon](ACTIONABLE_HORIZON_POC_ZH.md)、[实验账本](../docs/EXPERIMENT_LEDGER_ZH.md) | 风险预测不等于可执行修复收益 |
 
-## 历史Wave Interrogation阶段的三份报告
+图保留在原报告及 figures/assets 下；不把某个 oracle 图重新贴为新学习方法主图。
+所有报告逐文件见[历史清单](../docs/archive/INVENTORY_20261005.md)。
 
-1. [`ACTIVE_WAVE_INTERROGATION_M1_ZH.md`](ACTIVE_WAVE_INTERROGATION_M1_ZH.md)：该历史阶段主报告。包含
-   untouched IID/OOD systems、七类 acquisition baseline、成本轴、continuous learned utility、top-4
-   analytic certification，以及 strict coordinate holdout、速度和 Ocean OOD 的失败边界。
-2. [`ACTIVE_WAVE_INTERROGATION_M0_ZH.md`](ACTIVE_WAVE_INTERROGATION_M0_ZH.md)：主任务如何从固定 prompts
-   推进到 target-aware source--frequency experimental design。
-3. [`PBNO_M4_RISK_RESOLUTION_ZH.md`](PBNO_M4_RISK_RESOLUTION_ZH.md)：当前 operator belief 的来历、
-   spectral dictionary、第四物理域和统一 adapter。
-
-## 与历史PBNO方法直接相关的报告
-
-- [`PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md`](PBNO_M3_POSTERIOR_KERNEL_OPERATOR_ZH.md)：Bayesian tokenizer、
-  neural latent transport 与 posterior-kernel operator。
-- [`PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md`](PBNO_M2_EFFICIENCY_AND_BOUNDARIES_ZH.md)：rank/compute
-  Pareto、receiver residual 修复和明确停止线。
-- [`PBNO_JOINT_QUERY_M1_ZH.md`](PBNO_JOINT_QUERY_M1_ZH.md)：strict joint source--frequency query 的早期结果。
-- [`WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md`](WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md)：latent spectrum prior 与
-  三域强基线。
-- [`CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md`](CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md)：OpenFWI、Deepwave、
-  Ocean 的跨域 response-query POC。
-
-## 已关闭的方法分支
-
-以下报告很重要，因为它们记录了**不应重复的实验**：
-
-- [`PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md`](PBNO_UNCERTAINTY_PROXIMAL_PRIOR_M0_ZH.md)：复数
-  operator prior 最佳增益 2.93%，未过 5% gate；不要继续扫容量。
-- [`HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md`](HETEROGENEOUS_FUNCTIONAL_OPERATOR_M0_ZH.md)：
-  functional encoder、reranker 和 nonlinear neural field 均未把表征容量转化为 sparse identifiability。
-- [`PBNO_POSTERIOR_COMPOSER_M0_ZH.md`](PBNO_POSTERIOR_COMPOSER_M0_ZH.md)：learned correction 在 selection
-  为正、unseen systems 回退；只保留 zero-update fallback 接口。
-- [`MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md`](MULTIBRANCH_PHASE_SPACE_MPS1_ZH.md)：多分量 oracle 成立，但
-  fixed packet representation 未过 15% promotion gate。
-- [`WAVEBENCH_REPRESENTATION_M1_ZH.md`](WAVEBENCH_REPRESENTATION_M1_ZH.md)：公开 WaveBench 的正结果和
-  fixed complex-edge token 负结果。
-- [`WAVE_SET_OPERATOR_M0_ZH.md`](WAVE_SET_OPERATOR_M0_ZH.md)：可变 source--frequency budget 的 set
-  operator、noise/OOD 边界与失败预训练。
-
-## 更早的科学探索
-
-连续谱、可靠延拓视界、稀疏 calibration、局部 token 和独立多保真等早期工作已经压缩到
-[`docs/archive/INDEX_ZH.md`](../docs/archive/INDEX_ZH.md)。需要追溯某个结论时再读，不要把旧计划当成当前任务。
-
-## 机器可读结果
-
-- M1 summary：[`artifacts/active_wave_interrogation_m1_summary/summary.json`](../artifacts/active_wave_interrogation_m1_summary/summary.json)
-- 实验账本：[`docs/EXPERIMENT_LEDGER_ZH.md`](../docs/EXPERIMENT_LEDGER_ZH.md)
-- 当前状态：[`docs/CURRENT_STATUS_ZH.md`](../docs/CURRENT_STATUS_ZH.md)
+本轮仅重整资料，没有新结果表，也没有宣称任何新的 gate 已通过。

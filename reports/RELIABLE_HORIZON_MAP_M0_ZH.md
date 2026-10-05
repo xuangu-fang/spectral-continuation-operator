@@ -1,5 +1,8 @@
 # Reliable-horizon Map M0：真实 Horizon 标签审计
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 日期：2026-09-17
 
 结论：**M0 GO。** 现有逐实例、逐频率指标足以定义稳定的 reliable-horizon 标签；Ocean hyper-pole
@@ -114,4 +117,3 @@ Ocean 两个模型在三个阈值下均没有出现“越界后重新恢复”�
 - `spectral_continuation.horizon`：prefix-safe horizon 与恢复诊断；
 - `spectral_continuation.summarize_horizon_atlas`：多 seed 标签聚合、表格和图；
 - `configs/reliable_horizon_map_poc_20260917.json`：冻结阈值、指标和 gates。
-

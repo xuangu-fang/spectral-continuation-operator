@@ -1,5 +1,8 @@
 # Heterogeneous Functional Operator M0：为什么不能直接用 learned latent 替换可观测后验坐标
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 日期：2026-09-26
 >
 > 状态：oracle 通过，三类 learning-based 表征均未通过方法 gate

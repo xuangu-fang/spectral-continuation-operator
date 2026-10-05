@@ -1,5 +1,8 @@
 # 从 PBNO 组件栈到统一的现代 In-Context Operator
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > 日期：2026-09-26
 >
 > 状态：两轮 M0 已执行。统一 composer 的任意 target correction 未通过；随后把 learning 限制为

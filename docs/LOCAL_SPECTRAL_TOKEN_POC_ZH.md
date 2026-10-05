@@ -1,5 +1,8 @@
 # 局部复谱 Token POC：技术设计与冻结协议
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 日期：2026-09-16  
 状态：实现前冻结的 development POC；不触碰 strict environments  
 结果：已完成，method-level NO-GO；见

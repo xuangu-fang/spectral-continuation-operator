@@ -1,5 +1,8 @@
 # Target-Aware Wave Interrogation M1：Untouched Systems、强基线与 Learned Query Utility
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 日期：2026-09-28
 > 状态：三项阶段任务完成；IID 主效应与 learning-based pair-action utility 通过，严格坐标外推与 Ocean OOD 未通过
 > 主指标：逐 physical system 等权的 raw complex relative L2

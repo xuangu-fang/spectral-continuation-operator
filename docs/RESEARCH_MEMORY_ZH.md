@@ -1,5 +1,8 @@
 # 历史研究日志：Few-shot Spectral Calibration
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > **归档说明（2026-09-22）：** 本文记录项目从频率延拓走向 sparse calibration 的历史 framing，
 > 不再是当前方向入口。当前结论请从[一页式状态](CURRENT_STATUS_ZH.md)开始；各历史路线的压缩结论见
 > [归档索引](archive/INDEX_ZH.md)。下文保留原样，用于追踪当时的任务定义和研究决策。

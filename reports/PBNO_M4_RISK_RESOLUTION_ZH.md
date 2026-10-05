@@ -1,5 +1,8 @@
 # PBNO M4：压缩、跨结构波验证与统一 prior adapter
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 日期：2026-09-26
 > 状态：正式三 prompt-seed 结果已完成；统一连续 adapter 通过，hard router 为 NO-GO
 > 主指标：逐 physical system 等权的 raw complex relative L2

@@ -1,5 +1,8 @@
 # PBNO M3：从线性 PCA--MAP 到后验核 Wave Prompt Operator
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 日期：2026-09-25
 >
 > 状态：本轮正式结果；三组 prompt-order seeds、system-held-out、validation-only 选参

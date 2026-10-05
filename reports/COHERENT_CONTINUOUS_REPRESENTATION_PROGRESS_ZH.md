@@ -1,5 +1,8 @@
 # 连续复波场表征：探索进度与证据边界
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 2026-10-04更新，24 小时目标执行中。本文是滚动开发记录，不是最终论文结果。
 > [任务与门槛](../docs/COHERENT_CONTINUOUS_REPRESENTATION_24H_ZH.md) ·
 > [数据来源](../docs/COHERENT_DATA_PROVENANCE_ZH.md)

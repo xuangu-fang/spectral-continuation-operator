@@ -1,5 +1,8 @@
 # 技术复现档案
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > 本文保存全部阶段的具体命令、路径与数据 hash，因此有意保持详细。当前科学结论请先读
 > [一页式状态](CURRENT_STATUS_ZH.md)；最新 wave-system representation 的命令在
 > [第 15 节](#15-wave-system-representation-poc)，其余章节均为历史实验复现档案。

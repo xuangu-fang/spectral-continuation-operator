@@ -1,5 +1,8 @@
 # APEX/APEX-H 冻结证据与归因
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 本文档只整理截至 2026-09-14 已完成的结果，不把旧结果重新解释为谱连续实验。旧仓库
 revision、原始 summary、dataset/checkpoint hash 将由 provenance manifest 绑定。
 
@@ -50,4 +53,3 @@ R1 的优势随目标高频标签数量增加而缩小：WaveBench 从 K=1 的�
 因此谱连续第一阶段首先改变信息条件：从一个低频场扩展到稀疏低频带，再判断是否需要
 更复杂的 latent propagation model。旧 locked/strict 数据从此只作为冻结证据，不用于
 新课题调参。
-

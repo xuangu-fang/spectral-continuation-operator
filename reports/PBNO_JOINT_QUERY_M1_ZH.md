@@ -1,5 +1,8 @@
 # PBNO M1 报告：用物理 prompts 识别并查询未见波动系统
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](../docs/wave_as_prompt/README.md)。
+
 > 日期：2026-09-25  
 > 证据等级：Q3 M0 为 A 级；neural M1 在 OpenFWI/Deepwave 为三 seed A 级；Ocean neural extension 为明确负结果  
 > 结论：严格 joint source--frequency query 已成立；PBNO 有稳定但尚未达到最终顶会 gate 的增益。

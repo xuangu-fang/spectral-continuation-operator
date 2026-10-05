@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-05",
+  "scope": "Maintainer-only research navigation; NOT a model input manifest or execution plan.",
+  "routes": {
+    "A": {
+      "name": "Same-experiment field reconstruction",
+      "doc": "docs/wave_as_prompt/RECONSTRUCTION_ZH.md"
+    },
+    "B": {
+      "name": "Held-out-source response prediction",
+      "doc": "docs/wave_as_prompt/NEW_EXPERIMENT_ZH.md"
+    },
+    "C": {
+      "name": "Measurement-calibrated approximate simulation",
+      "doc": "docs/wave_as_prompt/CALIBRATION_ZH.md"
+    }
+  },
+  "datasets": [
+    {
+      "id": "D01",
+      "name": "Ocean dense full fields",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "fit": {
+        "A": "adapt",
+        "B": "unsupported",
+        "C": "needs_generation"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/spectral_continuation_ocean_integer_dense_74_125_20260915/paired_fields.npz"
+      ],
+      "refs": [
+        "docs/COHERENT_DATA_PROVENANCE_ZH.md"
+      ],
+      "shape": "160 systems x 52 frequencies x 48 depths x 384 ranges x 2 real/imag",
+      "split": "128 train / 32 reused DEV; reserved confirmation is not included",
+      "limits": [
+        "Single source; no source-transfer axis.",
+        "Range-invariant ideal ocean, not field measurements.",
+        "Same-frequency masks must be defined anew; C needs independently paired model mismatch."
+      ]
+    },
+    {
+      "id": "D02",
+      "name": "Ocean multistatic",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "fit": {
+        "A": "array_only",
+        "B": "adapt",
+        "C": "needs_generation"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.npz"
+      ],
+      "refs": [
+        "docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md",
+        "artifacts/cross_domain_response_query/data/ocean_multistatic_v1.manifest.json"
+      ],
+      "shape": "512 systems x 9 sources x 4 frequencies x 48 receivers",
+      "split": "256 train / 64 val / 128 used test / 64 used OOD",
+      "limits": [
+        "Three varying environment parameters; not complex real ocean.",
+        "Receiver array only, no interior full-field supervision."
+      ]
+    },
+    {
+      "id": "D03",
+      "name": "Deepwave ring",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "fit": {
+        "A": "array_only",
+        "B": "adapt",
+        "C": "needs_generation"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "artifacts/cross_domain_response_query/data/deepwave_ring_v1.npz",
+        "artifacts/wave_as_prompt_pfto/data/deepwave_ring_128_v1.npz",
+        "artifacts/wave_as_prompt_pfto/data/deepwave_ring_176_v1.npz"
+      ],
+      "refs": [
+        "docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md",
+        "artifacts/cross_domain_response_query/data/deepwave_ring_v1.manifest.json"
+      ],
+      "shape": "1024 systems x 16 sources x 5 FFT frequencies x 64 receivers; 128/176 variants reuse systems",
+      "split": "512 train / 128 val / 256 used test / 128 used OOD",
+      "limits": [
+        "Finite time-pulse FFT; account for source spectrum/window.",
+        "Receiver array, not full interior field.",
+        "256 nominal ring receivers alias to 188 unique grid cells; do not duplicate samples."
+      ]
+    },
+    {
+      "id": "D04",
+      "name": "OpenFWI CurveFault-A",
+      "routes": [
+        "A",
+        "B"
+      ],
+      "fit": {
+        "A": "array_only",
+        "B": "adapt",
+        "C": "unsupported"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.npz",
+        "/mnt/data/xuangu-fang/ai-physical-dynamics/datasets/openfwi_curvefault_a/raw"
+      ],
+      "refs": [
+        "docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md",
+        "artifacts/cross_domain_response_query/data/openfwi_curvefault_a_v1.manifest.json"
+      ],
+      "shape": "1500 systems x 5 sources x 7 FFT frequencies x 70 receivers",
+      "split": "500 train / 500 val / 500 used test",
+      "limits": [
+        "Local velocity files are not paired: NEVER use them as model inputs or labels.",
+        "Only five source locations; array responses, not interior fields."
+      ]
+    },
+    {
+      "id": "D05",
+      "name": "Structural lattice",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "fit": {
+        "A": "array_only",
+        "B": "adapt",
+        "C": "needs_generation"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "artifacts/cross_domain_response_query/data/structural_lattice_v1.npz"
+      ],
+      "refs": [
+        "docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md",
+        "configs/structural_lattice_wave_q3_20260926.json"
+      ],
+      "shape": "1024 systems x 8 sources x 6 angular frequencies x 32 receivers",
+      "split": "512 train / 128 val / 256 used test / 128 used OOD",
+      "limits": [
+        "Angular frequency is not Hz; preserve declared damping/Fourier sign.",
+        "Synthetic mass-spring model, not real structural monitoring."
+      ]
+    },
+    {
+      "id": "D06",
+      "name": "The Well staircase (restricted)",
+      "routes": [
+        "A"
+      ],
+      "fit": {
+        "A": "diagnostic_only",
+        "B": "unsupported",
+        "C": "unsupported"
+      },
+      "status": "restricted",
+      "local_paths": [
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/helmholtz_staircase_train",
+        "artifacts/cross_domain_response_query/data/the_well_staircase_v1.npz"
+      ],
+      "refs": [
+        "docs/CROSS_DOMAIN_DATA_PROVENANCE_ZH.md"
+      ],
+      "shape": "16 frequency files; each [26,50,1024,256], analytic-phase repeated time axis",
+      "split": "Source/environment identities unresolved; no independent-system split claimed",
+      "limits": [
+        "Do not count 50 phase repeats as independent samples.",
+        "No reliable source coordinates; no multi-source or cross-system validation."
+      ]
+    },
+    {
+      "id": "D07",
+      "name": "WaveBench full",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "fit": {
+        "A": "adapt",
+        "B": "unverified",
+        "C": "needs_generation"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wavefield_lr/raw/wavebench_full_remotezip_20260912"
+      ],
+      "refs": [
+        "reports/WAVEBENCH_REPRESENTATION_M1_ZH.md",
+        "configs/wavebench_representation_m1_20260923.json",
+        "src/spectral_continuation/train_wavebench_identifier.py"
+      ],
+      "shape": "50k aligned systems at 10/15/20/40 Hz; complex field and speed labels",
+      "split": "Historical subset 8000/500/500 split seed42; test previously used",
+      "limits": [
+        "Previous gain measured speed-contrast identification, NOT phase reconstruction.",
+        "No continuous-frequency ground truth or documented arbitrary-source axis.",
+        "Do not feed true test medium to the sparse-only model."
+      ]
+    },
+    {
+      "id": "D08",
+      "name": "Synthetic multi-source complete fields",
+      "routes": [
+        "A",
+        "B"
+      ],
+      "fit": {
+        "A": "adapt",
+        "B": "adapt",
+        "C": "needs_generation"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/wave_operator/operator_id_64_160.npz"
+      ],
+      "refs": [
+        "src/spectral_continuation/wave_operator_data.py",
+        "configs/wave_operator_representation_poc_20260922.json"
+      ],
+      "shape": "160 systems x 9 sources x 8 frequencies x 64 x 64 complex",
+      "split": "112 train / 24 val / 24 used test",
+      "limits": [
+        "Toy model; audit grid convergence for high phase accuracy.",
+        "Legacy OOD or higher-grid variants are not automatically new independent confirmations."
+      ]
+    },
+    {
+      "id": "D09",
+      "name": "Range-dependent one-way waveguide families",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "fit": {
+        "A": "adapt",
+        "B": "diagnostic_only",
+        "C": "needs_generation"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_development_20261003",
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_training_cache_20261003",
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_generator_query_transfer_20261003",
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_frozen_system_audit_20261003",
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_operator_action_20261004",
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_spectral_medium_20261004",
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_waveguide_learned_speed_manifold_confirm_20261004"
+      ],
+      "refs": [
+        "docs/RANGE_DEPENDENT_WAVEGUIDE_DATA_ZH.md",
+        "docs/LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md",
+        "docs/GAUSSIAN_SPEED_VARIABLE_DEV_ZH.md"
+      ],
+      "shape": "Mixed field/medium/modal/operator archives; see per-subset provenance",
+      "split": "Multiple train/DEV/previously frozen confirmation cohorts; all reported confirmations now used",
+      "limits": [
+        "Same one-way PDE across medium families; not independent physics domains.",
+        "No backscatter or penetrable seabed; pressure-release top, rigid bottom.",
+        "Metadata may contain true medium; enforce public input whitelist.",
+        "40 source actions do not mean 40 independent systems."
+      ]
+    },
+    {
+      "id": "D10",
+      "name": "2D Helmholtz and public sparse slice",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "fit": {
+        "A": "adapt",
+        "B": "needs_generation",
+        "C": "needs_generation"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_development_20261003",
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_pilot_20261004",
+        "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_20261004"
+      ],
+      "refs": [
+        "docs/HELMHOLTZ_MULTISCALE_M0_PILOT_ZH.md",
+        "docs/HELMHOLTZ_SPARSE_CONTEXT_ZH.md",
+        "src/spectral_continuation/prepare_helmholtz_sparse_dev.py"
+      ],
+      "shape": "Gaussian 40 field systems; multiscale 512 medium labels + 8 DEV response systems + 2 audits; sparse 780 complex samples/system",
+      "split": "No completed new 64/64 val/test or sparse nonlinear learning result",
+      "limits": [
+        "512 training media are NOT 512 response demonstrations.",
+        "Four-line 6/10/14Hz observations with 11.3/17Hz targets are not route A same-frequency.",
+        "Unsafe seed-metadata directory is forbidden for inference.",
+        "Full pilot spec contains hidden truth; coarse-grid query error can dominate."
+      ]
+    },
+    {
+      "id": "D11",
+      "name": "Independent Ocean LF/HF pilot",
+      "routes": [
+        "C"
+      ],
+      "fit": {
+        "A": "diagnostic_only",
+        "B": "unsupported",
+        "C": "diagnostic_only"
+      },
+      "status": "historical_data",
+      "local_paths": [
+        "artifacts/ocean_multifidelity_formal_pilot/low.npz",
+        "artifacts/ocean_multifidelity_formal_pilot/high.npz"
+      ],
+      "refs": [
+        "configs/ocean_multifidelity_pilot_20260916.json",
+        "artifacts/ocean_multifidelity_formal_pilot/manifest.json",
+        "reports/PAIRED_FIDELITY_CALIBRATION_GATE_ZH.md"
+      ],
+      "shape": "3 environments x 12 frequencies (101-112Hz) x 32 x 128 receivers; independently solved low/high",
+      "split": "1 train / 2 validation; tiny diagnostic pilot",
+      "limits": [
+        "Not a training benchmark; limited-family far-frequency calibration failed.",
+        "8-mode approximation can be ineffective or fail to save computation."
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "data_adapter",
+      "name": "cross_domain_response_data.py",
+      "routes": [
+        "A",
+        "B"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/cross_domain_response_data.py"
+      ],
+      "note": "Unified response archives; new route protocol still required."
+    },
+    {
+      "id": "synthetic_fields",
+      "name": "wave_operator_data.py",
+      "routes": [
+        "A",
+        "B"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/wave_operator_data.py"
+      ],
+      "note": "Multi-source full-field toy generator."
+    },
+    {
+      "id": "wavebench_reader",
+      "name": "train_wavebench_identifier.py",
+      "routes": [
+        "A"
+      ],
+      "status": "adapt_required",
+      "refs": [
+        "src/spectral_continuation/train_wavebench_identifier.py"
+      ],
+      "note": "Reuse reader; existing task is inverse medium identification."
+    },
+    {
+      "id": "ocean_generator",
+      "name": "generate_coherent_ocean.py",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/generate_coherent_ocean.py"
+      ],
+      "note": "Direct-solver truth, avoid image interpolation."
+    },
+    {
+      "id": "waveguide_generator",
+      "name": "coherent_waveguide_data.py",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/coherent_waveguide_data.py"
+      ],
+      "note": "One-way PDE only, check boundary assumptions."
+    },
+    {
+      "id": "helmholtz_generator",
+      "name": "coherent_helmholtz_data.py",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/coherent_helmholtz_data.py"
+      ],
+      "note": "Known-PDE synthetic data."
+    },
+    {
+      "id": "helmholtz_multiscale",
+      "name": "coherent_helmholtz_multiscale_pilot.py",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/coherent_helmholtz_multiscale_pilot.py"
+      ],
+      "note": "Medium labels and field labels are separate."
+    },
+    {
+      "id": "public_input_guard",
+      "name": "prepare_helmholtz_sparse_dev.py",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/prepare_helmholtz_sparse_dev.py"
+      ],
+      "note": "Whitelist example, not automatic route A protocol."
+    },
+    {
+      "id": "metrics",
+      "name": "metrics.py",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "adapt_required",
+      "refs": [
+        "src/spectral_continuation/metrics.py"
+      ],
+      "note": "Check definitions against current unobserved-target protocol."
+    },
+    {
+      "id": "system_stats",
+      "name": "paired_environment_stats.py",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/paired_environment_stats.py"
+      ],
+      "note": "System-level paired statistics."
+    },
+    {
+      "id": "query_classical",
+      "name": "cross_domain_query_audit.py",
+      "routes": [
+        "B"
+      ],
+      "status": "baseline",
+      "refs": [
+        "src/spectral_continuation/cross_domain_query_audit.py"
+      ],
+      "note": "Interpolation, reciprocity and response basis."
+    },
+    {
+      "id": "probabilistic_prior",
+      "name": "probabilistic_response_operator.py",
+      "routes": [
+        "B"
+      ],
+      "status": "baseline",
+      "refs": [
+        "src/spectral_continuation/probabilistic_response_operator.py"
+      ],
+      "note": "Anisotropic statistical response prior."
+    },
+    {
+      "id": "posterior_memory",
+      "name": "posterior_memory_response_operator.py",
+      "routes": [
+        "B"
+      ],
+      "status": "baseline",
+      "refs": [
+        "src/spectral_continuation/posterior_memory_response_operator.py"
+      ],
+      "note": "Strong statistical retrieval baseline."
+    },
+    {
+      "id": "generic_cnp",
+      "name": "train_matched_q3_cnp.py",
+      "routes": [
+        "B"
+      ],
+      "status": "adapt_required",
+      "refs": [
+        "src/spectral_continuation/train_matched_q3_cnp.py"
+      ],
+      "note": "Old joint Q3 protocol, adapt to same-frequency B."
+    },
+    {
+      "id": "episodic_basis",
+      "name": "train_episodic_response_basis.py",
+      "routes": [
+        "A",
+        "B"
+      ],
+      "status": "negative_control",
+      "refs": [
+        "src/spectral_continuation/train_episodic_response_basis.py"
+      ],
+      "note": "Already tried; Deepwave no gain, OpenFWI ~1.4%."
+    },
+    {
+      "id": "coordinate_representation",
+      "name": "coherent_representation.py",
+      "routes": [
+        "A"
+      ],
+      "status": "adapt_required",
+      "refs": [
+        "src/spectral_continuation/coherent_representation.py"
+      ],
+      "note": "Single-field capacity is not sparse inference."
+    },
+    {
+      "id": "wave_chart",
+      "name": "learned_wave_chart.py",
+      "routes": [
+        "A"
+      ],
+      "status": "diagnostic",
+      "refs": [
+        "src/spectral_continuation/learned_wave_chart.py"
+      ],
+      "note": "Old continuous representation candidate."
+    },
+    {
+      "id": "coherent_kernel",
+      "name": "learned_coherent_kernel.py",
+      "routes": [
+        "A"
+      ],
+      "status": "diagnostic",
+      "refs": [
+        "src/spectral_continuation/learned_coherent_kernel.py"
+      ],
+      "note": "Old learned complex kernel; preserve negatives."
+    },
+    {
+      "id": "speed_manifold",
+      "name": "learned_speed_manifold.py",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "diagnostic",
+      "refs": [
+        "src/spectral_continuation/learned_speed_manifold.py"
+      ],
+      "note": "PCA variable mechanism, not a deployed neural reconstructor."
+    },
+    {
+      "id": "speed_confirmation",
+      "name": "audit_learned_speed_manifold_confirm.py",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "diagnostic",
+      "refs": [
+        "src/spectral_continuation/audit_learned_speed_manifold_confirm.py"
+      ],
+      "note": "Same synthetic family prospective confirmation."
+    },
+    {
+      "id": "physical_inverse",
+      "name": "learned_waveguide_generator.py",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "baseline",
+      "refs": [
+        "src/spectral_continuation/learned_waveguide_generator.py"
+      ],
+      "note": "Contains representation/inversion controls; count physical compute."
+    },
+    {
+      "id": "helmholtz_inverse",
+      "name": "audit_helmholtz_generator_identification.py",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "baseline",
+      "refs": [
+        "src/spectral_continuation/audit_helmholtz_generator_identification.py"
+      ],
+      "note": "Strong classical comparator; no sparse route A result implied."
+    },
+    {
+      "id": "calibration",
+      "name": "sparse_calibration.py",
+      "routes": [
+        "C"
+      ],
+      "status": "adapt_required",
+      "refs": [
+        "src/spectral_continuation/sparse_calibration.py"
+      ],
+      "note": "Old spectral calibration; not paired LF/HF by itself."
+    },
+    {
+      "id": "paired_protocol",
+      "name": "paired_fidelity_protocol.py",
+      "routes": [
+        "C"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/paired_fidelity_protocol.py"
+      ],
+      "note": "Check independent paired identities."
+    },
+    {
+      "id": "multifidelity_solver",
+      "name": "ocean_multifidelity_solver.py",
+      "routes": [
+        "C"
+      ],
+      "status": "reusable",
+      "refs": [
+        "src/spectral_continuation/ocean_multifidelity_solver.py"
+      ],
+      "note": "Generate genuine physical LF/HF; old fixed8-mode negative remains."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E01",
+      "name": "E01 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "positive_bounded",
+      "refs": [
+        "docs/LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E02",
+      "name": "E02 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "negative_boundary",
+      "refs": [
+        "docs/GAUSSIAN_SPEED_VARIABLE_DEV_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E03",
+      "name": "E03 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "mechanism",
+      "refs": [
+        "docs/SPECTRAL_MEDIUM_STRESS_POC_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E04",
+      "name": "E04 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "mechanism",
+      "refs": [
+        "docs/Q_CAPACITY_ORACLE_AUDIT_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E05",
+      "name": "E05 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "mechanism",
+      "refs": [
+        "docs/SPECTRAL_TAPER_EXACT_FAMILY_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E06",
+      "name": "E06 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "B"
+      ],
+      "status": "positive_bounded",
+      "refs": [
+        "docs/GENERATOR_REPRESENTATION_MECHANISM_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E07",
+      "name": "E07 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "strong_control",
+      "refs": [
+        "reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E08",
+      "name": "E08 (see research memory for exact claim)",
+      "routes": [
+        "B"
+      ],
+      "status": "positive_bounded",
+      "refs": [
+        "reports/CROSS_DOMAIN_RESPONSE_QUERY_POC_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E09",
+      "name": "E09 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "B"
+      ],
+      "status": "negative_boundary",
+      "refs": [
+        "reports/WAVE_AS_PROMPT_LATENT_PRIOR_M0_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E10",
+      "name": "E10 (see research memory for exact claim)",
+      "routes": [
+        "A"
+      ],
+      "status": "positive_bounded",
+      "refs": [
+        "reports/WAVEBENCH_REPRESENTATION_M1_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E11",
+      "name": "E11 (see research memory for exact claim)",
+      "routes": [
+        "C"
+      ],
+      "status": "mixed",
+      "refs": [
+        "reports/SPARSE_SPECTRAL_CALIBRATION_POC_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E12",
+      "name": "E12 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "C"
+      ],
+      "status": "strong_control",
+      "refs": [
+        "docs/HELMHOLTZ_MULTISCALE_M0_PILOT_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E13",
+      "name": "E13 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "negative_boundary",
+      "refs": [
+        "reports/ACTIONABLE_HORIZON_POC_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    },
+    {
+      "id": "E14",
+      "name": "E14 (see research memory for exact claim)",
+      "routes": [
+        "A",
+        "B"
+      ],
+      "status": "negative_boundary",
+      "refs": [
+        "docs/SPEED_RESOLUTION_SCALING_ZH.md",
+        "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md"
+      ]
+    }
+  ],
+  "archived_by_default": "Unlisted research modules/configs/artifacts retain old reproducibility identities; do not auto-run.",
+  "forbidden_input_paths": [
+    "/mnt/data/xuangu-fang/physics-informed-tensor-learning/datasets/coherent_helmholtz_multiscale_sparse_dev_unsafe_seed_metadata_20261004"
+  ],
+  "core_docs": [
+    "AGENTS.md",
+    "README.md",
+    "artifacts/README.md",
+    "configs/README.md",
+    "data/README.md",
+    "docs/CURRENT_STATUS_ZH.md",
+    "docs/CURRENT_STORY_AND_ROADMAP_ZH.md",
+    "docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md",
+    "docs/README.md",
+    "docs/archive/INDEX_ZH.md",
+    "docs/wave_as_prompt/CALIBRATION_ZH.md",
+    "docs/wave_as_prompt/EVALUATION_ZH.md",
+    "docs/wave_as_prompt/NEW_EXPERIMENT_ZH.md",
+    "docs/wave_as_prompt/README.md",
+    "docs/wave_as_prompt/RECONSTRUCTION_ZH.md",
+    "docs/wave_as_prompt/RELATED_WORK_ZH.md",
+    "reports/README.md",
+    "src/spectral_continuation/README.md"
+  ]
+}

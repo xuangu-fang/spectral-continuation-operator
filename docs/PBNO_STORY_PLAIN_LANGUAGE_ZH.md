@@ -1,5 +1,8 @@
 # PBNO / Wave as Prompt：大白话故事与实验说明
 
+> 历史证据 / 技术参考（2026-10-05 归档标记）：保留原实验、数值和复现路径。
+> 文内“当前/下一步/待完成”描述属于当时阶段，不是现行任务；请先读[三条 Wave as Prompt 路线](wave_as_prompt/README.md)。
+
 > 更新日期：2026-10-03
 > 本文解释 PBNO 的基础。项目已经进一步推进到 target-aware interrogation；完整的新故事、M1 结果与未来
 > 三条路线见 [当前故事、证据与未来路线图](CURRENT_STORY_AND_ROADMAP_ZH.md)。
