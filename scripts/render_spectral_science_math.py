@@ -65,7 +65,9 @@ def render(equation: dict) -> bytes:
                 "Creator": "render_spectral_science_math.py",
             },
         )
-        data = out.getvalue()
+        # Matplotlib leaves spaces at the end of SVG path lines. Newlines still
+        # separate path commands after normalization, with identical geometry.
+        data = b"\n".join(line.rstrip() for line in out.getvalue().splitlines()) + b"\n"
     root = ET.fromstring(data)
     assert root.tag == "{http://www.w3.org/2000/svg}svg"
     assert not root.findall(".//{http://www.w3.org/2000/svg}script")
