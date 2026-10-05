@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "document": "docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md",
+  "renderer": "scripts/render_spectral_science_math.py",
+  "rendered_with": "matplotlib 3.11.2",
+  "description": "本科学备忘录的可编辑公式源码。latex 保存完整公式；可选 lines 只控制长公式的分行显示。图片由脚本生成，不要手工编辑。",
+  "equations": [
+    {
+      "id": "equation_01",
+      "alt": "公式 1：离散线性波动方程：质量、阻尼与刚度共同决定受激运动",
+      "latex": "M_e\\frac{d^2 v_e}{dt^2} +C_e\\frac{d v_e}{dt} +K_e v_e =B_e s(t),"
+    },
+    {
+      "id": "equation_02",
+      "alt": "公式 2：稳态方程：频率相关算子作用于复场等于源",
+      "latex": "A_e(\\omega)u_e(\\omega)=b_e(\\omega),"
+    },
+    {
+      "id": "equation_03",
+      "alt": "公式 3：负号时间谐波约定下的频率算子，阻尼项为负 iωC",
+      "latex": "A_e(\\omega)=K_e-\\omega^2M_e-i\\omega C_e."
+    },
+    {
+      "id": "equation_04",
+      "alt": "公式 4：频率响应等于逆算子作用于源",
+      "latex": "u_e(\\omega)=A_e(\\omega)^{-1}b_e(\\omega)."
+    },
+    {
+      "id": "equation_05",
+      "alt": "公式 5：精确连续数据的唯一性不等于有限样本的稳定可预测性",
+      "latex": "\\mathrm{exact\\ continuum\\ uniqueness} \\quad\\neq\\quad \\mathrm{stable\\ finite\\ sample\\ predictability}."
+    },
+    {
+      "id": "equation_06",
+      "alt": "公式 6：与同一观测在误差容限内相容的系统集合",
+      "latex": "\\mathcal{H}(O_e,\\epsilon) = \\left\\{ e' : \\|O_{e'}-O_e\\|\\leq\\epsilon \\right\\}."
+    },
+    {
+      "id": "equation_07",
+      "alt": "公式 7：相容系统在查询频率的响应直径",
+      "latex": "D(\\omega_q\\mid O_e,\\epsilon) = \\sup_{e_1,e_2\\in\\mathcal{H}(O_e,\\epsilon)} \\|u_{e_1}(\\omega_q)-u_{e_2}(\\omega_q)\\|."
+    },
+    {
+      "id": "equation_08",
+      "alt": "公式 8：因果冲激响应的傅里叶变换，采用正号传播时延",
+      "latex": "u_e(x,\\omega) = \\int_0^\\infty h_e(x,\\tau)e^{i\\omega\\tau}\\,d\\tau."
+    },
+    {
+      "id": "equation_09",
+      "alt": "公式 9：冲激响应近似为若干离散传播路径",
+      "latex": "h_e(x,\\tau) \\approx \\sum_{p=1}^{P}a_{e,p}(x)\\delta(\\tau-\\tau_{e,p}(x)),"
+    },
+    {
+      "id": "equation_10",
+      "alt": "公式 10：多路径响应是复振幅乘以时延相位的叠加",
+      "latex": "u_e(x,\\omega) \\approx \\sum_{p=1}^{P}a_{e,p}(x)e^{i\\omega\\tau_{e,p}(x)}."
+    },
+    {
+      "id": "equation_11",
+      "alt": "公式 11：相邻频率的相位差等于时延乘频率差，对二π取模",
+      "latex": "\\Delta\\phi = \\angle\\left[ u(\\omega+\\Delta\\omega)u(\\omega)^* \\right] \\equiv \\Delta\\omega\\tau \\;(\\mathrm{mod}\\;2\\pi)."
+    },
+    {
+      "id": "equation_12",
+      "alt": "公式 12：单路径主值相位不折返的充分条件",
+      "latex": "|\\Delta\\omega\\tau|<\\pi."
+    },
+    {
+      "id": "equation_13",
+      "alt": "公式 13：以赫兹和最大绝对残余时延表示的充分采样条件",
+      "latex": "\\Delta f < \\frac{1}{2\\tau_{\\max}}."
+    },
+    {
+      "id": "equation_14",
+      "alt": "公式 14：复数对数导数：响应导数除以响应",
+      "latex": "g(\\omega) = \\frac{d u(\\omega)/d\\omega}{u(\\omega)}."
+    },
+    {
+      "id": "equation_15",
+      "alt": "公式 15：对数导数实部等于对数幅值的频率导数",
+      "latex": "\\mathrm{Re}\\,g(\\omega) = \\frac{d\\log|u(\\omega)|}{d\\omega},"
+    },
+    {
+      "id": "equation_16",
+      "alt": "公式 16：对数导数虚部等于相位的频率导数",
+      "latex": "\\mathrm{Im}\\,g(\\omega) = \\frac{d\\phi(\\omega)}{d\\omega}."
+    },
+    {
+      "id": "equation_17",
+      "alt": "公式 17：局部模态展开，采用与时间约定一致的负号阻尼",
+      "latex": "u_e(\\omega) \\approx \\sum_{j=1}^{r} \\frac{r_{e,j}}{\\lambda_{e,j}-\\omega^2-i\\omega\\gamma_{e,j}} +u_{e,\\mathrm{smooth}}(\\omega)."
+    },
+    {
+      "id": "equation_18",
+      "alt": "公式 18：仅凭单频场的通用频率平移等式，并非一般成立",
+      "latex": "u_e(\\omega+\\delta)=T_{\\delta}u_e(\\omega)."
+    },
+    {
+      "id": "equation_19",
+      "alt": "公式 19：不能预设频率平移具有半群合成律",
+      "latex": "T_{\\delta_1+\\delta_2} = T_{\\delta_1}T_{\\delta_2}."
+    },
+    {
+      "id": "equation_20",
+      "alt": "公式 20：观测变化的局部线性化",
+      "latex": "\\delta O \\approx J_O\\delta z,"
+    },
+    {
+      "id": "equation_21",
+      "alt": "公式 21：查询响应变化的局部线性化",
+      "latex": "\\delta u_q \\approx J_q\\delta z."
+    },
+    {
+      "id": "equation_22",
+      "alt": "公式 22：局部观测信息矩阵及带高斯先验的后验协方差",
+      "latex": "F_O =J_O^{T}\\Sigma^{-1}J_O, \\qquad C_{\\mathrm{post}}=(C_0^{-1}+F_O)^{-1}.",
+      "lines": [
+        "F_O=J_O^{T}\\Sigma^{-1}J_O,",
+        "C_{\\mathrm{post}}=(C_0^{-1}+F_O)^{-1}."
+      ]
+    },
+    {
+      "id": "equation_23",
+      "alt": "公式 23：状态后验协方差经查询雅可比传播后的局部协方差",
+      "latex": "C_q\\approx J_q C_{\\mathrm{post}}J_q^{T}."
+    },
+    {
+      "id": "equation_24",
+      "alt": "公式 24：校准观测对状态后验的贝叶斯更新",
+      "latex": "p(z_e\\mid O_e,C_e) \\propto p(C_e\\mid z_e,O_e)p(z_e\\mid O_e)."
+    },
+    {
+      "id": "equation_25",
+      "alt": "公式 25：校准前后查询风险的差值，不保证每次都为正",
+      "latex": "\\Delta R_q(C_e) = R_q(O_e)-R_q(O_e,C_e)."
+    },
+    {
+      "id": "equation_26",
+      "alt": "公式 26：整段查询区间风险均满足阈值的条件预测范围",
+      "latex": "H_{\\eta}(O_e) = \\sup\\left\\{ h\\geq0: R(\\omega\\mid O_e)\\leq\\eta, \\ \\forall\\omega\\in[\\omega_0,\\omega_0+h] \\right\\}."
+    },
+    {
+      "id": "equation_27",
+      "alt": "公式 27：单位校准成本带来的预测范围增益",
+      "latex": "G(C_e) = \\frac{H_{\\eta}(O_e,C_e)-H_{\\eta}(O_e)}{\\mathrm{cost}(C_e)}."
+    },
+    {
+      "id": "equation_28",
+      "alt": "公式 28：目标真值可拟合的重建能力，不等于可部署预测",
+      "latex": "\\inf_z\\|D(z,f_q)-u(f_q)\\|\\ \\mathrm{is\\ small}."
+    },
+    {
+      "id": "equation_29",
+      "alt": "公式 29：真正任务：从允许的观测推断查询坐标",
+      "latex": "z_q=P(O,f_q)."
+    },
+    {
+      "id": "equation_30",
+      "alt": "公式 30：对查询充分的表征保留观测中全部预测相关信息",
+      "latex": "p(U_Q\\mid O)=p(U_Q\\mid z), \\qquad z=T(O)."
+    },
+    {
+      "id": "equation_31",
+      "alt": "公式 31：高低保真响应之间的差异",
+      "latex": "d_e(\\omega)=u_e^H(\\omega)-u_e^L(\\omega)."
+    },
+    {
+      "id": "equation_32",
+      "alt": "公式 32：综合低保真成本与校准后查询风险的目标",
+      "latex": "\\min_{L} \\left[ \\mathrm{cost}(L) +\\lambda\\,R_Q(O^L,C^H) \\right],"
+    },
+    {
+      "id": "equation_33",
+      "alt": "公式 33：被动谱预测同时估计响应和风险",
+      "latex": "(\\widehat{u}_e(\\omega_q),\\widehat{r}_e(\\omega_q)) =F_\\theta(O_e,\\omega_q)."
+    },
+    {
+      "id": "equation_34",
+      "alt": "公式 34：一次校准动作由频率和测量配置组成",
+      "latex": "a_t=(\\omega_t,\\mathcal{M}_t),"
+    },
+    {
+      "id": "equation_35",
+      "alt": "公式 35：把动作和返回观测这一对数据加入历史",
+      "latex": "H_{t+1}=H_t\\cup\\{(a_t,y_t)\\}."
+    },
+    {
+      "id": "equation_36",
+      "alt": "公式 36：顺序校准的期望查询误差与测量成本目标",
+      "latex": "\\min_\\pi \\mathbb{E}\\left[ \\sum_{\\omega\\in Q}L(\\widehat{u}(\\omega),u(\\omega)) +\\lambda\\sum_t\\mathrm{cost}(a_t) \\right]."
+    },
+    {
+      "id": "equation_37",
+      "alt": "公式 37：多保真历史由低保真响应与高保真校准组成",
+      "latex": "H_t=\\{u^L(\\omega),C_t^H\\}."
+    },
+    {
+      "id": "equation_38",
+      "alt": "公式 38：从观测编码一个共享系统，再回答频率、源和接收配置查询",
+      "latex": "z_e=E_\\theta(O_e), \\qquad \\widehat{y}(q)=\\mathcal{M}_r\\mathcal{R}_\\theta(z_e,\\omega)b_s, \\qquad q=(\\omega,s,r).",
+      "lines": [
+        "z_e=E_\\theta(O_e),\\qquad q=(\\omega,s,r),",
+        "\\widehat{y}(q)=\\mathcal{M}_r\\mathcal{R}_\\theta(z_e,\\omega)b_s."
+      ]
+    },
+    {
+      "id": "equation_39",
+      "alt": "公式 39：高斯时延后验虽为单峰，条件平均复场仍会因相位抵消而衰减",
+      "latex": "\\tau\\mid O\\sim\\mathcal{N}(\\mu,\\sigma^2), \\qquad u(\\omega)=A e^{i\\omega\\tau}, \\qquad \\mathbb{E}[u(\\omega)\\mid O] =A e^{i\\omega\\mu}e^{-\\omega^2\\sigma^2/2}.",
+      "lines": [
+        "\\tau\\mid O\\sim\\mathcal{N}(\\mu,\\sigma^2),\\qquad u(\\omega)=A e^{i\\omega\\tau},",
+        "\\mathbb{E}[u(\\omega)\\mid O]=A e^{i\\omega\\mu}e^{-\\omega^2\\sigma^2/2}."
+      ]
+    },
+    {
+      "id": "equation_40",
+      "alt": "公式 40：速度的倒数平方产生高阶乘积：有限秩先验可能随变量改变",
+      "latex": "c^{-2}=c_0^{-2}(1-2\\delta+3\\delta^2-4\\delta^3+\\cdots), \\qquad |\\delta|<1."
+    }
+  ]
+}

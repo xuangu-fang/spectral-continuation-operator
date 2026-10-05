@@ -15,6 +15,13 @@
 
 Current user direction is high-precision complex wavefield/phase representation with continuous space/frequency queries. Ocean is flagship, not an exclusive domain. Known environment/source and adequate supervision are allowed to separate approximation from identifiability. No active-query/RL or unconditional blind distant-frequency pole/ODE restart.
 
+Scientific memo maintenance (2026-10-05): `docs/SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md`
+now integrates recent evidence in §21 and corrects overclaims about physical non-identifiability, principal-phase
+sampling, local-linear risk and generative necessity. Model horizon is NOT an information-theoretic limit.
+It uses the exp(-iωt) time convention consistently. Its 40 display equations are local SVGs; edit
+`docs/assets/spectral_science_math/equations.json`, then run `scripts/render_spectral_science_math.py`
+and `--check`. Preserve source/alt text and do not reintroduce renderer-dependent math macros.
+
 ## Most recent evidence (2026-10-04; read before re-running)
 
 - **Latest POSITIVE but sharply bounded learned-variable result:** Same1024 training MEDIUM labels (512 taper5+512 taper10), same255 per-system code, same clean60/100/140Hz×65 lowband context and 5+5 classical GN: learning a SPEED-field PCA basis on64×160 nodes and applying exact nonlinear `c^-2` yields f800 broad/narrow raw .005375/.005052, phase .004197/.003915rad on NEW16 taper7.5 systems20268000–015. Matched q-PCA255 raw .080678/.081965; raw reductions93.34%/93.84%, all16 systems both-source raw≤.05, all prospective gates pass. Prereg confirmation code/config commit `5fe88a5` BEFORE truth. This is interpolation between training t5 and t10 within SAME16×16 cosine synthetic medium and SAME one-way PDE, known source/background/PDE, dense noiseless context, near-complete255 latent DOF. NOT a second physics domain, strong compression, neural operator, real ocean, or top-conference AI novelty. Old taper10 dev16 speed result .008592/.009278 is NOT another independent cohort. See docs/LEARNED_SPEED_MANIFOLD_CONFIRM_ZH.md and report §22, plus both new figures. Offline training cost excluded; online speed ~9.04s vs q ~7.83–7.93s. Frozen speed basis data-derived rank16 depth factorization is ~machine-precision lossless and stores264,704 float64 vs q524,288, but inference still expands basis and this low rank is CAUSED by true synthetic16 depth cosine modes. Read docs/LEARNED_SPEED_BASIS_STORAGE_AUDIT_ZH.md. Exact known-family inverse still has extra information and remains a crucial bound; don't rank it as matched information.

@@ -60,7 +60,8 @@
 ## 科学背景
 
 - [`SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md`](SPECTRAL_PREDICTABILITY_IDENTIFIABILITY_CALIBRATION_ZH.md)：
-  面向 AI 读者的波动、信号处理、可预测性与可辨识性备忘录；
+  面向 AI 读者的科学备忘录，2026-10-05 修订。先看 §0 与 §21：区分模型失败／物理信息不足，
+  补入校准收益边界、声速先验正负结果与第二域诊断；全部块公式使用本地矢量图，避免网页宏渲染失败；
 - [`REPRODUCIBILITY_ZH.md`](REPRODUCIBILITY_ZH.md)：所有阶段的命令、数据路径和 hash，仅在需要复核时查阅。
 
 ## 历史归档
