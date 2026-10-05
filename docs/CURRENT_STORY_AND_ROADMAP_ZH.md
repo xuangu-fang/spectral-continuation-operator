@@ -3,6 +3,8 @@
 > 2026-10-04；本页覆盖旧Wave as Prompt/active query执行计划。
 > [最新进度与方法](../reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md) · [24小时协议](COHERENT_CONTINUOUS_REPRESENTATION_24H_ZH.md)
 
+> 2026-10-05研究框架更新：先读[科学机制与候选论文方向（第二版）](EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md)。优先假说是「学习由稀疏观测可推断、保留未见查询相位信息的表示」；紧凑生成器与相干后验为后续方向。该文补充理论边界、相关工作和最小判定实验；未新增训练结果，也未启动新长期任务。下文保留截至上一轮的实证与路线演变。
+
 ## 一句话问题
 
 学习可预测的连续相干波场表示：不仅存下复数值，还要抓住相位随空间、频率变化的结构，使高频与细网格上的重建保持精度。

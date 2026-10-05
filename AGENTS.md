@@ -11,7 +11,7 @@
 7. For the unfinished second-domain branch, `docs/HELMHOLTZ_SPARSE_CONTEXT_ZH.md` and `docs/NEXT_CROSS_PHYSICS_POC_ZH.md`.
 8. For the local information vs true-medium capacity distinction, `docs/HELMHOLTZ_SPARSE_INFO_AUDIT_ZH.md`.
 9. For an AI-background reader's detailed explanation of the positive findings, `docs/POSITIVE_FINDINGS_PLAIN_ZH.md`; it is a tutorial, not an extra independent experiment.
-10. For the cross-history evidence map and ocean/real-phase Wave as Prompt research directions, `docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md`; its proposed tasks are not completed experiments.
+10. For scientific mechanisms and candidate AI-paper formulations, read the second edition of `docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md`, especially sections 1 and 4. It prioritizes learning query-sufficient, observation-inferable priors before structured high-rank operator synthesis and coherent posterior generation; these are hypotheses, NOT completed experiments or a newly launched goal. Invertible c/q reparameterization does not add information; finite-rank priors and MAP coordinates can differ. Posterior generation may be motivated by unimodal uncertainty, but any flow restart still requires evidence beyond a strong simple posterior baseline, not best-of-K alone.
 
 Current user direction is high-precision complex wavefield/phase representation with continuous space/frequency queries. Ocean is flagship, not an exclusive domain. Known environment/source and adequate supervision are allowed to separate approximation from identifiability. No active-query/RL or unconditional blind distant-frequency pole/ODE restart.
 
