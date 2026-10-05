@@ -10,6 +10,7 @@
 6. `docs/EXPERIMENT_LEDGER_ZH.md` for prior positive/negative evidence.
 7. For the unfinished second-domain branch, `docs/HELMHOLTZ_SPARSE_CONTEXT_ZH.md` and `docs/NEXT_CROSS_PHYSICS_POC_ZH.md`.
 8. For the local information vs true-medium capacity distinction, `docs/HELMHOLTZ_SPARSE_INFO_AUDIT_ZH.md`.
+9. For an AI-background reader's detailed explanation of the positive findings, `docs/POSITIVE_FINDINGS_PLAIN_ZH.md`; it is a tutorial, not an extra independent experiment.
 
 Current user direction is high-precision complex wavefield/phase representation with continuous space/frequency queries. Ocean is flagship, not an exclusive domain. Known environment/source and adequate supervision are allowed to separate approximation from identifiability. No active-query/RL or unconditional blind distant-frequency pole/ODE restart.
 

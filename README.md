@@ -9,6 +9,7 @@
 | 想了解什么 | 阅读入口 |
 |---|---|
 | 用10分钟判断当前结论、论文风险与下一步 | [高精度相位表示阶段决策](docs/PHASE_REPRESENTATION_DECISION_20261004_ZH.md) |
+| 不熟悉波动和信号处理、想看本轮正发现的通俗详细解释 | [正发现大白话解读](docs/POSITIVE_FINDINGS_PLAIN_ZH.md) |
 | 最新结果、方法细节、正负结论与图 | [连续复场表征进度报告](reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md) |
 | 大白话理解当前表示、频率与分辨率 | [共同生成器的机制备忘](docs/GENERATOR_REPRESENTATION_MECHANISM_ZH.md) |
 | 当前故事和下一阶段的取舍 | [当前主线与路线图](docs/CURRENT_STORY_AND_ROADMAP_ZH.md) |
