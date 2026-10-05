@@ -8,6 +8,7 @@
 
 | 想了解什么 | 阅读入口 |
 |---|---|
+| 海洋／真实场景的相位稀疏重建与 Wave as Prompt：过去正负结果如何指导选题 | [证据—insight—问题地图](docs/EVIDENCE_TO_OCEAN_WAVE_PROMPT_ZH.md) |
 | 用10分钟判断当前结论、论文风险与下一步 | [高精度相位表示阶段决策](docs/PHASE_REPRESENTATION_DECISION_20261004_ZH.md) |
 | 不熟悉波动和信号处理、想看本轮正发现的通俗详细解释 | [正发现大白话解读](docs/POSITIVE_FINDINGS_PLAIN_ZH.md) |
 | 最新结果、方法细节、正负结论与图 | [连续复场表征进度报告](reports/COHERENT_CONTINUOUS_REPRESENTATION_PROGRESS_ZH.md) |
